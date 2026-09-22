@@ -1,0 +1,716 @@
+{
+  "id": "bakery-and-pastry",
+  "name": "Bakery & Pastry",
+  "slug": "bakery-and-pastry",
+  "icon": "🥐",
+  "description": "Comprehensive menu template for pure production-and-display artisan bakeries and patisseries. Designed specifically for bakeries where goods are baked fresh on-site or assembled in-house, showcased in display cases, and sold for takeaway or light counter service without full kitchen cooking or table service.",
+  "category": "bakery",
+  "tags": [
+    "bakery",
+    "pastry",
+    "bread",
+    "cakes",
+    "patisserie",
+    "boulangerie"
+  ],
+  "sections": [
+    {
+      "id": "daily-breads-and-loaves",
+      "name": "Daily Breads & Loaves",
+      "sortOrder": 1,
+      "description": "Artisan sourdoughs, crusty hearth breads, traditional baguettes, sandwich loaves, and dinner rolls baked fresh in morning cycles. This core section represents the foundation of an artisan bakery, accommodating customer requests for custom slicing thickness and loaf portions.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥖",
+      "subSections": [
+        {
+          "id": "artisan-sourdoughs-country-loaves",
+          "name": "Artisan Sourdoughs & Country Loaves",
+          "sortOrder": 1,
+          "description": "Naturally leavened sourdough boules, batards, and country loaves with fermented open crumb and caramelized, blistered crusts."
+        },
+        {
+          "id": "baguettes-batards",
+          "name": "Baguettes & Batards",
+          "sortOrder": 2,
+          "description": "Classic French stone-baked baguettes, demi-baguettes, and oval batards with golden crisp crusts and light airy crumb."
+        },
+        {
+          "id": "table-sandwich-breads",
+          "name": "Table & Sandwich Breads",
+          "sortOrder": 3,
+          "description": "Square pullman loaves, tender Japanese milk bread, brioche toast loaves, and enriched sandwich breads ideal for household toasting."
+        },
+        {
+          "id": "specialty-ancient-grains",
+          "name": "Specialty & Ancient Grains",
+          "sortOrder": 4,
+          "description": "Nutrient-dense loaves incorporating stoneground heritage grains such as dark rye, spelt, buckwheat, and toasted seed blends."
+        },
+        {
+          "id": "rolls-buns",
+          "name": "Rolls & Buns",
+          "sortOrder": 5,
+          "description": "Portioned dinner rolls, brioche hamburger buns, ciabatta rolls, and soft table rolls for meal accompaniments."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "slicing-preference",
+          "type": "single-select",
+          "label": "Slicing Preference",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "whole-unsliced",
+              "label": "Whole Loaf (Unsliced — stays fresh longest)",
+              "priceModifier": 0
+            },
+            {
+              "value": "thick-sliced",
+              "label": "Thick Sliced (~15mm — great for toast)",
+              "priceModifier": 0
+            },
+            {
+              "value": "thin-sliced",
+              "label": "Thin Sliced (~10mm — perfect for sandwiches)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "viennoiserie-morning-pastries",
+      "name": "Viennoiserie & Morning Pastries",
+      "sortOrder": 2,
+      "description": "Laminated butter pastries, fruit-topped puff pastries, enriched brioches, and morning scones baked fresh before dawn. This high-turnover section drives breakfast and morning coffee foot traffic, offering serving temperature preferences and bulk box discounts for offices and family gatherings.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥐",
+      "subSections": [
+        {
+          "id": "laminated-pastries",
+          "name": "Laminated Pastries",
+          "sortOrder": 1,
+          "description": "Classic European butter croissants, pain au chocolat, kouign-amann, and flaky layered puff specialties."
+        },
+        {
+          "id": "danishes-fruit-puff-pastries",
+          "name": "Danishes & Fruit Puff Pastries",
+          "sortOrder": 2,
+          "description": "Delicate laminated pastries filled with vanilla bean pastry cream, seasonal poached fruits, berries, and glistening glazes."
+        },
+        {
+          "id": "brioches-sweet-breads",
+          "name": "Brioches & Sweet Breads",
+          "sortOrder": 3,
+          "description": "Enriched yeasted sweet doughs, Swedish cardamom knots, cinnamon morning buns, and chocolate-swirled babka slices."
+        },
+        {
+          "id": "muffins-scones-quick-breads",
+          "name": "Muffins Scones & Quick Breads",
+          "sortOrder": 4,
+          "description": "Traditional British buttermilk scones, bakery-style fruit muffins, and thick-cut morning tea loaf slices."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "temperature-preference",
+          "type": "single-select",
+          "label": "Serving Temperature",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "room-temperature",
+              "label": "Room Temperature",
+              "priceModifier": 0
+            },
+            {
+              "value": "warm-up",
+              "label": "Warm Up (Gently heated in bakery oven)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "pack-size",
+          "type": "single-select",
+          "label": "Pack Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single",
+              "label": "Single Piece",
+              "priceModifier": 0
+            },
+            {
+              "value": "box-of-4",
+              "label": "Box of 4 (Pastry Box)",
+              "priceModifier": 0
+            },
+            {
+              "value": "box-of-6",
+              "label": "Box of 6 (Baker's Half Dozen Box)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": true,
+        "defaultAvailableFrom": "07:00",
+        "defaultAvailableUntil": "14:00",
+        "note": "Fresh morning viennoiserie is available starting at 07:00 until daily batch sells out."
+      }
+    },
+    {
+      "id": "individual-fine-pastries",
+      "name": "Individual Fine Pastries",
+      "sortOrder": 3,
+      "description": "Artisan single-portion refrigerated patisserie, glossy mirror-glazed entremets, tartlets, choux buns, and French macarons. Designed for refrigerated showcase presentation, afternoon tea, self-indulgence, and gift selections requiring delicate packaging.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🧁",
+      "subSections": [
+        {
+          "id": "entremets-glazed-mousse-cakes",
+          "name": "Entremets & Glazed Mousse Cakes",
+          "sortOrder": 1,
+          "description": "Multi-textured individual mousse gateaux featuring fruit inserts, sponge layers, crunchy praline bases, and mirror glazes."
+        },
+        {
+          "id": "tartlets-shortcrust",
+          "name": "Tartlets & Shortcrust",
+          "sortOrder": 2,
+          "description": "Crisp sweet pastry tart shells filled with lemon curd, rich chocolate ganache, pastry cream, and fresh seasonal fruit."
+        },
+        {
+          "id": "choux-pastry",
+          "name": "Choux Pastry",
+          "sortOrder": 3,
+          "description": "Airy choux creations, craquelin cream puffs, filled éclairs, and Paris-Brest with diplomat cream and praline."
+        },
+        {
+          "id": "layered-pastries-slices",
+          "name": "Layered Pastries & Slices",
+          "sortOrder": 4,
+          "description": "Classic multi-layered mille-feuille slices, French Opera cake, Russian honey cake, and portioned gateaux cuts."
+        },
+        {
+          "id": "macarons-petit-fours",
+          "name": "Macarons & Petit Fours",
+          "sortOrder": 5,
+          "description": "French almond meringue macarons in assorted seasonal flavors alongside bite-sized petit fours."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "macaron-flavor-picker",
+          "type": "multi-select",
+          "label": "Macaron Flavor Selection (Choose your flavors)",
+          "isRequired": false,
+          "maxSelections": 6,
+          "choices": [
+            {
+              "value": "madagascar-vanilla",
+              "label": "Madagascar Vanilla Bean",
+              "priceModifier": 0
+            },
+            {
+              "value": "dark-chocolate-ganache",
+              "label": "Dark Chocolate 70% Ganache",
+              "priceModifier": 0
+            },
+            {
+              "value": "salted-butter-caramel",
+              "label": "Salted Butter Caramel",
+              "priceModifier": 0
+            },
+            {
+              "value": "pistachio-praline",
+              "label": "Sicilian Pistachio Praline",
+              "priceModifier": 0
+            },
+            {
+              "value": "raspberry-rose",
+              "label": "Raspberry & Rosewater",
+              "priceModifier": 0
+            },
+            {
+              "value": "passion-fruit-mango",
+              "label": "Passion Fruit & Mango",
+              "priceModifier": 0
+            },
+            {
+              "value": "lemon-curd",
+              "label": "Meyer Lemon Curd",
+              "priceModifier": 0
+            },
+            {
+              "value": "espresso",
+              "label": "Single-Origin Espresso",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "pastry-box-presentation",
+          "type": "single-select",
+          "label": "Packaging & Presentation",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-box",
+              "label": "Standard Window Box",
+              "priceModifier": 0
+            },
+            {
+              "value": "luxury-gift-box",
+              "label": "Luxury Rigid Gift Box with Ribbon",
+              "priceModifier": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whole-celebration-cakes",
+      "name": "Whole & Celebration Cakes",
+      "sortOrder": 4,
+      "description": "Full-size celebration cakes, large tarts, family-sized cheesecakes, and teacakes for milestone celebrations, birthdays, and dinner parties. Supports pre-orders with lead times, serving size selections, custom piped inscriptions, and scheduled pickup coordination.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🎂",
+      "subSections": [
+        {
+          "id": "ready-to-go-whole-cakes",
+          "name": "Ready-to-Go Whole Cakes",
+          "sortOrder": 1,
+          "description": "Freshly finished whole celebration cakes available immediately in display chillers for same-day walk-in purchases."
+        },
+        {
+          "id": "signature-pre-order-cakes",
+          "name": "Signature Pre-Order Cakes",
+          "sortOrder": 2,
+          "description": "Custom artisan celebration cakes and layered gateaux requiring 24 to 48 hours advance notice for baking and decorating."
+        },
+        {
+          "id": "tarts-cheesecakes-family-size",
+          "name": "Tarts & Cheesecakes (Family Size)",
+          "sortOrder": 3,
+          "description": "Large 8 to 10-inch seasonal fruit tarts, Basque burnt cheesecakes, and New York cheesecakes serving 8 to 16 guests."
+        },
+        {
+          "id": "tea-cakes-bundt-loaf-cakes",
+          "name": "Tea Cakes & Bundt/Loaf Cakes",
+          "sortOrder": 4,
+          "description": "Whole un-iced loaf cakes, citrus bundt cakes, and spiced tea cakes suitable for family afternoon teas and casual entertaining."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cake-size-selector",
+          "type": "single-select",
+          "label": "Cake Size & Portions",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "6-inch",
+              "label": "6-inch Cake (Serves 6–8 guests)",
+              "priceModifier": 0
+            },
+            {
+              "value": "8-inch",
+              "label": "8-inch Cake (Serves 10–12 guests)",
+              "priceModifier": 15
+            },
+            {
+              "value": "10-inch",
+              "label": "10-inch Cake (Serves 16–20 guests)",
+              "priceModifier": 30
+            }
+          ]
+        },
+        {
+          "id": "custom-inscription-text",
+          "type": "text-input",
+          "label": "Custom Inscription Message (e.g., Happy Birthday Sarah!)",
+          "isRequired": false
+        },
+        {
+          "id": "cake-pickup-datetime",
+          "type": "date-picker",
+          "label": "Requested Pickup Date & Time",
+          "isRequired": true
+        },
+        {
+          "id": "celebration-candles-toppers",
+          "type": "single-select",
+          "label": "Celebration Candles & Accessories",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Candles",
+              "priceModifier": 0
+            },
+            {
+              "value": "spiral-candles-pack",
+              "label": "Spiral Birthday Candles (Pack of 10)",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "sparkler-candle",
+              "label": "Fountain Sparkler Candle",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "gold-number-candles",
+              "label": "Gold Metallic Number Candles (Specify in notes)",
+              "priceModifier": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cookies-biscuits-and-dry-sweets",
+      "name": "Cookies Biscuits & Dry Sweets",
+      "sortOrder": 5,
+      "description": "Shelf-stable baked cookies, buttery sablés, fudge brownies, traybake bars, and twice-baked biscotti. These dry sweets have extended ambient shelf lives, serving as impulse additions at checkout, coffee companions, and packaged retail gifts.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍪",
+      "subSections": [
+        {
+          "id": "chunky-soft-baked-cookies",
+          "name": "Chunky & Soft-Baked Cookies",
+          "sortOrder": 1,
+          "description": "Thick gourmet cookies with soft molten centers, chocolate chunks, toasted nuts, and stuffed fillings."
+        },
+        {
+          "id": "sables-shortbreads-crispy-biscuits",
+          "name": "Sablés Shortbreads & Crispy Biscuits",
+          "sortOrder": 2,
+          "description": "Rich butter sablés, traditional Scottish shortbread fingers, and delicate crispy spiced biscuits."
+        },
+        {
+          "id": "brownies-blondies-traybake-squares",
+          "name": "Brownies Blondies & Traybake Squares",
+          "sortOrder": 3,
+          "description": "Fudgy Belgian dark chocolate brownies, salted caramel blondies, and portioned traybake squares."
+        },
+        {
+          "id": "biscotti-dipping-cookies",
+          "name": "Biscotti & Dipping Cookies",
+          "sortOrder": 4,
+          "description": "Twice-baked almond cantucci and crunchy Italian biscotti designed specifically for dipping into coffee or dessert wine."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cookie-quantity-package",
+          "type": "single-select",
+          "label": "Quantity & Packaging Option",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "individual",
+              "label": "Individual Piece",
+              "priceModifier": 0
+            },
+            {
+              "value": "pack-of-3",
+              "label": "Pack of 3 (Bakery Pouch)",
+              "priceModifier": 0
+            },
+            {
+              "value": "jar-or-tin",
+              "label": "Keepsake Glass Jar / Gift Tin",
+              "priceModifier": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "savory-bakes",
+      "name": "Savory Bakes",
+      "sortOrder": 6,
+      "description": "Freshly baked savory pastries, whole and sliced quiches, focaccia flatbreads, and pre-made artisan sandwiches. Provides substantial lunch and snack offerings using bakery doughs without requiring a commercial hot grill line or short-order cooks.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥧",
+      "subSections": [
+        {
+          "id": "savory-pastries-rolls",
+          "name": "Savory Pastries & Rolls",
+          "sortOrder": 1,
+          "description": "Flaky puff pastry sausage rolls, spinach and feta swirls, ham and Gruyère croissants, and savory twists."
+        },
+        {
+          "id": "quiches-savory-tarts",
+          "name": "Quiches & Savory Tarts",
+          "sortOrder": 2,
+          "description": "Deep-dish Quiche Lorraine and seasonal vegetable tarts baked with velvety egg custard in crisp buttery pastry."
+        },
+        {
+          "id": "focaccias-savory-flatbreads",
+          "name": "Focaccias & Savory Flatbreads",
+          "sortOrder": 3,
+          "description": "Extra virgin olive oil dimpled focaccia slabs, rosemary sea salt flatbreads, and tomato-olive focaccia squares."
+        },
+        {
+          "id": "premade-bakery-sandwiches",
+          "name": "Pre-made Bakery Sandwiches",
+          "sortOrder": 4,
+          "description": "Cold grab-and-go artisan sandwiches assembled fresh daily on house-baked baguettes, focaccia, and sourdough."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "heating-option",
+          "type": "single-select",
+          "label": "Heating Preference",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "serve-warm",
+              "label": "Serve Warm (Heated in bakery oven)",
+              "priceModifier": 0
+            },
+            {
+              "value": "cold-togo",
+              "label": "Cold to-go (Eat cold or reheat at home)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confectionery-and-retail",
+      "name": "Confectionery & Retail",
+      "sortOrder": 7,
+      "description": "Artisan retail pantry goods, boxed chocolates, small-batch house spreads, gift hampers, and cake celebration accessories. Generates high-margin retail revenue and customer gifting solutions requiring zero on-the-spot kitchen assembly.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🎁",
+      "subSections": [
+        {
+          "id": "artisan-chocolates-bonbon-boxes",
+          "name": "Artisan Chocolates & Bonbon Boxes",
+          "sortOrder": 1,
+          "description": "Boxed selections of hand-crafted chocolate bonbons, single-origin bean-to-bar chocolate, and cocoa truffles in luxury packaging."
+        },
+        {
+          "id": "house-made-jams-curds-spreads",
+          "name": "House-made Jams Curds & Spreads",
+          "sortOrder": 2,
+          "description": "Glass jars of small-batch seasonal berry jams, citrus curds, and artisan hazelnut chocolate spreads."
+        },
+        {
+          "id": "gift-hampers-assortment-boxes",
+          "name": "Gift Hampers & Assortment Boxes",
+          "sortOrder": 3,
+          "description": "Curated retail gift hampers combining packaged biscuits, specialty teas, jams, and bakery confections."
+        },
+        {
+          "id": "party-accessories",
+          "name": "Party Accessories",
+          "sortOrder": 4,
+          "description": "Celebration essentials including decorative cake candles, designer greeting cards, cake knives, and carriers."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "retail-gift-wrapping",
+          "type": "toggle",
+          "label": "Include Complimentary Gift Bag & Handwritten Note Card",
+          "isRequired": false
+        }
+      ]
+    },
+    {
+      "id": "basic-beverages",
+      "name": "Basic Beverages",
+      "sortOrder": 8,
+      "description": "Essential hot coffees, loose-leaf teas, and chilled bottled beverages designed to complement baked goods. Structured for speed of service and minimal barista workload, avoiding complex drink workflows that would bottleneck the bakery retail counter.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "☕",
+      "subSections": [
+        {
+          "id": "basic-hot-drinks",
+          "name": "Basic Hot Drinks",
+          "sortOrder": 1,
+          "description": "Batch-brewed drip filter coffee, Americano, hot chocolate, spiced chai, and steeped artisan loose-leaf teas."
+        },
+        {
+          "id": "chilled-grab-and-go-drinks",
+          "name": "Chilled Grab-and-Go Drinks",
+          "sortOrder": 2,
+          "description": "Bottled cold brew coffee, freshly squeezed citrus juices, sparkling mineral waters, and craft sodas."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "hot-drink-cup-size",
+          "type": "single-select",
+          "label": "Drink Size",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-12oz",
+              "label": "Regular (12 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-16oz",
+              "label": "Large (16 oz)",
+              "priceModifier": 0.6
+            }
+          ]
+        },
+        {
+          "id": "milk-choice",
+          "type": "single-select",
+          "label": "Milk Option",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-dairy-milk",
+              "label": "Whole Dairy Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "skim-dairy-milk",
+              "label": "Skim Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Oat Milk (Barista Blend)",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasonal-and-limited-editions",
+      "name": "Seasonal & Limited Editions",
+      "sortOrder": 9,
+      "description": "Dynamic seasonal specialties, holiday festival items, and limited guest collaborations. Allows bakeries to introduce seasonal favorites (such as King Cake, Easter Hot Cross Buns, Autumn Pumpkin Brioche, and Holiday Stollen or Panettone) without altering permanent sections.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "✨",
+      "subSections": [],
+      "itemOptions": [
+        {
+          "id": "seasonal-packaging-option",
+          "type": "single-select",
+          "label": "Seasonal Packaging",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-packaging",
+              "label": "Standard Bakery Packaging",
+              "priceModifier": 0
+            },
+            {
+              "value": "festive-gift-packaging",
+              "label": "Festive Seasonal Gift Box with Ribbon",
+              "priceModifier": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "preOrder",
+      "name": "Advance Pre-Order",
+      "description": "Enables customers to schedule advance pickup orders for whole celebration cakes, large bread orders, and party pastry boxes with configurable lead times and daily cutoff windows.",
+      "isEnabled": true,
+      "config": {
+        "minLeadTimeHours": 24,
+        "maxAdvanceDays": 30,
+        "dailyCutoffTime": "17:00",
+        "allowSpecialInstructions": true
+      }
+    },
+    {
+      "id": "batchTimeWindows",
+      "name": "Bake Batch Time Windows",
+      "description": "Displays availability and fresh-out-of-the-oven release times for daily morning and afternoon bakery bake cycles.",
+      "isEnabled": true,
+      "config": {
+        "morningBakeTime": "07:00",
+        "afternoonBakeTime": "14:00",
+        "displayNextBakeCountdown": true
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Inventory & Case Badges",
+      "description": "Shows real-time display case availability badges, specifically 'Sold Out for Today' when daily production batches run out, without unlisting the item.",
+      "isEnabled": true,
+      "config": {
+        "primaryBadge": "sold-out-today",
+        "autoResetDaily": true,
+        "showLowStockWarning": true,
+        "lowStockThreshold": 3
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Tagging",
+      "description": "Highlights common bakery allergens (gluten, tree nuts, peanuts, dairy, eggs, soy) and dietary preferences (vegan, vegetarian) clearly on each product.",
+      "isEnabled": true,
+      "config": {
+        "displayFormat": "badge-and-modal",
+        "highlightAllergens": [
+          "contains-gluten",
+          "contains-dairy",
+          "contains-egg",
+          "contains-nuts"
+        ]
+      }
+    },
+    {
+      "id": "storageInstructions",
+      "name": "Storage & Freshness Instructions",
+      "description": "Provides customers with specific storage guidance on item pages and digital receipts (e.g., store at room temperature, refrigerate below 4°C, freeze-friendly, consume day of purchase).",
+      "isEnabled": true,
+      "config": {
+        "defaultInstruction": "consume-today",
+        "showReheatingGuide": true
+      }
+    },
+    {
+      "id": "customInscription",
+      "name": "Custom Cake Inscription",
+      "description": "Enables customers to submit personalized piped chocolate plaque or cake surface messages for celebration and whole cakes.",
+      "isEnabled": true,
+      "config": {
+        "maxCharacterCount": 35,
+        "includePlaqueType": true,
+        "allowGiftCardMessage": true
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

@@ -1,0 +1,1183 @@
+{
+  "id": "bakery-and-cafe",
+  "name": "Bakery & Cafe",
+  "slug": "bakery-and-cafe",
+  "icon": "🍞☕",
+  "description": "Combines a production artisan bakery with a sit-down cafe experience. Features hearth-baked breads, morning viennoiserie, specialty espresso coffee, assembled-to-order sandwiches, and light morning meals without full commercial kitchen cooking.",
+  "category": "hybrid",
+  "tags": [
+    "bakery",
+    "cafe",
+    "coffee",
+    "bread",
+    "breakfast",
+    "brunch",
+    "sandwich"
+  ],
+  "sections": [
+    {
+      "id": "artisan-breads-and-loaves",
+      "name": "Artisan Breads & Loaves",
+      "sortOrder": 1,
+      "description": "House-baked sourdoughs, hearth loaves, baguettes, and specialty grain breads crafted on-site daily using long fermentation. Represents the core production bakery foundation, serving takeaway customers seeking daily table bread as well as supplying breads for in-house cafe dining.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥖",
+      "subSections": [
+        {
+          "id": "sourdoughs-country-loaves",
+          "name": "Sourdoughs & Country Loaves",
+          "sortOrder": 1,
+          "description": "Naturally leavened wild-yeast boules and rustic country loaves with blistered crusts and open crumb structures."
+        },
+        {
+          "id": "baguettes-batards",
+          "name": "Baguettes & Batards",
+          "sortOrder": 2,
+          "description": "Classic French-style baguettes, epi baguettes, and oblong batards baked with hearth steam for maximum crust crackle."
+        },
+        {
+          "id": "sandwich-table-breads",
+          "name": "Sandwich & Table Breads",
+          "sortOrder": 3,
+          "description": "Soft-crusted pullman sandwich loaves, Japanese milk bread, and enriched brioche loaves ideal for home slicing and toasting."
+        },
+        {
+          "id": "specialty-grain-breads",
+          "name": "Specialty Grain Breads",
+          "sortOrder": 4,
+          "description": "Hearty whole wheat, seeded rye, spelt, and ancient grain loaves offering rich nuttiness and dense nutritional value."
+        },
+        {
+          "id": "rolls-and-buns",
+          "name": "Rolls & Buns",
+          "sortOrder": 5,
+          "description": "Individual dinner rolls, brioche burger buns, and sourdough pull-apart rolls sold individually or in multi-packs."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "slicing-preference",
+          "type": "single-select",
+          "label": "Slicing Preference",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "unsliced",
+              "label": "Whole / Unsliced (Preserves moisture & crust)",
+              "priceModifier": 0
+            },
+            {
+              "value": "thin-sliced",
+              "label": "Thin Sliced (~10mm - optimal for sandwiches)",
+              "priceModifier": 0
+            },
+            {
+              "value": "standard-sliced",
+              "label": "Standard Sliced (~12mm - everyday toast)",
+              "priceModifier": 0
+            },
+            {
+              "value": "thick-sliced",
+              "label": "Thick Sliced / Texas Cut (~18mm - French toast & hearty melts)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "morning-pastries-and-viennoiserie",
+      "name": "Morning Pastries & Viennoiserie",
+      "sortOrder": 2,
+      "description": "Laminated, flaky, and enriched morning pastries baked before dawn each day. Anchors the morning cafe trade, pairing directly with morning coffee and tea orders for both dine-in guests and quick morning commuters.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥐",
+      "subSections": [
+        {
+          "id": "laminated-pastries",
+          "name": "Laminated Pastries",
+          "sortOrder": 1,
+          "description": "Layered French butter croissants, pain au chocolat, twice-baked almond croissants, and caramelized kouign-amann."
+        },
+        {
+          "id": "danishes-fruit-pastries",
+          "name": "Danishes & Fruit Pastries",
+          "sortOrder": 2,
+          "description": "Crisp laminated Danish pockets, pinwheels, and crowns filled with vanilla pastry cream, cream cheese, and seasonal fruit preserves."
+        },
+        {
+          "id": "brioches-sweet-breads",
+          "name": "Brioches & Sweet Breads",
+          "sortOrder": 3,
+          "description": "Enriched sweet bakes including Swedish cardamom knots, cinnamon morning buns, babka slices, and sugar-crusted brioche rounds."
+        },
+        {
+          "id": "muffins-scones",
+          "name": "Muffins & Scones",
+          "sortOrder": 4,
+          "description": "Freshly scooped fruit muffins, traditional English buttermilk scones, and savory herb and cheese scones."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "warm-up-toggle",
+          "type": "toggle",
+          "label": "Warm Up Before Serving",
+          "isRequired": false
+        },
+        {
+          "id": "pack-size",
+          "type": "single-select",
+          "label": "Pack Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single",
+              "label": "Single Piece",
+              "priceModifier": 0
+            },
+            {
+              "value": "box-of-4",
+              "label": "Box of 4 (Mixed or Matching)",
+              "priceModifier": 0
+            },
+            {
+              "value": "half-dozen",
+              "label": "Baker's Half Dozen (Box of 6)",
+              "priceModifier": 0
+            },
+            {
+              "value": "dozen",
+              "label": "Catering Box of 12",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "pastry-condiments",
+          "type": "multi-select",
+          "label": "Add Spreads & Preserves",
+          "isRequired": false,
+          "maxSelections": 2,
+          "choices": [
+            {
+              "value": "house-strawberry-jam",
+              "label": "House Artisan Strawberry Jam",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "whipped-butter",
+              "label": "Whipped Cultured Butter Portion",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "clotted-cream",
+              "label": "Traditional Clotted Cream Portion",
+              "priceModifier": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cakes-and-sweet-treats",
+      "name": "Cakes & Sweet Treats",
+      "sortOrder": 3,
+      "description": "Individually portioned sweet confectionery, decadent layer cake cuts, cookies, brownies, and tartlets. Designed for casual afternoon tea accompaniments, dessert cravings, and takeaway dessert boxes.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍰",
+      "subSections": [
+        {
+          "id": "individual-pastries-slices",
+          "name": "Individual Pastries & Slices",
+          "sortOrder": 1,
+          "description": "Delicate fruit tartlets, French eclairs, choux buns, opera cake slices, and layered mille-feuille."
+        },
+        {
+          "id": "cookies-brownies",
+          "name": "Cookies & Brownies",
+          "sortOrder": 2,
+          "description": "Chunky soft-baked cookies, fudgy chocolate brownies, blondies, and delicate shortbread biscuits."
+        },
+        {
+          "id": "display-cakes-by-the-slice",
+          "name": "Display Cakes (by the slice)",
+          "sortOrder": 3,
+          "description": "Portioned wedges cut fresh daily from our counter display sponge cakes, cheesecakes, and tea loaves."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "sweet-treat-packaging",
+          "type": "single-select",
+          "label": "Serving & Packaging Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "dine-in-plated",
+              "label": "Dine-In Plated",
+              "priceModifier": 0
+            },
+            {
+              "value": "takeaway-boxed",
+              "label": "Takeaway Individual Box",
+              "priceModifier": 0
+            },
+            {
+              "value": "warmed-with-cream",
+              "label": "Warmed with Side of Fresh Cream",
+              "priceModifier": 0.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whole-and-celebration-cakes",
+      "name": "Whole & Celebration Cakes",
+      "sortOrder": 4,
+      "description": "Full-size specialty cakes and gateaux for birthdays, family gatherings, milestones, and office celebrations. Offers both ready-made whole cakes in display coolers for same-day pickup and advance custom orders with piping inscriptions.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🎂",
+      "subSections": [
+        {
+          "id": "ready-to-go-whole-cakes",
+          "name": "Ready-to-Go Whole Cakes",
+          "sortOrder": 1,
+          "description": "Fully finished, refrigerated whole cakes available for immediate same-day takeaway directly from our bakery cold case."
+        },
+        {
+          "id": "pre-order-custom-cakes",
+          "name": "Pre-Order Custom Cakes",
+          "sortOrder": 2,
+          "description": "Custom finished celebration cakes requiring 24 to 48 hours notice with selectable flavors, frostings, and decorative piped messages."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cake-size-selector",
+          "type": "single-select",
+          "label": "Cake Size & Servings",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "6-inch",
+              "label": "6-inch Round (Serves 6–8)",
+              "priceModifier": 0
+            },
+            {
+              "value": "8-inch",
+              "label": "8-inch Round (Serves 10–14)",
+              "priceModifier": 16.0
+            },
+            {
+              "value": "10-inch",
+              "label": "10-inch Round (Serves 16–22)",
+              "priceModifier": 32.0
+            }
+          ]
+        },
+        {
+          "id": "custom-cake-inscription",
+          "type": "text-input",
+          "label": "Custom Inscription Message (Max 30 characters)",
+          "isRequired": false
+        },
+        {
+          "id": "pickup-date-time",
+          "type": "date-picker",
+          "label": "Requested Pickup Date & Time Window",
+          "isRequired": true
+        },
+        {
+          "id": "celebration-accessories",
+          "type": "multi-select",
+          "label": "Celebration Add-ons",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "sparkler-candle",
+              "label": "Celebration Sparkler Candle",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "gold-number-candles",
+              "label": "Gold Metallic Number Candles",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "wooden-server-kit",
+              "label": "Eco Cake Knife & Server Set",
+              "priceModifier": 1.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "breakfast-and-brunch",
+      "name": "Breakfast & Brunch",
+      "sortOrder": 5,
+      "description": "Plated morning dishes spotlighting our artisan breads alongside farm eggs, grains, yogurts, and seasonal toppings. Focuses on swift cafe counter assembly (toasting, slicing, poaching, folding) without heavy commercial kitchen frying or grill hoods.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍳",
+      "subSections": [
+        {
+          "id": "toast-egg-plates",
+          "name": "Toast & Egg Plates",
+          "sortOrder": 1,
+          "description": "Thick-cut artisan sourdough toast paired with farm eggs, smashed avocado, herbed ricotta, and savory spreads."
+        },
+        {
+          "id": "bowls-granola",
+          "name": "Bowls & Granola",
+          "sortOrder": 2,
+          "description": "House-baked honey-nut granola bowls, Greek yogurt parfaits, overnight soaked oats, and acai fruit bowls."
+        },
+        {
+          "id": "pastry-platters-shares",
+          "name": "Pastry Platters & Shares",
+          "sortOrder": 3,
+          "description": "Curated breakfast boards combining mini breakfast pastries, cultured butter, regional fruit preserves, and sliced cheeses."
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": true,
+        "defaultAvailableFrom": "07:00",
+        "defaultAvailableUntil": "12:00",
+        "note": "Breakfast & Brunch items are prepared fresh to order during morning hours (07:00–12:00)."
+      },
+      "itemOptions": [
+        {
+          "id": "breakfast-bread-choice",
+          "type": "single-select",
+          "label": "Bread Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "classic-country-sourdough",
+              "label": "House Country White Sourdough",
+              "priceModifier": 0
+            },
+            {
+              "value": "multigrain-seeded-sourdough",
+              "label": "Multigrain Seeded Sourdough",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "thick-cut-brioche",
+              "label": "Thick-Cut Brioche Toast",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "gluten-free-artisan",
+              "label": "Gluten-Free Artisan Bread",
+              "priceModifier": 1.0
+            }
+          ]
+        },
+        {
+          "id": "egg-preparation-style",
+          "type": "single-select",
+          "label": "Egg Preparation Style",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "soft-poached",
+              "label": "Soft Poached Eggs",
+              "priceModifier": 0
+            },
+            {
+              "value": "creamy-scrambled",
+              "label": "Creamy Folded Scrambled Eggs",
+              "priceModifier": 0
+            },
+            {
+              "value": "sunny-side-up",
+              "label": "Sunny-Side Fried Eggs",
+              "priceModifier": 0
+            },
+            {
+              "value": "hard-boiled-sliced",
+              "label": "Chilled Sliced Hard-Boiled Egg",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "breakfast-sides",
+          "type": "multi-select",
+          "label": "Add Sides & Upgrades",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "smoked-bacon",
+              "label": "Crispy Smoked Bacon",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "cured-salmon",
+              "label": "Cold Smoked Salmon",
+              "priceModifier": 4.5
+            },
+            {
+              "value": "smashed-avocado",
+              "label": "Fresh Smashed Avocado",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "halloumi",
+              "label": "Seared Halloumi Slices",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "slow-roasted-tomatoes",
+              "label": "Slow-Roasted Herb Tomatoes",
+              "priceModifier": 2.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sandwiches-and-light-bites",
+      "name": "Sandwiches & Light Bites",
+      "sortOrder": 6,
+      "description": "Freshly assembled savory sandwiches, toasted panini melts, and filled flatbread wraps showcasing bakery-fresh baguettes, focaccias, and batards. Composed to order with deli meats, artisanal cheeses, and fresh vegetables without heavy cooking.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥪",
+      "subSections": [
+        {
+          "id": "cold-sandwiches",
+          "name": "Cold Sandwiches",
+          "sortOrder": 1,
+          "description": "Crusty filled baguettes, deli-style rye sandwiches, and club sandwiches stacked with cured meats, salad greens, and house dressings."
+        },
+        {
+          "id": "hot-sandwiches-toasties",
+          "name": "Hot Sandwiches & Toasties",
+          "sortOrder": 2,
+          "description": "Pressed sourdough toasties, French croque monsieur, hot focaccia panini, and melted reubens."
+        },
+        {
+          "id": "wraps",
+          "name": "Wraps",
+          "sortOrder": 3,
+          "description": "Hand-rolled soft flour and whole grain wraps packed with marinated proteins, crisp vegetables, and light emulsified dressings."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "sandwich-bread-type",
+          "type": "single-select",
+          "label": "Bread Type",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "crusty-baguette",
+              "label": "House Crusty French Baguette",
+              "priceModifier": 0
+            },
+            {
+              "value": "country-sourdough",
+              "label": "Country Sourdough Slices",
+              "priceModifier": 0
+            },
+            {
+              "value": "rosemary-focaccia",
+              "label": "Rosemary & Sea Salt Focaccia",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "brioche-bun",
+              "label": "Toasted Brioche Bun",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "gluten-free-roll",
+              "label": "Gluten-Free Bread Roll",
+              "priceModifier": 1.25
+            }
+          ]
+        },
+        {
+          "id": "sandwich-warming-preference",
+          "type": "single-select",
+          "label": "Heating & Pressing",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "fresh-cold",
+              "label": "Served Fresh & Chilled",
+              "priceModifier": 0
+            },
+            {
+              "value": "lightly-toasted",
+              "label": "Lightly Toasted",
+              "priceModifier": 0
+            },
+            {
+              "value": "panini-pressed",
+              "label": "Hot Pressed & Melted Panini",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "sandwich-add-extras",
+          "type": "multi-select",
+          "label": "Add Sandwich Extras",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "extra-cheese",
+              "label": "Extra Aged Cheddar or Swiss",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "sliced-avocado",
+              "label": "Sliced Hass Avocado",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "smoked-bacon",
+              "label": "Smoked Bacon Rashers",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "house-pickles",
+              "label": "Tangy Dill Pickles & Jalapenos",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "truffle-aioli",
+              "label": "Side of Truffle Aioli Dip",
+              "priceModifier": 0.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soups-and-salads",
+      "name": "Soups & Salads",
+      "sortOrder": 7,
+      "description": "Simmered kettle soups served alongside crusty sourdough hunks, paired with seasonal composed salads displayed in the deli counter. Delivers nutritious, wholesome midday meal combinations for sit-down cafe patrons.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥗",
+      "subSections": [
+        {
+          "id": "daily-soups",
+          "name": "Daily Soups",
+          "sortOrder": 1,
+          "description": "Daily kettle soups including roasted vegetable bisques, velvety chowders, and legume broths served with thick artisan bread."
+        },
+        {
+          "id": "seasonal-salads",
+          "name": "Seasonal Salads",
+          "sortOrder": 2,
+          "description": "Market-fresh grain bowls, tossed crisp greens, roasted vegetable medleys, and pasta salads prepared daily in small batches."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "soup-salad-portion",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "cup-side",
+              "label": "Cup / Side Portion",
+              "priceModifier": 0
+            },
+            {
+              "value": "bowl-main",
+              "label": "Bowl / Entree Portion",
+              "priceModifier": 3.0
+            }
+          ]
+        },
+        {
+          "id": "bread-pairing",
+          "type": "single-select",
+          "label": "Bread Pairing",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "crusty-sourdough",
+              "label": "Thick Sourdough Slice with Butter",
+              "priceModifier": 0
+            },
+            {
+              "value": "garlic-herb-croutons",
+              "label": "House Garlic-Herb Croutons",
+              "priceModifier": 0
+            },
+            {
+              "value": "gluten-free-slice",
+              "label": "Gluten-Free Bread Slice",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "no-bread",
+              "label": "No Bread",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "salad-protein-addons",
+          "type": "multi-select",
+          "label": "Add Protein Boost",
+          "isRequired": false,
+          "maxSelections": 2,
+          "choices": [
+            {
+              "value": "poached-chicken",
+              "label": "Herb-Poached Chicken Breast",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "boiled-egg",
+              "label": "Organic Hard-Boiled Egg",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "crumbled-feta",
+              "label": "Crumbled Greek Feta Cheese",
+              "priceModifier": 1.75
+            },
+            {
+              "value": "toasted-seed-mix",
+              "label": "Roasted Pumpkin & Sunflower Seeds",
+              "priceModifier": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hot-beverages",
+      "name": "Hot Beverages",
+      "sortOrder": 8,
+      "description": "Comprehensive cafe hot drink bar powered by a multi-group commercial espresso machine, precision batch filter brewers, and loose-leaf tea pots. Essential companion to all bakery products throughout the day.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "☕",
+      "subSections": [
+        {
+          "id": "espresso-based-coffee",
+          "name": "Espresso-Based Coffee",
+          "sortOrder": 1,
+          "description": "Double espresso, macchiato, cortado, flat white, cappuccino, caffe latte, and long black extracted to exacting barista standards."
+        },
+        {
+          "id": "brewed-filter-coffee",
+          "name": "Brewed & Filter Coffee",
+          "sortOrder": 2,
+          "description": "Rotating single-origin batch brews, manual V60 pour-overs, and French press pots emphasizing delicate coffee flavor notes."
+        },
+        {
+          "id": "tea-selection",
+          "name": "Tea Selection",
+          "sortOrder": 3,
+          "description": "Loose-leaf black, green, oolong, and caffeine-free herbal tisanes served steeped in personal infuser teapots."
+        },
+        {
+          "id": "specialty-hot-drinks",
+          "name": "Specialty Hot Drinks",
+          "sortOrder": 4,
+          "description": "Slow-brewed spiced chai lattes, ceremonial Japanese matcha lattes, turmeric golden milk, and rich Belgian hot chocolate."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "hot-drink-size",
+          "type": "single-select",
+          "label": "Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "small-8oz",
+              "label": "Small (8 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-12oz",
+              "label": "Medium (12 oz)",
+              "priceModifier": 0.7
+            },
+            {
+              "value": "large-16oz",
+              "label": "Large (16 oz)",
+              "priceModifier": 1.4
+            }
+          ]
+        },
+        {
+          "id": "milk-alternative",
+          "type": "single-select",
+          "label": "Milk Alternative",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-milk",
+              "label": "Whole Dairy Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "skim-milk",
+              "label": "Skim Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Barista Oat Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "soy-milk",
+              "label": "Soy Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "coconut-milk",
+              "label": "Coconut Milk",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "extra-shot-toggle",
+          "type": "toggle",
+          "label": "Extra Espresso Shot",
+          "isRequired": false
+        },
+        {
+          "id": "coffee-syrup",
+          "type": "single-select",
+          "label": "Syrup Flavor",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "None",
+              "priceModifier": 0
+            },
+            {
+              "value": "madagascar-vanilla",
+              "label": "Madagascar Vanilla Syrup",
+              "priceModifier": 0.6
+            },
+            {
+              "value": "salted-caramel",
+              "label": "Salted Caramel Syrup",
+              "priceModifier": 0.6
+            },
+            {
+              "value": "roasted-hazelnut",
+              "label": "Roasted Hazelnut Syrup",
+              "priceModifier": 0.6
+            },
+            {
+              "value": "sugar-free-vanilla",
+              "label": "Sugar-Free Vanilla Syrup",
+              "priceModifier": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cold-and-blended-beverages",
+      "name": "Cold & Blended Beverages",
+      "sortOrder": 9,
+      "description": "Iced coffee classics, slow-steeped 18-hour cold brews, ice-blended frappes, and wholesome fruit smoothies. Drives high-ticket afternoon beverage sales and provides chilled refreshment for dine-in and takeout guests.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧊",
+      "subSections": [
+        {
+          "id": "iced-coffee-cold-brew",
+          "name": "Iced Coffee & Cold Brew",
+          "sortOrder": 1,
+          "description": "Over-ice espresso lattes, nitro cold brew on draught, iced Americanos, and velvety sweet cream cold foam drinks."
+        },
+        {
+          "id": "blended-frappe",
+          "name": "Blended & Frappe",
+          "sortOrder": 2,
+          "description": "Coffee and cream-based frappes blended with ice, crowned with whipped cream and cocoa dusting or caramel swirls."
+        },
+        {
+          "id": "smoothies",
+          "name": "Smoothies",
+          "sortOrder": 3,
+          "description": "Nutrient-dense smoothies blended with frozen berries, tropical fruits, baby spinach, banana, and plant milks."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cold-drink-size",
+          "type": "single-select",
+          "label": "Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-16oz",
+              "label": "Regular (16 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-20oz",
+              "label": "Large (20 oz)",
+              "priceModifier": 0.85
+            }
+          ]
+        },
+        {
+          "id": "cold-milk-alternative",
+          "type": "single-select",
+          "label": "Milk Alternative",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-milk",
+              "label": "Whole Dairy Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "skim-milk",
+              "label": "Skim Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Oat Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "soy-milk",
+              "label": "Soy Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "coconut-milk",
+              "label": "Coconut Milk",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-ice",
+              "label": "Less Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-ice",
+              "label": "Extra Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "No Ice",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "sweetness-level",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-sweet",
+              "label": "Regular Sweet (100%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "half-sweet",
+              "label": "Half Sweet (50%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "unsweetened",
+              "label": "Unsweetened (0%)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fresh-juices-and-soft-drinks",
+      "name": "Fresh Juices & Soft Drinks",
+      "sortOrder": 10,
+      "description": "House-pressed fruit juices, refreshing cold citrus lemonades, artisan bottled tonics, effervescent kombuchas, and sparkling waters. Fulfills family, children, and non-caffeinated customer needs.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧃",
+      "subSections": [
+        {
+          "id": "fresh-juices",
+          "name": "Fresh Juices",
+          "sortOrder": 1,
+          "description": "Cold-pressed daily orange juice, crisp ginger-apple blends, and antioxidant-rich green detox juices."
+        },
+        {
+          "id": "soft-drinks-water",
+          "name": "Soft Drinks & Water",
+          "sortOrder": 2,
+          "description": "House-brewed iced tea, cloudy lemonade, artisanal sodas, organic kombuchas, and bottled still or sparkling mineral waters."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "juice-ice-preference",
+          "type": "single-select",
+          "label": "Ice Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "served-over-ice",
+              "label": "Served Over Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "chilled-no-ice",
+              "label": "Chilled, No Ice",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "retail-and-take-home",
+      "name": "Retail & Take-Home",
+      "sortOrder": 11,
+      "description": "Packaged gourmet retail goods that extend the bakery-cafe experience into customer households. Enables customers to purchase whole bean coffee, pantry spreads, dry baking provisions, and branded gifts at checkout.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🛍️",
+      "subSections": [
+        {
+          "id": "bakery-take-home",
+          "name": "Bakery Take-Home",
+          "sortOrder": 1,
+          "description": "Bake-at-home frozen croissant dough, artisan sourdough crisps, seasoned salad croutons, and active sourdough starter kits."
+        },
+        {
+          "id": "coffee-beans-accessories",
+          "name": "Coffee Beans & Accessories",
+          "sortOrder": 2,
+          "description": "House blend and single-origin whole bean coffee bags (250g / 1kg), paper filter packs, and reusable thermal travel tumblers."
+        },
+        {
+          "id": "jams-and-spreads",
+          "name": "Jams & Spreads",
+          "sortOrder": 3,
+          "description": "Glass jars of small-batch seasonal jams, local raw honey, chocolate hazelnut praline spread, and savory onion chutney."
+        },
+        {
+          "id": "gift-items",
+          "name": "Gift Items",
+          "sortOrder": 4,
+          "description": "Linen bread storage bags, branded canvas tote bags, digital/physical gift cards, and curated breakfast gift boxes."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "coffee-grind-type",
+          "type": "single-select",
+          "label": "Coffee Grind Type",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-bean",
+              "label": "Whole Bean (Recommended for freshness)",
+              "priceModifier": 0
+            },
+            {
+              "value": "coarse-french-press",
+              "label": "Coarse (French Press / Cold Brew)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-filter",
+              "label": "Medium (Batch Brew / V60 / Aeropress)",
+              "priceModifier": 0
+            },
+            {
+              "value": "fine-espresso",
+              "label": "Fine (Home Espresso / Stovetop Moka)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasonal-specials",
+      "name": "Seasonal Specials",
+      "sortOrder": 12,
+      "description": "Time-limited seasonal creations celebrating seasonal holiday bakes, fruit harvests, and creative barista experiments. Creates marketing novelty and encourages repeat visits from neighborhood regulars.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "✨",
+      "subSections": [
+        {
+          "id": "holiday-drinks",
+          "name": "Holiday Drinks",
+          "sortOrder": 1,
+          "description": "Festive seasonal drinks including gingerbread lattes, spiced pumpkin cold brew, eggnog cappuccinos, and mulled spiced apple cider."
+        },
+        {
+          "id": "seasonal-pastries",
+          "name": "Seasonal Pastries",
+          "sortOrder": 2,
+          "description": "Harvest-driven baked goods including stone fruit galettes, Easter hot cross buns, holiday stollen, and winter galette des rois."
+        },
+        {
+          "id": "limited-collabs",
+          "name": "Limited Collabs",
+          "sortOrder": 3,
+          "description": "Exclusive guest roaster beans, collaboration pastries with local chocolatiers, and limited weekend pop-up specials."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "special-dietary-version",
+          "type": "single-select",
+          "label": "Dietary Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-recipe",
+              "label": "Standard Recipe",
+              "priceModifier": 0
+            },
+            {
+              "value": "plant-based-vegan",
+              "label": "Plant-Based / Vegan Version",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "preOrder",
+      "name": "Pre-Order & Advance Booking",
+      "description": "Enables customers to reserve whole celebration cakes, weekend bread loaves, and pastry gift boxes with designated pickup dates and cutoff times.",
+      "isEnabled": true,
+      "config": {
+        "minNoticeHours": 24,
+        "maxAdvanceDays": 14,
+        "cutOffTime": "16:00"
+      }
+    },
+    {
+      "id": "batchTimeWindows",
+      "name": "Oven Batch Schedule Windows",
+      "description": "Displays live and scheduled baking times so customers know exactly when sourdough bread and morning croissants emerge warm from the oven.",
+      "isEnabled": true,
+      "config": {
+        "displayOvenTimes": true,
+        "morningBatch": "07:00",
+        "middayBatch": "11:30"
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Live Stock & Urgency Badges",
+      "description": "Provides real-time scarcity and fresh-bake badges including 'Freshly Baked', 'Sold Out for Today', and 'Limited Batch' to manage customer expectations.",
+      "isEnabled": true,
+      "config": {
+        "showLowStockWarning": true,
+        "lowStockThreshold": 5,
+        "autoMarkSoldOut": true
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Tagging",
+      "description": "Highlights key allergens like gluten, dairy, nuts, and eggs while empowering customers to filter menu items by dietary preferences such as vegan and vegetarian.",
+      "isEnabled": true,
+      "config": {
+        "highlightGluten": true,
+        "filterByDietary": true,
+        "displayCrossContaminationWarning": true
+      }
+    },
+    {
+      "id": "milkAlternatives",
+      "name": "Milk Alternatives & Drink Customization",
+      "description": "Provides comprehensive barista customization options for plant-based milks, ice levels, sweetness levels, and extra espresso shots across hot and cold beverages.",
+      "isEnabled": true,
+      "config": {
+        "defaultAlternative": "oat-milk",
+        "allowCustomTemperature": true,
+        "allowCustomSweetness": true
+      }
+    },
+    {
+      "id": "customInscription",
+      "name": "Custom Cake Inscription Piping",
+      "description": "Captures personalized piped text messages and celebratory greetings directly on whole celebration cakes during checkout.",
+      "isEnabled": true,
+      "config": {
+        "maxCharacters": 30,
+        "allowPipingColorChoice": false
+      }
+    },
+    {
+      "id": "mealTimeRestrictions",
+      "name": "Meal Time Restrictions & Menu Dayparts",
+      "description": "Enforces time-of-day availability windows to restrict morning items like Breakfast & Brunch to 07:00–12:00 without disrupting all-day bakery and beverage ordering.",
+      "isEnabled": true,
+      "config": {
+        "enforceOrderingCutoff": true,
+        "showTimeWindowNotice": true
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

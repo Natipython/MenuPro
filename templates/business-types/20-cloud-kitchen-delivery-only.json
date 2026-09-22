@@ -1,0 +1,1009 @@
+{
+  "id": "cloud-kitchen-delivery-only",
+  "name": "Cloud Kitchen / Delivery-Only",
+  "slug": "cloud-kitchen-delivery-only",
+  "icon": "🏠🛵",
+  "description": "A specialized virtual restaurant and ghost kitchen menu template engineered exclusively for off-premise dining, delivery platforms, and rapid digital ordering. Eliminating dine-in service constraints, this model is built around travel-resilient packaging, heat retention, tamper-evident seals, real-time prep and courier transit time estimations, and zone-based delivery radiuses to ensure food arrives in pristine condition.",
+  "category": "restaurant",
+  "tags": [
+    "cloud-kitchen",
+    "delivery-only",
+    "ghost-kitchen",
+    "takeaway",
+    "delivery"
+  ],
+  "sections": [
+    {
+      "id": "popular-and-trending",
+      "name": "Popular & Trending",
+      "sortOrder": 1,
+      "description": "Curated highlight section featuring the cloud kitchen's highest-converting signature items, algorithm-backed top sellers, and most re-ordered dishes. Positioned at the very top of the delivery interface to minimize browsing fatigue, accelerate checkout conversion, and showcase items proven to withstand transit with exceptional flavor and structural integrity.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🔥",
+      "subSections": [],
+      "itemOptions": [
+        {
+          "id": "trending-portion-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular Portion",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large / Hungry Portion",
+              "priceModifier": 3.5
+            }
+          ]
+        },
+        {
+          "id": "trending-sauce-placement",
+          "type": "single-select",
+          "label": "Sauce & Dressing Placement",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "on-the-side",
+              "label": "Sauce on the Side (Preserves crispness during transit)",
+              "priceModifier": 0
+            },
+            {
+              "value": "tossed-in",
+              "label": "Tossed / Mixed In (Ready to eat immediately)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "trending-spice-level",
+          "type": "single-select",
+          "label": "Spice Heat Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "no-spice",
+              "label": "No Spice (Zero Heat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "mild",
+              "label": "Mild (Gentle Heat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium (Chef's Standard)",
+              "priceModifier": 0
+            },
+            {
+              "value": "hot",
+              "label": "Hot (Fiery Chili)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-hot",
+              "label": "Extra Hot (Flaming Spice)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "trending-cutlery-preference",
+          "type": "single-select",
+          "label": "Cutlery & Napkins",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "no-cutlery",
+              "label": "No Cutlery Needed (Eco-Friendly)",
+              "priceModifier": 0
+            },
+            {
+              "value": "include-cutlery",
+              "label": "Include Cutlery & Napkins",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "main-dishes",
+      "name": "Main Dishes",
+      "sortOrder": 2,
+      "description": "The culinary core of the virtual kitchen, offering hearty, chef-crafted entrées that anchor dinner and lunch tickets. Designed with thermal-retentive sauces, moisture seals, and travel-tested cooking parameters so proteins stay tender, vegetables stay vibrant, and sauces stay silky after 20–40 minutes of courier transit.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍲",
+      "subSections": [
+        {
+          "id": "meat-and-poultry",
+          "name": "Meat & Poultry",
+          "sortOrder": 1,
+          "description": "Succulent braised, roasted, and grilled beef, poultry, and pork entrées paired with rich reductions, glazes, or gravies that keep meats juicy in insulated packaging."
+        },
+        {
+          "id": "seafood",
+          "name": "Seafood",
+          "sortOrder": 2,
+          "description": "Pan-seared fillets, butter-poached shrimp, and wok-seared seafood dishes packed in vented, moisture-managed containers to avoid over-steaming during transit."
+        },
+        {
+          "id": "vegetarian-and-vegan",
+          "name": "Vegetarian & Vegan",
+          "sortOrder": 3,
+          "description": "Wholesome, protein-rich plant-based entrées featuring marinated tofu, tempeh, roasted lentils, and vibrant seasonal vegetables tailored for plant-focused diners."
+        },
+        {
+          "id": "pasta-and-noodles",
+          "name": "Pasta & Noodles",
+          "sortOrder": 4,
+          "description": "Hand-crafted pasta specialties, wok-tossed noodles, and sauced noodle bowls emulsified to prevent clumping and retain ideal al dente chew during delivery."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "main-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular Portion",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large / Double Protein Portion",
+              "priceModifier": 4.0
+            }
+          ]
+        },
+        {
+          "id": "main-protein-swap",
+          "type": "single-select",
+          "label": "Protein Choice / Swap",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "standard-protein",
+              "label": "As Listed (Standard Chef Recipe)",
+              "priceModifier": 0
+            },
+            {
+              "value": "swap-grilled-chicken",
+              "label": "Swap to Herb Grilled Chicken Breast",
+              "priceModifier": 0
+            },
+            {
+              "value": "swap-braised-beef",
+              "label": "Swap to Slow-Braised Tender Beef",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "swap-tiger-shrimp",
+              "label": "Swap to Garlic Seared Tiger Shrimp",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "swap-salmon-fillet",
+              "label": "Swap to Pan-Seared Atlantic Salmon",
+              "priceModifier": 4.5
+            },
+            {
+              "value": "swap-organic-tofu",
+              "label": "Swap to Crispy Organic Spiced Tofu (V)",
+              "priceModifier": 0
+            },
+            {
+              "value": "swap-plant-protein",
+              "label": "Swap to Seasoned Plant-Based Protein (VG)",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "main-spice-level",
+          "type": "single-select",
+          "label": "Spice Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "no-spice",
+              "label": "No Spice (Zero Heat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "mild",
+              "label": "Mild (Subtle Warmth)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium (Chef's Signature Heat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "hot",
+              "label": "Hot (Spicy Chili Kick)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-hot",
+              "label": "Extra Hot (Fiery Ghost Heat)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "main-side-choice",
+          "type": "single-select",
+          "label": "Included Side Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "jasmine-rice",
+              "label": "Steamed Fragrant Jasmine Rice",
+              "priceModifier": 0
+            },
+            {
+              "value": "brown-rice",
+              "label": "Organic Steamed Brown Rice",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "garlic-mashed-potatoes",
+              "label": "Roasted Garlic Mashed Potatoes",
+              "priceModifier": 0
+            },
+            {
+              "value": "seasoned-fries",
+              "label": "Crispy Seasoned Potato Fries",
+              "priceModifier": 0
+            },
+            {
+              "value": "green-salad",
+              "label": "Fresh Garden Salad (Dressing on the Side)",
+              "priceModifier": 0
+            },
+            {
+              "value": "steamed-vegetables",
+              "label": "Steamed Seasonal Greens & Carrots",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "truffle-fries-upgrade",
+              "label": "Upgrade to Truffle Parmesan Fries",
+              "priceModifier": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bowls-and-plates",
+      "name": "Bowls & Plates",
+      "sortOrder": 3,
+      "description": "Travel-optimized composite meals constructed specifically for delivery packaging and easy desk or couch dining. Engineered with layered foundations of warm grains, wholesome carbs, or noodles, crowned with lean proteins, crisp garnishes, and sealed dressing containers that prevent moisture transfer until the diner is ready to mix and eat.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥗",
+      "subSections": [
+        {
+          "id": "rice-bowls",
+          "name": "Rice Bowls",
+          "sortOrder": 1,
+          "description": "Steaming aromatic jasmine, seasoned sushi, or garlic fried rice bases topped with savory sautéed proteins, warm vegetables, and rich pan glazes."
+        },
+        {
+          "id": "grain-bowls",
+          "name": "Grain Bowls",
+          "sortOrder": 2,
+          "description": "Fiber-dense warm quinoa, wild grain, farro, and legume bowls tossed with roasted root vegetables, healthy greens, and clean vinaigrettes."
+        },
+        {
+          "id": "noodle-bowls",
+          "name": "Noodle Bowls",
+          "sortOrder": 3,
+          "description": "Wok-seared or chilled soba, ramen, vermicelli, and udon noodle compositions layered with crisp julienned vegetables and balanced Asian dressings."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "bowl-base-choice",
+          "type": "single-select",
+          "label": "Base Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "jasmine-rice",
+              "label": "Steamed Fragrant Jasmine Rice",
+              "priceModifier": 0
+            },
+            {
+              "value": "brown-rice",
+              "label": "Organic Steamed Brown Rice",
+              "priceModifier": 0
+            },
+            {
+              "value": "tri-color-quinoa",
+              "label": "Tri-Color Quinoa & Ancient Grains",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "cauliflower-rice",
+              "label": "Cauliflower Rice (Low-Carb / Keto)",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "chilled-soba-noodles",
+              "label": "Chilled Buckwheat Soba Noodles",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "wok-udon-noodles",
+              "label": "Wok-Tossed Thick Udon Noodles",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "half-grain-half-greens",
+              "label": "Half Jasmine Rice & Half Mixed Salad Greens",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "bowl-protein-choice",
+          "type": "single-select",
+          "label": "Protein Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "teriyaki-grilled-chicken",
+              "label": "Marinated Grilled Teriyaki Chicken",
+              "priceModifier": 0
+            },
+            {
+              "value": "slow-braised-beef",
+              "label": "Slow-Braised Bulgogi Beef",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "crispy-garlic-pork",
+              "label": "Crispy Garlic Glazed Pork Belly",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "seared-salmon",
+              "label": "Pan-Seared Atlantic Salmon Fillet",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "citrus-garlic-prawns",
+              "label": "Citrus Herb Garlic Prawns",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "crispy-marinated-tofu",
+              "label": "Golden Crispy Marinated Tofu (Vegan)",
+              "priceModifier": 0
+            },
+            {
+              "value": "roasted-chickpeas-edamame",
+              "label": "Spiced Roasted Chickpeas & Edamame (Vegan)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "bowl-toppings",
+          "type": "multi-select",
+          "label": "Topping Selections (Choose up to 4)",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            {
+              "value": "fresh-avocado",
+              "label": "Fresh Sliced Hass Avocado",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "steamed-edamame",
+              "label": "Steamed Shelled Edamame",
+              "priceModifier": 0
+            },
+            {
+              "value": "pickled-ginger-onions",
+              "label": "House-Pickled Ginger & Red Onions",
+              "priceModifier": 0
+            },
+            {
+              "value": "crispy-shallots",
+              "label": "Crispy Golden Fried Shallots",
+              "priceModifier": 0
+            },
+            {
+              "value": "roasted-sweet-corn",
+              "label": "Charred Sweet Corn Kernels",
+              "priceModifier": 0
+            },
+            {
+              "value": "wakame-seaweed",
+              "label": "Sesame Wakame Seaweed Salad",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "julienned-cucumbers-carrots",
+              "label": "Crisp Julienned Cucumbers & Carrots",
+              "priceModifier": 0
+            },
+            {
+              "value": "traditional-kimchi",
+              "label": "Spicy Napa Cabbage Kimchi",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "toasted-sesame-furikake",
+              "label": "Toasted Sesame Seeds & Nori Furikake",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "bowl-sauce-choice",
+          "type": "single-select",
+          "label": "Sauce / Dressing Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "teriyaki-glaze",
+              "label": "Signature Sweet Teriyaki Glaze",
+              "priceModifier": 0
+            },
+            {
+              "value": "spicy-sriracha-mayo",
+              "label": "Creamy Spicy Sriracha Mayo",
+              "priceModifier": 0
+            },
+            {
+              "value": "sesame-ginger-vinaigrette",
+              "label": "Toasted Sesame Ginger Vinaigrette",
+              "priceModifier": 0
+            },
+            {
+              "value": "citrus-ponzu",
+              "label": "Tangy Citrus Ponzu Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet-gochujang",
+              "label": "Sweet & Spicy Gochujang Chili Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "lemon-garlic-tahini",
+              "label": "Creamy Lemon Garlic Tahini (Vegan)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sauce-on-the-side",
+              "label": "Sauce Packaged on the Side (Recommended)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sides-and-extras",
+      "name": "Sides & Extras",
+      "sortOrder": 4,
+      "description": "High-margin finger accompaniments, fresh salads, and scratch-made dipping cups designed to increase average basket size. Every item is cooked with oil-drainage protocols and packaged in moisture-wicking or ventilated takeaway containers so fries, wings, and appetizers stay crisp rather than soggy.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍟",
+      "subSections": [
+        {
+          "id": "hot-sides",
+          "name": "Hot Sides",
+          "sortOrder": 1,
+          "description": "Freshly fried, roasted, and baked warm snacks such as seasoned fries, onion rings, spring rolls, cheese bites, and roasted vegetables packed in ventilated boxes."
+        },
+        {
+          "id": "cold-sides",
+          "name": "Cold Sides",
+          "sortOrder": 2,
+          "description": "Chilled crunchy slaws, cucumber salads, kimchi jars, and fresh mixed greens packed in tight-seal containers to preserve garden crispness."
+        },
+        {
+          "id": "dips-and-sauces",
+          "name": "Dips & Sauces",
+          "sortOrder": 3,
+          "description": "Sealed 2-ounce and 4-ounce portion cups of house-crafted aiolis, hot sauces, smoky barbecue dips, and dressings for dipping snacks and customizing entrées."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "side-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular Portion (Individual)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large Portion (Sharing / 2–3 Persons)",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "family",
+              "label": "Family Size (Group Tub / 4–5 Persons)",
+              "priceModifier": 5.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "sortOrder": 5,
+      "description": "Indulgent sweet treats carefully selected and packaged to survive delivery couriers without melting, collapsing, or degrading. Replaces delicate plated dining desserts with sturdy jarred cheesecakes, chilled puddings, mousses, and artisanal baked goods that arrive looking and tasting exceptional.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍰",
+      "subSections": [
+        {
+          "id": "packaged-desserts",
+          "name": "Packaged Desserts",
+          "sortOrder": 1,
+          "description": "Chilled, tamper-sealed dessert jars, mousses, tiramisu cups, and layered parfaits formulated with cold-chain stability for courier travel."
+        },
+        {
+          "id": "baked-goods",
+          "name": "Baked Goods",
+          "sortOrder": 2,
+          "description": "Rich fudge brownies, thick soft-baked cookies, artisan dessert bars, and loaf slices that remain soft, decadent, and structurally sound at room temperature."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "dessert-serving-temperature",
+          "type": "single-select",
+          "label": "Serving & Temperature Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "chilled",
+              "label": "Keep Chilled (Ready to eat from refrigerator)",
+              "priceModifier": 0
+            },
+            {
+              "value": "room-temperature",
+              "label": "Room Temperature (Ready to serve immediately)",
+              "priceModifier": 0
+            },
+            {
+              "value": "warm-delivery",
+              "label": "Warm Delivery (Lightly heated prior to dispatch)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "dessert-utensil",
+          "type": "single-select",
+          "label": "Dessert Spoon & Napkin",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "no-spoon",
+              "label": "No Dessert Spoon (Eco-Friendly)",
+              "priceModifier": 0
+            },
+            {
+              "value": "include-spoon",
+              "label": "Include Wooden Dessert Spoon & Napkin",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beverages",
+      "name": "Beverages",
+      "sortOrder": 6,
+      "description": "Pre-packaged, factory-sealed cold beverages curated to complement rich meals. Omits open fountain cups and flimsy lids that leak or lose fizz during transit, relying strictly on sealed aluminum cans and screw-top bottles to ensure 100% spill-free delivery and zero courier contamination.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥤",
+      "subSections": [
+        {
+          "id": "bottled-drinks",
+          "name": "Bottled Drinks",
+          "sortOrder": 1,
+          "description": "Screw-cap artisan iced teas, cold-pressed juices, natural spring waters, and premium sparkling waters in spill-proof containers."
+        },
+        {
+          "id": "canned-drinks",
+          "name": "Canned Drinks",
+          "sortOrder": 2,
+          "description": "Chilled classic sodas, zero-sugar sparkling beverages, ginger ales, tonic waters, and flavored seltzers sealed in aluminum cans."
+        }
+      ],
+      "itemOptions": []
+    },
+    {
+      "id": "combo-and-value-meals",
+      "name": "Combo & Value Meals",
+      "sortOrder": 7,
+      "description": "High-value bundled meals that solve customer ordering dilemmas and substantially elevate average order value (AOV). Combines featured entrées, popular sides, and cold beverages into organized, single-bag delivery bundles with seamless customization and upsell paths for solo eaters, families, and meal preppers.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍱",
+      "subSections": [
+        {
+          "id": "individual-combos",
+          "name": "Individual Combos",
+          "sortOrder": 1,
+          "description": "Complete solo meal solutions bundling one signature main dish or bowl with a choice of hot side and a chilled sealed beverage."
+        },
+        {
+          "id": "family-bundles",
+          "name": "Family Bundles",
+          "sortOrder": 2,
+          "description": "Multi-person feast packages combining 3 to 4 entrées with large sharing sides, dipping sauce flights, and multiple beverages for households."
+        },
+        {
+          "id": "weekly-meal-packs",
+          "name": "Weekly Meal Packs",
+          "sortOrder": 3,
+          "description": "Multi-meal packages and pre-portioned weekly dining packs equipped with reheating instructions, perfect for busy professionals and meal prep delivery."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "combo-main-selection",
+          "type": "single-select",
+          "label": "Main Entrée Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "signature-poultry-main",
+              "label": "Signature Poultry / Chicken Main",
+              "priceModifier": 0
+            },
+            {
+              "value": "signature-beef-main",
+              "label": "Signature Braised / Grilled Beef Main",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "signature-pasta-noodle-main",
+              "label": "Signature Pasta or Wok Noodle Main",
+              "priceModifier": 0
+            },
+            {
+              "value": "signature-vegetarian-main",
+              "label": "Signature Vegetarian / Vegan Main",
+              "priceModifier": 0
+            },
+            {
+              "value": "premium-seafood-main-upgrade",
+              "label": "Premium Seafood Entrée Upgrade",
+              "priceModifier": 3.5
+            }
+          ]
+        },
+        {
+          "id": "combo-side-selection",
+          "type": "single-select",
+          "label": "Included Side Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "seasoned-fries",
+              "label": "Crispy Seasoned Potato Fries",
+              "priceModifier": 0
+            },
+            {
+              "value": "steamed-jasmine-rice",
+              "label": "Steamed Fragrant Jasmine Rice",
+              "priceModifier": 0
+            },
+            {
+              "value": "garlic-mashed-potatoes",
+              "label": "Garlic Butter Mashed Potatoes",
+              "priceModifier": 0
+            },
+            {
+              "value": "tangy-crunchy-slaw",
+              "label": "Tangy Crunchy Cabbage Slaw",
+              "priceModifier": 0
+            },
+            {
+              "value": "garden-green-salad",
+              "label": "Garden Green Salad (Dressing on Side)",
+              "priceModifier": 0
+            },
+            {
+              "value": "loaded-fries-upgrade",
+              "label": "Upgrade to Loaded Cheesy Fries",
+              "priceModifier": 2.0
+            }
+          ]
+        },
+        {
+          "id": "combo-drink-selection",
+          "type": "single-select",
+          "label": "Included Beverage Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "classic-cola-can",
+              "label": "Chilled Classic Canned Cola (330ml)",
+              "priceModifier": 0
+            },
+            {
+              "value": "diet-cola-can",
+              "label": "Chilled Zero Sugar Cola (330ml)",
+              "priceModifier": 0
+            },
+            {
+              "value": "lemon-lime-soda-can",
+              "label": "Chilled Lemon-Lime Soda (330ml)",
+              "priceModifier": 0
+            },
+            {
+              "value": "bottled-spring-water",
+              "label": "Bottled Natural Spring Water (500ml)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sparkling-water-can",
+              "label": "Flavored Sparkling Mineral Water (330ml)",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "cold-pressed-juice-upgrade",
+              "label": "Upgrade to Cold-Pressed Fruit Juice (300ml)",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "organic-iced-tea-upgrade",
+              "label": "Upgrade to Organic Brewed Iced Tea (400ml)",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "combo-size-upgrade",
+          "type": "single-select",
+          "label": "Combo Size & Portion Upgrade",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "standard-combo",
+              "label": "Standard Combo (Regular Main, Regular Side, 330ml Drink)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-side-drink-upsell",
+              "label": "Large Upgrade (Regular Main, Large Side, Upgraded Drink)",
+              "priceModifier": 1.75
+            },
+            {
+              "value": "hungry-feast-upsell",
+              "label": "Hungry Feast Upgrade (Double Protein Main, Large Side, Large Drink)",
+              "priceModifier": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limited-time-seasonal",
+      "name": "Limited Time / Seasonal",
+      "sortOrder": 8,
+      "description": "Rotating promotional launches, culinary trend experiments, and seasonal collaborations engineered to drive repeat orders, generate social buzz, and test new recipe concepts before making them permanent menu staples.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "⭐",
+      "subSections": [
+        {
+          "id": "seasonal-features",
+          "name": "Seasonal Features",
+          "sortOrder": 1,
+          "description": "Limited-calendar dishes highlighting peak-harvest produce, holiday comfort specialties, and seasonal warmth or cooling recipes."
+        },
+        {
+          "id": "promotional-collabs",
+          "name": "Promotional Collabs & Specials",
+          "sortOrder": 2,
+          "description": "Exclusive viral food concepts, guest chef creations, and promotional festival items served while limited ingredient batches last."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "seasonal-portion-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular Serving",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large / Double Feast Portion",
+              "priceModifier": 4.0
+            }
+          ]
+        },
+        {
+          "id": "seasonal-spice-level",
+          "type": "single-select",
+          "label": "Spice Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "as-prepared",
+              "label": "Chef's Recommended Spice Level",
+              "priceModifier": 0
+            },
+            {
+              "value": "mild",
+              "label": "Mild (Reduced Heat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-hot",
+              "label": "Extra Fiery Heat",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "seasonal-packaging-preference",
+          "type": "single-select",
+          "label": "Packaging & Sauce Placement",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "sauce-on-the-side",
+              "label": "Sauce on the Side (Keeps food crisp during delivery)",
+              "priceModifier": 0
+            },
+            {
+              "value": "fully-dressed",
+              "label": "Fully Dressed & Mixed (Ready to eat upon delivery)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "defaultAvailableFrom": "11:00",
+        "defaultAvailableUntil": "23:00",
+        "note": "Promotional and seasonal specials are prepared fresh each shift in limited batches and served until daily allocations sell out."
+      }
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "deliveryTimeEstimate",
+      "name": "Live Delivery & Prep Time Estimates",
+      "isEnabled": true,
+      "description": "Calculates and displays real-time kitchen preparation times combined with dynamic courier transit windows based on order volume, traffic, and distance to set accurate customer expectations.",
+      "config": {
+        "displayEstimateOnMenu": true,
+        "defaultPrepTimeMinutes": 15,
+        "defaultTransitTimeMinutes": 20,
+        "peakHourBufferMinutes": 10,
+        "showLiveCourierTracking": true,
+        "criticalForDelivery": true
+      }
+    },
+    {
+      "id": "deliveryZone",
+      "name": "Delivery Zone & Radius Management",
+      "isEnabled": true,
+      "description": "Enforces geographic service boundaries with configurable minimum and maximum delivery radiuses to prevent food quality degradation from excessive transit times.",
+      "config": {
+        "enforceZoneValidation": true,
+        "minDeliveryRadiusKm": 0.5,
+        "maxDeliveryRadiusKm": 12.0,
+        "enableTieredDeliveryFees": true,
+        "minimumOrderAmount": 15.0
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Real-Time Inventory Badges",
+      "isEnabled": true,
+      "description": "Monitors stock levels and automatically displays 'In Stock', 'Low Stock', or 'Sold Out Today' badges to prevent unfulfillable orders during high-velocity delivery rushes.",
+      "config": {
+        "showLowStockAlert": true,
+        "lowStockThreshold": 8,
+        "autoMarkSoldOut": true,
+        "hideSoldOutItems": false
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Badging",
+      "isEnabled": true,
+      "description": "Displays clear allergen alerts and dietary tags across all menu items to ensure customer safety during remote digital ordering without table service interaction.",
+      "config": {
+        "highlightSevereAllergens": true,
+        "showDietaryFilters": true,
+        "supportedTags": [
+          "gluten-free",
+          "dairy-free",
+          "nut-free",
+          "halal",
+          "vegan",
+          "vegetarian",
+          "contains-gluten",
+          "contains-dairy",
+          "contains-nuts",
+          "contains-soy",
+          "contains-egg",
+          "contains-shellfish"
+        ]
+      }
+    },
+    {
+      "id": "spiceLevels",
+      "name": "Spice Level Customization",
+      "isEnabled": true,
+      "description": "Empowers customers to calibrate heat intensity from zero spice to extreme fiery heat on entrées, bowls, noodles, and dipping sauces.",
+      "config": {
+        "defaultLevel": "medium",
+        "allowCustomerSelection": true,
+        "levels": [
+          "none",
+          "mild",
+          "medium",
+          "hot",
+          "extra-hot"
+        ]
+      }
+    },
+    {
+      "id": "comboBuilder",
+      "name": "Interactive Combo & Value Meal Builder",
+      "isEnabled": true,
+      "description": "Provides an interactive step-by-step bundling experience for individual combos, family packs, and meal prep bundles with validated main, side, and drink selections.",
+      "config": {
+        "enforceStepValidation": true,
+        "allowSizeUpgrades": true,
+        "allowSideSwaps": true,
+        "allowDrinkSwaps": true,
+        "targetSectionIds": [
+          "combo-and-value-meals"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

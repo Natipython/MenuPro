@@ -1,0 +1,1238 @@
+{
+  "id": "catering-service",
+  "name": "Catering Service",
+  "slug": "catering-service",
+  "icon": "🍽️🎉",
+  "description": "A comprehensive catering and event hospitality template designed for off-premise caterers, corporate dining specialists, wedding banquet providers, and private chef services. Structured around advance pre-orders, per-head (per-guest) pricing models, scalable headcount calculations, event date scheduling, and bespoke custom menu consultation workflows for gatherings of any size.",
+  "category": "hybrid",
+  "tags": [
+    "catering",
+    "events",
+    "wedding",
+    "corporate",
+    "party",
+    "pre-order",
+    "buffet"
+  ],
+  "sections": [
+    {
+      "id": "appetizer-and-starter-packages",
+      "name": "Appetizer & Starter Packages",
+      "sortOrder": 1,
+      "description": "Passed hors d'oeuvres, chilled finger foods, and interactive appetizer stations designed for cocktail receptions, arrival mixers, and pre-dinner social hours. This section exists to help event organizers select opening culinary bites that stimulate appetite and facilitate guest mingling before formal seating, priced either per head or by fixed platter quantities.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍢",
+      "subSections": [
+        {
+          "id": "cold-canapes",
+          "name": "Cold Canapés",
+          "sortOrder": 1,
+          "description": "Delicate, chilled one-bite canapés, savory tartlets, crostini, blinis, and fresh seafood spoons crafted for room-temperature standing receptions."
+        },
+        {
+          "id": "hot-passed-hors-doeuvres",
+          "name": "Hot Passed Hors d'Oeuvres",
+          "sortOrder": 2,
+          "description": "Warm bite-sized skewers, artisanal sliders, arancini, mini quiches, and gourmet empanadas circulated hot by service staff during cocktail hours."
+        },
+        {
+          "id": "dip-and-crudite-stations",
+          "name": "Dip & Crudite Stations",
+          "sortOrder": 3,
+          "description": "Self-service grazing displays, artisanal charcuterie and regional cheese boards, crisp market vegetable crudités, and Mediterranean hummus and mezze spreads."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "guest-count",
+          "type": "number-input",
+          "label": "Guest Count (Headcount)",
+          "isRequired": true
+        },
+        {
+          "id": "dietary-mix-preference",
+          "type": "single-select",
+          "label": "Dietary Mix Preference",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "chef-balanced-mix",
+              "label": "Chef's Balanced Mix (Meat, Seafood & Vegetarian)",
+              "priceModifier": 0
+            },
+            {
+              "value": "vegetarian-heavy",
+              "label": "Vegetarian-Forward (50%+ Plant-Based Selections)",
+              "priceModifier": 0
+            },
+            {
+              "value": "all-vegetarian-vegan",
+              "label": "100% Vegetarian & Vegan Selections",
+              "priceModifier": 0
+            },
+            {
+              "value": "gluten-free-priority",
+              "label": "Gluten-Free Priority Assortment",
+              "priceModifier": 2
+            },
+            {
+              "value": "halal-certified",
+              "label": "100% Halal-Certified Meats & Ingredients",
+              "priceModifier": 3
+            }
+          ]
+        },
+        {
+          "id": "pieces-per-guest",
+          "type": "single-select",
+          "label": "Portion Sizing (Pieces per Guest)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "light-reception",
+              "label": "Light Pre-Dinner Reception (3–4 pieces per guest)",
+              "priceModifier": 0
+            },
+            {
+              "value": "standard-cocktail",
+              "label": "Standard Cocktail Hour (6–7 pieces per guest)",
+              "priceModifier": 6
+            },
+            {
+              "value": "heavy-appetizers",
+              "label": "Heavy Hors d'Oeuvres / Cocktail Meal (10–12 pieces per guest)",
+              "priceModifier": 14
+            }
+          ]
+        },
+        {
+          "id": "service-presentation",
+          "type": "single-select",
+          "label": "Service & Presentation Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "butler-passed",
+              "label": "Butler Passed by Service Staff with Cocktail Napkins",
+              "priceModifier": 0
+            },
+            {
+              "value": "stationary-buffet",
+              "label": "Stationary Grazing Display Table with Platters",
+              "priceModifier": 0
+            },
+            {
+              "value": "drop-off-platters",
+              "label": "Drop-Off Disposable Wooden Tasting Platters",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "special-dietary-notes",
+          "type": "text-input",
+          "label": "Specific Dietary Restrictions or Allergy Notes",
+          "isRequired": false
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Appetizer packages must be pre-ordered at least 72 hours prior to the event date to ensure fresh preparation."
+      }
+    },
+    {
+      "id": "main-course-packages",
+      "name": "Main Course Packages",
+      "sortOrder": 2,
+      "description": "Substantial meal packages serving as the culinary centerpiece of banquets, weddings, corporate galas, and festive dinners. This section exists to provide structured entrée offerings across multiple service formats (plated, buffet, family-style, or live-fire BBQ), giving event hosts per-person pricing clarity, protein choice combinations, and integrated starch and vegetable accompaniments.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍲",
+      "subSections": [
+        {
+          "id": "plated-dinner-options",
+          "name": "Plated Dinner Options",
+          "sortOrder": 1,
+          "description": "Formal multi-course plated dinners individually portioned, garnished, and served to seated guests at designated tables by dedicated waitstaff."
+        },
+        {
+          "id": "buffet-stations",
+          "name": "Buffet Stations",
+          "sortOrder": 2,
+          "description": "Double-sided self-service hot and chilled banquet stations featuring stainless chafing dishes, carved-meat carving tables, and themed food bars."
+        },
+        {
+          "id": "family-style-platters",
+          "name": "Family-Style Platters",
+          "sortOrder": 3,
+          "description": "Communal dining experience featuring generous multi-portion platters placed at the center of dining tables for interactive guest sharing."
+        },
+        {
+          "id": "bbq-and-grill-stations",
+          "name": "BBQ & Grill Stations",
+          "sortOrder": 4,
+          "description": "Live on-site flame grilling and slow-smoked barbecue stations serving tender smoked meats, charred vegetables, artisanal buns, and hearty regional sides."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "guest-count",
+          "type": "number-input",
+          "label": "Guest Count (Headcount)",
+          "isRequired": true
+        },
+        {
+          "id": "protein-selections",
+          "type": "multi-select",
+          "label": "Protein Selections (Choose up to 3)",
+          "isRequired": true,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "herb-roasted-poultry",
+              "label": "Herb-Roasted French Chicken Breast with Natural Jus",
+              "priceModifier": 0
+            },
+            {
+              "value": "prime-beef-tenderloin",
+              "label": "Carved Prime Angus Beef Tenderloin with Red Wine Demi-Glace",
+              "priceModifier": 8
+            },
+            {
+              "value": "slow-smoked-brisket",
+              "label": "Slow-Smoked Texas Style Beef Brisket",
+              "priceModifier": 6
+            },
+            {
+              "value": "pan-seared-salmon",
+              "label": "Pan-Seared Atlantic Salmon with Lemon Dill Cream",
+              "priceModifier": 5
+            },
+            {
+              "value": "roasted-halibut",
+              "label": "Roasted Wild Pacific Halibut with Caper Butter",
+              "priceModifier": 9
+            },
+            {
+              "value": "rosemary-lamb-chops",
+              "label": "Rosemary & Garlic Crusted New Zealand Lamb Chops",
+              "priceModifier": 10
+            },
+            {
+              "value": "stuffed-bell-peppers-vegan",
+              "label": "Quinoa, Black Bean & Roasted Corn Stuffed Peppers (Vegan)",
+              "priceModifier": 0
+            },
+            {
+              "value": "wild-mushroom-polenta-veg",
+              "label": "Wild Mushroom Ragout over Creamy Parmesan Polenta (Vegetarian)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "side-dish-pairings",
+          "type": "multi-select",
+          "label": "Side Dish Pairings (Choose 2)",
+          "isRequired": true,
+          "maxSelections": 2,
+          "choices": [
+            {
+              "value": "garlic-mashed-potatoes",
+              "label": "Yukon Gold Garlic Mashed Potatoes",
+              "priceModifier": 0
+            },
+            {
+              "value": "roasted-baby-fingerlings",
+              "label": "Herb-Roasted Baby Fingerling Potatoes",
+              "priceModifier": 0
+            },
+            {
+              "value": "wild-rice-pilaf",
+              "label": "Wild Rice Pilaf with Toasted Almonds & Cranberries",
+              "priceModifier": 0
+            },
+            {
+              "value": "charred-asparagus",
+              "label": "Charred Jumbo Asparagus with Lemon Zest",
+              "priceModifier": 0
+            },
+            {
+              "value": "honey-glazed-heirloom-carrots",
+              "label": "Honey-Glazed Heirloom Carrots",
+              "priceModifier": 0
+            },
+            {
+              "value": "steamed-broccolini",
+              "label": "Garlic & Chili Sautéed Broccolini",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "dietary-accommodations",
+          "type": "multi-select",
+          "label": "Dietary Accommodations Needed",
+          "isRequired": false,
+          "maxSelections": 5,
+          "choices": [
+            {
+              "value": "separate-vegetarian-meals",
+              "label": "Individual Vegetarian Entrées for Specified Guests",
+              "priceModifier": 0
+            },
+            {
+              "value": "separate-vegan-meals",
+              "label": "Individual 100% Vegan Entrées for Specified Guests",
+              "priceModifier": 0
+            },
+            {
+              "value": "strict-gluten-free-prep",
+              "label": "Celiac-Safe Gluten-Free Plated Portions",
+              "priceModifier": 0
+            },
+            {
+              "value": "dairy-free-substitutions",
+              "label": "Dairy-Free Sauce & Butter Substitutions",
+              "priceModifier": 0
+            },
+            {
+              "value": "halal-certified-prep",
+              "label": "Halal-Certified Sourcing for All Meats",
+              "priceModifier": 4
+            }
+          ]
+        },
+        {
+          "id": "service-temperature-protocol",
+          "type": "single-select",
+          "label": "Serving & Thermal Protocol",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "hot-and-ready-chafers",
+              "label": "Hot & Ready to Serve with Chafing Racks & Sterno Fuels",
+              "priceModifier": 0
+            },
+            {
+              "value": "chilled-dropoff-reheat",
+              "label": "Chilled Drop-Off with Oven Reheating Instructions",
+              "priceModifier": 0
+            },
+            {
+              "value": "on-site-chef-service",
+              "label": "On-Site Chef Table Finishing & Slicing Service",
+              "priceModifier": 15
+            }
+          ]
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Main course packages require finalized headcounts and protein selections at least 5 business days before the scheduled event date."
+      }
+    },
+    {
+      "id": "dessert-packages",
+      "name": "Dessert Packages",
+      "sortOrder": 3,
+      "description": "Artisanal sweet displays, formal plated dessert courses, and customized ceremonial cake services designed to provide a memorable conclusion to banquet dining. This section exists to handle both self-service dessert bars and seated sweet courses, including cake cutting, portioning logistics, and sweet dietary alternatives.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍰",
+      "subSections": [
+        {
+          "id": "dessert-tables",
+          "name": "Dessert Tables",
+          "sortOrder": 1,
+          "description": "Visually stunning sweet grazing tables featuring miniature shooters, macarons, gourmet brownies, fruit tartlets, and petite cheesecakes."
+        },
+        {
+          "id": "plated-desserts",
+          "name": "Plated Desserts",
+          "sortOrder": 2,
+          "description": "Elegantly composed individual dessert creations garnished with fresh coulis, edible florals, and tuiles for seated banquet dining."
+        },
+        {
+          "id": "cake-service",
+          "name": "Cake Service",
+          "sortOrder": 3,
+          "description": "Tiered celebration cakes, ceremonial cutting setups, and kitchen cutting and plating services for client-provided or in-house celebration cakes."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "guest-count",
+          "type": "number-input",
+          "label": "Guest Count",
+          "isRequired": true
+        },
+        {
+          "id": "cake-size-tier",
+          "type": "single-select",
+          "label": "Cake Size & Tier Configuration",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none-dessert-table-only",
+              "label": "No Cake (Dessert Table / Plated Desserts Only)",
+              "priceModifier": 0
+            },
+            {
+              "value": "single-tier-8-inch",
+              "label": "Single-Tier 8-Inch Cake (Serves 12–16 guests)",
+              "priceModifier": 65
+            },
+            {
+              "value": "two-tier-celebration",
+              "label": "Two-Tier Celebration Cake (Serves 30–45 guests)",
+              "priceModifier": 140
+            },
+            {
+              "value": "three-tier-wedding",
+              "label": "Three-Tier Grand Banquet Cake (Serves 75–100 guests)",
+              "priceModifier": 280
+            },
+            {
+              "value": "sheet-cake-supplement",
+              "label": "Kitchen Sheet Cake Supplement (Serves 50 additional guests)",
+              "priceModifier": 95
+            }
+          ]
+        },
+        {
+          "id": "dessert-table-variety",
+          "type": "single-select",
+          "label": "Dessert Table Variety Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "petite-assortment",
+              "label": "Petite Sweet Trio (3 varieties, 2 pieces per guest)",
+              "priceModifier": 0
+            },
+            {
+              "value": "classic-sweet-table",
+              "label": "Classic Sweet Table (4 varieties, 3 pieces per guest)",
+              "priceModifier": 4
+            },
+            {
+              "value": "grand-deluxe-station",
+              "label": "Grand Deluxe Confectionery (6 varieties, 4–5 pieces per guest)",
+              "priceModifier": 8
+            }
+          ]
+        },
+        {
+          "id": "dessert-dietary-accommodations",
+          "type": "multi-select",
+          "label": "Dessert Dietary Options",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "include-gluten-free",
+              "label": "Include Gluten-Free Pastries & Flourless Tortes",
+              "priceModifier": 0
+            },
+            {
+              "value": "include-vegan-sweets",
+              "label": "Include Vegan Panna Cottas & Raw Bites",
+              "priceModifier": 0
+            },
+            {
+              "value": "nut-free-sweets-only",
+              "label": "Strict 100% Nut-Free Confectionery Assortment",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "cake-cutting-service",
+          "type": "single-select",
+          "label": "Cake Service & Plating Logistics",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "self-cut-provided-knife",
+              "label": "Client Self-Cut (Caterer provides server & knife set)",
+              "priceModifier": 0
+            },
+            {
+              "value": "full-staff-cake-cutting",
+              "label": "Full Staff Cake Cutting, Plating & Berry Coulis Service",
+              "priceModifier": 2.5
+            }
+          ]
+        },
+        {
+          "id": "custom-inscription-text",
+          "type": "text-input",
+          "label": "Custom Cake Inscription or Plaque Message",
+          "isRequired": false
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Custom cakes and large dessert tables require minimum 7 days notice."
+      }
+    },
+    {
+      "id": "beverage-packages",
+      "name": "Beverage Packages",
+      "sortOrder": 4,
+      "description": "Comprehensive liquid catering solutions spanning non-alcoholic hydration stations, licensed alcoholic bar packages, and gourmet hot beverage services. This section exists to simplify drink provisioning through predictable per-guest, time-allotted packages while addressing licensing, glassware rentals, bar staff, and responsible alcohol hospitality.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍷",
+      "subSections": [
+        {
+          "id": "non-alcoholic-packages",
+          "name": "Non-Alcoholic Packages",
+          "sortOrder": 1,
+          "description": "Infused citrus waters, artisanal lemonades, iced botanical teas, craft sodas, and handcrafted mocktails for daytime and family events."
+        },
+        {
+          "id": "bar-service-packages",
+          "name": "Bar Service Packages",
+          "sortOrder": 2,
+          "description": "Tiered beer, wine, and liquor packages complete with mixers, garnishes, chilling tubs, bar tools, and certified bartenders."
+        },
+        {
+          "id": "coffee-and-tea-service",
+          "name": "Coffee & Tea Service",
+          "sortOrder": 3,
+          "description": "Brewed single-origin coffee urns, decaffeinated selections, assorted organic hot teas, sweeteners, dairy milks, and plant-based creams."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "guest-count",
+          "type": "number-input",
+          "label": "Guest Count",
+          "isRequired": true
+        },
+        {
+          "id": "service-duration",
+          "type": "single-select",
+          "label": "Beverage Service Duration",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "2-hours",
+              "label": "2 Hours Beverage Service",
+              "priceModifier": 0
+            },
+            {
+              "value": "3-hours",
+              "label": "3 Hours Beverage Service",
+              "priceModifier": 6
+            },
+            {
+              "value": "4-hours-standard",
+              "label": "4 Hours Beverage Service (Standard Event Window)",
+              "priceModifier": 11
+            },
+            {
+              "value": "5-hours-extended",
+              "label": "5 Hours Extended Beverage Service",
+              "priceModifier": 16
+            },
+            {
+              "value": "unlimited-reception",
+              "label": "Unlimited Duration (Entire Reception / up to 7 hours)",
+              "priceModifier": 24
+            }
+          ]
+        },
+        {
+          "id": "bar-service-model",
+          "type": "single-select",
+          "label": "Bar Service Model & Liquor Tier",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "non-alcoholic-only",
+              "label": "Non-Alcoholic Soft Drinks & Hydration Station Only",
+              "priceModifier": 0
+            },
+            {
+              "value": "open-bar-beer-wine",
+              "label": "Open Bar: Curated Craft Beer & Select Fine Wines",
+              "priceModifier": 14
+            },
+            {
+              "value": "open-bar-standard-spirits",
+              "label": "Open Bar: Full Spirits, Beer, Wine & Classic Mixers",
+              "priceModifier": 22
+            },
+            {
+              "value": "open-bar-premium-craft",
+              "label": "Open Bar: Top-Shelf Spirits, Signature Cocktails & Premium Wines",
+              "priceModifier": 32
+            },
+            {
+              "value": "cash-bar-service",
+              "label": "Cash Bar (Host pays bar setup & bartender fee; guests pay per drink)",
+              "priceModifier": 5
+            }
+          ]
+        },
+        {
+          "id": "glassware-selection",
+          "type": "single-select",
+          "label": "Glassware & Barware Package",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "eco-compostable-drinkware",
+              "label": "Eco-Friendly Compostable Clear Cups & Paper Straws",
+              "priceModifier": 0
+            },
+            {
+              "value": "classic-stemmed-glassware",
+              "label": "Polished Crystal Glassware Rental & Post-Event Wash",
+              "priceModifier": 4
+            },
+            {
+              "value": "client-provided-glassware",
+              "label": "Client / Venue Provides All Glassware",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "signature-welcome-drink",
+          "type": "toggle",
+          "label": "Include Signature Welcome Cocktail / Mocktail upon Arrival",
+          "isRequired": false
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Alcoholic beverage packages comply with local liquor laws and require certified bartenders on-site."
+      }
+    },
+    {
+      "id": "full-event-packages",
+      "name": "Full Event Packages",
+      "sortOrder": 5,
+      "description": "All-inclusive, coordinated event packages integrating multiple courses, beverages, essential dining ware, and timeline management for distinct event categories. This section exists to provide a turnkey solution for hosts organizing weddings, corporate lunches, formal galas, or milestone celebrations, eliminating the friction of assembling menus piecemeal.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🎪",
+      "subSections": [
+        {
+          "id": "corporate-lunch",
+          "name": "Corporate Lunch",
+          "sortOrder": 1,
+          "description": "Streamlined executive hot buffets, boxed sandwich assortments, and boardroom conference packages designed for punctual corporate timelines."
+        },
+        {
+          "id": "wedding-reception",
+          "name": "Wedding Reception",
+          "sortOrder": 2,
+          "description": "Comprehensive bridal packages encompassing cocktail hour canapés, champagne toasts, multi-course dinner service, late-night bites, and cake cutting."
+        },
+        {
+          "id": "cocktail-party",
+          "name": "Cocktail Party",
+          "sortOrder": 3,
+          "description": "Lively social reception bundles featuring continuous passed hors d'oeuvres, grazing tables, bar staffing, and high-top cocktail styling."
+        },
+        {
+          "id": "birthday-and-celebration",
+          "name": "Birthday & Celebration",
+          "sortOrder": 4,
+          "description": "Festive celebration packages tailored for milestone birthdays, anniversaries, graduations, and private family parties."
+        },
+        {
+          "id": "breakfast-and-brunch-event",
+          "name": "Breakfast & Brunch Event",
+          "sortOrder": 5,
+          "description": "Morning banquets complete with warm quiches, Belgian waffle or pancake bars, smoked salmon boards, fresh juice bars, and coffee stations."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "guest-count",
+          "type": "number-input",
+          "label": "Estimated Guest Count",
+          "isRequired": true
+        },
+        {
+          "id": "event-date",
+          "type": "date-picker",
+          "label": "Scheduled Event Date",
+          "isRequired": true
+        },
+        {
+          "id": "event-time-window",
+          "type": "single-select",
+          "label": "Event Service Time Window",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "morning-breakfast",
+              "label": "Morning / Breakfast (07:30 - 11:00)",
+              "priceModifier": 0
+            },
+            {
+              "value": "midday-lunch",
+              "label": "Midday / Corporate Lunch (11:30 - 14:30)",
+              "priceModifier": 0
+            },
+            {
+              "value": "afternoon-reception",
+              "label": "Afternoon Reception (14:30 - 17:30)",
+              "priceModifier": 0
+            },
+            {
+              "value": "evening-dinner-gala",
+              "label": "Evening Banquet / Dinner Gala (18:00 - 23:00)",
+              "priceModifier": 5
+            },
+            {
+              "value": "late-night-party",
+              "label": "Late Night Event (21:00 - 02:00)",
+              "priceModifier": 8
+            }
+          ]
+        },
+        {
+          "id": "venue-type",
+          "type": "single-select",
+          "label": "Venue Setting Type",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "indoor-commercial-kitchen",
+              "label": "Indoor Commercial Venue (Full Prep Kitchen Available)",
+              "priceModifier": 0
+            },
+            {
+              "value": "indoor-no-kitchen",
+              "label": "Indoor Hall / Office (No Dedicated Kitchen Equipment)",
+              "priceModifier": 3
+            },
+            {
+              "value": "outdoor-garden-tent",
+              "label": "Outdoor Garden / Park / Marquee Tent",
+              "priceModifier": 5
+            },
+            {
+              "value": "private-residence",
+              "label": "Private Residential Home / Estate",
+              "priceModifier": 2
+            },
+            {
+              "value": "hybrid-indoor-outdoor",
+              "label": "Hybrid Indoor & Outdoor Venue",
+              "priceModifier": 3
+            }
+          ]
+        },
+        {
+          "id": "service-style",
+          "type": "single-select",
+          "label": "Primary Service Style",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "plated-table-service",
+              "label": "Formal Multi-Course Plated Service at Assigned Tables",
+              "priceModifier": 8
+            },
+            {
+              "value": "buffet-station-service",
+              "label": "Executive Buffet Station with Chafers & Carvers",
+              "priceModifier": 0
+            },
+            {
+              "value": "family-style-sharing",
+              "label": "Communal Family-Style Table Platters",
+              "priceModifier": 4
+            },
+            {
+              "value": "interactive-chef-stations",
+              "label": "Interactive Live Cooking & Action Stations",
+              "priceModifier": 12
+            }
+          ]
+        },
+        {
+          "id": "package-tier",
+          "type": "single-select",
+          "label": "Package Quality Tier",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "classic-tier",
+              "label": "Classic Essential Tier (Dependable favorites & standard decor)",
+              "priceModifier": 0
+            },
+            {
+              "value": "premium-tier",
+              "label": "Premium Signature Tier (Upgraded proteins, dessert spread & bar)",
+              "priceModifier": 18
+            },
+            {
+              "value": "luxury-deluxe-tier",
+              "label": "Luxury Grand Deluxe Tier (Prime cuts, full open bar & white-glove staffing)",
+              "priceModifier": 35
+            }
+          ]
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Full event packages require contract execution and date reservation at least 14 days in advance."
+      }
+    },
+    {
+      "id": "add-on-services",
+      "name": "Add-On Services",
+      "sortOrder": 6,
+      "description": "Supplementary event support services including professional floor staff, rental furniture, decorative table staging, and service ware. This section exists to provide a one-stop hospitality experience, allowing event planners to source personnel, tables, fine linens, and chinaware without contracting separate rental companies.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🛎️",
+      "subSections": [
+        {
+          "id": "staff-and-waiters",
+          "name": "Staff & Waiters",
+          "sortOrder": 1,
+          "description": "Professional uniformed banquet servers, event captains, certified mixologists, kitchen assistants, and bus staff."
+        },
+        {
+          "id": "equipment-rental",
+          "name": "Equipment Rental (tables, chairs, linens)",
+          "sortOrder": 2,
+          "description": "Round dining tables, cocktail high-top tables, banquet folding chairs, Chiavari chairs, floor-length tablecloths, and cloth napkins."
+        },
+        {
+          "id": "decoration-add-ons",
+          "name": "Decoration Add-Ons",
+          "sortOrder": 3,
+          "description": "Floral centerpieces, custom-printed banquet menus, candlelight votives, themed table runners, and welcome easel boards."
+        },
+        {
+          "id": "tableware-and-disposables",
+          "name": "Tableware & Disposables",
+          "sortOrder": 4,
+          "description": "Fine white porcelain plates, polished flatware, wine goblets, champagne flutes, or premium palm leaf and bamboo eco-tableware."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "service-quantity",
+          "type": "number-input",
+          "label": "Quantity / Personnel Count / Unit Count",
+          "isRequired": true
+        },
+        {
+          "id": "hours-needed",
+          "type": "single-select",
+          "label": "Hours of Service Needed",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "2-hours-dropoff",
+              "label": "2 Hours (Setup & Drop-Off Window)",
+              "priceModifier": 0
+            },
+            {
+              "value": "4-hours-half-event",
+              "label": "4 Hours (Standard Service Duration)",
+              "priceModifier": 40
+            },
+            {
+              "value": "6-hours-full-reception",
+              "label": "6 Hours (Extended Reception & Breakdown)",
+              "priceModifier": 80
+            },
+            {
+              "value": "8-hours-full-day",
+              "label": "8 Hours (Full Day Event Coverage)",
+              "priceModifier": 120
+            },
+            {
+              "value": "full-weekend-rental",
+              "label": "Multi-Day Equipment Rental (Tables, Chairs, Linens)",
+              "priceModifier": 200
+            }
+          ]
+        },
+        {
+          "id": "setup-and-breakdown-tier",
+          "type": "single-select",
+          "label": "Setup & Breakdown Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-curbside",
+              "label": "Curbside Equipment Delivery & Next-Day Pickup",
+              "priceModifier": 0
+            },
+            {
+              "value": "complete-white-glove-setup",
+              "label": "White-Glove Setup (Unpacking, Table Dressing & Post-Event Breakdown)",
+              "priceModifier": 75
+            },
+            {
+              "value": "post-event-venue-reset",
+              "label": "Comprehensive Venue Reset, Trash Removal & Scullery Cleaning",
+              "priceModifier": 150
+            }
+          ]
+        },
+        {
+          "id": "special-rental-specifications",
+          "type": "text-input",
+          "label": "Specific Dimensions, Color Themes or Rental Notes",
+          "isRequired": false
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Rental equipment and staffing allocations are subject to inventory and crew availability; early booking is recommended."
+      }
+    },
+    {
+      "id": "custom-menu-consultation",
+      "name": "Custom Menu Consultation",
+      "sortOrder": 7,
+      "description": "A tailored inquiry and consultation intake channel for clients requiring fully customized menus, themed cultural culinary concepts, or high-profile bespoke catering. This section exists as an interactive intake form allowing prospective clients to submit guest counts, budgetary parameters, dietary restrictions, and creative culinary visions directly to the executive chef.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "📋",
+      "subSections": [
+        {
+          "id": "request-custom-menu",
+          "name": "Request Custom Menu",
+          "sortOrder": 1,
+          "description": "Bespoke culinary intake form for private tasting appointments, custom recipe development, and tailored proposals."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "consultation-event-type",
+          "type": "single-select",
+          "label": "Event Type",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "wedding-celebration",
+              "label": "Wedding Ceremony & Reception",
+              "priceModifier": 0
+            },
+            {
+              "value": "corporate-summit-gala",
+              "label": "Corporate Gala / Conference / Summit",
+              "priceModifier": 0
+            },
+            {
+              "value": "private-dinner-party",
+              "label": "Intimate Private Chef Dinner Party",
+              "priceModifier": 0
+            },
+            {
+              "value": "milestone-birthday-anniversary",
+              "label": "Milestone Birthday or Anniversary",
+              "priceModifier": 0
+            },
+            {
+              "value": "charity-fundraiser",
+              "label": "Charity Gala or Non-Profit Fundraiser",
+              "priceModifier": 0
+            },
+            {
+              "value": "holiday-office-party",
+              "label": "Holiday Office Celebration",
+              "priceModifier": 0
+            },
+            {
+              "value": "other-custom-event",
+              "label": "Other Bespoke Occasion",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "consultation-guest-count",
+          "type": "number-input",
+          "label": "Anticipated Guest Count",
+          "isRequired": true
+        },
+        {
+          "id": "consultation-event-date",
+          "type": "date-picker",
+          "label": "Target Event Date",
+          "isRequired": true
+        },
+        {
+          "id": "budget-range-per-guest",
+          "type": "single-select",
+          "label": "Estimated Budget Range per Guest",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "budget-under-35",
+              "label": "Value Conscious (Under $35 / guest)",
+              "priceModifier": 0
+            },
+            {
+              "value": "budget-35-65",
+              "label": "Moderate ($35 – $65 / guest)",
+              "priceModifier": 0
+            },
+            {
+              "value": "budget-65-110",
+              "label": "Premium ($65 – $110 / guest)",
+              "priceModifier": 0
+            },
+            {
+              "value": "budget-110-180",
+              "label": "Luxury ($110 – $180 / guest)",
+              "priceModifier": 0
+            },
+            {
+              "value": "budget-180-plus",
+              "label": "Ultra Bespoke / Fine Dining ($180+ / guest)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "dietary-requirements-checklist",
+          "type": "multi-select",
+          "label": "Dietary Mandates & Allergen Considerations",
+          "isRequired": false,
+          "maxSelections": 8,
+          "choices": [
+            {
+              "value": "vegetarian",
+              "label": "Vegetarian Options",
+              "priceModifier": 0
+            },
+            {
+              "value": "vegan",
+              "label": "Vegan Options",
+              "priceModifier": 0
+            },
+            {
+              "value": "celiac-gluten-free",
+              "label": "Gluten-Free / Celiac-Safe",
+              "priceModifier": 0
+            },
+            {
+              "value": "dairy-free",
+              "label": "Dairy-Free / Lactose-Free",
+              "priceModifier": 0
+            },
+            {
+              "value": "nut-free-environment",
+              "label": "Strict Nut-Free Preparation",
+              "priceModifier": 0
+            },
+            {
+              "value": "halal",
+              "label": "Halal-Certified Sourcing",
+              "priceModifier": 0
+            },
+            {
+              "value": "kosher-style",
+              "label": "Kosher-Style Preparation",
+              "priceModifier": 0
+            },
+            {
+              "value": "shellfish-allergy",
+              "label": "No Shellfish / Crustaceans",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "special-notes-and-vision",
+          "type": "text-input",
+          "label": "Culinary Vision, Theme, Venue Details & Special Requests",
+          "isRequired": false
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Consultation inquiries receive a customized proposal and preliminary pricing estimate within 24–48 business hours."
+      }
+    },
+    {
+      "id": "seasonal-and-holiday-menus",
+      "name": "Seasonal & Holiday Menus",
+      "sortOrder": 8,
+      "description": "Pre-set, limited-edition catering menus tailored to calendar holidays, festive traditions, and peak agricultural seasons. This section exists to provide ready-to-order seasonal feasts (such as Thanksgiving roasts, Winter Holiday banquets, Spring Garden gatherings, and Summer Solstice BBQs) with signature holiday trimmings and fixed per-guest package rates.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🎄",
+      "subSections": [
+        {
+          "id": "holiday-feast-packages",
+          "name": "Holiday Feast Packages",
+          "sortOrder": 1,
+          "description": "Complete Thanksgiving, Christmas, and winter holiday dinners featuring whole roasted turkey, glazed ham, savory brioche stuffing, and seasonal pies."
+        },
+        {
+          "id": "spring-and-summer-garden-packages",
+          "name": "Spring & Summer Garden Packages",
+          "sortOrder": 2,
+          "description": "Warm-weather celebration packages highlighting fresh heirloom produce, chilled seafood bars, grilled citrus skewers, and crisp fruit desserts."
+        },
+        {
+          "id": "autumn-harvest-gatherings",
+          "name": "Autumn Harvest Gatherings",
+          "sortOrder": 3,
+          "description": "Hearty fall banquets featuring slow-braised short ribs, butternut squash bisques, roasted root vegetables, and spiced apple crisps."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "guest-count",
+          "type": "number-input",
+          "label": "Guest Count",
+          "isRequired": true
+        },
+        {
+          "id": "seasonal-event-date",
+          "type": "date-picker",
+          "label": "Holiday / Seasonal Delivery Date",
+          "isRequired": true
+        },
+        {
+          "id": "seasonal-package-tier",
+          "type": "single-select",
+          "label": "Holiday Package Tier",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "traditional-holiday-feast",
+              "label": "Traditional Holiday Feast (Core entrée, 3 sides, rolls & pie)",
+              "priceModifier": 0
+            },
+            {
+              "value": "deluxe-holiday-banquet",
+              "label": "Deluxe Holiday Banquet (Dual proteins, 5 gourmet sides, appetizer board & dessert)",
+              "priceModifier": 15
+            },
+            {
+              "value": "grand-holiday-gala",
+              "label": "Grand Gala Holiday Feast (Prime rib roast, seafood starter, deluxe sides, open bar & dessert bar)",
+              "priceModifier": 32
+            }
+          ]
+        },
+        {
+          "id": "seasonal-service-format",
+          "type": "single-select",
+          "label": "Delivery & Thermal Execution",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "oven-ready-chilled-dropoff",
+              "label": "Oven-Ready Chilled Drop-Off with Detailed Step-by-Step Reheating Manual",
+              "priceModifier": 0
+            },
+            {
+              "value": "hot-ready-to-serve-chafers",
+              "label": "Hot Drop-Off Ready to Serve in Insulated Thermal Carriers with Chafing Kits",
+              "priceModifier": 5
+            },
+            {
+              "value": "full-service-holiday-staff",
+              "label": "Full On-Site Staffing & Chef Carver Execution",
+              "priceModifier": 18
+            }
+          ]
+        },
+        {
+          "id": "seasonal-dietary-notes",
+          "type": "text-input",
+          "label": "Special Dietary Needs or Recipe Substitutions",
+          "isRequired": false
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Holiday packages sell out quickly each season. Pre-ordering at least 10–14 days in advance of the holiday is strictly recommended."
+      }
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "preOrder",
+      "name": "Mandatory Advance Pre-Order",
+      "isEnabled": true,
+      "description": "Enforces advance pre-ordering requirements for all catering packages with configurable minimum lead times, order confirmation deadlines, and guest count finalization cutoffs.",
+      "config": {
+        "minLeadTimeDays": 3,
+        "maxAdvanceDays": 365,
+        "guestCountLockHoursBeforeEvent": 72,
+        "requiresDeposit": true,
+        "depositPercentage": 50
+      }
+    },
+    {
+      "id": "eventDatePicker",
+      "name": "Event Date & Delivery Slot Picker",
+      "isEnabled": true,
+      "description": "Requires customers to select their verified event date, preferred arrival window, and venue access schedule before finalizing any catering package booking.",
+      "config": {
+        "enforceDateSelection": true,
+        "blackoutDatesEnabled": true,
+        "allowMultiDayEvents": true,
+        "minimumNoticeDays": 3,
+        "timeSlotDurationMinutes": 60
+      }
+    },
+    {
+      "id": "guestCountCalculator",
+      "name": "Guest Count & Dynamic Headcount Calculator",
+      "isEnabled": true,
+      "description": "Dynamically scales package pricing, portion allocations, staff requirements, and tableware counts based on customer-entered headcount.",
+      "config": {
+        "pricingModel": "per-person",
+        "enforceMinimumGuestCount": true,
+        "defaultMinimumGuestCount": 10,
+        "bulkTierDiscountsEnabled": true,
+        "autoScaleSidesAndBreads": true
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Comprehensive Allergen & Dietary Indicators",
+      "isEnabled": true,
+      "description": "Displays clear allergen icons, dietary compatibility badges (Gluten-Free, Dairy-Free, Nut-Free, Halal, Kosher, Vegan, Vegetarian), and kitchen cross-contamination warnings across all catering menus.",
+      "config": {
+        "highlightSevereAllergens": true,
+        "showDietaryFilterBadges": true,
+        "requireDietaryConfirmation": true
+      }
+    },
+    {
+      "id": "customConsultation",
+      "name": "Custom Menu Consultation & Inquiry Intake",
+      "isEnabled": true,
+      "description": "Enables interactive consultation booking, bespoke menu planning questionnaires, and direct chef communication for personalized event proposals.",
+      "config": {
+        "enableInquiryForm": true,
+        "allowTastingRequests": true,
+        "autoCreateQuoteDraft": true,
+        "responseSlaHours": 24
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

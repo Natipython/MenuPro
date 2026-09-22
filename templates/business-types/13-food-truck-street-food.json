@@ -1,0 +1,572 @@
+{
+  "id": "food-truck-street-food",
+  "name": "Food Truck / Street Food",
+  "slug": "food-truck-street-food",
+  "icon": "🚚",
+  "description": "A mobile food vendor offering a focused, high-speed menu optimized for street service and takeaway. Key differentiators include location-awareness, limited daily batches, fast queue turnover, and strictly takeaway packaging.",
+  "category": "restaurant",
+  "tags": [
+    "food-truck",
+    "street-food",
+    "mobile",
+    "takeaway",
+    "quick-service"
+  ],
+  "sections": [
+    {
+      "id": "main-items",
+      "name": "Main Items",
+      "sortOrder": 1,
+      "description": "The culinary centerpiece of the food truck, showcasing the vendor's signature street food concept (such as artisanal tacos, smash burgers, gourmet bao, rice bowls, or loaded wraps). Designed for rapid line assembly in compact mobile galleys, this core offering allows diners to tailor their meal with portion sizes, protein fillings, spice intensities, and signature sauce profiles.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🌮",
+      "subSections": [
+        {
+          "id": "signature-items",
+          "name": "Signature Items",
+          "sortOrder": 1,
+          "description": "Flagship chef creations and house-specialty builds featuring distinctive flavor profiles, proprietary marinades, and premium toppings that define the food truck's brand."
+        },
+        {
+          "id": "classic-items",
+          "name": "Classic Items",
+          "sortOrder": 2,
+          "description": "Timeless street food staples and reliable crowd-pleasers prepared fast to maintain high queue throughput during peak service rushes."
+        },
+        {
+          "id": "specials",
+          "name": "Specials",
+          "sortOrder": 3,
+          "description": "Elevated variations, unique fusion builds, and creative street experiments designed to reward regulars with exciting new flavors."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "main-portion-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular Portion",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large / Double Portion",
+              "priceModifier": 3.5
+            }
+          ]
+        },
+        {
+          "id": "protein-choice",
+          "type": "single-select",
+          "label": "Protein / Filling Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "grilled-chicken",
+              "label": "Marinated Grilled Chicken",
+              "priceModifier": 0
+            },
+            {
+              "value": "braised-beef",
+              "label": "Slow-Braised Seasoned Beef",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "crispy-pork",
+              "label": "Crispy Slow-Smoked Pork",
+              "priceModifier": 0
+            },
+            {
+              "value": "garlic-shrimp",
+              "label": "Seared Garlic Herb Shrimp",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "crispy-tofu",
+              "label": "Crispy Spiced Tofu (V)",
+              "priceModifier": 0
+            },
+            {
+              "value": "plant-based-meat",
+              "label": "Seasoned Plant-Based Protein (VG)",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "spice-level",
+          "type": "single-select",
+          "label": "Spice Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Spice (Zero Heat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "mild",
+              "label": "Mild (Gentle Warmth)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium (Traditional Street Heat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "hot",
+              "label": "Hot (Fiery Chili Kick)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-hot",
+              "label": "Extra Hot (Scorching Street Pepper)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "sauce-choice",
+          "type": "single-select",
+          "label": "Sauce Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "signature-truck-sauce",
+              "label": "Signature Truck Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "garlic-herb-crema",
+              "label": "Creamy Garlic Herb Crema",
+              "priceModifier": 0
+            },
+            {
+              "value": "smoky-chipotle-bbq",
+              "label": "Smoky Chipotle BBQ Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "tangy-tomatillo-verde",
+              "label": "Tangy Tomatillo Verde Salsa",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet-chili-glaze",
+              "label": "Sweet Chili Garlic Glaze",
+              "priceModifier": 0
+            },
+            {
+              "value": "spicy-habanero-lime",
+              "label": "Spicy Habanero Lime Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "sauce-on-the-side",
+              "label": "Sauce on the Side",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "Sides",
+      "sortOrder": 2,
+      "description": "Crisp warm finger accompaniments and refreshing cold sides crafted to pair effortlessly with main items. Kept in ready warmers or chilled inserts for rapid plating, these sides boost transaction totals with high-margin handheld foods.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍟",
+      "subSections": [
+        {
+          "id": "hot-sides",
+          "name": "Hot Sides",
+          "sortOrder": 1,
+          "description": "Freshly fried and griddled warm snacks such as seasoned fries, loaded tots, crispy onion rings, street corn, and warm bites."
+        },
+        {
+          "id": "cold-sides",
+          "name": "Cold Sides",
+          "sortOrder": 2,
+          "description": "Chilled crunchy slaws, house-pickled vegetable medleys, refreshing side salads, and fresh street salsas held cold for quick service."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "side-portion-size",
+          "type": "single-select",
+          "label": "Side Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular / Individual Size",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large / Sharing Box",
+              "priceModifier": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sauces-and-extras",
+      "name": "Sauces & Extras",
+      "sortOrder": 3,
+      "description": "Scratch-made dipping cups, signature hot sauces, artisan dressings, and premium meal add-ons. Allows patrons to customize dipping sensations and upgrade mains while driving high-margin add-on revenue with zero kitchen prep delay.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥫",
+      "subSections": [
+        {
+          "id": "house-sauces",
+          "name": "House Sauces",
+          "sortOrder": 1,
+          "description": "Proprietary dipping sauces, aiolis, hot sauces, and salsas packaged in portable sealed portion cups for dunking fries or drizzling over mains."
+        },
+        {
+          "id": "premium-extras",
+          "name": "Premium Extras",
+          "sortOrder": 2,
+          "description": "High-value toppings, melted artisan cheese blends, extra protein scoops, fresh avocado guacamole, and crispy bacon garnishes."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "extra-sauce-cup",
+          "type": "single-select",
+          "label": "Extra Sauce Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "extra-signature-sauce",
+              "label": "Extra Signature Truck Sauce (2 oz)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "extra-garlic-crema",
+              "label": "Extra Garlic Herb Crema (2 oz)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "extra-smoky-bbq",
+              "label": "Extra Smoky Chipotle BBQ (2 oz)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "extra-tomatillo-verde",
+              "label": "Extra Tomatillo Verde Salsa (2 oz)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "extra-habanero-lime",
+              "label": "Extra Spicy Habanero Lime (2 oz)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "sauce-trio-flight",
+              "label": "Sauce Trio Flight (Choice of Any 3 Cups)",
+              "priceModifier": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beverages",
+      "name": "Beverages",
+      "sortOrder": 4,
+      "description": "Chilled refreshments and grab-and-go cold beverages stored in quick-access reach-in coolers. Zero-prep drinks that keep the order line moving quickly and pair smoothly with rich, savory street food.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥤",
+      "subSections": [
+        {
+          "id": "cold-drinks",
+          "name": "Cold Drinks",
+          "sortOrder": 1,
+          "description": "Freshly poured iced craft sodas, house-brewed lemonade, cold brewed tea, and fruit refreshers served in secure lidded takeaway cups."
+        },
+        {
+          "id": "canned-and-bottled",
+          "name": "Canned & Bottled",
+          "sortOrder": 2,
+          "description": "Pre-packaged chilled soft drink cans, flavored sparkling waters, ginger beer, and bottled spring waters ready for immediate takeaway."
+        }
+      ],
+      "itemOptions": []
+    },
+    {
+      "id": "combo-deals",
+      "name": "Combo Deals",
+      "sortOrder": 5,
+      "description": "High-value meal packages combining core mains with popular sides and cold beverages into convenient single-ticket bundles. Accelerates ordering at the service window, increases average spend, and streamlines ticket flow for the galley kitchen.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍱",
+      "subSections": [
+        {
+          "id": "individual-combos",
+          "name": "Individual Combos",
+          "sortOrder": 1,
+          "description": "Solo street meal packages pairing one core main item with a choice of hot or cold side and a chilled beverage."
+        },
+        {
+          "id": "group-deals",
+          "name": "Group Deals",
+          "sortOrder": 2,
+          "description": "Multi-person meal bundles and street party packs featuring multiple mains, sharing boxes of sides, dipping flights, and assorted drinks."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "combo-main-selection",
+          "type": "single-select",
+          "label": "Main Item Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "signature-main",
+              "label": "Signature Street Main Item",
+              "priceModifier": 0
+            },
+            {
+              "value": "classic-main",
+              "label": "Classic Street Main Item",
+              "priceModifier": 0
+            },
+            {
+              "value": "special-main-upgrade",
+              "label": "Today's Special Main Item (Upgrade)",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "veggie-main",
+              "label": "Vegetarian / Plant-Based Main Item",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "combo-side-selection",
+          "type": "single-select",
+          "label": "Side Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-fries",
+              "label": "Seasoned French Fries",
+              "priceModifier": 0
+            },
+            {
+              "value": "crispy-tots",
+              "label": "Golden Crispy Tater Tots",
+              "priceModifier": 0
+            },
+            {
+              "value": "tangy-street-slaw",
+              "label": "Tangy Street Slaw (Cold)",
+              "priceModifier": 0
+            },
+            {
+              "value": "loaded-fries-upgrade",
+              "label": "Loaded Cheesy Fries (Upgrade)",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "street-corn-cup-upgrade",
+              "label": "Street Corn Cup (Upgrade)",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "combo-drink-selection",
+          "type": "single-select",
+          "label": "Drink Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "canned-soda",
+              "label": "Chilled Canned Soft Drink",
+              "priceModifier": 0
+            },
+            {
+              "value": "bottled-spring-water",
+              "label": "Bottled Spring Water",
+              "priceModifier": 0
+            },
+            {
+              "value": "sparkling-water",
+              "label": "Flavored Sparkling Water",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "craft-lemonade-upgrade",
+              "label": "House Craft Lemonade (Upgrade)",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "iced-tea-upgrade",
+              "label": "Freshly Brewed Iced Tea (Upgrade)",
+              "priceModifier": 1.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "todays-specials",
+      "name": "Today's Specials",
+      "sortOrder": 6,
+      "description": "Daily rotating small-batch creations, market-sourced experiments, and seasonal chef features prepared in limited quantities. Available strictly until the day's batch is sold out, creating buzz and driving repeat customer engagement.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "⭐",
+      "subSections": [
+        {
+          "id": "daily-features",
+          "name": "Daily Features",
+          "sortOrder": 1,
+          "description": "Day-specific highlight dishes showcasing seasonal market ingredients or innovative street food fusion recipes."
+        },
+        {
+          "id": "limited-batch-creations",
+          "name": "Limited Batch Creations",
+          "sortOrder": 2,
+          "description": "Small-batch specialty items capped strictly by daily truck prep capacity and served until sold out."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "special-portion-size",
+          "type": "single-select",
+          "label": "Special Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular Serving",
+              "priceModifier": 0
+            },
+            {
+              "value": "loaded-large",
+              "label": "Loaded / Large Serving",
+              "priceModifier": 3.5
+            }
+          ]
+        },
+        {
+          "id": "special-heat-level",
+          "type": "single-select",
+          "label": "Special Heat Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "as-prepared",
+              "label": "Chef's Balanced Spice (Recommended)",
+              "priceModifier": 0
+            },
+            {
+              "value": "mild",
+              "label": "Mild / Low Heat",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-hot",
+              "label": "Extra Fiery Street Heat",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "defaultAvailableFrom": "11:00",
+        "defaultAvailableUntil": "21:00",
+        "note": "Daily specials are prepared fresh each morning in limited batches and served until sold out."
+      }
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "locationAware",
+      "name": "Live Truck Location & Schedule",
+      "isEnabled": true,
+      "description": "Displays the food truck's real-time GPS location, current service address or event pitch, and weekly parking schedule so customers can always find where the truck is serving.",
+      "config": {
+        "showLiveMapPin": true,
+        "displayCurrentAddress": true,
+        "showWeeklySchedule": true,
+        "locationUpdateFrequencyMinutes": 15
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Real-Time Inventory Badges",
+      "isEnabled": true,
+      "description": "Shows real-time item availability badges and low-stock warnings (such as 'Limited Portions' or 'Sold Out Today') to manage queue expectations for limited-batch mobile kitchen preparation.",
+      "config": {
+        "showLowStockAlert": true,
+        "lowStockThreshold": 10,
+        "autoMarkSoldOut": true,
+        "displayRemainingCount": true
+      }
+    },
+    {
+      "id": "prepTimeEstimate",
+      "name": "Live Prep Time & Queue Estimates",
+      "isEnabled": true,
+      "description": "Provides real-time kitchen preparation and queue turnaround estimates, helping street food customers gauge wait times before ordering during rush hours.",
+      "config": {
+        "displayWaitTimeMinutes": true,
+        "averagePrepTimeMinutes": 8,
+        "peakHoursMultiplier": 1.5,
+        "showQueueStatus": true
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Indicators",
+      "isEnabled": true,
+      "description": "Displays clear allergen alerts and dietary tags (such as Gluten-Free, Dairy-Free, Nut-Free, Halal, Vegan, and Vegetarian) across all items for fast and safe street food ordering.",
+      "config": {
+        "highlightSevereAllergens": true,
+        "showDietaryFilterBadges": true
+      }
+    },
+    {
+      "id": "spiceLevels",
+      "name": "Spice Level Customization",
+      "isEnabled": true,
+      "description": "Allows customers to calibrate heat levels from zero spice up to extra fiery hot across mains, sides, and house marinades.",
+      "config": {
+        "defaultLevel": "medium",
+        "allowCustomerSelection": true,
+        "levels": [
+          "none",
+          "mild",
+          "medium",
+          "hot",
+          "extra-hot"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

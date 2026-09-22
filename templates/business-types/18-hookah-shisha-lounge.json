@@ -1,0 +1,1370 @@
+{
+  "id": "hookah-shisha-lounge",
+  "name": "Hookah / Shisha Lounge",
+  "slug": "hookah-shisha-lounge",
+  "icon": "💨",
+  "description": "A dedicated hookah and shisha lounge offering session-based premium waterpipe experiences, custom multi-flavor mixology, artisan hot and cold beverages, sharing mezze, and optional licensed bar offerings. Features robust age verification gates, session time tracking, custom flavor ratio mixers, coal selection management, and comprehensive inventory tracking.",
+  "category": "bar",
+  "tags": [
+    "hookah",
+    "shisha",
+    "lounge",
+    "tobacco",
+    "nightlife",
+    "social"
+  ],
+  "sections": [
+    {
+      "id": "classic-shisha-flavors",
+      "name": "Classic Shisha Flavors",
+      "sortOrder": 1,
+      "description": "The foundational core of the shisha lounge, featuring universally recognized single-flavor and standard dual-flavor blonde-leaf tobaccos. This required section serves as the primary everyday revenue driver for both casual smokers and shisha enthusiasts who appreciate consistent, reliable smoke density, smooth draw, and authentic traditional taste profiles.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "💨",
+      "subSections": [
+        {
+          "id": "fruit-flavors",
+          "name": "Fruit Flavors",
+          "sortOrder": 1,
+          "description": "Single and combined orchard, citrus, and tropical fruit shisha profiles including double apple with anise, sweet white peach, melon, crisp watermelon, lemon, grape, and passion fruit."
+        },
+        {
+          "id": "mint-and-fresh-flavors",
+          "name": "Mint & Fresh Flavors",
+          "sortOrder": 2,
+          "description": "Cooling spearmint, garden peppermint, menthol, iced cane mint, and crisp eucalyptus blends engineered to deliver an invigorating throat-cooling sensation."
+        },
+        {
+          "id": "sweet-and-dessert-flavors",
+          "name": "Sweet & Dessert Flavors",
+          "sortOrder": 3,
+          "description": "Confectionery and pastry-inspired tobaccos incorporating smooth Madagascar vanilla cream, caramel latte, spiced chai, chocolate mint, and sweet bubblegum."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "classic-head-size",
+          "type": "single-select",
+          "label": "Head / Bowl Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-head",
+              "label": "Single Head (Standard 15–20g Bowl / Ideal for 1–2 Smokers)",
+              "priceModifier": 0
+            },
+            {
+              "value": "double-head",
+              "label": "Double Head (Dual 35g Bowl / Ideal for 2–4 Smokers)",
+              "priceModifier": 8.0
+            }
+          ]
+        },
+        {
+          "id": "classic-coal-type",
+          "type": "single-select",
+          "label": "Coal / Charcoal Type",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "natural-coconut",
+              "label": "Natural Coconut Charcoal Cubes (Clean Heat, Zero Odor, Long Burn)",
+              "priceModifier": 0
+            },
+            {
+              "value": "quick-light",
+              "label": "Quick-Light Charcoal Discs (Fast Ignition)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "classic-ice-base",
+          "type": "toggle",
+          "label": "Add Ice Base Chamber (Sub-zero water chamber for cooler, smoother smoke)",
+          "isRequired": false
+        },
+        {
+          "id": "classic-session-duration",
+          "type": "single-select",
+          "label": "Session Duration",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1-hour",
+              "label": "1-Hour Standard Session (Includes 1 Coal Rotation)",
+              "priceModifier": 0
+            },
+            {
+              "value": "2-hours",
+              "label": "2-Hour Extended Session (Includes 2 Coal Rotations & Heat Maintenance)",
+              "priceModifier": 10.0
+            },
+            {
+              "value": "unlimited",
+              "label": "Unlimited Table Session (Continuous Charcoal & Dedicated Heat Service)",
+              "priceModifier": 22.0
+            }
+          ]
+        },
+        {
+          "id": "classic-hygiene-tip",
+          "type": "single-select",
+          "label": "Sanitary Tip & Hose Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "disposable-mouthpiece",
+              "label": "Complimentary Sealed Disposable Mouthpiece",
+              "priceModifier": 0
+            },
+            {
+              "value": "gel-ice-tip",
+              "label": "Frozen Gel Ice Tip Attachment (Extra Frost Pull)",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "personal-washable-hose",
+              "label": "Personal Sealed Washable Silicone Hose",
+              "priceModifier": 6.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "premium-and-imported-shisha",
+      "name": "Premium & Imported Shisha",
+      "sortOrder": 2,
+      "description": "High-grade craft tobaccos, dark leaf reserve cuts, and exclusive imported boutique blends tailored for experienced shisha enthusiasts. This section commands elevated menu pricing by offering deeper nicotine content, robust thermal endurance, and complex aromatic nuances not found in conventional blonde-leaf lines.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "👑",
+      "subSections": [
+        {
+          "id": "premium-brands",
+          "name": "Premium Brands",
+          "sortOrder": 1,
+          "description": "Prestigious artisan blonde and dark leaf producers known for small-batch curation, high-grade molasses, and immaculate cloud consistency."
+        },
+        {
+          "id": "imported-special-blends",
+          "name": "Imported Special Blends",
+          "sortOrder": 2,
+          "description": "Rare international and boutique imports featuring complex gastronomic notes such as Russian dark leaf blends, German craft tobaccos, and aged vintage leaves."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "premium-head-size",
+          "type": "single-select",
+          "label": "Head / Bowl Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-phunnel-head",
+              "label": "Single Glazed Phunnel Bowl (18–22g / Ideal for 1–2 Smokers)",
+              "priceModifier": 0
+            },
+            {
+              "value": "double-phunnel-head",
+              "label": "Double Phunnel Bowl (40g / Ideal for 2–4 Smokers)",
+              "priceModifier": 12.0
+            }
+          ]
+        },
+        {
+          "id": "premium-coal-type",
+          "type": "single-select",
+          "label": "Coal / Charcoal Type",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "natural-coconut",
+              "label": "Natural Coconut Charcoal Cubes (Recommended for Dark Leaf Heat Control)",
+              "priceModifier": 0
+            },
+            {
+              "value": "quick-light",
+              "label": "Quick-Light Charcoal Discs",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "premium-ice-base",
+          "type": "toggle",
+          "label": "Add Ice Base Chamber (Sub-zero water chamber for cooler, smoother smoke)",
+          "isRequired": false
+        },
+        {
+          "id": "premium-session-duration",
+          "type": "single-select",
+          "label": "Session Duration",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1-hour",
+              "label": "1-Hour Premium Connoisseur Session (Includes 1 Coal Rotation)",
+              "priceModifier": 0
+            },
+            {
+              "value": "2-hours",
+              "label": "2-Hour Extended Connoisseur Session (Includes 2 Coal Rotations & Dedicated Heat Tuning)",
+              "priceModifier": 14.0
+            },
+            {
+              "value": "unlimited",
+              "label": "Unlimited VIP Connoisseur Session (Continuous Charcoal Refills & Shisha Master Service)",
+              "priceModifier": 30.0
+            }
+          ]
+        },
+        {
+          "id": "premium-heat-management-device",
+          "type": "single-select",
+          "label": "Heat Management Device (HMD)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "lotus-hmd",
+              "label": "Kaloud Lotus Aluminum HMD (Even, Regulated Heat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "stainless-provost",
+              "label": "Apple On Top Provost Stainless Steel Controller",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-and-match",
+      "name": "Mix & Match",
+      "sortOrder": 3,
+      "description": "A dynamic custom shisha mixology builder that empowers guests to engineer their own bespoke flavor blends. Customers choose their primary base, complementary secondary flavor, optional accent note, and preferred blending ratio, giving them full creative freedom and fostering conversational interaction around the table.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧪",
+      "subSections": [
+        {
+          "id": "custom-dual-mixes",
+          "name": "Custom Dual Mixes",
+          "sortOrder": 1,
+          "description": "Two-flavor custom blends paired for harmonious balance, such as citrus and mint, sweet berry and vanilla, or melon and peach."
+        },
+        {
+          "id": "custom-triple-blends",
+          "name": "Custom Triple Blends",
+          "sortOrder": 2,
+          "description": "Three-flavor custom creations blending a robust foundation, sweet middle notes, and an aromatic icy or floral top layer."
+        },
+        {
+          "id": "house-curated-combos",
+          "name": "House-Curated Signature Combos",
+          "sortOrder": 3,
+          "description": "Time-tested proprietary multi-flavor recipes developed by our resident shisha artisans for balanced draw, aroma, and endurance."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "mix-flavor-1",
+          "type": "single-select",
+          "label": "Flavor 1 (Primary Base Flavor)",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "double-apple",
+              "label": "Double Apple (Classic Anise & Crisp Apple)",
+              "priceModifier": 0
+            },
+            {
+              "value": "blueberry",
+              "label": "Sweet Mountain Blueberry",
+              "priceModifier": 0
+            },
+            {
+              "value": "grape",
+              "label": "White Green Grape",
+              "priceModifier": 0
+            },
+            {
+              "value": "lemon",
+              "label": "Zesty Yellow Lemon",
+              "priceModifier": 0
+            },
+            {
+              "value": "peach",
+              "label": "Ripe Golden Peach",
+              "priceModifier": 0
+            },
+            {
+              "value": "watermelon",
+              "label": "Sweet Summer Watermelon",
+              "priceModifier": 0
+            },
+            {
+              "value": "mango",
+              "label": "Tropical Alphonso Mango",
+              "priceModifier": 0
+            },
+            {
+              "value": "orange",
+              "label": "Sweet Valencia Orange",
+              "priceModifier": 0
+            },
+            {
+              "value": "strawberry",
+              "label": "Sun-Ripened Strawberry",
+              "priceModifier": 0
+            },
+            {
+              "value": "guava",
+              "label": "Exotic Pink Guava",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "mix-flavor-2",
+          "type": "single-select",
+          "label": "Flavor 2 (Secondary Complementary Flavor)",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "natural-mint",
+              "label": "Crisp Garden Mint",
+              "priceModifier": 0
+            },
+            {
+              "value": "frost-ice",
+              "label": "Sub-Zero Chilled Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "madagascar-vanilla",
+              "label": "Creamy Madagascar Vanilla",
+              "priceModifier": 0
+            },
+            {
+              "value": "citrus-lemon",
+              "label": "Tangy Mediterranean Lemon",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet-bubblegum",
+              "label": "Sweet Nostalgic Bubblegum",
+              "priceModifier": 0
+            },
+            {
+              "value": "toasted-coconut",
+              "label": "Creamy Toasted Coconut",
+              "priceModifier": 0
+            },
+            {
+              "value": "cinnamon-spice",
+              "label": "Warm Ceylon Cinnamon",
+              "priceModifier": 0
+            },
+            {
+              "value": "kiwi",
+              "label": "Tart Green Kiwi",
+              "priceModifier": 0
+            },
+            {
+              "value": "jasmine-blossom",
+              "label": "Fragrant Jasmine Blossom",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "mix-flavor-3",
+          "type": "single-select",
+          "label": "Flavor 3 (Optional Third Accent Note)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "None (Keep as 2-Flavor Blend)",
+              "priceModifier": 0
+            },
+            {
+              "value": "accent-super-mint",
+              "label": "Extra Frost Mint Shock (+Accent)",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "accent-sweet-cream",
+              "label": "Rich Sweet Cream (+Accent)",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "accent-spiced-cardamom",
+              "label": "Spiced Green Cardamom (+Accent)",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "accent-sour-lime",
+              "label": "Tart Persian Lime (+Accent)",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "accent-earl-grey",
+              "label": "Bergamot Earl Grey Tea (+Accent)",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "accent-rosewater",
+              "label": "Delicate Damask Rosewater (+Accent)",
+              "priceModifier": 2.0
+            }
+          ]
+        },
+        {
+          "id": "mix-ratio",
+          "type": "single-select",
+          "label": "Mixing & Pack Ratio",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "50-50-equal",
+              "label": "50% / 50% (Equal Harmonious Blend)",
+              "priceModifier": 0
+            },
+            {
+              "value": "70-30-dominant",
+              "label": "70% Base / 30% Accent (Dominant Flavor with Subtle Hint)",
+              "priceModifier": 0
+            },
+            {
+              "value": "40-40-20-triple",
+              "label": "40% / 40% / 20% (Balanced Triple Symphony)",
+              "priceModifier": 0
+            },
+            {
+              "value": "layered-pack",
+              "label": "Layered Pack (Flavor Transition from Top to Bottom)",
+              "priceModifier": 0
+            },
+            {
+              "value": "side-by-side-split",
+              "label": "Side-by-Side Sectored Pack (Dual Aroma Streams)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "mix-head-size",
+          "type": "single-select",
+          "label": "Head / Bowl Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-head",
+              "label": "Single Head (Standard 15–20g Bowl / 1–2 Smokers)",
+              "priceModifier": 0
+            },
+            {
+              "value": "double-head",
+              "label": "Double Head (Dual 35g Bowl / 2–4 Smokers)",
+              "priceModifier": 9.0
+            }
+          ]
+        },
+        {
+          "id": "mix-coal-type",
+          "type": "single-select",
+          "label": "Coal / Charcoal Type",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "natural-coconut",
+              "label": "Natural Coconut Charcoal Cubes",
+              "priceModifier": 0
+            },
+            {
+              "value": "quick-light",
+              "label": "Quick-Light Charcoal Discs",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "mix-ice-base",
+          "type": "toggle",
+          "label": "Add Ice Base Chamber (Colder, smoother draw)",
+          "isRequired": false
+        },
+        {
+          "id": "mix-session-duration",
+          "type": "single-select",
+          "label": "Session Duration",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1-hour",
+              "label": "1-Hour Standard Session",
+              "priceModifier": 0
+            },
+            {
+              "value": "2-hours",
+              "label": "2-Hour Extended Session",
+              "priceModifier": 10.0
+            },
+            {
+              "value": "unlimited",
+              "label": "Unlimited Table Session",
+              "priceModifier": 22.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hookah-add-ons",
+      "name": "Hookah Add-Ons",
+      "sortOrder": 4,
+      "description": "Essential accessories, refills, and hardware enhancements to prolong, customize, or refresh an active shisha session. Why it exists: provides high-margin ancillary revenue, accommodates table hygiene preferences with sealed mouthpieces and personal hoses, and offers premium tactile upgrades like carved fresh fruit heads and sub-zero cooling chambers.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "➕",
+      "subSections": [
+        {
+          "id": "extra-coals",
+          "name": "Extra Coals",
+          "sortOrder": 1,
+          "description": "Fresh rounds of glowing natural coconut charcoal cubes and quick-light coals to restore full smoke volume and heat."
+        },
+        {
+          "id": "tips-and-hoses",
+          "name": "Tips & Hoses",
+          "sortOrder": 2,
+          "description": "Sanitary individually wrapped plastic tips, dual-filter mouthpieces, washable silicone hoses, and freeze tips."
+        },
+        {
+          "id": "flavor-refills",
+          "name": "Flavor Refills",
+          "sortOrder": 3,
+          "description": "Fresh tobacco head repacks midway through an extended session with existing or brand-new flavor profiles."
+        },
+        {
+          "id": "ice-chambers",
+          "name": "Ice Chambers",
+          "sortOrder": 4,
+          "description": "Crushed ice base buckets, sub-zero stem sleeves, and frozen gel attachments that chill the smoke vapor."
+        },
+        {
+          "id": "fruit-heads",
+          "name": "Fruit Heads",
+          "sortOrder": 5,
+          "description": "Artisanal hand-carved fresh fruit bowls (pineapple, grapefruit, orange, apple) replacing standard clay bowls for enhanced natural moisture and fruit flavor infusion."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "addon-quantity",
+          "type": "single-select",
+          "label": "Item / Portion Quantity",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "label": "1 Item / Single Serving",
+              "priceModifier": 0
+            },
+            {
+              "value": "2",
+              "label": "2 Items / Double Serving",
+              "priceModifier": 4.0
+            },
+            {
+              "value": "3",
+              "label": "3 Items",
+              "priceModifier": 8.0
+            },
+            {
+              "value": "4",
+              "label": "4 Items",
+              "priceModifier": 12.0
+            },
+            {
+              "value": "5",
+              "label": "5 Items",
+              "priceModifier": 16.0
+            }
+          ]
+        },
+        {
+          "id": "addon-fruit-head-variety",
+          "type": "single-select",
+          "label": "Fruit Head Selection (For Fruit Head orders)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "pineapple",
+              "label": "Whole Fresh Carved Pineapple Head (Maximum Juice & Longevity)",
+              "priceModifier": 12.0
+            },
+            {
+              "value": "grapefruit",
+              "label": "Ruby Red Grapefruit Head (Citrus Aroma & Cool Draw)",
+              "priceModifier": 8.0
+            },
+            {
+              "value": "orange",
+              "label": "Sweet Navel Orange Head",
+              "priceModifier": 6.0
+            },
+            {
+              "value": "green-apple",
+              "label": "Crisp Granny Smith Green Apple Head",
+              "priceModifier": 5.0
+            }
+          ]
+        },
+        {
+          "id": "addon-hose-and-tip-type",
+          "type": "single-select",
+          "label": "Hose & Tip Configuration",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "sealed-tips-pack",
+              "label": "Pack of 4 Sealed Disposable Tips",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "freezable-ice-mouthpiece",
+              "label": "Frozen Gel Chill Mouthpiece Attachment",
+              "priceModifier": 5.0
+            },
+            {
+              "value": "washable-silicone-hose-kit",
+              "label": "Washable Food-Grade Silicone Hose Kit (With Handle)",
+              "priceModifier": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hot-beverages",
+      "name": "Hot Beverages",
+      "sortOrder": 5,
+      "description": "Traditional and artisan warm drinks rooted in Middle Eastern, Mediterranean, and international lounge culture. Why it exists: hot beverages are the quintessential pairing for shisha, offering throat-soothing warmth, palate cleansing between draws, and a slower sipping pace that matches the leisurely lounge atmosphere.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "☕",
+      "subSections": [
+        {
+          "id": "turkish-coffee",
+          "name": "Turkish Coffee",
+          "sortOrder": 1,
+          "description": "Finely powdered roasted Arabica coffee beans slowly simmered in a brass cezve pot with thick velvety foam, served with a piece of Turkish delight."
+        },
+        {
+          "id": "arabic-coffee",
+          "name": "Arabic Coffee",
+          "sortOrder": 2,
+          "description": "Traditional light-roast Gahwa infused with crushed green cardamom pods, cloves, and saffron, served in an authentic dallah pot with dates."
+        },
+        {
+          "id": "tea-selection",
+          "name": "Tea Selection",
+          "sortOrder": 3,
+          "description": "Fresh Moroccan mint tea with gunpowder green tea, traditional Turkish black tea, Earl Grey, aromatic sage (Maramia), and fragrant herbal chamomile."
+        },
+        {
+          "id": "specialty-hot-drinks",
+          "name": "Specialty Hot Drinks",
+          "sortOrder": 4,
+          "description": "Creamy Middle Eastern sahlab dusted with cinnamon and pistachios, spiced chai lattes, golden turmeric milk, and rich Belgian hot chocolates."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "hot-beverage-size",
+          "type": "single-select",
+          "label": "Serving Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-cup",
+              "label": "Single Cup / Traditional Demitasse",
+              "priceModifier": 0
+            },
+            {
+              "value": "small-pot",
+              "label": "Small Sharing Pot (Serves 2 / 500 ml)",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "large-pot",
+              "label": "Large Sharing Pot (Serves 4 / 1000 ml)",
+              "priceModifier": 7.0
+            },
+            {
+              "value": "table-samovar",
+              "label": "Traditional Table Samovar (Serves 6–8 / 2000 ml)",
+              "priceModifier": 14.0
+            }
+          ]
+        },
+        {
+          "id": "hot-beverage-sweetness",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "unsweetened",
+              "label": "Unsweetened (Sade / No Sugar)",
+              "priceModifier": 0
+            },
+            {
+              "value": "slightly-sweet",
+              "label": "Slightly Sweet (Az Şekerli / 1 Sugar Cube)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-sweet",
+              "label": "Medium Sweet (Orta / 2 Sugar Cubes)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet",
+              "label": "Sweet (Şekerli / Moroccan Traditional Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "raw-honey-side",
+              "label": "Pure Blossom Honey on the Side",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "hot-beverage-spice-infusion",
+          "type": "single-select",
+          "label": "Spice & Botanical Infusion",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard",
+              "label": "Standard Recipe Preparation",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-cardamom",
+              "label": "Extra Green Cardamom Pods",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "fresh-mint-sprig",
+              "label": "Fresh Moroccan Mint Leaves Added",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "saffron-threads",
+              "label": "Premium Persian Saffron Strands",
+              "priceModifier": 1.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cold-beverages",
+      "name": "Cold Beverages",
+      "sortOrder": 6,
+      "description": "Chilled non-alcoholic refreshments, freshly squeezed citrus juices, artisan botanic mocktails, and mineral waters. Why it exists: essential for continuous hydration during smoking sessions, counteracting throat dryness, invigorating the taste buds, and providing refreshing low-ABV or alcohol-free social drinking options.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥤",
+      "subSections": [
+        {
+          "id": "fresh-juices",
+          "name": "Fresh Juices",
+          "sortOrder": 1,
+          "description": "Freshly pressed pure pomegranate juice, Valencia orange juice, refreshing watermelon juice, and classic Middle Eastern lemon-mint (Limonana)."
+        },
+        {
+          "id": "mocktails",
+          "name": "Mocktails",
+          "sortOrder": 2,
+          "description": "Handcrafted virgin cocktails such as passion fruit fizz, virgin strawberry mojito, blue lagoon lemonade, and cucumber basil spritzer."
+        },
+        {
+          "id": "soft-drinks",
+          "name": "Soft Drinks",
+          "sortOrder": 3,
+          "description": "Chilled sodas, ginger ale, tonic water, and premium energy drinks to keep the late-night energy flowing."
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "sortOrder": 4,
+          "description": "Imported and local still spring water and sparkling mineral waters served chilled with citrus wheels."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cold-beverage-size",
+          "type": "single-select",
+          "label": "Serving Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-glass",
+              "label": "Regular Highball Glass (350 ml / 12 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-glass",
+              "label": "Large Glass (500 ml / 16 oz)",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "sharing-pitcher",
+              "label": "Table Sharing Pitcher (1.5 L / Serves 4)",
+              "priceModifier": 6.5
+            },
+            {
+              "value": "glass-bottle",
+              "label": "Glass Bottle (330 ml / 750 ml)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "cold-beverage-ice",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-crushed-ice",
+              "label": "Extra Crushed Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "light-ice",
+              "label": "Light Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "No Ice (Chilled Liquid Only)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "light-bites-and-snacks",
+      "name": "Light Bites & Snacks",
+      "sortOrder": 7,
+      "description": "Finger-friendly Mediterranean mezze, seasoned roasted nuts, dried fruit platters, and decadent pastries designed to be easily enjoyed without disrupting smoking. Why it exists: provides sustained nourishment during multi-hour table visits, balances tobacco consumption, appeals to group sharing dynamics, and boosts average spend per customer.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥨",
+      "subSections": [
+        {
+          "id": "nuts-and-dried-fruits",
+          "name": "Nuts & Dried Fruits",
+          "sortOrder": 1,
+          "description": "Lightly salted roasted pistachios, smoked almonds, cashews, plump Medjool dates, Turkish dried apricots, and sun-dried figs."
+        },
+        {
+          "id": "light-platters",
+          "name": "Light Platters",
+          "sortOrder": 2,
+          "description": "Sharing mezze boards featuring creamy tahini hummus, smoky baba ghanoush, herb labneh, stuffed vine leaves, and warm freshly baked pita bread."
+        },
+        {
+          "id": "desserts",
+          "name": "Desserts",
+          "sortOrder": 3,
+          "description": "Golden crispy pistachio baklava, warm cheese kunafa drizzled with orange blossom syrup, creamy rosewater muhallabia, and artisan gelato."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "snack-portion-size",
+          "type": "single-select",
+          "label": "Platter & Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "individual",
+              "label": "Solo Snack Bowl (Single Guest)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sharing-platter",
+              "label": "Sharing Platter (Serves 2–3 Guests)",
+              "priceModifier": 6.0
+            },
+            {
+              "value": "lounge-board",
+              "label": "Lounge Feast Board (Serves 4–6 Guests)",
+              "priceModifier": 14.0
+            }
+          ]
+        },
+        {
+          "id": "snack-dip-choice",
+          "type": "single-select",
+          "label": "Mezze Dip Selection (For Platters)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "tahini-hummus",
+              "label": "Classic Creamy Tahini Hummus",
+              "priceModifier": 0
+            },
+            {
+              "value": "smoky-baba-ghanoush",
+              "label": "Smoky Roasted Eggplant Baba Ghanoush",
+              "priceModifier": 0
+            },
+            {
+              "value": "zaatar-labneh",
+              "label": "Strained Yogurt Labneh with Wild Zaatar",
+              "priceModifier": 0
+            },
+            {
+              "value": "trio-sampler",
+              "label": "Trio Sampler (Hummus, Baba Ghanoush & Labneh)",
+              "priceModifier": 3.0
+            }
+          ]
+        },
+        {
+          "id": "snack-bread-choice",
+          "type": "single-select",
+          "label": "Bread Accompaniment",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "warm-pita",
+              "label": "Warm Hearth-Baked Pita Bread",
+              "priceModifier": 0
+            },
+            {
+              "value": "zaatar-pita-chips",
+              "label": "Crispy Zaatar Toasted Pita Chips",
+              "priceModifier": 0
+            },
+            {
+              "value": "gluten-free-crackers",
+              "label": "Gluten-Free Artisan Seed Crackers",
+              "priceModifier": 1.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cocktails-and-alcohol",
+      "name": "Cocktails & Alcohol",
+      "sortOrder": 8,
+      "description": "Curated bar program for venues possessing the appropriate legal liquor license, offering botanical craft cocktails, Mediterranean wines, draft beers, and premium spirits that harmoniously pair with shisha. Why it exists: provides high-margin nightlife beverage sales in hybrid hospitality concepts; set hidden by default to accommodate alcohol-free, dry, or halal lounges.",
+      "isRequired": false,
+      "isDefaultVisible": false,
+      "icon": "🍸",
+      "subSections": [
+        {
+          "id": "cocktails",
+          "name": "Cocktails",
+          "sortOrder": 1,
+          "description": "House craft mixology creations and botanical cocktail concoctions featuring pomegranate infusions, fresh mint, orange blossom, and Mediterranean arak."
+        },
+        {
+          "id": "wines",
+          "name": "Wines",
+          "sortOrder": 2,
+          "description": "Selected red, white, rosé, and sparkling vintages sourced from renowned Mediterranean, European, and regional vineyards."
+        },
+        {
+          "id": "beers",
+          "name": "Beers",
+          "sortOrder": 3,
+          "description": "Crisp draft lagers, aromatic IPAs, and imported Mediterranean bottled beers that refresh the palate between shisha puffs."
+        },
+        {
+          "id": "spirits",
+          "name": "Spirits",
+          "sortOrder": 4,
+          "description": "Premium aged whiskies, agave spirits, botanical gins, rums, and traditional anise liqueurs including Arak, Raki, and Ouzo served neat or with mixers."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "alcohol-serving-size",
+          "type": "single-select",
+          "label": "Serving Size / Pour",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-shot",
+              "label": "Single Pour / Shot (45 ml / 1.5 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "double-shot",
+              "label": "Double Pour (90 ml / 3.0 oz)",
+              "priceModifier": 5.0
+            },
+            {
+              "value": "glass",
+              "label": "Wine / Cocktail Glass (175 ml / 6 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "pint",
+              "label": "Draft Pint (500 ml / 16 oz)",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "bottle",
+              "label": "Full Bottle Service (750 ml Wine / Spirit with Table Mixers)",
+              "priceModifier": 38.0
+            }
+          ]
+        },
+        {
+          "id": "alcohol-preparation-style",
+          "type": "single-select",
+          "label": "Preparation & Service Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "neat",
+              "label": "Neat (Room Temperature)",
+              "priceModifier": 0
+            },
+            {
+              "value": "on-the-rocks",
+              "label": "On the Rocks (Artisanal Clear Ice Cube)",
+              "priceModifier": 0
+            },
+            {
+              "value": "chilled-up",
+              "label": "Chilled Up (Shaken with Ice & Strained)",
+              "priceModifier": 0
+            },
+            {
+              "value": "with-table-water",
+              "label": "Served with Chilled Spring Water (Traditional Arak/Raki Style)",
+              "priceModifier": 0
+            },
+            {
+              "value": "with-mixer",
+              "label": "Served with Mixer",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "alcohol-mixer-selection",
+          "type": "single-select",
+          "label": "Mixer Selection (When paired)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "club-soda",
+              "label": "Club Soda",
+              "priceModifier": 0
+            },
+            {
+              "value": "premium-tonic",
+              "label": "Artisan Mediterranean Tonic Water",
+              "priceModifier": 0
+            },
+            {
+              "value": "ginger-beer",
+              "label": "Spiced Craft Ginger Beer",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "cola",
+              "label": "Cola",
+              "priceModifier": 0
+            },
+            {
+              "value": "cranberry-juice",
+              "label": "Tart Cranberry Juice",
+              "priceModifier": 0
+            },
+            {
+              "value": "energy-drink",
+              "label": "Energy Drink (Red Bull)",
+              "priceModifier": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasonal-and-special-blends",
+      "name": "Seasonal & Special Blends",
+      "sortOrder": 9,
+      "description": "Exclusive limited-edition shisha tobaccos, holiday celebratory releases, and private cellar reserves curated by the lounge's master hookah sommelier. Why it exists: drives excitement, generates high-margin promotional buzz, rewards adventurous loyal patrons with scarce flavors, and gives the lounge a distinct competitive edge through artisan innovation.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🌟",
+      "subSections": [
+        {
+          "id": "limited-edition-shisha-flavors",
+          "name": "Limited-Edition Shisha Flavors",
+          "sortOrder": 1,
+          "description": "Short-run seasonal harvest flavors celebrating peak seasons, such as spiced pumpkin chai in autumn, winter frosted pine and berry, or summer passion fruit guava crush."
+        },
+        {
+          "id": "master-lounge-signatures",
+          "name": "Master Lounge Signatures",
+          "sortOrder": 2,
+          "description": "Complex house-proprietary formulations aged in cedar casks and blended with natural botanical extracts for an unparalleled luxury smoking profile."
+        },
+        {
+          "id": "holiday-and-festive-blends",
+          "name": "Holiday & Festive Blends",
+          "sortOrder": 3,
+          "description": "Vibrant celebratory shisha creations formulated specifically for holiday festivities, New Year's Eve, live DJ sessions, and anniversary celebrations."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "seasonal-head-size",
+          "type": "single-select",
+          "label": "Head / Bowl Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-head",
+              "label": "Single Head (Artisan Glazed Bowl / 1–2 Smokers)",
+              "priceModifier": 0
+            },
+            {
+              "value": "double-head",
+              "label": "Double Head (Dual Artisan Bowl / 2–4 Smokers)",
+              "priceModifier": 10.0
+            }
+          ]
+        },
+        {
+          "id": "seasonal-coal-type",
+          "type": "single-select",
+          "label": "Coal / Charcoal Type",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "natural-coconut",
+              "label": "Natural Coconut Charcoal Cubes (Pure Clean Heat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "quick-light",
+              "label": "Quick-Light Charcoal Discs",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "seasonal-ice-base",
+          "type": "toggle",
+          "label": "Add Ice Base Chamber (Sub-zero water chamber for cooler, smoother smoke)",
+          "isRequired": false
+        },
+        {
+          "id": "seasonal-session-duration",
+          "type": "single-select",
+          "label": "Session Duration",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1-hour",
+              "label": "1-Hour Seasonal Tasting Session (Includes 1 Coal Rotation)",
+              "priceModifier": 0
+            },
+            {
+              "value": "2-hours",
+              "label": "2-Hour Extended Seasonal Session (Includes 2 Coal Rotations & Shisha Master Care)",
+              "priceModifier": 12.0
+            },
+            {
+              "value": "unlimited",
+              "label": "Unlimited VIP Table Session (Continuous Charcoal Refills & Master Blend Upkeep)",
+              "priceModifier": 26.0
+            }
+          ]
+        },
+        {
+          "id": "seasonal-fruit-bowl-upgrade",
+          "type": "single-select",
+          "label": "Fresh Carved Fruit Head Upgrade",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "Artisan Ceramic Bowl (Standard)",
+              "priceModifier": 0
+            },
+            {
+              "value": "carved-pineapple",
+              "label": "Carved Fresh Pineapple Head",
+              "priceModifier": 12.0
+            },
+            {
+              "value": "carved-grapefruit",
+              "label": "Carved Ruby Grapefruit Head",
+              "priceModifier": 8.0
+            },
+            {
+              "value": "carved-orange",
+              "label": "Carved Sweet Orange Head",
+              "priceModifier": 6.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "ageVerification",
+      "name": "Digital Age Verification Gate",
+      "description": "Mandatory legal compliance gate requiring patrons to confirm minimum legal smoking and drinking age (18+ or 21+ based on regional jurisdiction) prior to browsing or ordering age-restricted tobacco and alcoholic items.",
+      "isEnabled": true,
+      "config": {
+        "isMandatory": true,
+        "defaultMinimumAge": 21,
+        "minimumTobaccoAge": 21,
+        "minimumAlcoholAge": 21,
+        "restrictedSectionIds": [
+          "classic-shisha-flavors",
+          "premium-and-imported-shisha",
+          "mix-and-match",
+          "hookah-add-ons",
+          "cocktails-and-alcohol",
+          "seasonal-and-special-blends"
+        ],
+        "requireConfirmationPrompt": true,
+        "displayDisclaimerNotice": "You must be of legal smoking age to enter and order shisha products. Valid government photo identification required at table service."
+      }
+    },
+    {
+      "id": "sessionPricing",
+      "name": "Session-Based Hookah & Table Pricing",
+      "description": "Automated time management and session tracking engine that monitors table duration, controls shisha session lengths (e.g., 60 or 120 minutes), coordinates periodic charcoal maintenance, and handles session renewal extensions.",
+      "isEnabled": true,
+      "config": {
+        "defaultSessionMinutes": 60,
+        "extendedSessionMinutes": 120,
+        "allowUnlimitedOption": true,
+        "coalRotationIntervalMinutes": 30,
+        "expiryWarningMinutes": 15,
+        "enableOvertimeBilling": true,
+        "targetSectionIds": [
+          "classic-shisha-flavors",
+          "premium-and-imported-shisha",
+          "mix-and-match",
+          "seasonal-and-special-blends"
+        ]
+      }
+    },
+    {
+      "id": "flavorMixer",
+      "name": "Interactive Shisha Flavor Mixer",
+      "description": "Specialized multi-flavor customization interface empowering guests to combine up to three complementary shisha tobaccos, calibrate custom mixing percentages (e.g., 50/50, 70/30), and preview aroma profiles before placing the order.",
+      "isEnabled": true,
+      "config": {
+        "maxFlavorsPerBowl": 3,
+        "allowCustomRatios": true,
+        "defaultRatio": "50-50-equal",
+        "suggestedPairings": true,
+        "targetSectionIds": [
+          "mix-and-match"
+        ],
+        "flavorCategories": [
+          "fruit",
+          "mint-and-cooling",
+          "citrus",
+          "sweet-and-dessert",
+          "spice-and-floral",
+          "beverage"
+        ]
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Tagging",
+      "description": "Displays clear dietary filters and allergen warning badges (e.g., tree nuts, dairy, sesame, gluten, halal, vegan) across beverage, snack, and food items to safeguard guests with sensitivities.",
+      "isEnabled": true,
+      "config": {
+        "displayFormat": "badge-and-modal",
+        "highlightAllergens": [
+          "contains-nuts",
+          "contains-peanuts",
+          "contains-dairy",
+          "contains-gluten",
+          "contains-sesame",
+          "contains-alcohol"
+        ],
+        "dietaryPreferences": [
+          "halal",
+          "vegan",
+          "vegetarian",
+          "gluten-free"
+        ],
+        "targetSectionIds": [
+          "hot-beverages",
+          "cold-beverages",
+          "light-bites-and-snacks",
+          "cocktails-and-alcohol"
+        ]
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Real-Time Tobacco & Product Inventory Badges",
+      "description": "Real-time stock indicators alerting lounge guests and staff when popular tobacco flavors, boutique brands, fresh fruit bowls, or craft drinks are 'In Stock', 'Low Stock', or 'Sold Out for Tonight'.",
+      "isEnabled": true,
+      "config": {
+        "primaryBadge": "in-stock",
+        "showLowStockWarning": true,
+        "lowStockThreshold": 3,
+        "autoMarkSoldOut": true,
+        "showSoldOutToday": true,
+        "targetSectionIds": [
+          "classic-shisha-flavors",
+          "premium-and-imported-shisha",
+          "mix-and-match",
+          "hookah-add-ons",
+          "hot-beverages",
+          "cold-beverages",
+          "light-bites-and-snacks",
+          "cocktails-and-alcohol",
+          "seasonal-and-special-blends"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

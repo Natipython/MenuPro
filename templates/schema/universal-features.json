@@ -1,0 +1,144 @@
+{
+  "id": "universal-features",
+  "name": "Universal Menu Features",
+  "description": "Cross-cutting features that apply to ALL business type templates. Every item in any template can use these features.",
+  "version": "1.0.0",
+
+  "allergenTags": [
+    { "id": "gluten-free", "label": "Gluten-Free", "icon": "🌾", "shortCode": "GF" },
+    { "id": "dairy-free", "label": "Dairy-Free", "icon": "🥛", "shortCode": "DF" },
+    { "id": "nut-free", "label": "Nut-Free", "icon": "🥜", "shortCode": "NF" },
+    { "id": "egg-free", "label": "Egg-Free", "icon": "🥚", "shortCode": "EF" },
+    { "id": "soy-free", "label": "Soy-Free", "icon": "🫘", "shortCode": "SF" },
+    { "id": "shellfish-free", "label": "Shellfish-Free", "icon": "🦐", "shortCode": "ShF" },
+    { "id": "sesame-free", "label": "Sesame-Free", "icon": "⚪", "shortCode": "SeF" },
+    { "id": "contains-gluten", "label": "Contains Gluten", "icon": "⚠️🌾", "shortCode": "CG" },
+    { "id": "contains-nuts", "label": "Contains Tree Nuts", "icon": "⚠️🥜", "shortCode": "CN" },
+    { "id": "contains-peanuts", "label": "Contains Peanuts", "icon": "⚠️🥜", "shortCode": "CP" },
+    { "id": "contains-dairy", "label": "Contains Dairy", "icon": "⚠️🥛", "shortCode": "CD" },
+    { "id": "contains-egg", "label": "Contains Egg", "icon": "⚠️🥚", "shortCode": "CE" },
+    { "id": "contains-soy", "label": "Contains Soy", "icon": "⚠️🫘", "shortCode": "CS" },
+    { "id": "contains-alcohol", "label": "Contains Alcohol", "icon": "⚠️🍷", "shortCode": "CA" }
+  ],
+
+  "dietaryTags": [
+    { "id": "vegan", "label": "Vegan", "icon": "🌱", "shortCode": "V" },
+    { "id": "vegetarian", "label": "Vegetarian", "icon": "🥬", "shortCode": "VG" },
+    { "id": "halal", "label": "Halal", "icon": "☪️", "shortCode": "HL" },
+    { "id": "kosher", "label": "Kosher", "icon": "✡️", "shortCode": "KS" },
+    { "id": "keto", "label": "Keto-Friendly", "icon": "🥑", "shortCode": "KT" },
+    { "id": "paleo", "label": "Paleo", "icon": "🍖", "shortCode": "PL" },
+    { "id": "low-carb", "label": "Low Carb", "icon": "📉", "shortCode": "LC" },
+    { "id": "sugar-free", "label": "Sugar-Free", "icon": "🚫🍬", "shortCode": "SuF" },
+    { "id": "organic", "label": "Organic", "icon": "🌿", "shortCode": "ORG" },
+    { "id": "raw", "label": "Raw", "icon": "🥗", "shortCode": "RAW" }
+  ],
+
+  "itemBadges": [
+    { "id": "new", "label": "New", "color": "#4CAF50", "icon": "🆕" },
+    { "id": "popular", "label": "Popular", "color": "#FF9800", "icon": "🔥" },
+    { "id": "chef-pick", "label": "Chef's Pick", "color": "#9C27B0", "icon": "⭐" },
+    { "id": "house-special", "label": "House Special", "color": "#E91E63", "icon": "👨‍🍳" },
+    { "id": "spicy", "label": "Spicy", "color": "#F44336", "icon": "🌶️" },
+    { "id": "limited-edition", "label": "Limited Edition", "color": "#FF5722", "icon": "⏳" },
+    { "id": "seasonal", "label": "Seasonal", "color": "#8BC34A", "icon": "🍂" },
+    { "id": "best-seller", "label": "Best Seller", "color": "#FFC107", "icon": "🏆" },
+    { "id": "staff-favorite", "label": "Staff Favorite", "color": "#03A9F4", "icon": "💙" },
+    { "id": "award-winning", "label": "Award Winning", "color": "#FFD700", "icon": "🏅" }
+  ],
+
+  "availabilityStatuses": [
+    { "id": "in-stock", "label": "Available", "color": "#4CAF50" },
+    { "id": "sold-out", "label": "Sold Out", "color": "#F44336" },
+    { "id": "sold-out-today", "label": "Sold Out for Today", "color": "#FF9800" },
+    { "id": "seasonal", "label": "Seasonal — Currently Unavailable", "color": "#9E9E9E" },
+    { "id": "pre-order-only", "label": "Pre-Order Only", "color": "#2196F3" },
+    { "id": "made-to-order", "label": "Made to Order (Allow Extra Time)", "color": "#673AB7" },
+    { "id": "coming-soon", "label": "Coming Soon", "color": "#607D8B" }
+  ],
+
+  "spiceLevels": [
+    { "id": "none", "label": "No Spice", "icon": "", "level": 0 },
+    { "id": "mild", "label": "Mild", "icon": "🌶️", "level": 1 },
+    { "id": "medium", "label": "Medium", "icon": "🌶️🌶️", "level": 2 },
+    { "id": "hot", "label": "Hot", "icon": "🌶️🌶️🌶️", "level": 3 },
+    { "id": "extra-hot", "label": "Extra Hot", "icon": "🌶️🌶️🌶️🌶️", "level": 4 }
+  ],
+
+  "commonSizeOptions": {
+    "drink-sizes": [
+      { "id": "small", "label": "Small", "shortCode": "S" },
+      { "id": "medium", "label": "Medium", "shortCode": "M" },
+      { "id": "large", "label": "Large", "shortCode": "L" },
+      { "id": "extra-large", "label": "Extra Large", "shortCode": "XL" }
+    ],
+    "portion-sizes": [
+      { "id": "half", "label": "Half Portion" },
+      { "id": "regular", "label": "Regular" },
+      { "id": "large", "label": "Large Portion" },
+      { "id": "family", "label": "Family Size" }
+    ],
+    "cake-sizes": [
+      { "id": "6-inch", "label": "6 inch", "serves": "6–8 people" },
+      { "id": "8-inch", "label": "8 inch", "serves": "10–12 people" },
+      { "id": "10-inch", "label": "10 inch", "serves": "16–20 people" },
+      { "id": "12-inch", "label": "12 inch", "serves": "24–30 people" }
+    ]
+  },
+
+  "commonModifiers": {
+    "milk-alternatives": [
+      { "id": "whole-milk", "label": "Whole Milk", "priceModifier": 0 },
+      { "id": "skim-milk", "label": "Skim Milk", "priceModifier": 0 },
+      { "id": "oat-milk", "label": "Oat Milk", "priceModifier": 0 },
+      { "id": "almond-milk", "label": "Almond Milk", "priceModifier": 0 },
+      { "id": "soy-milk", "label": "Soy Milk", "priceModifier": 0 },
+      { "id": "coconut-milk", "label": "Coconut Milk", "priceModifier": 0 }
+    ],
+    "sweetness-levels": [
+      { "id": "no-sugar", "label": "No Sugar (0%)", "level": 0 },
+      { "id": "less-sweet", "label": "Less Sweet (25%)", "level": 25 },
+      { "id": "half-sweet", "label": "Half Sweet (50%)", "level": 50 },
+      { "id": "regular-sweet", "label": "Regular (100%)", "level": 100 },
+      { "id": "extra-sweet", "label": "Extra Sweet (120%)", "level": 120 }
+    ],
+    "ice-levels": [
+      { "id": "no-ice", "label": "No Ice" },
+      { "id": "less-ice", "label": "Less Ice" },
+      { "id": "regular-ice", "label": "Regular Ice" },
+      { "id": "extra-ice", "label": "Extra Ice" }
+    ],
+    "temperature": [
+      { "id": "hot", "label": "Hot" },
+      { "id": "warm", "label": "Warm" },
+      { "id": "room-temp", "label": "Room Temperature" },
+      { "id": "iced", "label": "Iced / Cold" }
+    ]
+  },
+
+  "nutritionalInfoFields": [
+    { "id": "calories", "label": "Calories", "unit": "kcal" },
+    { "id": "protein", "label": "Protein", "unit": "g" },
+    { "id": "carbs", "label": "Carbohydrates", "unit": "g" },
+    { "id": "fat", "label": "Fat", "unit": "g" },
+    { "id": "fiber", "label": "Fiber", "unit": "g" },
+    { "id": "sugar", "label": "Sugar", "unit": "g" },
+    { "id": "sodium", "label": "Sodium", "unit": "mg" }
+  ],
+
+  "storageInstructions": [
+    { "id": "consume-today", "label": "Best consumed on the day of purchase" },
+    { "id": "refrigerate", "label": "Keep refrigerated (below 4°C / 39°F)" },
+    { "id": "freeze-ok", "label": "Suitable for freezing" },
+    { "id": "room-temp-3days", "label": "Store at room temperature, consume within 3 days" },
+    { "id": "room-temp-7days", "label": "Store in a cool, dry place, consume within 7 days" }
+  ],
+
+  "prepTimeEstimates": [
+    { "id": "instant", "label": "Ready Now", "minutes": 0 },
+    { "id": "quick", "label": "Ready in 3–5 min", "minutes": 5 },
+    { "id": "standard", "label": "Ready in 10–15 min", "minutes": 15 },
+    { "id": "extended", "label": "Allow 20–30 min", "minutes": 30 },
+    { "id": "pre-order", "label": "Pre-order required (24–48 hours)", "minutes": null }
+  ]
+}

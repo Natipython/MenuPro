@@ -1,0 +1,1576 @@
+{
+  "id": "steakhouse-grill-house",
+  "name": "Steakhouse / Grill House",
+  "slug": "steakhouse-grill-house",
+  "icon": "🥩",
+  "description": "A premier steak-focused restaurant centered on artisanal butchery, prime aged beef cuts, flame grilling, and elevated fine dining hospitality. Features precise meat doneness selectors, cut weight sizing, sommelier wine cellar pairings, and luxury table service.",
+  "category": "restaurant",
+  "tags": [
+    "steakhouse",
+    "grill",
+    "steak",
+    "fine-dining",
+    "wine",
+    "premium"
+  ],
+  "sections": [
+    {
+      "id": "appetizers-and-starters",
+      "name": "Appetizers & Starters",
+      "sortOrder": 1,
+      "description": "Opening courses designed to awaken the palate before the main steak cuts. Features classic chophouse soups, crisp salads, cold seafood towers, and decadent small plates.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥗",
+      "subSections": [
+        {
+          "id": "soups",
+          "name": "Soups",
+          "sortOrder": 1,
+          "description": "Rich Maine lobster bisque, French onion soup gratinated with aged gruyère, and velvety seasonal cream soups."
+        },
+        {
+          "id": "salads",
+          "name": "Salads",
+          "sortOrder": 2,
+          "description": "Classic iceberg wedge salads, crisp romaine Caesar, vine-ripened beefsteak tomato with burrata, and artisan field greens."
+        },
+        {
+          "id": "small-plates",
+          "name": "Small Plates",
+          "sortOrder": 3,
+          "description": "Individual savory starters including prime beef carpaccio, jumbo lump Maryland crab cakes, pan-seared sea scallops, and steak tartare."
+        },
+        {
+          "id": "sharing-boards",
+          "name": "Sharing Boards",
+          "sortOrder": 4,
+          "description": "Communal table centerpieces featuring cured charcuterie, roasted bone marrow with toasted crostini, chilled seafood towers, and artisan cheese selections."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "appetizer-portion-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "individual",
+              "label": "Individual Serving",
+              "priceModifier": 0
+            },
+            {
+              "value": "sharing",
+              "label": "Table Sharing / Large Portion (Serves 2–3)",
+              "priceModifier": 8.0
+            }
+          ]
+        },
+        {
+          "id": "salad-dressing",
+          "type": "single-select",
+          "label": "Salad Dressing Selection",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "blue-cheese",
+              "label": "Creamy Blue Cheese",
+              "priceModifier": 0
+            },
+            {
+              "value": "house-herb-vinaigrette",
+              "label": "House Herb Vinaigrette",
+              "priceModifier": 0
+            },
+            {
+              "value": "creamy-caesar",
+              "label": "Parmesan Caesar Dressing",
+              "priceModifier": 0
+            },
+            {
+              "value": "warm-bacon-vinaigrette",
+              "label": "Warm Applewood Bacon Vinaigrette",
+              "priceModifier": 0
+            },
+            {
+              "value": "aged-balsamic",
+              "label": "Aged Balsamic Glaze",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "dressing-service",
+          "type": "single-select",
+          "label": "Dressing Placement",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "tossed-in",
+              "label": "Tossed In",
+              "priceModifier": 0
+            },
+            {
+              "value": "on-the-side",
+              "label": "Served on the Side",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "starter-protein-addons",
+          "type": "multi-select",
+          "label": "Appetizer Enhancements",
+          "isRequired": false,
+          "maxSelections": 2,
+          "choices": [
+            {
+              "value": "jumbo-lump-crab",
+              "label": "Add Jumbo Lump Crab Meat",
+              "priceModifier": 10.0
+            },
+            {
+              "value": "grilled-tiger-prawns",
+              "label": "Add Grilled Tiger Prawns (3 pcs)",
+              "priceModifier": 9.0
+            },
+            {
+              "value": "shaved-black-truffle",
+              "label": "Add Fresh Shaved Black Truffle",
+              "priceModifier": 12.0
+            },
+            {
+              "value": "crispy-pork-belly",
+              "label": "Add Crispy Smoked Pork Belly Lardons",
+              "priceModifier": 5.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "premium-steaks-and-cuts",
+      "name": "Premium Steaks & Cuts",
+      "sortOrder": 2,
+      "description": "The signature core of the steakhouse. Showcases certified USDA Prime beef, highly marbled Japanese and Australian Wagyu, salt-brick dry-aged reserve cuts, and monumental house specialties seared in high-temperature ceramic broilers or wood-fired grills. Features comprehensive meat doneness, weight customization, compound butters, and decadent toppings.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥩",
+      "subSections": [
+        {
+          "id": "usda-prime-cuts",
+          "name": "USDA Prime Cuts",
+          "sortOrder": 1,
+          "description": "Top 2% grain-fed American beef cuts including center-cut Filet Mignon, Boneless Ribeye, New York Strip, and Bone-In Kansas City Strip."
+        },
+        {
+          "id": "wagyu-and-premium",
+          "name": "Wagyu & Premium",
+          "sortOrder": 2,
+          "description": "Exceptional BMS 8-12 Japanese A5 Miyazaki Wagyu, Australian Purebred F1 Wagyu strip loins, and heritage breed steaks prized for velvety marbling."
+        },
+        {
+          "id": "dry-aged-selections",
+          "name": "Dry-Aged Selections",
+          "sortOrder": 3,
+          "description": "In-house butcher-aged cuts rested 28 to 60 days on Himalayan salt blocks to concentrate rich, nutty umami in Porterhouses, Ribeyes, and T-Bones."
+        },
+        {
+          "id": "house-specialties",
+          "name": "House Specialties",
+          "sortOrder": 4,
+          "description": "Showstopping dining centerpieces such as 32oz Long-Bone Tomahawk steaks, classic Chateaubriand for two, and prime rib cuts carved tableside."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "meat-doneness",
+          "type": "single-select",
+          "label": "Meat Cooking Temperature",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "blue-rare",
+              "label": "Blue Rare (Seared crust, cool blue-red center, 46°C / 115°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "rare",
+              "label": "Rare (Seared crust, cool-to-warm red center, 52°C / 125°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-rare",
+              "label": "Medium Rare (Recommended — Warm pink-red center, juicy & tender, 57°C / 135°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium (Warm pink center with firm bite, 63°C / 145°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-well",
+              "label": "Medium Well (Slight blush of pink, firm texture, 68°C / 155°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "well-done",
+              "label": "Well Done (Uniformly cooked throughout, no pink, 73°C+ / 165°F+)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "steak-cut-weight",
+          "type": "single-select",
+          "label": "Cut Weight / Sizing",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "8oz",
+              "label": "8oz / 225g Petit Cut",
+              "priceModifier": 0
+            },
+            {
+              "value": "12oz",
+              "label": "12oz / 340g Center Cut",
+              "priceModifier": 14.0
+            },
+            {
+              "value": "16oz",
+              "label": "16oz / 450g King Cut / Bone-In",
+              "priceModifier": 26.0
+            },
+            {
+              "value": "24oz",
+              "label": "24oz / 680g Porterhouse Cut",
+              "priceModifier": 48.0
+            },
+            {
+              "value": "32oz-tomahawk",
+              "label": "32oz / 900g Long-Bone Tomahawk (Feeds 2)",
+              "priceModifier": 75.0
+            }
+          ]
+        },
+        {
+          "id": "steak-compound-butter-sauce",
+          "type": "single-select",
+          "label": "Compound Butter & Sauce Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "peppercorn-cognac",
+              "label": "Green Peppercorn & Cognac Cream",
+              "priceModifier": 0
+            },
+            {
+              "value": "bearnaise",
+              "label": "Classic Tarragon Béarnaise",
+              "priceModifier": 0
+            },
+            {
+              "value": "chimichurri",
+              "label": "Argentine Garlic & Herb Chimichurri",
+              "priceModifier": 0
+            },
+            {
+              "value": "truffle-butter",
+              "label": "Black Truffle Compound Butter",
+              "priceModifier": 0
+            },
+            {
+              "value": "red-wine-demi",
+              "label": "Red Wine Shallot Demi-Glace",
+              "priceModifier": 0
+            },
+            {
+              "value": "garlic-herb-butter",
+              "label": "Roasted Garlic & Fresh Herb Butter",
+              "priceModifier": 0
+            },
+            {
+              "value": "creamy-horseradish",
+              "label": "Creamy Horseradish Sauce",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "steak-crust-style",
+          "type": "single-select",
+          "label": "Crust & Sear Preparation",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "classic-char",
+              "label": "Classic High-Heat Broiler Char",
+              "priceModifier": 0
+            },
+            {
+              "value": "pittsburgh-black-blue",
+              "label": "Pittsburgh Style (Charred Black Crust, Blue Rare Center)",
+              "priceModifier": 0
+            },
+            {
+              "value": "au-poivre-crust",
+              "label": "Coarse Cracked Peppercorn Au Poivre Crust",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "garlic-herb-crust",
+              "label": "Roasted Garlic & Panko Herb Crust",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "blue-cheese-crust",
+              "label": "Gratinated Gorgonzola Dolce Crust",
+              "priceModifier": 4.0
+            }
+          ]
+        },
+        {
+          "id": "steak-luxury-enhancements",
+          "type": "multi-select",
+          "label": "Luxury Steak Enhancements (Surf & Turf)",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "oscar-style",
+              "label": "Oscar Style (Jumbo Lump Crab, Asparagus & Béarnaise)",
+              "priceModifier": 18.0
+            },
+            {
+              "value": "pan-seared-foie-gras",
+              "label": "Seared Hudson Valley Foie Gras (50g)",
+              "priceModifier": 22.0
+            },
+            {
+              "value": "maine-lobster-tail",
+              "label": "Broiled Maine Lobster Tail (6oz)",
+              "priceModifier": 28.0
+            },
+            {
+              "value": "garlic-tiger-prawns",
+              "label": "Sautéed Colossal Tiger Prawns (2 pcs)",
+              "priceModifier": 12.0
+            },
+            {
+              "value": "fresh-shaved-truffle",
+              "label": "Fresh Shaved Black Truffle",
+              "priceModifier": 16.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grilled-seafood",
+      "name": "Grilled Seafood",
+      "sortOrder": 3,
+      "description": "Fresh ocean fish, whole crustacea, and shellfish flame-broiled or hardwood-grilled. Serves as premier pescatarian main courses and decadent additions to steak cuts.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🦞",
+      "subSections": [
+        {
+          "id": "fish",
+          "name": "Fish",
+          "sortOrder": 1,
+          "description": "Wild Chilean sea bass, King salmon fillets, yellowfin ahi tuna, and whole grilled Mediterranean sea bass (branzino)."
+        },
+        {
+          "id": "shellfish-and-lobster",
+          "name": "Shellfish & Lobster",
+          "sortOrder": 2,
+          "description": "Live North Atlantic whole lobsters, twin broiled Maine lobster tails, king crab legs, and fire-roasted jumbo sea scallops."
+        },
+        {
+          "id": "surf-and-turf-additions",
+          "name": "Surf & Turf Additions",
+          "sortOrder": 3,
+          "description": "Seafood accompaniments tailored to accompany any steak or chop, including split lobster tails, colossal garlic prawns, and crab clusters."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "seafood-prep-style",
+          "type": "single-select",
+          "label": "Seafood Preparation Style",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "hardwood-grilled",
+              "label": "Hardwood Flame-Grilled & Lightly Charred",
+              "priceModifier": 0
+            },
+            {
+              "value": "pan-seared",
+              "label": "Pan-Seared with Brown Butter & Fresh Herbs",
+              "priceModifier": 0
+            },
+            {
+              "value": "oven-broiled",
+              "label": "Broiled with Lemon, White Wine & Garlic",
+              "priceModifier": 0
+            },
+            {
+              "value": "blackened-cajun",
+              "label": "Blackened with Cast-Iron Cajun Spices",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "seafood-sauce",
+          "type": "single-select",
+          "label": "Complimentary Seafood Sauce",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "lemon-caper-beurre-blanc",
+              "label": "Lemon Caper Beurre Blanc",
+              "priceModifier": 0
+            },
+            {
+              "value": "drawn-clarified-butter",
+              "label": "Warm Drawn Clarified Butter",
+              "priceModifier": 0
+            },
+            {
+              "value": "garlic-herb-butter",
+              "label": "Melted Garlic Herb Butter",
+              "priceModifier": 0
+            },
+            {
+              "value": "fresh-chimichurri",
+              "label": "Zesty Argentine Chimichurri",
+              "priceModifier": 0
+            },
+            {
+              "value": "lobster-bisque-reduction",
+              "label": "Lobster Cognac Bisque Reduction",
+              "priceModifier": 3.0
+            }
+          ]
+        },
+        {
+          "id": "fish-doneness",
+          "type": "single-select",
+          "label": "Fish Doneness Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "medium-translucent",
+              "label": "Medium (Moist, warm translucent center — Recommended for Salmon & Tuna)",
+              "priceModifier": 0
+            },
+            {
+              "value": "well-done-opaque",
+              "label": "Fully Cooked (Flaky and opaque throughout)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "poultry-and-other-grills",
+      "name": "Poultry & Other Grills",
+      "sortOrder": 4,
+      "description": "Non-beef chargrilled masterworks including organic free-range poultry, Colorado lamb racks, and heritage Berkshire pork chops roasted over wood fire.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍗",
+      "subSections": [
+        {
+          "id": "chicken",
+          "name": "Chicken",
+          "sortOrder": 1,
+          "description": "Brick-pressed organic half chicken, rosemary rotisserie supreme breast, and wood-fired chicken with herb-infused crispy skin."
+        },
+        {
+          "id": "lamb",
+          "name": "Lamb",
+          "sortOrder": 2,
+          "description": "Dijon and herb-crusted Colorado lamb racks, thick-cut double loin lamb chops, and grilled lamb skewers."
+        },
+        {
+          "id": "pork",
+          "name": "Pork",
+          "sortOrder": 3,
+          "description": "Thick-cut bone-in Berkshire pork chops, slow-roasted cider glazed pork belly, and tenderloin medallions."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "other-grills-doneness",
+          "type": "single-select",
+          "label": "Meat Doneness (Lamb & Pork Chops)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "medium-rare",
+              "label": "Medium Rare (Warm red center — Recommended for Lamb, 57°C / 135°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium (Warm pink center — Recommended for Berkshire Pork, 63°C / 145°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-well",
+              "label": "Medium Well (Slight pink center, 68°C / 155°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "well-done",
+              "label": "Well Done (Fully cooked throughout, 74°C+ / 165°F+)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "poultry-grills-sauce",
+          "type": "single-select",
+          "label": "Sauce Selection",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "rosemary-mint-demi",
+              "label": "Rosemary & Mint Demi-Glace",
+              "priceModifier": 0
+            },
+            {
+              "value": "apple-cider-bourbon-glaze",
+              "label": "Apple Cider & Bourbon Glaze",
+              "priceModifier": 0
+            },
+            {
+              "value": "whole-grain-mustard-jus",
+              "label": "Whole Grain Mustard & Thyme Jus",
+              "priceModifier": 0
+            },
+            {
+              "value": "lemon-herb-jus",
+              "label": "Roasted Garlic & Lemon Herb Jus",
+              "priceModifier": 0
+            },
+            {
+              "value": "house-chimichurri",
+              "label": "House Fresh Chimichurri",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "Sides",
+      "sortOrder": 5,
+      "description": "Essential steakhouse accompaniments served family-style or individually. Built around classic steakhouse potatoes, creamed greens, roasted wild mushrooms, and artisanal mac & cheese, along with extra ramekins of compound butters and rich reductions.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥔",
+      "subSections": [
+        {
+          "id": "classic-steakhouse-sides",
+          "name": "Classic Steakhouse Sides",
+          "sortOrder": 1,
+          "description": "Idaho jumbo baked potatoes, creamed spinach with nutmeg, hand-cut russet fries, garlic mashed potatoes, and grilled asparagus spears."
+        },
+        {
+          "id": "premium-sides",
+          "name": "Premium Sides",
+          "sortOrder": 2,
+          "description": "Maine lobster mac & cheese, sautéed wild chantrelles and morels, duck fat roasted fingerling potatoes, and creamed sweet corn with crispy pancetta."
+        },
+        {
+          "id": "sauces-and-butters",
+          "name": "Sauces & Butters",
+          "sortOrder": 3,
+          "description": "Individual gravy boats of peppercorn cognac sauce, béarnaise, red wine demi, truffle butter disks, and horseradish cream."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "side-portion-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "individual",
+              "label": "Individual Portion",
+              "priceModifier": 0
+            },
+            {
+              "value": "sharing",
+              "label": "Table Sharing Size (Serves 2–3)",
+              "priceModifier": 6.0
+            }
+          ]
+        },
+        {
+          "id": "side-enhancements",
+          "type": "multi-select",
+          "label": "Potato & Side Enhancements",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "loaded-bacon-cheddar",
+              "label": "Fully Loaded (Applewood Bacon, Aged Cheddar, Chives & Sour Cream)",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "truffle-oil-parmesan",
+              "label": "Drizzled White Truffle Oil & Shaved Reggiano",
+              "priceModifier": 4.5
+            },
+            {
+              "value": "wild-mushrooms",
+              "label": "Sautéed Garlic Wild Mushrooms",
+              "priceModifier": 4.0
+            },
+            {
+              "value": "lobster-chunks",
+              "label": "Add Maine Lobster Chunks to Mac & Cheese",
+              "priceModifier": 10.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "sortOrder": 6,
+      "description": "Indulgent after-dinner finales including warm oven soufflés, rich tortes, classic steakhouse cheesecakes, and an artisanal cheese board designed to accompany port and digestifs.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍰",
+      "subSections": [
+        {
+          "id": "hot-desserts",
+          "name": "Hot Desserts",
+          "sortOrder": 1,
+          "description": "Baked-to-order Valrhona dark chocolate soufflé, warm molten chocolate lava cake, cast-iron apple crisp, and caramelized brioche pudding."
+        },
+        {
+          "id": "cold-desserts",
+          "name": "Cold Desserts",
+          "sortOrder": 2,
+          "description": "Classic New York cheesecake with macerated berry compote, vanilla bean crème brûlée, artisanal gelato, and refreshing fruit sorbets."
+        },
+        {
+          "id": "cheese-board",
+          "name": "Cheese Board",
+          "sortOrder": 3,
+          "description": "Sommelier's selection of aged artisan cheeses (Comté, Roquefort, Triple-Cream Brillat-Savarin, Truffle Pecorino) with honeycomb, Marcona almonds, and walnut toast."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "dessert-accompaniment",
+          "type": "single-select",
+          "label": "Ice Cream & Accompaniment Choice",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "vanilla-bean-ice-cream",
+              "label": "Madagascar Vanilla Bean Ice Cream Scoop",
+              "priceModifier": 0
+            },
+            {
+              "value": "salted-caramel-gelato",
+              "label": "Salted Caramel Gelato Scoop",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "whipped-chantilly",
+              "label": "Fresh House Whipped Chantilly Cream",
+              "priceModifier": 0
+            },
+            {
+              "value": "berry-compote",
+              "label": "Warm Seasonal Berry Compote",
+              "priceModifier": 0
+            },
+            {
+              "value": "none",
+              "label": "As Described (No Extra Accompaniment)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "dessert-pairing-beverage",
+          "type": "single-select",
+          "label": "Dessert Wine & Coffee Pairing",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Beverage Pairing",
+              "priceModifier": 0
+            },
+            {
+              "value": "tawny-port-10yr",
+              "label": "Add Glass of Taylor Fladgate 10-Year Tawny Port",
+              "priceModifier": 12.0
+            },
+            {
+              "value": "chateau-guiraud-sauternes",
+              "label": "Add Glass of Sauternes Bordeaux",
+              "priceModifier": 16.0
+            },
+            {
+              "value": "espresso",
+              "label": "Add Single Origin Double Espresso",
+              "priceModifier": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wine-list",
+      "name": "Wine List",
+      "sortOrder": 7,
+      "description": "The foundational beverage pillar of the steakhouse. Comprehensive sommelier-curated wine cellar specializing in full-bodied red wines, bold Napa Cabernets, Premier Cru Bordeaux, crisp coastal whites, and vintage Champagnes. Supports extensive glass, carafe, half-bottle, and bottle service with vintage designations.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍷",
+      "subSections": [
+        {
+          "id": "red-wines",
+          "name": "Red Wines",
+          "sortOrder": 1,
+          "description": "Bold Napa Valley, Sonoma, and Bordeaux Cabernet Sauvignons, Argentine Malbecs, Italian Brunellos and Barolos, and Burgundy Pinot Noirs curated to pair with marbled steaks."
+        },
+        {
+          "id": "white-wines",
+          "name": "White Wines",
+          "sortOrder": 2,
+          "description": "Oak-matured Chardonnays, crisp Sancerre and Sauvignon Blancs, Chablis Premier Cru, and dry Rieslings matching seafood and white meats."
+        },
+        {
+          "id": "rose",
+          "name": "Rosé",
+          "sortOrder": 3,
+          "description": "Dry Provence and Bandol rosé selections featuring crisp mineral acidity and red summer fruit aromatics."
+        },
+        {
+          "id": "sparkling-and-champagne",
+          "name": "Sparkling & Champagne",
+          "sortOrder": 4,
+          "description": "Grand Cru Champagnes, vintage Cuvées, Franciacorta, and sparkling wines for celebratory dining and toasts."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "wine-serving-size",
+          "type": "single-select",
+          "label": "Serving Size / Format",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "glass",
+              "label": "Glass (150ml / 5oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "carafe-quartino",
+              "label": "Carafe / Quartino (250ml / 8.5oz)",
+              "priceModifier": 9.0
+            },
+            {
+              "value": "half-bottle",
+              "label": "Half Bottle (375ml)",
+              "priceModifier": 24.0
+            },
+            {
+              "value": "bottle",
+              "label": "Full Bottle (750ml)",
+              "priceModifier": 55.0
+            },
+            {
+              "value": "magnum",
+              "label": "Magnum Bottle (1.5L - Selected Vintages)",
+              "priceModifier": 125.0
+            }
+          ]
+        },
+        {
+          "id": "wine-decanting-preference",
+          "type": "single-select",
+          "label": "Decanting & Table Service",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "table-decant",
+              "label": "Aerate & Decant at Table (Recommended for Cellar Reds)",
+              "priceModifier": 0
+            },
+            {
+              "value": "standard-service",
+              "label": "Standard Wine Glass Pour / Direct Open",
+              "priceModifier": 0
+            },
+            {
+              "value": "chilled-ice-bucket",
+              "label": "Keep Chilled in Tabletop Ice Bucket",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "wine-vintage-notes",
+          "type": "single-select",
+          "label": "Vintage Allocation",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "current-release",
+              "label": "Current Release Vintage",
+              "priceModifier": 0
+            },
+            {
+              "value": "library-cellar-vintage",
+              "label": "Sommelier Cellar Library Vintage (Upon Availability)",
+              "priceModifier": 30.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cocktails",
+      "name": "Cocktails",
+      "sortOrder": 8,
+      "description": "Premium craft mixology program rooted in classic chophouse traditions. Highlights spirit-forward Old Fashioneds, smoked Manhattan variations, bone-dry martinis, seasonal innovations, and herbal digestifs to bookend the dining journey.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍸",
+      "subSections": [
+        {
+          "id": "classic-cocktails",
+          "name": "Classic Cocktails",
+          "sortOrder": 1,
+          "description": "Timeless steakhouse standards including Barrel-Aged Old Fashioned, Smoked Black Cherry Manhattan, Vesper Martini, Sazerac, and Negroni."
+        },
+        {
+          "id": "signature-cocktails",
+          "name": "Signature Cocktails",
+          "sortOrder": 2,
+          "description": "House mixologist originals incorporating wagyu-washed bourbon, smoked rosemary, flamed citrus oils, and rare bitters."
+        },
+        {
+          "id": "digestifs-and-after-dinner",
+          "name": "Digestifs & After-Dinner",
+          "sortOrder": 3,
+          "description": "Calvados, Amari, Grappa, single-estate Cognacs, and Irish coffee preparations designed for post-meal digestion."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cocktail-spirit-upgrade",
+          "type": "single-select",
+          "label": "Spirit Tier Upgrade",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "house-pour",
+              "label": "House Pour Spirit",
+              "priceModifier": 0
+            },
+            {
+              "value": "small-batch-upgrade",
+              "label": "Upgrade to Small Batch Reserve Bourbon / Rye",
+              "priceModifier": 4.0
+            },
+            {
+              "value": "japanese-whisky-upgrade",
+              "label": "Upgrade to Premium Japanese Whisky",
+              "priceModifier": 8.0
+            },
+            {
+              "value": "rare-barrel-upgrade",
+              "label": "Upgrade to Single-Barrel Cask Strength Spirit",
+              "priceModifier": 12.0
+            }
+          ]
+        },
+        {
+          "id": "cocktail-ice-style",
+          "type": "single-select",
+          "label": "Ice & Glassware Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "hand-carved-cube",
+              "label": "Hand-Carved Crystal Clear Ice Cube",
+              "priceModifier": 0
+            },
+            {
+              "value": "served-up",
+              "label": "Served Up in Chilled Coupette (No Ice)",
+              "priceModifier": 0
+            },
+            {
+              "value": "neat-glencairn",
+              "label": "Neat in Glencairn Glass",
+              "priceModifier": 0
+            },
+            {
+              "value": "crushed-ice",
+              "label": "Swizzled over Crushed Pebble Ice",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "cocktail-garnish-choice",
+          "type": "single-select",
+          "label": "Garnish Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "flamed-orange",
+              "label": "Flamed Orange Peel Twist",
+              "priceModifier": 0
+            },
+            {
+              "value": "luxardo-cherry",
+              "label": "Luxardo Gourmet Maraschino Cherry",
+              "priceModifier": 0
+            },
+            {
+              "value": "blue-cheese-olives",
+              "label": "Blue Cheese Hand-Stuffed Queen Olives (3 pcs)",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "smoked-herbs",
+              "label": "Torched Smoked Rosemary Sprig",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beers-and-spirits",
+      "name": "Beers & Spirits",
+      "sortOrder": 9,
+      "description": "Extensive liquor cabinet emphasizing vintage bourbons, single-malt scotches, rare ryes, and craft draft and bottled beers that pair with hearty charbroiled steaks and ribs.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥃",
+      "subSections": [
+        {
+          "id": "draft-beer",
+          "name": "Draft Beer",
+          "sortOrder": 1,
+          "description": "Fresh chilled draft pours including crisp pilsners, nitrogen-poured dry stouts, Belgian ales, and hazy IPAs."
+        },
+        {
+          "id": "bottled-beer",
+          "name": "Bottled Beer",
+          "sortOrder": 2,
+          "description": "Imported Trappist ales, Bavarian lagers, craft stouts, cider, and premium non-alcoholic beers in chilled glassware."
+        },
+        {
+          "id": "whiskey-and-bourbon",
+          "name": "Whiskey & Bourbon",
+          "sortOrder": 3,
+          "description": "Extensive whiskey library featuring Kentucky straight bourbons, wheated bourbons, high-ryes, and Islay & Speyside single malts."
+        },
+        {
+          "id": "other-spirits",
+          "name": "Other Spirits",
+          "sortOrder": 4,
+          "description": "Aged sipping rums, 100% blue agave tequilas, artisanal mezcals, craft London dry gins, and filtered vodkas."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "spirits-pour-size",
+          "type": "single-select",
+          "label": "Pour Size / Volume",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-pour",
+              "label": "Single Pour (1.5oz / 45ml)",
+              "priceModifier": 0
+            },
+            {
+              "value": "double-pour",
+              "label": "Double Pour (3.0oz / 90ml)",
+              "priceModifier": 10.0
+            },
+            {
+              "value": "whiskey-flight",
+              "label": "Tasting Flight (Three 0.75oz Pours)",
+              "priceModifier": 15.0
+            },
+            {
+              "value": "draft-pint",
+              "label": "Draft Pint (16oz / 473ml)",
+              "priceModifier": 0
+            },
+            {
+              "value": "draft-imperial",
+              "label": "Imperial Pint (20oz / 568ml)",
+              "priceModifier": 2.5
+            }
+          ]
+        },
+        {
+          "id": "spirit-serving-style",
+          "type": "single-select",
+          "label": "Spirit Serving Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "neat",
+              "label": "Neat (Ambient Room Temperature)",
+              "priceModifier": 0
+            },
+            {
+              "value": "ice-sphere",
+              "label": "Served over Large Crystal Ice Sphere",
+              "priceModifier": 0
+            },
+            {
+              "value": "on-the-rocks",
+              "label": "On the Rocks (Standard Cubes)",
+              "priceModifier": 0
+            },
+            {
+              "value": "with-water-back",
+              "label": "Served with Spring Water Dropper on Side",
+              "priceModifier": 0
+            },
+            {
+              "value": "soda-splash",
+              "label": "With Premium Club Soda & Lemon Twist",
+              "priceModifier": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "non-alcoholic",
+      "name": "Non-Alcoholic",
+      "sortOrder": 10,
+      "description": "Sophisticated alcohol-free offerings for designated drivers, health-conscious guests, and business luncheons. Features artisan zero-proof botanical mocktails, premium sparkling and still mineral waters, handcrafted sodas, and specialty roasted coffees and teas.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍹",
+      "subSections": [
+        {
+          "id": "mocktails",
+          "name": "Mocktails",
+          "sortOrder": 1,
+          "description": "Zero-proof mixology drinks made with distilled non-alcoholic botanicals, fresh citrus, smoked herbal reductions, and craft ginger brew."
+        },
+        {
+          "id": "soft-drinks",
+          "name": "Soft Drinks",
+          "sortOrder": 2,
+          "description": "House-made lemonade, Mexican cane sugar sodas, craft ginger beer, and freshly brewed unsweetened iced tea."
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "sortOrder": 3,
+          "description": "Imported volcanic sparkling and natural spring waters in 750ml glass bottles (San Pellegrino, Acqua Panna)."
+        },
+        {
+          "id": "hot-beverages",
+          "name": "Hot Beverages",
+          "sortOrder": 4,
+          "description": "Barista-pulled espresso, Americano, cappuccino, macchiato, and premium loose-leaf whole-flower teas."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "water-service-style",
+          "type": "single-select",
+          "label": "Water Service & Garnish",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "chilled-with-citrus",
+              "label": "Chilled with Fresh Lemon & Lime Wedges",
+              "priceModifier": 0
+            },
+            {
+              "value": "chilled-plain",
+              "label": "Chilled Plain (No Citrus)",
+              "priceModifier": 0
+            },
+            {
+              "value": "room-temp",
+              "label": "Ambient Room Temperature",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "hot-bev-milk-choice",
+          "type": "single-select",
+          "label": "Coffee / Tea Milk Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-milk",
+              "label": "Fresh Whole Dairy Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "skim-milk",
+              "label": "Skim Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Barista Oat Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "soy-milk",
+              "label": "Organic Soy Milk",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "hot-bev-caffeine",
+          "type": "single-select",
+          "label": "Caffeination Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular Caffeinated",
+              "priceModifier": 0
+            },
+            {
+              "value": "decaf",
+              "label": "Swiss Water Process Decaf",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "set-menus-and-experiences",
+      "name": "Set Menus & Experiences",
+      "sortOrder": 11,
+      "description": "Multi-course prix fixe culinary journeys, curated date-night feasts, express corporate lunches, and intimate Chef's Table tasting menus. Provides seamless course selections and sommelier wine pairings for elevated dining occasions.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍽️",
+      "subSections": [
+        {
+          "id": "tasting-menu",
+          "name": "Tasting Menu",
+          "sortOrder": 1,
+          "description": "A 5-course signature culinary progression featuring seafood starters, prime dry-aged tastings, Japanese Wagyu, and dessert."
+        },
+        {
+          "id": "couples-dinner",
+          "name": "Couple's Dinner",
+          "sortOrder": 2,
+          "description": "Complete romantic dinner for two including shared shellfish appetizer, 32oz Tomahawk or Chateaubriand steak, two family sides, and warm chocolate soufflé."
+        },
+        {
+          "id": "business-lunch",
+          "name": "Business Lunch",
+          "sortOrder": 3,
+          "description": "Prompt two or three-course lunch menu formatted for executive dining with guaranteed swift kitchen pacing."
+        },
+        {
+          "id": "chefs-table",
+          "name": "Chef's Table",
+          "sortOrder": 4,
+          "description": "Exclusive VIP dining experience directly overlooking the charcoal kitchen with custom bespoke cuts, live carving, and rare vintage pairings."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "experience-wine-pairing",
+          "type": "single-select",
+          "label": "Sommelier Wine Pairing Option",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "no-pairing",
+              "label": "No Wine Pairing (A La Carte Beverages)",
+              "priceModifier": 0
+            },
+            {
+              "value": "classic-sommelier-pairing",
+              "label": "Sommelier Classic Pairing (3 Paired Glasses)",
+              "priceModifier": 45.0
+            },
+            {
+              "value": "prestige-reserve-pairing",
+              "label": "Prestige Grand Cru & Library Reserve Pairing (3 Paired Glasses)",
+              "priceModifier": 85.0
+            }
+          ]
+        },
+        {
+          "id": "experience-steak-doneness",
+          "type": "single-select",
+          "label": "Main Steak Doneness",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "rare",
+              "label": "Rare (Cool-to-warm red center, 52°C / 125°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-rare",
+              "label": "Medium Rare (Recommended, 57°C / 135°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium (Warm pink center, 63°C / 145°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-well",
+              "label": "Medium Well (Slight pink, 68°C / 155°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "well-done",
+              "label": "Well Done (No pink, 73°C+ / 165°F+)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "experience-side-choice",
+          "type": "single-select",
+          "label": "Included Side Dish",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "truffle-mashed-potatoes",
+              "label": "Truffle Mashed Potatoes",
+              "priceModifier": 0
+            },
+            {
+              "value": "creamed-spinach",
+              "label": "Creamed Spinach with Nutmeg",
+              "priceModifier": 0
+            },
+            {
+              "value": "loaded-baked-potato",
+              "label": "Idaho Loaded Baked Potato",
+              "priceModifier": 0
+            },
+            {
+              "value": "grilled-asparagus",
+              "label": "Charred Asparagus with Hollandaise",
+              "priceModifier": 0
+            },
+            {
+              "value": "upgrade-lobster-mac",
+              "label": "Upgrade to Lobster Mac & Cheese",
+              "priceModifier": 8.0
+            }
+          ]
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Business Lunch available Monday–Friday 12:00–15:00; Chef's Table and Tasting Menus available during dinner service."
+      }
+    },
+    {
+      "id": "seasonal-and-chefs-specials",
+      "name": "Seasonal & Chef's Specials",
+      "sortOrder": 12,
+      "description": "Limited-quantity butcher market cuts, seasonal luxury catches, truffles, and allocated cellar reserves uncorked by the glass. Changes periodically based on butcher availability and seasonal harvest.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "✨",
+      "subSections": [
+        {
+          "id": "rare-and-limited-cuts",
+          "name": "Rare & Limited Cuts",
+          "sortOrder": 1,
+          "description": "Extremely limited cuts including 60-day bourbon-barrel aged ribeyes, authentic Olive Wagyu from Kagawa Prefecture, and special farm-allocated prime steers."
+        },
+        {
+          "id": "seasonal-market-features",
+          "name": "Seasonal Market Features",
+          "sortOrder": 2,
+          "description": "Fresh harvest seasonal specialties including wild Alaskan King crab, white Alba truffle features, and roasted game."
+        },
+        {
+          "id": "sommelier-cellar-allocations",
+          "name": "Sommelier Cellar Allocations",
+          "sortOrder": 3,
+          "description": "Back-vintage collectible wines, single-barrel distillery bourbon picks, and allocated library bottles poured via Coravin."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "specials-meat-doneness",
+          "type": "single-select",
+          "label": "Meat Cooking Temperature",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "rare",
+              "label": "Rare (Cool-to-warm red center)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-rare",
+              "label": "Medium Rare (Chef's Recommendation)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium (Warm pink center)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-well",
+              "label": "Medium Well (Slight pink)",
+              "priceModifier": 0
+            },
+            {
+              "value": "well-done",
+              "label": "Well Done (Fully cooked)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "specials-cut-weight",
+          "type": "single-select",
+          "label": "Butcher Cut Weight / Sizing",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-cut",
+              "label": "Standard Butcher Cut (Approx 12oz / 340g)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-reserve-cut",
+              "label": "Large Reserve Cut (Approx 18oz / 510g)",
+              "priceModifier": 28.0
+            },
+            {
+              "value": "whole-sharing-cut",
+              "label": "Grand Sharing Cut (Approx 36oz / 1kg)",
+              "priceModifier": 80.0
+            }
+          ]
+        },
+        {
+          "id": "specials-sauce-choice",
+          "type": "single-select",
+          "label": "Accompaniment Sauce",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "black-truffle-butter",
+              "label": "Black Truffle Compound Butter",
+              "priceModifier": 0
+            },
+            {
+              "value": "bone-marrow-demi",
+              "label": "Roasted Bone Marrow Demi-Glace",
+              "priceModifier": 0
+            },
+            {
+              "value": "green-peppercorn",
+              "label": "Cognac Peppercorn Reduction",
+              "priceModifier": 0
+            },
+            {
+              "value": "herb-chimichurri",
+              "label": "House Fresh Chimichurri",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "meatDoneness",
+      "name": "Meat Doneness Selection",
+      "description": "Mandatory steak and grilled meat cooking temperatures communicated directly to the kitchen ticket system with detailed temperature and tenderness guidelines.",
+      "isEnabled": true,
+      "config": {
+        "donenessOptions": [
+          "blue-rare",
+          "rare",
+          "medium-rare",
+          "medium",
+          "medium-well",
+          "well-done"
+        ],
+        "defaultDoneness": "medium-rare",
+        "requiredForMeatCuts": true,
+        "applicableSectionIds": [
+          "premium-steaks-and-cuts",
+          "poultry-and-other-grills",
+          "set-menus-and-experiences",
+          "seasonal-and-chefs-specials"
+        ]
+      }
+    },
+    {
+      "id": "ageVerification",
+      "name": "Age Verification",
+      "description": "Enforces digital age gate verification for ordering alcohol-containing beverages including wine cellar selections, craft cocktails, beers, and spirits.",
+      "isEnabled": true,
+      "config": {
+        "minimumAge": 21,
+        "restrictedSectionIds": [
+          "wine-list",
+          "cocktails",
+          "beers-and-spirits"
+        ],
+        "requireConfirmationPrompt": true
+      }
+    },
+    {
+      "id": "wineMetadata",
+      "name": "Wine Metadata & Cellar Attributes",
+      "description": "Structured wine cellar attributes including vintage, region, country, grape varietal, alcohol by volume (ABV), body, and sommelier tasting notes.",
+      "isEnabled": true,
+      "config": {
+        "fields": [
+          "vintage",
+          "region",
+          "country",
+          "grape_varietal",
+          "producer",
+          "abv",
+          "body",
+          "tasting_notes",
+          "food_pairings"
+        ],
+        "targetSectionIds": [
+          "wine-list",
+          "seasonal-and-chefs-specials"
+        ]
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Badging",
+      "description": "Displays clear allergen alerts (dairy, gluten, shellfish, nuts) and dietary preferences (keto, paleo, gluten-free, halal) across all steakhouse courses.",
+      "isEnabled": true,
+      "config": {
+        "displayBadges": true,
+        "filterable": true,
+        "highlightSevereAllergens": true,
+        "supportedTags": [
+          "gluten-free",
+          "dairy-free",
+          "nut-free",
+          "shellfish-free",
+          "keto",
+          "paleo",
+          "halal",
+          "contains-gluten",
+          "contains-dairy",
+          "contains-alcohol",
+          "contains-shellfish"
+        ]
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Real-Time Cut & Inventory Badges",
+      "description": "Shows real-time status for limited-availability dry-aged cuts, daily butcher allocations, and sold-out items to prevent ordering unavailable steaks.",
+      "isEnabled": true,
+      "config": {
+        "showLowStockAlert": true,
+        "lowStockThreshold": 3,
+        "autoMarkSoldOut": true,
+        "showLimitedCutBadge": true
+      }
+    },
+    {
+      "id": "setMenus",
+      "name": "Set Menus & Dining Experiences",
+      "description": "Supports multi-course tasting menus, prix fixe business lunches, and couple's date-night packages with required course selection and wine pairing add-ons.",
+      "isEnabled": true,
+      "config": {
+        "enforceCourseSelection": true,
+        "allowSubstitutions": true,
+        "allowWinePairingToggle": true,
+        "targetSectionIds": [
+          "set-menus-and-experiences"
+        ]
+      }
+    },
+    {
+      "id": "servingSize",
+      "name": "Serving Size & Weight Sizing",
+      "description": "Multi-tier cut weight customization (oz/grams) for prime steaks, pour sizes for wines and spirits, and individual vs. table sharing portions for sides and appetizers.",
+      "isEnabled": true,
+      "config": {
+        "enableCustomModifiers": true,
+        "units": [
+          "oz",
+          "g",
+          "ml",
+          "glass",
+          "bottle",
+          "half-bottle",
+          "carafe",
+          "individual",
+          "sharing"
+        ],
+        "targetSectionIds": [
+          "appetizers-and-starters",
+          "premium-steaks-and-cuts",
+          "sides",
+          "wine-list",
+          "beers-and-spirits",
+          "seasonal-and-chefs-specials"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

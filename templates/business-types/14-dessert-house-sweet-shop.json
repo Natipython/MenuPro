@@ -1,0 +1,1821 @@
+{
+  "id": "dessert-house-sweet-shop",
+  "name": "Dessert House / Sweet Shop",
+  "slug": "dessert-house-sweet-shop",
+  "icon": "🧇",
+  "description": "Tailored for dedicated dessert venues, dessert parlors, and late-night sweet lounges delivering high-energy sit-down experiences. Designed around freshly made-to-order Belgian and bubble waffles, artisan crêpes, hot churros, chocolate fondue sets, molten lava cakes, sundaes, loaded milkshakes, and celebration dessert platters.",
+  "category": "hybrid",
+  "tags": [
+    "dessert",
+    "waffles",
+    "crepes",
+    "churros",
+    "chocolate",
+    "sweet-shop",
+    "fondue"
+  ],
+  "sections": [
+    {
+      "id": "waffles",
+      "name": "Waffles",
+      "sortOrder": 1,
+      "description": "Freshly baked-to-order Belgian waffles, Hong Kong bubble egg waffles, and chocolate-dipped waffle sticks. As the cornerstone of the dessert house, this section delivers hot, golden-crisp waffle bases paired with an extensive multi-tier customization bar featuring fresh orchard fruits, warm chocolate drizzles, gelato scoops, chantilly cream, and toasted nuts.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🧇",
+      "subSections": [
+        {
+          "id": "belgian-waffles",
+          "name": "Belgian Waffles",
+          "sortOrder": 1,
+          "description": "Authentic Brussels-style deep-pocketed waffles with crisp airy texture and pearl-sugar Liege yeast waffles baked to caramelized perfection."
+        },
+        {
+          "id": "bubble-waffles",
+          "name": "Bubble Waffles",
+          "sortOrder": 2,
+          "description": "Signature Hong Kong style egg puff waffles featuring crispy spherical bubbles and custardy centers, served flat on platters or rolled into loaded dessert cones."
+        },
+        {
+          "id": "waffle-sticks",
+          "name": "Waffle Sticks",
+          "sortOrder": 3,
+          "description": "Portable skewer-mounted waffle pops dipped in warm Belgian chocolate and coated in crushed biscuits, confections, and nuts for easy table sharing."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "waffle-fruit-toppings",
+          "type": "multi-select",
+          "label": "Fresh Fruit Toppings",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "fresh-strawberries",
+              "label": "Fresh Sliced Strawberries",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "sliced-banana",
+              "label": "Ripe Banana Slices",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "fresh-blueberries",
+              "label": "Fresh Blueberries",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "fresh-raspberries",
+              "label": "Fresh Raspberries",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "berry-compote",
+              "label": "Warm Wild Berry Compote",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "caramelized-apples",
+              "label": "Spiced Caramelized Apples",
+              "priceModifier": 1.25
+            }
+          ]
+        },
+        {
+          "id": "waffle-sauces",
+          "type": "multi-select",
+          "label": "Sauce Drizzle Selection",
+          "isRequired": true,
+          "minSelections": 1,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "warm-milk-chocolate",
+              "label": "Warm Belgian Milk Chocolate",
+              "priceModifier": 0
+            },
+            {
+              "value": "dark-chocolate-70",
+              "label": "Belgian 70% Dark Chocolate",
+              "priceModifier": 0
+            },
+            {
+              "value": "warm-white-chocolate",
+              "label": "Warm Belgian White Chocolate",
+              "priceModifier": 0
+            },
+            {
+              "value": "nutella-drizzle",
+              "label": "Warm Nutella Hazelnut Drizzle",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "lotus-biscoff-sauce",
+              "label": "Warm Lotus Biscoff Spread",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "salted-caramel",
+              "label": "Artisan Salted Butter Caramel",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "pure-maple-syrup",
+              "label": "100% Pure Canadian Maple Syrup",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "strawberry-coulis",
+              "label": "House Fresh Strawberry Coulis",
+              "priceModifier": 0.5
+            }
+          ]
+        },
+        {
+          "id": "waffle-ice-cream",
+          "type": "single-select",
+          "label": "Gelato / Ice Cream Scoop Add-On",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Ice Cream",
+              "priceModifier": 0
+            },
+            {
+              "value": "vanilla-bean-scoop",
+              "label": "Madagascar Vanilla Bean Scoop",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "belgian-chocolate-scoop",
+              "label": "Belgian Rich Chocolate Scoop",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "salted-caramel-scoop",
+              "label": "Salted Butter Caramel Gelato Scoop",
+              "priceModifier": 2.25
+            },
+            {
+              "value": "wild-strawberry-scoop",
+              "label": "Wild Strawberry Gelato Scoop",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "pistachio-scoop",
+              "label": "Sicilian Pistachio Gelato Scoop",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "cookies-cream-scoop",
+              "label": "Cookies & Cream Scoop",
+              "priceModifier": 2.0
+            }
+          ]
+        },
+        {
+          "id": "waffle-whipped-cream",
+          "type": "single-select",
+          "label": "Whipped Cream Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "no-whipped-cream",
+              "label": "No Whipped Cream",
+              "priceModifier": 0
+            },
+            {
+              "value": "fresh-chantilly",
+              "label": "Fresh Chantilly Whipped Cream",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "extra-chantilly",
+              "label": "Extra Generous Chantilly Cream Cloud",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "coconut-whipped-cream",
+              "label": "Dairy-Free Coconut Whipped Cream",
+              "priceModifier": 1.0
+            }
+          ]
+        },
+        {
+          "id": "waffle-nuts-crunch",
+          "type": "multi-select",
+          "label": "Nuts & Crunch Toppings",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "toasted-hazelnuts",
+              "label": "Roasted Chopped Hazelnuts",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "flaked-almonds",
+              "label": "Toasted Flaked Almonds",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "crushed-pistachios",
+              "label": "Crushed Sicilian Pistachios",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "lotus-biscoff-crumb",
+              "label": "Lotus Biscoff Biscuit Crumb",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "crushed-oreos",
+              "label": "Crushed Oreo Cookie Crumb",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "rainbow-sprinkles",
+              "label": "Funfetti Rainbow Sprinkles",
+              "priceModifier": 0.5
+            }
+          ]
+        },
+        {
+          "id": "waffle-crispness",
+          "type": "single-select",
+          "label": "Waffle Crispness Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-crisp",
+              "label": "Classic Golden Crisp (Balanced crisp exterior & fluffy interior)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-crisp",
+              "label": "Extra Crispy (Darker bake for maximum crunch)",
+              "priceModifier": 0
+            },
+            {
+              "value": "tender-soft",
+              "label": "Soft & Tender (Lighter golden bake)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crepes",
+      "name": "Crêpes",
+      "sortOrder": 2,
+      "description": "Paper-thin French sweet crêpes and traditional savory galettes spun to order on circular cast-iron billig griddles. This section offers customers an authentic European crêperie experience with customizable warm spreads, fresh berries, fruit compotes, and artisan savory fillings for guests seeking savory balance.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥞",
+      "subSections": [
+        {
+          "id": "sweet-crepes",
+          "name": "Sweet Crêpes",
+          "sortOrder": 1,
+          "description": "Delicately folded thin sweet crêpes filled with rich chocolate spreads, seasonal berries, sweet creams, and finished with warm drizzles."
+        },
+        {
+          "id": "savory-crepes",
+          "name": "Savory Crêpes",
+          "sortOrder": 2,
+          "description": "Savory folded crêpes and buckwheat galettes filled with artisanal cheeses, cured meats, sautéed mushrooms, and fresh herbs to satisfy savory palates."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "crepe-filling-selection",
+          "type": "multi-select",
+          "label": "Crêpe Fillings",
+          "isRequired": true,
+          "minSelections": 1,
+          "maxSelections": 4,
+          "choices": [
+            {
+              "value": "nutella",
+              "label": "Nutella Hazelnut Spread",
+              "priceModifier": 0
+            },
+            {
+              "value": "belgian-milk-chocolate",
+              "label": "Warm Belgian Milk Chocolate",
+              "priceModifier": 0
+            },
+            {
+              "value": "belgian-white-chocolate",
+              "label": "Warm Belgian White Chocolate",
+              "priceModifier": 0
+            },
+            {
+              "value": "lotus-biscoff",
+              "label": "Lotus Biscoff Spread",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "fresh-strawberries",
+              "label": "Fresh Sliced Strawberries",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "banana-slices",
+              "label": "Fresh Banana Slices",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "sweet-ricotta-cream",
+              "label": "Sweetened Lemon-Zest Ricotta",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "lemon-cane-sugar",
+              "label": "Fresh Lemon Juice & Golden Cane Sugar",
+              "priceModifier": 0
+            },
+            {
+              "value": "gruyere-cheese",
+              "label": "Melted Gruyère / Emmental Cheese (Savory)",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "smoked-turkey-ham",
+              "label": "Sliced Smoked Turkey Ham (Savory)",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "sauteed-mushrooms",
+              "label": "Herbed Garlic Mushrooms (Savory)",
+              "priceModifier": 1.25
+            }
+          ]
+        },
+        {
+          "id": "crepe-sauce-drizzle",
+          "type": "single-select",
+          "label": "Finishing Sauce Drizzle",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Finishing Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "dark-chocolate-drizzle",
+              "label": "Belgian 70% Dark Chocolate Drizzle",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "milk-chocolate-drizzle",
+              "label": "Belgian Milk Chocolate Drizzle",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "white-chocolate-drizzle",
+              "label": "Warm White Chocolate Drizzle",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "salted-caramel-drizzle",
+              "label": "Salted Butter Caramel Drizzle",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "strawberry-coulis-drizzle",
+              "label": "Strawberry Coulis Drizzle",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "pure-maple-drizzle",
+              "label": "Pure Canadian Maple Syrup Drizzle",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "crepe-presentation",
+          "type": "single-select",
+          "label": "Presentation & Fold Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "classic-triangle",
+              "label": "Classic French Triangle Fold",
+              "priceModifier": 0
+            },
+            {
+              "value": "rolled-flute",
+              "label": "Rolled Flute Style",
+              "priceModifier": 0
+            },
+            {
+              "value": "open-face-platter",
+              "label": "Open-Face Platter (Showcasing all toppings)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "crepe-side-pairing",
+          "type": "single-select",
+          "label": "Side Pairing",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Side Pairing",
+              "priceModifier": 0
+            },
+            {
+              "value": "vanilla-ice-cream",
+              "label": "Scoop of Vanilla Bean Ice Cream",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "chantilly-cream",
+              "label": "Dollop of Fresh Chantilly Cream",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "fresh-side-berries",
+              "label": "Side Cup of Fresh Mixed Berries",
+              "priceModifier": 1.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "churros",
+      "name": "Churros",
+      "sortOrder": 3,
+      "description": "Handcrafted Spanish choux-pastry dough extruded and deep-fried fresh to order until crisp and golden. Essential for casual grazing and table sharing, this section offers elongated classic flutes, filled churros, and bite-sized churro nuggets served with warm dipping pots of melted Belgian chocolate, dulce de leche, and artisan sauces.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥨",
+      "subSections": [
+        {
+          "id": "classic-churros",
+          "name": "Classic Churros",
+          "sortOrder": 1,
+          "description": "Traditional elongated ridged Spanish churros, deeply crunchy outside and soft inside, dusted in cinnamon sugar or confectioner's sugar."
+        },
+        {
+          "id": "filled-churros",
+          "name": "Filled Churros",
+          "sortOrder": 2,
+          "description": "Large hollow-center churros generously injected with warm dulce de leche, chocolate ganache, Bavarian custard, or Nutella."
+        },
+        {
+          "id": "churro-bites",
+          "name": "Churro Bites",
+          "sortOrder": 3,
+          "description": "Poppable bite-sized churro nuggets served in sharing cups, cones, or buckets, perfect for effortless dipping and snacking."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "churros-quantity",
+          "type": "single-select",
+          "label": "Portion Size & Quantity",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-4-pc",
+              "label": "Regular Portion (4 Long Churros or 8 Bites)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sharing-8-pc",
+              "label": "Sharing Basket (8 Long Churros or 16 Bites)",
+              "priceModifier": 4.5
+            },
+            {
+              "value": "party-box-16-pc",
+              "label": "Party Box (16 Long Churros or 32 Bites)",
+              "priceModifier": 10.0
+            }
+          ]
+        },
+        {
+          "id": "churros-dipping-sauce",
+          "type": "single-select",
+          "label": "Dipping Sauce Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "chocolate-dip",
+              "label": "Warm Belgian Milk Chocolate",
+              "priceModifier": 0
+            },
+            {
+              "value": "dark-chocolate-dip",
+              "label": "Belgian 70% Dark Chocolate",
+              "priceModifier": 0
+            },
+            {
+              "value": "dulce-de-leche-dip",
+              "label": "Argentinian Dulce de Leche",
+              "priceModifier": 0
+            },
+            {
+              "value": "caramel-dip",
+              "label": "Salted Butter Caramel",
+              "priceModifier": 0
+            },
+            {
+              "value": "strawberry-dip",
+              "label": "Warm Strawberry Coulis",
+              "priceModifier": 0
+            },
+            {
+              "value": "biscoff-dip",
+              "label": "Melted Lotus Biscoff Dip",
+              "priceModifier": 0.5
+            }
+          ]
+        },
+        {
+          "id": "churros-dusting",
+          "type": "single-select",
+          "label": "Sugar Dusting Preference",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "cinnamon-sugar",
+              "label": "Spiced Cinnamon & Golden Cane Sugar",
+              "priceModifier": 0
+            },
+            {
+              "value": "powdered-sugar",
+              "label": "Fine Powdered Confectioner's Sugar",
+              "priceModifier": 0
+            },
+            {
+              "value": "plain-no-sugar",
+              "label": "Plain (No Sugar Dusting)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "churros-extra-dipping-sauce",
+          "type": "multi-select",
+          "label": "Add Extra Dipping Sauce Pots",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "extra-milk-chocolate",
+              "label": "Extra Milk Chocolate Dip Pot",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "extra-dark-chocolate",
+              "label": "Extra 70% Dark Chocolate Dip Pot",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "extra-dulce-de-leche",
+              "label": "Extra Dulce de Leche Dip Pot",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "extra-salted-caramel",
+              "label": "Extra Salted Caramel Dip Pot",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "extra-strawberry-puree",
+              "label": "Extra Strawberry Dip Pot",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "extra-lotus-biscoff",
+              "label": "Extra Lotus Biscoff Dip Pot",
+              "priceModifier": 1.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pancakes-and-french-toast",
+      "name": "Pancakes & French Toast",
+      "sortOrder": 4,
+      "description": "Indulgent griddle favorites including towering buttermilk pancake stacks, viral jiggly Japanese soufflé pancakes, and golden brioche French toast. Designed for decadent brunch and dessert cravings, this section offers layered textures, rich syrups, whipped compound butters, and fresh fruit garnishes.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥞",
+      "subSections": [
+        {
+          "id": "stack-pancakes",
+          "name": "Stack Pancakes",
+          "sortOrder": 1,
+          "description": "Multi-tier American-style buttermilk pancake stacks layered with butter, warm chocolate ganache, maple syrup, and sweet garnishes."
+        },
+        {
+          "id": "japanese-souffle-pancakes",
+          "name": "Japanese Soufflé Pancakes",
+          "sortOrder": 2,
+          "description": "Ultra-airy, delicate meringue-whipped soufflé pancakes slow-cooked on griddles for an iconic jiggly, cloud-like melt-in-the-mouth texture."
+        },
+        {
+          "id": "french-toast",
+          "name": "French Toast",
+          "sortOrder": 3,
+          "description": "Thick-cut artisanal brioche or challah loaf soaked in vanilla-cinnamon egg custard, pan-caramelized in butter, and lavishly garnished."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "pancake-portion-size",
+          "type": "single-select",
+          "label": "Stack Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-stack-2",
+              "label": "Double Stack (2 Pancakes / 2 Thick Brioche Slices)",
+              "priceModifier": 0
+            },
+            {
+              "value": "classic-stack-3",
+              "label": "Triple Stack (3 Pancakes / 3 Thick Brioche Slices)",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "sharing-tower-5",
+              "label": "Sharing Tower Stack (5 Pieces)",
+              "priceModifier": 6.5
+            }
+          ]
+        },
+        {
+          "id": "pancake-toppings-multi",
+          "type": "multi-select",
+          "label": "Topping Selection",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            {
+              "value": "fresh-berries",
+              "label": "Fresh Strawberries & Blueberries",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "caramelized-bananas",
+              "label": "Pan-Caramelized Banana Slices",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "whipped-honey-butter",
+              "label": "Whipped Salted Honey Butter",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "mascarpone-cream",
+              "label": "Vanilla Bean Mascarpone Cream",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "toasted-pecans",
+              "label": "Toasted Candied Pecan Halves",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "biscoff-crumb",
+              "label": "Lotus Biscoff Crumb & Sauce",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "chocolate-chips",
+              "label": "Melted Milk Chocolate Drops",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "crushed-oreos",
+              "label": "Crushed Oreo Cookie Topping",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "pancake-syrup-drizzle",
+          "type": "single-select",
+          "label": "Syrup & Sauce Drizzle",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "pure-maple",
+              "label": "100% Pure Canadian Maple Syrup",
+              "priceModifier": 0
+            },
+            {
+              "value": "warm-chocolate",
+              "label": "Warm Belgian Milk Chocolate Ganache",
+              "priceModifier": 0
+            },
+            {
+              "value": "salted-caramel",
+              "label": "Warm Salted Butter Caramel",
+              "priceModifier": 0
+            },
+            {
+              "value": "wild-berry-sauce",
+              "label": "Wild Berry Reduction Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "honey-blossom",
+              "label": "Organic Blossom Honey",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "pancake-ice-cream-addon",
+          "type": "single-select",
+          "label": "Ice Cream Scoop Add-On",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Ice Cream",
+              "priceModifier": 0
+            },
+            {
+              "value": "vanilla-scoop",
+              "label": "Madagascar Vanilla Bean Gelato",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "honeycomb-scoop",
+              "label": "Honeycomb Crunch Gelato",
+              "priceModifier": 2.25
+            },
+            {
+              "value": "strawberry-scoop",
+              "label": "Wild Strawberry Gelato",
+              "priceModifier": 2.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chocolate-fondue-and-sharing",
+      "name": "Chocolate Fondue & Sharing",
+      "sortOrder": 5,
+      "description": "Interactive tabletop chocolate fondue service and loaded dipping platters designed for dates, couples, and groups. Featuring tea-light heated ceramic fondue pots filled with liquid Belgian chocolate, accompanied by bamboo skewers and tiered platters of fresh fruit, warm pastries, marshmallows, and confections.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🫕",
+      "subSections": [
+        {
+          "id": "chocolate-fondue-sets",
+          "name": "Chocolate Fondue Sets",
+          "sortOrder": 1,
+          "description": "Tabletop heated ceramic pots filled with molten Belgian chocolate, served with skewers and curated dipping treats for 2 or more guests."
+        },
+        {
+          "id": "fruit-and-dipping-platters",
+          "name": "Fruit & Dipping Platters",
+          "sortOrder": 2,
+          "description": "Generous tiered sharing boards loaded with seasonal orchard berries, pastry bites, brownie cubes, and sweet dippers."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "fondue-chocolate-type",
+          "type": "single-select",
+          "label": "Chocolate Fondue Base",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "milk-chocolate",
+              "label": "Belgian Milk Chocolate (Smooth, creamy & sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "dark-chocolate-70",
+              "label": "Belgian 70% Dark Chocolate (Rich, bittersweet & intense)",
+              "priceModifier": 0
+            },
+            {
+              "value": "white-chocolate",
+              "label": "Creamy Belgian White Chocolate (Sweet vanilla cocoa butter)",
+              "priceModifier": 0
+            },
+            {
+              "value": "marble-swirl",
+              "label": "Marble Swirl (Half milk chocolate, half white chocolate)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "salted-caramel-chocolate",
+              "label": "Belgian Salted Caramel Chocolate",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "ruby-chocolate",
+              "label": "Ruby Chocolate (Naturally pink with berry acidity)",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "fondue-sharing-size",
+          "type": "single-select",
+          "label": "Fondue Set Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "duo-for-2",
+              "label": "Duo Set for 2 Guests (1 Chocolate Pot + Standard Dipper Platter)",
+              "priceModifier": 0
+            },
+            {
+              "value": "group-for-4",
+              "label": "Grande Set for 3 to 4 Guests (2 Chocolate Pots + Large Dipper Platter)",
+              "priceModifier": 12.0
+            },
+            {
+              "value": "party-for-6",
+              "label": "Royale Banquet for 5 to 6 Guests (3 Chocolate Pots + Deluxe Multi-Tier Platter)",
+              "priceModifier": 22.0
+            }
+          ]
+        },
+        {
+          "id": "fondue-dipper-addons",
+          "type": "multi-select",
+          "label": "Dipper Add-Ons",
+          "isRequired": false,
+          "maxSelections": 6,
+          "choices": [
+            {
+              "value": "extra-strawberries",
+              "label": "Extra Fresh Strawberries Portion",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "fresh-banana-pineapple",
+              "label": "Fresh Banana & Pineapple Chunks",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "fluffy-marshmallows",
+              "label": "Jumbo Fluffy Marshmallows",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "mini-waffle-bites",
+              "label": "Warm Mini Belgian Waffle Bites",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "churro-nuggets",
+              "label": "Warm Cinnamon Churro Nugget Bites",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "fudge-brownie-cubes",
+              "label": "Double Chocolate Fudgy Brownie Cubes",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "salted-pretzel-crisps",
+              "label": "Sea Salt Pretzel Crisps",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "macaron-halves",
+              "label": "Assorted French Macaron Halves",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "rice-krispie-treats",
+              "label": "Crispy Marshmallow Rice Bites",
+              "priceModifier": 2.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cakes-and-pastries",
+      "name": "Cakes & Pastries",
+      "sortOrder": 6,
+      "description": "Refrigerated showcase bakes, individual fine patisserie, and rich cake slices. This section caters to guests seeking European entremets, towering multi-layered celebration cakes, basque cheesecakes, and signature desserts for sit-down dining or takeaway indulgence.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍰",
+      "subSections": [
+        {
+          "id": "individual-pastries",
+          "name": "Individual Pastries",
+          "sortOrder": 1,
+          "description": "Artisanal single-portion patisserie pieces including glazed fruit tarts, chocolate eclairs, Paris-Brest choux, and French macarons."
+        },
+        {
+          "id": "cake-slices",
+          "name": "Cake Slices",
+          "sortOrder": 2,
+          "description": "Generous cut slices of Basque burnt cheesecake, multi-layer chocolate fudge cake, red velvet, honey mille-crêpe, and tiramisu."
+        },
+        {
+          "id": "specialty-desserts",
+          "name": "Specialty Desserts",
+          "sortOrder": 3,
+          "description": "Signature house creations, deconstructed dessert jars, crisp layered mille-feuille, pavlovas, and seasonal confection cups."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "pastry-serving-temp",
+          "type": "single-select",
+          "label": "Serving Temperature",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "chilled",
+              "label": "Chilled (Fresh from display cooler)",
+              "priceModifier": 0
+            },
+            {
+              "value": "room-temperature",
+              "label": "Room Temperature (Allowed to rest for optimal aromatic flavor)",
+              "priceModifier": 0
+            },
+            {
+              "value": "lightly-warmed",
+              "label": "Gently Warmed (For chocolate fudge and sponge slices)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "pastry-accompaniment",
+          "type": "single-select",
+          "label": "Accompaniment Add-On",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Accompaniment (Pastry alone)",
+              "priceModifier": 0
+            },
+            {
+              "value": "vanilla-ice-cream-scoop",
+              "label": "Scoop of Vanilla Bean Gelato",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "chantilly-cream-dollop",
+              "label": "Dollop of Fresh Chantilly Cream",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "warm-custard-pitcher",
+              "label": "Side Pitcher of Warm Pouring Vanilla Custard",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "chocolate-ganache-pitcher",
+              "label": "Side Pitcher of Warm Belgian Dark Chocolate",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "pastry-packaging",
+          "type": "single-select",
+          "label": "Packaging & Dining Preference",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "dine-in-plate",
+              "label": "Dine-In Tableware Service",
+              "priceModifier": 0
+            },
+            {
+              "value": "takeaway-pastry-box",
+              "label": "Takeaway Pastry Gift Box with Carrier",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ice-cream-and-frozen",
+      "name": "Ice Cream & Frozen",
+      "sortOrder": 7,
+      "description": "Small-batch artisanal gelato, gourmet dairy ice creams, vegan fruit sorbets, and nostalgic sundae creations. Functioning both as standalone frozen treats and as decadent sides for hot waffles and brownies, this section supports scoop counting, flavor selections, cones, cups, and espresso affogatos.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍨",
+      "subSections": [
+        {
+          "id": "scoops-and-cups",
+          "name": "Scoops & Cups",
+          "sortOrder": 1,
+          "description": "Pure artisanal gelato and dairy-free fruit sorbets scooped to order in cups or crisp handcrafted waffle cones."
+        },
+        {
+          "id": "sundaes",
+          "name": "Sundaes",
+          "sortOrder": 2,
+          "description": "Elaborate multi-scoop sundae glasses layered with hot fudge, salted caramel, fruit compotes, crushed nuts, whipped cream, and wafer biscuits."
+        },
+        {
+          "id": "affogato",
+          "name": "Affogato",
+          "sortOrder": 3,
+          "description": "Classic Italian dessert pairing a dense scoop of cold gelato drowned with a freshly pulled shot of hot espresso, matcha, or liquid chocolate."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "frozen-scoop-count",
+          "type": "single-select",
+          "label": "Scoop Portion",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-scoop",
+              "label": "Single Scoop (1 Flavor)",
+              "priceModifier": 0
+            },
+            {
+              "value": "double-scoop",
+              "label": "Double Scoop (Up to 2 Flavors)",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "triple-scoop",
+              "label": "Triple Scoop (Up to 3 Flavors)",
+              "priceModifier": 4.5
+            },
+            {
+              "value": "takeaway-pint-tub",
+              "label": "Take-Home Pint Tub (Up to 3 Flavors)",
+              "priceModifier": 7.0
+            }
+          ]
+        },
+        {
+          "id": "frozen-flavor-selection",
+          "type": "multi-select",
+          "label": "Flavor Selection",
+          "isRequired": true,
+          "minSelections": 1,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "madagascar-vanilla",
+              "label": "Madagascar Vanilla Bean",
+              "priceModifier": 0
+            },
+            {
+              "value": "belgian-dark-chocolate",
+              "label": "Belgian 70% Dark Chocolate",
+              "priceModifier": 0
+            },
+            {
+              "value": "salted-caramel-swirl",
+              "label": "Salted Butter Caramel Swirl",
+              "priceModifier": 0
+            },
+            {
+              "value": "wild-strawberry",
+              "label": "Strawberries & Cream",
+              "priceModifier": 0
+            },
+            {
+              "value": "sicilian-pistachio",
+              "label": "Sicilian Bronte Pistachio",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "cookies-and-cream",
+              "label": "Cookies & Cream Crumb",
+              "priceModifier": 0
+            },
+            {
+              "value": "mint-chocolate-chip",
+              "label": "Fresh Mint & Dark Chocolate Flakes",
+              "priceModifier": 0
+            },
+            {
+              "value": "honeycomb-crunch",
+              "label": "Golden Honeycomb Crunch",
+              "priceModifier": 0
+            },
+            {
+              "value": "alphonso-mango-sorbet",
+              "label": "Alphonso Mango Sorbet (Vegan & Dairy-Free)",
+              "priceModifier": 0
+            },
+            {
+              "value": "raspberry-sorbet",
+              "label": "Wild Raspberry Sorbet (Vegan & Dairy-Free)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "frozen-serving-vessel",
+          "type": "single-select",
+          "label": "Serving Vessel",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "cup-and-spoon",
+              "label": "Eco Cup & Dessert Spoon",
+              "priceModifier": 0
+            },
+            {
+              "value": "crisp-waffle-cone",
+              "label": "Crisp Waffle Cone",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "chocolate-dipped-cone",
+              "label": "Belgian Chocolate Dipped Waffle Cone",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "sprinkle-chocolate-cone",
+              "label": "Chocolate Dipped Cone with Rainbow Sprinkles",
+              "priceModifier": 1.25
+            }
+          ]
+        },
+        {
+          "id": "sundae-sauces-and-toppings",
+          "type": "multi-select",
+          "label": "Topping & Drizzle Finishes",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "warm-fudge-sauce",
+              "label": "Warm Belgian Hot Fudge Sauce",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "salted-caramel-sauce",
+              "label": "Artisan Salted Butter Caramel",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "strawberry-sauce",
+              "label": "Fresh Strawberry Puree Coulis",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "chantilly-cream",
+              "label": "Fresh Chantilly Whipped Cream",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "toasted-hazelnuts",
+              "label": "Toasted Chopped Hazelnuts",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "rainbow-sprinkles",
+              "label": "Rainbow Candy Sprinkles",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "maraschino-cherry",
+              "label": "Traditional Glace Maraschino Cherry",
+              "priceModifier": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hot-desserts",
+      "name": "Hot Desserts",
+      "sortOrder": 8,
+      "description": "Oven-baked and steamed comforting desserts served piping hot straight from the kitchen. Featuring molten lava cakes with liquid flowing centers, traditional steamed puddings soaked in butterscotch, warm skillet bakes, and bubbling fruit pies paired with cold vanilla ice cream or warm pouring custard.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥧",
+      "subSections": [
+        {
+          "id": "lava-cakes",
+          "name": "Lava Cakes",
+          "sortOrder": 1,
+          "description": "Individual molten center chocolate and caramel cakes that break open to reveal a luscious flowing molten heart."
+        },
+        {
+          "id": "puddings-and-souffles",
+          "name": "Puddings & Soufflés",
+          "sortOrder": 2,
+          "description": "Warm sticky date and toffee puddings, brioche bread and butter puddings, and freshly risen airy sweet soufflés."
+        },
+        {
+          "id": "warm-pies",
+          "name": "Warm Pies",
+          "sortOrder": 3,
+          "description": "Skillet fruit crumbles, deep-dish spiced cinnamon apple pies, bourbon pecan tarts, and bubbling berry cobblers."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "hot-dessert-accompaniment",
+          "type": "single-select",
+          "label": "Hot Dessert Accompaniment",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "vanilla-ice-cream",
+              "label": "Madagascar Vanilla Bean Gelato (Hot & Cold Contrast)",
+              "priceModifier": 0
+            },
+            {
+              "value": "warm-custard",
+              "label": "Pitcher of Warm Pouring Vanilla Custard",
+              "priceModifier": 0
+            },
+            {
+              "value": "cold-double-cream",
+              "label": "Pouring Cold Heavy Double Cream",
+              "priceModifier": 0
+            },
+            {
+              "value": "chantilly-cream",
+              "label": "Fresh Chantilly Whipped Cream",
+              "priceModifier": 0
+            },
+            {
+              "value": "salted-caramel-gelato",
+              "label": "Salted Butter Caramel Gelato Scoop",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "no-accompaniment",
+              "label": "No Accompaniment (Dessert only)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "hot-dessert-sauce-drizzle",
+          "type": "single-select",
+          "label": "Warm Sauce Drizzle",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Extra Drizzle",
+              "priceModifier": 0
+            },
+            {
+              "value": "warm-butterscotch",
+              "label": "Warm Sticky Butterscotch Sauce",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "dark-chocolate-fudge",
+              "label": "Warm 70% Dark Chocolate Fudge",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "salted-caramel",
+              "label": "Warm Salted Caramel Drizzle",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "spiced-berry-coulis",
+              "label": "Spiced Berry Compote Drizzle",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "hot-dessert-bake-style",
+          "type": "single-select",
+          "label": "Bake Notice",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "fresh-baked-hot",
+              "label": "Freshly Baked to Order (Served piping hot, approx. 10-12 min bake time)",
+              "priceModifier": 0
+            },
+            {
+              "value": "gently-warmed",
+              "label": "Gently Warmed (Quicker service)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beverages",
+      "name": "Beverages",
+      "sortOrder": 9,
+      "description": "Specialty dessert drinks, thick European hot chocolates, loaded gourmet milkshakes, espresso beverages, and refreshing cold drinks. Crafted both to serve as independent sweet indulgences (like freakshakes and thick drinking chocolate) and as balancing counterparts (like double espresso and cleansing herbal teas) to sweet dishes.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥤",
+      "subSections": [
+        {
+          "id": "hot-chocolate-and-specialty-drinks",
+          "name": "Hot Chocolate & Specialty Drinks",
+          "sortOrder": 1,
+          "description": "Thick European-style drinking chocolate melted with cream, gourmet flavored cocoas, matcha lattes, and spiced chai."
+        },
+        {
+          "id": "milkshakes-and-blended",
+          "name": "Milkshakes & Blended",
+          "sortOrder": 2,
+          "description": "Thick gelato milkshakes, over-the-top loaded freakshakes crowned with waffles and brownies, blended frappes, and fruit smoothies."
+        },
+        {
+          "id": "coffee-and-tea",
+          "name": "Coffee & Tea",
+          "sortOrder": 3,
+          "description": "Espresso-based barista coffees, flat whites, iced cold brews, and loose-leaf black, herbal, and green teas to cleanse the palate."
+        },
+        {
+          "id": "cold-drinks",
+          "name": "Cold Drinks",
+          "sortOrder": 4,
+          "description": "House-crafted sparkling fruit lemonades, iced tea coolers, Italian cream sodas, artisan sodas, and sparkling mineral water."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "drink-size",
+          "type": "single-select",
+          "label": "Beverage Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-12oz",
+              "label": "Regular (12 oz / Standard Glass)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-16oz",
+              "label": "Large (16 oz / Tall Glass)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "freakshake-jumbo-24oz",
+              "label": "Jumbo Freakshake Mug (24 oz Loaded Format)",
+              "priceModifier": 3.5
+            }
+          ]
+        },
+        {
+          "id": "drink-milk-alternative",
+          "type": "single-select",
+          "label": "Milk Option",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-milk",
+              "label": "Whole Dairy Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "skim-milk",
+              "label": "Skim Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Oat Milk (Barista Edition)",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "soy-milk",
+              "label": "Soy Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "coconut-milk",
+              "label": "Coconut Milk",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "drink-sweetness-level",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "sweet-100",
+              "label": "Regular Sweetness (100%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet-70",
+              "label": "Less Sweet (70%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet-50",
+              "label": "Half Sweet (50%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet-0",
+              "label": "Unsweetened / No Added Sugar (0%)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "drink-custom-addons",
+          "type": "multi-select",
+          "label": "Drink Add-Ons & Finishes",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "whipped-cream-top",
+              "label": "Whipped Cream Mountain",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "toasted-marshmallow-skewer",
+              "label": "Toasted Marshmallow Skewer",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "extra-espresso-shot",
+              "label": "Extra Double Espresso Shot",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "vanilla-syrup-pump",
+              "label": "Madagascar Vanilla Syrup Pump",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "caramel-syrup-pump",
+              "label": "Salted Caramel Syrup Pump",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "hazelnut-syrup-pump",
+              "label": "Roasted Hazelnut Syrup Pump",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "chocolate-rim-and-curls",
+              "label": "Melted Chocolate Glass Rim & Flakes",
+              "priceModifier": 0.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "party-and-sharing-sets",
+      "name": "Party & Sharing Sets",
+      "sortOrder": 10,
+      "description": "High-impact large-format dessert boards, grand group fondue setups, and celebration party packages for groups, birthdays, and catered events. Designed to simplify multi-guest ordering and banquet preparations with predetermined guest counts and scheduled pre-order lead times.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🎉",
+      "subSections": [
+        {
+          "id": "dessert-platters",
+          "name": "Dessert Platters",
+          "sortOrder": 1,
+          "description": "Abundant grazing platters featuring bite-sized waffles, churro nuggets, brownie squares, fresh fruit skewers, and dipping sauce pots."
+        },
+        {
+          "id": "group-fondues",
+          "name": "Group Fondues",
+          "sortOrder": 2,
+          "description": "Grand-scale multi-chocolate fondue warmers served with revolving carousel trays of dippers for large parties and celebratory tables."
+        },
+        {
+          "id": "party-pre-orders",
+          "name": "Party Pre-Orders",
+          "sortOrder": 3,
+          "description": "Custom party dessert boxes, towering celebration displays, and dessert feast boxes requiring advance booking and scheduled pickup or table reservation."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "party-guest-count",
+          "type": "single-select",
+          "label": "Guest Count & Set Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "small-group-4-6",
+              "label": "Small Group Platter (4 to 6 Guests)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-group-8-10",
+              "label": "Medium Party Set (8 to 10 Guests)",
+              "priceModifier": 25.0
+            },
+            {
+              "value": "large-group-12-15",
+              "label": "Large Celebration Banquet (12 to 15 Guests)",
+              "priceModifier": 50.0
+            },
+            {
+              "value": "mega-group-16-20",
+              "label": "Mega Feast Board (16 to 20 Guests)",
+              "priceModifier": 75.0
+            }
+          ]
+        },
+        {
+          "id": "party-chocolate-variety",
+          "type": "multi-select",
+          "label": "Included Fondue & Dip Sauces",
+          "isRequired": true,
+          "minSelections": 2,
+          "maxSelections": 4,
+          "choices": [
+            {
+              "value": "party-milk-chocolate",
+              "label": "Belgian Milk Chocolate Warm Pot",
+              "priceModifier": 0
+            },
+            {
+              "value": "party-dark-chocolate",
+              "label": "Belgian 70% Dark Chocolate Warm Pot",
+              "priceModifier": 0
+            },
+            {
+              "value": "party-white-chocolate",
+              "label": "Belgian White Chocolate Warm Pot",
+              "priceModifier": 0
+            },
+            {
+              "value": "party-salted-caramel",
+              "label": "Salted Butter Caramel Pot",
+              "priceModifier": 0
+            },
+            {
+              "value": "party-lotus-biscoff",
+              "label": "Lotus Biscoff Melted Spread Pot",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "party-strawberry-coulis",
+              "label": "Fresh Strawberry Coulis Pot",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "party-celebration-extras",
+          "type": "multi-select",
+          "label": "Celebration Extras",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "sparkler-candle",
+              "label": "Indoor Celebration Sparkler Candle",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "chocolate-inscription-plaque",
+              "label": "Personalized Piped Chocolate Message Plaque",
+              "priceModifier": 4.0
+            },
+            {
+              "value": "handwritten-greeting-card",
+              "label": "Handwritten Celebration Greeting Card",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "party-paperware-kit",
+              "label": "Party Tableware & Bamboo Skewer Kit",
+              "priceModifier": 3.0
+            }
+          ]
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Party platters and group fondue setups are prepared fresh to order. Large party pre-orders require 24-hour advance reservation."
+      }
+    },
+    {
+      "id": "seasonal-and-limited",
+      "name": "Seasonal & Limited",
+      "sortOrder": 11,
+      "description": "Rotating seasonal dessert specials, festive holiday creations, and limited-run harvest treats. Keeps the dessert menu dynamic and encourages repeat visits with offerings like summer berry waffle stacks, autumn spiced pumpkin bakes, winter campfire s'mores fondues, and festive holiday desserts.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "✨",
+      "subSections": [
+        {
+          "id": "seasonal-fruit-features",
+          "name": "Seasonal Fruit Features",
+          "sortOrder": 1,
+          "description": "Spring and summer specials highlighting fresh local harvests including wild strawberry waffle towers, mango crêpes, and peach melba sundaes."
+        },
+        {
+          "id": "autumn-winter-warmers",
+          "name": "Autumn & Winter Warmers",
+          "sortOrder": 2,
+          "description": "Cozy seasonal comfort desserts including pumpkin spiced soufflé pancakes, gingerbread lava cakes, hot spiced cider, and campfire s'mores fondues."
+        },
+        {
+          "id": "holiday-festivity-editions",
+          "name": "Holiday & Festivity Editions",
+          "sortOrder": 3,
+          "description": "Themed creations for Valentine's Day, Halloween, Christmas, and festive celebrations featuring themed colors, garnishes, and festive presentation."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "seasonal-spice-and-drizzle",
+          "type": "single-select",
+          "label": "Seasonal Garnish & Finish",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-recipe",
+              "label": "Standard Recipe Presentation",
+              "priceModifier": 0
+            },
+            {
+              "value": "pumpkin-spice-dust",
+              "label": "Warm Spiced Pumpkin Drizzle & Cinnamon",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "peppermint-bark-curls",
+              "label": "Crushed Candy Cane & Peppermint Bark Curls",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "edible-gold-flakes",
+              "label": "Edible 24k Gold Flakes (Holiday Special)",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "red-berry-glaze",
+              "label": "Festive Red Berry Sparkle Glaze",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "seasonal-presentation-format",
+          "type": "single-select",
+          "label": "Presentation Format",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "dine-in-presentation",
+              "label": "Dine-In Table Presentation",
+              "priceModifier": 0
+            },
+            {
+              "value": "festive-gift-box",
+              "label": "Seasonal Festive Gift Box (Ribbon & Card)",
+              "priceModifier": 2.5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "toppingBuilder",
+      "name": "Interactive Topping & Sauce Builder",
+      "description": "Powers interactive multi-tier customizers for waffles, crêpes, pancakes, churros, sundaes, and fondue sets with live pricing and visual topping combinations.",
+      "isEnabled": true,
+      "config": {
+        "allowMultiCategorySelection": true,
+        "maxTotalToppings": 8,
+        "categories": [
+          {
+            "id": "fruits",
+            "name": "Fresh Fruits",
+            "maxSelections": 3
+          },
+          {
+            "id": "sauces",
+            "name": "Warm Sauces & Drizzles",
+            "maxSelections": 3
+          },
+          {
+            "id": "ice-cream",
+            "name": "Gelato & Ice Cream Scoops",
+            "maxSelections": 2
+          },
+          {
+            "id": "whipped-cream",
+            "name": "Creams & Dairy",
+            "maxSelections": 1
+          },
+          {
+            "id": "crunch-and-nuts",
+            "name": "Nuts, Biscuits & Crunch",
+            "maxSelections": 3
+          }
+        ],
+        "applicableSectionIds": [
+          "waffles",
+          "crepes",
+          "churros",
+          "pancakes-and-french-toast",
+          "chocolate-fondue-and-sharing",
+          "ice-cream-and-frozen"
+        ]
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Tagging",
+      "description": "Displays clear visual allergen flags (dairy, gluten, nuts, peanuts, eggs, soy) and dietary lifestyle tags (vegetarian, vegan, gluten-free friendly, halal-friendly) across sweet items and drinks.",
+      "isEnabled": true,
+      "config": {
+        "displayBadges": true,
+        "filterEnabled": true,
+        "highlightAllergens": [
+          "contains-dairy",
+          "contains-gluten",
+          "contains-nuts",
+          "contains-peanuts",
+          "contains-eggs",
+          "contains-soy"
+        ],
+        "dietaryTags": [
+          "vegetarian",
+          "vegan",
+          "gluten-free-friendly",
+          "halal-friendly",
+          "nut-free-friendly"
+        ]
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Real-Time Inventory & Freshness Badges",
+      "description": "Displays real-time availability tags including 'Sold Out Today' for daily fresh pastries, 'Freshly Baked to Order' for waffles and lava cakes, and low-stock indicators.",
+      "isEnabled": true,
+      "config": {
+        "showLowStockWarning": true,
+        "lowStockThreshold": 3,
+        "autoBadgeSoldOut": true,
+        "showFreshlyBakedBadge": true,
+        "autoResetDaily": true
+      }
+    },
+    {
+      "id": "preOrder",
+      "name": "Advance Party & Platter Pre-Order",
+      "description": "Enables advance ordering, lead-time tracking, and scheduled pickup or table reservation dates for large dessert platters, group fondue kits, and celebration party orders.",
+      "isEnabled": true,
+      "config": {
+        "minLeadTimeHours": 24,
+        "maxAdvanceDays": 30,
+        "dailyCutoffTime": "18:00",
+        "allowScheduledPickup": true,
+        "allowTableReservationLink": true,
+        "applicableSectionIds": [
+          "party-and-sharing-sets"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

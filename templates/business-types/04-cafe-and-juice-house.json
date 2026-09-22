@@ -1,0 +1,875 @@
+{
+  "id": "cafe-and-juice-house",
+  "name": "Cafe & Juice House",
+  "slug": "cafe-and-juice-house",
+  "icon": "☕🧃",
+  "description": "Dual-concept venue pairing artisanal specialty espresso and tea craft with cold-pressed juices, functional smoothies, wellness shots, and vibrant superfood bowls. Tailored for health-conscious and active lifestyles desiring premium coffee alongside plant-based nutrition.",
+  "category": "hybrid",
+  "tags": [
+    "cafe",
+    "juice",
+    "smoothie",
+    "health",
+    "coffee",
+    "wellness",
+    "acai"
+  ],
+  "sections": [
+    {
+      "id": "espresso-and-coffee",
+      "name": "Espresso & Coffee",
+      "sortOrder": 1,
+      "description": "Features traditional hot espresso beverages, house drip, and handcrafted pour-overs. This section serves as the foundational morning anchor for specialty coffee drinkers seeking classic espresso drinks, milk-steamed coffees, and single-origin filter roasts.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "☕",
+      "subSections": [
+        {
+          "id": "espresso-based-drinks",
+          "name": "Espresso-Based Drinks",
+          "sortOrder": 1,
+          "description": "Handcrafted single and double shot espresso, cortado, macchiato, flat white, cappuccino, latte, and americano."
+        },
+        {
+          "id": "brewed-and-filter-coffee",
+          "name": "Brewed & Filter Coffee",
+          "sortOrder": 2,
+          "description": "Fresh batch-brewed drip coffee, single-origin V60 and Chemex pour-overs, and French press brews."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "coffee-size",
+          "type": "single-select",
+          "label": "Cup Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "small", "label": "Small (8 oz)", "priceModifier": 0 },
+            { "value": "medium", "label": "Medium (12 oz)", "priceModifier": 0.75 },
+            { "value": "large", "label": "Large (16 oz)", "priceModifier": 1.50 }
+          ]
+        },
+        {
+          "id": "coffee-milk-alternative",
+          "type": "single-select",
+          "label": "Milk Choice",
+          "isRequired": false,
+          "choices": [
+            { "value": "whole-milk", "label": "Whole Milk", "priceModifier": 0 },
+            { "value": "skim-milk", "label": "Skim Milk", "priceModifier": 0 },
+            { "value": "oat-milk", "label": "Oat Milk", "priceModifier": 0.85 },
+            { "value": "almond-milk", "label": "Almond Milk", "priceModifier": 0.85 },
+            { "value": "soy-milk", "label": "Soy Milk", "priceModifier": 0.75 },
+            { "value": "coconut-milk", "label": "Coconut Milk", "priceModifier": 0.85 }
+          ]
+        },
+        {
+          "id": "coffee-extra-shot",
+          "type": "single-select",
+          "label": "Espresso Shots",
+          "isRequired": false,
+          "choices": [
+            { "value": "standard", "label": "Standard Shots", "priceModifier": 0 },
+            { "value": "extra-shot", "label": "Add 1 Extra Shot", "priceModifier": 1.00 },
+            { "value": "double-extra-shot", "label": "Add 2 Extra Shots", "priceModifier": 1.80 },
+            { "value": "decaf", "label": "Decaffeinated Espresso", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "coffee-temperature",
+          "type": "single-select",
+          "label": "Serving Temperature",
+          "isRequired": false,
+          "choices": [
+            { "value": "hot", "label": "Standard Hot", "priceModifier": 0 },
+            { "value": "extra-hot", "label": "Extra Hot", "priceModifier": 0 },
+            { "value": "warm", "label": "Warm / Kid's Temp", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tea-and-hot-specialties",
+      "name": "Tea & Hot Specialties",
+      "sortOrder": 2,
+      "description": "Encompasses premium loose-leaf whole leaf teas, ceremonial Japanese matcha, spiced chai blends, and calming caffeine-free herbal infusions. Caters to mindful drinkers, afternoon relaxation, and wellness enthusiasts seeking functional warm beverages.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🫖",
+      "subSections": [
+        {
+          "id": "classic-teas",
+          "name": "Classic Teas",
+          "sortOrder": 1,
+          "description": "Premium whole-leaf black teas, green teas, oolong, and white teas brewed at precise temperatures."
+        },
+        {
+          "id": "herbal-infusions",
+          "name": "Herbal Infusions",
+          "sortOrder": 2,
+          "description": "Naturally caffeine-free botanical infusions including chamomile, peppermint, lemongrass ginger, and hibiscus berry."
+        },
+        {
+          "id": "specialty-hot-drinks",
+          "name": "Specialty Hot Drinks",
+          "sortOrder": 3,
+          "description": "Steamed wellness drinks including ceremonial grade matcha latte, spiced masala chai, golden turmeric milk, and raw hot cacao."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "tea-size",
+          "type": "single-select",
+          "label": "Cup Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "regular", "label": "Regular (12 oz)", "priceModifier": 0 },
+            { "value": "large", "label": "Large (16 oz)", "priceModifier": 0.75 }
+          ]
+        },
+        {
+          "id": "tea-milk-alternative",
+          "type": "single-select",
+          "label": "Milk Choice (for lattes and chais)",
+          "isRequired": false,
+          "choices": [
+            { "value": "none", "label": "No Milk / Water Base", "priceModifier": 0 },
+            { "value": "whole-milk", "label": "Whole Milk", "priceModifier": 0 },
+            { "value": "oat-milk", "label": "Oat Milk", "priceModifier": 0.85 },
+            { "value": "almond-milk", "label": "Almond Milk", "priceModifier": 0.85 },
+            { "value": "soy-milk", "label": "Soy Milk", "priceModifier": 0.75 },
+            { "value": "coconut-milk", "label": "Coconut Milk", "priceModifier": 0.85 }
+          ]
+        },
+        {
+          "id": "tea-sweetener",
+          "type": "single-select",
+          "label": "Sweetener",
+          "isRequired": false,
+          "choices": [
+            { "value": "none", "label": "No Sweetener", "priceModifier": 0 },
+            { "value": "raw-honey", "label": "Raw Local Honey", "priceModifier": 0.50 },
+            { "value": "organic-agave", "label": "Organic Agave", "priceModifier": 0.50 },
+            { "value": "maple-syrup", "label": "Pure Maple Syrup", "priceModifier": 0.75 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fresh-juices",
+      "name": "Fresh Juices",
+      "sortOrder": 3,
+      "description": "Houses 100% pure cold-pressed and made-to-order fruit and vegetable juices without added water, sugars, or artificial additives. Represents the primary juice bar identity for customers seeking immediate hydration, vitamins, and raw plant vitality.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍊",
+      "subSections": [
+        {
+          "id": "single-fruit-juices",
+          "name": "Single Fruit Juices",
+          "sortOrder": 1,
+          "description": "Pure unblended freshly pressed juices such as sweet orange, crisp green apple, red grapefruit, and cold watermelon."
+        },
+        {
+          "id": "mixed-and-combination-juices",
+          "name": "Mixed & Combination Juices",
+          "sortOrder": 2,
+          "description": "Balanced signature blends combining complementary fruits and root vegetables like apple-beet-ginger and orange-carrot-turmeric."
+        },
+        {
+          "id": "vegetable-and-green-juices",
+          "name": "Vegetable & Green Juices",
+          "sortOrder": 3,
+          "description": "Nutrient-packed low-sugar green blends pressed with kale, celery, cucumber, spinach, parsley, and lemon."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "juice-size",
+          "type": "single-select",
+          "label": "Juice Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "small", "label": "Small (12 oz)", "priceModifier": 0 },
+            { "value": "medium", "label": "Medium (16 oz)", "priceModifier": 1.50 },
+            { "value": "large", "label": "Large (20 oz)", "priceModifier": 3.00 }
+          ]
+        },
+        {
+          "id": "juice-ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "no-ice", "label": "No Ice", "priceModifier": 0 },
+            { "value": "light-ice", "label": "Light Ice", "priceModifier": 0 },
+            { "value": "regular-ice", "label": "Regular Ice", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "juice-booster",
+          "type": "single-select",
+          "label": "Juice Boost",
+          "isRequired": false,
+          "choices": [
+            { "value": "none", "label": "No Added Boost", "priceModifier": 0 },
+            { "value": "fresh-ginger", "label": "Cold-Pressed Ginger Boost", "priceModifier": 1.00 },
+            { "value": "raw-turmeric", "label": "Cold-Pressed Turmeric Boost", "priceModifier": 1.00 },
+            { "value": "lemon-shot", "label": "Fresh Lemon Boost", "priceModifier": 0.75 },
+            { "value": "cayenne-pepper", "label": "Cayenne Pepper Dash", "priceModifier": 0.50 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "smoothies-and-blends",
+      "name": "Smoothies & Blends",
+      "sortOrder": 4,
+      "description": "Covers thick, fiber-rich blended beverages prepared to order with whole fruits, superfood greens, plant milks, and nutritional enhancers. Serves as complete liquid meals, post-workout recovery options, and guilt-free treats.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥤",
+      "subSections": [
+        {
+          "id": "fruit-smoothies",
+          "name": "Fruit Smoothies",
+          "sortOrder": 1,
+          "description": "Thick, creamy blends of whole frozen fruits, wild berries, ripe banana, mango, and coconut water or milk."
+        },
+        {
+          "id": "green-and-detox-smoothies",
+          "name": "Green & Detox Smoothies",
+          "sortOrder": 2,
+          "description": "Clean plant-rich blends combining leafy spinach, kale, avocado, green apple, cucumber, and mint."
+        },
+        {
+          "id": "protein-and-energy-smoothies",
+          "name": "Protein & Energy Smoothies",
+          "sortOrder": 3,
+          "description": "Power blends combining clean whey or vegan plant protein, nut butters, rolled oats, and energy-dense superfoods."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "smoothie-size",
+          "type": "single-select",
+          "label": "Smoothie Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "medium", "label": "Medium (16 oz)", "priceModifier": 0 },
+            { "value": "large", "label": "Large (24 oz)", "priceModifier": 2.00 }
+          ]
+        },
+        {
+          "id": "smoothie-base",
+          "type": "single-select",
+          "label": "Liquid Base",
+          "isRequired": false,
+          "choices": [
+            { "value": "almond-milk", "label": "Almond Milk", "priceModifier": 0 },
+            { "value": "oat-milk", "label": "Oat Milk", "priceModifier": 0.50 },
+            { "value": "coconut-water", "label": "Coconut Water", "priceModifier": 0.50 },
+            { "value": "fresh-apple-juice", "label": "Fresh Apple Juice", "priceModifier": 0.75 },
+            { "value": "whole-milk", "label": "Whole Milk", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "smoothie-boosters",
+          "type": "multi-select",
+          "label": "Add-On Boosters",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            { "value": "whey-protein", "label": "Organic Whey Protein (+20g)", "priceModifier": 2.00 },
+            { "value": "plant-protein", "label": "Organic Plant Protein (+20g)", "priceModifier": 2.00 },
+            { "value": "chia-seeds", "label": "Organic Chia Seeds", "priceModifier": 1.00 },
+            { "value": "collagen", "label": "Marine Collagen Peptides", "priceModifier": 2.25 },
+            { "value": "raw-honey", "label": "Raw Wildflower Honey", "priceModifier": 0.75 },
+            { "value": "spirulina", "label": "Organic Blue Spirulina", "priceModifier": 1.50 },
+            { "value": "creamy-peanut-butter", "label": "Peanut Butter Scoop", "priceModifier": 1.00 },
+            { "value": "almond-butter", "label": "Almond Butter Scoop", "priceModifier": 1.25 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health-and-wellness-shots",
+      "name": "Health & Wellness Shots",
+      "sortOrder": 5,
+      "description": "Provides concentrated, cold-pressed 2 oz elixirs formulated for immediate functional impact, immune defense, inflammation relief, and digestive stimulation. Designed for rapid on-the-counter consumption or as a boost alongside another drink.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧪",
+      "subSections": [],
+      "itemOptions": [
+        {
+          "id": "shot-format",
+          "type": "single-select",
+          "label": "Serving Format",
+          "isRequired": true,
+          "choices": [
+            { "value": "single-shot", "label": "Single Shot (2 oz)", "priceModifier": 0 },
+            { "value": "double-shot", "label": "Double Shot (4 oz)", "priceModifier": 2.50 },
+            { "value": "flight-of-three", "label": "Wellness Flight (3 x 2 oz)", "priceModifier": 5.00 }
+          ]
+        },
+        {
+          "id": "shot-chaser",
+          "type": "single-select",
+          "label": "Citrus Chaser",
+          "isRequired": false,
+          "choices": [
+            { "value": "none", "label": "No Chaser", "priceModifier": 0 },
+            { "value": "orange-slice", "label": "Fresh Orange Wedge", "priceModifier": 0 },
+            { "value": "pineapple-wedge", "label": "Fresh Pineapple Wedge", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cold-coffee-and-iced-drinks",
+      "name": "Cold Coffee & Iced Drinks",
+      "sortOrder": 6,
+      "description": "Dedicated to refreshing iced and cold-brewed coffee creations, chilled espresso beverages, ice-blended frappes, and chilled specialty matcha. Meets customer demand for afternoon refreshment and invigorating iced caffeine.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧊",
+      "subSections": [
+        {
+          "id": "iced-coffee-and-cold-brew",
+          "name": "Iced Coffee & Cold Brew",
+          "sortOrder": 1,
+          "description": "24-hour slow-steeped cold brew, nitrogen-infused draft cold brew, iced americano, and iced cafe latte."
+        },
+        {
+          "id": "blended-and-frappe",
+          "name": "Blended & Frappe",
+          "sortOrder": 2,
+          "description": "Thick, ice-blended coffee specialties, mocha frost, vanilla bean frappe, and caramel cloud blends."
+        },
+        {
+          "id": "iced-matcha-and-specialty",
+          "name": "Iced Matcha & Specialty",
+          "sortOrder": 3,
+          "description": "Layered iced ceremonial matcha latte, iced chai latte, espresso tonic, and dirty iced matcha."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "iced-drink-size",
+          "type": "single-select",
+          "label": "Cup Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "regular", "label": "Regular (16 oz)", "priceModifier": 0 },
+            { "value": "large", "label": "Large (24 oz)", "priceModifier": 1.00 }
+          ]
+        },
+        {
+          "id": "iced-drink-milk",
+          "type": "single-select",
+          "label": "Milk Choice",
+          "isRequired": false,
+          "choices": [
+            { "value": "whole-milk", "label": "Whole Milk", "priceModifier": 0 },
+            { "value": "skim-milk", "label": "Skim Milk", "priceModifier": 0 },
+            { "value": "oat-milk", "label": "Oat Milk", "priceModifier": 0.85 },
+            { "value": "almond-milk", "label": "Almond Milk", "priceModifier": 0.85 },
+            { "value": "soy-milk", "label": "Soy Milk", "priceModifier": 0.75 },
+            { "value": "coconut-milk", "label": "Coconut Milk", "priceModifier": 0.85 }
+          ]
+        },
+        {
+          "id": "iced-drink-ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "no-ice", "label": "No Ice", "priceModifier": 0 },
+            { "value": "less-ice", "label": "Less Ice", "priceModifier": 0 },
+            { "value": "regular-ice", "label": "Regular Ice", "priceModifier": 0 },
+            { "value": "extra-ice", "label": "Extra Ice", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "iced-drink-sweetness",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "unsweetened", "label": "Unsweetened (0%)", "priceModifier": 0 },
+            { "value": "less-sweet", "label": "Less Sweet (25%)", "priceModifier": 0 },
+            { "value": "half-sweet", "label": "Half Sweet (50%)", "priceModifier": 0 },
+            { "value": "regular-sweet", "label": "Regular Sweet (100%)", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fresh-lemonades-and-coolers",
+      "name": "Fresh Lemonades & Coolers",
+      "sortOrder": 7,
+      "description": "Features house-made citrus lemonades, artisan non-alcoholic craft mocktails, and botanical fruit-infused sparkling waters. Offers light, crisp, and non-caffeinated refreshment for all age groups.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍋",
+      "subSections": [
+        {
+          "id": "classic-and-fruit-lemonades",
+          "name": "Classic & Fruit Lemonades",
+          "sortOrder": 1,
+          "description": "Freshly squeezed Meyer lemonades infused with strawberries, lavender blossoms, blue spirulina, or activated charcoal."
+        },
+        {
+          "id": "mocktails-and-coolers",
+          "name": "Mocktails & Coolers",
+          "sortOrder": 2,
+          "description": "Handcrafted mocktails such as virgin mint mojitos, sparkling berry spritzers, and cucumber basil coolers."
+        },
+        {
+          "id": "infused-waters",
+          "name": "Infused Waters",
+          "sortOrder": 3,
+          "description": "Chilled still or sparkling waters steeped with citrus wheels, fresh garden herbs, and antioxidant berries."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cooler-size",
+          "type": "single-select",
+          "label": "Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "regular", "label": "Regular (16 oz)", "priceModifier": 0 },
+            { "value": "large", "label": "Large (24 oz)", "priceModifier": 1.00 }
+          ]
+        },
+        {
+          "id": "cooler-sweetness",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "unsweetened", "label": "Unsweetened (0%)", "priceModifier": 0 },
+            { "value": "lightly-sweetened", "label": "Lightly Sweetened (25%)", "priceModifier": 0 },
+            { "value": "half-sweet", "label": "Half Sweet (50%)", "priceModifier": 0 },
+            { "value": "regular-sweet", "label": "Regular Sweetness (100%)", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "cooler-ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "no-ice", "label": "No Ice", "priceModifier": 0 },
+            { "value": "less-ice", "label": "Less Ice", "priceModifier": 0 },
+            { "value": "regular-ice", "label": "Regular Ice", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "breakfast-and-energy-bowls",
+      "name": "Breakfast & Energy Bowls",
+      "sortOrder": 8,
+      "description": "Focuses on thick, nutrient-dense breakfast and meal bowls including wild-harvested Amazonian açaí, vibrant pitaya bowls, warm steel-cut oatmeal, and whipped Greek yogurt bowls. Essential for breakfast and lunch healthy dining.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥣",
+      "subSections": [
+        {
+          "id": "smoothie-and-acai-bowls",
+          "name": "Smoothie & Açaí Bowls",
+          "sortOrder": 1,
+          "description": "Thick frozen organic açaí, pink pitaya, and spirulina greens topped with sliced fruits and superfoods."
+        },
+        {
+          "id": "granola-and-oatmeal-bowls",
+          "name": "Granola & Oatmeal Bowls",
+          "sortOrder": 2,
+          "description": "Slow-cooked steel-cut oats, organic overnight chia pudding, and strained Greek yogurt paired with artisan house granola."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "bowl-size",
+          "type": "single-select",
+          "label": "Bowl Portion",
+          "isRequired": true,
+          "choices": [
+            { "value": "regular-bowl", "label": "Regular Bowl", "priceModifier": 0 },
+            { "value": "large-bowl", "label": "Large Bowl", "priceModifier": 2.50 }
+          ]
+        },
+        {
+          "id": "bowl-toppings",
+          "type": "multi-select",
+          "label": "Topping Add-Ons",
+          "isRequired": false,
+          "maxSelections": 6,
+          "choices": [
+            { "value": "artisan-granola", "label": "Gluten-Free Artisan Granola", "priceModifier": 1.00 },
+            { "value": "fresh-berries", "label": "Fresh Strawberries & Blueberries", "priceModifier": 1.50 },
+            { "value": "banana-slices", "label": "Fresh Banana Slices", "priceModifier": 0.75 },
+            { "value": "organic-chia", "label": "Organic Chia Seeds", "priceModifier": 0.75 },
+            { "value": "toasted-coconut", "label": "Toasted Coconut Flakes", "priceModifier": 0.75 },
+            { "value": "cacao-nibs", "label": "Raw Cacao Nibs", "priceModifier": 1.00 },
+            { "value": "raw-honey", "label": "Raw Local Honey Drizzle", "priceModifier": 0.75 },
+            { "value": "almond-butter", "label": "Almond Butter Drizzle", "priceModifier": 1.25 },
+            { "value": "peanut-butter", "label": "Peanut Butter Drizzle", "priceModifier": 1.00 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "light-bites-and-snacks",
+      "name": "Light Bites & Snacks",
+      "sortOrder": 9,
+      "description": "Comprises wholesome solid food options designed to accompany coffee and juice orders, from freshly smashed avocado sourdough toasts and wholesome wraps to raw energy bites, clean pastries, and vibrant grab-and-go salads.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥪",
+      "subSections": [
+        {
+          "id": "toasts-and-wraps",
+          "name": "Toasts & Wraps",
+          "sortOrder": 1,
+          "description": "Open-faced sourdough toasts (avocado smash, nut butter banana) and nutrient-packed whole wheat lunch wraps."
+        },
+        {
+          "id": "energy-bars-and-bites",
+          "name": "Energy Bars & Bites",
+          "sortOrder": 2,
+          "description": "No-bake raw energy protein balls, superfood seed bars, and gluten-free snack bites."
+        },
+        {
+          "id": "pastries",
+          "name": "Pastries",
+          "sortOrder": 3,
+          "description": "Baked daily treats including artisanal croissants, gluten-free banana walnut loaf, and vegan oat muffins."
+        },
+        {
+          "id": "fresh-salads",
+          "name": "Fresh Salads",
+          "sortOrder": 4,
+          "description": "Pre-tossed grab-and-go salads, grain bowls, and crisp leafy greens paired with cold-pressed house vinaigrettes."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "bread-choice",
+          "type": "single-select",
+          "label": "Bread / Wrap Choice",
+          "isRequired": false,
+          "choices": [
+            { "value": "artisan-sourdough", "label": "Artisan Sourdough", "priceModifier": 0 },
+            { "value": "multigrain-seeded", "label": "Multigrain Seeded", "priceModifier": 0 },
+            { "value": "gluten-free-bread", "label": "Gluten-Free Bread", "priceModifier": 1.00 },
+            { "value": "spinach-wrap", "label": "Spinach Tortilla Wrap", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "toast-preparation",
+          "type": "single-select",
+          "label": "Preparation Style",
+          "isRequired": false,
+          "choices": [
+            { "value": "toasted-warm", "label": "Toasted Warm", "priceModifier": 0 },
+            { "value": "fresh-untoasted", "label": "Fresh / Untoasted", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "dressing-side",
+          "type": "single-select",
+          "label": "Dressing Placement",
+          "isRequired": false,
+          "choices": [
+            { "value": "tossed-in", "label": "Tossed In Salad", "priceModifier": 0 },
+            { "value": "on-the-side", "label": "Dressing on the Side", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "detox-and-cleanse-packages",
+      "name": "Detox & Cleanse Packages",
+      "sortOrder": 10,
+      "description": "Offers multi-bottle cold-pressed juice programs designed for 1-day, 3-day, or 5-day dietary resets and wellness regimens. Packaged with scheduled advance ordering to ensure high freshness and systematic daily bottle regimens.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "📦",
+      "subSections": [
+        {
+          "id": "cleanse-programs",
+          "name": "Cleanse Programs",
+          "sortOrder": 1,
+          "description": "Curated multi-day juice cleanse regimens arranged in numbered daily bottles from morning greens to evening nut milks."
+        },
+        {
+          "id": "daily-wellness-packs",
+          "name": "Daily Wellness Packs",
+          "sortOrder": 2,
+          "description": "Convenient multi-bottle daily booster bundles for busy professionals, offices, or families seeking everyday wellness."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "package-duration",
+          "type": "single-select",
+          "label": "Cleanse Duration",
+          "isRequired": true,
+          "choices": [
+            { "value": "1-day-cleanse", "label": "1-Day Cleanse (6 Bottles + 1 Shot)", "priceModifier": 0 },
+            { "value": "3-day-cleanse", "label": "3-Day Cleanse (18 Bottles + 3 Shots)", "priceModifier": 75.00 },
+            { "value": "5-day-cleanse", "label": "5-Day Cleanse (30 Bottles + 5 Shots)", "priceModifier": 140.00 }
+          ]
+        },
+        {
+          "id": "cleanse-intensity",
+          "type": "single-select",
+          "label": "Cleanse Intensity Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "level-1", "label": "Level 1: Refresh & Reboot (Fruit, Roots & Light Greens)", "priceModifier": 0 },
+            { "value": "level-2", "label": "Level 2: Core Cleanse (Balanced Greens, Citrus & Nut Milk)", "priceModifier": 0 },
+            { "value": "level-3", "label": "Level 3: Deep Green Detox (High Alkaline & All-Green Juices)", "priceModifier": 5.00 }
+          ]
+        },
+        {
+          "id": "cleanse-pickup-date",
+          "type": "date-picker",
+          "label": "Scheduled Pickup / Start Date",
+          "isRequired": true
+        },
+        {
+          "id": "insulated-cooler-bag",
+          "type": "toggle",
+          "label": "Include Insulated Thermal Cooler Bag",
+          "isRequired": false
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Requires 24-hour advance notice for freshly pressed batch packaging"
+      }
+    },
+    {
+      "id": "add-ons-and-boosters",
+      "name": "Add-Ons & Boosters",
+      "sortOrder": 11,
+      "description": "Operates as a comprehensive modular modifier catalog enabling patrons to enrich any beverage, smoothie, or bowl with concentrated superfoods, plant adaptogens, extra proteins, and natural sweeteners.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "⚡",
+      "subSections": [
+        {
+          "id": "superfood-powders",
+          "name": "Superfood Powders",
+          "sortOrder": 1,
+          "description": "Organic ceremonial matcha, blue spirulina, chlorella, maca root, and ashwagandha adaptogen powder."
+        },
+        {
+          "id": "proteins-and-collagen",
+          "name": "Proteins & Collagen",
+          "sortOrder": 2,
+          "description": "Grass-fed whey protein isolate, certified vegan organic pea/rice protein, and hydrolyzed collagen peptides."
+        },
+        {
+          "id": "seeds-and-nuts",
+          "name": "Seeds & Nuts",
+          "sortOrder": 3,
+          "description": "Organic black chia seeds, shelled hemp hearts, raw cacao nibs, and organic flaxseed meal."
+        },
+        {
+          "id": "functional-boosts",
+          "name": "Functional Boosts",
+          "sortOrder": 4,
+          "description": "Raw wildflower honey, pure organic maple syrup, cold-pressed ginger booster, and organic MCT oil."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "booster-modifiers",
+          "type": "multi-select",
+          "label": "Add-On Boosters",
+          "isRequired": false,
+          "maxSelections": 6,
+          "choices": [
+            { "value": "whey-protein", "label": "Grass-Fed Whey Protein (+20g)", "priceModifier": 2.00 },
+            { "value": "plant-protein", "label": "Organic Plant Protein (+20g)", "priceModifier": 2.00 },
+            { "value": "chia-seeds", "label": "Organic Chia Seeds", "priceModifier": 1.00 },
+            { "value": "hemp-hearts", "label": "Shelled Hemp Hearts", "priceModifier": 1.25 },
+            { "value": "collagen", "label": "Marine Collagen Peptides", "priceModifier": 2.25 },
+            { "value": "blue-spirulina", "label": "Organic Blue Spirulina", "priceModifier": 1.50 },
+            { "value": "maca-root", "label": "Peruvian Maca Root Powder", "priceModifier": 1.25 },
+            { "value": "ashwagandha", "label": "Ashwagandha Adaptogen Powder", "priceModifier": 1.50 },
+            { "value": "raw-honey", "label": "Raw Wildflower Honey", "priceModifier": 0.75 },
+            { "value": "mct-oil", "label": "Organic Coconut MCT Oil", "priceModifier": 1.25 },
+            { "value": "oat-milk-upgrade", "label": "Oat Milk Splash / Upgrade", "priceModifier": 0.85 }
+          ]
+        },
+        {
+          "id": "booster-portion",
+          "type": "single-select",
+          "label": "Booster Portion",
+          "isRequired": false,
+          "choices": [
+            { "value": "single-portion", "label": "Standard Single Serving", "priceModifier": 0 },
+            { "value": "double-portion", "label": "Double Boost Serving", "priceModifier": 1.50 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasonal-and-limited",
+      "name": "Seasonal & Limited",
+      "sortOrder": 12,
+      "description": "Highlights seasonal harvest specials, limited-batch fruit concoctions, and festive holiday beverages that rotate throughout the calendar year. Keeps the menu dynamic and responsive to fresh farm harvests and seasonal cravings.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "✨",
+      "subSections": [
+        {
+          "id": "summer-refreshers",
+          "name": "Summer Refreshers",
+          "sortOrder": 1,
+          "description": "Chilled summer specialties including watermelon-basil coolers, passion fruit spritzes, and fresh peach smoothies."
+        },
+        {
+          "id": "fall-and-winter-specials",
+          "name": "Fall & Winter Specials",
+          "sortOrder": 2,
+          "description": "Warming seasonal treats including spiced pumpkin cold brew, spiced apple ginger cider, and peppermint mocha lattes."
+        },
+        {
+          "id": "limited-collaborations",
+          "name": "Limited Collaborations",
+          "sortOrder": 3,
+          "description": "Short-run artisan collaborations featuring rare single-origin coffees, local organic orchard harvests, and guest chef smoothie recipes."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "seasonal-size",
+          "type": "single-select",
+          "label": "Serving Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "regular", "label": "Regular (16 oz)", "priceModifier": 0 },
+            { "value": "large", "label": "Large (24 oz)", "priceModifier": 1.00 }
+          ]
+        },
+        {
+          "id": "seasonal-milk",
+          "type": "single-select",
+          "label": "Milk Choice (for seasonal lattes)",
+          "isRequired": false,
+          "choices": [
+            { "value": "whole-milk", "label": "Whole Milk", "priceModifier": 0 },
+            { "value": "oat-milk", "label": "Oat Milk", "priceModifier": 0.85 },
+            { "value": "almond-milk", "label": "Almond Milk", "priceModifier": 0.85 },
+            { "value": "coconut-milk", "label": "Coconut Milk", "priceModifier": 0.85 }
+          ]
+        },
+        {
+          "id": "seasonal-sweetness",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "unsweetened", "label": "Unsweetened (0%)", "priceModifier": 0 },
+            { "value": "half-sweet", "label": "Half Sweet (50%)", "priceModifier": 0 },
+            { "value": "regular-sweet", "label": "Regular Sweetness (100%)", "priceModifier": 0 }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "addOnBoosters",
+      "name": "Add-On Boosters & Superfoods",
+      "description": "Enables customers to enhance drinks, smoothies, and bowls with nutritional boosters like protein powder, chia seeds, collagen, and spirulina.",
+      "isEnabled": true,
+      "config": {
+        "allowMultiple": true,
+        "maxSelections": 6
+      }
+    },
+    {
+      "id": "milkAlternatives",
+      "name": "Plant-Based Milk Alternatives",
+      "description": "Provides dairy milk substitutes including oat, almond, soy, and coconut milk with custom pricing for coffee and specialty drinks.",
+      "isEnabled": true,
+      "config": {
+        "defaultOption": "whole-milk",
+        "availableOptions": [
+          "whole-milk",
+          "skim-milk",
+          "oat-milk",
+          "almond-milk",
+          "soy-milk",
+          "coconut-milk"
+        ]
+      }
+    },
+    {
+      "id": "sweetnessLevel",
+      "name": "Sweetness Level Customization",
+      "description": "Allows guests to customize sweetness percentage or syrup quantity for juices, smoothies, teas, and lemonades.",
+      "isEnabled": true,
+      "config": {
+        "defaultLevel": "100%",
+        "levels": ["0%", "25%", "50%", "100%", "120%"]
+      }
+    },
+    {
+      "id": "iceLevel",
+      "name": "Ice Level Customization",
+      "description": "Allows guests to adjust ice volume for cold coffees, iced teas, juices, and lemonades.",
+      "isEnabled": true,
+      "config": {
+        "defaultLevel": "regular-ice",
+        "levels": ["no-ice", "less-ice", "regular-ice", "extra-ice"]
+      }
+    },
+    {
+      "id": "preOrder",
+      "name": "Cleanse Package Pre-Orders",
+      "description": "Enables advance ordering and scheduled pickup dates for multi-day detox cleanse packages that require advance batch preparation.",
+      "isEnabled": true,
+      "config": {
+        "leadTimeHours": 24,
+        "allowScheduledPickup": true,
+        "applicableSections": ["detox-and-cleanse-packages"]
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Indicators",
+      "description": "Flags allergens (nuts, dairy, soy, gluten) and dietary lifestyles (vegan, vegetarian, keto, raw, organic) across all menu items.",
+      "isEnabled": true,
+      "config": {
+        "displayBadgeOnCards": true,
+        "filterEnabled": true
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Live Stock & Availability Badges",
+      "description": "Displays dynamic inventory tags including Sold Out Today, Limited Edition, Seasonal, and Made to Order.",
+      "isEnabled": true,
+      "config": {
+        "showLowStockWarning": true,
+        "autoBadgeSoldOut": true
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

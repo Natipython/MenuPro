@@ -1,0 +1,1641 @@
+{
+  "id": "tea-house-bubble-tea",
+  "name": "Tea House / Bubble Tea Shop",
+  "slug": "tea-house-bubble-tea",
+  "icon": "🧋",
+  "description": "Specialized beverage-forward concept centered on authentic Taiwanese bubble tea, freshly brewed artisan loose-leaf teas, and Asian refreshments. Distinguished by an interactive drink-building experience with granular sweetness, ice, milk base, and chewable boba topping customization, complemented by Asian street food snacks and cafe-style light bites.",
+  "category": "cafe",
+  "tags": [
+    "bubble-tea",
+    "boba",
+    "milk-tea",
+    "tea-house",
+    "fruit-tea",
+    "taiwanese"
+  ],
+  "sections": [
+    {
+      "id": "classic-milk-tea",
+      "name": "Classic Milk Tea",
+      "sortOrder": 1,
+      "description": "The foundational cornerstone of any authentic Taiwanese bubble tea shop, featuring slow-brewed black, green, and roasted oolong teas blended with rich dairy or plant-based milks and caramelized syrups. This required core section drives primary ordering volume and represents the iconic boba experience, demanding full customer control over cup size, sweetness calibration, ice levels, milk choices, and freshly cooked chewable toppings.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🧋",
+      "subSections": [
+        {
+          "id": "original-milk-tea",
+          "name": "Original Milk Tea",
+          "sortOrder": 1,
+          "description": "Timeless Taiwanese milk tea foundations brewed with robust Assam black tea, fragrant jasmine green tea, roasted Tieguanyin oolong, and floral Earl Grey tea leaves."
+        },
+        {
+          "id": "brown-sugar-series",
+          "name": "Brown Sugar Series",
+          "sortOrder": 2,
+          "description": "Signature tiger-striped beverages featuring caramelized brown sugar syrup swirled along the cup walls, paired with warm brown sugar pearls and fresh cold milk or tea."
+        },
+        {
+          "id": "taro-and-specialty",
+          "name": "Taro & Specialty",
+          "sortOrder": 3,
+          "description": "Nutty and comforting milk tea specialties incorporating natural mashed purple taro root, creamy coconut milk, and fragrant honeydew melon infusions."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cup-size",
+          "type": "single-select",
+          "label": "Cup Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "medium",
+              "label": "Medium (500 ml / 16 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large (700 ml / 24 oz)",
+              "priceModifier": 0.8
+            }
+          ]
+        },
+        {
+          "id": "sweetness-level",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "100%",
+              "label": "100% (Regular Sweet - Standard Recipe)",
+              "priceModifier": 0
+            },
+            {
+              "value": "120%",
+              "label": "120% (Extra Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "75%",
+              "label": "75% (Less Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "50%",
+              "label": "50% (Half Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "25%",
+              "label": "25% (Slightly Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "0%",
+              "label": "0% (Unsweetened / No Sugar)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice (100% Standard)",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-ice",
+              "label": "Less Ice (70%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "No Ice (0%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-ice",
+              "label": "Extra Ice (120%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "warm-hot",
+              "label": "Warm / Hot (50°C–65°C)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "milk-base",
+          "type": "single-select",
+          "label": "Milk Base",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "fresh-milk",
+              "label": "Fresh Whole Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "non-dairy-creamer",
+              "label": "Traditional Non-Dairy Creamer (Classic Taiwanese Style)",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Oat Milk (Barista Blend)",
+              "priceModifier": 0.8
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.8
+            },
+            {
+              "value": "soy-milk",
+              "label": "Organic Soy Milk",
+              "priceModifier": 0.5
+            }
+          ]
+        },
+        {
+          "id": "topping-add-ons",
+          "type": "multi-select",
+          "label": "Topping Add-Ons",
+          "isRequired": false,
+          "maxSelections": 5,
+          "choices": [
+            {
+              "value": "brown-sugar-tapioca-pearls",
+              "label": "Brown Sugar Tapioca Pearls (Boba)",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "crystal-agar-boba",
+              "label": "Crystal Agar Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "silky-egg-pudding",
+              "label": "Silky Egg Pudding Custard",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "herbal-grass-jelly",
+              "label": "Herbal Grass Jelly",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "coconut-jelly",
+              "label": "Coconut Jelly (Nata de Coco)",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "aloe-vera",
+              "label": "Aloe Vera Cubes",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "sea-salt-cheese-foam",
+              "label": "Sea Salt Cheese Foam Cap",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "handcrafted-taro-paste",
+              "label": "Handcrafted Taro Paste",
+              "priceModifier": 0.9
+            },
+            {
+              "value": "sweet-red-bean",
+              "label": "Sweet Azuki Red Bean",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "chewy-mini-taro-balls",
+              "label": "Mini Taro & Sweet Potato Balls",
+              "priceModifier": 0.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fruit-tea",
+      "name": "Fruit Tea",
+      "sortOrder": 2,
+      "description": "Crisp, aromatic green, four-season oolong, and black teas vigorously hand-shaken with freshly squeezed citrus, crushed whole fruits, passion fruit pulp, and fruit purees. This required section delivers vibrant color appeal and refreshing hydration for dairy-free and health-conscious guests, supported by tailored sweetness, cooling ice calibration, and tropical jelly or popping boba add-ons.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍹",
+      "subSections": [
+        {
+          "id": "fresh-fruit-tea",
+          "name": "Fresh Fruit Tea",
+          "sortOrder": 1,
+          "description": "Whole-leaf green and black teas muddled with real seasonal fruit slices, whole berries, and fragrant passion fruit seeds."
+        },
+        {
+          "id": "citrus-series",
+          "name": "Citrus Series",
+          "sortOrder": 2,
+          "description": "Tart and revitalizing tea infusions highlighted by fresh lemon, calamansi, sweet kumquat, and ruby grapefruit."
+        },
+        {
+          "id": "tropical-series",
+          "name": "Tropical Series",
+          "sortOrder": 3,
+          "description": "Sun-drenched exotic tea blends starring ripe mango puree, Hawaiian pineapple, aromatic lychee, and pink guava."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cup-size",
+          "type": "single-select",
+          "label": "Cup Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "medium",
+              "label": "Medium (500 ml / 16 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large (700 ml / 24 oz)",
+              "priceModifier": 0.8
+            }
+          ]
+        },
+        {
+          "id": "sweetness-level",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "100%",
+              "label": "100% (Regular Sweet - Standard Recipe)",
+              "priceModifier": 0
+            },
+            {
+              "value": "120%",
+              "label": "120% (Extra Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "75%",
+              "label": "75% (Less Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "50%",
+              "label": "50% (Half Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "25%",
+              "label": "25% (Slightly Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "0%",
+              "label": "0% (Unsweetened / No Sugar)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice (100% Standard)",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-ice",
+              "label": "Less Ice (70%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "No Ice (0%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-ice",
+              "label": "Extra Ice (120%)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "fruit-topping-add-ons",
+          "type": "multi-select",
+          "label": "Fruit & Jelly Toppings",
+          "isRequired": false,
+          "maxSelections": 5,
+          "choices": [
+            {
+              "value": "crystal-agar-boba",
+              "label": "Crystal Agar Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "mango-popping-boba",
+              "label": "Mango Popping Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "lychee-popping-boba",
+              "label": "Lychee Popping Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "passion-fruit-popping-boba",
+              "label": "Passion Fruit Popping Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "coconut-jelly",
+              "label": "Coconut Jelly (Nata de Coco)",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "aloe-vera",
+              "label": "Aloe Vera Cubes",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "aiyu-jelly",
+              "label": "Taiwanese Aiyu Jelly",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "chia-seeds",
+              "label": "Organic Chia Seeds",
+              "priceModifier": 0.6
+            },
+            {
+              "value": "sea-salt-cheese-foam",
+              "label": "Sea Salt Cheese Foam Cap",
+              "priceModifier": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cheese-tea-cream-top",
+      "name": "Cheese Tea / Cream Top",
+      "sortOrder": 3,
+      "description": "Artisanal cold-brewed loose-leaf teas and fresh fruit infusions crowned with an opulent layer of aerated cream cheese foam whipped with real milk and pink Himalayan sea salt. Designed to be sipped directly from a mustache-friendly sip lid at a 45-degree tilt to experience the contrast of savory creamy froth and fragrant tea liquor.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧀",
+      "subSections": [
+        {
+          "id": "cheese-green-tea",
+          "name": "Cheese Green Tea",
+          "sortOrder": 1,
+          "description": "Floral jasmine green tea, roasted matcha, and jade green tea liquor topped with velvety salted cheese foam."
+        },
+        {
+          "id": "cheese-oolong",
+          "name": "Cheese Oolong",
+          "sortOrder": 2,
+          "description": "Roasted Tieguanyin, white peach oolong, and high-mountain Taiwanese oolong teas layered with savory cheese froth."
+        },
+        {
+          "id": "cheese-fruit-tea",
+          "name": "Cheese Fruit Tea",
+          "sortOrder": 3,
+          "description": "Iced fruit purees and crushed strawberry, mango, or fresh grape tea blends capped with luxurious cheese foam."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cup-size",
+          "type": "single-select",
+          "label": "Cup Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "medium",
+              "label": "Medium (500 ml / 16 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large (700 ml / 24 oz)",
+              "priceModifier": 0.8
+            }
+          ]
+        },
+        {
+          "id": "sweetness-level",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "100%",
+              "label": "100% (Regular Sweet - Standard Recipe)",
+              "priceModifier": 0
+            },
+            {
+              "value": "120%",
+              "label": "120% (Extra Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "75%",
+              "label": "75% (Less Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "50%",
+              "label": "50% (Half Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "25%",
+              "label": "25% (Slightly Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "0%",
+              "label": "0% (Unsweetened / No Sugar)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice (100% Standard)",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-ice",
+              "label": "Less Ice (70%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "No Ice (0%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-ice",
+              "label": "Extra Ice (120%)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "cheese-foam-thickness",
+          "type": "single-select",
+          "label": "Cheese Foam Thickness",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular Cheese Foam (Standard Cap)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-thick",
+              "label": "Extra Thick Cheese Foam (+50% Foam Layer)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "light-foam",
+              "label": "Light Cheese Foam (Delicate Layer)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "topping-add-ons",
+          "type": "multi-select",
+          "label": "Topping Add-Ons",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            {
+              "value": "brown-sugar-tapioca-pearls",
+              "label": "Brown Sugar Tapioca Pearls",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "crystal-agar-boba",
+              "label": "Crystal Agar Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "coconut-jelly",
+              "label": "Coconut Jelly",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "silky-egg-pudding",
+              "label": "Silky Egg Pudding",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "crushed-oreo",
+              "label": "Crushed Oreo Cookie Dust",
+              "priceModifier": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "specialty-and-signature",
+      "name": "Specialty & Signature",
+      "sortOrder": 4,
+      "description": "Showcase creations and multi-tiered layered drinks that represent the shop's artisanal pinnacle and social media viral favorites. Combines handcrafted gradient aesthetics, scorched crème brûlée finishes, floral botanicals, and premium culinary ingredients into memorable showstopper beverages.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "✨",
+      "subSections": [
+        {
+          "id": "house-signatures",
+          "name": "House Signatures",
+          "sortOrder": 1,
+          "description": "The brand's definitive crowd-favorites, multi-layered visual gradient drinks, and proprietary customer go-tos."
+        },
+        {
+          "id": "seasonal-creations",
+          "name": "Seasonal Creations",
+          "sortOrder": 2,
+          "description": "Creative barista recipes combining fresh seasonal produce, specialty flower infusions, and modern mixology."
+        },
+        {
+          "id": "limited-editions",
+          "name": "Limited Editions",
+          "sortOrder": 3,
+          "description": "Exclusive small-batch drink series showcasing rare tea flushes, scorched crème brûlée custards, and artisan imports."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cup-size",
+          "type": "single-select",
+          "label": "Cup Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "medium",
+              "label": "Medium (500 ml / 16 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large (700 ml / 24 oz)",
+              "priceModifier": 0.8
+            }
+          ]
+        },
+        {
+          "id": "sweetness-level",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "100%",
+              "label": "100% (Regular Sweet - Standard Recipe)",
+              "priceModifier": 0
+            },
+            {
+              "value": "120%",
+              "label": "120% (Extra Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "75%",
+              "label": "75% (Less Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "50%",
+              "label": "50% (Half Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "25%",
+              "label": "25% (Slightly Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "0%",
+              "label": "0% (Unsweetened / No Sugar)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice (100% Standard)",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-ice",
+              "label": "Less Ice (70%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "No Ice (0%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-ice",
+              "label": "Extra Ice (120%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "warm-hot",
+              "label": "Warm / Hot (Where Available)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "milk-base",
+          "type": "single-select",
+          "label": "Milk Base",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "fresh-milk",
+              "label": "Fresh Whole Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "non-dairy-creamer",
+              "label": "Traditional Non-Dairy Creamer",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Oat Milk (Barista Blend)",
+              "priceModifier": 0.8
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.8
+            }
+          ]
+        },
+        {
+          "id": "topping-add-ons",
+          "type": "multi-select",
+          "label": "Topping Add-Ons",
+          "isRequired": false,
+          "maxSelections": 5,
+          "choices": [
+            {
+              "value": "brown-sugar-tapioca-pearls",
+              "label": "Brown Sugar Tapioca Pearls",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "crystal-agar-boba",
+              "label": "Crystal Agar Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "silky-egg-pudding",
+              "label": "Silky Egg Pudding Custard",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "sea-salt-cheese-foam",
+              "label": "Sea Salt Cheese Foam Cap",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "creme-brulee-custard",
+              "label": "Torched Crème Brûlée Custard",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "handcrafted-taro-paste",
+              "label": "Handcrafted Taro Paste",
+              "priceModifier": 0.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "coffee",
+      "name": "Coffee",
+      "sortOrder": 5,
+      "description": "Specialty Asian cafe coffee beverages and classic espresso extractions tailored for boba shop culture. Bridges the worlds of coffee and tea with Hong Kong-style coffee milk tea (Yuenyeung), Vietnamese slow-dripped iced coffees with condensed milk, and sea salt cream iced Americanos.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "☕",
+      "subSections": [
+        {
+          "id": "coffee-milk-tea",
+          "name": "Coffee Milk Tea",
+          "sortOrder": 1,
+          "description": "Hong Kong Yuenyeung harmonizing bold Ceylon black tea, fresh espresso shots, and evaporated milk or sweet creamer."
+        },
+        {
+          "id": "iced-coffee",
+          "name": "Iced Coffee",
+          "sortOrder": 2,
+          "description": "Robust iced coffees including Vietnamese dark roast with sweetened condensed milk and sea salt cream cold brews."
+        },
+        {
+          "id": "espresso-series",
+          "name": "Espresso Series",
+          "sortOrder": 3,
+          "description": "Classic espresso drinks including Americanos, caffe lattes, brown sugar boba lattes, and caramel macchiatos."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cup-size",
+          "type": "single-select",
+          "label": "Cup Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "medium",
+              "label": "Medium (12 oz hot / 16 oz iced)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large (16 oz hot / 24 oz iced)",
+              "priceModifier": 0.8
+            }
+          ]
+        },
+        {
+          "id": "sweetness-level",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "100%",
+              "label": "100% (Regular Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "120%",
+              "label": "120% (Extra Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "75%",
+              "label": "75% (Less Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "50%",
+              "label": "50% (Half Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "25%",
+              "label": "25% (Slightly Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "0%",
+              "label": "0% (Unsweetened / Black)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "ice-level",
+          "type": "single-select",
+          "label": "Ice & Temperature",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice (Iced)",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-ice",
+              "label": "Less Ice (Iced)",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "No Ice (Chilled)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-ice",
+              "label": "Extra Ice (Iced)",
+              "priceModifier": 0
+            },
+            {
+              "value": "hot",
+              "label": "Steamed Hot",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "milk-choice",
+          "type": "single-select",
+          "label": "Milk Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "whole-milk",
+              "label": "Fresh Whole Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "condensed-milk",
+              "label": "Sweetened Condensed Milk (Vietnamese Style)",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "oat-milk",
+              "label": "Oat Milk (Barista Blend)",
+              "priceModifier": 0.8
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.8
+            },
+            {
+              "value": "non-dairy-creamer",
+              "label": "Non-Dairy Creamer",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "espresso-shots",
+          "type": "single-select",
+          "label": "Espresso Shots",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard",
+              "label": "Standard Recipe Shots",
+              "priceModifier": 0
+            },
+            {
+              "value": "single-extra",
+              "label": "Add 1 Extra Espresso Shot",
+              "priceModifier": 0.9
+            },
+            {
+              "value": "double-extra",
+              "label": "Add 2 Extra Espresso Shots",
+              "priceModifier": 1.6
+            },
+            {
+              "value": "decaf",
+              "label": "Decaf Espresso",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "topping-add-ons",
+          "type": "multi-select",
+          "label": "Topping Add-Ons",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            {
+              "value": "brown-sugar-tapioca-pearls",
+              "label": "Brown Sugar Tapioca Pearls",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "silky-egg-pudding",
+              "label": "Silky Egg Pudding Custard",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "herbal-grass-jelly",
+              "label": "Herbal Grass Jelly",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "sea-salt-cheese-foam",
+              "label": "Sea Salt Cheese Foam Cap",
+              "priceModifier": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slush-and-smoothie",
+      "name": "Slush & Smoothie",
+      "sortOrder": 6,
+      "description": "Ice-blended tropical fruit slushes, creamy probiotic yogurt smoothies, and rich ceremonial matcha frappes blended to fine icy perfection. Essential high-margin frosty treats during summer heat waves, designed with wide straws to pair seamlessly with chewable boba, fruit jellies, and decadent whipped cheese crowns.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍧",
+      "subSections": [
+        {
+          "id": "fruit-slush",
+          "name": "Fruit Slush",
+          "sortOrder": 1,
+          "description": "Vibrant ice-blended slushes crafted with real fruit purees including mango, strawberry, lychee, passion fruit, and watermelon."
+        },
+        {
+          "id": "yogurt-smoothie",
+          "name": "Yogurt Smoothie",
+          "sortOrder": 2,
+          "description": "Thick, creamy smoothies blending tangy Greek yogurt with ripe fruits and crushed ice for a balanced sweet-tart profile."
+        },
+        {
+          "id": "matcha-blends",
+          "name": "Matcha Blends",
+          "sortOrder": 3,
+          "description": "Premium Japanese Uji matcha blended into frosty frappes with sweet red bean swirls, creamy milk, or vanilla cream."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cup-size",
+          "type": "single-select",
+          "label": "Cup Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "medium",
+              "label": "Medium (500 ml / 16 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large (700 ml / 24 oz)",
+              "priceModifier": 0.8
+            }
+          ]
+        },
+        {
+          "id": "sweetness-level",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "100%",
+              "label": "100% (Regular Sweet - Standard Recipe)",
+              "priceModifier": 0
+            },
+            {
+              "value": "120%",
+              "label": "120% (Extra Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "75%",
+              "label": "75% (Less Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "50%",
+              "label": "50% (Half Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "25%",
+              "label": "25% (Slightly Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "0%",
+              "label": "0% (Unsweetened / No Sugar Added)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "topping-add-ons",
+          "type": "multi-select",
+          "label": "Topping Add-Ons",
+          "isRequired": false,
+          "maxSelections": 5,
+          "choices": [
+            {
+              "value": "brown-sugar-tapioca-pearls",
+              "label": "Brown Sugar Tapioca Pearls",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "crystal-agar-boba",
+              "label": "Crystal Agar Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "popping-boba",
+              "label": "Assorted Popping Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "coconut-jelly",
+              "label": "Coconut Jelly (Nata de Coco)",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "silky-egg-pudding",
+              "label": "Silky Egg Pudding Custard",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "sea-salt-cheese-foam-cap",
+              "label": "Sea Salt Cheese Foam Cap",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "whipped-cream",
+              "label": "Fresh Whipped Cream",
+              "priceModifier": 0.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "toppings-menu",
+      "name": "Toppings Menu",
+      "sortOrder": 7,
+      "description": "Master catalog of handcrafted chewy pearls, translucent jellies, rich silky custards, and traditional Asian sweet toppings. This section provides an inventory of all standalone modifiers, double-portion scoops, and separate takeaway side cups for enthusiasts seeking the ultimate 'QQ' chewy mouthfeel.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🫧",
+      "subSections": [
+        {
+          "id": "pearls-and-boba",
+          "name": "Pearls & Boba",
+          "sortOrder": 1,
+          "description": "Traditional brown sugar simmered tapioca pearls, translucent agar crystal boba, and burst-in-your-mouth fruit popping boba."
+        },
+        {
+          "id": "jellies",
+          "name": "Jellies",
+          "sortOrder": 2,
+          "description": "Chewy nata de coco coconut jellies, soothing aloe vera cubes, traditional herbal grass jelly, and citrusy Taiwanese aiyu jelly."
+        },
+        {
+          "id": "pudding-and-cream",
+          "name": "Pudding & Cream",
+          "sortOrder": 3,
+          "description": "Silky vanilla egg pudding custards, whipped Himalayan sea salt cheese foam, and light dairy whipped cream."
+        },
+        {
+          "id": "others",
+          "name": "Others",
+          "sortOrder": 4,
+          "description": "Traditional Asian dessert accompaniments including sweet azuki red beans, mini chewy taro balls, artisanal mochi, and crushed cookie crumbs."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "topping-selection",
+          "type": "multi-select",
+          "label": "Select Topping Add-Ons",
+          "isRequired": true,
+          "maxSelections": 6,
+          "choices": [
+            {
+              "value": "brown-sugar-tapioca-pearls",
+              "label": "Brown Sugar Tapioca Pearls (Boba)",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "crystal-agar-boba",
+              "label": "Crystal Agar Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "mango-popping-boba",
+              "label": "Mango Popping Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "lychee-popping-boba",
+              "label": "Lychee Popping Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "passion-fruit-popping-boba",
+              "label": "Passion Fruit Popping Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "coconut-jelly",
+              "label": "Coconut Jelly (Nata de Coco)",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "aloe-vera",
+              "label": "Aloe Vera Cubes",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "herbal-grass-jelly",
+              "label": "Traditional Herbal Grass Jelly",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "aiyu-jelly",
+              "label": "Taiwanese Aiyu Jelly",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "silky-egg-pudding",
+              "label": "Silky Egg Pudding Custard",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "sea-salt-cheese-foam",
+              "label": "Sea Salt Cheese Foam",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "fresh-whipped-cream",
+              "label": "Fresh Whipped Cream",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "sweet-red-bean",
+              "label": "Sweet Azuki Red Bean",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "mini-taro-balls",
+              "label": "Chewy Mini Taro & Sweet Potato Balls",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "handmade-mochi",
+              "label": "Soft Chewy Rice Mochi",
+              "priceModifier": 0.9
+            },
+            {
+              "value": "oreo-cookie-crumbs",
+              "label": "Crushed Oreo Cookie Crumbs",
+              "priceModifier": 0.6
+            }
+          ]
+        },
+        {
+          "id": "portion-packaging",
+          "type": "single-select",
+          "label": "Portion & Packaging",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "in-drink-standard",
+              "label": "In-Drink Standard Scoop",
+              "priceModifier": 0
+            },
+            {
+              "value": "in-drink-double",
+              "label": "In-Drink Double Portion",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "separate-side-cup",
+              "label": "Packaged in Separate Side Cup (To-Go)",
+              "priceModifier": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "light-bites",
+      "name": "Light Bites",
+      "sortOrder": 8,
+      "description": "Taiwanese night market street foods, thick-sliced honey brick toasts, fresh egg waffles (gai daan jai), and sweet Asian pastries designed to complement tea drinking. Provides warm savory and sweet contrasts that boost food sales, group dining appeal, and average order value.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥟",
+      "subSections": [
+        {
+          "id": "taiwanese-snacks",
+          "name": "Taiwanese Snacks",
+          "sortOrder": 1,
+          "description": "Iconic Taiwanese street bites including crispy five-spice popcorn chicken, golden sweet potato fries with plum powder, and fried tofu cubes."
+        },
+        {
+          "id": "toast-and-bites",
+          "name": "Toast & Bites",
+          "sortOrder": 2,
+          "description": "Thick Japanese milk bread honey brick toasts, condensed milk butter toast, garlic toast, and freshly pressed bubble egg waffles."
+        },
+        {
+          "id": "desserts",
+          "name": "Desserts",
+          "sortOrder": 3,
+          "description": "Warm Japanese wheel cakes (imagawayaki) filled with custard or red bean, chewy mochi donuts, and matcha soft serve treats."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "heating-preference",
+          "type": "single-select",
+          "label": "Heating & Serving Preference",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "freshly-heated",
+              "label": "Freshly Heated / Warm Out of Oven",
+              "priceModifier": 0
+            },
+            {
+              "value": "room-temperature",
+              "label": "Room Temperature / Ready-to-Eat",
+              "priceModifier": 0
+            },
+            {
+              "value": "take-and-reheat",
+              "label": "Chilled / Take-Home & Reheat",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "snack-seasoning",
+          "type": "single-select",
+          "label": "Seasoning & Spice Level (for Taiwanese Snacks)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "taiwanese-salt-pepper",
+              "label": "Taiwanese Five-Spice Salt & Pepper (No Heat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "mild-spice",
+              "label": "Mild Chili Pepper",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-spice",
+              "label": "Medium Spicy Chili",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-spicy",
+              "label": "Extra Hot Ghost Pepper",
+              "priceModifier": 0
+            },
+            {
+              "value": "plum-powder",
+              "label": "Sweet Taiwanese Plum Powder",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "toast-condiment-dip",
+          "type": "single-select",
+          "label": "Dipping Sauce & Spread",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Sauce / As Prepared",
+              "priceModifier": 0
+            },
+            {
+              "value": "condensed-milk",
+              "label": "Sweetened Condensed Milk Drizzle",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "spicy-mayo",
+              "label": "Taiwanese Garlic Spicy Mayo",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "sweet-chili",
+              "label": "Sweet Thai Chili Sauce",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "honey-butter",
+              "label": "Honey Butter Glaze",
+              "priceModifier": 0.5
+            }
+          ]
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Light bites and freshly prepared street foods are made to order throughout regular operating hours."
+      }
+    },
+    {
+      "id": "seasonal-and-limited",
+      "name": "Seasonal & Limited",
+      "sortOrder": 9,
+      "description": "Rotating seasonal beverage launches, holiday specials, and limited-harvest tea collaborations. Creates recurring excitement, social media momentum, and immediate purchase urgency with flavors tied to cherry blossoms in spring, tropical mangoes in summer, spiced brown sugar in autumn, and roasted warm chestnuts in winter.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🌸",
+      "subSections": [
+        {
+          "id": "spring-and-summer-editions",
+          "name": "Spring & Summer Editions",
+          "sortOrder": 1,
+          "description": "Floral sakura blossom teas, fresh white peach oolong teas, watermelon frosty slushes, and mango pomelo sago specials."
+        },
+        {
+          "id": "autumn-and-winter-warmers",
+          "name": "Autumn & Winter Warmers",
+          "sortOrder": 2,
+          "description": "Warming spiced ginger brown sugar teas, roasted chestnut milk teas, and hot purple sweet potato lattes."
+        },
+        {
+          "id": "festival-and-collaboration-specials",
+          "name": "Festival & Collaboration Specials",
+          "sortOrder": 3,
+          "description": "Holiday celebrations, pop-culture collaboration drinks, dual-flavor split cups, and anniversary novelty recipes."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cup-size",
+          "type": "single-select",
+          "label": "Cup Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "medium",
+              "label": "Medium (500 ml / 16 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large (700 ml / 24 oz)",
+              "priceModifier": 0.8
+            }
+          ]
+        },
+        {
+          "id": "sweetness-level",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "100%",
+              "label": "100% (Regular Sweet - Standard Recipe)",
+              "priceModifier": 0
+            },
+            {
+              "value": "120%",
+              "label": "120% (Extra Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "75%",
+              "label": "75% (Less Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "50%",
+              "label": "50% (Half Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "25%",
+              "label": "25% (Slightly Sweet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "0%",
+              "label": "0% (Unsweetened / No Sugar)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice (100% Standard)",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-ice",
+              "label": "Less Ice (70%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "No Ice (0%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-ice",
+              "label": "Extra Ice (120%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "warm-hot",
+              "label": "Warm / Hot (Where Available)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "milk-base",
+          "type": "single-select",
+          "label": "Milk Base",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "fresh-milk",
+              "label": "Fresh Whole Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "non-dairy-creamer",
+              "label": "Traditional Non-Dairy Creamer",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Oat Milk (Barista Blend)",
+              "priceModifier": 0.8
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.8
+            }
+          ]
+        },
+        {
+          "id": "seasonal-topping-add-ons",
+          "type": "multi-select",
+          "label": "Seasonal Topping Add-Ons",
+          "isRequired": false,
+          "maxSelections": 5,
+          "choices": [
+            {
+              "value": "brown-sugar-tapioca-pearls",
+              "label": "Brown Sugar Tapioca Pearls",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "crystal-agar-boba",
+              "label": "Crystal Agar Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "seasonal-popping-boba",
+              "label": "Seasonal Popping Boba",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "silky-egg-pudding",
+              "label": "Silky Egg Pudding Custard",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "sea-salt-cheese-foam",
+              "label": "Sea Salt Cheese Foam Cap",
+              "priceModifier": 1.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "sweetnessLevel",
+      "name": "Sweetness Level Customization",
+      "description": "Essential bubble tea ordering feature enabling guests to precisely dictate syrup and sweetness percentages (0%, 25%, 50%, 75%, 100%, 120%) across milk teas, fruit teas, and specialty beverages.",
+      "isEnabled": true,
+      "config": {
+        "defaultLevel": "100%",
+        "levels": [
+          "0%",
+          "25%",
+          "50%",
+          "75%",
+          "100%",
+          "120%"
+        ],
+        "allowCustomSyrups": true
+      }
+    },
+    {
+      "id": "iceLevel",
+      "name": "Ice Level Customization",
+      "description": "Fundamental temperature and ice calibration feature allowing patrons to select ice volume (No Ice, Less Ice, Regular Ice, Extra Ice) or hot preparation where supported.",
+      "isEnabled": true,
+      "config": {
+        "defaultLevel": "regular-ice",
+        "levels": [
+          "no-ice",
+          "less-ice",
+          "regular-ice",
+          "extra-ice",
+          "warm-hot"
+        ]
+      }
+    },
+    {
+      "id": "toppingBuilder",
+      "name": "Interactive Topping & Boba Builder",
+      "description": "Multi-select topping customization interface with individual price modifiers, allowing guests to layer multiple pearls, jellies, custards, and cheese foams in a single drink.",
+      "isEnabled": true,
+      "config": {
+        "maxToppingsPerDrink": 5,
+        "allowDoublePortion": true,
+        "allowMultipleSameTopping": true,
+        "categoryGrouping": [
+          "pearls",
+          "jellies",
+          "pudding-and-cream",
+          "others"
+        ]
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Indicators",
+      "description": "Flags allergens (dairy, soy, gluten, nuts, egg) and dietary lifestyles (vegan, lactose-free, caffeine-free, vegetarian) across all drink and food items.",
+      "isEnabled": true,
+      "config": {
+        "displayBadgeOnCards": true,
+        "filterEnabled": true,
+        "highlightAllergens": [
+          "contains-dairy",
+          "contains-soy",
+          "contains-gluten",
+          "contains-egg",
+          "contains-nuts"
+        ]
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Live Stock & Fresh Batch Badges",
+      "description": "Displays real-time inventory alerts including Sold Out Today, Low Stock, Seasonal, and Fresh Boba Batch Cooked badges to manage guest expectations.",
+      "isEnabled": true,
+      "config": {
+        "showLowStockWarning": true,
+        "autoBadgeSoldOut": true,
+        "enableFreshBatchIndicator": true
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

@@ -1,0 +1,1199 @@
+{
+  "id": "ice-cream-and-gelato-shop",
+  "name": "Ice Cream & Gelato Shop",
+  "slug": "ice-cream-and-gelato-shop",
+  "icon": "🍦",
+  "description": "Comprehensive menu template tailored for dedicated frozen dessert venues, artisanal gelaterias, and classic ice cream parlors. Features specialized scoop-count ordering, serving vessel configurations, interactive topping builders, custom sundae creations, hand-spun milkshakes, frozen celebration cakes, and large-format catering party packs.",
+  "category": "hybrid",
+  "tags": [
+    "ice-cream",
+    "gelato",
+    "frozen-dessert",
+    "sundae",
+    "milkshake",
+    "sorbet"
+  ],
+  "sections": [
+    {
+      "id": "gelato-and-ice-cream",
+      "name": "Gelato & Ice Cream",
+      "sortOrder": 1,
+      "description": "The signature centerpiece of the shop showcasing slow-churned Italian gelato, dense rich traditional ice cream, and dairy-free sorbettos served fresh from refrigerated dipping cases. This core section serves as the primary sales driver, allowing customers to customize their orders by selecting scoop count, flavor combinations, and their preferred edible or compostable serving vessel.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍨",
+      "subSections": [
+        {
+          "id": "classic-flavors",
+          "name": "Classic Flavors",
+          "sortOrder": 1,
+          "description": "Timeless, all-time favorite gelato and ice cream churns including pure Madagascar bourbon vanilla, Dutch dark chocolate, strawberry cream, and stracciatella."
+        },
+        {
+          "id": "premium-and-signature-flavors",
+          "name": "Premium & Signature Flavors",
+          "sortOrder": 2,
+          "description": "House-crafted artisan creations featuring rare regional ingredients, roasted Sicilian pistachios, sea salt butter caramels, and infusion-swirled batches."
+        },
+        {
+          "id": "dairy-free-and-sorbet",
+          "name": "Dairy-Free & Sorbet",
+          "sortOrder": 3,
+          "description": "Plant-based, 100% dairy-free, and vegan fruit sorbettos and oat-milk churns crafted from ripe sun-drenched fruits and rich non-dairy bases."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "scoop-count",
+          "type": "single-select",
+          "label": "Scoop Count",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-scoop",
+              "label": "Single Scoop (1 Flavor)",
+              "priceModifier": 0
+            },
+            {
+              "value": "double-scoop",
+              "label": "Double Scoop (Up to 2 Flavors)",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "triple-scoop",
+              "label": "Triple Scoop (Up to 3 Flavors)",
+              "priceModifier": 4.5
+            }
+          ]
+        },
+        {
+          "id": "serving-vessel",
+          "type": "single-select",
+          "label": "Serving Vessel",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "cup",
+              "label": "Eco Paper Cup & Spoon",
+              "priceModifier": 0
+            },
+            {
+              "value": "sugar-cone",
+              "label": "Classic Crispy Sugar Cone",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "waffle-cone",
+              "label": "Freshly Baked Waffle Cone",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "waffle-bowl",
+              "label": "Freshly Baked Waffle Bowl",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "chocolate-dipped-waffle-cone",
+              "label": "Chocolate-Dipped Waffle Cone",
+              "priceModifier": 1.75
+            }
+          ]
+        },
+        {
+          "id": "take-home-tub-size",
+          "type": "single-select",
+          "label": "Hand-Packed Take-Home Tub (Optional alternative to scoops)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "None (Serving for Immediate Enjoyment)",
+              "priceModifier": 0
+            },
+            {
+              "value": "pint",
+              "label": "Hand-Packed Pint (16 oz / Serves 2–3)",
+              "priceModifier": 9.0
+            },
+            {
+              "value": "quart",
+              "label": "Hand-Packed Quart (32 oz / Serves 4–6)",
+              "priceModifier": 16.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sundaes",
+      "name": "Sundaes",
+      "sortOrder": 2,
+      "description": "Decadent multi-scoop creations layered with rich confectionery sauces, crunchy textures, whipped cream, and cherries. This high-margin specialty section elevates standard scoops into photogenic dessert spectacles, catering to celebratory outings, kids, and dessert lovers seeking indulgent flavor compositions.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍧",
+      "subSections": [
+        {
+          "id": "classic-sundaes",
+          "name": "Classic Sundaes",
+          "sortOrder": 1,
+          "description": "Traditional nostalgic creations including hot fudge sundaes, banana splits, brownie sundaes, and caramel nut parfaits."
+        },
+        {
+          "id": "signature-sundaes",
+          "name": "Signature Sundaes",
+          "sortOrder": 2,
+          "description": "Chef-crafted gourmet flavor pairings featuring house crumbles, meringue crisps, spiced fruit compotes, and artisan sauces."
+        },
+        {
+          "id": "build-your-own-sundae",
+          "name": "Build Your Own Sundae",
+          "sortOrder": 3,
+          "description": "Fully interactive custom creations allowing guests to choose base scoop flavors, warm drizzle sauces, multiple toppings, and crown garnishes."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "sundae-base-flavor-selection",
+          "type": "single-select",
+          "label": "Primary Base Gelato / Ice Cream Flavor",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "vanilla-bean",
+              "label": "Classic Vanilla Bean",
+              "priceModifier": 0
+            },
+            {
+              "value": "dark-chocolate",
+              "label": "Dutch Dark Chocolate",
+              "priceModifier": 0
+            },
+            {
+              "value": "salted-caramel",
+              "label": "Sea Salt Caramel",
+              "priceModifier": 0
+            },
+            {
+              "value": "stracciatella",
+              "label": "Stracciatella (Sweet Cream & Choco Chip)",
+              "priceModifier": 0
+            },
+            {
+              "value": "dairy-free-sorbet",
+              "label": "Seasonal Fruit Sorbet (Dairy-Free)",
+              "priceModifier": 0
+            },
+            {
+              "value": "custom-choice",
+              "label": "Custom Flavor (Specify in order notes)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "sundae-topping-selection",
+          "type": "multi-select",
+          "label": "Choose Toppings (Select up to 3 included)",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "rainbow-sprinkles",
+              "label": "Rainbow Sprinkles",
+              "priceModifier": 0
+            },
+            {
+              "value": "chocolate-sprinkles",
+              "label": "Chocolate Vermicelli Sprinkles",
+              "priceModifier": 0
+            },
+            {
+              "value": "crushed-peanuts",
+              "label": "Roasted Chopped Peanuts",
+              "priceModifier": 0
+            },
+            {
+              "value": "toasted-almonds",
+              "label": "Toasted Sliced Almonds",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "crushed-oreos",
+              "label": "Crushed Oreo Cookies",
+              "priceModifier": 0
+            },
+            {
+              "value": "cookie-dough-bites",
+              "label": "Edible Cookie Dough Bites",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "brownie-chunks",
+              "label": "Fudge Brownie Chunks",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "mini-marshmallows",
+              "label": "Mini Marshmallows",
+              "priceModifier": 0
+            },
+            {
+              "value": "maraschino-cherries",
+              "label": "Extra Maraschino Cherries",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "gummy-bears",
+              "label": "Gummy Bears",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "sundae-sauce-drizzle",
+          "type": "single-select",
+          "label": "Sauce Drizzle Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "warm-hot-fudge",
+              "label": "Warm House Hot Fudge",
+              "priceModifier": 0
+            },
+            {
+              "value": "salted-caramel-sauce",
+              "label": "Warm Salted Butter Caramel",
+              "priceModifier": 0
+            },
+            {
+              "value": "wild-strawberry-coulis",
+              "label": "Wild Strawberry Coulis",
+              "priceModifier": 0
+            },
+            {
+              "value": "marshmallow-fluff",
+              "label": "Fluffy Marshmallow Cream",
+              "priceModifier": 0
+            },
+            {
+              "value": "nutella-drizzle",
+              "label": "Warm Hazelnut Nutella Drizzle",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "peanut-butter-sauce",
+              "label": "Warm Creamy Peanut Butter Sauce",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "no-sauce",
+              "label": "No Sauce Drizzle",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "sundae-whipped-cream-cherry",
+          "type": "single-select",
+          "label": "Whipped Cream & Crown Cherry",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "standard",
+              "label": "Fresh Whipped Cream & Maraschino Cherry",
+              "priceModifier": 0
+            },
+            {
+              "value": "whipped-cream-only",
+              "label": "Whipped Cream Only (No Cherry)",
+              "priceModifier": 0
+            },
+            {
+              "value": "cherry-only",
+              "label": "Maraschino Cherry Only (No Whipped Cream)",
+              "priceModifier": 0
+            },
+            {
+              "value": "none",
+              "label": "No Whipped Cream & No Cherry",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "milkshakes-and-floats",
+      "name": "Milkshakes & Floats",
+      "sortOrder": 3,
+      "description": "Thick hand-spun milkshakes, traditional malted shakes, and effervescent ice cream sodas and floats. Blended to order using fresh whole dairy milk or plant-based alternatives paired with generous scoops of ice cream, this section captures quick grab-and-go sipping traffic and nostalgic soda-fountain appeal.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥤",
+      "subSections": [
+        {
+          "id": "classic-milkshakes",
+          "name": "Classic Milkshakes",
+          "sortOrder": 1,
+          "description": "Traditional hand-spun shakes in staple favorites including chocolate, vanilla, strawberry, and real banana."
+        },
+        {
+          "id": "premium-shakes",
+          "name": "Premium Shakes",
+          "sortOrder": 2,
+          "description": "Indulgent loaded shakes featuring mixed-in cookies, peanut butter cups, espresso shots, salted caramel pretzel crunches, and gourmet flavor swirls."
+        },
+        {
+          "id": "ice-cream-floats",
+          "name": "Ice Cream Floats",
+          "sortOrder": 3,
+          "description": "Classic fizzy fountain drinks poured over floating scoops of creamy vanilla or gelato, featuring craft root beer, Mexican Coca-Cola, and orange cream soda."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "shake-size",
+          "type": "single-select",
+          "label": "Drink Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular (16 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large (24 oz)",
+              "priceModifier": 2.0
+            }
+          ]
+        },
+        {
+          "id": "extra-thick-toggle",
+          "type": "toggle",
+          "label": "Make It Extra Thick (Extra scoop of ice cream blended in)",
+          "isRequired": false
+        },
+        {
+          "id": "whipped-cream-toggle",
+          "type": "toggle",
+          "label": "Top with Fresh Whipped Cream",
+          "isRequired": false
+        },
+        {
+          "id": "shake-milk-base",
+          "type": "single-select",
+          "label": "Milk Base",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "whole-dairy-milk",
+              "label": "Whole Dairy Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "skim-milk",
+              "label": "Skim Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Oat Milk (Dairy-Free)",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk (Dairy-Free)",
+              "priceModifier": 0.85
+            }
+          ]
+        },
+        {
+          "id": "shake-malt-addition",
+          "type": "single-select",
+          "label": "Malt Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-shake",
+              "label": "Classic Milkshake (No Malt)",
+              "priceModifier": 0
+            },
+            {
+              "value": "malted-shake",
+              "label": "Add Old-Fashioned Malted Milk Powder",
+              "priceModifier": 0.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "waffles-and-crepes",
+      "name": "Waffles & Crêpes",
+      "sortOrder": 4,
+      "description": "Golden Belgian sugar-pearl waffles, delicate paper-thin sweet crêpes, and house-made waffle specialty vessels made fresh to order. Designed as warm, aromatic dessert carriers that create an irresistible hot-and-cold sensation when crowned with gelato scoops and warm chocolate drizzles.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧇",
+      "subSections": [
+        {
+          "id": "belgian-waffles",
+          "name": "Belgian Waffles",
+          "sortOrder": 1,
+          "description": "Thick, deep-pocketed Liège waffles featuring caramelized pearl sugar and crisp Brussels-style waffles baked golden on cast iron irons."
+        },
+        {
+          "id": "sweet-crepes",
+          "name": "Sweet Crêpes",
+          "sortOrder": 2,
+          "description": "Delicate French-style crêpes swirled thin on a hot griddle, filled and folded with rich spreads, fruits, and confectionery fillings."
+        },
+        {
+          "id": "waffle-cones-and-bowls",
+          "name": "Waffle Cones & Bowls",
+          "sortOrder": 3,
+          "description": "A la carte freshly pressed waffle bowls and gourmet specialty cone bases flavored with vanilla bean, cinnamon, and chocolate dips."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "waffle-crepe-toppings",
+          "type": "multi-select",
+          "label": "Choose Toppings & Accompaniments (Select up to 4)",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            {
+              "value": "scoop-vanilla-gelato",
+              "label": "Scoop of Vanilla Bean Gelato",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "scoop-chocolate-gelato",
+              "label": "Scoop of Dutch Chocolate Gelato",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "scoop-custom-gelato",
+              "label": "Scoop of Flavor of Choice",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "fresh-sliced-strawberries",
+              "label": "Fresh Sliced Strawberries",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "fresh-banana-slices",
+              "label": "Fresh Banana Slices",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "fresh-blueberries",
+              "label": "Fresh Blueberries",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "warm-nutella",
+              "label": "Warm Nutella Spread",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "warm-belgian-chocolate",
+              "label": "Warm Melted Belgian Dark Chocolate",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "salted-caramel-sauce",
+              "label": "House Salted Caramel Sauce",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "pure-maple-syrup",
+              "label": "Pure Canadian Maple Syrup",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "fresh-whipped-cream",
+              "label": "Fresh Whipped Cream",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "toasted-hazelnuts",
+              "label": "Toasted Crushed Hazelnuts",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "powdered-sugar",
+              "label": "Dusting of Powdered Sugar",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "serving-temperature-waffle",
+          "type": "single-select",
+          "label": "Preparation Style",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "fresh-warm",
+              "label": "Warm Fresh Off Iron (Recommended)",
+              "priceModifier": 0
+            },
+            {
+              "value": "room-temp",
+              "label": "Room Temperature / Crisped",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frozen-cakes-and-pies",
+      "name": "Frozen Cakes & Pies",
+      "sortOrder": 5,
+      "description": "Showcase of artisanal multi-layered ice cream cakes, frozen pies, and celebration dessert rolls. Serving planned birthdays, dinner parties, and milestone celebrations with options for immediate pickup or advance pre-orders complete with personalized plaque inscriptions and insulated travel packaging.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🎂",
+      "subSections": [
+        {
+          "id": "ready-to-go-frozen-cakes",
+          "name": "Ready-to-Go Frozen Cakes",
+          "sortOrder": 1,
+          "description": "Pre-made signature ice cream cakes kept at deep freeze (-18°C) in shop display freezers, ready for immediate counter pickup."
+        },
+        {
+          "id": "pre-order-custom-ice-cream-cakes",
+          "name": "Pre-Order Custom Ice Cream Cakes",
+          "sortOrder": 2,
+          "description": "Custom-built celebration cakes handcrafted to order, allowing customer choice of cake sponge base, dual gelato layers, crunchy center, and decorative frosting."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cake-size",
+          "type": "single-select",
+          "label": "Cake Size & Servings",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "6-inch",
+              "label": "6-inch Round (Serves 6–8 guests)",
+              "priceModifier": 0
+            },
+            {
+              "value": "8-inch",
+              "label": "8-inch Round (Serves 12–16 guests)",
+              "priceModifier": 18.0
+            },
+            {
+              "value": "10-inch",
+              "label": "10-inch Round (Serves 20–24 guests)",
+              "priceModifier": 32.0
+            },
+            {
+              "value": "sheet-cake",
+              "label": "Quarter Sheet (Serves 25–30 guests)",
+              "priceModifier": 45.0
+            }
+          ]
+        },
+        {
+          "id": "custom-inscription-text",
+          "type": "text-input",
+          "label": "Personalized Inscription (e.g., Happy Birthday Chloe!)",
+          "isRequired": false
+        },
+        {
+          "id": "cake-pickup-datetime",
+          "type": "date-picker",
+          "label": "Requested Pickup Date & Time",
+          "isRequired": true
+        },
+        {
+          "id": "celebration-accessories",
+          "type": "single-select",
+          "label": "Celebration Pack & Accessories",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Accessories",
+              "priceModifier": 0
+            },
+            {
+              "value": "candles-pack",
+              "label": "Sparkler / Pastel Candle Pack (Set of 12)",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "thermal-travel-tote",
+              "label": "Thermal Insulated Travel Bag with Ice Gel Pack",
+              "priceModifier": 5.0
+            },
+            {
+              "value": "complete-party-kit",
+              "label": "Full Party Kit (Candles, Cake Knife, 12 Plates & Spoons)",
+              "priceModifier": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "popsicles-and-frozen-bars",
+      "name": "Popsicles & Frozen Bars",
+      "sortOrder": 6,
+      "description": "Handmade small-batch fruit popsicles, gourmet dipped cream bars, and novelty frozen sticks on wooden paddles. Provides an easily portable, no-mess frozen treat popular for children, summer strolls, and impulse grab-and-go purchases from the reach-in showcase freezer.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍢",
+      "subSections": [
+        {
+          "id": "fruit-popsicles",
+          "name": "Fruit Popsicles",
+          "sortOrder": 1,
+          "description": "Refreshing, all-natural water- and juice-based ice pops made from real pureed fresh fruits, berries, citrus, and herbal infusions."
+        },
+        {
+          "id": "cream-bars",
+          "name": "Cream Bars",
+          "sortOrder": 2,
+          "description": "Rich dairy and oat-cream gelato bars on sticks, coated in Belgian chocolate shells, crushed nuts, and caramelized crunch layers."
+        },
+        {
+          "id": "novelty-bars",
+          "name": "Novelty Bars",
+          "sortOrder": 3,
+          "description": "Playful frozen bars, layered rainbow push-pops, ice cream cookie sandwiches, and dipped cheesecake bars."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "bar-pack-quantity",
+          "type": "single-select",
+          "label": "Pack Quantity",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-bar",
+              "label": "Single Bar (Individually Wrapped)",
+              "priceModifier": 0
+            },
+            {
+              "value": "box-of-4",
+              "label": "Box of 4 (Mix or Match Flavors)",
+              "priceModifier": 10.5
+            },
+            {
+              "value": "box-of-8",
+              "label": "Box of 8 (Party Pack in Insulated Pouch)",
+              "priceModifier": 20.0
+            }
+          ]
+        },
+        {
+          "id": "dipping-shell-finish",
+          "type": "single-select",
+          "label": "Custom Dip Shell (For made-to-order dipping bars)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "as-is",
+              "label": "Standard / As Described",
+              "priceModifier": 0
+            },
+            {
+              "value": "dark-chocolate-dip",
+              "label": "Dip in Warm Belgian Dark Chocolate",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "white-chocolate-dip",
+              "label": "Dip in Belgian White Chocolate",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "ruby-chocolate-dip",
+              "label": "Dip in Fruity Ruby Chocolate",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "chocolate-and-crushed-almonds",
+              "label": "Dark Chocolate Dip with Roasted Almonds",
+              "priceModifier": 1.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "toppings-and-sauces",
+      "name": "Toppings & Sauces",
+      "sortOrder": 7,
+      "description": "Master catalog of toppings, warm confectionery sauce ramekins, and take-home dessert jars. Enables customers to purchase extra side portions of toppings for custom scooping or retail jars of signature house fudge and caramel to stock their home pantry.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍫",
+      "subSections": [
+        {
+          "id": "dry-toppings",
+          "name": "Dry Toppings",
+          "sortOrder": 1,
+          "description": "Master selection of crunchy garnishes including rainbow sprinkles, toasted nuts, chopped candy bars, pretzel pieces, and biscuit crumbles."
+        },
+        {
+          "id": "wet-toppings",
+          "name": "Wet Toppings",
+          "sortOrder": 2,
+          "description": "Warm and cold dessert sauces including house hot fudge, sea salt caramel, berry coulis, marshmallow fluff, and Nutella."
+        },
+        {
+          "id": "fresh-fruit",
+          "name": "Fresh Fruit",
+          "sortOrder": 3,
+          "description": "Fresh hand-cut seasonal fruits and berries including diced strawberries, fresh blueberries, banana slices, and mango cubes."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "topping-portion-size",
+          "type": "single-select",
+          "label": "Portion & Packaging Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-side-cup",
+              "label": "Single Side Cup (2 oz ramekin)",
+              "priceModifier": 0
+            },
+            {
+              "value": "double-side-cup",
+              "label": "Double Portion Cup (4 oz cup)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "retail-take-home-jar",
+              "label": "Take-Home Glass Jar (8 oz / Sauces & Spreads)",
+              "priceModifier": 6.5
+            }
+          ]
+        },
+        {
+          "id": "sauce-serving-temperature",
+          "type": "single-select",
+          "label": "Sauce Serving Temperature",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "warm",
+              "label": "Warm (Freshly warmed in warmer well)",
+              "priceModifier": 0
+            },
+            {
+              "value": "ambient-chilled",
+              "label": "Room Temperature / Chilled (Best for travel)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beverages",
+      "name": "Beverages",
+      "sortOrder": 8,
+      "description": "Specialty hot espresso drinks, velvety sipping hot chocolates, affogatos, and chilled beverages. Curated to complement rich creamy frozen desserts, provide warmth during cooler months, cleanse the palate between tastings, and offer essential refreshments for accompanying guests.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "☕",
+      "subSections": [
+        {
+          "id": "hot-drinks",
+          "name": "Hot Drinks",
+          "sortOrder": 1,
+          "description": "Barista espresso drinks, flat whites, cappuccinos, traditional affogatos poured over gelato, and rich European hot chocolates."
+        },
+        {
+          "id": "cold-drinks",
+          "name": "Cold Drinks",
+          "sortOrder": 2,
+          "description": "Still and sparkling mineral waters, craft sodas, iced coffees, cold brews, and refreshing natural fruit juices."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "beverage-size",
+          "type": "single-select",
+          "label": "Beverage Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular (12 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large (16 oz)",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "beverage-milk-choice",
+          "type": "single-select",
+          "label": "Milk Choice (For coffee & hot chocolate)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-dairy-milk",
+              "label": "Whole Dairy Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "skim-milk",
+              "label": "Skim Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Oat Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "affogato-ice-cream-scoop",
+          "type": "single-select",
+          "label": "Gelato Scoop for Affogato (Double espresso over gelato)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "Standard Beverage (No Scoop)",
+              "priceModifier": 0
+            },
+            {
+              "value": "vanilla-bean-scoop",
+              "label": "Add Madagascar Vanilla Bean Scoop",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "hazelnut-scoop",
+              "label": "Add Roasted Hazelnut Gelato Scoop",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "fior-di-latte-scoop",
+              "label": "Add Fior di Latte (Sweet Cream) Scoop",
+              "priceModifier": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "party-and-catering-packs",
+      "name": "Party & Catering Packs",
+      "sortOrder": 9,
+      "description": "Turnkey frozen dessert catering packages, bulk wholesale tubs, and DIY interactive sundae bar kits for home parties, school events, weddings, and corporate celebrations. Designed with convenient insulated coolers and service tableware to make hosting effortless.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🎉",
+      "subSections": [
+        {
+          "id": "party-packs",
+          "name": "Party Packs",
+          "sortOrder": 1,
+          "description": "Pre-portioned individual scoop cups with spoons and napkins, packed in thermal insulated boxes for 10 or 20 guests."
+        },
+        {
+          "id": "catering-tubs",
+          "name": "Catering Tubs",
+          "sortOrder": 2,
+          "description": "Commercial-depth 2.5-liter and 5-liter stainless or food-grade tubs of gelato and ice cream designed for display dipping cabinets and large catered buffets."
+        },
+        {
+          "id": "sundae-bar-kit",
+          "name": "Sundae Bar Kit",
+          "sortOrder": 3,
+          "description": "All-inclusive DIY sundae bar party kits complete with assorted pints, dry and wet toppings, sprinkles, serving dishes, scoops, and souvenir cups."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "party-pack-guest-count",
+          "type": "single-select",
+          "label": "Guest Count / Serving Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "party-10",
+              "label": "Small Gathering Pack (Serves 10 guests / 2 flavors)",
+              "priceModifier": 0
+            },
+            {
+              "value": "party-20",
+              "label": "Medium Party Pack (Serves 20 guests / 4 flavors)",
+              "priceModifier": 38.0
+            },
+            {
+              "value": "party-35",
+              "label": "Large Event Pack (Serves 35 guests / 6 flavors)",
+              "priceModifier": 85.0
+            },
+            {
+              "value": "catering-tub-2-5l",
+              "label": "Single Catering Tub (2.5 Liter / ~25 Scoops)",
+              "priceModifier": 25.0
+            },
+            {
+              "value": "catering-tub-5l",
+              "label": "Large Commercial Tub (5.0 Liter / ~50 Scoops)",
+              "priceModifier": 55.0
+            }
+          ]
+        },
+        {
+          "id": "party-pickup-date",
+          "type": "date-picker",
+          "label": "Event Date & Pickup Time",
+          "isRequired": true
+        },
+        {
+          "id": "cooler-ice-packing",
+          "type": "single-select",
+          "label": "Thermal Preservation & Dry Ice",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-bag",
+              "label": "Standard Insulated Box (Holds frozen up to 1 hour)",
+              "priceModifier": 0
+            },
+            {
+              "value": "dry-ice-pack",
+              "label": "Dry Ice Thermal Packing (Holds frozen up to 6 hours)",
+              "priceModifier": 10.0
+            },
+            {
+              "value": "customer-cooler",
+              "label": "Customer Bringing Own Cooler with Ice",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasonal-and-limited-flavors",
+      "name": "Seasonal & Limited Flavors",
+      "sortOrder": 10,
+      "description": "Special rotating micro-batch churns, seasonal harvest releases, and holiday creations highlighting the best produce and flavors of each season. This dynamic section generates excitement and recurring customer visits by offering exclusive, limited-run frozen treats.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "✨",
+      "subSections": [
+        {
+          "id": "summer-refreshers-and-fruit-sorbets",
+          "name": "Summer Refreshers & Fruit Sorbets",
+          "sortOrder": 1,
+          "description": "Vibrant warm-weather churns showcasing ripe summer melons, stone fruits, tropical passion fruit, and cooling citrus mint infusions."
+        },
+        {
+          "id": "autumn-harvest-and-spiced-flavors",
+          "name": "Autumn Harvest & Spiced Flavors",
+          "sortOrder": 2,
+          "description": "Cozy fall creations featuring spiced pumpkin, roasted apple cider swirl, toasted pecans, and bourbon cinnamon."
+        },
+        {
+          "id": "winter-holiday-specialties",
+          "name": "Winter Holiday Specialties",
+          "sortOrder": 3,
+          "description": "Festive winter churns including candy cane peppermint crunch, gingerbread speculoos, eggnog custard, and dark chocolate orange truffle."
+        },
+        {
+          "id": "spring-floral-and-botanical-creations",
+          "name": "Spring Floral & Botanical Creations",
+          "sortOrder": 4,
+          "description": "Delicate floral and herb-infused churns including lavender honey, elderflower strawberry, matcha green tea, and rose water raspberry."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "seasonal-scoop-count",
+          "type": "single-select",
+          "label": "Scoop Count",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-scoop",
+              "label": "Single Scoop (1 Seasonal Flavor)",
+              "priceModifier": 0
+            },
+            {
+              "value": "double-scoop",
+              "label": "Double Scoop (Up to 2 Flavors)",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "triple-scoop",
+              "label": "Triple Scoop (Up to 3 Flavors)",
+              "priceModifier": 4.5
+            },
+            {
+              "value": "tasting-flight",
+              "label": "Seasonal Tasting Flight (4 Mini-Scoops on Tasting Paddle)",
+              "priceModifier": 5.5
+            }
+          ]
+        },
+        {
+          "id": "seasonal-serving-vessel",
+          "type": "single-select",
+          "label": "Serving Vessel",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "cup",
+              "label": "Eco Paper Cup & Spoon",
+              "priceModifier": 0
+            },
+            {
+              "value": "sugar-cone",
+              "label": "Crispy Sugar Cone",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "waffle-cone",
+              "label": "Freshly Baked Waffle Cone",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "waffle-bowl",
+              "label": "Freshly Baked Waffle Bowl",
+              "priceModifier": 1.5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "scoopCounter",
+      "name": "Scoop Counter & Flavor Allocator",
+      "description": "Interactive scoop counter allowing customers to select their preferred number of scoops (single, double, triple, flight) and assign individual flavors per scoop without pricing errors.",
+      "isEnabled": true,
+      "config": {
+        "maxScoopsPerServing": 4,
+        "allowSplitScoops": true,
+        "showFlavorAvailability": true,
+        "targetSectionIds": [
+          "gelato-and-ice-cream",
+          "seasonal-and-limited-flavors"
+        ]
+      }
+    },
+    {
+      "id": "toppingBuilder",
+      "name": "Interactive Topping Builder",
+      "description": "Step-by-step topping customizer allowing customers to mix-and-match dry toppings, warm confectionery drizzles, whipped toppings, and fresh fruits with live price tallying.",
+      "isEnabled": true,
+      "config": {
+        "maxFreeToppings": 0,
+        "allowMultipleSauces": true,
+        "showToppingCategories": true,
+        "targetSectionIds": [
+          "gelato-and-ice-cream",
+          "sundaes",
+          "waffles-and-crepes",
+          "toppings-and-sauces"
+        ]
+      }
+    },
+    {
+      "id": "preOrder",
+      "name": "Advance Pre-Order",
+      "description": "Enables customers to schedule advance pickup orders for whole frozen cakes, catering tubs, and party packs with configurable lead times and daily cutoff windows.",
+      "isEnabled": true,
+      "config": {
+        "minLeadTimeHours": 24,
+        "maxAdvanceDays": 30,
+        "dailyCutoffTime": "18:00",
+        "applicableSections": [
+          "frozen-cakes-and-pies",
+          "party-and-catering-packs"
+        ]
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Tagging",
+      "description": "Highlights common frozen dessert allergens (dairy, tree nuts, peanuts, eggs, gluten, soy) and dietary indicators (vegan, dairy-free, gluten-free) on cards and modal windows.",
+      "isEnabled": true,
+      "config": {
+        "displayFormat": "badge-and-modal",
+        "highlightAllergens": [
+          "contains-dairy",
+          "contains-nuts",
+          "contains-peanuts",
+          "contains-gluten",
+          "contains-eggs",
+          "contains-soy"
+        ],
+        "dietaryFilters": [
+          "dairy-free",
+          "vegan",
+          "gluten-free",
+          "nut-free",
+          "egg-free"
+        ]
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Real-Time Tub & Flavor Inventory Badges",
+      "description": "Live stock indicators displaying when artisanal tubs are freshly churned, running low (low-tub alert), or sold out for the day, keeping the digital menu synchronized with display dipping cabinets.",
+      "isEnabled": true,
+      "config": {
+        "showLowStockWarning": true,
+        "lowStockThreshold": 3,
+        "showSoldOut": true,
+        "showFreshlyChurnedBadge": true
+      }
+    },
+    {
+      "id": "customInscription",
+      "name": "Custom Cake & Plaque Inscription",
+      "description": "Enables customers ordering ice cream cakes and pies to provide personalized chocolate piped messages, custom edible plaques, and greeting notes.",
+      "isEnabled": true,
+      "config": {
+        "maxCharacterCount": 40,
+        "includePlaqueType": true,
+        "allowGiftCardMessage": true,
+        "targetSectionIds": [
+          "frozen-cakes-and-pies"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

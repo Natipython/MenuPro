@@ -1,0 +1,177 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Business Menu Template Schema",
+  "description": "Defines the structure that all business type menu templates must follow. Each template describes the menu sections (not individual products) for a specific business type.",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["id", "name", "slug", "icon", "description", "category", "sections", "systemFeatures", "metadata"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique template identifier (e.g., 'bakery-and-pastry')"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable template name (e.g., 'Bakery & Pastry')"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-safe identifier"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Emoji or icon identifier for the template"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief explanation of what this business type is and how it differs from similar types"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["bakery", "cafe", "restaurant", "bar", "juice", "hybrid"],
+      "description": "Primary business category for filtering"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Searchable tags (e.g., ['bakery', 'pastry', 'bread', 'cakes'])"
+    },
+    "sections": {
+      "type": "array",
+      "description": "Ordered list of menu sections for this business type",
+      "items": {
+        "$ref": "#/definitions/Section"
+      }
+    },
+    "systemFeatures": {
+      "type": "array",
+      "description": "System-level features this template requires",
+      "items": {
+        "$ref": "#/definitions/SystemFeature"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "version": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "author": { "type": "string" }
+      }
+    }
+  },
+  "definitions": {
+    "Section": {
+      "type": "object",
+      "required": ["id", "name", "sortOrder", "description", "isRequired", "isDefaultVisible"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique section identifier within this template"
+        },
+        "name": {
+          "type": "string",
+          "description": "Display name of the section"
+        },
+        "sortOrder": {
+          "type": "integer",
+          "description": "Default display order (1-based)"
+        },
+        "description": {
+          "type": "string",
+          "description": "What belongs in this section and why"
+        },
+        "isRequired": {
+          "type": "boolean",
+          "description": "Whether this section is essential for the business type (cannot be removed)"
+        },
+        "isDefaultVisible": {
+          "type": "boolean",
+          "description": "Whether this section is shown by default (owner can toggle)"
+        },
+        "icon": {
+          "type": "string",
+          "description": "Section-level emoji or icon"
+        },
+        "subSections": {
+          "type": "array",
+          "description": "Optional sub-categories within this section",
+          "items": {
+            "$ref": "#/definitions/SubSection"
+          }
+        },
+        "itemOptions": {
+          "type": "array",
+          "description": "Configurable options that items in this section commonly need",
+          "items": {
+            "$ref": "#/definitions/ItemOption"
+          }
+        },
+        "timeBehavior": {
+          "type": "object",
+          "description": "Time-based availability rules for this section",
+          "properties": {
+            "isTimeRestricted": { "type": "boolean" },
+            "defaultAvailableFrom": { "type": "string", "description": "HH:MM format" },
+            "defaultAvailableUntil": { "type": "string", "description": "HH:MM format" },
+            "note": { "type": "string" }
+          }
+        }
+      }
+    },
+    "SubSection": {
+      "type": "object",
+      "required": ["id", "name", "sortOrder"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "sortOrder": { "type": "integer" },
+        "description": { "type": "string" }
+        }
+    },
+    "ItemOption": {
+      "type": "object",
+      "required": ["id", "type", "label"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["single-select", "multi-select", "text-input", "number-input", "date-picker", "toggle"],
+          "description": "The UI control type for this option"
+        },
+        "label": {
+          "type": "string",
+          "description": "Display label for the option"
+        },
+        "choices": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": { "type": "string" },
+              "label": { "type": "string" },
+              "priceModifier": { "type": "number", "description": "Price adjustment (positive or negative)" }
+            }
+          },
+          "description": "Available choices (for single-select and multi-select types)"
+        },
+        "isRequired": { "type": "boolean" },
+        "maxSelections": { "type": "integer", "description": "Max selections for multi-select" }
+      }
+    },
+    "SystemFeature": {
+      "type": "object",
+      "required": ["id", "name", "isEnabled"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "isEnabled": { "type": "boolean" },
+        "config": {
+          "type": "object",
+          "description": "Feature-specific configuration"
+        }
+      }
+    }
+  }
+}

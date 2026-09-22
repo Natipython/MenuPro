@@ -1,0 +1,1459 @@
+{
+  "id": "fast-food-qsr",
+  "name": "Fast Food / Quick Service Restaurant (QSR)",
+  "slug": "fast-food-qsr",
+  "icon": "🍔",
+  "description": "A high-speed, counter-service and drive-through dining model centered around numbered combo meals, size upgrades, rapid kitchen turnaround, and handheld convenience. Built for high-volume order throughput, modular customization, and quick-service operations.",
+  "category": "restaurant",
+  "tags": [
+    "fast-food",
+    "qsr",
+    "burgers",
+    "chicken",
+    "combo",
+    "drive-through",
+    "quick-service"
+  ],
+  "sections": [
+    {
+      "id": "combo-meals",
+      "name": "Combo Meals",
+      "sortOrder": 1,
+      "description": "Numbered value combinations pairing a featured main entrée (burger, sandwich, or fried chicken) with a signature hot side and a beverage at a bundled price point. Engineered for quick customer decision-making, rapid drive-through ordering, and high-margin upselling through size upgrades and drink swaps.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍱",
+      "subSections": [
+        {
+          "id": "value-combos",
+          "name": "Value Combos",
+          "sortOrder": 1,
+          "description": "Budget-friendly numbered meal deals pairing classic single-patty burgers or finger-food favorites with regular fries and fountain drinks."
+        },
+        {
+          "id": "premium-combos",
+          "name": "Premium Combos",
+          "sortOrder": 2,
+          "description": "Deluxe meal combinations featuring multi-patty specialty burgers, gourmet chicken sandwiches, or large tender boxes paired with upgraded sides and beverages."
+        },
+        {
+          "id": "family-bundles",
+          "name": "Family Bundles",
+          "sortOrder": 3,
+          "description": "Multi-person meal packages bundling multiple entrées, family-sized fry cartons, assorted dipping sauces, and multiple beverages designed for groups and family dining."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "combo-meal-size",
+          "type": "single-select",
+          "label": "Combo Size & Portion Upgrade",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular Combo (Medium Fries & Medium Drink)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-upsell",
+              "label": "Medium Upgrade (Large Fries & Medium Drink)",
+              "priceModifier": 0.8
+            },
+            {
+              "value": "large-upsell",
+              "label": "Large Combo Upgrade (Large Fries & Large Drink)",
+              "priceModifier": 1.4
+            },
+            {
+              "value": "super-size-upsell",
+              "label": "Super-Size / Extra Large Combo (Family Fries & XL Drink)",
+              "priceModifier": 2.2
+            }
+          ]
+        },
+        {
+          "id": "combo-drink-selection",
+          "type": "single-select",
+          "label": "Included Beverage",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "classic-cola",
+              "label": "Classic Cola",
+              "priceModifier": 0
+            },
+            {
+              "value": "diet-cola",
+              "label": "Diet / Zero Sugar Cola",
+              "priceModifier": 0
+            },
+            {
+              "value": "lemon-lime-soda",
+              "label": "Lemon-Lime Soda",
+              "priceModifier": 0
+            },
+            {
+              "value": "ginger-ale",
+              "label": "Ginger Ale",
+              "priceModifier": 0
+            },
+            {
+              "value": "iced-tea-unsweet",
+              "label": "Unsweetened Fresh Iced Tea",
+              "priceModifier": 0
+            },
+            {
+              "value": "iced-tea-sweet",
+              "label": "Sweet Southern Iced Tea",
+              "priceModifier": 0
+            },
+            {
+              "value": "lemonade",
+              "label": "Homestyle Lemonade",
+              "priceModifier": 0.3
+            },
+            {
+              "value": "bottled-spring-water",
+              "label": "Bottled Spring Water (500ml)",
+              "priceModifier": 0
+            },
+            {
+              "value": "orange-juice",
+              "label": "100% Pure Orange Juice",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "milkshake-substitute",
+              "label": "Substitute Thick Hand-Spun Shake",
+              "priceModifier": 2.2
+            }
+          ]
+        },
+        {
+          "id": "combo-drink-ice",
+          "type": "single-select",
+          "label": "Drink Ice Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "light-ice",
+              "label": "Light Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "No Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-ice",
+              "label": "Extra Ice",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "combo-side-selection",
+          "type": "single-select",
+          "label": "Included Side Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "french-fries",
+              "label": "Classic Golden Shoestring Fries",
+              "priceModifier": 0
+            },
+            {
+              "value": "curly-fries",
+              "label": "Seasoned Curly Fries",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "waffle-fries",
+              "label": "Crispy Waffle Potato Fries",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "onion-rings",
+              "label": "Golden Battered Onion Rings",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "mozzarella-sticks",
+              "label": "Mozzarella Sticks with Marinara (3 pcs)",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "side-garden-salad",
+              "label": "Side Garden Salad with House Dressing",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "apple-slices",
+              "label": "Chilled Fresh Apple Slices",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "combo-dipping-sauce",
+          "type": "single-select",
+          "label": "Complimentary Dipping Sauce",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Dipping Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "signature-fry-sauce",
+              "label": "Signature House Fry Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "smoky-bbq",
+              "label": "Smoky Barbecue Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "creamy-ranch",
+              "label": "Buttermilk Herb Ranch",
+              "priceModifier": 0
+            },
+            {
+              "value": "honey-mustard",
+              "label": "Golden Honey Mustard",
+              "priceModifier": 0
+            },
+            {
+              "value": "spicy-buffalo",
+              "label": "Spicy Buffalo Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "warm-cheese-dip",
+              "label": "Warm Melted Cheddar Dip",
+              "priceModifier": 0.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "burgers-and-sandwiches",
+      "name": "Burgers & Sandwiches",
+      "sortOrder": 2,
+      "description": "The foundational savory handheld core of the QSR menu, spotlighting griddled pure beef patties, crispy battered or grilled chicken breast fillets, and flaky wild fish or vegetarian alternatives served on toasted buns. Engineered for rapid line assembly, customizable stack heights, à la carte ordering, and seamless combo conversion.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍔",
+      "subSections": [
+        {
+          "id": "classic-burgers",
+          "name": "Classic Burgers",
+          "sortOrder": 1,
+          "description": "Traditional single and double beef patty burgers with dill pickles, minced onions, ketchup, and mustard on toasted sesame seed buns."
+        },
+        {
+          "id": "premium-burgers",
+          "name": "Premium Burgers",
+          "sortOrder": 2,
+          "description": "Thick gourmet beef patties, brioche bun builds, smoked bacon stacks, specialty melted cheeses, and signature savory sauces."
+        },
+        {
+          "id": "chicken-sandwiches",
+          "name": "Chicken Sandwiches",
+          "sortOrder": 3,
+          "description": "Buttermilk-marinated crispy fried chicken fillets and tender grilled chicken breasts served on toasted buns with crisp lettuce, pickles, and flavored mayos."
+        },
+        {
+          "id": "fish-and-specialty",
+          "name": "Fish & Specialty",
+          "sortOrder": 4,
+          "description": "Golden panko-crusted wild fish fillets with creamy tartar sauce, plant-based vegan burgers, and rotating regional specialty handhelds."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "burger-make-it-a-meal",
+          "type": "toggle",
+          "label": "Make It a Combo Meal (Add Medium Fries & Drink)",
+          "isRequired": false
+        },
+        {
+          "id": "patty-size-build",
+          "type": "single-select",
+          "label": "Patty Size & Stacking",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "single-patty",
+              "label": "Single Patty (Standard)",
+              "priceModifier": 0
+            },
+            {
+              "value": "double-patty",
+              "label": "Double Patty",
+              "priceModifier": 2.25
+            },
+            {
+              "value": "triple-patty",
+              "label": "Triple Patty Mega Stack",
+              "priceModifier": 4.25
+            }
+          ]
+        },
+        {
+          "id": "burger-bun-style",
+          "type": "single-select",
+          "label": "Bun / Carrier Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "toasted-sesame-bun",
+              "label": "Toasted Sesame Seed Bun",
+              "priceModifier": 0
+            },
+            {
+              "value": "buttery-brioche-bun",
+              "label": "Buttery Brioche Bun",
+              "priceModifier": 0.6
+            },
+            {
+              "value": "lettuce-wrap",
+              "label": "Crisp Lettuce Wrap (Gluten-Free & Low-Carb)",
+              "priceModifier": 0
+            },
+            {
+              "value": "gluten-free-bun",
+              "label": "Gluten-Free Artisan Bun",
+              "priceModifier": 1.2
+            }
+          ]
+        },
+        {
+          "id": "burger-extras",
+          "type": "multi-select",
+          "label": "Add Extras & Upgrades",
+          "isRequired": false,
+          "maxSelections": 5,
+          "choices": [
+            {
+              "value": "extra-american-cheese",
+              "label": "Extra American Cheese Slice",
+              "priceModifier": 0.65
+            },
+            {
+              "value": "sharp-cheddar-slice",
+              "label": "Sharp Cheddar Cheese Slice",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "crispy-bacon-strips",
+              "label": "Crispy Smoked Bacon (2 Strips)",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "extra-beef-patty",
+              "label": "Extra Grilled Beef Patty",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "sliced-jalapenos",
+              "label": "Pickled Sliced Jalapeños",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "grilled-onions",
+              "label": "Caramelized Grilled Onions",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "sauteed-mushrooms",
+              "label": "Sautéed Garlic Mushrooms",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "fresh-avocado",
+              "label": "Fresh Sliced Avocado",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "fried-egg",
+              "label": "Sunny-Side Fried Egg",
+              "priceModifier": 1.2
+            }
+          ]
+        },
+        {
+          "id": "burger-condiment-customization",
+          "type": "multi-select",
+          "label": "Omit Ingredients (Special Kitchen Instructions)",
+          "isRequired": false,
+          "maxSelections": 7,
+          "choices": [
+            {
+              "value": "no-onions",
+              "label": "No Onions",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-pickles",
+              "label": "No Pickles",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ketchup",
+              "label": "No Ketchup",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-mustard",
+              "label": "No Mustard",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-mayo",
+              "label": "No Mayonnaise",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-lettuce",
+              "label": "No Lettuce",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-tomato",
+              "label": "No Tomato",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chicken-and-tenders",
+      "name": "Chicken & Tenders",
+      "sortOrder": 3,
+      "description": "Freshly seasoned and pressure-fried bone-in chicken cuts, hand-breaded white meat tenders, crispy breast nuggets, and tossed wings. High-velocity handheld finger foods optimized for speed of service, dipping rituals, and customizable piece-count packages.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍗",
+      "subSections": [
+        {
+          "id": "fried-chicken",
+          "name": "Fried Chicken",
+          "sortOrder": 1,
+          "description": "Golden crispy bone-in fried chicken cuts (drumsticks, thighs, breasts, wings) seasoned in classic herb or spicy pepper crust."
+        },
+        {
+          "id": "tenders-and-strips",
+          "name": "Tenders & Strips",
+          "sortOrder": 2,
+          "description": "All-white-meat whole chicken breast tenderloins marinated in buttermilk, hand-breaded, and fried to golden perfection."
+        },
+        {
+          "id": "nuggets",
+          "name": "Nuggets",
+          "sortOrder": 3,
+          "description": "Bite-sized crispy breaded chicken breast nuggets served with signature dipping sauces."
+        },
+        {
+          "id": "wings",
+          "name": "Wings",
+          "sortOrder": 4,
+          "description": "Crispy traditional bone-in and breaded boneless chicken wings tossed in signature savory, tangy, or fiery sauces."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "chicken-piece-count",
+          "type": "single-select",
+          "label": "Piece Count Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "3-pieces",
+              "label": "3 Pieces (Snack Size)",
+              "priceModifier": 0
+            },
+            {
+              "value": "5-pieces",
+              "label": "5 Pieces (Individual Meal)",
+              "priceModifier": 3.2
+            },
+            {
+              "value": "10-pieces",
+              "label": "10 Pieces (Hungry / Sharing)",
+              "priceModifier": 8.5
+            },
+            {
+              "value": "20-pieces",
+              "label": "20 Pieces (Party / Family Pack)",
+              "priceModifier": 16.5
+            }
+          ]
+        },
+        {
+          "id": "chicken-sauce-choice",
+          "type": "multi-select",
+          "label": "Dipping Sauce Selection",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            {
+              "value": "smoky-bbq",
+              "label": "Smoky Barbecue",
+              "priceModifier": 0
+            },
+            {
+              "value": "creamy-ranch",
+              "label": "Buttermilk Ranch",
+              "priceModifier": 0
+            },
+            {
+              "value": "honey-mustard",
+              "label": "Golden Honey Mustard",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet-and-sour",
+              "label": "Sweet & Sour Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "buffalo-hot",
+              "label": "Spicy Buffalo Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "garlic-parmesan",
+              "label": "Creamy Garlic Parmesan",
+              "priceModifier": 0
+            },
+            {
+              "value": "sriracha-mayo",
+              "label": "Spicy Sriracha Mayo",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-sauce-cup",
+              "label": "Add Extra Dipping Cup",
+              "priceModifier": 0.6
+            }
+          ]
+        },
+        {
+          "id": "chicken-spice-level",
+          "type": "single-select",
+          "label": "Spice & Heat Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "original-mild",
+              "label": "Original Recipe / Mild (No Heat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-zesty",
+              "label": "Zesty Medium Heat",
+              "priceModifier": 0
+            },
+            {
+              "value": "spicy-hot",
+              "label": "Spicy Hot Pepper",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-hot-ghost",
+              "label": "Extra Hot Fiery Ghost Pepper",
+              "priceModifier": 0.5
+            }
+          ]
+        },
+        {
+          "id": "chicken-prep-style",
+          "type": "single-select",
+          "label": "Preparation Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "crispy-breaded",
+              "label": "Extra Crispy Breaded & Fried",
+              "priceModifier": 0
+            },
+            {
+              "value": "naked-grilled",
+              "label": "Naked Flame-Grilled",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sides-and-sharers",
+      "name": "Sides & Sharers",
+      "sortOrder": 4,
+      "description": "Crisp potato sides, hot battered accompaniments, and refreshing garden salads designed to round out individual entrées or be enjoyed communally. High-margin impulse additions crucial for increasing average check sizes and fulfilling diverse craving profiles.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍟",
+      "subSections": [
+        {
+          "id": "fries-and-potato",
+          "name": "Fries & Potato",
+          "sortOrder": 1,
+          "description": "Golden shoestring French fries, waffle-cut potato chips, seasoned curly fries, and loaded cheesy tater tots."
+        },
+        {
+          "id": "onion-rings-and-hot-sides",
+          "name": "Onion Rings & Hot Sides",
+          "sortOrder": 2,
+          "description": "Beer-battered onion rings, golden melted mozzarella sticks with marinara, crispy corn dogs, and fried mac & cheese bites."
+        },
+        {
+          "id": "salads",
+          "name": "Salads",
+          "sortOrder": 3,
+          "description": "Fresh side garden salads with crisp romaine and tomatoes, chopped Caesar salads with croutons, and creamy crunchy coleslaw."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "side-portion-size",
+          "type": "single-select",
+          "label": "Portion Size Upgrade",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "small",
+              "label": "Small",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "large",
+              "label": "Large",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "family-share",
+              "label": "Family Share Bucket",
+              "priceModifier": 3.5
+            }
+          ]
+        },
+        {
+          "id": "side-seasoning-flavor",
+          "type": "single-select",
+          "label": "Seasoning Dust",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "classic-salt",
+              "label": "Classic Sea Salt",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-salt",
+              "label": "No Salt (Fresh Drop)",
+              "priceModifier": 0
+            },
+            {
+              "value": "cajun-spice",
+              "label": "Spicy Cajun Dust",
+              "priceModifier": 0.35
+            },
+            {
+              "value": "garlic-parmesan",
+              "label": "Garlic & Herb Parmesan Dust",
+              "priceModifier": 0.45
+            }
+          ]
+        },
+        {
+          "id": "side-dipping-sauce",
+          "type": "single-select",
+          "label": "Dipping Sauce Cup",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Dipping Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "ketchup-packets",
+              "label": "Complimentary Ketchup",
+              "priceModifier": 0
+            },
+            {
+              "value": "signature-fry-sauce",
+              "label": "Signature Fry Sauce Cup",
+              "priceModifier": 0.6
+            },
+            {
+              "value": "creamy-ranch",
+              "label": "Buttermilk Ranch Cup",
+              "priceModifier": 0.6
+            },
+            {
+              "value": "warm-cheese-sauce",
+              "label": "Warm Liquid Cheddar Cup",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "marinara-cup",
+              "label": "Marinara Dipping Cup",
+              "priceModifier": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "breakfast",
+      "name": "Breakfast",
+      "sortOrder": 5,
+      "description": "Morning quick-service favorites served exclusively during early operating hours. Features griddled eggs, savory breakfast meats, golden crispy hash browns, toasted English muffins, flaky buttermilk biscuits, breakfast burritos, and sweet griddle pancakes built for fast commuter throughput.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍳",
+      "timeBehavior": {
+        "isTimeRestricted": true,
+        "defaultAvailableFrom": "06:00",
+        "defaultAvailableUntil": "11:00",
+        "note": "Breakfast items are freshly prepared and served exclusively daily from 06:00 to 11:00."
+      },
+      "subSections": [
+        {
+          "id": "breakfast-sandwiches",
+          "name": "Breakfast Sandwiches",
+          "sortOrder": 1,
+          "description": "Warm breakfast sandwiches on toasted English muffins, buttermilk biscuits, brioche buns, or croissants layered with egg, melted cheese, and breakfast meats."
+        },
+        {
+          "id": "breakfast-platters",
+          "name": "Breakfast Platters",
+          "sortOrder": 2,
+          "description": "Hearty morning platters pairing eggs cooked to order with sausage patties or bacon, golden hash browns, and toasted bread."
+        },
+        {
+          "id": "pancakes-and-wraps",
+          "name": "Pancakes & Wraps",
+          "sortOrder": 3,
+          "description": "Fluffy golden buttermilk pancake stacks with warm syrup, handheld morning breakfast burritos, and toasted breakfast roll-ups."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "breakfast-egg-style",
+          "type": "single-select",
+          "label": "Egg Preparation Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "folded-scrambled",
+              "label": "Fluffy Folded Scrambled Egg",
+              "priceModifier": 0
+            },
+            {
+              "value": "fresh-fried-egg",
+              "label": "Freshly Cracked Fried Egg (Round)",
+              "priceModifier": 0
+            },
+            {
+              "value": "egg-whites-only",
+              "label": "Egg Whites Only",
+              "priceModifier": 0.5
+            }
+          ]
+        },
+        {
+          "id": "breakfast-bread-selection",
+          "type": "single-select",
+          "label": "Bread / Carrier Choice",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "toasted-english-muffin",
+              "label": "Toasted English Muffin",
+              "priceModifier": 0
+            },
+            {
+              "value": "flaky-buttermilk-biscuit",
+              "label": "Warm Buttermilk Biscuit",
+              "priceModifier": 0
+            },
+            {
+              "value": "toasted-brioche-bun",
+              "label": "Toasted Brioche Bun",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "butter-croissant",
+              "label": "Flaky Butter Croissant",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "warm-tortilla-wrap",
+              "label": "Warm Flour Tortilla Wrap",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "breakfast-add-extras",
+          "type": "multi-select",
+          "label": "Add Morning Extras",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            {
+              "value": "extra-cheese-slice",
+              "label": "Extra American Cheese Slice",
+              "priceModifier": 0.6
+            },
+            {
+              "value": "crispy-bacon-strips",
+              "label": "Add Crispy Bacon Strips (2 pcs)",
+              "priceModifier": 1.3
+            },
+            {
+              "value": "sausage-patty",
+              "label": "Add Savory Sausage Patty",
+              "priceModifier": 1.4
+            },
+            {
+              "value": "add-hash-brown-inside",
+              "label": "Add Golden Hash Brown Inside",
+              "priceModifier": 1.1
+            },
+            {
+              "value": "side-syrup-butter",
+              "label": "Extra Maple Syrup & Butter Cup",
+              "priceModifier": 0.5
+            }
+          ]
+        },
+        {
+          "id": "breakfast-make-it-a-meal",
+          "type": "toggle",
+          "label": "Make It a Breakfast Meal (Add Hash Brown & Hot Coffee)",
+          "isRequired": false
+        }
+      ]
+    },
+    {
+      "id": "desserts-and-treats",
+      "name": "Desserts & Treats",
+      "sortOrder": 6,
+      "description": "Sweet quick-service delights including creamy soft serve ice cream, warm baked turnovers, hand-spun frozen treats, and classic dessert floats. Ideal sweet finales and impulse add-on items engineered for rapid machine dispensing and high profitability.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍦",
+      "subSections": [
+        {
+          "id": "soft-serve-and-sundaes",
+          "name": "Soft Serve & Sundaes",
+          "sortOrder": 1,
+          "description": "Crisp wafer cones of vanilla and chocolate soft serve, dipped cones with chocolate shells, and decadent warm fudge or caramel sundaes."
+        },
+        {
+          "id": "pies-and-baked",
+          "name": "Pies & Baked",
+          "sortOrder": 2,
+          "description": "Signature fried or baked handheld fruit turnover pies with bubbling apple or berry fillings, warm chocolate chip cookies, and cinnamon sugar pastries."
+        },
+        {
+          "id": "shakes-and-floats",
+          "name": "Shakes & Floats",
+          "sortOrder": 3,
+          "description": "Rich thick dessert milkshakes whipped with premium soft serve, soda floats with creamy vanilla ice cream, and specialty frozen blended cups."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "dessert-portion-size",
+          "type": "single-select",
+          "label": "Dessert Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-small",
+              "label": "Regular / Mini",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium",
+              "priceModifier": 0.9
+            },
+            {
+              "value": "large",
+              "label": "Large / Super Size",
+              "priceModifier": 1.6
+            }
+          ]
+        },
+        {
+          "id": "dessert-flavor-choice",
+          "type": "single-select",
+          "label": "Flavor Selection",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "creamy-vanilla",
+              "label": "Creamy Vanilla Bean",
+              "priceModifier": 0
+            },
+            {
+              "value": "rich-chocolate",
+              "label": "Rich Dutch Chocolate",
+              "priceModifier": 0
+            },
+            {
+              "value": "vanilla-chocolate-twist",
+              "label": "Vanilla & Chocolate Twist",
+              "priceModifier": 0
+            },
+            {
+              "value": "ripe-strawberry",
+              "label": "Ripe Strawberry Swirl",
+              "priceModifier": 0
+            },
+            {
+              "value": "salted-caramel",
+              "label": "Salted Caramel",
+              "priceModifier": 0.4
+            },
+            {
+              "value": "cookies-and-cream",
+              "label": "Cookies & Cream Mix",
+              "priceModifier": 0.5
+            }
+          ]
+        },
+        {
+          "id": "dessert-toppings",
+          "type": "multi-select",
+          "label": "Add Dessert Toppings",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "warm-hot-fudge",
+              "label": "Warm Hot Fudge Drizzle",
+              "priceModifier": 0.7
+            },
+            {
+              "value": "warm-caramel-sauce",
+              "label": "Warm Caramel Drizzle",
+              "priceModifier": 0.7
+            },
+            {
+              "value": "crushed-cookie-pieces",
+              "label": "Crushed Chocolate Cookie Pieces",
+              "priceModifier": 0.65
+            },
+            {
+              "value": "rainbow-sprinkles",
+              "label": "Rainbow Candy Sprinkles",
+              "priceModifier": 0.4
+            },
+            {
+              "value": "whipped-cream-cherry",
+              "label": "Extra Whipped Cream & Maraschino Cherry",
+              "priceModifier": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beverages",
+      "name": "Beverages",
+      "sortOrder": 7,
+      "description": "Self-serve and crew-dispensed fountain soft drinks, freshly brewed hot and iced coffees, steeped teas, bottled merchandiser beverages, and hand-spun milkshakes. High-frequency standalone refreshments and essential meal companions designed for rapid cup fill.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥤",
+      "subSections": [
+        {
+          "id": "fountain-drinks",
+          "name": "Fountain Drinks",
+          "sortOrder": 1,
+          "description": "Ice-cold carbonated soft drinks, diet and zero-sugar sodas, homestyle lemonades, and iced teas served from high-output fountain dispensers."
+        },
+        {
+          "id": "hot-drinks",
+          "name": "Hot Drinks",
+          "sortOrder": 2,
+          "description": "Freshly brewed drip filter coffee, premium decaf, hot steeped black and green teas, and rich hot chocolate."
+        },
+        {
+          "id": "bottled-drinks",
+          "name": "Bottled Drinks",
+          "sortOrder": 3,
+          "description": "Chilled bottled spring water, 100% pure fruit juices, chocolate milk cartons, and energy drinks for grab-and-go convenience."
+        },
+        {
+          "id": "milkshakes",
+          "name": "Milkshakes",
+          "sortOrder": 4,
+          "description": "Thick hand-spun milkshakes made with real dairy soft serve, whole milk, and blended flavored syrups topped with whipped cream."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "beverage-cup-size",
+          "type": "single-select",
+          "label": "Beverage Size (S / M / L / XL)",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "small",
+              "label": "Small (16 oz / 475 ml)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium (21 oz / 620 ml)",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "large",
+              "label": "Large (30 oz / 890 ml)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "extra-large",
+              "label": "Extra Large (40 oz / 1180 ml)",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "beverage-ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "light-ice",
+              "label": "Light Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "No Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-ice",
+              "label": "Extra Ice",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "beverage-sweetness",
+          "type": "single-select",
+          "label": "Sweetness & Flavor Shot",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-recipe",
+              "label": "Standard Recipe",
+              "priceModifier": 0
+            },
+            {
+              "value": "unsweetened",
+              "label": "Unsweetened",
+              "priceModifier": 0
+            },
+            {
+              "value": "vanilla-shot",
+              "label": "Add Vanilla Flavor Shot",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "caramel-shot",
+              "label": "Add Caramel Flavor Shot",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "lemon-wedge",
+              "label": "Add Fresh Lemon Wedge",
+              "priceModifier": 0.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kids-meals",
+      "name": "Kids' Meals",
+      "sortOrder": 8,
+      "description": "Portioned meal bundles specially designed for young children, packaged in fun themed boxes. Balances smaller child-sized mains with nutritious or crispy sides, kid-approved drinks, and collectible surprise toys to create a complete family dining experience.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧒",
+      "subSections": [
+        {
+          "id": "kids-mains",
+          "name": "Kids' Mains",
+          "sortOrder": 1,
+          "description": "Junior-sized hamburger sliders, tender chicken nuggets, crispy tenders, and grilled cheese sandwiches suited for smaller appetites."
+        },
+        {
+          "id": "kids-sides",
+          "name": "Kids' Sides",
+          "sortOrder": 2,
+          "description": "Child-portioned junior fries, chilled apple slices, organic fruit purée squeeze pouches, and baby carrots offering tasty and balanced options."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "kids-toy-toggle",
+          "type": "toggle",
+          "label": "Include Surprise Toy in Meal Box",
+          "isRequired": false
+        },
+        {
+          "id": "kids-toy-preference",
+          "type": "single-select",
+          "label": "Toy Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "featured-toy",
+              "label": "Current Featured Character Toy",
+              "priceModifier": 0
+            },
+            {
+              "value": "activity-book",
+              "label": "Activity Book & Crayon Set",
+              "priceModifier": 0
+            },
+            {
+              "value": "charity-donation",
+              "label": "No Toy (Donate Value to Children's Charity)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "kids-drink-choice",
+          "type": "single-select",
+          "label": "Kids' Drink Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "organic-apple-juice-box",
+              "label": "Organic 100% Apple Juice Box",
+              "priceModifier": 0
+            },
+            {
+              "value": "orange-juice-box",
+              "label": "100% Pure Orange Juice Box",
+              "priceModifier": 0
+            },
+            {
+              "value": "low-fat-white-milk",
+              "label": "1% Low-Fat White Milk Carton",
+              "priceModifier": 0
+            },
+            {
+              "value": "chocolate-milk",
+              "label": "Low-Fat Chocolate Milk Carton",
+              "priceModifier": 0
+            },
+            {
+              "value": "junior-fountain-soda",
+              "label": "Junior Fountain Soft Drink (12 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "bottled-water",
+              "label": "Bottled Spring Water (330 ml)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "kids-side-choice",
+          "type": "single-select",
+          "label": "Kids' Side Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "junior-fries",
+              "label": "Junior French Fries",
+              "priceModifier": 0
+            },
+            {
+              "value": "fresh-apple-slices",
+              "label": "Chilled Fresh Apple Slices",
+              "priceModifier": 0
+            },
+            {
+              "value": "applesauce-pouch",
+              "label": "Organic Applesauce Squeeze Pouch",
+              "priceModifier": 0
+            },
+            {
+              "value": "baby-carrots",
+              "label": "Crisp Baby Carrots with Ranch Dip",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limited-time-offers",
+      "name": "Limited Time Offers",
+      "sortOrder": 9,
+      "description": "Promotional menu rollouts, seasonal festival specials, celebrity collaboration meals, and experimental kitchen concepts. Engineered to create urgency, test consumer appeal, and drive repeat visits during promotional marketing windows without permanently expanding inventory.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "✨",
+      "subSections": [
+        {
+          "id": "seasonal-specials",
+          "name": "Seasonal Specials",
+          "sortOrder": 1,
+          "description": "Holiday-themed flavor profiles, summer barbecue features, and limited-run seasonal recipe innovations."
+        },
+        {
+          "id": "promotional-combos",
+          "name": "Promotional Combos",
+          "sortOrder": 2,
+          "description": "Featured collaboration meal bundles, newly launched combo builds at introductory promotional pricing, and tie-in merchandise deals."
+        },
+        {
+          "id": "flash-deals",
+          "name": "Flash Deals",
+          "sortOrder": 3,
+          "description": "App-exclusive discounts, daily doorbuster specials, and time-limited meal upgrades."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "lto-meal-size",
+          "type": "single-select",
+          "label": "Promotional Meal Format",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "a-la-carte",
+              "label": "Entrée Only (À La Carte)",
+              "priceModifier": 0
+            },
+            {
+              "value": "upgrade-medium-combo",
+              "label": "Upgrade to Medium Combo (Fries & Drink)",
+              "priceModifier": 3.4
+            },
+            {
+              "value": "upgrade-large-combo",
+              "label": "Upgrade to Large Combo (Large Fries & Large Drink)",
+              "priceModifier": 4.2
+            }
+          ]
+        },
+        {
+          "id": "lto-sauce-customization",
+          "type": "single-select",
+          "label": "Featured Sauce Drizzle / Dip",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "signature-lto-sauce",
+              "label": "Featured LTO Sauce (As Crafted)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-lto-sauce",
+              "label": "Extra Featured Sauce on Entrée",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "sauce-on-side",
+              "label": "Featured Sauce on the Side",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-specialty-sauce",
+              "label": "Hold Featured Sauce",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "lto-extra-toppings",
+          "type": "multi-select",
+          "label": "Specialty Topping Add-Ons",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "crispy-onion-straws",
+              "label": "Crispy Fried Onion Straws",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "warm-queso-cheese",
+              "label": "Warm Queso Cheese Sauce Drizzle",
+              "priceModifier": 0.95
+            },
+            {
+              "value": "smoked-bacon-rashers",
+              "label": "Double Applewood Smoked Bacon",
+              "priceModifier": 1.6
+            },
+            {
+              "value": "pickled-habaneros",
+              "label": "Pickled Fiery Habanero Slices",
+              "priceModifier": 0.6
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "comboBuilder",
+      "name": "Combo & Meal Deal Builder",
+      "isEnabled": true,
+      "description": "Guides customers through seamless step-by-step combo assembly, linking main entrée selections with side options and drink preferences at discounted bundle rates.",
+      "config": {
+        "requireDrinkSelection": true,
+        "requireSideSelection": true,
+        "allowUpsellPrompts": true,
+        "defaultDrinkSize": "medium",
+        "defaultSideSize": "medium"
+      }
+    },
+    {
+      "id": "sizeUpgrade",
+      "name": "One-Click Size Upgrades",
+      "isEnabled": true,
+      "description": "Triggers high-converting size upsell prompts for fries, drinks, and meal combos from regular to medium or large before order confirmation.",
+      "config": {
+        "enableOneClickUpgrade": true,
+        "promptAtCheckout": true,
+        "supportedTiers": [
+          "regular",
+          "medium",
+          "large",
+          "extra-large"
+        ]
+      }
+    },
+    {
+      "id": "mealTimeRestrictions",
+      "name": "Meal Time Restrictions",
+      "isEnabled": true,
+      "description": "Enforces operational breakfast cut-off windows (06:00 to 11:00) with automatic menu switching and advance viewing for upcoming dayparts.",
+      "config": {
+        "enforceTimeRestrictedSections": true,
+        "showUpcomingMenus": true,
+        "breakfastCutoffTime": "11:00",
+        "autoSwitchMenu": true
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Badging",
+      "isEnabled": true,
+      "description": "Displays clear allergen alerts and dietary tags (Gluten-Free, Dairy-Free, Nut-Free, Halal, Vegetarian) across all meal courses for guest safety.",
+      "config": {
+        "highlightSevereAllergens": true,
+        "showDietaryFilters": true,
+        "supportedTags": [
+          "gluten-free",
+          "dairy-free",
+          "nut-free",
+          "halal",
+          "vegetarian",
+          "vegan",
+          "contains-gluten",
+          "contains-dairy",
+          "contains-soy",
+          "contains-egg"
+        ]
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Real-Time Inventory Badges",
+      "isEnabled": true,
+      "description": "Displays real-time item availability statuses such as 'In Stock', 'Sold Out Today', or 'Low Stock' to prevent ordering unavailable items during peak drive-through rushes.",
+      "config": {
+        "showLowStockAlert": true,
+        "lowStockThreshold": 10,
+        "autoMarkSoldOut": true,
+        "showSoldOut": true
+      }
+    },
+    {
+      "id": "spiceLevels",
+      "name": "Spice Level Customization",
+      "isEnabled": true,
+      "description": "Allows guests to customize heat preferences across fried chicken, tender strips, wings, and specialty dipping sauces.",
+      "config": {
+        "levels": [
+          "none",
+          "mild",
+          "medium",
+          "hot",
+          "extra-hot"
+        ],
+        "defaultLevel": "mild",
+        "applicableSectionIds": [
+          "chicken-and-tenders",
+          "burgers-and-sandwiches",
+          "limited-time-offers"
+        ]
+      }
+    },
+    {
+      "id": "kidsMenu",
+      "name": "Kids' Menu Configuration",
+      "isEnabled": true,
+      "description": "Provides dedicated child-friendly meal bundles combining a smaller main, kid-portioned side, beverage carton, and toy selection.",
+      "config": {
+        "ageTarget": "12 and under",
+        "bundledDrinkIncluded": true,
+        "bundledSideIncluded": true,
+        "toyOptionIncluded": true
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

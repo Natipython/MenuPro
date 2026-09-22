@@ -1,0 +1,1584 @@
+{
+  "id": "cafe-and-restaurant",
+  "name": "Cafe & Restaurant",
+  "slug": "cafe-and-restaurant",
+  "icon": "☕🍽️",
+  "description": "Full sit-down restaurant with a strong cafe and coffee culture identity. Serves complete meals from morning breakfast through dinner while retaining a prominent coffee bar. A hybrid establishment designed for venues with an expanded kitchen and full table service.",
+  "category": "hybrid",
+  "tags": [
+    "cafe",
+    "restaurant",
+    "coffee",
+    "breakfast",
+    "lunch",
+    "dinner",
+    "full-service"
+  ],
+  "sections": [
+    {
+      "id": "espresso-and-coffee",
+      "name": "Espresso & Coffee",
+      "sortOrder": 1,
+      "description": "Full barista coffee bar menu. Features freshly pulled espresso shots, specialty milk-based coffees, manual pour-overs, and batch drip brews. Serves as the core morning traffic driver and signature coffee-shop anchor within the full-service restaurant experience.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "☕",
+      "subSections": [
+        {
+          "id": "espresso-based-drinks",
+          "name": "Espresso-Based Drinks",
+          "sortOrder": 1,
+          "description": "Classic and specialty espresso extractions handcrafted by baristas, including espresso shots, americanos, cappuccinos, lattes, flat whites, and macchiatos."
+        },
+        {
+          "id": "brewed-and-filter-coffee",
+          "name": "Brewed & Filter Coffee",
+          "sortOrder": 2,
+          "description": "Batch drip coffee, manual pour-overs, Chemex, and French press brews featuring rotating single-origin roasts."
+        },
+        {
+          "id": "specialty-coffee",
+          "name": "Specialty Coffee",
+          "sortOrder": 3,
+          "description": "Signature barista creations, flavored espresso drinks, dirty chais, mocha blends, and seasonal house coffee concoctions."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "coffee-size",
+          "type": "single-select",
+          "label": "Cup Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "small",
+              "label": "Small (8 oz / 240 ml)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium (12 oz / 355 ml)",
+              "priceModifier": 0.6
+            },
+            {
+              "value": "large",
+              "label": "Large (16 oz / 475 ml)",
+              "priceModifier": 1.2
+            }
+          ]
+        },
+        {
+          "id": "milk-alternative",
+          "type": "single-select",
+          "label": "Milk Choice",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-milk",
+              "label": "Whole Milk (Standard)",
+              "priceModifier": 0
+            },
+            {
+              "value": "skim-milk",
+              "label": "Skim Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Oat Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "soy-milk",
+              "label": "Soy Milk",
+              "priceModifier": 0.7
+            },
+            {
+              "value": "coconut-milk",
+              "label": "Coconut Milk",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "extra-shot",
+          "type": "single-select",
+          "label": "Espresso Shots & Strength",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard",
+              "label": "Standard Espresso (Included)",
+              "priceModifier": 0
+            },
+            {
+              "value": "single-extra-shot",
+              "label": "Add 1 Extra Espresso Shot",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "double-extra-shot",
+              "label": "Add 2 Extra Espresso Shots",
+              "priceModifier": 1.8
+            },
+            {
+              "value": "decaf",
+              "label": "Switch to Decaf Espresso",
+              "priceModifier": 0.5
+            }
+          ]
+        },
+        {
+          "id": "syrup-flavor",
+          "type": "single-select",
+          "label": "Flavored Syrup",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "None",
+              "priceModifier": 0
+            },
+            {
+              "value": "vanilla",
+              "label": "Madagascar Vanilla Syrup",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "caramel",
+              "label": "Salted Caramel Syrup",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "hazelnut",
+              "label": "Roasted Hazelnut Syrup",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "sugar-free-vanilla",
+              "label": "Sugar-Free Vanilla Syrup",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "coffee-temperature",
+          "type": "single-select",
+          "label": "Temperature",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "hot",
+              "label": "Hot",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-hot",
+              "label": "Extra Hot",
+              "priceModifier": 0
+            },
+            {
+              "value": "iced",
+              "label": "Served Over Ice",
+              "priceModifier": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tea-and-hot-drinks",
+      "name": "Tea & Hot Drinks",
+      "sortOrder": 2,
+      "description": "Dedicated hot beverage selection catering to non-coffee drinkers, afternoon tea breaks, and soothing evening drinks. Spans premium whole-leaf loose teas, herbal infusions, matcha lattes, and artisan hot chocolates.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🫖",
+      "subSections": [
+        {
+          "id": "classic-teas",
+          "name": "Classic Teas",
+          "sortOrder": 1,
+          "description": "Premium whole-leaf black, green, white, oolong, and caffeine-free herbal tisanes served in ceramic teapots or takeaway cups."
+        },
+        {
+          "id": "specialty-hot-drinks",
+          "name": "Specialty Hot Drinks",
+          "sortOrder": 2,
+          "description": "Artisan hot chocolates, spiced chai lattes, Japanese matcha lattes, and golden turmeric steamed milk drinks."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "tea-size",
+          "type": "single-select",
+          "label": "Serving Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-cup",
+              "label": "Regular Cup (12 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-pot",
+              "label": "Large Mug / Teapot (16 oz)",
+              "priceModifier": 1.0
+            }
+          ]
+        },
+        {
+          "id": "hot-drinks-milk",
+          "type": "single-select",
+          "label": "Milk Choice (for Lattes & Chocolates)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-milk",
+              "label": "Whole Milk (Standard)",
+              "priceModifier": 0
+            },
+            {
+              "value": "skim-milk",
+              "label": "Skim Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Oat Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "soy-milk",
+              "label": "Soy Milk",
+              "priceModifier": 0.7
+            }
+          ]
+        },
+        {
+          "id": "tea-sweetener",
+          "type": "single-select",
+          "label": "Sweetener",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "Unsweetened",
+              "priceModifier": 0
+            },
+            {
+              "value": "honey",
+              "label": "Pure Blossom Honey",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "agave",
+              "label": "Organic Agave Nectar",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "brown-sugar",
+              "label": "Demerara Brown Sugar",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cold-and-blended-drinks",
+      "name": "Cold & Blended Drinks",
+      "sortOrder": 3,
+      "description": "Chilled, iced, and blended refreshment category. Features slow-steeped cold brew, iced coffee specialties, frozen frappes, and real fruit smoothies. Captures afternoon traffic, warm-weather dining, and dessert beverage orders.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥤",
+      "subSections": [
+        {
+          "id": "iced-coffee-and-cold-brew",
+          "name": "Iced Coffee & Cold Brew",
+          "sortOrder": 1,
+          "description": "Slow-steeped 18-hour cold brew, nitro draft coffee, iced lattes, and iced americanos over clear artisanal ice."
+        },
+        {
+          "id": "blended-and-frappe",
+          "name": "Blended & Frappe",
+          "sortOrder": 2,
+          "description": "Ice-blended coffee frappes, fruit smoothies, crushed ice refreshers, and creamy blended shakes."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cold-drink-size",
+          "type": "single-select",
+          "label": "Drink Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular (16 oz / 475 ml)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large",
+              "label": "Large (20 oz / 600 ml)",
+              "priceModifier": 0.8
+            }
+          ]
+        },
+        {
+          "id": "cold-drink-milk",
+          "type": "single-select",
+          "label": "Milk Choice",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-milk",
+              "label": "Whole Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "skim-milk",
+              "label": "Skim Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Oat Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "coconut-milk",
+              "label": "Coconut Milk",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-ice",
+              "label": "Less Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-ice",
+              "label": "Extra Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "No Ice",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "sweetness-level",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "no-sugar",
+              "label": "No Sugar (0%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-sweet",
+              "label": "Less Sweet (50%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "regular-sweet",
+              "label": "Regular Sweet (100%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-sweet",
+              "label": "Extra Sweet (120%)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "whipped-cream",
+          "type": "single-select",
+          "label": "Whipped Cream Topping",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Whipped Cream",
+              "priceModifier": 0
+            },
+            {
+              "value": "whipped-cream",
+              "label": "Add Fresh Whipped Cream",
+              "priceModifier": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fresh-juices-and-soft-drinks",
+      "name": "Fresh Juices & Soft Drinks",
+      "sortOrder": 4,
+      "description": "Cold-pressed juices, freshly squeezed citrus, house-crafted sodas, lemonades, and bottled waters. Provides clean, refreshing beverage pairings for sit-down dining and health-conscious guests.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍊",
+      "subSections": [
+        {
+          "id": "fresh-juices",
+          "name": "Fresh Juices",
+          "sortOrder": 1,
+          "description": "Freshly squeezed citrus, raw cold-pressed fruit juices, green cleansers, and concentrated wellness booster shots."
+        },
+        {
+          "id": "soft-drinks-and-water",
+          "name": "Soft Drinks & Water",
+          "sortOrder": 2,
+          "description": "Artisanal sodas, house lemonades, craft tonic waters, iced tea, and premium still or sparkling mineral waters."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "juice-ice-preference",
+          "type": "single-select",
+          "label": "Ice Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Served with Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "Chilled, No Ice",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "juice-boosters",
+          "type": "multi-select",
+          "label": "Wellness Add-Ins",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "ginger-shot",
+              "label": "Fresh Ginger Boost",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "chia-seeds",
+              "label": "Organic Chia Seeds",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "fresh-mint",
+              "label": "Fresh Mint Leaves",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "lemon-wedge",
+              "label": "Fresh Lemon Wedge",
+              "priceModifier": 0.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "breakfast",
+      "name": "Breakfast",
+      "sortOrder": 5,
+      "description": "Comprehensive morning service menu combining cafe morning bakery items with hot cooked-to-order plated breakfast dishes. Bridges morning coffee regulars and leisurely sit-down brunch diners. Restricted to morning hours to allow kitchen transition to lunch and dinner service.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍳",
+      "timeBehavior": {
+        "isTimeRestricted": true,
+        "defaultAvailableFrom": "07:00",
+        "defaultAvailableUntil": "12:00",
+        "note": "Available daily during breakfast and morning service from 07:00 to 12:00 only."
+      },
+      "subSections": [
+        {
+          "id": "egg-dishes",
+          "name": "Egg Dishes",
+          "sortOrder": 1,
+          "description": "Eggs cooked to order, classic Benedicts, savory omelettes, shakshuka, and morning breakfast skillets."
+        },
+        {
+          "id": "pancakes-and-waffles",
+          "name": "Pancakes & Waffles",
+          "sortOrder": 2,
+          "description": "Fluffy buttermilk pancakes, Belgian waffles, brioche French toast, and warm griddle specialties."
+        },
+        {
+          "id": "light-breakfast-and-cereals",
+          "name": "Light Breakfast & Cereals",
+          "sortOrder": 3,
+          "description": "House-baked granola bowls, Greek yogurt parfaits, overnight oats, and fresh seasonal fruit platters."
+        },
+        {
+          "id": "bakery-breakfast-items",
+          "name": "Bakery Breakfast Items",
+          "sortOrder": 4,
+          "description": "Freshly baked morning viennoiserie, butter croissants, toasted bagels with spreads, and artisan breakfast toast plates."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "egg-style",
+          "type": "single-select",
+          "label": "Egg Style & Preparation",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "scrambled",
+              "label": "Fluffy Scrambled Eggs",
+              "priceModifier": 0
+            },
+            {
+              "value": "sunny-side-up",
+              "label": "Sunny Side Up",
+              "priceModifier": 0
+            },
+            {
+              "value": "over-easy",
+              "label": "Over Easy",
+              "priceModifier": 0
+            },
+            {
+              "value": "over-medium",
+              "label": "Over Medium",
+              "priceModifier": 0
+            },
+            {
+              "value": "poached",
+              "label": "Poached Eggs",
+              "priceModifier": 0
+            },
+            {
+              "value": "egg-whites-only",
+              "label": "Egg Whites Only",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "breakfast-bread-choice",
+          "type": "single-select",
+          "label": "Bread Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "artisan-sourdough",
+              "label": "Toasted Artisan Sourdough",
+              "priceModifier": 0
+            },
+            {
+              "value": "multigrain-seeded",
+              "label": "Multigrain Seeded Loaf",
+              "priceModifier": 0
+            },
+            {
+              "value": "toasted-brioche",
+              "label": "Toasted Brioche Bread",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "english-muffin",
+              "label": "Toasted English Muffin",
+              "priceModifier": 0
+            },
+            {
+              "value": "gluten-free-bread",
+              "label": "Gluten-Free Bread",
+              "priceModifier": 1.0
+            }
+          ]
+        },
+        {
+          "id": "breakfast-side-choice",
+          "type": "single-select",
+          "label": "Included Breakfast Side",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "hash-browns",
+              "label": "Crispy Golden Hash Browns",
+              "priceModifier": 0
+            },
+            {
+              "value": "herb-roasted-potatoes",
+              "label": "Rosemary Roasted Breakfast Potatoes",
+              "priceModifier": 0
+            },
+            {
+              "value": "seasonal-fruit-cup",
+              "label": "Fresh Seasonal Fruit Cup",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "side-salad",
+              "label": "Baby Arugula & Cherry Tomato Salad",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "breakfast-add-ons",
+          "type": "multi-select",
+          "label": "Breakfast Add-Ons & Sides",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            {
+              "value": "crispy-bacon",
+              "label": "Thick-Cut Smoked Bacon (2 slices)",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "breakfast-sausage",
+              "label": "Artisan Breakfast Sausage Link",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "sliced-avocado",
+              "label": "Fresh Sliced Hass Avocado",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "smoked-salmon",
+              "label": "Scottish Smoked Salmon",
+              "priceModifier": 4.5
+            },
+            {
+              "value": "grilled-halloumi",
+              "label": "Grilled Halloumi Cheese",
+              "priceModifier": 3.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appetizers-and-starters",
+      "name": "Appetizers & Starters",
+      "sortOrder": 6,
+      "description": "First-course dishes, hot soups, fresh salads, and shareable small plates. Designed to stimulate appetite before entrees, accompany aperitifs, or serve as shared tapas plates in a social cafe-restaurant setting.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥗",
+      "subSections": [
+        {
+          "id": "soups",
+          "name": "Soups",
+          "sortOrder": 1,
+          "description": "Daily kettle soups, seasonal bisques, and hearty broths served with freshly baked warm bread."
+        },
+        {
+          "id": "salads",
+          "name": "Salads",
+          "sortOrder": 2,
+          "description": "Crisp greens, Mediterranean chopped salads, artisan grain bowls, and house-made specialty vinaigrettes."
+        },
+        {
+          "id": "small-plates-and-shares",
+          "name": "Small Plates & Shares",
+          "sortOrder": 3,
+          "description": "Plated appetizers, charcuterie, warm dips, bruschetta, crispy calamari, and finger-friendly sharing bites."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "salad-dressing",
+          "type": "single-select",
+          "label": "Dressing Choice",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "balsamic-vinaigrette",
+              "label": "Aged Balsamic Vinaigrette",
+              "priceModifier": 0
+            },
+            {
+              "value": "caesar",
+              "label": "Creamy Parmesan Caesar Dressing",
+              "priceModifier": 0
+            },
+            {
+              "value": "lemon-herb-tahini",
+              "label": "Lemon Herb Tahini (Vegan)",
+              "priceModifier": 0
+            },
+            {
+              "value": "olive-oil-lemon",
+              "label": "Extra Virgin Olive Oil & Lemon",
+              "priceModifier": 0
+            },
+            {
+              "value": "dressing-on-side",
+              "label": "Dressing on the Side",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "starter-protein-addition",
+          "type": "single-select",
+          "label": "Add Protein",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Protein Addition",
+              "priceModifier": 0
+            },
+            {
+              "value": "grilled-chicken-breast",
+              "label": "Herb-Grilled Chicken Breast",
+              "priceModifier": 4.5
+            },
+            {
+              "value": "garlic-butter-prawns",
+              "label": "Garlic Butter Prawns (4 pcs)",
+              "priceModifier": 5.5
+            },
+            {
+              "value": "pan-seared-salmon",
+              "label": "Pan-Seared Salmon Fillet",
+              "priceModifier": 6.5
+            },
+            {
+              "value": "crispy-marinated-tofu",
+              "label": "Crispy Marinated Tofu",
+              "priceModifier": 3.5
+            }
+          ]
+        },
+        {
+          "id": "soup-portion",
+          "type": "single-select",
+          "label": "Soup Portion Size",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "starter-cup",
+              "label": "Starter Cup (8 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "entree-bowl",
+              "label": "Entrée Bowl with Crusty Bread (14 oz)",
+              "priceModifier": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "main-courses-and-entrees",
+      "name": "Main Courses / Entrées",
+      "sortOrder": 7,
+      "description": "Centerpiece sit-down dining dishes representing the restaurant kitchen's core capabilities. Encompasses grilled meats, fresh seafood, handmade pastas, and plant-forward entrees. Drives dinner revenue and anchors full meal service.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥩",
+      "subSections": [
+        {
+          "id": "meat-and-poultry",
+          "name": "Meat & Poultry",
+          "sortOrder": 1,
+          "description": "Flame-grilled steaks, roasted half-chickens, braised beef cutlets, and savory chops cooked to order."
+        },
+        {
+          "id": "seafood",
+          "name": "Seafood",
+          "sortOrder": 2,
+          "description": "Pan-roasted fish fillets, grilled fresh catches, seafood risottos, and aromatic citrus herb preparations."
+        },
+        {
+          "id": "pasta-and-rice",
+          "name": "Pasta & Rice",
+          "sortOrder": 3,
+          "description": "Fresh artisan pasta bowls, slow-simmered ragus, creamy seasonal risottos, and spiced rice platters."
+        },
+        {
+          "id": "vegetarian-and-vegan-mains",
+          "name": "Vegetarian & Vegan Mains",
+          "sortOrder": 4,
+          "description": "Hearty plant-based entrees, roasted cauliflower steaks, stuffed portobello mushrooms, and seasonal legume dishes."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "meat-doneness",
+          "type": "single-select",
+          "label": "Meat Doneness",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "rare",
+              "label": "Rare (Cool Red Center)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-rare",
+              "label": "Medium Rare (Warm Red Center)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium (Warm Pink Center)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-well",
+              "label": "Medium Well (Slight Pink Center)",
+              "priceModifier": 0
+            },
+            {
+              "value": "well-done",
+              "label": "Well Done (Cooked Throughout)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "entree-side-pairing",
+          "type": "single-select",
+          "label": "Included Side Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "garlic-mashed-potatoes",
+              "label": "Creamy Garlic Mashed Potatoes",
+              "priceModifier": 0
+            },
+            {
+              "value": "roasted-seasonal-veg",
+              "label": "Roasted Seasonal Vegetables",
+              "priceModifier": 0
+            },
+            {
+              "value": "herb-rice-pilaf",
+              "label": "Fragrant Herb Rice Pilaf",
+              "priceModifier": 0
+            },
+            {
+              "value": "parmesan-truffle-fries",
+              "label": "Parmesan Truffle Fries",
+              "priceModifier": 2.0
+            }
+          ]
+        },
+        {
+          "id": "entree-sauce",
+          "type": "single-select",
+          "label": "Sauce Selection",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "green-peppercorn",
+              "label": "Green Peppercorn Cream Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "wild-mushroom-thyme",
+              "label": "Wild Mushroom & Thyme Gravy",
+              "priceModifier": 0
+            },
+            {
+              "value": "lemon-herb-butter",
+              "label": "Lemon Herb Compound Butter",
+              "priceModifier": 0
+            },
+            {
+              "value": "chimichurri",
+              "label": "Fresh Argentinian Chimichurri",
+              "priceModifier": 0
+            },
+            {
+              "value": "sauce-on-side",
+              "label": "Sauce Served on the Side",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "pasta-choice",
+          "type": "single-select",
+          "label": "Pasta Type",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "fresh-tagliatelle",
+              "label": "Fresh House Tagliatelle",
+              "priceModifier": 0
+            },
+            {
+              "value": "penne-rigate",
+              "label": "Penne Rigate",
+              "priceModifier": 0
+            },
+            {
+              "value": "spaghetti",
+              "label": "Bronze-Cut Spaghetti",
+              "priceModifier": 0
+            },
+            {
+              "value": "gluten-free-penne",
+              "label": "Gluten-Free Penne",
+              "priceModifier": 1.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sandwiches-burgers-and-wraps",
+      "name": "Sandwiches Burgers & Wraps",
+      "sortOrder": 8,
+      "description": "Elevated handheld favorites bridging cafe deli convenience and gastro-pub dining. Features cold and hot pressed sandwiches, artisan burgers, and wraps. High customer demand for casual lunch and relaxed dinner settings.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍔",
+      "subSections": [
+        {
+          "id": "cold-sandwiches",
+          "name": "Cold Sandwiches",
+          "sortOrder": 1,
+          "description": "Layered deli sandwiches, chicken salad baguettes, smoked salmon rolls, and fresh garden vegetable sandwiches."
+        },
+        {
+          "id": "hot-sandwiches-and-paninis",
+          "name": "Hot Sandwiches & Paninis",
+          "sortOrder": 2,
+          "description": "Pressed Italian ciabattas, toasted reubens, grilled sourdough melts, and warm pulled meat paninis."
+        },
+        {
+          "id": "burgers",
+          "name": "Burgers",
+          "sortOrder": 3,
+          "description": "Gourmet Angus beef burgers, grilled and crispy chicken burgers, and plant-based burgers served on toasted buns."
+        },
+        {
+          "id": "wraps",
+          "name": "Wraps",
+          "sortOrder": 4,
+          "description": "Grilled flour tortillas and flatbread wraps filled with sliced meats, roasted vegetables, and house sauces."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "bread-choice",
+          "type": "single-select",
+          "label": "Bread & Bun Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "brioche-bun",
+              "label": "Toasted Brioche Bun",
+              "priceModifier": 0
+            },
+            {
+              "value": "artisan-ciabatta",
+              "label": "Crusty Artisan Ciabatta",
+              "priceModifier": 0
+            },
+            {
+              "value": "rustic-sourdough",
+              "label": "Grilled Rustic Sourdough",
+              "priceModifier": 0
+            },
+            {
+              "value": "herb-focaccia",
+              "label": "Rosemary & Olive Oil Focaccia",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "lettuce-wrap",
+              "label": "Crisp Romaine Lettuce Wrap (Low Carb)",
+              "priceModifier": 0
+            },
+            {
+              "value": "gluten-free-bun",
+              "label": "Gluten-Free Bun",
+              "priceModifier": 1.25
+            }
+          ]
+        },
+        {
+          "id": "patty-choice",
+          "type": "single-select",
+          "label": "Patty Choice (for Burgers)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "angus-beef",
+              "label": "100% Prime Angus Beef Patty",
+              "priceModifier": 0
+            },
+            {
+              "value": "grilled-chicken",
+              "label": "Marinated Grilled Chicken Breast",
+              "priceModifier": 0
+            },
+            {
+              "value": "crispy-chicken",
+              "label": "Crispy Buttermilk Fried Chicken",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "plant-based-patty",
+              "label": "Plant-Based Beyond Patty",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "double-beef-patty",
+              "label": "Double Angus Beef Patty",
+              "priceModifier": 4.5
+            }
+          ]
+        },
+        {
+          "id": "burger-meat-doneness",
+          "type": "single-select",
+          "label": "Burger Doneness",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "medium",
+              "label": "Medium (Pink Center)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-well",
+              "label": "Medium Well (Slight Pink)",
+              "priceModifier": 0
+            },
+            {
+              "value": "well-done",
+              "label": "Well Done",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "add-extras",
+          "type": "multi-select",
+          "label": "Add Extras & Custom Toppings",
+          "isRequired": false,
+          "maxSelections": 5,
+          "choices": [
+            {
+              "value": "aged-cheddar",
+              "label": "Aged White Cheddar Cheese",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "crispy-bacon",
+              "label": "Crispy Smoked Bacon",
+              "priceModifier": 2.25
+            },
+            {
+              "value": "sliced-avocado",
+              "label": "Fresh Sliced Avocado",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "fried-egg",
+              "label": "Sunny Side Up Egg",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "caramelized-onions",
+              "label": "Balsamic Caramelized Onions",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "pickled-jalapenos",
+              "label": "Pickled Jalapeños",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "truffle-aioli",
+              "label": "House Truffle Aioli",
+              "priceModifier": 1.0
+            }
+          ]
+        },
+        {
+          "id": "included-side-choice",
+          "type": "single-select",
+          "label": "Included Side",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "french-fries",
+              "label": "Crispy French Fries",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet-potato-fries",
+              "label": "Sweet Potato Fries",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "side-garden-salad",
+              "label": "Side Garden Salad",
+              "priceModifier": 0
+            },
+            {
+              "value": "onion-rings",
+              "label": "Beer-Battered Onion Rings",
+              "priceModifier": 1.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "Sides",
+      "sortOrder": 9,
+      "description": "A la carte accompaniments, potatoes, rice dishes, bread baskets, and vegetable sides designed to accompany mains, sandwiches, and sharing plates. Ideal for guest customization and basket add-ons.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍟",
+      "subSections": [],
+      "itemOptions": [
+        {
+          "id": "side-portion-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular Portion (Single)",
+              "priceModifier": 0
+            },
+            {
+              "value": "shareable",
+              "label": "Large Shareable Basket (2–3 People)",
+              "priceModifier": 3.0
+            }
+          ]
+        },
+        {
+          "id": "side-seasoning",
+          "type": "single-select",
+          "label": "Seasoning Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "sea-salt",
+              "label": "Fine Sea Salt",
+              "priceModifier": 0
+            },
+            {
+              "value": "cajun-spiced",
+              "label": "Cajun Spice Dust",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "garlic-rosemary",
+              "label": "Garlic & Rosemary Herb Salt",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "truffle-parmesan",
+              "label": "Truffle Oil & Shaved Parmesan",
+              "priceModifier": 1.75
+            }
+          ]
+        },
+        {
+          "id": "side-dipping-sauces",
+          "type": "multi-select",
+          "label": "Dipping Sauces",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "roasted-garlic-aioli",
+              "label": "Roasted Garlic Aioli",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "truffle-mayo",
+              "label": "House Truffle Mayo",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "smoky-bbq",
+              "label": "Smoky Barbecue Sauce",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "spicy-sriracha-mayo",
+              "label": "Spicy Sriracha Mayo",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "buttermilk-ranch",
+              "label": "Herbed Buttermilk Ranch",
+              "priceModifier": 0.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "sortOrder": 10,
+      "description": "Sweet conclusion offerings highlighting the cafe's artisan bakery display alongside warm restaurant plated desserts and ice creams. Pairs naturally with espresso and after-dinner drinks to raise average spend.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍰",
+      "subSections": [
+        {
+          "id": "hot-desserts",
+          "name": "Hot Desserts",
+          "sortOrder": 1,
+          "description": "Freshly baked warm chocolate lava cakes, seasonal fruit crumbles, skillet brownies, and warm puddings."
+        },
+        {
+          "id": "cold-desserts",
+          "name": "Cold Desserts",
+          "sortOrder": 2,
+          "description": "Chilled classics including vanilla bean crème brûlée, traditional tiramisu, cheesecakes, and fruit panna cotta."
+        },
+        {
+          "id": "cakes-and-pastries",
+          "name": "Cakes & Pastries",
+          "sortOrder": 3,
+          "description": "Display counter cake slices, fruit tarts, cream-filled choux pastries, and daily bakery specialties."
+        },
+        {
+          "id": "ice-cream",
+          "name": "Ice Cream",
+          "sortOrder": 4,
+          "description": "Artisanal gelato scoops, dairy-free fruit sorbets, layered ice cream sundaes, and hot espresso affogatos."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "gelato-scoop-addon",
+          "type": "single-select",
+          "label": "Add Gelato Scoop",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Gelato Scoop",
+              "priceModifier": 0
+            },
+            {
+              "value": "vanilla-bean",
+              "label": "Vanilla Bean Gelato Scoop",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "salted-caramel",
+              "label": "Salted Caramel Gelato Scoop",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "dark-chocolate",
+              "label": "Dark Chocolate Gelato Scoop",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "raspberry-sorbet",
+              "label": "Raspberry Sorbet Scoop (Vegan)",
+              "priceModifier": 2.5
+            }
+          ]
+        },
+        {
+          "id": "dessert-serving-temperature",
+          "type": "single-select",
+          "label": "Serving Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "warmed",
+              "label": "Warmed from Oven",
+              "priceModifier": 0
+            },
+            {
+              "value": "chilled",
+              "label": "Served Chilled",
+              "priceModifier": 0
+            },
+            {
+              "value": "room-temp",
+              "label": "Room Temperature",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "dessert-drizzle",
+          "type": "single-select",
+          "label": "Sauce Drizzle",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "As Prepared",
+              "priceModifier": 0
+            },
+            {
+              "value": "warm-chocolate",
+              "label": "Warm Belgian Chocolate Drizzle",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "salted-caramel",
+              "label": "Warm Salted Caramel Drizzle",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "berry-coulis",
+              "label": "Fresh Berry Coulis",
+              "priceModifier": 0.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kids-menu",
+      "name": "Kids' Menu",
+      "sortOrder": 11,
+      "description": "Thoughtfully crafted dishes in smaller portions and approachable flavor profiles for children aged 12 and under. Ensures the hybrid venue accommodates families with bundled meals and balanced sides.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧒",
+      "subSections": [
+        {
+          "id": "kids-mains",
+          "name": "Kids' Mains",
+          "sortOrder": 1,
+          "description": "Child-sized portions including mini beef sliders, crispy chicken tenders, simple butter or tomato pasta, and grilled cheese."
+        },
+        {
+          "id": "kids-drinks",
+          "name": "Kids' Drinks",
+          "sortOrder": 2,
+          "description": "Child-friendly beverages including cold milk, fresh juices, chocolate milk, and frothy cocoa babyccinos."
+        },
+        {
+          "id": "kids-desserts",
+          "name": "Kids' Desserts",
+          "sortOrder": 3,
+          "description": "Mini single-scoop sundaes with rainbow sprinkles, warm mini churros, and sliced fruit cups."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "kids-side-choice",
+          "type": "single-select",
+          "label": "Included Kids' Side",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "mini-fries",
+              "label": "Mini French Fries",
+              "priceModifier": 0
+            },
+            {
+              "value": "steamed-veggies",
+              "label": "Steamed Carrots & Broccoli",
+              "priceModifier": 0
+            },
+            {
+              "value": "apple-slices",
+              "label": "Fresh Apple & Melon Slices",
+              "priceModifier": 0
+            },
+            {
+              "value": "cucumber-sticks",
+              "label": "Cucumber Sticks with Dip",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "kids-drink-choice",
+          "type": "single-select",
+          "label": "Included Kids' Drink",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "pressed-apple-juice",
+              "label": "100% Pressed Apple Juice",
+              "priceModifier": 0
+            },
+            {
+              "value": "fresh-orange-juice",
+              "label": "Fresh Orange Juice",
+              "priceModifier": 0
+            },
+            {
+              "value": "cold-milk",
+              "label": "Cold Whole Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "chocolate-milk",
+              "label": "Creamy Chocolate Milk",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "babyccino",
+              "label": "Babyccino with Cocoa Dusting",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasonal-and-chefs-specials",
+      "name": "Seasonal & Chef's Specials",
+      "sortOrder": 12,
+      "description": "Frequently updated feature section showcasing local farm harvests, seasonal flavors, and chef-inspired culinary experiments. Keeps the menu fresh and exciting for returning neighborhood regulars.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "✨",
+      "subSections": [
+        {
+          "id": "seasonal-features",
+          "name": "Seasonal Features",
+          "sortOrder": 1,
+          "description": "Rotating seasonal dishes celebrating peak-harvest produce, spring/summer refreshers, and hearty autumn/winter comforts."
+        },
+        {
+          "id": "chefs-tasting-creations",
+          "name": "Chef's Tasting Creations",
+          "sortOrder": 2,
+          "description": "Limited-edition culinary dishes, experimental recipes, and executive chef signature creations available while supplies last."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "special-preparation-notes",
+          "type": "text-input",
+          "label": "Special Dietary Notes or Kitchen Request",
+          "isRequired": false
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "mealTimeRestrictions",
+      "name": "Meal Time Restrictions",
+      "description": "Automatically manages section availability based on the time of day, displaying breakfast items during morning hours and transitioning to lunch and dinner menus.",
+      "isEnabled": true,
+      "config": {
+        "enforceSchedule": true,
+        "allowPreOrderOffHours": false
+      }
+    },
+    {
+      "id": "milkAlternatives",
+      "name": "Milk Alternatives & Dairy Customization",
+      "description": "Enables seamless dairy and plant-based milk selections (whole, skim, oat, almond, soy, coconut) across all espresso bar and barista drinks.",
+      "isEnabled": true,
+      "config": {
+        "defaultMilk": "whole-milk",
+        "supportedAlternatives": [
+          "oat-milk",
+          "almond-milk",
+          "soy-milk",
+          "coconut-milk",
+          "skim-milk"
+        ]
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Badges",
+      "description": "Displays clear allergen icons and dietary tags (Gluten-Free, Dairy-Free, Nut-Free, Vegan, Vegetarian, Halal) across all menu items with search filtering.",
+      "isEnabled": true,
+      "config": {
+        "displayIcons": true,
+        "filterEnabled": true
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Real-Time Inventory & Status Badges",
+      "description": "Highlights real-time dish availability statuses such as Sold Out, Chef's Pick, Popular, and Seasonal on menu cards.",
+      "isEnabled": true,
+      "config": {
+        "showSoldOut": true,
+        "showBadges": true
+      }
+    },
+    {
+      "id": "spiceLevels",
+      "name": "Spice Level Indicators",
+      "description": "Provides standardized visual chili heat indicators from Mild to Extra Hot for savory dishes, marinades, and sauces.",
+      "isEnabled": true,
+      "config": {
+        "maxLevel": 4,
+        "allowCustomization": true
+      }
+    },
+    {
+      "id": "kidsMenu",
+      "name": "Kids' Menu Bundling",
+      "description": "Specialized workflow for family ordering, enforcing child meal portion sizes and meal drink/side bundle selections.",
+      "isEnabled": true,
+      "config": {
+        "maxAge": 12,
+        "includeDrinkBundle": true
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

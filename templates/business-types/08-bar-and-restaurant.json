@@ -1,0 +1,1795 @@
+{
+  "id": "bar-and-restaurant",
+  "name": "Bar & Restaurant",
+  "slug": "bar-and-restaurant",
+  "icon": "🍺🍽️",
+  "description": "Full-service restaurant featuring an integrated, high-volume beverage and bar program where craft cocktails, curated wine, draft beer, and culinary dining operate as co-equal revenue streams. Features support for age-verified beverage ordering, time-scheduled happy hours, multi-course dining, premium grill options, and bar-only versus dining room menu configurations.",
+  "category": "hybrid",
+  "tags": [
+    "bar",
+    "restaurant",
+    "cocktails",
+    "wine",
+    "beer",
+    "dining",
+    "nightlife",
+    "happy-hour"
+  ],
+  "sections": [
+    {
+      "id": "cocktails",
+      "name": "Cocktails",
+      "sortOrder": 1,
+      "description": "Handcrafted cocktail program featuring house mixology creations, traditional classic standards, and frozen blended specialties. Acts as a core high-margin revenue driver and defines the venue's social, evening, and nightlife identity.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍸",
+      "subSections": [
+        {
+          "id": "signature-cocktails",
+          "name": "Signature Cocktails",
+          "sortOrder": 1,
+          "description": "Proprietary house creations developed by our mixologists using small-batch infusions, house-made syrups, and innovative flavor combinations."
+        },
+        {
+          "id": "classic-cocktails",
+          "name": "Classic Cocktails",
+          "sortOrder": 2,
+          "description": "Time-honored cocktail standards prepared strictly according to iconic recipes, including Old Fashioneds, Negronis, Martinis, and Margaritas."
+        },
+        {
+          "id": "frozen-and-blended-cocktails",
+          "name": "Frozen & Blended Cocktails",
+          "sortOrder": 3,
+          "description": "Chilled blended drinks, frozen margaritas, and slush cocktails ideal for patio seating, warm weather, and high-energy gatherings."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cocktail-spirit-tier",
+          "type": "single-select",
+          "label": "Spirit Tier",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard",
+              "label": "House Standard Pour",
+              "priceModifier": 0
+            },
+            {
+              "value": "call",
+              "label": "Premium Call Brand",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "top-shelf",
+              "label": "Top-Shelf Reserve",
+              "priceModifier": 6.0
+            }
+          ]
+        },
+        {
+          "id": "cocktail-preparation",
+          "type": "single-select",
+          "label": "Preparation Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "as-crafted",
+              "label": "Bartender's Standard Serve",
+              "priceModifier": 0
+            },
+            {
+              "value": "up",
+              "label": "Served Up (Chilled, No Ice)",
+              "priceModifier": 0
+            },
+            {
+              "value": "on-the-rocks",
+              "label": "Over Large Artisanal Ice Sphere",
+              "priceModifier": 0
+            },
+            {
+              "value": "tall",
+              "label": "Tall Highball with Club Soda",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "cocktail-sweetness",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Standard Recipe Sweetness",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-sweet",
+              "label": "Less Sweet (Light Syrup)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-dry",
+              "label": "Dry / No Added Sugar",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "cocktail-rim-garnish",
+          "type": "single-select",
+          "label": "Rim / Garnish Choice",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-garnish",
+              "label": "Standard Chef Garnish",
+              "priceModifier": 0
+            },
+            {
+              "value": "salt-rim",
+              "label": "Flaky Sea Salt Rim",
+              "priceModifier": 0
+            },
+            {
+              "value": "tajin-rim",
+              "label": "Spicy Tajín Chili Rim",
+              "priceModifier": 0
+            },
+            {
+              "value": "sugar-rim",
+              "label": "Turbinado Sugar Rim",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-olives",
+              "label": "Extra Stuffed Olives",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "no-garnish",
+              "label": "No Garnish",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wines",
+      "name": "Wines",
+      "sortOrder": 2,
+      "description": "Curated wine cellar program offering red, white, rosé, sparkling, and dessert wines available by the glass, carafe, half-bottle, or full bottle. Selected to pair harmoniously with dinner entrées, grilled meats, and seafood.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍷",
+      "subSections": [
+        {
+          "id": "red-wines",
+          "name": "Red Wines",
+          "sortOrder": 1,
+          "description": "Light to full-bodied reds including Pinot Noir, Merlot, Malbec, and Cabernet Sauvignon, structured to pair with steaks, burgers, and braised meats."
+        },
+        {
+          "id": "white-wines",
+          "name": "White Wines",
+          "sortOrder": 2,
+          "description": "Crisp, aromatic, and oak-aged white varietals including Sauvignon Blanc, Pinot Grigio, and Chardonnay, suited for seafood, poultry, and salads."
+        },
+        {
+          "id": "rose",
+          "name": "Rosé",
+          "sortOrder": 3,
+          "description": "Dry, Provence-style and fruit-forward rosé wines offering lively acidity, red berry notes, and versatile dining pairings."
+        },
+        {
+          "id": "sparkling-and-champagne",
+          "name": "Sparkling & Champagne",
+          "sortOrder": 4,
+          "description": "Champagne, Prosecco, Cava, and sparkling wines ideal for celebratory toasts, welcome aperitifs, and sparkling cocktails."
+        },
+        {
+          "id": "dessert-wines",
+          "name": "Dessert Wines",
+          "sortOrder": 5,
+          "description": "Fortified, late-harvest, and botrytized sweet dessert wines such as Tawny Port, Sauternes, and Icewine for digestif pairing."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "wine-serving-size",
+          "type": "single-select",
+          "label": "Serving Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "glass",
+              "label": "Glass (150ml / 5 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "half-bottle",
+              "label": "Half Bottle (375ml)",
+              "priceModifier": 14.0
+            },
+            {
+              "value": "carafe",
+              "label": "Carafe (500ml / 17 oz)",
+              "priceModifier": 18.0
+            },
+            {
+              "value": "bottle",
+              "label": "Bottle (750ml)",
+              "priceModifier": 32.0
+            }
+          ]
+        },
+        {
+          "id": "wine-serving-temperature",
+          "type": "single-select",
+          "label": "Serving Temperature",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "cellar-temp",
+              "label": "Cellar Temperature (16°C–18°C / 60°F–65°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "chilled",
+              "label": "Chilled in Ice Bucket (7°C–10°C / 45°F–50°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "room-temp",
+              "label": "Ambient Room Temperature",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beers-and-ciders",
+      "name": "Beers & Ciders",
+      "sortOrder": 3,
+      "description": "Comprehensive beer program featuring rotating draft lines, bottled lagers, craft IPAs, stouts, and artisanal ciders. Caters to casual bar customers, sports viewers, and dining patrons seeking refreshing malt and apple pairings.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍺",
+      "subSections": [
+        {
+          "id": "draft-beer",
+          "name": "Draft Beer",
+          "sortOrder": 1,
+          "description": "Freshly pulled draft beers from chilled glycol lines, serving crisp lagers, pilsners, IPAs, and dark stouts on tap."
+        },
+        {
+          "id": "bottled-and-canned-beer",
+          "name": "Bottled & Canned Beer",
+          "sortOrder": 2,
+          "description": "Popular domestic beers, international imported lagers, and specialty canned craft brews kept ice-cold."
+        },
+        {
+          "id": "craft-and-local-beer",
+          "name": "Craft & Local Beer",
+          "sortOrder": 3,
+          "description": "Local microbrewery partnerships, hazy IPAs, fruited sours, and seasonal small-batch releases."
+        },
+        {
+          "id": "ciders",
+          "name": "Ciders",
+          "sortOrder": 4,
+          "description": "Hard fermented apple, pear, and berry ciders providing crisp, refreshing, and naturally gluten-free beverage choices."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "beer-pour-size",
+          "type": "single-select",
+          "label": "Pour Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "half-pint",
+              "label": "Half Pint (8 oz / 240ml)",
+              "priceModifier": 0
+            },
+            {
+              "value": "pint",
+              "label": "Standard Pint (16 oz / 473ml)",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "imperial-pint",
+              "label": "Imperial Pint (20 oz / 590ml)",
+              "priceModifier": 5.0
+            },
+            {
+              "value": "pitcher",
+              "label": "Pitcher (60 oz / 1.8L)",
+              "priceModifier": 16.0
+            },
+            {
+              "value": "beer-flight",
+              "label": "Tasting Flight (4 x 4 oz Tasters)",
+              "priceModifier": 8.0
+            }
+          ]
+        },
+        {
+          "id": "beer-glassware",
+          "type": "single-select",
+          "label": "Glassware Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "chilled-frosted-mug",
+              "label": "Frosted Chilled Mug",
+              "priceModifier": 0
+            },
+            {
+              "value": "room-temp-glass",
+              "label": "Room-Temperature Glass (Recommended for Ales & Stouts)",
+              "priceModifier": 0
+            },
+            {
+              "value": "direct-from-container",
+              "label": "Drink Directly from Bottle / Can",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spirits-and-liquors",
+      "name": "Spirits & Liquors",
+      "sortOrder": 4,
+      "description": "Extensive back-bar collection of aged whiskeys, vodkas, gins, rums, 100% agave tequilas, and cognacs. Supports premium neat pours, rocks sipping, and custom highball combinations.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥃",
+      "subSections": [
+        {
+          "id": "whiskey-and-bourbon",
+          "name": "Whiskey & Bourbon",
+          "sortOrder": 1,
+          "description": "Single malts, small-batch bourbons, spicy ryes, and international whiskies from Scotland, Ireland, Japan, and Kentucky."
+        },
+        {
+          "id": "vodka",
+          "name": "Vodka",
+          "sortOrder": 2,
+          "description": "High-purity wheat, rye, and potato distilled vodkas along with citrus and herb botanical infusions."
+        },
+        {
+          "id": "gin",
+          "name": "Gin",
+          "sortOrder": 3,
+          "description": "London dry, contemporary botanical, Old Tom, and barrel-aged gins featuring juniper, coriander, and citrus peel."
+        },
+        {
+          "id": "rum",
+          "name": "Rum",
+          "sortOrder": 4,
+          "description": "Aged Caribbean dark rums, spiced rums, agricole cane rums, and smooth white rums."
+        },
+        {
+          "id": "tequila-and-mezcal",
+          "name": "Tequila & Mezcal",
+          "sortOrder": 5,
+          "description": "100% blue Weber agave tequilas (Blanco, Reposado, Añejo) and artisanal pit-roasted smoky mezcals."
+        },
+        {
+          "id": "brandy-and-cognac",
+          "name": "Brandy & Cognac",
+          "sortOrder": 6,
+          "description": "Aged grape brandies, VSOP, and XO Cognacs designed for slow sipping and post-dinner digestif service."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "spirit-serving-style",
+          "type": "single-select",
+          "label": "Serving Style",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-neat",
+              "label": "Neat (Single Pour 1.5 oz / 45ml)",
+              "priceModifier": 0
+            },
+            {
+              "value": "on-the-rocks",
+              "label": "On the Rocks (Single Pour over Large Clear Ice Cube)",
+              "priceModifier": 0
+            },
+            {
+              "value": "with-mixer",
+              "label": "With Mixer / Highball",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "double-neat",
+              "label": "Double Neat (3.0 oz / 90ml)",
+              "priceModifier": 8.0
+            },
+            {
+              "value": "double-rocks",
+              "label": "Double on the Rocks (3.0 oz / 90ml)",
+              "priceModifier": 8.0
+            }
+          ]
+        },
+        {
+          "id": "spirit-mixer-choice",
+          "type": "single-select",
+          "label": "Mixer Selection (for Highball)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "None / Neat or Rocks Only",
+              "priceModifier": 0
+            },
+            {
+              "value": "club-soda",
+              "label": "Club Soda",
+              "priceModifier": 0
+            },
+            {
+              "value": "tonic-water",
+              "label": "Tonic Water",
+              "priceModifier": 0
+            },
+            {
+              "value": "ginger-beer",
+              "label": "Spicy Ginger Beer",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "ginger-ale",
+              "label": "Ginger Ale",
+              "priceModifier": 0
+            },
+            {
+              "value": "cola",
+              "label": "Cola",
+              "priceModifier": 0
+            },
+            {
+              "value": "diet-cola",
+              "label": "Diet Cola",
+              "priceModifier": 0
+            },
+            {
+              "value": "cranberry",
+              "label": "Cranberry Juice",
+              "priceModifier": 0
+            },
+            {
+              "value": "red-bull",
+              "label": "Red Bull Energy Drink",
+              "priceModifier": 3.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mocktails-and-non-alcoholic",
+      "name": "Mocktails & Non-Alcoholic",
+      "sortOrder": 5,
+      "description": "Sophisticated alcohol-free mixology creations, non-alcoholic craft beers, and zero-proof spirits. Ensures designated drivers, mindful drinkers, and non-alcohol consumers enjoy an elevated bar beverage experience.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍹",
+      "subSections": [
+        {
+          "id": "mocktails",
+          "name": "Mocktails",
+          "sortOrder": 1,
+          "description": "Artisanal zero-proof cocktails formulated with botanical extracts, freshly pressed juices, house syrups, and herbs."
+        },
+        {
+          "id": "non-alcoholic-beers",
+          "name": "Non-Alcoholic Beers",
+          "sortOrder": 2,
+          "description": "0.0% to 0.5% ABV brewed craft beers delivering authentic hop bitterness, malt profile, and crisp foam head."
+        },
+        {
+          "id": "non-alcoholic-wines-and-spirits",
+          "name": "Non-Alcoholic Wines & Spirits",
+          "sortOrder": 3,
+          "description": "Dealcoholized sparkling wines, still varietals, and distilled botanical zero-proof spirit alternatives."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "na-sweetness",
+          "type": "single-select",
+          "label": "Sweetness Adjustment",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Standard Recipe Sweetness",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-sweet",
+              "label": "Less Sweet (Light Syrup)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-dry",
+              "label": "Tart / Extra Dry (No Simple Syrup)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "na-ice-level",
+          "type": "single-select",
+          "label": "Ice Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "light-ice",
+              "label": "Light Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "Chilled, No Ice",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bar-bites-and-sharing-plates",
+      "name": "Bar Bites & Sharing Plates",
+      "sortOrder": 6,
+      "description": "Fast-casual savory finger foods, loaded nachos, wings, sliders, and communal platters tailored for sharing at the bar, lounge tables, and group gatherings. Drives high food attach rates with drink orders.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥨",
+      "subSections": [
+        {
+          "id": "hot-bar-snacks",
+          "name": "Hot Bar Snacks",
+          "sortOrder": 1,
+          "description": "Warm, crispy, and savory shareables like loaded fries, chicken wings, sliders, mozzarella sticks, and calamari."
+        },
+        {
+          "id": "cold-bar-snacks",
+          "name": "Cold Bar Snacks",
+          "sortOrder": 2,
+          "description": "Chilled savory grazing bites including house-roasted spiced nuts, artisan olives, dips, and vegetable crudités."
+        },
+        {
+          "id": "sharing-boards-and-platters",
+          "name": "Sharing Boards & Platters",
+          "sortOrder": 3,
+          "description": "Artisan charcuterie boards, cheese flights, towering nacho plates, and tasting boards designed for groups."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "bar-bites-portion-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular Order (1–2 People)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sharer",
+              "label": "Sharing Platter (3–4 People)",
+              "priceModifier": 6.0
+            }
+          ]
+        },
+        {
+          "id": "bar-bites-heat-level",
+          "type": "single-select",
+          "label": "Heat / Spice Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "mild",
+              "label": "Mild (No Heat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium (Zesty Kick)",
+              "priceModifier": 0
+            },
+            {
+              "value": "hot",
+              "label": "Hot (Fiery Buffalo / Habanero)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-hot",
+              "label": "Extra Hot (Ghost Pepper / Nashville Hot)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "bar-bites-dipping-sauces",
+          "type": "multi-select",
+          "label": "Dipping Sauces",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "house-ranch",
+              "label": "House Buttermilk Ranch",
+              "priceModifier": 0
+            },
+            {
+              "value": "blue-cheese",
+              "label": "Blue Cheese Crema",
+              "priceModifier": 0
+            },
+            {
+              "value": "truffle-garlic-aioli",
+              "label": "Truffle Garlic Aioli",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "smoky-bbq",
+              "label": "Smoky Bourbon BBQ",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet-chili",
+              "label": "Sweet Thai Chili Glaze",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appetizers-and-starters",
+      "name": "Appetizers & Starters",
+      "sortOrder": 7,
+      "description": "Refined culinary beginnings for seated restaurant dining. Features house-simmered soups, crisp dressed salads, and plated small bites that prime the appetite for main courses.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥗",
+      "subSections": [
+        {
+          "id": "soups",
+          "name": "Soups",
+          "sortOrder": 1,
+          "description": "Freshly simmered broths, creamy seasonal chowders, and rich seafood bisques served with warm crusty bread."
+        },
+        {
+          "id": "salads",
+          "name": "Salads",
+          "sortOrder": 2,
+          "description": "Crisp farm greens, classic Caesar salads, burrata bowls, and grain medleys paired with house-made dressings."
+        },
+        {
+          "id": "small-plates",
+          "name": "Small Plates",
+          "sortOrder": 3,
+          "description": "Composed culinary starters including beef carpaccio, tuna tartare, pan-seared sea scallops, and artisan bruschetta."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "starter-protein-addon",
+          "type": "single-select",
+          "label": "Add Protein",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Added Protein",
+              "priceModifier": 0
+            },
+            {
+              "value": "grilled-chicken",
+              "label": "Add Grilled Chicken Breast",
+              "priceModifier": 5.0
+            },
+            {
+              "value": "garlic-shrimp",
+              "label": "Add Grilled Garlic Shrimp",
+              "priceModifier": 7.0
+            },
+            {
+              "value": "seared-salmon",
+              "label": "Add Pan-Seared Salmon",
+              "priceModifier": 8.0
+            },
+            {
+              "value": "crispy-tofu",
+              "label": "Add Crispy Herb Tofu",
+              "priceModifier": 4.0
+            }
+          ]
+        },
+        {
+          "id": "salad-dressing-service",
+          "type": "single-select",
+          "label": "Dressing Service",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "tossed",
+              "label": "Tossed in Dressing",
+              "priceModifier": 0
+            },
+            {
+              "value": "on-the-side",
+              "label": "Dressing on the Side",
+              "priceModifier": 0
+            },
+            {
+              "value": "light-tossed",
+              "label": "Lightly Tossed",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "soup-serving-size",
+          "type": "single-select",
+          "label": "Soup Serving Size",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "cup",
+              "label": "Cup (8 oz Starter Size)",
+              "priceModifier": 0
+            },
+            {
+              "value": "bowl",
+              "label": "Bowl (16 oz Full Portion)",
+              "priceModifier": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "main-courses-entrees",
+      "name": "Main Courses / Entrées",
+      "sortOrder": 8,
+      "description": "Substantial dinner and lunch centerpiece dishes spanning poultry, braised meats, seafood, artisanal pasta, and wholesome plant-based culinary creations that anchor table service dining.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥩",
+      "subSections": [
+        {
+          "id": "meat-and-poultry",
+          "name": "Meat & Poultry",
+          "sortOrder": 1,
+          "description": "Pan-roasted poultry, slow-braised short ribs, duck breast, and tender pork medallions served with savory glazes."
+        },
+        {
+          "id": "seafood",
+          "name": "Seafood",
+          "sortOrder": 2,
+          "description": "Sustainable fresh catches, pan-seared sea bass, roasted salmon, and seafood risottos."
+        },
+        {
+          "id": "pasta-and-rice",
+          "name": "Pasta & Rice",
+          "sortOrder": 3,
+          "description": "Handcrafted fresh pasta, slow-simmered bolognese, creamy wild mushroom risotto, and paella-inspired grain dishes."
+        },
+        {
+          "id": "vegetarian-and-vegan-mains",
+          "name": "Vegetarian & Vegan Mains",
+          "sortOrder": 4,
+          "description": "Hearty plant-forward centerpieces like roasted cauliflower steaks, lentil bolognese, and mushroom bourguignon."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "entree-side-choice",
+          "type": "single-select",
+          "label": "Included Side Dish",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "garlic-mash",
+              "label": "Roasted Garlic Mashed Potatoes",
+              "priceModifier": 0
+            },
+            {
+              "value": "hand-cut-fries",
+              "label": "Hand-Cut Fries",
+              "priceModifier": 0
+            },
+            {
+              "value": "grilled-asparagus",
+              "label": "Grilled Lemon Asparagus",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "garden-salad",
+              "label": "House Garden Green Salad",
+              "priceModifier": 0
+            },
+            {
+              "value": "wild-rice-pilaf",
+              "label": "Wild Rice Herb Pilaf",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "entree-dietary-adjustments",
+          "type": "multi-select",
+          "label": "Dietary Modifications",
+          "isRequired": false,
+          "maxSelections": 2,
+          "choices": [
+            {
+              "value": "gluten-free-pasta",
+              "label": "Substitute Gluten-Free Pasta",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "dairy-free-prep",
+              "label": "Prepare Dairy-Free (Olive Oil Only)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sauce-on-the-side",
+              "label": "Sauce on the Side",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grills-and-specialties",
+      "name": "Grills & Specialties",
+      "sortOrder": 9,
+      "description": "Flame-grilled butcher steaks, slow-smoked barbecue ribs, char-grilled seafood, and chef specialty cuts cooked over high heat according to customer doneness preferences.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🔥",
+      "subSections": [
+        {
+          "id": "steaks-and-cuts",
+          "name": "Steaks & Cuts",
+          "sortOrder": 1,
+          "description": "Prime wet and dry-aged beef cuts such as Filet Mignon, Ribeye, New York Strip, and Tomahawk seared over open fire."
+        },
+        {
+          "id": "ribs-and-bbq",
+          "name": "Ribs & BBQ",
+          "sortOrder": 2,
+          "description": "Slow-smoked baby back ribs, brisket, and barbecue glazed cuts served with house bastes."
+        },
+        {
+          "id": "grilled-seafood",
+          "name": "Grilled Seafood",
+          "sortOrder": 3,
+          "description": "Whole grilled Mediterranean fish, grilled lobster tails, and jumbo tiger prawns with fresh herbs and citrus butter."
+        },
+        {
+          "id": "house-specialties",
+          "name": "House Specialties",
+          "sortOrder": 4,
+          "description": "Signature tavern specialties, surf & turf pairings, and chef-curated premium meat platters."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "meat-doneness",
+          "type": "single-select",
+          "label": "Meat Doneness",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "rare",
+              "label": "Rare — Cool red center (125°F / 52°C)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-rare",
+              "label": "Medium Rare — Warm red center (135°F / 57°C)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium — Warm pink center (145°F / 63°C)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-well",
+              "label": "Medium Well — Slight pink center (155°F / 68°C)",
+              "priceModifier": 0
+            },
+            {
+              "value": "well-done",
+              "label": "Well Done — Thoroughly cooked through (165°F / 74°C)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "weight-cut-size",
+          "type": "single-select",
+          "label": "Cut Weight / Portion Size",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "petite-8oz",
+              "label": "Petite Cut (8 oz / 225g)",
+              "priceModifier": 0
+            },
+            {
+              "value": "standard-12oz",
+              "label": "Standard Cut (12 oz / 340g)",
+              "priceModifier": 8.0
+            },
+            {
+              "value": "large-16oz",
+              "label": "King Cut (16 oz / 450g)",
+              "priceModifier": 16.0
+            },
+            {
+              "value": "tomahawk-32oz",
+              "label": "Bone-In Tomahawk / Porterhouse (32 oz / 900g)",
+              "priceModifier": 48.0
+            }
+          ]
+        },
+        {
+          "id": "steak-sauce-topping",
+          "type": "single-select",
+          "label": "Sauce / Compound Butter",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "peppercorn-sauce",
+              "label": "Green Peppercorn Cognac Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "truffle-butter",
+              "label": "Black Truffle Herb Butter",
+              "priceModifier": 0
+            },
+            {
+              "value": "chimichurri",
+              "label": "Fresh Argentine Chimichurri",
+              "priceModifier": 0
+            },
+            {
+              "value": "bearnaise",
+              "label": "Classic Tarragon Béarnaise",
+              "priceModifier": 0
+            },
+            {
+              "value": "red-wine-demi",
+              "label": "Cabernet Red Wine Demi-Glace",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "surf-and-turf-upgrade",
+          "type": "single-select",
+          "label": "Surf & Turf Enhancement",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Seafood Enhancement",
+              "priceModifier": 0
+            },
+            {
+              "value": "lobster-tail",
+              "label": "Add 6 oz Butter-Poached Lobster Tail",
+              "priceModifier": 18.0
+            },
+            {
+              "value": "diver-scallops",
+              "label": "Add 2 Pan-Seared Jumbo Diver Scallops",
+              "priceModifier": 12.0
+            },
+            {
+              "value": "garlic-prawns",
+              "label": "Add 3 Grilled Garlic Tiger Prawns",
+              "priceModifier": 10.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "Sides",
+      "sortOrder": 10,
+      "description": "A la carte accompaniments, hot potato dishes, seasonal vegetables, fresh side salads, and house-made sauces that allow guests to customize their dining experience.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍟",
+      "subSections": [
+        {
+          "id": "hot-sides",
+          "name": "Hot Sides",
+          "sortOrder": 1,
+          "description": "Warm accompaniments such as roasted fingerling potatoes, truffle fries, creamed spinach, and baked mac & cheese."
+        },
+        {
+          "id": "cold-sides",
+          "name": "Cold Sides",
+          "sortOrder": 2,
+          "description": "Chilled accompaniments including tangy coleslaw, cucumber dill salad, and pickled seasonal vegetables."
+        },
+        {
+          "id": "sauces",
+          "name": "Sauces",
+          "sortOrder": 3,
+          "description": "Ramekins of signature gravies, house aiolis, steak sauces, relishes, and flavored butters."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "side-portion-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "individual",
+              "label": "Individual Side Portion",
+              "priceModifier": 0
+            },
+            {
+              "value": "table-share",
+              "label": "Table Sharing Basket (Serves 2–3)",
+              "priceModifier": 4.0
+            }
+          ]
+        },
+        {
+          "id": "fries-seasoning",
+          "type": "single-select",
+          "label": "Potato & Fries Seasoning",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "sea-salt",
+              "label": "Sea Salt & Black Pepper",
+              "priceModifier": 0
+            },
+            {
+              "value": "cajun-spice",
+              "label": "Cajun Spice Rub",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "parmesan-truffle",
+              "label": "Parmesan & White Truffle Oil",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "garlic-rosemary",
+              "label": "Roasted Garlic & Rosemary",
+              "priceModifier": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "sortOrder": 11,
+      "description": "Decadent post-dinner sweet courses including warm baked pastries, artisan gelato, chilled crèmes, and celebration cakes designed to extend table turnover and boost check totals.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍰",
+      "subSections": [
+        {
+          "id": "hot-desserts",
+          "name": "Hot Desserts",
+          "sortOrder": 1,
+          "description": "Oven-fresh warm desserts such as molten chocolate lava cake, warm berry crumbles, and brioche bread pudding."
+        },
+        {
+          "id": "cold-desserts",
+          "name": "Cold Desserts",
+          "sortOrder": 2,
+          "description": "Chilled desserts including espresso tiramisu, vanilla panna cotta, and artisan gelato or fruit sorbets."
+        },
+        {
+          "id": "cakes",
+          "name": "Cakes",
+          "sortOrder": 3,
+          "description": "Rich multi-layer cakes, New York cheesecakes, chocolate tortes, and celebration slices."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "dessert-ice-cream-addon",
+          "type": "single-select",
+          "label": "A La Mode Pairing",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "As Served (No Added Ice Cream)",
+              "priceModifier": 0
+            },
+            {
+              "value": "vanilla-bean",
+              "label": "Add Madagascar Vanilla Bean Scoop",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "salted-caramel",
+              "label": "Add Salted Caramel Gelato Scoop",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "dairy-free-sorbet",
+              "label": "Add Raspberry Sorbet Scoop (Dairy-Free)",
+              "priceModifier": 2.5
+            }
+          ]
+        },
+        {
+          "id": "dessert-sauce-drizzle",
+          "type": "single-select",
+          "label": "Extra Sauce Drizzle",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard",
+              "label": "Chef's Standard Presentation",
+              "priceModifier": 0
+            },
+            {
+              "value": "dark-chocolate-fudge",
+              "label": "Extra Warm Dark Chocolate Fudge",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "salted-caramel",
+              "label": "Extra Warm Salted Caramel",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "raspberry-coulis",
+              "label": "Extra Raspberry Coulis",
+              "priceModifier": 0.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kids-menu",
+      "name": "Kids' Menu",
+      "sortOrder": 12,
+      "description": "Child-friendly meals, drinks, and mini desserts crafted with approachable flavors for guests aged 12 and under. Set to hidden by default for nightlife and cocktail bar concepts, enabling flexible family daytime dining.",
+      "isRequired": false,
+      "isDefaultVisible": false,
+      "icon": "🧒",
+      "subSections": [
+        {
+          "id": "kids-mains",
+          "name": "Kids' Mains",
+          "sortOrder": 1,
+          "description": "Approachable mains such as crispy chicken tenders, mini cheeseburger sliders, creamy mac and cheese, and cheese flatbreads."
+        },
+        {
+          "id": "kids-drinks",
+          "name": "Kids' Drinks",
+          "sortOrder": 2,
+          "description": "Child-friendly beverages like pure apple juice, whole milk, chocolate milk, and non-alcoholic kiddie cocktails."
+        },
+        {
+          "id": "kids-desserts",
+          "name": "Kids' Desserts",
+          "sortOrder": 3,
+          "description": "Fun small desserts including mini ice cream sundaes, warm chocolate chip cookies, and fresh fruit bowls."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "kids-side-choice",
+          "type": "single-select",
+          "label": "Included Kid's Side",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "french-fries",
+              "label": "Kid's French Fries",
+              "priceModifier": 0
+            },
+            {
+              "value": "steamed-broccoli",
+              "label": "Steamed Fresh Broccoli",
+              "priceModifier": 0
+            },
+            {
+              "value": "apple-slices",
+              "label": "Fresh Apple Slices",
+              "priceModifier": 0
+            },
+            {
+              "value": "carrot-sticks",
+              "label": "Carrot Sticks with Ranch Dip",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "kids-drink-choice",
+          "type": "single-select",
+          "label": "Included Kid's Drink",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "apple-juice",
+              "label": "100% Apple Juice",
+              "priceModifier": 0
+            },
+            {
+              "value": "orange-juice",
+              "label": "Fresh Orange Juice",
+              "priceModifier": 0
+            },
+            {
+              "value": "milk",
+              "label": "Fresh Cold Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "chocolate-milk",
+              "label": "Cold Chocolate Milk",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "lemonade",
+              "label": "House Lemonade",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hot-beverages",
+      "name": "Hot Beverages",
+      "sortOrder": 13,
+      "description": "Barista-crafted espresso drinks, freshly brewed drip coffees, herbal teas, and liqueur-spiked warm beverages for morning brunch, afternoon meetings, or post-meal dining service.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "☕",
+      "subSections": [
+        {
+          "id": "coffee",
+          "name": "Coffee",
+          "sortOrder": 1,
+          "description": "Espresso, Americano, Cappuccino, Flat White, Latte, and specialty warm spiked coffees (e.g. Irish Coffee)."
+        },
+        {
+          "id": "tea",
+          "name": "Tea",
+          "sortOrder": 2,
+          "description": "Whole-leaf black, green, herbal, and floral caffeine-free infusions served in individual brewing teapots."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "hot-bev-milk-choice",
+          "type": "single-select",
+          "label": "Milk Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-milk",
+              "label": "Whole Dairy Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "skim-milk",
+              "label": "Skim Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Barista Oat Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "soy-milk",
+              "label": "Organic Soy Milk",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "hot-bev-caffeine",
+          "type": "single-select",
+          "label": "Caffeination",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular Caffeinated",
+              "priceModifier": 0
+            },
+            {
+              "value": "decaf",
+              "label": "Swiss Water Decaf",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "flavor-syrup-addition",
+          "type": "single-select",
+          "label": "Flavor Syrup Addition",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Flavor Syrup",
+              "priceModifier": 0
+            },
+            {
+              "value": "vanilla",
+              "label": "Madagascar Vanilla Syrup",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "caramel",
+              "label": "Salted Caramel Syrup",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "hazelnut",
+              "label": "Toasted Hazelnut Syrup",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "sf-vanilla",
+              "label": "Sugar-Free Vanilla Syrup",
+              "priceModifier": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soft-drinks",
+      "name": "Soft Drinks",
+      "sortOrder": 14,
+      "description": "Cold non-alcoholic refreshments spanning freshly squeezed citrus juices, fountain and craft sodas, tonic waters, and bottled premium mineral waters.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥤",
+      "subSections": [
+        {
+          "id": "fresh-juices",
+          "name": "Fresh Juices",
+          "sortOrder": 1,
+          "description": "Cold-pressed and fresh-squeezed orange, ruby red grapefruit, crisp apple, and antioxidant fruit blends."
+        },
+        {
+          "id": "soft-drinks",
+          "name": "Soft Drinks",
+          "sortOrder": 2,
+          "description": "Fountain sodas, artisan craft colas, ginger ale, tonic water, and freshly brewed iced teas."
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "sortOrder": 3,
+          "description": "Imported sparkling mineral water, still natural spring water bottles, and chilled carafes."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "soft-drink-size",
+          "type": "single-select",
+          "label": "Bottle / Glass Size",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-glass",
+              "label": "Regular Glass (12 oz / 355ml)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-bottle",
+              "label": "Large Table Bottle (750ml / 1L)",
+              "priceModifier": 4.5
+            }
+          ]
+        },
+        {
+          "id": "soft-drink-ice-garnish",
+          "type": "single-select",
+          "label": "Ice & Garnish Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "ice-and-lemon",
+              "label": "With Ice and Lemon Slice",
+              "priceModifier": 0
+            },
+            {
+              "value": "ice-and-lime",
+              "label": "With Ice and Lime Wedge",
+              "priceModifier": 0
+            },
+            {
+              "value": "ice-only",
+              "label": "Ice Only (No Citrus)",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "Chilled, No Ice",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "happy-hour-specials",
+      "name": "Happy Hour / Specials",
+      "sortOrder": 15,
+      "description": "Time-restricted promotional drinks, discounted draft beers, house wines, and paired food bundles active during late-afternoon and early-evening hours to attract after-work crowds.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🏷️",
+      "subSections": [
+        {
+          "id": "happy-hour-drinks",
+          "name": "Happy Hour Drinks",
+          "sortOrder": 1,
+          "description": "Discounted pints of draft beer, select house wines by the glass, well highballs, and promotional featured cocktails."
+        },
+        {
+          "id": "happy-hour-food-deals",
+          "name": "Happy Hour Food Deals",
+          "sortOrder": 2,
+          "description": "Specially priced bar bites, slider combos, loaded nachos, and drink-and-snack bundle deals."
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": true,
+        "defaultAvailableFrom": "16:00",
+        "defaultAvailableUntil": "19:00",
+        "note": "Available Monday through Friday between 16:00 and 19:00 in the bar, lounge, and high-top dining sections."
+      },
+      "itemOptions": [
+        {
+          "id": "hh-combo-drink",
+          "type": "single-select",
+          "label": "Combo Drink Choice",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "house-draft-pint",
+              "label": "Pint of House Draft Beer",
+              "priceModifier": 0
+            },
+            {
+              "value": "house-wine-red",
+              "label": "Glass of House Red Wine",
+              "priceModifier": 0
+            },
+            {
+              "value": "house-wine-white",
+              "label": "Glass of House White Wine",
+              "priceModifier": 0
+            },
+            {
+              "value": "well-highball",
+              "label": "Standard Well Highball (Vodka/Gin/Rum)",
+              "priceModifier": 0
+            },
+            {
+              "value": "featured-cocktail-upgrade",
+              "label": "Upgrade to Featured Craft Cocktail",
+              "priceModifier": 3.0
+            }
+          ]
+        },
+        {
+          "id": "hh-discounted-snack",
+          "type": "single-select",
+          "label": "Discounted Snack Pairing",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "Drink Only",
+              "priceModifier": 0
+            },
+            {
+              "value": "truffle-fries",
+              "label": "Add Truffle Fries Ramekin",
+              "priceModifier": 4.0
+            },
+            {
+              "value": "crispy-wings-4pc",
+              "label": "Add 4 Crispy Wings",
+              "priceModifier": 5.0
+            },
+            {
+              "value": "mini-slider",
+              "label": "Add Mini Beef Slider",
+              "priceModifier": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasonal-and-limited",
+      "name": "Seasonal & Limited",
+      "sortOrder": 16,
+      "description": "Rotating seasonal culinary specials, guest brewery draft takeovers, holiday cocktail features, and chef market finds that keep the menu dynamic and encourage repeat visits.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "✨",
+      "subSections": [
+        {
+          "id": "seasonal-cocktails",
+          "name": "Seasonal Cocktails",
+          "sortOrder": 1,
+          "description": "Quarterly mixology creations highlighting seasonal stone fruits, summer spritzes, spiced autumn botanicals, or winter warmers."
+        },
+        {
+          "id": "rotating-taps",
+          "name": "Rotating Taps",
+          "sortOrder": 2,
+          "description": "Limited-quantity guest brewery kegs, fresh wet-hop harvest ales, and rare seasonal beers on rotating draft lines."
+        },
+        {
+          "id": "specials",
+          "name": "Specials",
+          "sortOrder": 3,
+          "description": "Chef's daily dinner features, fresh seafood market catches, and holiday celebration dishes."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "seasonal-serving-format",
+          "type": "single-select",
+          "label": "Serving Format",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-serving",
+              "label": "Standard Serving / Pour",
+              "priceModifier": 0
+            },
+            {
+              "value": "sample-taste",
+              "label": "Sample Tasting Pour (where available)",
+              "priceModifier": -3.0
+            },
+            {
+              "value": "large-share-format",
+              "label": "Large Table Sharing Format",
+              "priceModifier": 6.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "ageVerification",
+      "name": "Age Verification",
+      "description": "Enforces digital age gate verification for ordering alcohol-containing beverages including cocktails, wine, beer, and spirits.",
+      "isEnabled": true,
+      "config": {
+        "minimumAge": 21,
+        "restrictedSectionIds": [
+          "cocktails",
+          "wines",
+          "beers-and-ciders",
+          "spirits-and-liquors",
+          "happy-hour-specials"
+        ],
+        "requireConfirmationPrompt": true
+      }
+    },
+    {
+      "id": "happyHour",
+      "name": "Happy Hour Pricing & Schedules",
+      "description": "Time-based promotional discount engine and automated menu availability during scheduled happy hour periods.",
+      "isEnabled": true,
+      "config": {
+        "enabledDays": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "startTime": "16:00",
+        "endTime": "19:00",
+        "targetSectionIds": [
+          "happy-hour-specials"
+        ],
+        "displayBanner": true
+      }
+    },
+    {
+      "id": "spiceLevels",
+      "name": "Spice Levels",
+      "description": "Customer-selectable heat indicators for chicken wings, savory bar bites, and spicy entrées.",
+      "isEnabled": true,
+      "config": {
+        "levels": [
+          "none",
+          "mild",
+          "medium",
+          "hot",
+          "extra-hot"
+        ],
+        "defaultLevel": "mild",
+        "applicableSectionIds": [
+          "bar-bites-and-sharing-plates",
+          "main-courses-entrees",
+          "grills-and-specialties"
+        ]
+      }
+    },
+    {
+      "id": "meatDoneness",
+      "name": "Meat Doneness Selection",
+      "description": "Mandatory steak and grilled meat cooking temperatures communicated directly to the kitchen ticket system.",
+      "isEnabled": true,
+      "config": {
+        "donenessOptions": [
+          "rare",
+          "medium-rare",
+          "medium",
+          "medium-well",
+          "well-done"
+        ],
+        "defaultDoneness": "medium-rare",
+        "applicableSectionIds": [
+          "grills-and-specialties",
+          "main-courses-entrees"
+        ]
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Badges",
+      "description": "Visual allergen warnings, dietary badges, and nutritional filter indicators displayed across food and beverage items.",
+      "isEnabled": true,
+      "config": {
+        "displayBadges": true,
+        "filterable": true,
+        "supportedTags": [
+          "gluten-free",
+          "dairy-free",
+          "nut-free",
+          "vegetarian",
+          "vegan",
+          "contains-alcohol",
+          "contains-dairy",
+          "contains-gluten"
+        ]
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Real-Time Inventory Badges",
+      "description": "Live stock indicators highlighting available, low stock, sold out, or rotating draft keg statuses.",
+      "isEnabled": true,
+      "config": {
+        "showLowStock": true,
+        "lowStockThreshold": 5,
+        "showSoldOut": true,
+        "showRotatingBadge": true
+      }
+    },
+    {
+      "id": "kidsMenu",
+      "name": "Kids' Menu Management",
+      "description": "Configurable family dining section that can be hidden or shown depending on venue vibe and evening hours.",
+      "isEnabled": true,
+      "config": {
+        "cutoffAge": 12,
+        "autoHideAfterHour": "20:00",
+        "targetSectionId": "kids-menu"
+      }
+    },
+    {
+      "id": "wineMetadata",
+      "name": "Wine Metadata & Tasting Notes",
+      "description": "Structured wine attributes including vintage, wine region, country of origin, grape varietal, ABV, and sommelier tasting notes.",
+      "isEnabled": true,
+      "config": {
+        "fields": [
+          "vintage",
+          "region",
+          "country",
+          "grape_variety",
+          "producer",
+          "abv",
+          "body",
+          "tasting_notes"
+        ],
+        "targetSectionIds": [
+          "wines"
+        ]
+      }
+    },
+    {
+      "id": "servingSize",
+      "name": "Serving Size Options",
+      "description": "Multi-tier pour and portion sizes for drinks (glass, carafe, bottle, pint, flight) and food (regular, sharing).",
+      "isEnabled": true,
+      "config": {
+        "enableCustomModifiers": true,
+        "units": [
+          "oz",
+          "ml",
+          "pint",
+          "carafe",
+          "bottle",
+          "half-bottle"
+        ],
+        "targetSectionIds": [
+          "cocktails",
+          "wines",
+          "beers-and-ciders",
+          "spirits-and-liquors",
+          "bar-bites-and-sharing-plates",
+          "grills-and-specialties"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

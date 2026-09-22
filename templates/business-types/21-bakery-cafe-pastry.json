@@ -1,0 +1,1268 @@
+{
+  "id": "bakery-cafe-pastry",
+  "name": "Bakery & Cafe & Pastry (Triple Combo)",
+  "slug": "bakery-cafe-pastry",
+  "icon": "🥐☕🍰",
+  "description": "The most comprehensive bakery-cafe concept. Combines full bread production, full pâtisserie showcase, AND a complete cafe drink program. Very common in modern urban bakery-cafés.",
+  "category": "hybrid",
+  "tags": [
+    "bakery",
+    "cafe",
+    "pastry",
+    "coffee",
+    "bread",
+    "patisserie",
+    "breakfast",
+    "brunch"
+  ],
+  "sections": [
+    {
+      "id": "artisan-breads-and-loaves",
+      "name": "Artisan Breads & Loaves",
+      "sortOrder": 1,
+      "description": "House-crafted sourdoughs, crusty hearth loaves, traditional French baguettes, sandwich breads, and dinner rolls baked fresh daily using long fermentation. Represents the foundational bread production bakery pillar, serving retail table bread customers while supplying the cafe kitchen.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥖",
+      "subSections": [
+        {
+          "id": "sourdoughs-and-country",
+          "name": "Sourdoughs & Country",
+          "sortOrder": 1,
+          "description": "Naturally leavened wild-yeast sourdough boules, rustic country batards, and heritage flour hearth loaves with open crumb and caramelized crusts."
+        },
+        {
+          "id": "baguettes",
+          "name": "Baguettes",
+          "sortOrder": 2,
+          "description": "Classic French stone-baked baguettes, seeded baguettes, and demi-baguettes with crisp crackling crusts and airy honeycomb crumb."
+        },
+        {
+          "id": "sandwich-breads",
+          "name": "Sandwich Breads",
+          "sortOrder": 3,
+          "description": "Soft square pullman loaves, Japanese Shokupan milk bread, and enriched sandwich breads ideal for household slicing and toasting."
+        },
+        {
+          "id": "specialty-grains",
+          "name": "Specialty Grains",
+          "sortOrder": 4,
+          "description": "Dense and nutritious loaves baked with dark rye, ancient spelt, Einkorn, malted grains, and toasted multi-seed crusts."
+        },
+        {
+          "id": "rolls-and-buns",
+          "name": "Rolls & Buns",
+          "sortOrder": 5,
+          "description": "Individual dinner rolls, brioche burger buns, ciabatta rolls, and soft table rolls for meal pairings and take-home dining."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "slicing-preference",
+          "type": "single-select",
+          "label": "Slicing Preference",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "unsliced",
+              "label": "Whole / Unsliced (Preserves freshness & moisture)",
+              "priceModifier": 0
+            },
+            {
+              "value": "thin-sliced",
+              "label": "Thin Sliced (~10mm — optimal for sandwiches)",
+              "priceModifier": 0
+            },
+            {
+              "value": "standard-sliced",
+              "label": "Standard Sliced (~12mm — everyday toast)",
+              "priceModifier": 0
+            },
+            {
+              "value": "thick-sliced",
+              "label": "Thick Sliced (~16mm — French toast & hearty melts)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "viennoiserie-and-morning-pastries",
+      "name": "Viennoiserie & Morning Pastries",
+      "sortOrder": 2,
+      "description": "Hand-laminated pure butter viennoiserie, fruit danishes, enriched brioches, and morning bakery scones baked fresh each morning before dawn. Serves as the high-velocity morning engine of the bakery-cafe, pairing directly with morning espresso and breakfast trade.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥐",
+      "timeBehavior": {
+        "isTimeRestricted": true,
+        "defaultAvailableFrom": "07:00",
+        "note": "Baked fresh daily before dawn; available starting from 07:00."
+      },
+      "subSections": [
+        {
+          "id": "laminated-pastries",
+          "name": "Laminated Pastries",
+          "sortOrder": 1,
+          "description": "European cultured butter croissants, pain au chocolat, twice-baked almond croissants, and caramelized kouign-amann."
+        },
+        {
+          "id": "danishes",
+          "name": "Danishes",
+          "sortOrder": 2,
+          "description": "Crisp flaky laminated pastries filled with Madagascar vanilla bean cream, seasonal poached fruits, and sweet fruit glazes."
+        },
+        {
+          "id": "brioches",
+          "name": "Brioches",
+          "sortOrder": 3,
+          "description": "Rich golden yeasted sweet doughs, Swedish cardamom buns, cinnamon morning rolls, and chocolate babka slices."
+        },
+        {
+          "id": "muffins-and-scones",
+          "name": "Muffins & Scones",
+          "sortOrder": 4,
+          "description": "Freshly baked bakery fruit muffins, traditional buttermilk tea scones, and savory herb-and-aged-cheese scones."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "warm-up",
+          "type": "toggle",
+          "label": "Warm Up Before Serving",
+          "isRequired": false
+        },
+        {
+          "id": "pack-size",
+          "type": "single-select",
+          "label": "Pack Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single",
+              "label": "Single Piece",
+              "priceModifier": 0
+            },
+            {
+              "value": "box-of-4",
+              "label": "Box of 4 (Mixed or Matching)",
+              "priceModifier": 0
+            },
+            {
+              "value": "half-dozen",
+              "label": "Baker's Half Dozen (Box of 6)",
+              "priceModifier": 0
+            },
+            {
+              "value": "dozen",
+              "label": "Catering Box of 12",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "individual-fine-pastries",
+      "name": "Individual Fine Pastries",
+      "sortOrder": 3,
+      "description": "Luxury refrigerated French pâtisserie showcase featuring individual glossy entremets, delicate tartlets, crisp craquelin choux, and handcrafted macarons. Represents the artisanal pâtisserie showcase pillar, providing elegant desserts for dine-in afternoon tea, luxury snacking, and gifting.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🧁",
+      "subSections": [
+        {
+          "id": "entremets",
+          "name": "Entremets",
+          "sortOrder": 1,
+          "description": "Multi-layered glazed mousse cakes with fruit compotes, sponge layers, crunchy praline inserts, and glossy mirror glazes."
+        },
+        {
+          "id": "tartlets",
+          "name": "Tartlets",
+          "sortOrder": 2,
+          "description": "Pâte sablée pastry tart shells filled with silky lemon curd, Valrhona dark chocolate ganache, and fresh seasonal berries."
+        },
+        {
+          "id": "choux",
+          "name": "Choux",
+          "sortOrder": 3,
+          "description": "Crisp craquelin choux buns, classic filled éclairs, and Paris-Brest with hazelnut diplomat cream."
+        },
+        {
+          "id": "macarons-and-petit-fours",
+          "name": "Macarons & Petit Fours",
+          "sortOrder": 4,
+          "description": "French almond meringue macarons in vibrant classic and seasonal flavors, accompanied by bite-sized confectionery petit fours."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "macaron-flavor-picker",
+          "type": "multi-select",
+          "label": "Macaron Flavor Selection (Choose your flavors)",
+          "isRequired": false,
+          "maxSelections": 6,
+          "choices": [
+            {
+              "value": "madagascar-vanilla",
+              "label": "Madagascar Vanilla Bean",
+              "priceModifier": 0
+            },
+            {
+              "value": "dark-chocolate-ganache",
+              "label": "Valrhona 70% Dark Chocolate Ganache",
+              "priceModifier": 0
+            },
+            {
+              "value": "salted-butter-caramel",
+              "label": "Salted Butter Caramel",
+              "priceModifier": 0
+            },
+            {
+              "value": "pistachio-praline",
+              "label": "Sicilian Pistachio Praline",
+              "priceModifier": 0
+            },
+            {
+              "value": "raspberry-rose",
+              "label": "Raspberry & Rosewater",
+              "priceModifier": 0
+            },
+            {
+              "value": "passion-fruit-mango",
+              "label": "Passion Fruit & Mango",
+              "priceModifier": 0
+            },
+            {
+              "value": "lemon-curd",
+              "label": "Meyer Lemon Curd",
+              "priceModifier": 0
+            },
+            {
+              "value": "espresso-hazelnut",
+              "label": "Single-Origin Espresso & Hazelnut",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whole-and-celebration-cakes",
+      "name": "Whole & Celebration Cakes",
+      "sortOrder": 4,
+      "description": "Full-size celebration cakes, layered gateaux, and family-sized tarts designed for birthdays, anniversaries, and family gatherings. Accommodates both ready-to-go chiller purchases and custom advance pre-orders with bespoke inscription piping.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🎂",
+      "subSections": [
+        {
+          "id": "ready-to-go",
+          "name": "Ready-to-Go",
+          "sortOrder": 1,
+          "description": "Freshly finished whole cakes displayed in chillers available for immediate same-day pickup and last-minute celebrations."
+        },
+        {
+          "id": "pre-order-custom",
+          "name": "Pre-Order Custom",
+          "sortOrder": 2,
+          "description": "Artisan multi-tiered and customized celebration cakes handcrafted to order with 24- to 48-hour advance notice."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cake-size",
+          "type": "single-select",
+          "label": "Cake Size & Servings",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "6-inch",
+              "label": "6-inch Cake (Serves 6–8 guests)",
+              "priceModifier": 0
+            },
+            {
+              "value": "8-inch",
+              "label": "8-inch Cake (Serves 10–14 guests)",
+              "priceModifier": 15
+            },
+            {
+              "value": "10-inch",
+              "label": "10-inch Cake (Serves 16–22 guests)",
+              "priceModifier": 32
+            }
+          ]
+        },
+        {
+          "id": "inscription",
+          "type": "text-input",
+          "label": "Custom Inscription Message (e.g., Happy Birthday Sarah!)",
+          "isRequired": false
+        },
+        {
+          "id": "pickup-date",
+          "type": "date-picker",
+          "label": "Requested Pickup Date & Time",
+          "isRequired": true
+        }
+      ]
+    },
+    {
+      "id": "cookies-and-dry-sweets",
+      "name": "Cookies & Dry Sweets",
+      "sortOrder": 5,
+      "description": "Ambient shelf-stable baked treats, chunky soft-baked cookies, decadent chocolate brownies, sablés, and crunchy twice-baked biscotti. Excellent for casual snacking, impulse counter additions, coffee dipping, and take-home gift tins.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍪",
+      "subSections": [
+        {
+          "id": "cookies",
+          "name": "Cookies",
+          "sortOrder": 1,
+          "description": "Thick soft-baked chocolate chunk cookies, sea salt caramel rounds, and spiced oatmeal cookies."
+        },
+        {
+          "id": "brownies",
+          "name": "Brownies",
+          "sortOrder": 2,
+          "description": "Ultra-fudgy Belgian chocolate brownies, salted caramel blondies, and cheesecake brownie swirls."
+        },
+        {
+          "id": "biscotti",
+          "name": "Biscotti",
+          "sortOrder": 3,
+          "description": "Crisp twice-baked Italian cantucci, almond biscotti, and citrus pistachio dipping fingers."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cookie-quantity",
+          "type": "single-select",
+          "label": "Quantity & Packaging Option",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single",
+              "label": "Single Piece",
+              "priceModifier": 0
+            },
+            {
+              "value": "pack-of-3",
+              "label": "Pack of 3 (Bakery Pouch)",
+              "priceModifier": 0
+            },
+            {
+              "value": "box-of-6",
+              "label": "Half-Dozen Box (6 Pieces)",
+              "priceModifier": 0
+            },
+            {
+              "value": "gift-tin-of-12",
+              "label": "Keepsake Gift Tin (12 Pieces)",
+              "priceModifier": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "savory-bakes",
+      "name": "Savory Bakes",
+      "sortOrder": 6,
+      "description": "Warm flaky savory pastries, deep-dish quiches, rosemary olive oil focaccia, and bakery-fresh savory bakes. Crafted from house artisan doughs to provide satisfying savory meal and snack options for lunch and afternoon guests.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥧",
+      "subSections": [
+        {
+          "id": "savory-pastries",
+          "name": "Savory Pastries",
+          "sortOrder": 1,
+          "description": "Golden puff pastry sausage rolls, spinach and feta swirls, ham and Gruyère croissants, and savory morning twists."
+        },
+        {
+          "id": "quiches",
+          "name": "Quiches",
+          "sortOrder": 2,
+          "description": "Deep-dish Quiche Lorraine and seasonal garden vegetable quiches baked with rich velvety egg custard in flaky pastry crusts."
+        },
+        {
+          "id": "focaccia",
+          "name": "Focaccia",
+          "sortOrder": 3,
+          "description": "Dimpled Ligurian extra virgin olive oil focaccia slabs topped with rosemary, flaky sea salt, cherry tomatoes, and olives."
+        },
+        {
+          "id": "sandwiches",
+          "name": "Sandwiches",
+          "sortOrder": 4,
+          "description": "Grab-and-go artisan sandwiches assembled fresh daily on house baguettes, focaccia, and country sourdough."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "heating",
+          "type": "single-select",
+          "label": "Heating Preference",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "served-warm",
+              "label": "Serve Warm (Warmed in bakery oven)",
+              "priceModifier": 0
+            },
+            {
+              "value": "cold-takeaway",
+              "label": "Cold to-go (Eat cold or reheat at home)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso-and-coffee",
+      "name": "Espresso & Coffee",
+      "sortOrder": 7,
+      "description": "Artisan specialty coffee program highlighting precision espresso extractions, manual single-origin pour-overs, and signature barista beverages. Required as the primary daytime beverage revenue generator, pairing seamlessly with morning viennoiserie, afternoon pastries, and bakery items.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "☕",
+      "subSections": [
+        {
+          "id": "espresso-based",
+          "name": "Espresso-Based",
+          "sortOrder": 1,
+          "description": "Dialed-in double espresso, flat whites, silky lattes, velvety cappuccinos, cortados, and long blacks."
+        },
+        {
+          "id": "pour-over",
+          "name": "Pour-Over",
+          "sortOrder": 2,
+          "description": "Hand-poured single-origin filter coffees highlighting distinct bean terroirs, fruit notes, and delicate roast profiles."
+        },
+        {
+          "id": "specialty",
+          "name": "Specialty",
+          "sortOrder": 3,
+          "description": "Signature barista drinks including vanilla bean cardamom lattes, mocha with real melted chocolate ganache, and affogatos."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "coffee-size",
+          "type": "single-select",
+          "label": "Cup Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "small-8oz",
+              "label": "Small (8 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-12oz",
+              "label": "Medium (12 oz)",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "large-16oz",
+              "label": "Large (16 oz)",
+              "priceModifier": 1.0
+            }
+          ]
+        },
+        {
+          "id": "coffee-milk",
+          "type": "single-select",
+          "label": "Milk Selection",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-milk",
+              "label": "Whole Milk (Dairy)",
+              "priceModifier": 0
+            },
+            {
+              "value": "skim-milk",
+              "label": "Skim Milk (Dairy)",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Barista Oat Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "soy-milk",
+              "label": "Soy Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "coconut-milk",
+              "label": "Coconut Milk",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "coffee-shot",
+          "type": "single-select",
+          "label": "Espresso Shots",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-recipe",
+              "label": "Standard Recipe",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-shot",
+              "label": "Add Extra Espresso Shot (+1)",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "decaf",
+              "label": "Decaffeinated Espresso (Swiss Water)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "coffee-sweetness",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "unsweetened",
+              "label": "Unsweetened (0%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-sweet",
+              "label": "Less Sweet (25%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "half-sweet",
+              "label": "Half Sweet (50%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "regular-sweet",
+              "label": "Regular Sweet (100%)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tea-and-hot-drinks",
+      "name": "Tea & Hot Drinks",
+      "sortOrder": 8,
+      "description": "Sourced loose-leaf teas, restorative herbal tisanes, and comforting non-coffee hot beverages including ceremonial grade matcha and artisan hot chocolate. Essential for tea enthusiasts, afternoon gatherings, and non-coffee patrons.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🫖",
+      "subSections": [
+        {
+          "id": "classic-teas",
+          "name": "Classic Teas",
+          "sortOrder": 1,
+          "description": "Single-estate black teas, delicate green teas, floral jasmine, and high-mountain oolongs brewed at controlled temperatures."
+        },
+        {
+          "id": "herbal",
+          "name": "Herbal",
+          "sortOrder": 2,
+          "description": "Naturally caffeine-free organic herbal blends, Egyptian chamomile, fresh peppermint tisanes, and citrus berry botanicals."
+        },
+        {
+          "id": "specialty-lattes",
+          "name": "Specialty Lattes",
+          "sortOrder": 3,
+          "description": "Japanese ceremonial grade Uji matcha lattes, slow-simmered spiced masala chai, and rich dark cocoa hot chocolate."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "tea-size",
+          "type": "single-select",
+          "label": "Cup Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-12oz",
+              "label": "Regular (12 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-16oz",
+              "label": "Large (16 oz)",
+              "priceModifier": 0.6
+            }
+          ]
+        },
+        {
+          "id": "tea-milk",
+          "type": "single-select",
+          "label": "Milk Selection",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-milk",
+              "label": "Whole Milk (Dairy)",
+              "priceModifier": 0
+            },
+            {
+              "value": "skim-milk",
+              "label": "Skim Milk (Dairy)",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Barista Oat Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "soy-milk",
+              "label": "Soy Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "coconut-milk",
+              "label": "Coconut Milk",
+              "priceModifier": 0.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cold-and-iced-drinks",
+      "name": "Cold & Iced Drinks",
+      "sortOrder": 9,
+      "description": "Refreshing chilled coffee creations, slow-extracted 18-hour cold brew, frosty ice-blended frappes, and wholesome fruit smoothies. Drives substantial afternoon ticket volume and year-round cold drink sales.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧊",
+      "subSections": [
+        {
+          "id": "iced-coffee",
+          "name": "Iced Coffee",
+          "sortOrder": 1,
+          "description": "Chilled espresso lattes, iced Americanos, iced caramel macchiatos, and refreshing espresso tonics served over crystal-clear ice."
+        },
+        {
+          "id": "cold-brew",
+          "name": "Cold Brew",
+          "sortOrder": 2,
+          "description": "Smooth 18-hour cold-steeped single-origin brew, creamy cold foam cold brew, and nitro cold brew on tap."
+        },
+        {
+          "id": "blended",
+          "name": "Blended",
+          "sortOrder": 3,
+          "description": "Creamy iced frappes blended with espresso, Belgian cocoa, vanilla, and salted caramel crowned with whipped cream."
+        },
+        {
+          "id": "smoothies",
+          "name": "Smoothies",
+          "sortOrder": 4,
+          "description": "Nutrient-packed whole-fruit smoothies blended with berries, banana, tropical fruits, greens, and plant-based milks."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cold-drink-size",
+          "type": "single-select",
+          "label": "Drink Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-16oz",
+              "label": "Regular (16 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-20oz",
+              "label": "Large (20 oz)",
+              "priceModifier": 0.85
+            }
+          ]
+        },
+        {
+          "id": "cold-drink-milk",
+          "type": "single-select",
+          "label": "Milk Selection",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-milk",
+              "label": "Whole Dairy Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "skim-milk",
+              "label": "Skim Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Barista Oat Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "soy-milk",
+              "label": "Soy Milk",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "coconut-milk",
+              "label": "Coconut Milk",
+              "priceModifier": 0.75
+            }
+          ]
+        },
+        {
+          "id": "cold-drink-ice",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-ice",
+              "label": "Less Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-ice",
+              "label": "Extra Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "No Ice (Chilled liquid)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "cold-drink-sweetness",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "unsweetened",
+              "label": "Unsweetened (0%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-sweet",
+              "label": "Less Sweet (25%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "half-sweet",
+              "label": "Half Sweet (50%)",
+              "priceModifier": 0
+            },
+            {
+              "value": "regular-sweet",
+              "label": "Regular Sweet (100%)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fresh-juices-and-soft-drinks",
+      "name": "Fresh Juices & Soft Drinks",
+      "sortOrder": 10,
+      "description": "Freshly squeezed citrus and cold-pressed botanical juices, artisanal fermented kombuchas, craft sparkling sodas, and still/sparkling mineral waters. Offers refreshing caffeine-free options for dining guests, families, and children.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧃",
+      "subSections": [
+        {
+          "id": "juices",
+          "name": "Juices",
+          "sortOrder": 1,
+          "description": "Cold-pressed morning Valencia orange juice, cloudy apple ginger blends, and vibrant green antioxidant detox juices."
+        },
+        {
+          "id": "soft-drinks",
+          "name": "Soft Drinks",
+          "sortOrder": 2,
+          "description": "Small-batch craft lemonades, sparkling fruit sodas, artisanal tonic waters, and organic kombuchas."
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "sortOrder": 3,
+          "description": "Glass-bottled natural still mountain water and crisp effervescent sparkling mineral water."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "juice-serving-style",
+          "type": "single-select",
+          "label": "Serving Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "over-ice",
+              "label": "Served Over Fresh Ice with Citrus Slice",
+              "priceModifier": 0
+            },
+            {
+              "value": "chilled-bottle",
+              "label": "Chilled Bottle / Can Only",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "breakfast-and-brunch",
+      "name": "Breakfast & Brunch",
+      "sortOrder": 11,
+      "description": "Plated morning cafe classics, cooked farm-fresh eggs on toasted artisan bread, wholesome yogurt and grain bowls, and communal pastry tasting boards. Formally defines the cafe dining experience during morning peak hours from 07:00 to 12:00, uniting freshly baked breads with kitchen cooking.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍳",
+      "timeBehavior": {
+        "isTimeRestricted": true,
+        "defaultAvailableFrom": "07:00",
+        "defaultAvailableUntil": "12:00",
+        "note": "Prepared fresh to order from the kitchen exclusively during morning service hours (07:00–12:00)."
+      },
+      "subSections": [
+        {
+          "id": "egg-plates",
+          "name": "Egg Plates",
+          "sortOrder": 1,
+          "description": "Eggs cooked to order on toasted artisan sourdough with avocado, poached eggs Benedict, and garden herb scrambles."
+        },
+        {
+          "id": "bowls",
+          "name": "Bowls",
+          "sortOrder": 2,
+          "description": "House-toasted nut and seed granola bowls with Greek yogurt and honey, alongside organic açaí fruit puree bowls."
+        },
+        {
+          "id": "pastry-platters",
+          "name": "Pastry Platters",
+          "sortOrder": 3,
+          "description": "Curated morning share boards combining mini viennoiserie, cultured butter, artisanal fruit preserves, and seasonal fruits."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "egg-style",
+          "type": "single-select",
+          "label": "Egg Preparation Style",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "poached",
+              "label": "Soft Poached Eggs",
+              "priceModifier": 0
+            },
+            {
+              "value": "scrambled",
+              "label": "Creamy Folded Scrambled Eggs",
+              "priceModifier": 0
+            },
+            {
+              "value": "sunny-side-up",
+              "label": "Sunny-Side Fried Eggs",
+              "priceModifier": 0
+            },
+            {
+              "value": "well-done-fried",
+              "label": "Fried Eggs (Over-Hard)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "breakfast-bread-choice",
+          "type": "single-select",
+          "label": "Bread Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "country-sourdough",
+              "label": "House Country Sourdough Toast",
+              "priceModifier": 0
+            },
+            {
+              "value": "seeded-multigrain",
+              "label": "Seeded Multigrain Sourdough Toast",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "brioche-toast",
+              "label": "Thick-Cut Toasted Brioche",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "gluten-free-bread",
+              "label": "Gluten-Free Artisan Bread",
+              "priceModifier": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sandwiches-and-light-meals",
+      "name": "Sandwiches & Light Meals",
+      "sortOrder": 12,
+      "description": "Made-to-order gourmet sandwiches on freshly baked bakery breads, hot pressed melts, nourishing wraps, scratch-made soups, and crisp seasonal salads. Provides a complete midday dining and takeout program centered directly on the bakery's fresh loaf and baguette production.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥪",
+      "subSections": [
+        {
+          "id": "cold-sandwiches",
+          "name": "Cold Sandwiches",
+          "sortOrder": 1,
+          "description": "Layered deli sandwiches prepared on fresh baguettes and country sourdough with cured meats, artisan cheeses, and crisp greens."
+        },
+        {
+          "id": "hot-sandwiches",
+          "name": "Hot Sandwiches",
+          "sortOrder": 2,
+          "description": "Hot-pressed sourdough melts, toasted panini on focaccia, and warm croque monsieurs with bubbly Gruyère."
+        },
+        {
+          "id": "wraps",
+          "name": "Wraps",
+          "sortOrder": 3,
+          "description": "Soft tortilla and lavash wraps filled with grilled proteins, Mediterranean grains, fresh vegetables, and tangy herb dressings."
+        },
+        {
+          "id": "soups",
+          "name": "Soups",
+          "sortOrder": 4,
+          "description": "Daily simmering scratch soups served with thick slices of warm bakery sourdough and whipped cultured butter."
+        },
+        {
+          "id": "salads",
+          "name": "Salads",
+          "sortOrder": 5,
+          "description": "Vibrant garden salads, grain bowls, and burrata arugula plates tossed in house vinaigrettes with sourdough croutons."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "meal-bread-choice",
+          "type": "single-select",
+          "label": "Bread Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "crusty-baguette",
+              "label": "House Crusty French Baguette",
+              "priceModifier": 0
+            },
+            {
+              "value": "country-sourdough",
+              "label": "Country Sourdough Bread",
+              "priceModifier": 0
+            },
+            {
+              "value": "rosemary-focaccia",
+              "label": "Rosemary & Sea Salt Focaccia",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "brioche-bun",
+              "label": "Toasted Golden Brioche Bun",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "gluten-free-bread",
+              "label": "Gluten-Free Bread",
+              "priceModifier": 1.25
+            }
+          ]
+        },
+        {
+          "id": "sandwich-extras",
+          "type": "multi-select",
+          "label": "Add Extras",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "extra-cheese",
+              "label": "Aged Cheddar / Swiss Cheese",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "avocado-slices",
+              "label": "Fresh Sliced Avocado",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "crispy-bacon",
+              "label": "Smoked Crispy Bacon",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "cup-of-soup",
+              "label": "Side Cup of Daily Soup",
+              "priceModifier": 4.0
+            },
+            {
+              "value": "side-salad",
+              "label": "Side Green Salad",
+              "priceModifier": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confectionery-and-retail",
+      "name": "Confectionery & Retail",
+      "sortOrder": 13,
+      "description": "Packaged gourmet confectionery, artisan chocolate bonbons, house-made jams and spreads, whole bean specialty coffees, and branded lifestyle merchandise. Empowers patrons to take the bakery-cafe culinary identity home and shop for elegant host or holiday gifts.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🛍️",
+      "subSections": [
+        {
+          "id": "chocolates",
+          "name": "Chocolates",
+          "sortOrder": 1,
+          "description": "Luxury boxed chocolate bonbons, single-origin chocolate bars, chocolate-covered dragées, and gourmet truffles."
+        },
+        {
+          "id": "jams",
+          "name": "Jams",
+          "sortOrder": 2,
+          "description": "Glass jars of small-batch seasonal berry preserves, blood orange marmalades, citrus curds, and praline spreads."
+        },
+        {
+          "id": "coffee-beans",
+          "name": "Coffee Beans",
+          "sortOrder": 3,
+          "description": "Freshly roasted specialty coffee bean bags (250g / 1kg) including house espresso blend and rotating single-origins."
+        },
+        {
+          "id": "gift-items",
+          "name": "Gift Items",
+          "sortOrder": 4,
+          "description": "Linen bread bags, branded ceramic mugs, reusable ceramic travel cups, canvas tote bags, and curated gift hampers."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "retail-coffee-grind",
+          "type": "single-select",
+          "label": "Coffee Grind Selection (for beans)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-bean",
+              "label": "Whole Bean (Recommended for peak freshness)",
+              "priceModifier": 0
+            },
+            {
+              "value": "coarse-french-press",
+              "label": "Coarse (French Press / Cold Brew)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-filter",
+              "label": "Medium (Drip / V60 / Chemex)",
+              "priceModifier": 0
+            },
+            {
+              "value": "fine-espresso",
+              "label": "Fine (Home Espresso / Moka Pot)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasonal-specials",
+      "name": "Seasonal Specials",
+      "sortOrder": 14,
+      "description": "Limited-time rotating bakery, pastry, and barista specialties celebrating seasonal fruit harvests, holiday traditions, and culinary collaborations. Drives recurring foot traffic and excitement among neighborhood regulars with novelty offerings.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "✨",
+      "subSections": [
+        {
+          "id": "rotating-items",
+          "name": "Rotating Items",
+          "sortOrder": 1,
+          "description": "Limited-edition holiday bakes, seasonal harvest pastries, chef collaboration drops, and festive holiday beverages."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "seasonal-dietary-preference",
+          "type": "single-select",
+          "label": "Dietary Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-recipe",
+              "label": "Standard Recipe",
+              "priceModifier": 0
+            },
+            {
+              "value": "plant-based-vegan",
+              "label": "Plant-Based / Vegan Version",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "preOrder",
+      "name": "Advance Pre-Order System",
+      "description": "Enables customers to schedule advance pickup orders for whole celebration cakes, large artisan bread orders, and catering pastry boxes with configurable lead times and daily cutoff windows.",
+      "isEnabled": true,
+      "config": {
+        "minLeadTimeHours": 24,
+        "maxAdvanceDays": 30,
+        "dailyCutoffTime": "17:00",
+        "allowSpecialInstructions": true
+      }
+    },
+    {
+      "id": "batchTimeWindows",
+      "name": "Bake Batch Time Windows",
+      "description": "Displays fresh-out-of-the-oven batch release schedules for morning viennoiserie, hearth sourdough loaves, and afternoon warm pastry bakes.",
+      "isEnabled": true,
+      "config": {
+        "morningBakeTime": "07:00",
+        "middayBakeTime": "11:30",
+        "afternoonBakeTime": "14:30",
+        "displayNextBakeCountdown": true
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Live Stock & Urgency Badges",
+      "description": "Displays real-time showcase availability badges such as 'Freshly Baked', 'Sold Out for Today', and 'Low Stock' to manage guest expectations without delisting products.",
+      "isEnabled": true,
+      "config": {
+        "primaryBadge": "sold-out-today",
+        "autoResetDaily": true,
+        "showLowStockWarning": true,
+        "lowStockThreshold": 4
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Tagging",
+      "description": "Prominently labels common bakery allergens (gluten, dairy, nuts, eggs, soy) and dietary categories (vegan, vegetarian) across all bread, pastry, and kitchen dishes.",
+      "isEnabled": true,
+      "config": {
+        "displayFormat": "badge-and-modal",
+        "highlightAllergens": [
+          "contains-gluten",
+          "contains-dairy",
+          "contains-egg",
+          "contains-nuts"
+        ],
+        "filterByDietary": true,
+        "displayCrossContaminationWarning": true
+      }
+    },
+    {
+      "id": "milkAlternatives",
+      "name": "Milk Alternatives & Barista Customization",
+      "description": "Empowers guests to customize espresso, hot specialty drinks, and cold beverages with non-dairy plant milks, extra espresso shots, and dairy alternatives.",
+      "isEnabled": true,
+      "config": {
+        "defaultAlternative": "oat-milk",
+        "allowCustomTemperature": true,
+        "allowCustomSweetness": true
+      }
+    },
+    {
+      "id": "customInscription",
+      "name": "Custom Cake Inscription Piping",
+      "description": "Captures personalized chocolate plaque or frosted cake surface messages for whole celebration cakes during the ordering flow.",
+      "isEnabled": true,
+      "config": {
+        "maxCharacters": 35,
+        "allowPlaqueTypeSelection": true,
+        "allowGiftCardMessage": true
+      }
+    },
+    {
+      "id": "mealTimeRestrictions",
+      "name": "Meal Time Restrictions & Menu Dayparts",
+      "description": "Enforces time-of-day kitchen ordering windows, reserving hot plated Breakfast & Brunch to 07:00–12:00 and morning viennoiserie from 07:00 onward while keeping ambient retail and drinks active all day.",
+      "isEnabled": true,
+      "config": {
+        "enforceOrderingCutoff": true,
+        "showTimeWindowNotice": true,
+        "breakfastHours": "07:00-12:00"
+      }
+    },
+    {
+      "id": "sweetnessLevel",
+      "name": "Sweetness Level Customization",
+      "description": "Provides customer-selectable sweetness levels (0%, 25%, 50%, 100%) for handcrafted specialty coffees, iced drinks, and signature lattes.",
+      "isEnabled": true,
+      "config": {
+        "defaultLevel": "100%",
+        "availableLevels": [
+          "0%",
+          "25%",
+          "50%",
+          "100%"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

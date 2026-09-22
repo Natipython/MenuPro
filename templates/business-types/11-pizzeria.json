@@ -1,0 +1,2084 @@
+{
+  "id": "pizzeria",
+  "name": "Pizza Shop / Pizzeria",
+  "slug": "pizzeria",
+  "icon": "🍕",
+  "description": "A dedicated pizzeria and Italian quick-casual / delivery dining template. Engineered specifically for pizza-centric operations featuring dynamic crust size selection, dough craftsmanship (thin, hand-tossed, deep dish, stuffed, gluten-free), custom topping builders, half-and-half pie partitioning, oven-baked calzones, pastas, appetizers, salads, and value-packed family combo feasts.",
+  "category": "restaurant",
+  "tags": [
+    "pizza",
+    "pizzeria",
+    "italian",
+    "calzone",
+    "pasta",
+    "delivery"
+  ],
+  "sections": [
+    {
+      "id": "classic-pizzas",
+      "name": "Classic Pizzas",
+      "sortOrder": 1,
+      "description": "Timeless, traditional oven-baked pizzas featuring house-made slow-simmered tomato sauce, whole-milk shredded mozzarella, and quintessential toppings. This foundational section anchors every pizzeria, providing recognizable favorites that define the shop's core brand, available across standard diameters and crust varieties.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍕",
+      "subSections": [
+        {
+          "id": "traditional-favorites",
+          "name": "Traditional Favorites",
+          "sortOrder": 1,
+          "description": "Universally loved crowd-pleasers including classic pepperoni, sausage & mushroom, four-cheese blends, and supreme combinations."
+        },
+        {
+          "id": "margherita-and-simple-pies",
+          "name": "Margherita & Simple Pies",
+          "sortOrder": 2,
+          "description": "Clean, ingredient-focused artisanal pies highlighting fresh sweet basil, San Marzano tomato fillets, fresh whole-milk fior di latte mozzarella, and extra virgin olive oil."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "classic-pizza-size",
+          "type": "single-select",
+          "label": "Pizza Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "personal-8",
+              "label": "Personal 8\" (4 Slices — Serves 1)",
+              "priceModifier": 0
+            },
+            {
+              "value": "small-10",
+              "label": "Small 10\" (6 Slices — Serves 1–2)",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "medium-12",
+              "label": "Medium 12\" (8 Slices — Serves 2–3)",
+              "priceModifier": 6.0
+            },
+            {
+              "value": "large-14",
+              "label": "Large 14\" (8 Slices — Serves 3–4)",
+              "priceModifier": 9.0
+            },
+            {
+              "value": "xl-18",
+              "label": "Extra Large 18\" (12 Slices — Serves 4–6)",
+              "priceModifier": 13.0
+            }
+          ]
+        },
+        {
+          "id": "classic-crust-type",
+          "type": "single-select",
+          "label": "Crust Style",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "classic-hand-tossed",
+              "label": "Classic Hand-Tossed (Traditional aerated golden crust)",
+              "priceModifier": 0
+            },
+            {
+              "value": "crispy-thin",
+              "label": "Thin Crust (Light & crackery Roman style)",
+              "priceModifier": 0
+            },
+            {
+              "value": "deep-dish",
+              "label": "Deep Dish Pan Crust (Thick, buttery caramelized edge)",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "stuffed-crust",
+              "label": "Stuffed Crust (Ring of molten mozzarella rolled in crust)",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "gluten-free",
+              "label": "Gluten-Free Cauliflower & Rice Crust (Dedicated GF prep)",
+              "priceModifier": 4.0
+            }
+          ]
+        },
+        {
+          "id": "classic-extra-toppings",
+          "type": "multi-select",
+          "label": "Extra Toppings",
+          "isRequired": false,
+          "maxSelections": 8,
+          "choices": [
+            {
+              "value": "extra-mozzarella",
+              "label": "Extra Mozzarella Cheese",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "cupping-pepperoni",
+              "label": "Cupping Pepperoni",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "sweet-italian-sausage",
+              "label": "Sweet Italian Sausage",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "smoked-bacon",
+              "label": "Smoked Bacon Crumbles",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "shaved-ham",
+              "label": "Shaved Virginia Ham",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "sliced-mushrooms",
+              "label": "Fresh White Mushrooms",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "green-peppers",
+              "label": "Green Bell Peppers",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "red-onions",
+              "label": "Sliced Red Onions",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "black-olives",
+              "label": "Kalamata Black Olives",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "jalapenos",
+              "label": "Pickled Jalapeño Peppers",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "pineapple",
+              "label": "Sweet Pineapple Tidbits",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "roasted-garlic",
+              "label": "Roasted Garlic Cloves",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "baby-spinach",
+              "label": "Fresh Baby Spinach",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "fresh-basil",
+              "label": "Fresh Sweet Basil Leaves",
+              "priceModifier": 1.0
+            }
+          ]
+        },
+        {
+          "id": "classic-bake-preference",
+          "type": "single-select",
+          "label": "Bake & Doneness Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-bake",
+              "label": "Regular Bake (Golden brown melted cheese)",
+              "priceModifier": 0
+            },
+            {
+              "value": "well-done",
+              "label": "Well-Done / Crispy Crust (Toasted cheese & blistered edge)",
+              "priceModifier": 0
+            },
+            {
+              "value": "light-bake",
+              "label": "Light Bake (Soft, pale golden crust)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "classic-cut-style",
+          "type": "single-select",
+          "label": "Slicing Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "pie-cut",
+              "label": "Traditional Pie Cut (Triangular slices)",
+              "priceModifier": 0
+            },
+            {
+              "value": "square-cut",
+              "label": "Square / Tavern Cut (Party grid)",
+              "priceModifier": 0
+            },
+            {
+              "value": "uncut",
+              "label": "Uncut (Preserves bottom crust crispness during delivery)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "specialty-and-gourmet-pizzas",
+      "name": "Specialty & Gourmet Pizzas",
+      "sortOrder": 2,
+      "description": "Chef-curated artisan recipes showcasing premium ingredients, complex flavour pairings, alternative sauces, and white pizzas (pizze bianche). This section caters to food lovers seeking culinary elevated experiences beyond standard toppings.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "⭐",
+      "subSections": [
+        {
+          "id": "signature-creations",
+          "name": "Signature Creations",
+          "sortOrder": 1,
+          "description": "House-developed hallmark pies combining savory smoked meats, tangy barbecue or fiery hot sauces, and complementary cheeses."
+        },
+        {
+          "id": "premium-and-gourmet",
+          "name": "Premium & Gourmet",
+          "sortOrder": 2,
+          "description": "Upscale pies topped with imported charcuterie like prosciutto di Parma, wild foraged truffle mushrooms, creamy burrata, and fig balsamic reductions."
+        },
+        {
+          "id": "white-pizzas",
+          "name": "White Pizzas (Pizze Bianche)",
+          "sortOrder": 3,
+          "description": "Tomato-free artisan pies highlighting rich ricotta spreads, garlic-infused olive oil bases, fontina, gorgonzola, and aromatic fresh herbs."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "specialty-pizza-size",
+          "type": "single-select",
+          "label": "Pizza Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "personal-8",
+              "label": "Personal 8\" (4 Slices — Serves 1)",
+              "priceModifier": 0
+            },
+            {
+              "value": "small-10",
+              "label": "Small 10\" (6 Slices — Serves 1–2)",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "medium-12",
+              "label": "Medium 12\" (8 Slices — Serves 2–3)",
+              "priceModifier": 7.0
+            },
+            {
+              "value": "large-14",
+              "label": "Large 14\" (8 Slices — Serves 3–4)",
+              "priceModifier": 10.5
+            },
+            {
+              "value": "xl-18",
+              "label": "Extra Large 18\" (12 Slices — Serves 4–6)",
+              "priceModifier": 15.0
+            }
+          ]
+        },
+        {
+          "id": "specialty-crust-type",
+          "type": "single-select",
+          "label": "Crust Style",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "classic-hand-tossed",
+              "label": "Classic Hand-Tossed (Traditional aerated golden crust)",
+              "priceModifier": 0
+            },
+            {
+              "value": "crispy-thin",
+              "label": "Thin Crust (Light & crackery Roman style)",
+              "priceModifier": 0
+            },
+            {
+              "value": "deep-dish",
+              "label": "Deep Dish Pan Crust (Thick, buttery caramelized edge)",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "stuffed-crust",
+              "label": "Stuffed Crust (Ring of molten mozzarella rolled in crust)",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "gluten-free",
+              "label": "Gluten-Free Cauliflower & Rice Crust (Dedicated GF prep)",
+              "priceModifier": 4.0
+            }
+          ]
+        },
+        {
+          "id": "specialty-extra-toppings",
+          "type": "multi-select",
+          "label": "Additional Gourmet Toppings",
+          "isRequired": false,
+          "maxSelections": 6,
+          "choices": [
+            {
+              "value": "prosciutto-di-parma",
+              "label": "Prosciutto di Parma",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "fresh-burrata",
+              "label": "Fresh Whole Burrata Ball",
+              "priceModifier": 4.0
+            },
+            {
+              "value": "black-truffle-mushroom",
+              "label": "Wild Truffle Mushroom Cream",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "caramelized-onions",
+              "label": "Caramelized Balsamic Onions",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "artichoke-hearts",
+              "label": "Marinated Artichoke Hearts",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "goat-cheese",
+              "label": "Crumbled Goat Cheese",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "hot-honey-drizzle",
+              "label": "Mike's Style Hot Honey Drizzle",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "baby-arugula",
+              "label": "Fresh Wild Arugula Post-Bake",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "specialty-bake-preference",
+          "type": "single-select",
+          "label": "Bake Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-bake",
+              "label": "Regular Bake",
+              "priceModifier": 0
+            },
+            {
+              "value": "crispy-bake",
+              "label": "Well-Done / Extra Crispy",
+              "priceModifier": 0
+            },
+            {
+              "value": "light-bake",
+              "label": "Light Bake",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "specialty-cut-style",
+          "type": "single-select",
+          "label": "Cut Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "pie-cut",
+              "label": "Traditional Pie Cut",
+              "priceModifier": 0
+            },
+            {
+              "value": "square-cut",
+              "label": "Square / Tavern Cut",
+              "priceModifier": 0
+            },
+            {
+              "value": "uncut",
+              "label": "Uncut (Keep Crisp for Delivery)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "build-your-own-pizza",
+      "name": "Build Your Own Pizza",
+      "sortOrder": 3,
+      "description": "Fully customizable pizza canvas giving guests total culinary freedom. Step-by-step guided flow allowing choice of base size, crust dough style, signature sauce, cheese foundation, and segregated or whole toppings, including optional half-and-half partitioned builds.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🛠️",
+      "subSections": [
+        {
+          "id": "custom-crust-and-base",
+          "name": "Custom Crust & Base",
+          "sortOrder": 1,
+          "description": "Select your foundational dough, crust rim preparation, and whole pie diameter."
+        },
+        {
+          "id": "custom-half-and-half",
+          "name": "Half & Half Combinations",
+          "sortOrder": 2,
+          "description": "Split pies featuring two distinct recipe configurations across Left and Right halves for sharing without compromise."
+        },
+        {
+          "id": "specialty-dietary-bases",
+          "name": "Dietary & Alternative Bases",
+          "sortOrder": 3,
+          "description": "Dedicated gluten-free crusts, keto cauliflower doughs, and dairy-free vegan bases for health-conscious diners."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "byo-pizza-size",
+          "type": "single-select",
+          "label": "1. Choose Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "personal-8",
+              "label": "Personal 8\" (4 Slices — Serves 1)",
+              "priceModifier": 0
+            },
+            {
+              "value": "small-10",
+              "label": "Small 10\" (6 Slices — Serves 1–2)",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "medium-12",
+              "label": "Medium 12\" (8 Slices — Serves 2–3)",
+              "priceModifier": 6.0
+            },
+            {
+              "value": "large-14",
+              "label": "Large 14\" (8 Slices — Serves 3–4)",
+              "priceModifier": 9.0
+            },
+            {
+              "value": "xl-18",
+              "label": "Extra Large 18\" (12 Slices — Serves 4–6)",
+              "priceModifier": 13.0
+            }
+          ]
+        },
+        {
+          "id": "byo-crust-type",
+          "type": "single-select",
+          "label": "2. Choose Crust Style",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "classic-hand-tossed",
+              "label": "Classic Hand-Tossed (Traditional aerated golden crust)",
+              "priceModifier": 0
+            },
+            {
+              "value": "crispy-thin",
+              "label": "Thin Crust (Light & crackery Roman style)",
+              "priceModifier": 0
+            },
+            {
+              "value": "deep-dish",
+              "label": "Deep Dish Pan Crust (Thick, buttery caramelized edge)",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "stuffed-crust",
+              "label": "Stuffed Crust (Ring of molten mozzarella rolled in crust)",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "cauliflower-gf",
+              "label": "Cauliflower Gluten-Free Crust (Certified GF)",
+              "priceModifier": 4.0
+            }
+          ]
+        },
+        {
+          "id": "byo-half-and-half-toggle",
+          "type": "toggle",
+          "label": "Split Left & Right Halves (Half-and-Half Customization)",
+          "isRequired": false
+        },
+        {
+          "id": "byo-sauce-choice",
+          "type": "single-select",
+          "label": "3. Choose Sauce Base",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "san-marzano-tomato",
+              "label": "Classic San Marzano Tomato Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "garlic-alfredo-white",
+              "label": "Creamy Garlic Alfredo White Sauce",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "basil-pesto",
+              "label": "Basil Pesto Genovese",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "smoky-bbq",
+              "label": "Smoky Sweet BBQ Sauce",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "garlic-olive-oil",
+              "label": "Extra Virgin Olive Oil & Crushed Garlic (Bianca)",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-sauce",
+              "label": "No Sauce (Naked Crust)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "byo-cheese-choice",
+          "type": "single-select",
+          "label": "4. Choose Cheese Foundation",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "shredded-mozzarella",
+              "label": "Whole-Milk Shredded Mozzarella (Standard)",
+              "priceModifier": 0
+            },
+            {
+              "value": "four-cheese-blend",
+              "label": "Italian Four-Cheese Blend (Mozzarella, Provolone, Asiago, Romano)",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "fior-di-latte",
+              "label": "Fresh Fior di Latte Mozzarella Slices",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "vegan-mozzarella",
+              "label": "100% Plant-Based Vegan Mozzarella (Dairy-Free)",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "no-cheese",
+              "label": "No Cheese (Cheeseless Marinara Style)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "byo-meat-toppings",
+          "type": "multi-select",
+          "label": "5. Choose Meats",
+          "isRequired": false,
+          "maxSelections": 8,
+          "choices": [
+            {
+              "value": "classic-pepperoni",
+              "label": "Classic Pepperoni",
+              "priceModifier": 2.25
+            },
+            {
+              "value": "cup-char-pepperoni",
+              "label": "Spicy Cup & Char Pepperoni",
+              "priceModifier": 2.75
+            },
+            {
+              "value": "italian-sausage",
+              "label": "Sweet Italian Crumbled Sausage",
+              "priceModifier": 2.25
+            },
+            {
+              "value": "smoked-bacon",
+              "label": "Smoked Applewood Bacon Crumbles",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "sliced-ham",
+              "label": "Shaved Virginia Ham",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "grilled-chicken",
+              "label": "Grilled Herb Chicken Breast",
+              "priceModifier": 2.75
+            },
+            {
+              "value": "ground-beef",
+              "label": "Seasoned Ground Beef",
+              "priceModifier": 2.25
+            },
+            {
+              "value": "anchovy-fillets",
+              "label": "Mediterranean Anchovy Fillets",
+              "priceModifier": 2.0
+            }
+          ]
+        },
+        {
+          "id": "byo-vegetable-toppings",
+          "type": "multi-select",
+          "label": "6. Choose Vegetables & Plant Toppings",
+          "isRequired": false,
+          "maxSelections": 10,
+          "choices": [
+            {
+              "value": "fresh-mushrooms",
+              "label": "Fresh Sliced White Mushrooms",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "bell-peppers",
+              "label": "Crisp Green Bell Peppers",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "red-onions",
+              "label": "Sliced Red Onions",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "black-olives",
+              "label": "Kalamata Black Olives",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "baby-spinach",
+              "label": "Fresh Baby Spinach",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "roma-tomatoes",
+              "label": "Sliced Roma Tomatoes",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "jalapenos",
+              "label": "Pickled Jalapeño Peppers",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "banana-peppers",
+              "label": "Mild Banana Pepper Rings",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "pineapple",
+              "label": "Sweet Golden Pineapple Chunks",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "roasted-garlic",
+              "label": "Roasted Whole Garlic Cloves",
+              "priceModifier": 1.75
+            },
+            {
+              "value": "fresh-basil",
+              "label": "Fresh Sweet Basil Leaves",
+              "priceModifier": 1.0
+            }
+          ]
+        },
+        {
+          "id": "byo-premium-toppings",
+          "type": "multi-select",
+          "label": "7. Choose Gourmet & Premium Finishes",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            {
+              "value": "prosciutto",
+              "label": "Prosciutto di Parma (Post-Bake)",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "hot-honey",
+              "label": "Hot Honey Chili Drizzle",
+              "priceModifier": 1.75
+            },
+            {
+              "value": "balsamic-glaze",
+              "label": "Aged Balsamic Glaze Drizzle",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "truffle-oil",
+              "label": "White Truffle Oil Drizzle",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "ricotta-dollops",
+              "label": "Creamy Ricotta Cheese Dollops",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "shaved-parm",
+              "label": "Shaved Aged Parmigiano-Reggiano",
+              "priceModifier": 2.0
+            }
+          ]
+        },
+        {
+          "id": "byo-cut-bake",
+          "type": "single-select",
+          "label": "8. Cut & Bake Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-pie-cut",
+              "label": "Regular Bake — Traditional Pie Cut",
+              "priceModifier": 0
+            },
+            {
+              "value": "crispy-pie-cut",
+              "label": "Well-Done / Extra Crispy — Pie Cut",
+              "priceModifier": 0
+            },
+            {
+              "value": "tavern-square-cut",
+              "label": "Square / Tavern Cut (Party Grid)",
+              "priceModifier": 0
+            },
+            {
+              "value": "uncut-pie",
+              "label": "Uncut (Keep Crisp for Delivery)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calzones-and-stromboli",
+      "name": "Calzones & Stromboli",
+      "sortOrder": 4,
+      "description": "Folded, stuffed, and golden-baked Italian pocket specialties made from freshly proved pizza dough. Calzones are packed with seasoned whole-milk ricotta and mozzarella, while strombolis are rolled with savoury cured meats and cheeses, served with warm house marinara dipping sauce.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥟",
+      "subSections": [
+        {
+          "id": "classic-calzones",
+          "name": "Classic Calzones",
+          "sortOrder": 1,
+          "description": "Half-moon folded pocket crusts stuffed with creamy ricotta, melted mozzarella, garlic, and Italian herbs, baked until golden blistered."
+        },
+        {
+          "id": "stuffed-rolls",
+          "name": "Stuffed Rolls",
+          "sortOrder": 2,
+          "description": "Cylinder-rolled pizza dough spirals packed with deli meats, cheeses, peppers, and savory fillings, sliced into shareable portions."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "calzone-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-individual",
+              "label": "Regular Individual (Serves 1)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-shareable",
+              "label": "Large Shareable (Serves 2)",
+              "priceModifier": 4.5
+            },
+            {
+              "value": "family-roll",
+              "label": "Family / Party Roll (Serves 3–4)",
+              "priceModifier": 9.0
+            }
+          ]
+        },
+        {
+          "id": "calzone-filling-extras",
+          "type": "multi-select",
+          "label": "Extra Fillings",
+          "isRequired": false,
+          "maxSelections": 5,
+          "choices": [
+            {
+              "value": "extra-ricotta",
+              "label": "Extra Ricotta Cheese",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "extra-mozzarella",
+              "label": "Extra Mozzarella",
+              "priceModifier": 1.75
+            },
+            {
+              "value": "pepperoni",
+              "label": "Cupping Pepperoni",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "italian-sausage",
+              "label": "Crumbled Italian Sausage",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "sauteed-mushrooms",
+              "label": "Sautéed Button Mushrooms",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "sauteed-spinach",
+              "label": "Sautéed Spinach & Garlic",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "bell-peppers-onions",
+              "label": "Roasted Peppers & Onions",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "sliced-meatballs",
+              "label": "Sliced Italian Meatballs",
+              "priceModifier": 2.25
+            }
+          ]
+        },
+        {
+          "id": "calzone-dipping-sauce",
+          "type": "single-select",
+          "label": "Included Dipping Sauce",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "marinara",
+              "label": "Warm San Marzano Marinara",
+              "priceModifier": 0
+            },
+            {
+              "value": "spicy-arrabbiata",
+              "label": "Spicy Arrabbiata Marinara",
+              "priceModifier": 0
+            },
+            {
+              "value": "garlic-butter",
+              "label": "Creamy Garlic Butter",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "herb-ranch",
+              "label": "House Buttermilk Ranch",
+              "priceModifier": 0.5
+            }
+          ]
+        },
+        {
+          "id": "calzone-crust-finish",
+          "type": "single-select",
+          "label": "Top Crust Glaze",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "garlic-butter-oregano",
+              "label": "Garlic Butter & Oregano Glaze",
+              "priceModifier": 0
+            },
+            {
+              "value": "pecorino-dust",
+              "label": "Grated Pecorino Romano & Herb Dust",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "olive-oil-sea-salt",
+              "label": "Extra Virgin Olive Oil & Sea Salt Flakes",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pasta",
+      "name": "Pasta",
+      "sortOrder": 5,
+      "description": "Hearty Italian pasta dishes providing comforting non-pizza entrée alternatives. Features oven-baked pastas topped with bubbling golden mozzarella, as well as sautéed classic pastas tossed in scratch-made sauces like Bolognese, Alfredo, and Marinara.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍝",
+      "subSections": [
+        {
+          "id": "baked-pasta",
+          "name": "Baked Pasta",
+          "sortOrder": 1,
+          "description": "Traditional casserole pastas layered with seasoned cheeses, rich meat or tomato sauces, and baked in pizza ovens until bubbly and caramelized."
+        },
+        {
+          "id": "classic-pasta",
+          "name": "Classic Pasta",
+          "sortOrder": 2,
+          "description": "Freshly boiled pasta extruded or hand-tossed with velvety cream, herb-infused pestos, or slow-cooked plum tomato sauces to order."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "pasta-shape",
+          "type": "single-select",
+          "label": "Pasta Shape Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "penne-rigate",
+              "label": "Penne Rigate",
+              "priceModifier": 0
+            },
+            {
+              "value": "spaghetti",
+              "label": "Classic Spaghetti",
+              "priceModifier": 0
+            },
+            {
+              "value": "fettuccine",
+              "label": "Fettuccine",
+              "priceModifier": 0
+            },
+            {
+              "value": "rigatoni",
+              "label": "Rigatoni",
+              "priceModifier": 0
+            },
+            {
+              "value": "gluten-free-penne",
+              "label": "Gluten-Free Penne",
+              "priceModifier": 2.0
+            }
+          ]
+        },
+        {
+          "id": "pasta-protein-addon",
+          "type": "multi-select",
+          "label": "Protein Add-Ons",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "meatballs",
+              "label": "Hand-Rolled Italian Meatballs (2 pcs)",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "italian-sausage",
+              "label": "Spicy Italian Sausage Crumbles",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "grilled-chicken",
+              "label": "Grilled Herb Chicken Breast",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "tiger-shrimp",
+              "label": "Sautéed Garlic Tiger Shrimp (4 pcs)",
+              "priceModifier": 5.0
+            },
+            {
+              "value": "crispy-pancetta",
+              "label": "Crispy Pancetta Bacon Bits",
+              "priceModifier": 2.5
+            }
+          ]
+        },
+        {
+          "id": "pasta-cheese-gratin",
+          "type": "single-select",
+          "label": "Cheese Finish",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "parmigiano-grated",
+              "label": "Freshly Grated Parmigiano-Reggiano",
+              "priceModifier": 0
+            },
+            {
+              "value": "baked-mozzarella-crust",
+              "label": "Baked Molten Mozzarella Gratin Crust",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "ricotta-dollop",
+              "label": "Creamy Ricotta Cheese Dollop",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "no-extra-cheese",
+              "label": "No Extra Cheese",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "pasta-bread-accompaniment",
+          "type": "single-select",
+          "label": "Bread Accompaniment",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "garlic-breadstick",
+              "label": "Warm Garlic Breadstick (Included)",
+              "priceModifier": 0
+            },
+            {
+              "value": "toasted-herb-ciabatta",
+              "label": "Toasted Herb Ciabatta Slice",
+              "priceModifier": 0
+            },
+            {
+              "value": "cheesy-breadstick",
+              "label": "Cheesy Mozzarella Garlic Breadstick",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "no-bread",
+              "label": "No Bread Accompaniment",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appetizers-and-starters",
+      "name": "Appetizers & Starters",
+      "sortOrder": 6,
+      "description": "Flavor-packed finger foods, crispy shareables, freshly rolled garlic breads, and oven-roasted wings. Designed to satisfy pre-meal hunger, facilitate communal sharing around the table, and boost order value for delivery and dine-in groups.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧄",
+      "subSections": [
+        {
+          "id": "garlic-breads-and-knots",
+          "name": "Garlic Breads & Knots",
+          "sortOrder": 1,
+          "description": "Scratch pizza dough twisted into knots, slathered in minced garlic butter, fresh parsley, and parmesan, alongside toasted cheese-pull loaves."
+        },
+        {
+          "id": "wings-and-tenders",
+          "name": "Wings & Tenders",
+          "sortOrder": 2,
+          "description": "Jumbo bone-in chicken wings oven-roasted to a crispy finish and golden boneless chicken tenders, tossed in signature sauces."
+        },
+        {
+          "id": "dips-and-shares",
+          "name": "Dips & Shares",
+          "sortOrder": 3,
+          "description": "Crisp fried mozzarella sticks, loaded Italian meatballs in skillet marinara, stuffed portobello caps, and artichoke dip platters."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "starter-portion-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-order",
+              "label": "Regular Portion (Serves 1–2)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-sharing",
+              "label": "Large Sharing Portion (Serves 3–4)",
+              "priceModifier": 5.0
+            },
+            {
+              "value": "party-platter",
+              "label": "Party Platter (Serves 6–8)",
+              "priceModifier": 12.0
+            }
+          ]
+        },
+        {
+          "id": "wing-flavor-toss",
+          "type": "single-select",
+          "label": "Wing Toss / Flavor Sauce",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "mild-buffalo",
+              "label": "Classic Mild Buffalo",
+              "priceModifier": 0
+            },
+            {
+              "value": "hot-buffalo",
+              "label": "Fiery Hot Buffalo",
+              "priceModifier": 0
+            },
+            {
+              "value": "garlic-parmesan",
+              "label": "Creamy Garlic Parmesan Butter",
+              "priceModifier": 0
+            },
+            {
+              "value": "honey-bbq",
+              "label": "Honey Barbecue Glaze",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet-chili",
+              "label": "Sweet Thai Chili",
+              "priceModifier": 0
+            },
+            {
+              "value": "mango-habanero",
+              "label": "Spicy Mango Habanero",
+              "priceModifier": 0
+            },
+            {
+              "value": "dry-rub",
+              "label": "Italian Herb Dry Rub",
+              "priceModifier": 0
+            },
+            {
+              "value": "naked",
+              "label": "Plain / Naked (No sauce)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "starter-dipping-sauce",
+          "type": "single-select",
+          "label": "Primary Dipping Sauce",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "house-marinara",
+              "label": "Warm San Marzano Marinara",
+              "priceModifier": 0
+            },
+            {
+              "value": "creamy-ranch",
+              "label": "Creamy Buttermilk Ranch",
+              "priceModifier": 0
+            },
+            {
+              "value": "chunky-blue-cheese",
+              "label": "Chunky Blue Cheese",
+              "priceModifier": 0
+            },
+            {
+              "value": "garlic-butter",
+              "label": "Warm Garlic Herb Butter",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "honey-mustard",
+              "label": "Honey Dijon Mustard",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "extra-sauce-cups",
+          "type": "multi-select",
+          "label": "Extra Dipping Sauce Cups",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            {
+              "value": "extra-marinara",
+              "label": "Extra Marinara Cup",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "extra-ranch",
+              "label": "Extra Ranch Cup",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "extra-blue-cheese",
+              "label": "Extra Blue Cheese Cup",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "extra-garlic-butter",
+              "label": "Extra Garlic Butter Cup",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "extra-hot-honey",
+              "label": "Hot Honey Drizzle Cup",
+              "priceModifier": 1.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "salads",
+      "name": "Salads",
+      "sortOrder": 7,
+      "description": "Fresh, crisp vegetable and greens courses crafted to cut through the richness of melted cheese and baked dough. Features Italian antipasto bowls, classic caesars, and garden mixes with house vinaigrettes.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥗",
+      "subSections": [
+        {
+          "id": "house-salads",
+          "name": "House Salads",
+          "sortOrder": 1,
+          "description": "Everyday garden greens, crisp romaine caesar bowls, and Mediterranean cucumbers and cherry tomato toss-ups."
+        },
+        {
+          "id": "specialty-salads",
+          "name": "Specialty Salads",
+          "sortOrder": 2,
+          "description": "Hearty cured meat antipasto platters, Greek feta salads with kalamata olives, and fresh caprese salads layered with mozzarella and basil."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "salad-portion-size",
+          "type": "single-select",
+          "label": "Salad Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "side-salad",
+              "label": "Side Salad (Accompaniment for 1)",
+              "priceModifier": 0
+            },
+            {
+              "value": "entree-salad",
+              "label": "Entrée Salad (Full meal for 1)",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "family-bowl",
+              "label": "Family Sharing Bowl (Serves 3–4)",
+              "priceModifier": 7.5
+            }
+          ]
+        },
+        {
+          "id": "salad-dressing-choice",
+          "type": "single-select",
+          "label": "Dressing Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "house-italian",
+              "label": "House Italian Herb Vinaigrette",
+              "priceModifier": 0
+            },
+            {
+              "value": "creamy-caesar",
+              "label": "Creamy Parmesan Caesar",
+              "priceModifier": 0
+            },
+            {
+              "value": "buttermilk-ranch",
+              "label": "Buttermilk Ranch",
+              "priceModifier": 0
+            },
+            {
+              "value": "balsamic-vinaigrette",
+              "label": "Aged Balsamic Vinaigrette",
+              "priceModifier": 0
+            },
+            {
+              "value": "greek-vinaigrette",
+              "label": "Greek Lemon Oregano Vinaigrette",
+              "priceModifier": 0
+            },
+            {
+              "value": "blue-cheese",
+              "label": "Chunky Blue Cheese Dressing",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "salad-dressing-placement",
+          "type": "single-select",
+          "label": "Dressing Service",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "dressing-on-side",
+              "label": "Dressing On the Side (Keeps greens crisp for delivery)",
+              "priceModifier": 0
+            },
+            {
+              "value": "tossed-in",
+              "label": "Tossed In Salad",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "salad-protein-addons",
+          "type": "multi-select",
+          "label": "Protein Enhancements",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "grilled-chicken",
+              "label": "Warm Grilled Chicken Breast",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "crispy-chicken",
+              "label": "Crispy Fried Chicken Strips",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "salami-pepperoni",
+              "label": "Italian Salami & Pepperoni Roll-Ups",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "chilled-shrimp",
+              "label": "Chilled Tiger Shrimp (4 pcs)",
+              "priceModifier": 4.5
+            },
+            {
+              "value": "crumbled-feta",
+              "label": "Crumbled Sheep's Milk Feta",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "shaved-parmigiano",
+              "label": "Shaved Parmigiano-Reggiano",
+              "priceModifier": 1.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "Sides",
+      "sortOrder": 8,
+      "description": "Savory accompaniments, hot potato sides, and artisanal oven-baked bread portions designed to pair with pizza pies, pasta dishes, and sandwiches.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍟",
+      "subSections": [
+        {
+          "id": "hot-sides",
+          "name": "Hot Sides",
+          "sortOrder": 1,
+          "description": "Golden seasoned french fries, loaded pizza fries with marinara and melted mozzarella, and crispy onion rings."
+        },
+        {
+          "id": "bread-sides",
+          "name": "Bread Sides",
+          "sortOrder": 2,
+          "description": "Cheesy pull-apart garlic bread loaves, focaccia herb triangles, and warm hearth breadsticks."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "side-portion-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular",
+              "label": "Regular Order (Serves 1–2)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-family",
+              "label": "Large Family Size (Serves 3–4)",
+              "priceModifier": 2.5
+            }
+          ]
+        },
+        {
+          "id": "side-seasoning",
+          "type": "single-select",
+          "label": "Seasoning Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "sea-salt",
+              "label": "Classic Flaky Sea Salt",
+              "priceModifier": 0
+            },
+            {
+              "value": "garlic-parmesan-dust",
+              "label": "Garlic Herb & Parmesan Dust",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "cajun-spice",
+              "label": "Spicy Cajun Pepper Seasoning",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "truffle-salt",
+              "label": "White Truffle Oil & Sea Salt",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "side-dipping-sauce",
+          "type": "single-select",
+          "label": "Included Dipping Sauce",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "marinara",
+              "label": "Warm Marinara Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "garlic-butter",
+              "label": "Garlic Butter Dip",
+              "priceModifier": 0
+            },
+            {
+              "value": "buttermilk-ranch",
+              "label": "Buttermilk Ranch",
+              "priceModifier": 0
+            },
+            {
+              "value": "cheddar-cheese-sauce",
+              "label": "Warm Cheddar Cheese Sauce",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "ketchup",
+              "label": "Classic Tomato Ketchup",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "sortOrder": 9,
+      "description": "Sweet finales featuring oven-baked dessert pizzas on warm hearth dough, authentic Italian patisserie staples like crispy cannoli, tiramisu, and gelato, providing high-margin sweet closure to family pizza nights.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍨",
+      "subSections": [
+        {
+          "id": "dessert-pizzas",
+          "name": "Dessert Pizzas",
+          "sortOrder": 1,
+          "description": "Oven-baked sweet flatbreads smothered with warm hazelnut cocoa spread, marshmallow s'mores, cinnamon streusel, and fresh berries."
+        },
+        {
+          "id": "classic-desserts",
+          "name": "Classic Desserts",
+          "sortOrder": 2,
+          "description": "Scratch-filled crisp Sicilian cannoli with sweet ricotta cream, layered espresso tiramisu, and Italian gelato cups."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "dessert-portion-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "individual",
+              "label": "Individual Serving",
+              "priceModifier": 0
+            },
+            {
+              "value": "shareable-pie",
+              "label": "8\" Shareable Dessert Pie (Serves 2–3)",
+              "priceModifier": 4.5
+            },
+            {
+              "value": "party-pie",
+              "label": "12\" Party Dessert Pie (Serves 4–6)",
+              "priceModifier": 8.5
+            }
+          ]
+        },
+        {
+          "id": "dessert-toppings",
+          "type": "multi-select",
+          "label": "Sweet Drizzles & Toppings",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "nutella-drizzle",
+              "label": "Warm Nutella Hazelnut Drizzle",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "salted-caramel",
+              "label": "Salted Caramel Sauce",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "crushed-hazelnuts",
+              "label": "Crushed Toasted Hazelnuts",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "fresh-strawberries",
+              "label": "Fresh Sliced Strawberries",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "mini-choc-chips",
+              "label": "Mini Dark Chocolate Chips",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "powdered-sugar",
+              "label": "Powdered Sugar Dusting",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "dessert-gelato-side",
+          "type": "single-select",
+          "label": "Gelato / Whipped Cream Side",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Side Scoop",
+              "priceModifier": 0
+            },
+            {
+              "value": "vanilla-gelato",
+              "label": "Vanilla Bean Gelato Scoop",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "chocolate-gelato",
+              "label": "Dark Chocolate Gelato Scoop",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "whipped-cream",
+              "label": "Sweet Whipped Cream Dollop",
+              "priceModifier": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beverages",
+      "name": "Beverages",
+      "sortOrder": 10,
+      "description": "Refreshing drinks structured to wash down hot pizza and savory snacks. Essential for delivery operations with party-sized 2-liter soda bottles, chilled single-serve cans, house-made iced teas, and mineral waters.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥤",
+      "subSections": [
+        {
+          "id": "soft-drinks",
+          "name": "Soft Drinks",
+          "sortOrder": 1,
+          "description": "Popular carbonated sodas, cola classics, lemon-lime sodas, and diet beverages available in individual and family sharing delivery sizes."
+        },
+        {
+          "id": "fresh-drinks",
+          "name": "Fresh Drinks",
+          "sortOrder": 2,
+          "description": "House-brewed sweet and unsweetened iced teas, fresh-squeezed Italian lemonade, and fruit-infused lemon waters."
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "sortOrder": 3,
+          "description": "Still natural spring waters and sparkling Italian mineral waters in glass and portable bottles."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "drink-size-packaging",
+          "type": "single-select",
+          "label": "Beverage Size & Packaging",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "can-12oz",
+              "label": "12 oz Chilled Can",
+              "priceModifier": 0
+            },
+            {
+              "value": "bottle-20oz",
+              "label": "20 oz Resealable Bottle",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "fountain-24oz",
+              "label": "Fountain Cup 24 oz",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "fountain-32oz",
+              "label": "Fountain Cup 32 oz",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "bottle-2liter",
+              "label": "2-Liter Bottle (Family & Delivery Sharing)",
+              "priceModifier": 2.5
+            }
+          ]
+        },
+        {
+          "id": "drink-ice-preference",
+          "type": "single-select",
+          "label": "Ice Preference (Fountain)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "light-ice",
+              "label": "Light Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "No Ice",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "drink-temperature",
+          "type": "single-select",
+          "label": "Serving Temperature",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "chilled",
+              "label": "Ice Cold / Chilled",
+              "priceModifier": 0
+            },
+            {
+              "value": "room-temp",
+              "label": "Room Temperature (Unchilled Bottle)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combo-deals-and-family-packs",
+      "name": "Combo Deals & Family Packs",
+      "sortOrder": 11,
+      "description": "High-value curated bundles packaging pizzas, appetizers, sides, and family beverages together at discounted combo pricing. Drives higher average basket size for group dining, busy weeknight dinners, sporting events, and party gatherings.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "📦",
+      "subSections": [
+        {
+          "id": "individual-combos",
+          "name": "Individual Combos",
+          "sortOrder": 1,
+          "description": "Personal-sized pizza pairings with a side salad or garlic knots and a single beverage, optimized for lunch or single diners."
+        },
+        {
+          "id": "family-deals",
+          "name": "Family Deals",
+          "sortOrder": 2,
+          "description": "Multi-pizza packages bundled with large appetizers, dipping sauces, and a 2-liter beverage tailored for 4–6 family members."
+        },
+        {
+          "id": "party-packs",
+          "name": "Party Packs",
+          "sortOrder": 3,
+          "description": "High-capacity feasts featuring multiple XL pizzas, bulk wings, shareable bread platters, and multiple sodas for 10+ guests."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "combo-pizza-size-tier",
+          "type": "single-select",
+          "label": "Pizza Size Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "medium-12",
+              "label": "Medium 12\" Pizzas (Included in Base Deal)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-14",
+              "label": "Upgrade to Large 14\" Pizzas",
+              "priceModifier": 4.0
+            },
+            {
+              "value": "xl-18",
+              "label": "Upgrade to Extra Large 18\" Pizzas",
+              "priceModifier": 8.0
+            }
+          ]
+        },
+        {
+          "id": "combo-pizza-choice-one",
+          "type": "single-select",
+          "label": "First Pizza Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "classic-cheese",
+              "label": "Classic Cheese Pie",
+              "priceModifier": 0
+            },
+            {
+              "value": "pepperoni",
+              "label": "Traditional Pepperoni Pie",
+              "priceModifier": 0
+            },
+            {
+              "value": "sausage-mushroom",
+              "label": "Italian Sausage & Mushroom Pie",
+              "priceModifier": 0
+            },
+            {
+              "value": "margherita",
+              "label": "Margherita Fresh Basil & Fior di Latte",
+              "priceModifier": 0
+            },
+            {
+              "value": "specialty-upgrade",
+              "label": "Specialty Signature Pizza Upgrade",
+              "priceModifier": 3.5
+            }
+          ]
+        },
+        {
+          "id": "combo-pizza-choice-two",
+          "type": "single-select",
+          "label": "Second Pizza Selection (Family & Party Packs)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "classic-cheese",
+              "label": "Classic Cheese Pie",
+              "priceModifier": 0
+            },
+            {
+              "value": "pepperoni",
+              "label": "Traditional Pepperoni Pie",
+              "priceModifier": 0
+            },
+            {
+              "value": "italian-sausage",
+              "label": "Italian Sausage Pie",
+              "priceModifier": 0
+            },
+            {
+              "value": "veggie-garden",
+              "label": "Vegetarian Garden Pie",
+              "priceModifier": 0
+            },
+            {
+              "value": "specialty-upgrade",
+              "label": "Specialty Signature Pizza Upgrade",
+              "priceModifier": 3.5
+            }
+          ]
+        },
+        {
+          "id": "combo-side-choice",
+          "type": "single-select",
+          "label": "Included Side Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "garlic-knots",
+              "label": "Garlic Knots with Marinara (6 pcs)",
+              "priceModifier": 0
+            },
+            {
+              "value": "mozzarella-sticks",
+              "label": "Crispy Mozzarella Sticks with Marinara (6 pcs)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "garden-salad",
+              "label": "House Garden Salad with Italian Dressing",
+              "priceModifier": 0
+            },
+            {
+              "value": "caesar-salad",
+              "label": "Caesar Salad with Parmesan & Croutons",
+              "priceModifier": 0
+            },
+            {
+              "value": "buffalo-wings",
+              "label": "Jumbo Bone-In Buffalo Wings (6 pcs)",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "seasoned-fries",
+              "label": "Large Seasoned French Fries",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "combo-drink-choice",
+          "type": "single-select",
+          "label": "Included Beverage Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "coca-cola-2l",
+              "label": "2-Liter Classic Cola",
+              "priceModifier": 0
+            },
+            {
+              "value": "diet-coke-2l",
+              "label": "2-Liter Diet Cola",
+              "priceModifier": 0
+            },
+            {
+              "value": "sprite-2l",
+              "label": "2-Liter Lemon-Lime Soda",
+              "priceModifier": 0
+            },
+            {
+              "value": "ginger-ale-2l",
+              "label": "2-Liter Ginger Ale",
+              "priceModifier": 0
+            },
+            {
+              "value": "assorted-cans-4pack",
+              "label": "Assorted Cans 4-Pack (2 Cola, 1 Diet, 1 Lemon-Lime)",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "bottled-teas-2pack",
+              "label": "2x 20 oz Bottled Iced Teas",
+              "priceModifier": 0.5
+            }
+          ]
+        },
+        {
+          "id": "combo-dipping-sauces",
+          "type": "multi-select",
+          "label": "Complimentary Dipping Sauces",
+          "isRequired": true,
+          "maxSelections": 2,
+          "choices": [
+            {
+              "value": "garlic-butter",
+              "label": "Garlic Butter Dipping Cup",
+              "priceModifier": 0
+            },
+            {
+              "value": "marinara",
+              "label": "Warm Marinara Dipping Cup",
+              "priceModifier": 0
+            },
+            {
+              "value": "ranch",
+              "label": "Buttermilk Ranch Dipping Cup",
+              "priceModifier": 0
+            },
+            {
+              "value": "blue-cheese",
+              "label": "Blue Cheese Dipping Cup",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "pizzaBuilder",
+      "name": "Interactive Pizza Builder",
+      "isEnabled": true,
+      "description": "Guides customers through an interactive step-by-step dough style, crust sizing, sauce base, cheese blend, and compartmentalized topping customization flow.",
+      "config": {
+        "enableStepByStepFlow": true,
+        "allowCustomCrustStyle": true,
+        "allowSplitSauce": true,
+        "allowSplitCheese": true,
+        "maxTotalToppings": 12,
+        "targetSectionIds": [
+          "classic-pizzas",
+          "specialty-and-gourmet-pizzas",
+          "build-your-own-pizza"
+        ]
+      }
+    },
+    {
+      "id": "halfAndHalf",
+      "name": "Half & Half Pizza Partitioning",
+      "isEnabled": true,
+      "description": "Enables customers to split recipes and toppings between Left and Right halves on medium, large, and extra-large pizzas, calculating pricing by higher-tier half or combined item additions.",
+      "config": {
+        "allowedMinDiameterInches": 12,
+        "pricingModel": "higher-priced-half",
+        "allowDifferentSauces": true,
+        "allowDifferentCheeses": true,
+        "targetSectionIds": [
+          "classic-pizzas",
+          "specialty-and-gourmet-pizzas",
+          "build-your-own-pizza"
+        ]
+      }
+    },
+    {
+      "id": "sizeSelector",
+      "name": "Pizza Size & Slices Selector",
+      "isEnabled": true,
+      "description": "Provides intuitive size switching interface showcasing crust diameter in inches, standard slice counts, and estimated guest portion recommendations.",
+      "config": {
+        "defaultSize": "large-14",
+        "displayDiameter": true,
+        "displaySliceCount": true,
+        "displayServingsRecommendation": true,
+        "standardSizes": [
+          {
+            "id": "personal-8",
+            "label": "Personal 8\"",
+            "diameterInches": 8,
+            "slices": 4,
+            "servings": "1 person"
+          },
+          {
+            "id": "small-10",
+            "label": "Small 10\"",
+            "diameterInches": 10,
+            "slices": 6,
+            "servings": "1–2 people"
+          },
+          {
+            "id": "medium-12",
+            "label": "Medium 12\"",
+            "diameterInches": 12,
+            "slices": 8,
+            "servings": "2–3 people"
+          },
+          {
+            "id": "large-14",
+            "label": "Large 14\"",
+            "diameterInches": 14,
+            "slices": 8,
+            "servings": "3–4 people"
+          },
+          {
+            "id": "xl-18",
+            "label": "Extra Large 18\"",
+            "diameterInches": 18,
+            "slices": 12,
+            "servings": "4–6 people"
+          }
+        ]
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Badging",
+      "isEnabled": true,
+      "description": "Displays clear allergen alerts and dietary tags (Gluten-Free, Dairy-Free, Vegetarian, Vegan, Halal, Nut-Free) across pizza crusts, sauces, and pasta dishes for guest safety.",
+      "config": {
+        "highlightSevereAllergens": true,
+        "showDietaryFilters": true,
+        "supportedTags": [
+          "gluten-free",
+          "dairy-free",
+          "vegetarian",
+          "vegan",
+          "halal",
+          "contains-gluten",
+          "contains-dairy",
+          "contains-nuts"
+        ]
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Real-Time Inventory Badges",
+      "isEnabled": true,
+      "description": "Shows real-time item availability statuses such as 'In Stock', 'Sold Out for Today', or 'Dough Batches Low' to prevent orders for unavailable specialty crusts or ingredients.",
+      "config": {
+        "showLowStockAlert": true,
+        "autoMarkSoldOut": true,
+        "trackDoughBatchDepletion": true
+      }
+    },
+    {
+      "id": "spiceLevels",
+      "name": "Spice Level Customization",
+      "isEnabled": true,
+      "description": "Allows guests to specify spice heat intensity from mild to extra hot on wings, arrabbiata pastas, and spicy specialty pizzas.",
+      "config": {
+        "defaultLevel": "none",
+        "allowCustomerSelection": true,
+        "maxLevel": 4
+      }
+    },
+    {
+      "id": "setMenus",
+      "name": "Set Menus & Family Packs",
+      "isEnabled": true,
+      "description": "Supports multi-item bundled combos, meal deals, and party packages with required selection validation for pizza styles, sides, and beverages.",
+      "config": {
+        "enforceBundleSelections": true,
+        "allowSizeUpgrades": true,
+        "targetSectionIds": [
+          "combo-deals-and-family-packs"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

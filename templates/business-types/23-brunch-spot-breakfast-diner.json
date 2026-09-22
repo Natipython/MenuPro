@@ -1,0 +1,1459 @@
+{
+  "id": "brunch-spot-breakfast-diner",
+  "name": "Brunch Spot / Breakfast Diner",
+  "slug": "brunch-spot-breakfast-diner",
+  "icon": "🥞",
+  "description": "An all-day breakfast and brunch diner concept specializing in morning and midday dining. Features chef-crafted egg specialties, griddled pancakes and waffles, artisanal avocado toasts, savory hash bowls, specialty coffee, and weekend brunch cocktails with bottomless drink packages.",
+  "category": "restaurant",
+  "tags": [
+    "brunch",
+    "breakfast",
+    "diner",
+    "pancakes",
+    "eggs",
+    "mimosa",
+    "all-day-breakfast"
+  ],
+  "sections": [
+    {
+      "id": "eggs-and-omelettes",
+      "name": "Eggs & Omelettes",
+      "sortOrder": 1,
+      "description": "The foundational anchor of breakfast and diner menus, featuring farm-fresh eggs prepared to order, three-egg folded omelettes stuffed with meats and vegetables, and rich pan scrambles. Exists to satisfy core savory breakfast cravings with high diner-style customization.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍳",
+      "subSections": [
+        {
+          "id": "classic-egg-dishes",
+          "name": "Classic Egg Dishes",
+          "sortOrder": 1,
+          "description": "Timeless plate combinations featuring farm-fresh eggs prepared in any style, accompanied by griddled hash browns or home fries and toasted artisan bread."
+        },
+        {
+          "id": "omelettes",
+          "name": "Omelettes",
+          "sortOrder": 2,
+          "description": "Generous three-egg folded omelettes filled with sautéed vegetables, savory cheeses, and griddled breakfast meats."
+        },
+        {
+          "id": "scrambles",
+          "name": "Scrambles",
+          "sortOrder": 3,
+          "description": "Soft and creamy scrambled egg skillets tossed with melted cheeses, breakfast meats, fresh herbs, and garden vegetables."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "egg-style",
+          "type": "single-select",
+          "label": "Egg Preparation Style",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "scrambled",
+              "label": "Scrambled (Soft & Fluffy)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sunny-side-up",
+              "label": "Sunny Side Up",
+              "priceModifier": 0
+            },
+            {
+              "value": "over-easy",
+              "label": "Over Easy",
+              "priceModifier": 0
+            },
+            {
+              "value": "over-medium",
+              "label": "Over Medium",
+              "priceModifier": 0
+            },
+            {
+              "value": "over-hard",
+              "label": "Over Hard",
+              "priceModifier": 0
+            },
+            {
+              "value": "poached",
+              "label": "Poached",
+              "priceModifier": 0
+            },
+            {
+              "value": "soft-boiled",
+              "label": "Soft-Boiled",
+              "priceModifier": 0
+            },
+            {
+              "value": "egg-whites-only",
+              "label": "Egg Whites Only",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "egg-count",
+          "type": "single-select",
+          "label": "Egg Count",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "two-eggs",
+              "label": "Two Eggs",
+              "priceModifier": 0
+            },
+            {
+              "value": "three-eggs",
+              "label": "Three Eggs",
+              "priceModifier": 1.75
+            },
+            {
+              "value": "four-eggs",
+              "label": "Four Eggs (Hungry Diner Portion)",
+              "priceModifier": 3
+            }
+          ]
+        },
+        {
+          "id": "cheese-choice",
+          "type": "single-select",
+          "label": "Cheese Choice",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "sharp-cheddar",
+              "label": "Sharp Yellow Cheddar",
+              "priceModifier": 0
+            },
+            {
+              "value": "swiss",
+              "label": "Aged Swiss",
+              "priceModifier": 0
+            },
+            {
+              "value": "pepper-jack",
+              "label": "Spicy Pepper Jack",
+              "priceModifier": 0
+            },
+            {
+              "value": "goat-cheese",
+              "label": "Creamy Goat Cheese",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "feta",
+              "label": "Crumbled Greek Feta",
+              "priceModifier": 1
+            },
+            {
+              "value": "no-cheese",
+              "label": "No Cheese",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "meat-add-on",
+          "type": "multi-select",
+          "label": "Add Breakfast Meats",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "thick-cut-bacon",
+              "label": "Thick-Cut Applewood Smoked Bacon",
+              "priceModifier": 3.25
+            },
+            {
+              "value": "pork-sausage-patties",
+              "label": "Country Pork Sausage Patties",
+              "priceModifier": 3
+            },
+            {
+              "value": "chicken-apple-sausage",
+              "label": "Chicken Apple Sausage Links",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "griddled-ham-steak",
+              "label": "Griddled Virginia Ham Steak",
+              "priceModifier": 3
+            },
+            {
+              "value": "crispy-turkey-bacon",
+              "label": "Crispy Turkey Bacon",
+              "priceModifier": 3
+            },
+            {
+              "value": "plant-based-sausage",
+              "label": "Plant-Based Breakfast Sausage (VG)",
+              "priceModifier": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eggs-benedict-and-poached",
+      "name": "Eggs Benedict & Poached",
+      "sortOrder": 2,
+      "description": "Elevated morning specialties centered on poached farm eggs, warm house-made hollandaise sauce emulsions, and cast-iron baked egg traditions. Exists to offer refined, decadent brunch showstoppers that distinguish a sit-down brunch spot from standard diners.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥚",
+      "subSections": [
+        {
+          "id": "classic-benedict",
+          "name": "Classic Benedict",
+          "sortOrder": 1,
+          "description": "Traditional poached eggs over toasted English muffins with smoked Canadian bacon and rich golden lemon-butter hollandaise."
+        },
+        {
+          "id": "specialty-benedict",
+          "name": "Specialty Benedict",
+          "sortOrder": 2,
+          "description": "Artisanal benedict variations featuring smoked salmon, lump crab cakes, smashed avocado, braised meats, and flavored hollandaise."
+        },
+        {
+          "id": "shakshuka-and-baked-eggs",
+          "name": "Shakshuka & Baked Eggs",
+          "sortOrder": 3,
+          "description": "Skillet-baked eggs gently poached in aromatic spiced tomato, sweet pepper, and garlic sauce, garnished with herbs and crumbled cheese."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "benedict-base-choice",
+          "type": "single-select",
+          "label": "Base Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "english-muffin",
+              "label": "Toasted Classic English Muffin",
+              "priceModifier": 0
+            },
+            {
+              "value": "artisan-sourdough",
+              "label": "Thick-Cut Toasted Sourdough",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "butter-croissant",
+              "label": "Split Butter Croissant",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "gluten-free-toast",
+              "label": "Toasted Gluten-Free Artisan Bread",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "benedict-protein-choice",
+          "type": "single-select",
+          "label": "Protein Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "canadian-bacon",
+              "label": "Smoked Canadian Bacon",
+              "priceModifier": 0
+            },
+            {
+              "value": "smoked-salmon",
+              "label": "Cold-Smoked Atlantic Salmon",
+              "priceModifier": 4
+            },
+            {
+              "value": "maryland-crab-cake",
+              "label": "Pan-Seared Jumbo Lump Crab Cake",
+              "priceModifier": 5.5
+            },
+            {
+              "value": "avocado-spinach",
+              "label": "Sliced Hass Avocado & Wilted Spinach (V)",
+              "priceModifier": 0
+            },
+            {
+              "value": "slow-braised-beef",
+              "label": "Slow-Braised Short Rib",
+              "priceModifier": 4.5
+            },
+            {
+              "value": "griddled-halloumi",
+              "label": "Griddled Cypriot Halloumi Cheese (V)",
+              "priceModifier": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pancakes-waffles-and-french-toast",
+      "name": "Pancakes, Waffles & French Toast",
+      "sortOrder": 3,
+      "description": "The sweet griddle cornerstone of brunch cuisine, offering fluffy buttermilk pancakes, crisp malted Belgian waffles, custard-soaked brioche French toast, and delicate crêpes. Exists to satisfy guests craving comforting, indulgent sweet carbs customizable with fruit and syrups.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥞",
+      "subSections": [
+        {
+          "id": "buttermilk-pancakes",
+          "name": "Buttermilk Pancakes",
+          "sortOrder": 1,
+          "description": "Golden, airy scratch buttermilk pancakes griddled to perfection and served with whipped butter."
+        },
+        {
+          "id": "belgian-waffles",
+          "name": "Belgian Waffles",
+          "sortOrder": 2,
+          "description": "Thick, deep-pocket Belgian waffles boasting a crisp exterior, tender center, and dusted powdered sugar."
+        },
+        {
+          "id": "french-toast",
+          "name": "French Toast",
+          "sortOrder": 3,
+          "description": "Thick-cut brioche or challah bread soaked in spiced vanilla-cinnamon egg custard and griddled golden."
+        },
+        {
+          "id": "crepes",
+          "name": "Crêpes",
+          "sortOrder": 4,
+          "description": "Ultra-thin French style rolled or folded crêpes filled with sweet creams, fruit compotes, or chocolate hazelnut spread."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "stack-size",
+          "type": "single-select",
+          "label": "Stack Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "short-stack",
+              "label": "Short Stack (2 Pieces)",
+              "priceModifier": 0
+            },
+            {
+              "value": "full-stack",
+              "label": "Full Stack (3-4 Pieces)",
+              "priceModifier": 3.25
+            }
+          ]
+        },
+        {
+          "id": "topping-selection",
+          "type": "multi-select",
+          "label": "Topping Selection",
+          "isRequired": false,
+          "maxSelections": 5,
+          "choices": [
+            {
+              "value": "fresh-berries",
+              "label": "Fresh Mixed Berries (Strawberries, Blueberries, Blackberries)",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "sliced-banana",
+              "label": "Fresh Sliced Banana",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "whipped-cream",
+              "label": "Whipped Cream",
+              "priceModifier": 1
+            },
+            {
+              "value": "pure-maple-syrup",
+              "label": "100% Pure Grade-A Maple Syrup",
+              "priceModifier": 2
+            },
+            {
+              "value": "chocolate-sauce",
+              "label": "Warm Belgian Chocolate Drizzle",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "toasted-pecans",
+              "label": "Candied Toasted Pecans",
+              "priceModifier": 1.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "breakfast-bowls-and-grain-bowls",
+      "name": "Breakfast Bowls & Grain Bowls",
+      "sortOrder": 4,
+      "description": "Nutrient-packed breakfast and grain foundations layered with farm proteins, fresh greens, roasted vegetables, and superfoods. Exists for guests seeking wholesome, balanced, and vibrant all-in-one meals ranging from savory skillet hashes to chilled smoothie and oat bowls.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥣",
+      "subSections": [
+        {
+          "id": "savory-breakfast-bowls",
+          "name": "Savory Breakfast Bowls",
+          "sortOrder": 1,
+          "description": "Warm bowls built upon crispy roasted potatoes or ancient grains, topped with sautéed greens, melted cheeses, and farm eggs."
+        },
+        {
+          "id": "sweet-bowls",
+          "name": "Sweet Bowls",
+          "sortOrder": 2,
+          "description": "Chilled blended açaí, pitaya, or thick Greek yogurt bowls garnished with artisanal granola, sliced fruit, nuts, and honey."
+        },
+        {
+          "id": "oatmeal-and-porridge",
+          "name": "Oatmeal & Porridge",
+          "sortOrder": 3,
+          "description": "Slow-simmered organic steel-cut oats, quinoa porridge, and chia seed puddings infused with cinnamon and milk."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "bowl-base-choice",
+          "type": "single-select",
+          "label": "Base Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "roasted-breakfast-potatoes",
+              "label": "Crispy Herb Roasted Potatoes",
+              "priceModifier": 0
+            },
+            {
+              "value": "quinoa-brown-rice",
+              "label": "Warm Quinoa & Brown Rice Blend",
+              "priceModifier": 0
+            },
+            {
+              "value": "steel-cut-oats",
+              "label": "Organic Steel-Cut Oats",
+              "priceModifier": 0
+            },
+            {
+              "value": "greek-yogurt",
+              "label": "Thick Organic Greek Yogurt",
+              "priceModifier": 0
+            },
+            {
+              "value": "acai-puree",
+              "label": "Chilled Organic Açaí Smoothie Purée",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "bowl-protein-choice",
+          "type": "single-select",
+          "label": "Protein Choice",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "two-fried-eggs",
+              "label": "Two Fried Eggs",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "grilled-chicken-breast",
+              "label": "Herb Marinated Grilled Chicken",
+              "priceModifier": 4
+            },
+            {
+              "value": "crispy-bacon-crumbles",
+              "label": "Crispy Applewood Bacon Crumbles",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "spiced-pulled-pork",
+              "label": "Slow-Braised Pulled Pork",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "seared-tofu",
+              "label": "Crispy Garlic & Herb Seared Tofu (VG)",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "plant-chorizo",
+              "label": "Spiced Plant-Based Chorizo (VG)",
+              "priceModifier": 3.5
+            }
+          ]
+        },
+        {
+          "id": "bowl-topping-addons",
+          "type": "multi-select",
+          "label": "Topping Add-Ons",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            {
+              "value": "sliced-avocado",
+              "label": "Fresh Sliced Avocado",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "house-granola",
+              "label": "Toasted Honey-Almond Granola",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "fresh-berries",
+              "label": "Fresh Mixed Berries",
+              "priceModifier": 2
+            },
+            {
+              "value": "chia-flax-seeds",
+              "label": "Chia & Flax Seed Superfood Blend",
+              "priceModifier": 1
+            },
+            {
+              "value": "crumbled-feta",
+              "label": "Crumbled Greek Feta",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "pickled-red-onions",
+              "label": "Tangy Pickled Red Onions",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "wildflower-honey",
+              "label": "Raw Wildflower Honey Drizzle",
+              "priceModifier": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avocado-and-toasts",
+      "name": "Avocado & Toasts",
+      "sortOrder": 5,
+      "description": "Artisanal open-faced sourdough toasts showcasing crushed ripe avocados, whipped cheese spreads, seasoned heirloom toppings, and modern brunch garnishes. Exists to serve the signature Instagram-favorite brunch category highlighting bakery-quality rustic breads and fresh produce.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍞",
+      "subSections": [
+        {
+          "id": "avocado-toasts",
+          "name": "Avocado Toasts",
+          "sortOrder": 1,
+          "description": "Crushed fresh Hass avocado spread over toasted artisan bread with sea salt, lemon juice, chili flakes, and microgreens."
+        },
+        {
+          "id": "specialty-toasts",
+          "name": "Specialty Toasts",
+          "sortOrder": 2,
+          "description": "Artisan open-faced bread creations topped with whipped ricotta, sautéed wild mushrooms, roasted fig, or hot honey."
+        },
+        {
+          "id": "bruschetta",
+          "name": "Bruschetta",
+          "sortOrder": 3,
+          "description": "Garlic-rubbed toasted country bread piled with marinated heirloom tomatoes, torn fresh basil, extra virgin olive oil, and balsamic glaze."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "toast-bread-choice",
+          "type": "single-select",
+          "label": "Bread Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "rustic-sourdough",
+              "label": "Thick-Cut Rustic Sourdough",
+              "priceModifier": 0
+            },
+            {
+              "value": "seeded-multigrain",
+              "label": "Seeded Multigrain Whole Wheat",
+              "priceModifier": 0
+            },
+            {
+              "value": "brioche-slab",
+              "label": "Toasted Brioche Bread Slab",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "gluten-free-bread",
+              "label": "Gluten-Free Artisan Bread",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "toast-protein-addon",
+          "type": "multi-select",
+          "label": "Protein Add-On",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "poached-egg",
+              "label": "Poached Farm Egg",
+              "priceModifier": 2
+            },
+            {
+              "value": "smoked-salmon",
+              "label": "Cold-Smoked Atlantic Salmon",
+              "priceModifier": 4
+            },
+            {
+              "value": "crispy-prosciutto",
+              "label": "Crispy Prosciutto Rashers",
+              "priceModifier": 3
+            },
+            {
+              "value": "crumbled-feta",
+              "label": "Crumbled Greek Feta",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "fresh-burrata",
+              "label": "Fresh Artisan Burrata Ball",
+              "priceModifier": 3.75
+            },
+            {
+              "value": "crispy-bacon-strips",
+              "label": "Crispy Smoked Bacon Strips (2 pcs)",
+              "priceModifier": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "breakfast-sandwiches-and-wraps",
+      "name": "Breakfast Sandwiches & Wraps",
+      "sortOrder": 6,
+      "description": "Hearty handheld breakfast and lunch crossover items including warm breakfast brioche sandwiches, griddled breakfast wraps, and morning burgers with runny eggs. Exists to offer portable comfort food and satisfying midday crossover options for hungry guests.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥪",
+      "subSections": [
+        {
+          "id": "hot-breakfast-sandwiches",
+          "name": "Hot Breakfast Sandwiches",
+          "sortOrder": 1,
+          "description": "Warm sandwiches prepared on griddled brioche buns, butter croissants, toasted bagels, or buttermilk biscuits loaded with egg, cheese, and meats."
+        },
+        {
+          "id": "breakfast-wraps",
+          "name": "Breakfast Wraps",
+          "sortOrder": 2,
+          "description": "Warm grilled flour or spinach wraps filled with scrambled eggs, cheddar, black beans, salsa, and breakfast meats."
+        },
+        {
+          "id": "breakfast-burgers",
+          "name": "Breakfast Burgers",
+          "sortOrder": 3,
+          "description": "Signature diner beef or smash patties layered with crispy bacon, melted cheese, breakfast potatoes, and a runny fried egg on a potato bun."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "sandwich-bread-choice",
+          "type": "single-select",
+          "label": "Bread Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "brioche-bun",
+              "label": "Toasted Brioche Bun",
+              "priceModifier": 0
+            },
+            {
+              "value": "butter-croissant",
+              "label": "Flaky Butter Croissant",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "everything-bagel",
+              "label": "Toasted Everything Bagel",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "plain-bagel",
+              "label": "Toasted Plain Bagel",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "buttermilk-biscuit",
+              "label": "House Buttermilk Biscuit",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "flour-tortilla-wrap",
+              "label": "Pressed Flour Tortilla Wrap",
+              "priceModifier": 0
+            },
+            {
+              "value": "gluten-free-bun",
+              "label": "Gluten-Free Bun",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "sandwich-egg-style",
+          "type": "single-select",
+          "label": "Egg Style",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "fried-over-medium",
+              "label": "Fried Over Medium (Slightly Runny)",
+              "priceModifier": 0
+            },
+            {
+              "value": "fried-over-hard",
+              "label": "Fried Over Hard (Fully Set Yolk)",
+              "priceModifier": 0
+            },
+            {
+              "value": "scrambled-folded",
+              "label": "Fluffy Scrambled Egg Fold",
+              "priceModifier": 0
+            },
+            {
+              "value": "egg-whites-only",
+              "label": "Egg Whites Only",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "no-egg",
+              "label": "No Egg",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "sandwich-meat-choice",
+          "type": "single-select",
+          "label": "Meat Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "applewood-bacon",
+              "label": "Thick-Cut Applewood Bacon",
+              "priceModifier": 0
+            },
+            {
+              "value": "country-sausage",
+              "label": "Country Pork Sausage Patty",
+              "priceModifier": 0
+            },
+            {
+              "value": "chicken-apple-sausage",
+              "label": "Chicken Apple Sausage Patty",
+              "priceModifier": 1
+            },
+            {
+              "value": "griddled-ham",
+              "label": "Griddled Virginia Ham",
+              "priceModifier": 0
+            },
+            {
+              "value": "turkey-bacon",
+              "label": "Crispy Turkey Bacon",
+              "priceModifier": 0
+            },
+            {
+              "value": "plant-sausage",
+              "label": "Plant-Based Sausage Patty (VG)",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "avocado-vegetarian",
+              "label": "Sliced Avocado (Vegetarian Alternative)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "sandwich-cheese-choice",
+          "type": "single-select",
+          "label": "Cheese Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "cheddar",
+              "label": "Sharp Yellow Cheddar",
+              "priceModifier": 0
+            },
+            {
+              "value": "american",
+              "label": "Classic Melty American Cheese",
+              "priceModifier": 0
+            },
+            {
+              "value": "swiss",
+              "label": "Aged Swiss Cheese",
+              "priceModifier": 0
+            },
+            {
+              "value": "pepper-jack",
+              "label": "Spicy Pepper Jack",
+              "priceModifier": 0
+            },
+            {
+              "value": "provolone",
+              "label": "Smoked Provolone",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-cheese",
+              "label": "No Cheese",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bakery-and-pastries",
+      "name": "Bakery & Pastries",
+      "sortOrder": 7,
+      "description": "Daily-baked breakfast pastries, French viennoiserie, fruit-studded muffins, and tender scones displayed in the counter. Exists to provide immediate treats to accompany specialty coffees, serve as table starters, or cater to light grab-and-go morning patrons.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥐",
+      "subSections": [
+        {
+          "id": "croissants",
+          "name": "Croissants",
+          "sortOrder": 1,
+          "description": "Flaky butter croissants, pain au chocolat, twice-baked almond croissants, and savory ham-and-cheese filled pastries."
+        },
+        {
+          "id": "muffins-and-scones",
+          "name": "Muffins & Scones",
+          "sortOrder": 2,
+          "description": "Jumbo blueberry streusel muffins, bran muffins, and traditional English buttermilk scones served with butter and preserves."
+        },
+        {
+          "id": "pastries",
+          "name": "Pastries",
+          "sortOrder": 3,
+          "description": "Glazed cinnamon rolls, seasonal fruit danishes, sticky pecan buns, and warm fruit turnovers."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "pastry-warm-up-toggle",
+          "type": "toggle",
+          "label": "Warm Up Before Serving",
+          "isRequired": false
+        },
+        {
+          "id": "pastry-spread-accompaniment",
+          "type": "single-select",
+          "label": "Butter & Spread Accompaniment",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "sweet-cream-butter",
+              "label": "Whipped Sweet Cream Butter",
+              "priceModifier": 0
+            },
+            {
+              "value": "strawberry-jam",
+              "label": "House Strawberry Jam",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "clotted-cream",
+              "label": "Devonshire Clotted Cream",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "plain-cream-cheese",
+              "label": "Whipped Cream Cheese",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "no-spread",
+              "label": "No Spread / Plain",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "breakfast-sides",
+      "name": "Breakfast Sides",
+      "sortOrder": 8,
+      "description": "Individual side portions of sizzling breakfast meats, griddled potato staples, warm toasts, and fresh fruits. Exists to allow diners to customize their meal plates, add extra portions, or build an à la carte breakfast spread to their exact preference.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥓",
+      "subSections": [
+        {
+          "id": "classic-sides",
+          "name": "Classic Sides",
+          "sortOrder": 1,
+          "description": "Traditional hot diner sides including crispy bacon, pork and turkey sausages, shredded hash browns, skillet home fries, and buttered toast."
+        },
+        {
+          "id": "fresh-sides",
+          "name": "Fresh Sides",
+          "sortOrder": 2,
+          "description": "Fresh and healthy breakfast sides including seasonal fruit cups, sliced avocado, Greek yogurt bowls, and side garden greens."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "side-preparation-style",
+          "type": "single-select",
+          "label": "Preparation Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-prep",
+              "label": "Standard Kitchen Preparation",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-crispy",
+              "label": "Extra Crispy / Well Done",
+              "priceModifier": 0
+            },
+            {
+              "value": "lightly-done",
+              "label": "Lightly Done / Soft",
+              "priceModifier": 0
+            },
+            {
+              "value": "dry-no-butter",
+              "label": "Dry / No Butter or Oil",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "side-portion-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "individual-portion",
+              "label": "Individual Portion",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-sharing-portion",
+              "label": "Large / Sharing Portion",
+              "priceModifier": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "brunch-cocktails",
+      "name": "Brunch Cocktails",
+      "sortOrder": 9,
+      "description": "Daytime sparkling libations, savory pick-me-up cocktails, sangria carafes, and celebratory beverage packages. Exists to anchor the leisurely weekend brunch ritual and drive high beverage check averages with popular daytime drinks.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥂",
+      "subSections": [
+        {
+          "id": "mimosas",
+          "name": "Mimosas",
+          "sortOrder": 1,
+          "description": "Crisp Italian Prosecco or Champagne combined with fresh-squeezed orange, ruby grapefruit, blood orange, or mango nectars."
+        },
+        {
+          "id": "bloody-marys",
+          "name": "Bloody Marys",
+          "sortOrder": 2,
+          "description": "Signature savory vodka cocktails made with house spiced tomato blend, horseradish, celery salt, citrus, and gourmet pickled garnishes."
+        },
+        {
+          "id": "bellinis",
+          "name": "Bellinis",
+          "sortOrder": 3,
+          "description": "Venetian style sparkling cocktails gently folded with sweet white peach purée, strawberry purée, or seasonal passion fruit."
+        },
+        {
+          "id": "sangria",
+          "name": "Sangria",
+          "sortOrder": 4,
+          "description": "Fruity and refreshing red, white, or rosé wine punches infused with seasonal fruits and liqueurs, served by the glass or pitcher."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "bottomless-deal-toggle",
+          "type": "toggle",
+          "label": "Upgrade to Bottomless Drink Package (90 Min)",
+          "isRequired": false
+        },
+        {
+          "id": "spirit-upgrade",
+          "type": "single-select",
+          "label": "Spirit Upgrade",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "house-pour",
+              "label": "House Well Pour / Standard Prosecco",
+              "priceModifier": 0
+            },
+            {
+              "value": "premium-vodka",
+              "label": "Premium Vodka Upgrade (Tito's or Ketel One)",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "champagne-upgrade",
+              "label": "French Champagne Upgrade (Veuve Clicquot)",
+              "priceModifier": 7
+            },
+            {
+              "value": "mezcal-swap",
+              "label": "Smoky Mezcal Swap (Oaxacan Style)",
+              "priceModifier": 3
+            },
+            {
+              "value": "gin-swap",
+              "label": "Botanical Gin Swap (Hendrick's)",
+              "priceModifier": 3
+            }
+          ]
+        },
+        {
+          "id": "bloody-mary-heat",
+          "type": "single-select",
+          "label": "Bloody Mary Spice Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "mild",
+              "label": "Mild (Gentle Seasoning)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium (Classic Horseradish Kick)",
+              "priceModifier": 0
+            },
+            {
+              "value": "spicy",
+              "label": "Extra Spicy (Habanero Bitters & Extra Pepper)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": true,
+        "defaultAvailableFrom": "10:00",
+        "defaultAvailableUntil": "16:00",
+        "note": "Alcoholic beverages are served in compliance with local regulations between 10:00 and 16:00; bottomless specials require food purchase and valid ID."
+      }
+    },
+    {
+      "id": "coffee-and-espresso",
+      "name": "Coffee & Espresso",
+      "sortOrder": 10,
+      "description": "Full-service barista coffee program providing essential morning fuel, from endless bottomless diner drip mugs to artisanal espresso shots and flavored seasonal lattes. Exists as an indispensable non-negotiable anchor for every breakfast and diner concept.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "☕",
+      "subSections": [
+        {
+          "id": "espresso-drinks",
+          "name": "Espresso Drinks",
+          "sortOrder": 1,
+          "description": "Double espresso shots, Americanos, cortados, flat whites, cappuccinos, and classic café lattes extracted from fresh specialty roasts."
+        },
+        {
+          "id": "brewed-coffee",
+          "name": "Brewed Coffee",
+          "sortOrder": 2,
+          "description": "Freshly brewed house diner drip coffee with bottomless table refills, dark roast blends, and slow-steeped smooth cold brew."
+        },
+        {
+          "id": "specialty-lattes",
+          "name": "Specialty Lattes",
+          "sortOrder": 3,
+          "description": "Signature barista lattes crafted with organic syrups including Madagascar vanilla, salted caramel, matcha green tea, and golden turmeric."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "beverage-size",
+          "type": "single-select",
+          "label": "Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-12oz",
+              "label": "Regular (12 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-16oz",
+              "label": "Large (16 oz)",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "iced-20oz",
+              "label": "Iced (20 oz)",
+              "priceModifier": 1.25
+            }
+          ]
+        },
+        {
+          "id": "milk-selection",
+          "type": "single-select",
+          "label": "Milk",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "whole-dairy-milk",
+              "label": "Whole Dairy Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "oat-milk",
+              "label": "Oat Milk (Barista Blend)",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "almond-milk",
+              "label": "Almond Milk",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "soy-milk",
+              "label": "Organic Soy Milk",
+              "priceModifier": 0.85
+            },
+            {
+              "value": "skim-milk",
+              "label": "Skim / Non-Fat Milk",
+              "priceModifier": 0
+            },
+            {
+              "value": "half-and-half",
+              "label": "Half & Half (Breve)",
+              "priceModifier": 0.5
+            }
+          ]
+        },
+        {
+          "id": "espresso-shot-modifier",
+          "type": "single-select",
+          "label": "Shot",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-shot",
+              "label": "Standard Espresso Extraction",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-shot",
+              "label": "Add Extra Espresso Shot",
+              "priceModifier": 1
+            },
+            {
+              "value": "double-extra-shot",
+              "label": "Add Double Extra Shot",
+              "priceModifier": 1.75
+            },
+            {
+              "value": "decaf-beans",
+              "label": "Swiss Water Decaf Extraction",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "coffee-temperature-preference",
+          "type": "single-select",
+          "label": "Temperature",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "steaming-hot",
+              "label": "Steaming Hot",
+              "priceModifier": 0
+            },
+            {
+              "value": "iced",
+              "label": "Poured Over Ice",
+              "priceModifier": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fresh-juices-and-smoothies",
+      "name": "Fresh Juices & Smoothies",
+      "sortOrder": 11,
+      "description": "Cold-pressed raw citrus and vegetable juices, blended whole-fruit smoothies, and potent wellness elixir shots. Exists to satisfy health-conscious guests and provide crisp, refreshing non-caffeinated morning hydration.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥤",
+      "subSections": [
+        {
+          "id": "fresh-juices",
+          "name": "Fresh Juices",
+          "sortOrder": 1,
+          "description": "100% freshly squeezed Valencia orange juice, cold-pressed daily green juice, ruby grapefruit, and ginger-apple blends."
+        },
+        {
+          "id": "smoothies",
+          "name": "Smoothies",
+          "sortOrder": 2,
+          "description": "Thick whole-fruit and vegetable smoothies blended with Greek yogurt or almond milk, chia seeds, and berry medleys."
+        },
+        {
+          "id": "health-shots",
+          "name": "Health Shots",
+          "sortOrder": 3,
+          "description": "Concentrated 2-ounce wellness shooters featuring pressed ginger root, fresh turmeric, lemon, cayenne pepper, and organic oregano oil."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "juice-size",
+          "type": "single-select",
+          "label": "Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-12oz",
+              "label": "Regular (12 oz)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-16oz",
+              "label": "Large (16 oz)",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "wellness-shot-2oz",
+              "label": "Wellness Shot (2 oz)",
+              "priceModifier": -2.5
+            }
+          ]
+        },
+        {
+          "id": "smoothie-boosters",
+          "type": "multi-select",
+          "label": "Wellness Boosters",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            {
+              "value": "whey-protein",
+              "label": "Whey Protein Powder Scoop",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "plant-protein",
+              "label": "Plant-Based Pea Protein Scoop",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "chia-seeds",
+              "label": "Organic Chia Seeds",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "spirulina",
+              "label": "Organic Blue Spirulina",
+              "priceModifier": 1
+            },
+            {
+              "value": "collagen-peptides",
+              "label": "Hydrolyzed Collagen Peptides",
+              "priceModifier": 1.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weekend-and-seasonal-specials",
+      "name": "Weekend & Seasonal Specials",
+      "sortOrder": 12,
+      "description": "Chef-curated rotational brunch features, Saturday and Sunday morning specials, and seasonal holiday recipes showcasing peak local produce. Exists to generate excitement, drive weekend foot traffic, and reward regulars with innovative limited-edition dishes.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "✨",
+      "subSections": [
+        {
+          "id": "weekend-only-specials",
+          "name": "Weekend-Only Specials",
+          "sortOrder": 1,
+          "description": "Decadent weekend creations such as stuffed french toast towers, short rib hash skillets, and rotating brunch board features served Saturdays and Sundays only."
+        },
+        {
+          "id": "seasonal-items",
+          "name": "Seasonal Items",
+          "sortOrder": 2,
+          "description": "Quarterly seasonal favorites highlighting summer stone fruits, autumn spiced pumpkin dishes, winter warmers, and spring berry harvests."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "special-serving-style",
+          "type": "single-select",
+          "label": "Serving Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-presentation",
+              "label": "Chef's Standard Presentation",
+              "priceModifier": 0
+            },
+            {
+              "value": "sharing-platter",
+              "label": "Sharing Platter / Family Style",
+              "priceModifier": 4
+            }
+          ]
+        },
+        {
+          "id": "special-dietary-swap",
+          "type": "single-select",
+          "label": "Dietary Modification",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-recipe",
+              "label": "Standard Recipe (As Prepared)",
+              "priceModifier": 0
+            },
+            {
+              "value": "vegetarian-preparation",
+              "label": "Vegetarian Preparation",
+              "priceModifier": 0
+            },
+            {
+              "value": "gluten-free-preparation",
+              "label": "Gluten-Free Ingredients Preparation",
+              "priceModifier": 1.5
+            }
+          ]
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": true,
+        "defaultAvailableFrom": "08:00",
+        "defaultAvailableUntil": "15:00",
+        "note": "Weekend-Only Specials are exclusively available Saturday and Sunday from 08:00 to 15:00; seasonal items are offered daily while supplies last."
+      }
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "allDayBreakfast",
+      "name": "All-Day Breakfast Availability",
+      "isEnabled": true,
+      "description": "Ensures all signature breakfast items, griddled pancakes, farm eggs, and diner plates remain continuously available and orderable throughout all open diner hours without midday cutoff.",
+      "config": {
+        "allowAllDayOrdering": true,
+        "highlightAllDayStaples": true,
+        "kitchenSchedule": "open-to-close"
+      }
+    },
+    {
+      "id": "bottomlessDrinks",
+      "name": "Bottomless Drink Packages",
+      "isEnabled": true,
+      "description": "Configures and manages time-capped bottomless brunch beverage packages (mimosas, bellinis, sangria), tracking per-table durations and responsible service parameters.",
+      "config": {
+        "durationLimitMinutes": 90,
+        "requireTableParticipation": true,
+        "enforceFoodPurchase": true,
+        "maxRefillsPerGuest": 6,
+        "targetSectionIds": [
+          "brunch-cocktails"
+        ]
+      }
+    },
+    {
+      "id": "ageVerification",
+      "name": "Age Verification",
+      "isEnabled": true,
+      "description": "Enforces digital age gate verification for brunch cocktails, bottomless packages, sparkling wine, and alcoholic beverages prior to cart addition.",
+      "config": {
+        "minimumAge": 21,
+        "requireConfirmationPrompt": true,
+        "restrictedSectionIds": [
+          "brunch-cocktails"
+        ]
+      }
+    },
+    {
+      "id": "milkAlternatives",
+      "name": "Milk Alternatives & Drink Customization",
+      "isEnabled": true,
+      "description": "Enables comprehensive barista customization across coffee, espresso, and tea beverages including plant-based milks, temperature, sweetness levels, and extra shots.",
+      "config": {
+        "defaultAlternative": "oat-milk",
+        "allowCustomTemperature": true,
+        "allowExtraShots": true,
+        "targetSectionIds": [
+          "coffee-and-espresso"
+        ]
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Indicators",
+      "isEnabled": true,
+      "description": "Displays allergen alerts and dietary tags across all menu items, allowing guests to easily filter by vegetarian, vegan, gluten-free, dairy-free, and nut-free preferences.",
+      "config": {
+        "displayBadges": true,
+        "filterable": true,
+        "supportedTags": [
+          "gluten-free",
+          "dairy-free",
+          "nut-free",
+          "vegetarian",
+          "vegan",
+          "contains-eggs",
+          "contains-dairy",
+          "contains-gluten",
+          "contains-pork"
+        ]
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Real-Time Inventory Badges",
+      "isEnabled": true,
+      "description": "Provides real-time stock availability indicators, limited-batch bakery alerts, and sold-out notifications across morning pastries and weekend specials.",
+      "config": {
+        "showLowStockWarning": true,
+        "lowStockThreshold": 5,
+        "autoMarkSoldOut": true,
+        "showSoldOutBadge": true
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

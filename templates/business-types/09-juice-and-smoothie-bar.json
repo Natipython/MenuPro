@@ -1,0 +1,633 @@
+{
+  "id": "juice-and-smoothie-bar",
+  "name": "Juice & Smoothie Bar (Standalone)",
+  "slug": "juice-and-smoothie-bar",
+  "icon": "🧃",
+  "description": "Dedicated quick-service juice and smoothie concept focused entirely on freshly extracted cold-pressed juices, nutrient-rich smoothies, functional wellness shots, handcrafted superfood bowls, advance cleanse detox programs, and wholesome energy snacks. Optimized for fitness centers, shopping concourses, lifestyle pavilions, and urban wellness hubs without a traditional cafe coffee setup.",
+  "category": "juice",
+  "tags": [
+    "juice",
+    "smoothie",
+    "health",
+    "wellness",
+    "acai",
+    "detox"
+  ],
+  "sections": [
+    {
+      "id": "fresh-juices",
+      "name": "Fresh Juices",
+      "sortOrder": 1,
+      "description": "Features 100% pure cold-pressed and made-to-order fruit and vegetable juices pressed without added water, sugars, or preservatives. Represents the primary beverage identity for health-conscious customers seeking immediate raw vitamins, living enzymes, and optimal hydration.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍊",
+      "subSections": [
+        {
+          "id": "single-fruit-juices",
+          "name": "Single Fruit Juices",
+          "sortOrder": 1,
+          "description": "Pure unblended freshly pressed single-origin juices celebrating whole fruits like crisp green apple, sweet valencia orange, ruby red grapefruit, and chilled watermelon."
+        },
+        {
+          "id": "mixed-and-combination-juices",
+          "name": "Mixed & Combination Juices",
+          "sortOrder": 2,
+          "description": "Harmonious signature blends pairing complementary fruits, citrus, and sweet roots such as apple-carrot-ginger, orange-passionfruit-mint, and pineapple-cucumber."
+        },
+        {
+          "id": "vegetable-and-green-juices",
+          "name": "Vegetable & Green Juices",
+          "sortOrder": 3,
+          "description": "Alkalizing, nutrient-dense green elixirs pressed with dark leafy kale, baby spinach, celery stalks, crisp cucumber, parsley, and Meyer lemon."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "juice-size",
+          "type": "single-select",
+          "label": "Juice Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "small", "label": "Small (12 oz)", "priceModifier": 0 },
+            { "value": "medium", "label": "Medium (16 oz)", "priceModifier": 1.50 },
+            { "value": "large", "label": "Large (20 oz)", "priceModifier": 3.00 }
+          ]
+        },
+        {
+          "id": "juice-ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "no-ice", "label": "No Ice", "priceModifier": 0 },
+            { "value": "light-ice", "label": "Light Ice", "priceModifier": 0 },
+            { "value": "regular-ice", "label": "Regular Ice", "priceModifier": 0 },
+            { "value": "extra-ice", "label": "Extra Ice", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "smoothies-and-blends",
+      "name": "Smoothies & Blends",
+      "sortOrder": 2,
+      "description": "Covers rich, thick, fiber-dense blended beverages prepared fresh to order with whole frozen fruits, nutrient supergreens, customizable plant milks, and performance enhancers. Serves as wholesome meal replacements, post-workout muscle recovery drinks, and energizing guilt-free treats.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥤",
+      "subSections": [
+        {
+          "id": "fruit-smoothies",
+          "name": "Fruit Smoothies",
+          "sortOrder": 1,
+          "description": "Thick, creamy blends of whole frozen fruits such as wild blueberries, ripe bananas, mango chunks, strawberries, and tropical pineapples."
+        },
+        {
+          "id": "green-and-detox-smoothies",
+          "name": "Green & Detox Smoothies",
+          "sortOrder": 2,
+          "description": "Clean, alkalizing blends combining crisp greens, organic baby spinach, curly kale, avocado, green apples, and fresh garden mint."
+        },
+        {
+          "id": "protein-and-energy-smoothies",
+          "name": "Protein & Energy Smoothies",
+          "sortOrder": 3,
+          "description": "High-protein blends formulated with whey or organic plant proteins, natural nut butters, rolled oats, and sustained-energy superfoods."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "smoothie-size",
+          "type": "single-select",
+          "label": "Smoothie Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "medium", "label": "Regular (16 oz)", "priceModifier": 0 },
+            { "value": "large", "label": "Large (24 oz)", "priceModifier": 2.00 }
+          ]
+        },
+        {
+          "id": "smoothie-liquid-base",
+          "type": "single-select",
+          "label": "Liquid Base",
+          "isRequired": true,
+          "choices": [
+            { "value": "water", "label": "Filtered Water", "priceModifier": 0 },
+            { "value": "milk", "label": "Whole Milk", "priceModifier": 0 },
+            { "value": "coconut-water", "label": "Pure Coconut Water", "priceModifier": 0.50 },
+            { "value": "almond-milk", "label": "Almond Milk", "priceModifier": 0.50 },
+            { "value": "oat-milk", "label": "Oat Milk", "priceModifier": 0.75 }
+          ]
+        },
+        {
+          "id": "smoothie-boosters",
+          "type": "multi-select",
+          "label": "Add-On Boosters",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            { "value": "whey-protein", "label": "Grass-Fed Whey Protein (+20g)", "priceModifier": 2.00 },
+            { "value": "plant-protein", "label": "Organic Plant Protein (+20g)", "priceModifier": 2.00 },
+            { "value": "chia-seeds", "label": "Organic Chia Seeds", "priceModifier": 1.00 },
+            { "value": "hemp-hearts", "label": "Shelled Hemp Hearts", "priceModifier": 1.25 },
+            { "value": "collagen", "label": "Marine Collagen Peptides", "priceModifier": 2.25 },
+            { "value": "blue-spirulina", "label": "Organic Blue Spirulina", "priceModifier": 1.50 },
+            { "value": "peanut-butter", "label": "Creamy Peanut Butter Scoop", "priceModifier": 1.00 },
+            { "value": "almond-butter", "label": "Almond Butter Scoop", "priceModifier": 1.25 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health-and-wellness-shots",
+      "name": "Health & Wellness Shots",
+      "sortOrder": 3,
+      "description": "Offers concentrated, cold-pressed 2 oz wellness elixirs formulated for immediate functional impact, immune defense, natural detoxification, and metabolic stimulation. Designed for quick counter consumption or as a powerful nutritional companion to any beverage.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧪",
+      "subSections": [
+        {
+          "id": "immunity-shots",
+          "name": "Immunity Shots",
+          "sortOrder": 1,
+          "description": "Potent immune-strengthening elixirs formulated with ginger root, raw turmeric, echinacea, fresh lemon juice, and black pepper."
+        },
+        {
+          "id": "detox-shots",
+          "name": "Detox Shots",
+          "sortOrder": 2,
+          "description": "Purifying shots featuring organic wheatgrass, activated coconut charcoal, organic apple cider vinegar, and milk thistle."
+        },
+        {
+          "id": "energy-shots",
+          "name": "Energy Shots",
+          "sortOrder": 3,
+          "description": "Revitalizing botanical boosters powered by Japanese matcha, guarana, beet root concentrate, and cayenne pepper."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "shot-serving-format",
+          "type": "single-select",
+          "label": "Serving Format",
+          "isRequired": true,
+          "choices": [
+            { "value": "single", "label": "Single Shot (2 oz)", "priceModifier": 0 },
+            { "value": "double", "label": "Double Shot (4 oz)", "priceModifier": 2.50 },
+            { "value": "flight-of-3", "label": "Wellness Flight (3 x 2 oz Shots)", "priceModifier": 5.00 }
+          ]
+        },
+        {
+          "id": "shot-chaser",
+          "type": "single-select",
+          "label": "Citrus Chaser",
+          "isRequired": false,
+          "choices": [
+            { "value": "none", "label": "No Chaser", "priceModifier": 0 },
+            { "value": "orange-wedge", "label": "Fresh Orange Wedge", "priceModifier": 0 },
+            { "value": "apple-slice", "label": "Fresh Green Apple Slice", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "smoothie-and-acai-bowls",
+      "name": "Smoothie & Açaí Bowls",
+      "sortOrder": 4,
+      "description": "Features thick, chilled superfood bowls anchored by frozen organic Amazonian açaí, vibrant pitaya, blended smoothie greens, or warm oatmeal. Artfully arranged with sliced fruits, crunchy gluten-free granolas, seeds, and drizzles to serve as nutritious breakfast and lunch meals.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥣",
+      "subSections": [
+        {
+          "id": "acai-bowls",
+          "name": "Açaí Bowls",
+          "sortOrder": 1,
+          "description": "Traditional thick-blended wild Amazonian açaí berry purée topped with fresh sliced fruit, artisanal granola, and superfoods."
+        },
+        {
+          "id": "pitaya-bowls",
+          "name": "Pitaya Bowls",
+          "sortOrder": 2,
+          "description": "Vibrant dragon fruit smoothie bowls blended with tropical fruits and finished with crisp seeds and fresh coconut."
+        },
+        {
+          "id": "smoothie-bowls",
+          "name": "Smoothie Bowls",
+          "sortOrder": 3,
+          "description": "Extra-thick whole fruit and green spirulina blends spooned into bowls with customizable colorful superfood toppings."
+        },
+        {
+          "id": "oatmeal-bowls",
+          "name": "Oatmeal Bowls",
+          "sortOrder": 4,
+          "description": "Warm steel-cut oats and chilled overnight chia puddings layered with cinnamon, sliced banana, and pure maple syrup."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "bowl-size",
+          "type": "single-select",
+          "label": "Bowl Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "regular", "label": "Regular Bowl (12 oz)", "priceModifier": 0 },
+            { "value": "large", "label": "Large Bowl (16 oz)", "priceModifier": 2.50 }
+          ]
+        },
+        {
+          "id": "bowl-toppings",
+          "type": "multi-select",
+          "label": "Topping Add-Ons",
+          "isRequired": false,
+          "maxSelections": 6,
+          "choices": [
+            { "value": "granola", "label": "Artisan Gluten-Free Granola", "priceModifier": 1.00 },
+            { "value": "berries", "label": "Fresh Strawberries & Blueberries", "priceModifier": 1.50 },
+            { "value": "coconut", "label": "Toasted Coconut Flakes", "priceModifier": 0.75 },
+            { "value": "chia", "label": "Organic Chia Seeds", "priceModifier": 0.75 },
+            { "value": "honey", "label": "Raw Wildflower Honey Drizzle", "priceModifier": 0.75 },
+            { "value": "nut-butter", "label": "Almond or Peanut Butter Drizzle", "priceModifier": 1.25 },
+            { "value": "cacao-nibs", "label": "Raw Cacao Nibs", "priceModifier": 1.00 },
+            { "value": "hemp-seeds", "label": "Shelled Hemp Seeds", "priceModifier": 0.75 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "light-bites-and-snacks",
+      "name": "Light Bites & Snacks",
+      "sortOrder": 5,
+      "description": "Wholesome, solid food snacks crafted from clean whole ingredients that complement beverage purchases. Designed for rapid grab-and-go counter service without commercial fryers or heavy cooktops, providing portable nourishment for gym-goers, commuters, and busy shoppers.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥪",
+      "subSections": [
+        {
+          "id": "energy-bars-and-bites",
+          "name": "Energy Bars & Bites",
+          "sortOrder": 1,
+          "description": "House-crafted raw protein balls, date-and-nut energy bites, seed flapjacks, and gluten-free snack bars."
+        },
+        {
+          "id": "fresh-fruit-cups",
+          "name": "Fresh Fruit Cups",
+          "sortOrder": 2,
+          "description": "Chilled hand-cut seasonal fruit medleys, pineapple spears, watermelon cubes, and fresh berry cups."
+        },
+        {
+          "id": "wraps-and-toast",
+          "name": "Wraps & Toast",
+          "sortOrder": 3,
+          "description": "Fresh artisan toasts such as smashed avocado sourdough or almond butter banana, alongside light plant-rich tortilla wraps."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "bread-choice",
+          "type": "single-select",
+          "label": "Bread / Wrap Choice",
+          "isRequired": false,
+          "choices": [
+            { "value": "artisan-sourdough", "label": "Artisan Sourdough Toast", "priceModifier": 0 },
+            { "value": "sprouted-multigrain", "label": "Sprouted Multigrain Toast", "priceModifier": 0 },
+            { "value": "gluten-free-bread", "label": "Gluten-Free Bread", "priceModifier": 1.00 },
+            { "value": "spinach-tortilla", "label": "Spinach Tortilla Wrap", "priceModifier": 0 },
+            { "value": "whole-wheat-tortilla", "label": "Whole Wheat Tortilla Wrap", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "preparation-style",
+          "type": "single-select",
+          "label": "Preparation Style",
+          "isRequired": false,
+          "choices": [
+            { "value": "toasted-warm", "label": "Toasted Warm", "priceModifier": 0 },
+            { "value": "fresh-untoasted", "label": "Fresh / Untoasted", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cleanse-and-detox-packages",
+      "name": "Cleanse & Detox Packages",
+      "sortOrder": 6,
+      "description": "Comprehensive multi-bottle cold-pressed juice programs designed for structured digestive rest, metabolic resets, and cellular revitalization. Prepared in numbered daily bottles with scheduled advance booking to ensure maximum living nutrient retention.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "📦",
+      "subSections": [
+        {
+          "id": "1-day-cleanse",
+          "name": "1-Day Cleanse",
+          "sortOrder": 1,
+          "description": "Single-day gentle reboot featuring 6 cold-pressed juices and 1 wellness immunity shot with guided intake schedule."
+        },
+        {
+          "id": "3-day-cleanse",
+          "name": "3-Day Cleanse",
+          "sortOrder": 2,
+          "description": "Our most requested 3-day deep reset consisting of 18 cold-pressed juices, 3 wellness shots, and complete cleanse guide."
+        },
+        {
+          "id": "5-day-cleanse",
+          "name": "5-Day Cleanse",
+          "sortOrder": 3,
+          "description": "Intensive 5-day total body reset package including 30 cold-pressed juices, 5 wellness booster shots, and herbal detox tea."
+        },
+        {
+          "id": "custom-programs",
+          "name": "Custom Programs",
+          "sortOrder": 4,
+          "description": "Personalized juice regimens tailored to individual fitness milestones, athletic training, or low-sugar dietary preferences."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "package-duration",
+          "type": "single-select",
+          "label": "Package Duration",
+          "isRequired": true,
+          "choices": [
+            { "value": "1-day", "label": "1-Day Cleanse (6 Juices + 1 Shot)", "priceModifier": 0 },
+            { "value": "3-day", "label": "3-Day Cleanse (18 Juices + 3 Shots)", "priceModifier": 75.00 },
+            { "value": "5-day", "label": "5-Day Cleanse (30 Juices + 5 Shots)", "priceModifier": 140.00 },
+            { "value": "custom", "label": "Custom Cleanse Consultation", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "cleanse-intensity",
+          "type": "single-select",
+          "label": "Cleanse Intensity Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "level-1", "label": "Level 1: Refresh & Reboot (Fruit, Roots & Mild Greens)", "priceModifier": 0 },
+            { "value": "level-2", "label": "Level 2: Core Cleanse (Balanced Greens, Citrus & Nut Milk)", "priceModifier": 0 },
+            { "value": "level-3", "label": "Level 3: Deep Green Detox (High-Alkaline Pure Greens)", "priceModifier": 5.00 }
+          ]
+        },
+        {
+          "id": "cleanse-pickup-date",
+          "type": "date-picker",
+          "label": "Scheduled Pickup / Start Date",
+          "isRequired": true
+        },
+        {
+          "id": "insulated-cooler-bag",
+          "type": "toggle",
+          "label": "Include Insulated Thermal Cooler Bag",
+          "isRequired": false
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Requires 24-hour advance pre-order notice for freshly cold-pressed batch bottling"
+      }
+    },
+    {
+      "id": "add-ons-and-boosters",
+      "name": "Add-Ons & Boosters",
+      "sortOrder": 7,
+      "description": "Cross-section modular enhancer catalog allowing patrons to fortify any juice, smoothie, or bowl with targeted plant proteins, functional superfoods, omega-rich seeds, and adaptogenic wellness extracts.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "⚡",
+      "subSections": [
+        {
+          "id": "proteins",
+          "name": "Proteins",
+          "sortOrder": 1,
+          "description": "Grass-fed whey isolate, certified organic vegan pea/rice protein powders, and hydrolysed marine collagen peptides."
+        },
+        {
+          "id": "superfoods",
+          "name": "Superfoods",
+          "sortOrder": 2,
+          "description": "Concentrated superfood powders including organic blue spirulina, ceremonial matcha, wheatgrass, and Peruvian maca root."
+        },
+        {
+          "id": "seeds-and-nuts",
+          "name": "Seeds & Nuts",
+          "sortOrder": 3,
+          "description": "Nutrient-dense raw seeds and nuts including black chia, shelled hemp hearts, flaxseed meal, and raw cacao nibs."
+        },
+        {
+          "id": "functional-boosts",
+          "name": "Functional Boosts",
+          "sortOrder": 4,
+          "description": "Targeted active boosters including ashwagandha adaptogen, organic coconut MCT oil, cold-pressed ginger, and raw local honey."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "booster-modifiers",
+          "type": "multi-select",
+          "label": "Add-On Boosters",
+          "isRequired": false,
+          "maxSelections": 6,
+          "choices": [
+            { "value": "whey-protein", "label": "Grass-Fed Whey Protein (+20g)", "priceModifier": 2.00 },
+            { "value": "plant-protein", "label": "Organic Plant Protein (+20g)", "priceModifier": 2.00 },
+            { "value": "collagen-peptides", "label": "Marine Collagen Peptides", "priceModifier": 2.25 },
+            { "value": "blue-spirulina", "label": "Organic Blue Spirulina", "priceModifier": 1.50 },
+            { "value": "ceremonial-matcha", "label": "Ceremonial Japanese Matcha", "priceModifier": 1.75 },
+            { "value": "maca-root", "label": "Peruvian Maca Root Powder", "priceModifier": 1.25 },
+            { "value": "ashwagandha", "label": "Ashwagandha Adaptogen Powder", "priceModifier": 1.50 },
+            { "value": "chia-seeds", "label": "Organic Black Chia Seeds", "priceModifier": 1.00 },
+            { "value": "hemp-hearts", "label": "Shelled Hemp Hearts", "priceModifier": 1.25 },
+            { "value": "raw-cacao-nibs", "label": "Raw Cacao Nibs", "priceModifier": 1.00 },
+            { "value": "mct-oil", "label": "Organic Coconut MCT Oil", "priceModifier": 1.25 },
+            { "value": "raw-honey", "label": "Raw Local Honey", "priceModifier": 0.75 }
+          ]
+        },
+        {
+          "id": "booster-portion",
+          "type": "single-select",
+          "label": "Booster Portion",
+          "isRequired": false,
+          "choices": [
+            { "value": "single-portion", "label": "Standard Single Scoop", "priceModifier": 0 },
+            { "value": "double-portion", "label": "Double Power Scoop", "priceModifier": 1.50 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasonal-and-limited",
+      "name": "Seasonal & Limited",
+      "sortOrder": 8,
+      "description": "Showcases rotating seasonal harvest specials, limited-batch holiday beverages, and exclusive functional collaborations. Celebrates peak farm harvests and seasonal cravings—from summer watermelon refreshers to autumn spiced warm apple elixirs.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "✨",
+      "subSections": [
+        {
+          "id": "seasonal-fruit-specials",
+          "name": "Seasonal Fruit Specials",
+          "sortOrder": 1,
+          "description": "Chilled limited-edition juices and smoothies highlighting peak-season crops such as summer watermelon, passionfruit, and stone fruits."
+        },
+        {
+          "id": "holiday-and-limited-editions",
+          "name": "Holiday & Limited Editions",
+          "sortOrder": 2,
+          "description": "Festive specialty creations including spiced harvest ciders, pumpkin protein smoothies, and winter citrus antioxidant refreshers."
+        },
+        {
+          "id": "wellness-collaborations",
+          "name": "Wellness Collaborations",
+          "sortOrder": 3,
+          "description": "Limited-run wellness recipes developed in collaboration with local fitness instructors, athletic clubs, and organic farms."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "seasonal-size",
+          "type": "single-select",
+          "label": "Serving Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "regular", "label": "Regular (16 oz)", "priceModifier": 0 },
+            { "value": "large", "label": "Large (24 oz)", "priceModifier": 1.50 }
+          ]
+        },
+        {
+          "id": "seasonal-ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "no-ice", "label": "No Ice", "priceModifier": 0 },
+            { "value": "light-ice", "label": "Light Ice", "priceModifier": 0 },
+            { "value": "regular-ice", "label": "Regular Ice", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "seasonal-sweetness",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "unsweetened", "label": "Unsweetened (0%)", "priceModifier": 0 },
+            { "value": "half-sweet", "label": "Half Sweet (50%)", "priceModifier": 0 },
+            { "value": "regular-sweet", "label": "Regular Sweetness (100%)", "priceModifier": 0 }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "addOnBoosters",
+      "name": "Add-On Boosters & Superfoods",
+      "description": "Enables customers to enhance juices, smoothies, and bowls with nutritional boosters like protein powder, chia seeds, collagen, and spirulina.",
+      "isEnabled": true,
+      "config": {
+        "allowMultiple": true,
+        "maxSelections": 6,
+        "applicableSections": [
+          "fresh-juices",
+          "smoothies-and-blends",
+          "smoothie-and-acai-bowls",
+          "add-ons-and-boosters",
+          "seasonal-and-limited"
+        ]
+      }
+    },
+    {
+      "id": "sweetnessLevel",
+      "name": "Sweetness Level Customization",
+      "description": "Allows guests to customize sweetness percentage or natural sweetener quantity for fresh juices, smoothies, and seasonal drinks.",
+      "isEnabled": true,
+      "config": {
+        "defaultLevel": "100%",
+        "levels": ["0%", "25%", "50%", "100%"],
+        "applicableSections": [
+          "fresh-juices",
+          "smoothies-and-blends",
+          "seasonal-and-limited"
+        ]
+      }
+    },
+    {
+      "id": "iceLevel",
+      "name": "Ice Level Customization",
+      "description": "Allows guests to customize ice volume for fresh juices, cold blended smoothies, and seasonal specialties.",
+      "isEnabled": true,
+      "config": {
+        "defaultLevel": "regular-ice",
+        "levels": ["no-ice", "less-ice", "regular-ice", "extra-ice"],
+        "applicableSections": [
+          "fresh-juices",
+          "smoothies-and-blends",
+          "seasonal-and-limited"
+        ]
+      }
+    },
+    {
+      "id": "preOrder",
+      "name": "Cleanse Package Pre-Orders",
+      "description": "Enables advance ordering and scheduled pickup dates for multi-day detox cleanse packages requiring advance batch pressing and bottling.",
+      "isEnabled": true,
+      "config": {
+        "leadTimeHours": 24,
+        "allowScheduledPickup": true,
+        "applicableSections": [
+          "cleanse-and-detox-packages"
+        ]
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Indicators",
+      "description": "Displays allergen alerts (tree nuts, peanuts, dairy, soy, gluten) and dietary lifestyle tags (vegan, vegetarian, organic, raw, keto, sugar-free) across all juice and food items.",
+      "isEnabled": true,
+      "config": {
+        "displayBadgeOnCards": true,
+        "filterEnabled": true,
+        "supportedTags": [
+          "vegan",
+          "vegetarian",
+          "gluten-free",
+          "dairy-free",
+          "nut-free",
+          "contains-nuts",
+          "contains-peanuts",
+          "contains-dairy",
+          "contains-soy",
+          "contains-gluten",
+          "organic",
+          "raw",
+          "keto",
+          "sugar-free"
+        ]
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Live Stock & Availability Badges",
+      "description": "Displays dynamic inventory tags including Sold Out Today, Limited Edition, Made to Order, Seasonal, and Low Stock warnings for fresh produce and cleanses.",
+      "isEnabled": true,
+      "config": {
+        "showLowStockWarning": true,
+        "autoBadgeSoldOut": true,
+        "supportedBadges": [
+          "in-stock",
+          "sold-out",
+          "sold-out-today",
+          "seasonal",
+          "pre-order-only",
+          "made-to-order"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

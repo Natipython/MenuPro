@@ -1,0 +1,1409 @@
+{
+  "id": "butcher-shop-deli",
+  "name": "Butcher Shop / Deli",
+  "slug": "butcher-shop-deli",
+  "icon": "🥩🧀",
+  "description": "Specialty butcher counter and artisan delicatessen offering premium raw meats priced by weight, house-marinated cuts, handcrafted charcuterie, artisanal cheeses, gourmet deli sandwiches, prepared sides, and custom grazing boards. Features weight-based catch-weight pricing, custom cut thickness, bone and skin tailoring, and advance holiday order reservations.",
+  "category": "hybrid",
+  "tags": [
+    "butcher",
+    "deli",
+    "meat",
+    "charcuterie",
+    "cheese",
+    "sandwich",
+    "fresh-cuts"
+  ],
+  "sections": [
+    {
+      "id": "fresh-cuts-beef",
+      "name": "Fresh Cuts — Beef",
+      "sortOrder": 1,
+      "description": "Hand-selected, prime, and dry-aged whole carcass beef cuts processed on-site by skilled butchers. Sourced from grass-fed and grain-finished cattle, this core butcher section features steaks, oven-ready roasts, freshly ground minces, and rich soup bones customized by portion weight, cut thickness, and fat trimming preference.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥩",
+      "subSections": [
+        {
+          "id": "steaks-and-premium-cuts",
+          "name": "Steaks & Premium Cuts",
+          "sortOrder": 1,
+          "description": "Prime marbled steaks including ribeye, striploin, tenderloin filet, T-bone, and flat iron sliced to thickness."
+        },
+        {
+          "id": "roasts-and-joints",
+          "name": "Roasts & Joints",
+          "sortOrder": 2,
+          "description": "Oven-ready beef joints including standing prime rib, rolled brisket, chuck pot roasts, and eye of round."
+        },
+        {
+          "id": "ground-and-minced",
+          "name": "Ground & Minced",
+          "sortOrder": 3,
+          "description": "Coarse and fine ground beef ground fresh daily in calibrated lean-to-fat ratios (80/20, 85/15, and 90/10)."
+        },
+        {
+          "id": "bones-and-offal",
+          "name": "Bones & Offal",
+          "sortOrder": 4,
+          "description": "Gelatin-rich marrow bones, soup bones, oxtails, beef cheeks, liver, and tongue for stocks, broths, and traditional cooking."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "weight-selector-beef",
+          "type": "single-select",
+          "label": "Portion Weight",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "approx-100g",
+              "label": "Approx. 100g (Sampler / Small Cutlet)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-250g",
+              "label": "Approx. 250g (~9 oz — Single Steak)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-500g",
+              "label": "Approx. 500g (~1.1 lbs — 2 Steaks / Mince Pack)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-1kg",
+              "label": "Approx. 1.0 kg (~2.2 lbs — Roast / Family Pack)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-2kg",
+              "label": "Approx. 2.0 kg (~4.4 lbs — Large Roast / Primal Cut)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "cut-thickness-beef",
+          "type": "single-select",
+          "label": "Cut Thickness",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "thin",
+              "label": "Thin Cut (~1.5 cm / 0.5\" — quick pan sear or stir-fry)",
+              "priceModifier": 0
+            },
+            {
+              "value": "standard",
+              "label": "Standard Cut (~2.5 cm / 1.0\" — classic bistro sear)",
+              "priceModifier": 0
+            },
+            {
+              "value": "thick",
+              "label": "Thick Cut (~4.0 cm / 1.5\" — reverse sear & thick grilling)",
+              "priceModifier": 0
+            },
+            {
+              "value": "double-thick",
+              "label": "Double Thick / Cowboy Cut (~5.0+ cm / 2.0\"+ — bone-in feast)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "trimming-preference-beef",
+          "type": "single-select",
+          "label": "Trimming Preference",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "trimmed",
+              "label": "Trimmed (External fat cap trimmed lean to ~3mm)",
+              "priceModifier": 0
+            },
+            {
+              "value": "untrimmed",
+              "label": "Untrimmed (Natural full fat cap preserved for roasting & smoking)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-lean",
+              "label": "Extra-Lean (All visible surface fat fully removed)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "packaging-preference-beef",
+          "type": "single-select",
+          "label": "Packaging Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "butcher-paper",
+              "label": "Butcher Paper Wrap (Traditional breathable wrap for cooking within 48 hours)",
+              "priceModifier": 0
+            },
+            {
+              "value": "vacuum-sealed",
+              "label": "Vacuum Sealed Pack (Airtight heavy-gauge plastic for extended fridge life or freezing)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fresh-cuts-poultry",
+      "name": "Fresh Cuts — Poultry",
+      "sortOrder": 2,
+      "description": "Free-range, pasture-raised, and farm-fresh whole birds and butcher-prepped poultry cuts. Provides everyday staples and entertaining centerpieces across chicken, turkey, duck, and game hens, accommodating customer preferences for skin, bone, and custom butterflying.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍗",
+      "subSections": [
+        {
+          "id": "whole-birds",
+          "name": "Whole Birds",
+          "sortOrder": 1,
+          "description": "Whole roasting chickens, free-range heritage birds, capons, roasting ducks, and whole turkeys ready for oven or spit."
+        },
+        {
+          "id": "breast-and-fillet",
+          "name": "Breast & Fillet",
+          "sortOrder": 2,
+          "description": "Lean chicken breast fillets, turkey breast cutlets, and tenderloins trimmed of fat and cartilage."
+        },
+        {
+          "id": "thigh-and-drumstick",
+          "name": "Thigh & Drumstick",
+          "sortOrder": 3,
+          "description": "Flavorful dark meat cuts including whole legs, bone-in thighs, trimmed drumsticks, and skinless thigh fillets."
+        },
+        {
+          "id": "wings",
+          "name": "Wings",
+          "sortOrder": 4,
+          "description": "Whole three-joint chicken wings, separated party flats (wingettes), and meaty drumettes for grilling or frying."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "weight-selector-poultry",
+          "type": "single-select",
+          "label": "Portion Weight / Quantity",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "approx-500g",
+              "label": "Approx. 500g (~1.1 lbs — 2–3 pieces)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-1kg",
+              "label": "Approx. 1.0 kg (~2.2 lbs — family portion)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-1-5kg",
+              "label": "Approx. 1.5 kg (~3.3 lbs — whole bird standard)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-2kg",
+              "label": "Approx. 2.0 kg (~4.4 lbs — large roaster / bulk cut pack)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-3kg-plus",
+              "label": "Approx. 3.0 kg+ (~6.6+ lbs — catering pack or whole turkey)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "skin-preference",
+          "type": "single-select",
+          "label": "Skin Preference",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "skin-on",
+              "label": "Skin-On (Crisps up golden during roasting and seals in juices)",
+              "priceModifier": 0
+            },
+            {
+              "value": "skinless",
+              "label": "Skinless (Lean, low-fat preparation)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "bone-preference",
+          "type": "single-select",
+          "label": "Bone Preference",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "bone-in",
+              "label": "Bone-In (Rich marrow flavor and succulent moisture)",
+              "priceModifier": 0
+            },
+            {
+              "value": "boneless",
+              "label": "Boneless (Hand-deboned for fast even pan cooking)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "butchery-prep-poultry",
+          "type": "single-select",
+          "label": "Butchery Preparation",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "whole-unmodified",
+              "label": "Whole Cut (Standard butchery format)",
+              "priceModifier": 0
+            },
+            {
+              "value": "butterflied-spatchcock",
+              "label": "Butterflied / Spatchcocked (Spine removed and flattened for grill/roast)",
+              "priceModifier": 0
+            },
+            {
+              "value": "eight-piece-breakdown",
+              "label": "Cut into 8 Portioned Pieces (2 breasts, 2 thighs, 2 drums, 2 wings)",
+              "priceModifier": 0
+            },
+            {
+              "value": "diced-chunks",
+              "label": "Diced into Chunks (~2.5 cm cubes for stir-fry or skewers)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fresh-cuts-lamb-and-goat",
+      "name": "Fresh Cuts — Lamb & Goat",
+      "sortOrder": 3,
+      "description": "Pasture-raised, tender young lamb and milk-fed goat cuts sourced from heritage livestock farms. Caters to traditional Sunday roasts, Mediterranean specialties, Middle Eastern feasts, and slow braises, with options for custom bone trimming, butterflying, and diced stew cuts.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍖",
+      "subSections": [
+        {
+          "id": "chops-and-cutlets",
+          "name": "Chops & Cutlets",
+          "sortOrder": 1,
+          "description": "Tender loin chops, French-trimmed rib cutlets, Barnsley double chops, and shoulder chops suited for searing."
+        },
+        {
+          "id": "leg-and-shoulder",
+          "name": "Leg & Shoulder",
+          "sortOrder": 2,
+          "description": "Whole bone-in lamb legs, boneless butterflied legs, rolled marbled shoulders, and osso-buco style shanks."
+        },
+        {
+          "id": "ribs",
+          "name": "Ribs",
+          "sortOrder": 3,
+          "description": "Whole lamb racks, riblets, and trimmed goat ribs perfect for herb-crusted roasting and slow barbecue smoking."
+        },
+        {
+          "id": "ground",
+          "name": "Ground & Minced",
+          "sortOrder": 4,
+          "description": "Freshly ground lamb and goat shoulder mince with natural fat balance for kofta, burgers, and stuffed vegetables."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "weight-selector-lamb",
+          "type": "single-select",
+          "label": "Portion Weight",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "approx-250g",
+              "label": "Approx. 250g (~9 oz — 2 Chops / Cutlets)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-500g",
+              "label": "Approx. 500g (~1.1 lbs — 4 Chops / Mince pack)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-1kg",
+              "label": "Approx. 1.0 kg (~2.2 lbs — Half leg / Shoulder joint)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-1-5kg",
+              "label": "Approx. 1.5 kg (~3.3 lbs — Whole rib rack / Small leg)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-2-5kg",
+              "label": "Approx. 2.5 kg (~5.5 lbs — Whole bone-in leg / Large shoulder)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "cut-style-lamb",
+          "type": "single-select",
+          "label": "Cut & Preparation Style",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "bone-in-whole",
+              "label": "Bone-In Whole Cut (Traditional format for long slow roasting)",
+              "priceModifier": 0
+            },
+            {
+              "value": "french-trimmed",
+              "label": "French-Trimmed Rack (Rib bones cleanly scraped of meat and fat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "butterflied-boneless",
+              "label": "Boneless & Butterflied (Flat profile for quick charcoal grilling)",
+              "priceModifier": 0
+            },
+            {
+              "value": "diced-stewing",
+              "label": "Hand-Diced Chunks (~3 cm cubes for curries, tagines & stews)",
+              "priceModifier": 0
+            },
+            {
+              "value": "rolled-and-netted",
+              "label": "Boned, Rolled & Netted Roast (Easy home carving)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "fat-trimming-lamb",
+          "type": "single-select",
+          "label": "Fat Trimming Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "natural-fat-cap",
+              "label": "Natural Fat Cap (Kept intact to baste meat while cooking)",
+              "priceModifier": 0
+            },
+            {
+              "value": "lean-trimmed",
+              "label": "Lean Trimmed (Exterior fat cap trimmed close to meat)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marinated-and-ready-to-cook",
+      "name": "Marinated & Ready-to-Cook",
+      "sortOrder": 4,
+      "description": "Hand-seasoned meats, scratch-marinated cuts, stuffed poultry and beef roasts, and artisanal skewers prepared fresh in the butcher kitchen. Provides gourmet convenience for weeknight dinners and outdoor entertaining with calibrated flavor profiles, artisan marinades, and spice heat levels.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍳",
+      "subSections": [
+        {
+          "id": "marinated-meats",
+          "name": "Marinated Meats",
+          "sortOrder": 1,
+          "description": "Tenderized steaks, chicken cutlets, and pork loins submerged in house citrus, herb, and garlic marinades."
+        },
+        {
+          "id": "seasoned-and-rubbed",
+          "name": "Seasoned & Rubbed",
+          "sortOrder": 2,
+          "description": "Cuts encrusted with signature house dry rubs including Montreal steak spice, espresso chili, and herb provencal."
+        },
+        {
+          "id": "stuffed-and-rolled",
+          "name": "Stuffed & Rolled",
+          "sortOrder": 3,
+          "description": "Artisan butcher rolls such as spinach and provolone chicken breasts, garlic flank steak pinwheels, and stuffed roasts."
+        },
+        {
+          "id": "kebab-ready",
+          "name": "Kebab-Ready",
+          "sortOrder": 4,
+          "description": "Pre-threaded skewers of marinated steak, lamb souvlaki, chicken thigh tikka, and kofta kebabs ready for the grill."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "weight-selector-marinated",
+          "type": "single-select",
+          "label": "Weight / Pack Quantity",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "approx-500g",
+              "label": "Approx. 500g (~1.1 lbs — 2 Portions / 4 Skewers)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-1kg",
+              "label": "Approx. 1.0 kg (~2.2 lbs — 4 Portions / 8 Skewers)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-1-5kg",
+              "label": "Approx. 1.5 kg (~3.3 lbs — Family Grill Pack)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-2kg",
+              "label": "Approx. 2.0 kg (~4.4 lbs — Entertaining / Party Tray)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "marinade-choice",
+          "type": "single-select",
+          "label": "Marinade & Glaze Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "garlic-rosemary-herb",
+              "label": "Garlic, Crushed Rosemary & Extra Virgin Olive Oil",
+              "priceModifier": 0
+            },
+            {
+              "value": "smoky-texas-bbq",
+              "label": "Smoky Texas Hickory BBQ & Brown Sugar",
+              "priceModifier": 0
+            },
+            {
+              "value": "lemon-herb-oregano",
+              "label": "Mediterranean Lemon, Greek Oregano & Sea Salt",
+              "priceModifier": 0
+            },
+            {
+              "value": "spicy-peri-peri",
+              "label": "Spicy Peri-Peri Chili & Charred Lemon",
+              "priceModifier": 0
+            },
+            {
+              "value": "chimichurri-verde",
+              "label": "Fresh Parsley, Cilantro, Garlic & Red Wine Vinegar Chimichurri",
+              "priceModifier": 0
+            },
+            {
+              "value": "honey-ginger-soy",
+              "label": "Sweet Honey, Fresh Ginger, Soy & Toasted Sesame",
+              "priceModifier": 0
+            },
+            {
+              "value": "truffle-cracked-peppercorn",
+              "label": "Coarse Black Peppercorn & Truffle Herb Butter Rub",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "spice-level-marinated",
+          "type": "single-select",
+          "label": "Spice & Heat Calibration",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "none",
+              "label": "No Spice / Mild Savory",
+              "priceModifier": 0
+            },
+            {
+              "value": "mild",
+              "label": "Mild (Warm aromatic herbs without burning heat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium (Zesty chili warmth)",
+              "priceModifier": 0
+            },
+            {
+              "value": "spicy",
+              "label": "Spicy (Bold red pepper heat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-hot",
+              "label": "Extra Hot (Fiery habanero / peri-peri blast)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "packaging-ready-to-cook",
+          "type": "single-select",
+          "label": "Packaging & Container",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "oven-ready-tray",
+              "label": "Oven-Ready Aluminum Tray (Straight into preheated oven)",
+              "priceModifier": 0
+            },
+            {
+              "value": "vacuum-marination-pack",
+              "label": "Vacuum Marination Pouch (Deep flavor infusion & leak-proof)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "charcuterie-and-cured-meats",
+      "name": "Charcuterie & Cured Meats",
+      "sortOrder": 5,
+      "description": "Old-world dry-cured, fermented, smoked, and slow-cooked specialty meats carved to order from the deli showcase. Spans imported European salumi, protected origin hams, artisanal terrines, and house-smoked bacons, customized by weight and precision slicing thickness.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥓",
+      "subSections": [
+        {
+          "id": "salami-and-pepperoni",
+          "name": "Salami & Pepperoni",
+          "sortOrder": 1,
+          "description": "Aged Italian finocchiona, Spanish chorizo, spicy sopressata, French saucisson sec, and artisan pepperonis."
+        },
+        {
+          "id": "prosciutto-and-ham",
+          "name": "Prosciutto & Ham",
+          "sortOrder": 2,
+          "description": "Aged bone-in and boneless hams including Prosciutto di Parma, Jamón Serrano, Black Forest smoked ham, and cooked cotto."
+        },
+        {
+          "id": "pate-and-terrines",
+          "name": "Pâté & Terrines",
+          "sortOrder": 3,
+          "description": "Rich duck liver mousse with truffles, rustic pork and pistachio country terrines, duck rillettes, and poultry pâtés."
+        },
+        {
+          "id": "bacon-and-pancetta",
+          "name": "Bacon & Pancetta",
+          "sortOrder": 4,
+          "description": "Hardwood-smoked streaky bacon, thick cut back bacon, rolled Italian pancetta, and cured pork jowl guanciale."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "weight-selector-charcuterie",
+          "type": "single-select",
+          "label": "Weight Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "100g",
+              "label": "100g (~3.5 oz — personal tasting portion)",
+              "priceModifier": 0
+            },
+            {
+              "value": "200g",
+              "label": "200g (~7.0 oz — couples platter portion)",
+              "priceModifier": 0
+            },
+            {
+              "value": "350g",
+              "label": "350g (~12.3 oz — small party portion)",
+              "priceModifier": 0
+            },
+            {
+              "value": "500g",
+              "label": "500g (~1.1 lbs — family deli portion)",
+              "priceModifier": 0
+            },
+            {
+              "value": "whole-stick-piece",
+              "label": "Whole Stick / Unsliced Piece (~300g–1kg depending on item)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "slicing-thickness-charcuterie",
+          "type": "single-select",
+          "label": "Slicing Thickness",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "paper-thin",
+              "label": "Paper-Thin / Shaved (Melt-in-mouth texture for Prosciutto & Jamón)",
+              "priceModifier": 0
+            },
+            {
+              "value": "standard",
+              "label": "Standard Deli Slice (~1.5mm — ideal for sandwiches and crackers)",
+              "priceModifier": 0
+            },
+            {
+              "value": "thick",
+              "label": "Thick Cut (~3.5mm — substantial chew for bacon & pancetta lardons)",
+              "priceModifier": 0
+            },
+            {
+              "value": "whole-piece",
+              "label": "Whole Piece / Unsliced (For home slicers or dicing into stews)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "interleaving-preference",
+          "type": "single-select",
+          "label": "Interleaving & Packaging",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "interleaved-wax-paper",
+              "label": "Wax Paper Interleaved (Delicate slices separated for easy platter plating)",
+              "priceModifier": 0
+            },
+            {
+              "value": "vacuum-sealed-deli-pack",
+              "label": "Vacuum Sealed Deli Pack (Keeps freshly sliced meat fresh up to 21 days)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cheese-selection",
+      "name": "Cheese Selection",
+      "sortOrder": 6,
+      "description": "Farmstead cheeses, European classics, and cave-aged specialties curated to pair seamlessly with charcuterie and deli meats. Offered cut-to-order by weight with options for custom wedges, table slicing, and fresh microplane grating for culinary use.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧀",
+      "subSections": [
+        {
+          "id": "hard-cheeses",
+          "name": "Hard Cheeses",
+          "sortOrder": 1,
+          "description": "Aged crystalline wheels including 24-month Parmigiano-Reggiano, mature clothbound cheddar, Manchego, and Alpine Gruyère."
+        },
+        {
+          "id": "soft-and-creamy-cheeses",
+          "name": "Soft & Creamy Cheeses",
+          "sortOrder": 2,
+          "description": "Buttery bloomy rinds such as Brie de Meaux, Camembert, triple-crème Brillat-Savarin, and fresh Italian burrata."
+        },
+        {
+          "id": "blue-cheeses",
+          "name": "Blue Cheeses",
+          "sortOrder": 3,
+          "description": "Boldly veined blues including creamy Gorgonzola Dolce, sharp French Roquefort, and English Blue Stilton."
+        },
+        {
+          "id": "local-and-artisan",
+          "name": "Local & Artisan Cheeses",
+          "sortOrder": 4,
+          "description": "Small-batch local farmstead cheeses, goat milk chèvres, washed-rind seasonal bakes, and truffle-infused pecorinos."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "weight-selector-cheese",
+          "type": "single-select",
+          "label": "Portion Weight",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "approx-150g",
+              "label": "Approx. 150g (Tasting Wedge / Single Serving)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-250g",
+              "label": "Approx. 250g (Standard Cheese Board Wedge)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-500g",
+              "label": "Approx. 500g (Entertaining Block / Half Wheel)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-1kg",
+              "label": "Approx. 1.0 kg (Quarter Wheel / Large Party Block)",
+              "priceModifier": 0
+            },
+            {
+              "value": "whole-wheel",
+              "label": "Whole Wheel / Format (Special order / centerpiece)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "cut-style-cheese",
+          "type": "single-select",
+          "label": "Cut & Prep Style",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "cut-wedge",
+              "label": "Hand-Cut Wedge (Wrapped in breathable French cheese paper)",
+              "priceModifier": 0
+            },
+            {
+              "value": "deli-sliced",
+              "label": "Deli Sliced (Uniform thin slices for sandwiches and burgers)",
+              "priceModifier": 0
+            },
+            {
+              "value": "freshly-grated",
+              "label": "Freshly Grated (Fine microplane grate for melting and pasta)",
+              "priceModifier": 0
+            },
+            {
+              "value": "shaved-flakes",
+              "label": "Shaved Flakes (Delicate ribbons for salads and carpaccio)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deli-sandwiches",
+      "name": "Deli Sandwiches",
+      "sortOrder": 7,
+      "description": "Overstuffed hot and cold deli sandwiches crafted to order with prime butcher meats roasted in-house, aged cheeses, and crusty artisan breads. Drives the lunchtime deli counter trade, allowing customers to customize bread, meat portion, cheese, house-made condiments, and panini press preferences.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥪",
+      "subSections": [
+        {
+          "id": "hot-sandwiches",
+          "name": "Hot Sandwiches",
+          "sortOrder": 1,
+          "description": "Steaming hot butcher classics including warm pastrami on rye, hot roast beef with au jus dip, and meatball marinara subs."
+        },
+        {
+          "id": "cold-sandwiches",
+          "name": "Cold Sandwiches",
+          "sortOrder": 2,
+          "description": "Stacked deli favorites including classic Italian combo, smoked turkey breast club, prosciutto caprese, and roast ham and cheese."
+        },
+        {
+          "id": "paninis",
+          "name": "Paninis & Pressed Sandwiches",
+          "sortOrder": 3,
+          "description": "Crusty sandwiches pressed on heavy ribbed grills with molten cheeses, mortadella, Cubano roasted pork, and chicken pestos."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "bread-choice",
+          "type": "single-select",
+          "label": "Bread Choice",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "seeded-marble-rye",
+              "label": "Artisan Seeded Marble Rye",
+              "priceModifier": 0
+            },
+            {
+              "value": "crusty-sourdough-baguette",
+              "label": "Crusty Sourdough Baguette",
+              "priceModifier": 0
+            },
+            {
+              "value": "ciabatta-roll",
+              "label": "Toasted Olive Oil Ciabatta Roll",
+              "priceModifier": 0
+            },
+            {
+              "value": "soft-brioche-bun",
+              "label": "Soft Toasted Brioche Bun",
+              "priceModifier": 0
+            },
+            {
+              "value": "rosemary-focaccia",
+              "label": "Rosemary & Sea Salt Focaccia",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "gluten-free-roll",
+              "label": "Gluten-Free Artisan Roll",
+              "priceModifier": 1.0
+            }
+          ]
+        },
+        {
+          "id": "meat-portion-sandwich",
+          "type": "single-select",
+          "label": "Meat Portion",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "standard-portion",
+              "label": "Standard Butcher Cut (~150g fresh sliced meat)",
+              "priceModifier": 0
+            },
+            {
+              "value": "double-meat",
+              "label": "Overstuffed NYC Deli Style (~300g meat)",
+              "priceModifier": 4.5
+            }
+          ]
+        },
+        {
+          "id": "cheese-choice-sandwich",
+          "type": "single-select",
+          "label": "Cheese Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "sharp-cheddar",
+              "label": "Sharp Aged Cheddar",
+              "priceModifier": 0
+            },
+            {
+              "value": "swiss-emmental",
+              "label": "Swiss Emmental",
+              "priceModifier": 0
+            },
+            {
+              "value": "provolone-piccante",
+              "label": "Provolone Piccante",
+              "priceModifier": 0
+            },
+            {
+              "value": "fresh-mozzarella",
+              "label": "Fresh Fior di Latte Mozzarella",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "aged-gruyere",
+              "label": "Melted Alpine Gruyère",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "no-cheese",
+              "label": "No Cheese (Dairy-Free)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "sandwich-extras",
+          "type": "multi-select",
+          "label": "Extras & Condiments",
+          "isRequired": false,
+          "maxSelections": 6,
+          "choices": [
+            {
+              "value": "barrel-pickles",
+              "label": "Barrel-Aged Garlic Dill Pickles",
+              "priceModifier": 0
+            },
+            {
+              "value": "dijon-mustard",
+              "label": "Coarse Grain Dijon Mustard",
+              "priceModifier": 0
+            },
+            {
+              "value": "truffle-aioli",
+              "label": "Black Truffle Garlic Aioli",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "sauerkraut",
+              "label": "Fermented Bavarian Sauerkraut",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "caramelized-onions",
+              "label": "Slow-Braised Sweet Onions",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "arugula",
+              "label": "Wild Baby Arugula & Olive Oil",
+              "priceModifier": 0
+            },
+            {
+              "value": "pickled-peppers",
+              "label": "Sweet & Spicy Cherry Peppers",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "crispy-bacon",
+              "label": "Crispy House-Cured Bacon Strips",
+              "priceModifier": 2.0
+            }
+          ]
+        },
+        {
+          "id": "toasting-preference",
+          "type": "single-select",
+          "label": "Toasting & Temperature",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "hot-pressed-panini",
+              "label": "Hot Pressed on Panini Grill (Melted cheese & crisp crust)",
+              "priceModifier": 0
+            },
+            {
+              "value": "toasted-bread-cold-fillings",
+              "label": "Lightly Toasted Bread (Cold meats & crisp greens)",
+              "priceModifier": 0
+            },
+            {
+              "value": "untoasted-soft",
+              "label": "Untoasted / Soft Bread",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "defaultAvailableFrom": "10:30",
+        "defaultAvailableUntil": "18:00",
+        "note": "Made fresh to order at the sandwich carving counter during daily service hours."
+      }
+    },
+    {
+      "id": "prepared-sides-and-salads",
+      "name": "Prepared Sides & Salads",
+      "sortOrder": 8,
+      "description": "Scratch-prepared deli salads, warm butcher-counter side dishes, and house-whipped dips crafted to complement steaks, roasts, and sandwiches. Sold by container size from single-serve deli tubs to large family meal containers with options for chilled home reheating or hot-and-ready service.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥗",
+      "subSections": [
+        {
+          "id": "hot-sides",
+          "name": "Hot Sides",
+          "sortOrder": 1,
+          "description": "Warm homestyle sides including duck-fat roasted potatoes, slow-simmered butcher beans, four-cheese macaroni, and creamed spinach."
+        },
+        {
+          "id": "cold-salads",
+          "name": "Cold Salads",
+          "sortOrder": 2,
+          "description": "Chilled deli bowl salads including German whole-grain mustard potato salad, creamy cabbage slaw, and Mediterranean orzo pasta salad."
+        },
+        {
+          "id": "dips-and-spreads",
+          "name": "Dips & Spreads",
+          "sortOrder": 3,
+          "description": "Whipped feta with hot honey, smoked garlic hummus, spicy tavern beer cheese, and savory bacon onion jam."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "portion-size-sides",
+          "type": "single-select",
+          "label": "Container Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "small",
+              "label": "Small Tub (250g / ~0.5 lb — Single Serving)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium",
+              "label": "Medium Tub (500g / ~1.1 lbs — Serves 2–3)",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "large",
+              "label": "Large Tub (1.0 kg / ~2.2 lbs — Serves 4–6)",
+              "priceModifier": 7.0
+            },
+            {
+              "value": "family",
+              "label": "Family / Party Tub (2.0 kg / ~4.4 lbs — Serves 8–10)",
+              "priceModifier": 14.0
+            }
+          ]
+        },
+        {
+          "id": "serving-temperature-sides",
+          "type": "single-select",
+          "label": "Temperature & Serving Format",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "chilled-for-reheating",
+              "label": "Chilled (Ready to store in refrigerator and warm at home)",
+              "priceModifier": 0
+            },
+            {
+              "value": "hot-and-ready",
+              "label": "Hot & Ready to Eat (Packed piping hot from kitchen warmers)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "charcuterie-boards-and-platters",
+      "name": "Charcuterie Boards & Platters",
+      "sortOrder": 9,
+      "description": "Hand-arranged artisanal charcuterie boards, grazing platters, and custom entertaining centerpieces assembled by deli stylists. Featuring cured meats, artisanal cheeses, dried figs, marcona almonds, olives, and gourmet crackers, with size tiers suited for intimate dates up to large corporate banquets.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍱",
+      "subSections": [
+        {
+          "id": "personal-boards",
+          "name": "Personal Boards",
+          "sortOrder": 1,
+          "description": "Individual bento grazing boxes with balanced cured meats, cheeses, and accompaniments for executive lunches and picnics."
+        },
+        {
+          "id": "sharing-boards",
+          "name": "Sharing Boards",
+          "sortOrder": 2,
+          "description": "Medium timber boards crafted for couples and small gatherings of 2 to 4 people."
+        },
+        {
+          "id": "party-platters",
+          "name": "Party Platters",
+          "sortOrder": 3,
+          "description": "Abundant wooden platters loaded with layered salumi, cheese wedges, condiments, and garnishes for 8 to 12+ guests."
+        },
+        {
+          "id": "custom-build",
+          "name": "Custom Build",
+          "sortOrder": 4,
+          "description": "Tailored boards customized to client meat and cheese preferences, dietary restrictions, and event themes."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "board-size",
+          "type": "single-select",
+          "label": "Platter Size & Guest Count",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "serves-1-personal",
+              "label": "Personal Grazing Box (Serves 1)",
+              "priceModifier": 0
+            },
+            {
+              "value": "serves-2-4-sharing",
+              "label": "Sharing Board (Serves 2–4)",
+              "priceModifier": 25.0
+            },
+            {
+              "value": "serves-6-8-gathering",
+              "label": "Gathering Platter (Serves 6–8)",
+              "priceModifier": 55.0
+            },
+            {
+              "value": "serves-10-12-party",
+              "label": "Party Board (Serves 10–12)",
+              "priceModifier": 95.0
+            },
+            {
+              "value": "serves-15-plus-grand",
+              "label": "Grand Celebration Board (Serves 15+)",
+              "priceModifier": 145.0
+            }
+          ]
+        },
+        {
+          "id": "selection-preference-board",
+          "type": "single-select",
+          "label": "Selection Theme",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "balanced-classic",
+              "label": "Classic Balanced (Equal showcase of premium cured meats & artisan cheeses)",
+              "priceModifier": 0
+            },
+            {
+              "value": "meat-focused",
+              "label": "Butcher's Choice / Meat-Focused (Heavy on salumi, cured hams, terrines & jerky)",
+              "priceModifier": 0
+            },
+            {
+              "value": "cheese-focused",
+              "label": "Fromagerie / Cheese-Focused (Emphasis on hard, soft & blue artisan cheeses)",
+              "priceModifier": 0
+            },
+            {
+              "value": "pork-free-halal",
+              "label": "Pork-Free / Halal Selection (100% cured beef, duck, lamb & poultry charcuterie)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "cracker-pairing",
+          "type": "single-select",
+          "label": "Crackers & Bread Pairing",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "artisan-cracker-trio",
+              "label": "Assorted Sourdough & Seeded Flatbread Crackers",
+              "priceModifier": 0
+            },
+            {
+              "value": "gluten-free-crackers",
+              "label": "Artisan Gluten-Free Crispbreads",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "fresh-crusty-baguette",
+              "label": "Sliced Fresh French Sourdough Baguette",
+              "priceModifier": 3.5
+            }
+          ]
+        },
+        {
+          "id": "pickup-date-charcuterie",
+          "type": "date-picker",
+          "label": "Requested Pickup Date & Time",
+          "isRequired": true
+        }
+      ]
+    },
+    {
+      "id": "seasonal-and-special-orders",
+      "name": "Seasonal & Special Orders",
+      "sortOrder": 10,
+      "description": "Specialty pre-order portal for holiday centerpieces, large-format roasts, summer barbecue meat packs, whole animal carcass shares, and custom dry-aging orders. Accommodates advanced booking schedules, butcher craft preparation (frenching, trussing, scoring), and custom culinary cutting instructions.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🦃",
+      "subSections": [
+        {
+          "id": "holiday-roasts",
+          "name": "Holiday Roasts",
+          "sortOrder": 1,
+          "description": "Showcase holiday centerpieces including dry-aged prime rib roasts, heritage whole turkeys, spiral glazed hams, and crown roast of pork."
+        },
+        {
+          "id": "bbq-season-specials",
+          "name": "BBQ Season Specials",
+          "sortOrder": 2,
+          "description": "Summer pitmaster specials including whole packer briskets, racks of St. Louis ribs, pork belly slabs, and bulk butcher burger packs."
+        },
+        {
+          "id": "custom-butchery-requests",
+          "name": "Custom Butchery Requests",
+          "sortOrder": 3,
+          "description": "Whole and half carcass shares, specialty wild game, custom 45-day dry-aging reservations, and whole suckling pigs."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "special-order-weight",
+          "type": "single-select",
+          "label": "Target Roast Weight / Pack Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "approx-2kg",
+              "label": "Approx. 2.0 kg (~4.4 lbs — Serves 4–6)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-3-5kg",
+              "label": "Approx. 3.5 kg (~7.7 lbs — Serves 8–10)",
+              "priceModifier": 0
+            },
+            {
+              "value": "approx-5kg",
+              "label": "Approx. 5.0 kg (~11 lbs — Serves 12–15)",
+              "priceModifier": 0
+            },
+            {
+              "value": "whole-primal-7kg-plus",
+              "label": "Whole Primal / Large Format (7.0 kg+ / 15+ lbs)",
+              "priceModifier": 0
+            },
+            {
+              "value": "custom-weight-order",
+              "label": "Custom Target Weight (Detailed in notes)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "butchery-craft-prep",
+          "type": "single-select",
+          "label": "Butchery Preparation & Trussing",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "tied-and-netted",
+              "label": "Tied & Elastic Netted (Uniform cylinder for even roasting)",
+              "priceModifier": 0
+            },
+            {
+              "value": "french-trimmed-crown",
+              "label": "French-Trimmed Crown Roast (Exposed bones cleaned & tied in a circle)",
+              "priceModifier": 0
+            },
+            {
+              "value": "diamond-scored-skin",
+              "label": "Diamond-Scored Skin & Sea Salt Cure (Perfect crisp crackling)",
+              "priceModifier": 0
+            },
+            {
+              "value": "custom-dry-aged-trim",
+              "label": "Extended Dry-Aged Reserve (Trimmed to culinary order)",
+              "priceModifier": 0
+            },
+            {
+              "value": "whole-untrimmed-primal",
+              "label": "Untrimmed Whole Primal (Ideal for home smokers & curing)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "pickup-date-special",
+          "type": "date-picker",
+          "label": "Scheduled Pickup Date & Window",
+          "isRequired": true
+        },
+        {
+          "id": "special-butchery-instructions",
+          "type": "text-input",
+          "label": "Special Butchery Notes & Custom Cut Instructions",
+          "isRequired": false
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "weightBasedPricing",
+      "name": "Weight-Based & Catch-Weight Pricing",
+      "description": "Fundamental butcher pricing engine supporting variable catch-weight billing, price per 100g/250g/500g/1kg/lb, real-time scale tare deduction, and estimated versus final scale weigh-in totals on customer receipts.",
+      "isEnabled": true,
+      "config": {
+        "defaultWeightUnit": "kg",
+        "supportedUnits": [
+          "100g",
+          "250g",
+          "500g",
+          "kg",
+          "lb"
+        ],
+        "allowCatchWeightEstimation": true,
+        "displayPricePerUnit": true,
+        "scaleTolerancePercentage": 10,
+        "applicableSections": [
+          "fresh-cuts-beef",
+          "fresh-cuts-poultry",
+          "fresh-cuts-lamb-and-goat",
+          "marinated-and-ready-to-cook",
+          "charcuterie-and-cured-meats",
+          "cheese-selection",
+          "prepared-sides-and-salads",
+          "seasonal-and-special-orders"
+        ]
+      }
+    },
+    {
+      "id": "preOrder",
+      "name": "Advance Pre-Order & Holiday Reservations",
+      "description": "Enables customers to schedule advance pickup orders for holiday roasts, custom-butchered primals, cured deli party platters, and BBQ packages with configurable lead times and daily cutoff windows.",
+      "isEnabled": true,
+      "config": {
+        "minLeadTimeHours": 24,
+        "maxAdvanceDays": 45,
+        "dailyCutoffTime": "17:00",
+        "holidayLeadTimeDays": 7,
+        "allowSpecialInstructions": true,
+        "applicableSections": [
+          "charcuterie-boards-and-platters",
+          "seasonal-and-special-orders"
+        ]
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Indicators",
+      "description": "Highlights common food allergens (dairy, gluten, nuts, soy, sulfites, mustard, celery) and dietary credentials (halal, kosher, grass-fed, pasture-raised, nitrite-free, organic) across all fresh meats, marinades, charcuterie, cheeses, and deli sandwiches.",
+      "isEnabled": true,
+      "config": {
+        "displayFormat": "badge-and-modal",
+        "highlightAllergens": [
+          "contains-dairy",
+          "contains-gluten",
+          "contains-soy",
+          "contains-nuts",
+          "contains-egg",
+          "contains-mustard",
+          "contains-sulfites"
+        ],
+        "dietaryFilters": [
+          "halal",
+          "kosher",
+          "gluten-free",
+          "dairy-free",
+          "organic",
+          "grass-fed",
+          "nitrite-free"
+        ]
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Counter & Display Case Inventory Badges",
+      "description": "Displays real-time case availability badges, dry-age day counters, limited-cut warnings, morning-arrival fresh indicators, and sold-out notifications to manage customer expectations at the butcher and deli counters.",
+      "isEnabled": true,
+      "config": {
+        "showLowStockWarning": true,
+        "lowStockThreshold": 3,
+        "showSoldOut": true,
+        "showFreshlyArrivedBadge": true,
+        "showDryAgeDayCounter": true
+      }
+    },
+    {
+      "id": "storageInstructions",
+      "name": "Storage & Safe Meat Handling Instructions",
+      "description": "Provides comprehensive cold-chain storage instructions, recommended refrigeration durations, safe freezing and thawing protocols, and safe internal cooking temperature guides on product pages and digital receipts.",
+      "isEnabled": true,
+      "config": {
+        "defaultInstruction": "refrigerate",
+        "showReheatingGuide": true,
+        "showFreezerGuide": true,
+        "showThawGuide": true,
+        "showInternalTempGuide": true
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

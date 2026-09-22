@@ -1,0 +1,1052 @@
+{
+  "id": "restaurant-and-juice-house",
+  "name": "Restaurant & Juice House",
+  "slug": "restaurant-and-juice-house",
+  "icon": "🍽️🧃",
+  "description": "Full-service restaurant seamlessly integrated with a fresh juice, smoothie, and wellness bar. Tailored for health-conscious, Mediterranean, Middle Eastern, and active-lifestyle dining concepts pairing scratch-made culinary entrées with raw cold-pressed juices.",
+  "category": "hybrid",
+  "tags": [
+    "restaurant",
+    "juice",
+    "smoothie",
+    "health",
+    "dining",
+    "full-service"
+  ],
+  "sections": [
+    {
+      "id": "fresh-juices",
+      "name": "Fresh Juices",
+      "sortOrder": 1,
+      "description": "Features 100% pure cold-pressed, centrifugal, and hand-extracted juices crafted to order from whole fruits and crisp vegetables with zero added sugars, water, or preservatives. Serves as the core beverage identity for guests seeking immediate raw vitamins and natural hydration.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍊",
+      "subSections": [
+        {
+          "id": "single-fruit-juices",
+          "name": "Single Fruit Juices",
+          "sortOrder": 1,
+          "description": "Pure unblended freshly pressed juices highlighting individual fruit flavors including sweet orange, crisp green apple, ruby red grapefruit, and cold-pressed pomegranate."
+        },
+        {
+          "id": "mixed-and-combination-juices",
+          "name": "Mixed & Combination Juices",
+          "sortOrder": 2,
+          "description": "Carefully balanced signature blends pairing complementary fruits, roots, and citrus such as apple-carrot-beet, orange-mango-passionfruit, and pineapple-ginger."
+        },
+        {
+          "id": "vegetable-and-green-juices",
+          "name": "Vegetable & Green Juices",
+          "sortOrder": 3,
+          "description": "Nutrient-dense, low-glycemic green juices pressed with dark leafy kale, baby spinach, crisp cucumber, celery stalk, fresh parsley, and tart green apple."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "juice-size",
+          "type": "single-select",
+          "label": "Juice Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "small", "label": "Small (12 oz)", "priceModifier": 0 },
+            { "value": "medium", "label": "Medium (16 oz)", "priceModifier": 1.50 },
+            { "value": "large", "label": "Large (20 oz)", "priceModifier": 3.00 }
+          ]
+        },
+        {
+          "id": "juice-ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "no-ice", "label": "No Ice", "priceModifier": 0 },
+            { "value": "light-ice", "label": "Light Ice", "priceModifier": 0 },
+            { "value": "regular-ice", "label": "Regular Ice", "priceModifier": 0 },
+            { "value": "extra-ice", "label": "Extra Ice", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "juice-sweetener",
+          "type": "single-select",
+          "label": "Sweetener",
+          "isRequired": false,
+          "choices": [
+            { "value": "none", "label": "No Added Sweetener", "priceModifier": 0 },
+            { "value": "raw-honey", "label": "Raw Local Honey", "priceModifier": 0.50 },
+            { "value": "organic-agave", "label": "Organic Agave Nectar", "priceModifier": 0.50 }
+          ]
+        },
+        {
+          "id": "juice-booster-shot",
+          "type": "single-select",
+          "label": "Add-in Booster Shot",
+          "isRequired": false,
+          "choices": [
+            { "value": "none", "label": "No Booster", "priceModifier": 0 },
+            { "value": "ginger-boost", "label": "Fresh Ginger Shot", "priceModifier": 1.00 },
+            { "value": "turmeric-boost", "label": "Fresh Turmeric Shot", "priceModifier": 1.00 },
+            { "value": "lemon-squeeze", "label": "Fresh Lemon Squeeze", "priceModifier": 0.50 },
+            { "value": "cayenne-dash", "label": "Cayenne Pepper Dash", "priceModifier": 0.25 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "smoothies-and-blends",
+      "name": "Smoothies & Blends",
+      "sortOrder": 2,
+      "description": "Offers rich, thick, fiber-dense blended beverages prepared to order with whole frozen fruits, superfood greens, plant milks, and nutritional enhancers. Provides satisfying meal supplements, post-workout recovery options, and energizing guilt-free refreshments.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥤",
+      "subSections": [
+        {
+          "id": "fruit-smoothies",
+          "name": "Fruit Smoothies",
+          "sortOrder": 1,
+          "description": "Thick creamy blends of ripe wild berries, bananas, tropical mango, passion fruit, and crushed strawberries blended with chilled liquid bases."
+        },
+        {
+          "id": "green-and-detox-smoothies",
+          "name": "Green & Detox Smoothies",
+          "sortOrder": 2,
+          "description": "Alkalizing, chlorophyll-rich blends combining baby spinach, fresh kale, hass avocado, crisp cucumber, mint, and coconut water."
+        },
+        {
+          "id": "protein-and-energy-smoothies",
+          "name": "Protein & Energy Smoothies",
+          "sortOrder": 3,
+          "description": "High-protein blends formulated with whey or organic plant protein, natural peanut or almond butter, chia seeds, and raw cacao."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "smoothie-size",
+          "type": "single-select",
+          "label": "Smoothie Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "regular", "label": "Regular (16 oz)", "priceModifier": 0 },
+            { "value": "large", "label": "Large (24 oz)", "priceModifier": 2.00 }
+          ]
+        },
+        {
+          "id": "smoothie-base",
+          "type": "single-select",
+          "label": "Liquid Base",
+          "isRequired": false,
+          "choices": [
+            { "value": "almond-milk", "label": "Almond Milk", "priceModifier": 0 },
+            { "value": "oat-milk", "label": "Oat Milk", "priceModifier": 0.50 },
+            { "value": "coconut-water", "label": "Coconut Water", "priceModifier": 0.50 },
+            { "value": "fresh-apple-juice", "label": "Fresh Apple Juice", "priceModifier": 0.75 },
+            { "value": "whole-milk", "label": "Whole Milk & Greek Yogurt", "priceModifier": 0.50 }
+          ]
+        },
+        {
+          "id": "smoothie-boosters",
+          "type": "multi-select",
+          "label": "Add-On Boosters",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            { "value": "whey-protein", "label": "Organic Whey Protein (+20g)", "priceModifier": 2.00 },
+            { "value": "plant-protein", "label": "Organic Plant Protein (+20g)", "priceModifier": 2.00 },
+            { "value": "chia-seeds", "label": "Organic Chia Seeds", "priceModifier": 1.00 },
+            { "value": "collagen-peptides", "label": "Marine Collagen Peptides", "priceModifier": 2.25 },
+            { "value": "blue-spirulina", "label": "Organic Blue Spirulina", "priceModifier": 1.50 },
+            { "value": "maca-root", "label": "Peruvian Maca Root Powder", "priceModifier": 1.25 },
+            { "value": "peanut-butter", "label": "Natural Peanut Butter Scoop", "priceModifier": 1.00 },
+            { "value": "almond-butter", "label": "Artisanal Almond Butter Scoop", "priceModifier": 1.25 },
+            { "value": "raw-honey", "label": "Raw Wildflower Honey", "priceModifier": 0.75 }
+          ]
+        },
+        {
+          "id": "smoothie-sweetness",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "natural", "label": "Natural Fruit Sweetness Only", "priceModifier": 0 },
+            { "value": "light-honey", "label": "Light Honey / Agave", "priceModifier": 0.50 },
+            { "value": "extra-sweet", "label": "Extra Sweet", "priceModifier": 0.50 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health-and-wellness-shots",
+      "name": "Health & Wellness Shots",
+      "sortOrder": 3,
+      "description": "Delivers concentrated 2 oz functional wellness shots designed for rapid nutrient absorption, metabolic stimulation, anti-inflammatory support, and immune defense. Perfect as quick counter elixirs or companion boosts to main meals.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧪",
+      "subSections": [
+        {
+          "id": "ginger-and-turmeric-shots",
+          "name": "Ginger & Turmeric Shots",
+          "sortOrder": 1,
+          "description": "Potent root extracts concentrated in gingerol and curcumin, paired with cracked black pepper and fresh lemon for enhanced bio-availability."
+        },
+        {
+          "id": "wheatgrass-and-green-shots",
+          "name": "Wheatgrass & Green Shots",
+          "sortOrder": 2,
+          "description": "Freshly cut and pressed living wheatgrass, spirulina elixirs, and chlorophyll greens delivering vital enzymes, bio-available iron, and alkalizing minerals."
+        },
+        {
+          "id": "immunity-and-vitality-shots",
+          "name": "Immunity & Vitality Shots",
+          "sortOrder": 3,
+          "description": "Fast-acting immune formulas combining oil of oregano, raw garlic, apple cider vinegar, cayenne pepper, and elderberry."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "shot-format",
+          "type": "single-select",
+          "label": "Serving Format",
+          "isRequired": true,
+          "choices": [
+            { "value": "single-shot", "label": "Single Shot (2 oz)", "priceModifier": 0 },
+            { "value": "double-shot", "label": "Double Shot (4 oz)", "priceModifier": 2.50 },
+            { "value": "flight-of-three", "label": "Wellness Flight (3 x 2 oz)", "priceModifier": 5.50 }
+          ]
+        },
+        {
+          "id": "shot-chaser",
+          "type": "single-select",
+          "label": "Citrus Chaser",
+          "isRequired": false,
+          "choices": [
+            { "value": "orange-slice", "label": "Fresh Orange Slice", "priceModifier": 0 },
+            { "value": "apple-slice", "label": "Crisp Apple Slice", "priceModifier": 0 },
+            { "value": "pineapple-wedge", "label": "Pineapple Wedge", "priceModifier": 0 },
+            { "value": "no-chaser", "label": "No Chaser", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fresh-lemonades-and-coolers",
+      "name": "Fresh Lemonades & Coolers",
+      "sortOrder": 4,
+      "description": "Features handcrafted fruit lemonades, cold-steeped herbal coolers, sparkling spritzers, and botanical mocktails. Provides thirst-quenching, palate-cleansing refreshment to accompany lunch, dinner, and afternoon table dining.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍋",
+      "subSections": [
+        {
+          "id": "classic-and-fruit-lemonades",
+          "name": "Classic & Fruit Lemonades",
+          "sortOrder": 1,
+          "description": "Freshly squeezed Meyer lemonades infused with garden mint, wild strawberries, passion fruit, lavender, or pressed pomegranate."
+        },
+        {
+          "id": "coolers-and-mocktails",
+          "name": "Coolers & Mocktails",
+          "sortOrder": 2,
+          "description": "Sparkling botanical spritzes, cucumber-basil sodas, citrus hibiscus coolers, and zero-proof handcrafted mocktails."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "cooler-size",
+          "type": "single-select",
+          "label": "Serving Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "regular", "label": "Regular Glass (16 oz)", "priceModifier": 0 },
+            { "value": "large", "label": "Large Glass (24 oz)", "priceModifier": 1.50 },
+            { "value": "table-carafe", "label": "Sharing Table Carafe (32 oz)", "priceModifier": 4.00 }
+          ]
+        },
+        {
+          "id": "cooler-ice-level",
+          "type": "single-select",
+          "label": "Ice Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "regular-ice", "label": "Regular Ice", "priceModifier": 0 },
+            { "value": "light-ice", "label": "Light Ice", "priceModifier": 0 },
+            { "value": "extra-ice", "label": "Extra Ice", "priceModifier": 0 },
+            { "value": "no-ice", "label": "No Ice", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "cooler-sweetness",
+          "type": "single-select",
+          "label": "Sweetness Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "regular-sweet", "label": "Regular Sweetness", "priceModifier": 0 },
+            { "value": "less-sweet", "label": "Less Sweet (50%)", "priceModifier": 0 },
+            { "value": "tart", "label": "Tart / Unsweetened", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appetizers-and-starters",
+      "name": "Appetizers & Starters",
+      "sortOrder": 5,
+      "description": "Presents vibrant scratch-cooked first courses, seasonal comforting soups, farm-fresh salads, and shareable mezze plates. Establishes the restaurant's culinary craft with wholesome Mediterranean, Middle Eastern, and plant-forward starters designed to awaken the palate.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🥗",
+      "subSections": [
+        {
+          "id": "soups",
+          "name": "Soups",
+          "sortOrder": 1,
+          "description": "Nourishing, slow-simmered vegetable purées, spiced red lentil soups, restorative bone broths, and chilled seasonal gazpachos served with artisanal bread."
+        },
+        {
+          "id": "salads",
+          "name": "Salads",
+          "sortOrder": 2,
+          "description": "Vibrant salads featuring crisp baby greens, ancient grains, grilled vegetables, crumbled sheep feta, and cold-pressed extra virgin olive oil vinaigrettes."
+        },
+        {
+          "id": "small-plates-and-shares",
+          "name": "Small Plates & Shares",
+          "sortOrder": 3,
+          "description": "Shareable mezze spreads, roasted seasonal vegetables, warm filled pastries, falafel patties, and artisanal finger-friendly starters."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "starter-portion",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": false,
+          "choices": [
+            { "value": "individual", "label": "Individual Portion", "priceModifier": 0 },
+            { "value": "sharing", "label": "Table Sharing Portion", "priceModifier": 4.50 }
+          ]
+        },
+        {
+          "id": "salad-dressing-choice",
+          "type": "single-select",
+          "label": "Dressing Preference",
+          "isRequired": false,
+          "choices": [
+            { "value": "tossed-in", "label": "Tossed In Dressing", "priceModifier": 0 },
+            { "value": "on-the-side", "label": "Dressing On The Side", "priceModifier": 0 },
+            { "value": "olive-oil-lemon", "label": "Extra Virgin Olive Oil & Lemon", "priceModifier": 0 },
+            { "value": "tahini-garlic", "label": "Tahini Garlic Dressing", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "starter-spice-level",
+          "type": "single-select",
+          "label": "Spice Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "mild", "label": "Mild / No Heat", "priceModifier": 0 },
+            { "value": "medium", "label": "Medium Spice", "priceModifier": 0 },
+            { "value": "spicy", "label": "Extra Spicy", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "main-courses-and-entrees",
+      "name": "Main Courses / Entrées",
+      "sortOrder": 6,
+      "description": "Anchors the lunch and dinner dining experience with hearty, chef-crafted complete meals. Offers balanced plates composed of lean poultry, tender meats, sustainably caught seafood, and wholesome plant-powered entrées accompanied by nutritious grains and fresh vegetables.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍲",
+      "subSections": [
+        {
+          "id": "meat-and-poultry",
+          "name": "Meat & Poultry",
+          "sortOrder": 1,
+          "description": "Herb-roasted free-range chicken, slow-braised lamb shanks, spiced tenderloin cuts, and lean poultry dishes paired with nutrient-dense sides."
+        },
+        {
+          "id": "seafood",
+          "name": "Seafood",
+          "sortOrder": 2,
+          "description": "Pan-seared wild salmon, garlic herb jumbo prawns, baked Mediterranean sea bass, and seafood stews simmered with aromatic herbs."
+        },
+        {
+          "id": "vegetarian-and-vegan-mains",
+          "name": "Vegetarian & Vegan Mains",
+          "sortOrder": 3,
+          "description": "Hearty plant-based entrées including roasted vegetable tagines, spiced chickpea bowls, stuffed eggplants, and grain-based protein platters."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "entree-side-choice",
+          "type": "single-select",
+          "label": "Choice of Included Side",
+          "isRequired": true,
+          "choices": [
+            { "value": "wild-rice-pilaf", "label": "Wild Rice & Quinoa Pilaf", "priceModifier": 0 },
+            { "value": "roasted-herb-potatoes", "label": "Roasted Herb Fingerling Potatoes", "priceModifier": 0 },
+            { "value": "steamed-greens", "label": "Steamed Seasonal Greens", "priceModifier": 0 },
+            { "value": "house-garden-salad", "label": "House Garden Salad", "priceModifier": 0 },
+            { "value": "sweet-potato-mash", "label": "Sweet Potato Mash", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "entree-spice-level",
+          "type": "single-select",
+          "label": "Spice Level",
+          "isRequired": false,
+          "choices": [
+            { "value": "none", "label": "No Spice", "priceModifier": 0 },
+            { "value": "mild", "label": "Mild", "priceModifier": 0 },
+            { "value": "medium", "label": "Medium", "priceModifier": 0 },
+            { "value": "hot", "label": "Hot", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "entree-preparation-style",
+          "type": "single-select",
+          "label": "Dietary Preparation Style",
+          "isRequired": false,
+          "choices": [
+            { "value": "standard", "label": "Standard Chef Recipe", "priceModifier": 0 },
+            { "value": "gluten-free", "label": "Gluten-Free Preparation", "priceModifier": 0 },
+            { "value": "dairy-free", "label": "Dairy-Free / Extra Virgin Olive Oil", "priceModifier": 0 },
+            { "value": "low-sodium", "label": "Low Sodium Preparation", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grills-and-specialties",
+      "name": "Grills & Specialties",
+      "sortOrder": 7,
+      "description": "Showcases open-flame charcoal and wood-grilled meats, flame-seared seafood skewers, and house specialty platters. Celebrates smoky Mediterranean, Levantine, and hearth-cooked flavors with premium marinades, char-grilled tenderness, and chef signatures.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥩",
+      "subSections": [
+        {
+          "id": "grilled-meats",
+          "name": "Grilled Meats",
+          "sortOrder": 1,
+          "description": "Charcoal-grilled ribeye cuts, tender lamb chops, marinated beef skewers, and herb-marinated chicken breast brochettes."
+        },
+        {
+          "id": "grilled-seafood",
+          "name": "Grilled Seafood",
+          "sortOrder": 2,
+          "description": "Whole grilled Mediterranean sea bass, flame-charred octopus, grilled salmon skewers, and jumbo prawns basted with oregano lemon oil."
+        },
+        {
+          "id": "house-specialties",
+          "name": "House Specialties",
+          "sortOrder": 3,
+          "description": "Signature mixed grill sharing platters, clay pot roasted meat specialties, and chef-curated banquet feasts."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "meat-doneness",
+          "type": "single-select",
+          "label": "Meat Doneness",
+          "isRequired": false,
+          "choices": [
+            { "value": "rare", "label": "Rare (Cool Red Center)", "priceModifier": 0 },
+            { "value": "medium-rare", "label": "Medium Rare (Warm Red Center)", "priceModifier": 0 },
+            { "value": "medium", "label": "Medium (Warm Pink Center)", "priceModifier": 0 },
+            { "value": "medium-well", "label": "Medium Well (Slightly Pink Center)", "priceModifier": 0 },
+            { "value": "well-done", "label": "Well Done (Fully Cooked Through)", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "grill-sauce",
+          "type": "single-select",
+          "label": "Choice of Sauce / Relish",
+          "isRequired": false,
+          "choices": [
+            { "value": "chimichurri", "label": "Fresh Chimichurri Herb Sauce", "priceModifier": 0 },
+            { "value": "garlic-toum", "label": "House Garlic Toum", "priceModifier": 0 },
+            { "value": "tahini-sauce", "label": "Sesame Tahini Sauce", "priceModifier": 0 },
+            { "value": "lemon-oregano-butter", "label": "Lemon Oregano Herb Butter", "priceModifier": 0 },
+            { "value": "peppercorn-demi", "label": "Green Peppercorn Demi-Glace", "priceModifier": 1.00 }
+          ]
+        },
+        {
+          "id": "grill-side-choice",
+          "type": "single-select",
+          "label": "Choice of Included Side",
+          "isRequired": true,
+          "choices": [
+            { "value": "charred-vegetables", "label": "Charred Market Vegetables", "priceModifier": 0 },
+            { "value": "saffron-basmati-rice", "label": "Saffron Basmati Rice", "priceModifier": 0 },
+            { "value": "hand-cut-fries", "label": "Hand-Cut Herbed Fries", "priceModifier": 0 },
+            { "value": "roasted-fingerlings", "label": "Roasted Fingerling Potatoes", "priceModifier": 0 },
+            { "value": "greek-village-salad", "label": "Greek Village Salad", "priceModifier": 1.00 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sides-and-extras",
+      "name": "Sides & Extras",
+      "sortOrder": 8,
+      "description": "Provides essential hot and cold side portions, wholesome grains, freshly baked flatbreads, and scratch-made culinary sauces and dips. Gives diners the flexibility to personalize and enrich their meals with extra nourishment.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍟",
+      "subSections": [
+        {
+          "id": "hot-sides",
+          "name": "Hot Sides",
+          "sortOrder": 1,
+          "description": "Oven-roasted herbed potatoes, grilled asparagus, steamed seasonal greens, hand-cut fries, and warm artisanal flatbreads."
+        },
+        {
+          "id": "cold-sides",
+          "name": "Cold Sides",
+          "sortOrder": 2,
+          "description": "Marinated kalamata olives, house vegetable pickles, herb tabouleh, cucumber ribbon salad, and chilled grain salads."
+        },
+        {
+          "id": "sauces-and-dips",
+          "name": "Sauces & Dips",
+          "sortOrder": 3,
+          "description": "Artisanal small-batch hummus, tzatziki, garlic toum, tahini sauce, spicy red harissa, and chimichurri."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "side-portion-size",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "regular", "label": "Regular Side", "priceModifier": 0 },
+            { "value": "sharing", "label": "Large / Table Sharing", "priceModifier": 2.50 }
+          ]
+        },
+        {
+          "id": "extra-sauce-portion",
+          "type": "multi-select",
+          "label": "Add Extra Dip or Sauce",
+          "isRequired": false,
+          "maxSelections": 3,
+          "choices": [
+            { "value": "garlic-toum", "label": "Garlic Toum (2 oz)", "priceModifier": 1.00 },
+            { "value": "tzatziki", "label": "Cucumber Tzatziki (2 oz)", "priceModifier": 1.00 },
+            { "value": "hummus", "label": "Creamy Hummus (2 oz)", "priceModifier": 1.00 },
+            { "value": "spicy-harissa", "label": "Spicy Red Harissa (2 oz)", "priceModifier": 1.00 },
+            { "value": "chimichurri", "label": "Fresh Chimichurri (2 oz)", "priceModifier": 1.25 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "sortOrder": 9,
+      "description": "Presents a balanced dessert finale combining warm comforting baked specialties, chilled pastry delights, and refreshing platters of freshly sliced seasonal exotic fruits and berries.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍰",
+      "subSections": [
+        {
+          "id": "hot-desserts",
+          "name": "Hot Desserts",
+          "sortOrder": 1,
+          "description": "Oven-warm chocolate lava cakes, spiced apple and pear crumbles, warm sweet cheese knafeh, and date puddings."
+        },
+        {
+          "id": "cold-desserts",
+          "name": "Cold Desserts",
+          "sortOrder": 2,
+          "description": "Chilled cheesecakes, raw vegan avocado lime tarts, chia seed puddings, and artisanal gelato or fruit sorbets."
+        },
+        {
+          "id": "fruit-platters",
+          "name": "Fruit Platters",
+          "sortOrder": 3,
+          "description": "Freshly carved seasonal melon, pineapple, berries, passion fruit, and figs presented with mint leaves and raw honey-lime dipping sauce."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "dessert-portion",
+          "type": "single-select",
+          "label": "Serving Format",
+          "isRequired": false,
+          "choices": [
+            { "value": "individual", "label": "Individual Portion", "priceModifier": 0 },
+            { "value": "table-sharing", "label": "Table Sharing Platter", "priceModifier": 4.50 }
+          ]
+        },
+        {
+          "id": "add-sorbet-scoop",
+          "type": "single-select",
+          "label": "Add Gelato or Sorbet Scoop",
+          "isRequired": false,
+          "choices": [
+            { "value": "none", "label": "No Extra Scoop", "priceModifier": 0 },
+            { "value": "vanilla-gelato", "label": "Vanilla Bean Gelato", "priceModifier": 2.00 },
+            { "value": "dark-chocolate-gelato", "label": "Dark Chocolate Gelato", "priceModifier": 2.00 },
+            { "value": "mango-passion-sorbet", "label": "Mango Passion Fruit Sorbet (Vegan)", "priceModifier": 2.00 },
+            { "value": "lemon-mint-sorbet", "label": "Lemon Mint Sorbet (Vegan)", "priceModifier": 2.00 }
+          ]
+        },
+        {
+          "id": "dessert-sweetener-drizzle",
+          "type": "single-select",
+          "label": "Honey & Sweet Drizzle",
+          "isRequired": false,
+          "choices": [
+            { "value": "standard-drizzle", "label": "Standard Recipe Drizzle", "priceModifier": 0 },
+            { "value": "light-drizzle", "label": "Light Drizzle", "priceModifier": 0 },
+            { "value": "sauce-on-side", "label": "Sauce / Drizzle on the Side", "priceModifier": 0 },
+            { "value": "no-added-syrup", "label": "No Added Syrup / Drizzle", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kids-menu",
+      "name": "Kids' Menu",
+      "sortOrder": 10,
+      "description": "Designed specifically for younger diners (ages 12 and under), offering balanced, wholesome, and approachable meals, gentle fruit smoothies, fresh juices, and fun desserts made without artificial ingredients.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🧒",
+      "subSections": [
+        {
+          "id": "kids-mains",
+          "name": "Kids' Mains",
+          "sortOrder": 1,
+          "description": "Nutritious and kid-friendly entrées such as grilled chicken tenders, mild mini beef skewers, cheese flatbread melts, and buttered or tomato penne pasta."
+        },
+        {
+          "id": "kids-drinks",
+          "name": "Kids' Drinks",
+          "sortOrder": 2,
+          "description": "Junior 8 oz freshly squeezed juices, gentle berry banana smoothies, and organic milk with no added refined sugars."
+        },
+        {
+          "id": "kids-desserts",
+          "name": "Kids' Desserts",
+          "sortOrder": 3,
+          "description": "Modest-portioned child treats such as fresh fruit skewers with honey yogurt dip, single-scoop fruit sorbets, and mini warm brownie bites."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "kids-side-choice",
+          "type": "single-select",
+          "label": "Included Junior Side",
+          "isRequired": true,
+          "choices": [
+            { "value": "apple-slices", "label": "Fresh Apple Slices", "priceModifier": 0 },
+            { "value": "steamed-veggies", "label": "Steamed Carrots & Broccoli", "priceModifier": 0 },
+            { "value": "baked-fries", "label": "Baked Sweet Potato Fries", "priceModifier": 0 },
+            { "value": "jasmine-rice", "label": "Steamed Jasmine Rice", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "kids-drink-choice",
+          "type": "single-select",
+          "label": "Included Junior Drink",
+          "isRequired": false,
+          "choices": [
+            { "value": "kids-orange-juice", "label": "Fresh Orange Juice (8 oz)", "priceModifier": 0 },
+            { "value": "kids-apple-juice", "label": "Fresh Apple Juice (8 oz)", "priceModifier": 0 },
+            { "value": "kids-whole-milk", "label": "Organic Whole Milk", "priceModifier": 0 },
+            { "value": "kids-coconut-water", "label": "Pure Coconut Water", "priceModifier": 0 },
+            { "value": "bottled-water", "label": "Bottled Spring Water", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hot-beverages",
+      "name": "Hot Beverages",
+      "sortOrder": 11,
+      "description": "Features freshly brewed specialty coffee roasts, single-origin espresso drinks, premium whole-leaf teas, and therapeutic herbal infusions. Serves as a satisfying conclusion to meals or a comforting morning and afternoon beverage.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "☕",
+      "subSections": [
+        {
+          "id": "coffee",
+          "name": "Coffee",
+          "sortOrder": 1,
+          "description": "Espresso, americano, cappuccino, flat white, caffe latte, and single-origin batch brew drip coffee prepared from freshly roasted beans."
+        },
+        {
+          "id": "tea",
+          "name": "Tea",
+          "sortOrder": 2,
+          "description": "Curated whole-leaf green, black, and oolong teas, along with caffeine-free botanical infusions such as chamomile, fresh mint, and ginger lemon."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "hot-drink-size",
+          "type": "single-select",
+          "label": "Cup Size",
+          "isRequired": true,
+          "choices": [
+            { "value": "regular", "label": "Regular (12 oz)", "priceModifier": 0 },
+            { "value": "large", "label": "Large (16 oz)", "priceModifier": 0.75 }
+          ]
+        },
+        {
+          "id": "hot-drink-milk",
+          "type": "single-select",
+          "label": "Milk Preference",
+          "isRequired": false,
+          "choices": [
+            { "value": "whole-milk", "label": "Whole Milk", "priceModifier": 0 },
+            { "value": "skim-milk", "label": "Skim Milk", "priceModifier": 0 },
+            { "value": "oat-milk", "label": "Oat Milk", "priceModifier": 0.75 },
+            { "value": "almond-milk", "label": "Almond Milk", "priceModifier": 0.75 },
+            { "value": "soy-milk", "label": "Soy Milk", "priceModifier": 0.50 },
+            { "value": "coconut-milk", "label": "Coconut Milk", "priceModifier": 0.75 },
+            { "value": "none", "label": "Black / No Milk", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "hot-drink-caffeine",
+          "type": "single-select",
+          "label": "Caffeine Preference",
+          "isRequired": false,
+          "choices": [
+            { "value": "regular-caffeine", "label": "Regular Caffeinated", "priceModifier": 0 },
+            { "value": "decaf", "label": "Decaffeinated", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soft-drinks",
+      "name": "Soft Drinks",
+      "sortOrder": 12,
+      "description": "Provides chilled packaged sparkling and still bottled waters, natural craft sodas, and non-juice carbonated refreshments to ensure comprehensive beverage options for every guest preference.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥤",
+      "subSections": [
+        {
+          "id": "soft-drinks-sub",
+          "name": "Soft Drinks",
+          "sortOrder": 1,
+          "description": "Artisanal ginger beers, natural colas, diet sodas, flavored sparkling tonics, and zero-calorie carbonated waters."
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "sortOrder": 2,
+          "description": "Premium still natural artesian water, sparkling natural mineral water, and infused waters served in chilled glass bottles."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "water-bottle-size",
+          "type": "single-select",
+          "label": "Bottle Format",
+          "isRequired": false,
+          "choices": [
+            { "value": "individual", "label": "Single Bottle (330 ml)", "priceModifier": 0 },
+            { "value": "large-table", "label": "Large Table Bottle (750 ml)", "priceModifier": 3.00 }
+          ]
+        },
+        {
+          "id": "soft-drink-serving-temp",
+          "type": "single-select",
+          "label": "Serving Temperature & Glassware",
+          "isRequired": false,
+          "choices": [
+            { "value": "chilled-ice-lemon", "label": "Chilled with Glass, Ice & Lemon", "priceModifier": 0 },
+            { "value": "chilled-ice-only", "label": "Chilled with Glass & Ice", "priceModifier": 0 },
+            { "value": "chilled-bottle-only", "label": "Chilled Bottle Only (No Ice)", "priceModifier": 0 },
+            { "value": "room-temperature", "label": "Room Temperature", "priceModifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "breakfast-and-bowls",
+      "name": "Breakfast & Bowls",
+      "sortOrder": 13,
+      "description": "Dedicated morning dining offering farm-fresh breakfast plates, poached eggs, warm shakshuka skillets, avocado toasts, and superfood smoothie and açaí bowls loaded with organic fruit and seeds.",
+      "isRequired": false,
+      "isDefaultVisible": false,
+      "icon": "🥣",
+      "subSections": [
+        {
+          "id": "breakfast-plates",
+          "name": "Breakfast Plates",
+          "sortOrder": 1,
+          "description": "Nourishing morning dishes including poached eggs on artisanal sourdough, spiced tomato shakshuka, breakfast egg wraps, and warm grain porridge."
+        },
+        {
+          "id": "smoothie-and-acai-bowls",
+          "name": "Smoothie & Açaí Bowls",
+          "sortOrder": 2,
+          "description": "Thick chilled organic açaí, dragonfruit, and green superfood bases generously topped with gluten-free granola, freshly sliced berries, banana, cacao nibs, and toasted coconut."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "egg-preparation-style",
+          "type": "single-select",
+          "label": "Egg Style (for egg plates)",
+          "isRequired": false,
+          "choices": [
+            { "value": "poached", "label": "Poached", "priceModifier": 0 },
+            { "value": "scrambled", "label": "Scrambled", "priceModifier": 0 },
+            { "value": "sunny-side-up", "label": "Sunny-Side Up", "priceModifier": 0 },
+            { "value": "over-easy", "label": "Over-Easy", "priceModifier": 0 },
+            { "value": "hard-boiled", "label": "Hard-Boiled", "priceModifier": 0 }
+          ]
+        },
+        {
+          "id": "bowl-base-choice",
+          "type": "single-select",
+          "label": "Smoothie Bowl Base",
+          "isRequired": false,
+          "choices": [
+            { "value": "organic-acai", "label": "Organic Amazonian Açaí", "priceModifier": 0 },
+            { "value": "dragonfruit-pitaya", "label": "Vibrant Pitaya / Dragonfruit", "priceModifier": 0 },
+            { "value": "green-spirulina", "label": "Green Spirulina & Mango", "priceModifier": 0 },
+            { "value": "coconut-cloud", "label": "Blue Majik Coconut Cloud", "priceModifier": 1.00 }
+          ]
+        },
+        {
+          "id": "bowl-extra-toppings",
+          "type": "multi-select",
+          "label": "Extra Bowl Toppings",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            { "value": "almond-butter", "label": "Artisanal Almond Butter Drizzle", "priceModifier": 1.25 },
+            { "value": "peanut-butter", "label": "Natural Peanut Butter Drizzle", "priceModifier": 1.00 },
+            { "value": "chia-seeds", "label": "Organic Chia Seeds", "priceModifier": 0.75 },
+            { "value": "cacao-nibs", "label": "Raw Cacao Nibs", "priceModifier": 0.75 },
+            { "value": "fresh-berries", "label": "Extra Fresh Mixed Berries", "priceModifier": 1.50 },
+            { "value": "hemp-hearts", "label": "Shelled Hemp Hearts", "priceModifier": 1.00 },
+            { "value": "raw-honey", "label": "Raw Honey Drizzle", "priceModifier": 0.50 }
+          ]
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": true,
+        "defaultAvailableFrom": "07:00",
+        "defaultAvailableUntil": "12:00",
+        "note": "Available daily during breakfast and morning hours only (07:00 to 12:00)"
+      }
+    },
+    {
+      "id": "detox-and-cleanse-packages",
+      "name": "Detox & Cleanse Packages",
+      "sortOrder": 14,
+      "description": "Multi-bottle cold-pressed juice programs, functional wellness shots, and structured cleanse schedules packaged for takeaway. Formulated to support digestive reset, cellular detoxification, and full-body revitalization.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "📦",
+      "subSections": [
+        {
+          "id": "guided-cleanse-programs",
+          "name": "Guided Cleanse Programs",
+          "sortOrder": 1,
+          "description": "Numbered daily juice sets formulated for beginner resets, deep green alkalizing detoxification, and active lifestyle recovery."
+        },
+        {
+          "id": "immunity-and-booster-packs",
+          "name": "Immunity & Booster Packs",
+          "sortOrder": 2,
+          "description": "Multi-bottle sets of cold-pressed ginger elixirs, raw turmeric boosters, and vitality shots for ongoing weekly home wellness routines."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "package-duration",
+          "type": "single-select",
+          "label": "Package Duration",
+          "isRequired": true,
+          "choices": [
+            { "value": "1-day-reset", "label": "1-Day Quick Reset (6 Juices + 2 Wellness Shots)", "priceModifier": 0 },
+            { "value": "3-day-cleanse", "label": "3-Day Deep Cleanse (18 Juices + 6 Wellness Shots)", "priceModifier": 75.00 },
+            { "value": "5-day-rejuvenation", "label": "5-Day Total Rejuvenation (30 Juices + 10 Wellness Shots)", "priceModifier": 145.00 }
+          ]
+        },
+        {
+          "id": "cleanse-pickup-datetime",
+          "type": "date-picker",
+          "label": "Scheduled Pickup Date & Time",
+          "isRequired": true
+        },
+        {
+          "id": "insulated-cooler-bag",
+          "type": "toggle",
+          "label": "Include Insulated Thermal Cooler Bag",
+          "isRequired": false
+        }
+      ],
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Requires 24-hour advance order notice for freshly pressed batch packaging"
+      }
+    },
+    {
+      "id": "seasonal-specials",
+      "name": "Seasonal Specials",
+      "sortOrder": 15,
+      "description": "Highlights rotating chef specials, peak-harvest seasonal juices, and limited-run culinary creations that evolve with seasonal harvests and local farm availability. Keeps the menu fresh and dynamic throughout the year.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🌟",
+      "subSections": [
+        {
+          "id": "seasonal-kitchen-specials",
+          "name": "Seasonal Kitchen Specials",
+          "sortOrder": 1,
+          "description": "Limited-edition savory entrées, seasonal harvest risottos, and chef-curated market plates showcasing seasonal local produce."
+        },
+        {
+          "id": "seasonal-drinks-and-juices",
+          "name": "Seasonal Drinks & Juices",
+          "sortOrder": 2,
+          "description": "Rotational fresh fruit juice combinations, spiced autumn ciders, summer watermelon coolers, and festive holiday wellness drinks."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "seasonal-serving-size",
+          "type": "single-select",
+          "label": "Serving Size",
+          "isRequired": false,
+          "choices": [
+            { "value": "standard", "label": "Standard Serving", "priceModifier": 0 },
+            { "value": "large-sharing", "label": "Large / Sharing Size", "priceModifier": 3.50 }
+          ]
+        },
+        {
+          "id": "seasonal-dietary-prep",
+          "type": "single-select",
+          "label": "Dietary Preference",
+          "isRequired": false,
+          "choices": [
+            { "value": "chef-recipe", "label": "Standard Chef Recipe", "priceModifier": 0 },
+            { "value": "vegan-friendly", "label": "Vegan Preparation", "priceModifier": 0 },
+            { "value": "gluten-free-friendly", "label": "Gluten-Free Friendly", "priceModifier": 0 }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "addOnBoosters",
+      "name": "Nutritional Add-On Boosters",
+      "description": "Enables customers to customize juices, smoothies, elixirs, and breakfast bowls with targeted functional supplements, organic protein powders, superfoods, and adaptogens.",
+      "isEnabled": true,
+      "config": {
+        "maxBoostersPerItem": 4,
+        "applicableSections": [
+          "fresh-juices",
+          "smoothies-and-blends",
+          "health-and-wellness-shots",
+          "breakfast-and-bowls"
+        ]
+      }
+    },
+    {
+      "id": "spiceLevels",
+      "name": "Custom Spice Levels",
+      "description": "Allows dining patrons to specify chili heat and spice intensity across starters, main courses, grills, and house specialty sauces.",
+      "isEnabled": true,
+      "config": {
+        "defaultLevel": "mild",
+        "availableLevels": [
+          "none",
+          "mild",
+          "medium",
+          "hot",
+          "extra-hot"
+        ]
+      }
+    },
+    {
+      "id": "meatDoneness",
+      "name": "Meat & Grill Doneness Customization",
+      "description": "Provides culinary cooking temperature and doneness options for steaks, chops, skewers, and grilled specialties.",
+      "isEnabled": true,
+      "config": {
+        "defaultDoneness": "medium",
+        "availableOptions": [
+          "rare",
+          "medium-rare",
+          "medium",
+          "medium-well",
+          "well-done"
+        ],
+        "applicableSections": [
+          "grills-and-specialties",
+          "main-courses-and-entrees"
+        ]
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Dietary Lifestyle Tagging",
+      "description": "Flags allergens (gluten, dairy, nuts, eggs, soy, shellfish, sesame) and dietary preferences (vegan, vegetarian, halal, keto, organic) across all food and beverage offerings.",
+      "isEnabled": true,
+      "config": {
+        "filterEnabled": true,
+        "displayBadgesOnCards": true,
+        "highlightCrossContamination": true
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Real-Time Availability & Stock Badges",
+      "description": "Communicates live kitchen and juice bar inventory status badges such as In Stock, Sold Out Today, Seasonal, and Made to Order to manage customer expectations.",
+      "isEnabled": true,
+      "config": {
+        "showLowStockWarning": true,
+        "autoMarkSoldOut": true
+      }
+    },
+    {
+      "id": "preOrder",
+      "name": "Cleanse Package Pre-Orders",
+      "description": "Facilitates advance booking and scheduled pickup date/time selection for multi-day juice cleanse packages that require advance batch cold-press extraction.",
+      "isEnabled": true,
+      "config": {
+        "leadTimeHours": 24,
+        "allowScheduledPickup": true,
+        "applicableSections": [
+          "detox-and-cleanse-packages"
+        ]
+      }
+    },
+    {
+      "id": "kidsMenu",
+      "name": "Junior Dining & Kids' Menu Controls",
+      "description": "Dedicated configuration and display controls for family dining, offering portion-sized wholesome meals, healthy fruit drinks, and fun junior desserts.",
+      "isEnabled": true,
+      "config": {
+        "maxAge": 12,
+        "includeDrinkByDefault": true,
+        "simplifiedPortions": true
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}

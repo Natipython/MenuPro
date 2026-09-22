@@ -1,0 +1,487 @@
+{
+  "name": "Menu Template Registry",
+  "description": "Central index of all available business type menu templates. Use this file to discover, list, and load templates.",
+  "version": "1.0.0",
+  "totalTemplates": 24,
+  "schemaRef": "./schema/template-schema.json",
+  "universalFeaturesRef": "./schema/universal-features.json",
+  "templates": [
+    {
+      "id": "bakery-and-pastry",
+      "name": "Bakery & Pastry",
+      "slug": "bakery-and-pastry",
+      "icon": "\ud83e\udd50",
+      "category": "bakery",
+      "tags": [
+        "bakery",
+        "pastry",
+        "bread",
+        "cakes",
+        "patisserie",
+        "boulangerie"
+      ],
+      "file": "./business-types/01-bakery-and-pastry.json",
+      "sectionCount": 9,
+      "description": "Comprehensive menu template for pure production-and-display artisan bakeries and patisseries. Designed specifically for bakeries where goods are baked fresh on-site or assembled in-house, showcased in display cases, and sold for takeaway or light counter service without full kitchen cooking or table service."
+    },
+    {
+      "id": "bakery-and-cafe",
+      "name": "Bakery & Cafe",
+      "slug": "bakery-and-cafe",
+      "icon": "\ud83c\udf5e\u2615",
+      "category": "hybrid",
+      "tags": [
+        "bakery",
+        "cafe",
+        "coffee",
+        "bread",
+        "breakfast",
+        "brunch",
+        "sandwich"
+      ],
+      "file": "./business-types/02-bakery-and-cafe.json",
+      "sectionCount": 12,
+      "description": "Combines a production artisan bakery with a sit-down cafe experience. Features hearth-baked breads, morning viennoiserie, specialty espresso coffee, assembled-to-order sandwiches, and light morning meals without full commercial kitchen cooking."
+    },
+    {
+      "id": "cafe-and-pastry",
+      "name": "Cafe & Pastry",
+      "slug": "cafe-and-pastry",
+      "icon": "\u2615\ud83e\udd50",
+      "category": "cafe",
+      "tags": [
+        "cafe",
+        "coffee",
+        "pastry",
+        "patisserie",
+        "dessert",
+        "tea"
+      ],
+      "file": "./business-types/03-cafe-and-pastry.json",
+      "sectionCount": 10,
+      "description": "Designed for beverage-first establishments centered on artisanal espresso and specialty tea craft, accompanied by a curated display of fine p\u00e2tisserie and morning bakes. Tailored for venues where pastries are sourced or baked in limited daily batches without a full-scale bread production line."
+    },
+    {
+      "id": "cafe-and-juice-house",
+      "name": "Cafe & Juice House",
+      "slug": "cafe-and-juice-house",
+      "icon": "\u2615\ud83e\uddc3",
+      "category": "hybrid",
+      "tags": [
+        "cafe",
+        "juice",
+        "smoothie",
+        "health",
+        "coffee",
+        "wellness",
+        "acai"
+      ],
+      "file": "./business-types/04-cafe-and-juice-house.json",
+      "sectionCount": 12,
+      "description": "Dual-concept venue pairing artisanal specialty espresso and tea craft with cold-pressed juices, functional smoothies, wellness shots, and vibrant superfood bowls. Tailored for health-conscious and active lifestyles desiring premium coffee alongside plant-based nutrition."
+    },
+    {
+      "id": "cafe-and-restaurant",
+      "name": "Cafe & Restaurant",
+      "slug": "cafe-and-restaurant",
+      "icon": "\u2615\ud83c\udf7d\ufe0f",
+      "category": "hybrid",
+      "tags": [
+        "cafe",
+        "restaurant",
+        "coffee",
+        "breakfast",
+        "lunch",
+        "dinner",
+        "full-service"
+      ],
+      "file": "./business-types/05-cafe-and-restaurant.json",
+      "sectionCount": 12,
+      "description": "Full sit-down restaurant with a strong cafe and coffee culture identity. Serves complete meals from morning breakfast through dinner while retaining a prominent coffee bar. A hybrid establishment designed for venues with an expanded kitchen and full table service."
+    },
+    {
+      "id": "restaurant",
+      "name": "Restaurant (Full Service)",
+      "slug": "restaurant",
+      "icon": "\ud83c\udf7d\ufe0f",
+      "category": "restaurant",
+      "tags": [
+        "restaurant",
+        "full-service",
+        "dining",
+        "lunch",
+        "dinner",
+        "fine-dining"
+      ],
+      "file": "./business-types/06-restaurant.json",
+      "sectionCount": 13,
+      "description": "A full-service dining restaurant featuring a dedicated commercial kitchen and table service. The menu is meal-centric and structured around a multi-course progression\u2014from starters and entr\u00e9es through to desserts, with beverage offerings designed to accompany food."
+    },
+    {
+      "id": "restaurant-and-juice-house",
+      "name": "Restaurant & Juice House",
+      "slug": "restaurant-and-juice-house",
+      "icon": "\ud83c\udf7d\ufe0f\ud83e\uddc3",
+      "category": "hybrid",
+      "tags": [
+        "restaurant",
+        "juice",
+        "smoothie",
+        "health",
+        "dining",
+        "full-service"
+      ],
+      "file": "./business-types/07-restaurant-and-juice-house.json",
+      "sectionCount": 15,
+      "description": "Full-service restaurant seamlessly integrated with a fresh juice, smoothie, and wellness bar. Tailored for health-conscious, Mediterranean, Middle Eastern, and active-lifestyle dining concepts pairing scratch-made culinary entr\u00e9es with raw cold-pressed juices."
+    },
+    {
+      "id": "bar-and-restaurant",
+      "name": "Bar & Restaurant",
+      "slug": "bar-and-restaurant",
+      "icon": "\ud83c\udf7a\ud83c\udf7d\ufe0f",
+      "category": "hybrid",
+      "tags": [
+        "bar",
+        "restaurant",
+        "cocktails",
+        "wine",
+        "beer",
+        "dining",
+        "nightlife",
+        "happy-hour"
+      ],
+      "file": "./business-types/08-bar-and-restaurant.json",
+      "sectionCount": 16,
+      "description": "Full-service restaurant featuring an integrated, high-volume beverage and bar program where craft cocktails, curated wine, draft beer, and culinary dining operate as co-equal revenue streams. Features support for age-verified beverage ordering, time-scheduled happy hours, multi-course dining, premium grill options, and bar-only versus dining room menu configurations."
+    },
+    {
+      "id": "juice-and-smoothie-bar",
+      "name": "Juice & Smoothie Bar (Standalone)",
+      "slug": "juice-and-smoothie-bar",
+      "icon": "\ud83e\uddc3",
+      "category": "juice",
+      "tags": [
+        "juice",
+        "smoothie",
+        "health",
+        "wellness",
+        "acai",
+        "detox"
+      ],
+      "file": "./business-types/09-juice-and-smoothie-bar.json",
+      "sectionCount": 8,
+      "description": "Dedicated quick-service juice and smoothie concept focused entirely on freshly extracted cold-pressed juices, nutrient-rich smoothies, functional wellness shots, handcrafted superfood bowls, advance cleanse detox programs, and wholesome energy snacks. Optimized for fitness centers, shopping concourses, lifestyle pavilions, and urban wellness hubs without a traditional cafe coffee setup."
+    },
+    {
+      "id": "ice-cream-and-gelato-shop",
+      "name": "Ice Cream & Gelato Shop",
+      "slug": "ice-cream-and-gelato-shop",
+      "icon": "\ud83c\udf66",
+      "category": "hybrid",
+      "tags": [
+        "ice-cream",
+        "gelato",
+        "frozen-dessert",
+        "sundae",
+        "milkshake",
+        "sorbet"
+      ],
+      "file": "./business-types/10-ice-cream-and-gelato-shop.json",
+      "sectionCount": 10,
+      "description": "Comprehensive menu template tailored for dedicated frozen dessert venues, artisanal gelaterias, and classic ice cream parlors. Features specialized scoop-count ordering, serving vessel configurations, interactive topping builders, custom sundae creations, hand-spun milkshakes, frozen celebration cakes, and large-format catering party packs."
+    },
+    {
+      "id": "pizzeria",
+      "name": "Pizza Shop / Pizzeria",
+      "slug": "pizzeria",
+      "icon": "\ud83c\udf55",
+      "category": "restaurant",
+      "tags": [
+        "pizza",
+        "pizzeria",
+        "italian",
+        "calzone",
+        "pasta",
+        "delivery"
+      ],
+      "file": "./business-types/11-pizzeria.json",
+      "sectionCount": 11,
+      "description": "A dedicated pizzeria and Italian quick-casual / delivery dining template. Engineered specifically for pizza-centric operations featuring dynamic crust size selection, dough craftsmanship (thin, hand-tossed, deep dish, stuffed, gluten-free), custom topping builders, half-and-half pie partitioning, oven-baked calzones, pastas, appetizers, salads, and value-packed family combo feasts."
+    },
+    {
+      "id": "fast-food-qsr",
+      "name": "Fast Food / Quick Service Restaurant (QSR)",
+      "slug": "fast-food-qsr",
+      "icon": "\ud83c\udf54",
+      "category": "restaurant",
+      "tags": [
+        "fast-food",
+        "qsr",
+        "burgers",
+        "chicken",
+        "combo",
+        "drive-through",
+        "quick-service"
+      ],
+      "file": "./business-types/12-fast-food-qsr.json",
+      "sectionCount": 9,
+      "description": "A high-speed, counter-service and drive-through dining model centered around numbered combo meals, size upgrades, rapid kitchen turnaround, and handheld convenience. Built for high-volume order throughput, modular customization, and quick-service operations."
+    },
+    {
+      "id": "food-truck-street-food",
+      "name": "Food Truck / Street Food",
+      "slug": "food-truck-street-food",
+      "icon": "\ud83d\ude9a",
+      "category": "restaurant",
+      "tags": [
+        "food-truck",
+        "street-food",
+        "mobile",
+        "takeaway",
+        "quick-service"
+      ],
+      "file": "./business-types/13-food-truck-street-food.json",
+      "sectionCount": 6,
+      "description": "A mobile food vendor offering a focused, high-speed menu optimized for street service and takeaway. Key differentiators include location-awareness, limited daily batches, fast queue turnover, and strictly takeaway packaging."
+    },
+    {
+      "id": "dessert-house-sweet-shop",
+      "name": "Dessert House / Sweet Shop",
+      "slug": "dessert-house-sweet-shop",
+      "icon": "\ud83e\uddc7",
+      "category": "hybrid",
+      "tags": [
+        "dessert",
+        "waffles",
+        "crepes",
+        "churros",
+        "chocolate",
+        "sweet-shop",
+        "fondue"
+      ],
+      "file": "./business-types/14-dessert-house-sweet-shop.json",
+      "sectionCount": 11,
+      "description": "Tailored for dedicated dessert venues, dessert parlors, and late-night sweet lounges delivering high-energy sit-down experiences. Designed around freshly made-to-order Belgian and bubble waffles, artisan cr\u00eapes, hot churros, chocolate fondue sets, molten lava cakes, sundaes, loaded milkshakes, and celebration dessert platters."
+    },
+    {
+      "id": "tea-house-bubble-tea",
+      "name": "Tea House / Bubble Tea Shop",
+      "slug": "tea-house-bubble-tea",
+      "icon": "\ud83e\uddcb",
+      "category": "cafe",
+      "tags": [
+        "bubble-tea",
+        "boba",
+        "milk-tea",
+        "tea-house",
+        "fruit-tea",
+        "taiwanese"
+      ],
+      "file": "./business-types/15-tea-house-bubble-tea.json",
+      "sectionCount": 9,
+      "description": "Specialized beverage-forward concept centered on authentic Taiwanese bubble tea, freshly brewed artisan loose-leaf teas, and Asian refreshments. Distinguished by an interactive drink-building experience with granular sweetness, ice, milk base, and chewable boba topping customization, complemented by Asian street food snacks and cafe-style light bites."
+    },
+    {
+      "id": "steakhouse-grill-house",
+      "name": "Steakhouse / Grill House",
+      "slug": "steakhouse-grill-house",
+      "icon": "\ud83e\udd69",
+      "category": "restaurant",
+      "tags": [
+        "steakhouse",
+        "grill",
+        "steak",
+        "fine-dining",
+        "wine",
+        "premium"
+      ],
+      "file": "./business-types/16-steakhouse-grill-house.json",
+      "sectionCount": 12,
+      "description": "A premier steak-focused restaurant centered on artisanal butchery, prime aged beef cuts, flame grilling, and elevated fine dining hospitality. Features precise meat doneness selectors, cut weight sizing, sommelier wine cellar pairings, and luxury table service."
+    },
+    {
+      "id": "sushi-japanese-restaurant",
+      "name": "Sushi / Japanese Restaurant",
+      "slug": "sushi-japanese-restaurant",
+      "icon": "\ud83c\udf63",
+      "category": "restaurant",
+      "tags": [
+        "sushi",
+        "japanese",
+        "ramen",
+        "sashimi",
+        "nigiri",
+        "omakase",
+        "asian"
+      ],
+      "file": "./business-types/17-sushi-japanese-restaurant.json",
+      "sectionCount": 12,
+      "description": "A Japanese cuisine restaurant specializing in sushi, sashimi, ramen, and traditional dishes. Key differentiator: piece-count ordering, omakase/set menu tiers, and wasabi/ginger preferences."
+    },
+    {
+      "id": "hookah-shisha-lounge",
+      "name": "Hookah / Shisha Lounge",
+      "slug": "hookah-shisha-lounge",
+      "icon": "\ud83d\udca8",
+      "category": "bar",
+      "tags": [
+        "hookah",
+        "shisha",
+        "lounge",
+        "tobacco",
+        "nightlife",
+        "social"
+      ],
+      "file": "./business-types/18-hookah-shisha-lounge.json",
+      "sectionCount": 9,
+      "description": "A dedicated hookah and shisha lounge offering session-based premium waterpipe experiences, custom multi-flavor mixology, artisan hot and cold beverages, sharing mezze, and optional licensed bar offerings. Features robust age verification gates, session time tracking, custom flavor ratio mixers, coal selection management, and comprehensive inventory tracking."
+    },
+    {
+      "id": "catering-service",
+      "name": "Catering Service",
+      "slug": "catering-service",
+      "icon": "\ud83c\udf7d\ufe0f\ud83c\udf89",
+      "category": "hybrid",
+      "tags": [
+        "catering",
+        "events",
+        "wedding",
+        "corporate",
+        "party",
+        "pre-order",
+        "buffet"
+      ],
+      "file": "./business-types/19-catering-service.json",
+      "sectionCount": 8,
+      "description": "A comprehensive catering and event hospitality template designed for off-premise caterers, corporate dining specialists, wedding banquet providers, and private chef services. Structured around advance pre-orders, per-head (per-guest) pricing models, scalable headcount calculations, event date scheduling, and bespoke custom menu consultation workflows for gatherings of any size."
+    },
+    {
+      "id": "cloud-kitchen-delivery-only",
+      "name": "Cloud Kitchen / Delivery-Only",
+      "slug": "cloud-kitchen-delivery-only",
+      "icon": "\ud83c\udfe0\ud83d\udef5",
+      "category": "restaurant",
+      "tags": [
+        "cloud-kitchen",
+        "delivery-only",
+        "ghost-kitchen",
+        "takeaway",
+        "delivery"
+      ],
+      "file": "./business-types/20-cloud-kitchen-delivery-only.json",
+      "sectionCount": 8,
+      "description": "A specialized virtual restaurant and ghost kitchen menu template engineered exclusively for off-premise dining, delivery platforms, and rapid digital ordering. Eliminating dine-in service constraints, this model is built around travel-resilient packaging, heat retention, tamper-evident seals, real-time prep and courier transit time estimations, and zone-based delivery radiuses to ensure food arrives in pristine condition."
+    },
+    {
+      "id": "bakery-cafe-pastry",
+      "name": "Bakery & Cafe & Pastry (Triple Combo)",
+      "slug": "bakery-cafe-pastry",
+      "icon": "\ud83e\udd50\u2615\ud83c\udf70",
+      "category": "hybrid",
+      "tags": [
+        "bakery",
+        "cafe",
+        "pastry",
+        "coffee",
+        "bread",
+        "patisserie",
+        "breakfast",
+        "brunch"
+      ],
+      "file": "./business-types/21-bakery-cafe-pastry.json",
+      "sectionCount": 14,
+      "description": "The most comprehensive bakery-cafe concept. Combines full bread production, full p\u00e2tisserie showcase, AND a complete cafe drink program. Very common in modern urban bakery-caf\u00e9s."
+    },
+    {
+      "id": "bar-and-lounge",
+      "name": "Bar & Lounge",
+      "slug": "bar-and-lounge",
+      "icon": "\ud83c\udf78",
+      "category": "bar",
+      "tags": [
+        "bar",
+        "lounge",
+        "cocktails",
+        "wine",
+        "beer",
+        "nightlife",
+        "drinks"
+      ],
+      "file": "./business-types/22-bar-and-lounge.json",
+      "sectionCount": 11,
+      "description": "Drinks-focused bar and lounge environment specializing in craft mixology, curated fine wines, draft and local craft beers, and premium back-bar spirits, accompanied exclusively by savory bar bites and shareable snacks without a full-service commercial kitchen."
+    },
+    {
+      "id": "brunch-spot-breakfast-diner",
+      "name": "Brunch Spot / Breakfast Diner",
+      "slug": "brunch-spot-breakfast-diner",
+      "icon": "\ud83e\udd5e",
+      "category": "restaurant",
+      "tags": [
+        "brunch",
+        "breakfast",
+        "diner",
+        "pancakes",
+        "eggs",
+        "mimosa",
+        "all-day-breakfast"
+      ],
+      "file": "./business-types/23-brunch-spot-breakfast-diner.json",
+      "sectionCount": 12,
+      "description": "An all-day breakfast and brunch diner concept specializing in morning and midday dining. Features chef-crafted egg specialties, griddled pancakes and waffles, artisanal avocado toasts, savory hash bowls, specialty coffee, and weekend brunch cocktails with bottomless drink packages."
+    },
+    {
+      "id": "butcher-shop-deli",
+      "name": "Butcher Shop / Deli",
+      "slug": "butcher-shop-deli",
+      "icon": "\ud83e\udd69\ud83e\uddc0",
+      "category": "hybrid",
+      "tags": [
+        "butcher",
+        "deli",
+        "meat",
+        "charcuterie",
+        "cheese",
+        "sandwich",
+        "fresh-cuts"
+      ],
+      "file": "./business-types/24-butcher-shop-deli.json",
+      "sectionCount": 10,
+      "description": "Specialty butcher counter and artisan delicatessen offering premium raw meats priced by weight, house-marinated cuts, handcrafted charcuterie, artisanal cheeses, gourmet deli sandwiches, prepared sides, and custom grazing boards. Features weight-based catch-weight pricing, custom cut thickness, bone and skin tailoring, and advance holiday order reservations."
+    }
+  ],
+  "categories": [
+    {
+      "id": "bakery",
+      "label": "Bakery",
+      "icon": "\ud83e\udd50"
+    },
+    {
+      "id": "cafe",
+      "label": "Cafe",
+      "icon": "\u2615"
+    },
+    {
+      "id": "restaurant",
+      "label": "Restaurant",
+      "icon": "\ud83c\udf7d\ufe0f"
+    },
+    {
+      "id": "bar",
+      "label": "Bar",
+      "icon": "\ud83c\udf7a"
+    },
+    {
+      "id": "juice",
+      "label": "Juice House",
+      "icon": "\ud83e\uddc3"
+    },
+    {
+      "id": "hybrid",
+      "label": "Hybrid / Multi-Concept",
+      "icon": "\ud83d\udd00"
+    }
+  ],
+  "plannedTemplates": []
+}

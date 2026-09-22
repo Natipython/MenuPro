@@ -1,0 +1,1757 @@
+{
+  "id": "sushi-japanese-restaurant",
+  "name": "Sushi / Japanese Restaurant",
+  "slug": "sushi-japanese-restaurant",
+  "icon": "🍣",
+  "description": "A Japanese cuisine restaurant specializing in sushi, sashimi, ramen, and traditional dishes. Key differentiator: piece-count ordering, omakase/set menu tiers, and wasabi/ginger preferences.",
+  "category": "restaurant",
+  "tags": [
+    "sushi",
+    "japanese",
+    "ramen",
+    "sashimi",
+    "nigiri",
+    "omakase",
+    "asian"
+  ],
+  "sections": [
+    {
+      "id": "nigiri",
+      "name": "Nigiri",
+      "sortOrder": 1,
+      "description": "Traditional Edomae and modern hand-pressed sushi featuring pristine slices of fresh, cured, or flame-torched seafood delicately draped over seasoned, hand-formed sushi rice pillows (shari). This core foundation of authentic Japanese dining celebrates seafood freshness, master knife-work, and rice seasoning balance, offering guests direct control over piece count and wasabi placement.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🍣",
+      "subSections": [
+        {
+          "id": "classic-fish-nigiri",
+          "name": "Classic Fish Nigiri",
+          "sortOrder": 1,
+          "description": "Timeless staples of the sushi counter highlighting fresh cuts of tuna, salmon, yellowtail, sea bream, mackerel, and sweet boiled shrimp pressed onto seasoned sushi rice."
+        },
+        {
+          "id": "premium-and-specialty-nigiri",
+          "name": "Premium & Specialty Nigiri",
+          "sortOrder": 2,
+          "description": "Luxurious and seasonal delicacies such as fatty bluefin tuna (otoro, chutoro), sea urchin (uni), freshwater eel (unagi), sweet botan shrimp, and torch-seared A5 wagyu beef brushed with nikiri soy."
+        },
+        {
+          "id": "tamago-and-vegetable-nigiri",
+          "name": "Tamago & Vegetable Nigiri",
+          "sortOrder": 3,
+          "description": "Delicate layered sweet dashi egg omelet (tamago), seasoned shiitake mushrooms, ripe avocado, and pickled daikon for vegetarian and palate-cleansing options."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "nigiri-piece-count",
+          "type": "single-select",
+          "label": "Piece Count",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "2-pieces",
+              "label": "2 Pieces (Standard Serving)",
+              "priceModifier": 0
+            },
+            {
+              "value": "4-pieces",
+              "label": "4 Pieces (Double Order)",
+              "priceModifier": 5.0
+            }
+          ]
+        },
+        {
+          "id": "wasabi-preference",
+          "type": "single-select",
+          "label": "Wasabi Placement Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "wasabi-inside",
+              "label": "Traditional (Wasabi Pressed Inside Under Fish)",
+              "priceModifier": 0
+            },
+            {
+              "value": "wasabi-on-side",
+              "label": "Wasabi on the Side Only (No Wasabi Inside)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-wasabi",
+              "label": "Extra Wasabi Inside & On the Side",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "nigiri-preparation-style",
+          "type": "single-select",
+          "label": "Preparation & Finish Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "traditional-raw",
+              "label": "Traditional Raw / Fresh Sliced",
+              "priceModifier": 0
+            },
+            {
+              "value": "aburi-torched",
+              "label": "Aburi Style (Lightly Flame-Torched with House Nikiri Soy)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "yuzu-kosho-sea-salt",
+              "label": "Seared with Yuzu Kosho & Smoked Sea Salt",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "nigiri-rice-style",
+          "type": "single-select",
+          "label": "Sushi Rice (Shari) Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-shari",
+              "label": "Standard Shari (Regular Warmth & Size)",
+              "priceModifier": 0
+            },
+            {
+              "value": "less-rice",
+              "label": "Sukuname (Less Rice / Smaller Shari)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "condiment-enhancements",
+          "type": "multi-select",
+          "label": "Condiment & Garnish Enhancements",
+          "isRequired": false,
+          "maxSelections": 2,
+          "choices": [
+            {
+              "value": "fresh-grated-hon-wasabi",
+              "label": "Upgrade to Freshly Grated Real Shizuoka Wasabi (Hon-Wasabi)",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "extra-pickled-ginger",
+              "label": "Extra Sweet Pickled Ginger (Gari)",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "house-nikiri-soy-side",
+              "label": "Side of House-Brewed Nikiri Sweet Soy",
+              "priceModifier": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sashimi",
+      "name": "Sashimi",
+      "sortOrder": 2,
+      "description": "The purest expression of Japanese culinary craftsmanship, highlighting impeccably fresh, raw seafood sliced with surgical precision and served without rice. Designed for diners seeking pristine texture, umami depth, and delicate marine sweetness, served chilled over crushed ice with fresh daikon tsuma and shiso leaves.",
+      "isRequired": true,
+      "isDefaultVisible": true,
+      "icon": "🐟",
+      "subSections": [
+        {
+          "id": "single-fish-sashimi",
+          "name": "Single Fish Sashimi",
+          "sortOrder": 1,
+          "description": "Pristine individual fish varietals sliced to order, highlighting specific textures and rich flavors of single species such as salmon, yellowtail, bluefin tuna, red snapper, or scallop."
+        },
+        {
+          "id": "mixed-sashimi-platters",
+          "name": "Mixed Sashimi Platters",
+          "sortOrder": 2,
+          "description": "Elaborate chef-selected assortments of multiple seafood varieties presented harmoniously on crushed ice with edible flowers, shiso, and shredded daikon for table sharing or multi-fish tastings."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "sashimi-piece-count",
+          "type": "single-select",
+          "label": "Portion & Piece Count",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "5-pieces",
+              "label": "5 Pieces (Single Variety / Taster)",
+              "priceModifier": 0
+            },
+            {
+              "value": "10-pieces",
+              "label": "10 Pieces (Chef Selection / Standard Platter)",
+              "priceModifier": 12.0
+            },
+            {
+              "value": "15-pieces",
+              "label": "15 Pieces (Grand Assortment / Sharing Platter)",
+              "priceModifier": 24.0
+            }
+          ]
+        },
+        {
+          "id": "sashimi-presentation-style",
+          "type": "single-select",
+          "label": "Presentation & Slicing Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "traditional-sliced",
+              "label": "Traditional Sliced (Hirazukuri on Crushed Ice with Daikon & Shiso)",
+              "priceModifier": 0
+            },
+            {
+              "value": "carpaccio-style",
+              "label": "Carpaccio Style (Thinly Sliced with Microgreens, Truffle Soy & Ponzu)",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "tataki-seared",
+              "label": "Tataki Style (Lightly Flash-Seared Crust with Citrus Ponzu & Scallions)",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "sashimi-wasabi-ginger",
+          "type": "single-select",
+          "label": "Wasabi & Ginger Accompaniments",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-condiments",
+              "label": "Standard Pickled Ginger & Wasabi Included",
+              "priceModifier": 0
+            },
+            {
+              "value": "fresh-grated-hon-wasabi",
+              "label": "Fresh Shizuoka Real Wasabi Root (Freshly Grated)",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "extra-gari-ginger",
+              "label": "Extra Artisanal Pickled Ginger (Gari)",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "no-wasabi-ginger",
+              "label": "No Wasabi or Ginger",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "sashimi-dipping-sauce",
+          "type": "single-select",
+          "label": "Dipping Sauce Selection",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "house-sashimi-soy",
+              "label": "House Sashimi Soy Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "citrus-ponzu",
+              "label": "Citrus Ponzu Sauce with Daikon Oroshi",
+              "priceModifier": 0
+            },
+            {
+              "value": "gluten-free-tamari",
+              "label": "Gluten-Free Tamari Soy Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "sesame-nikiri",
+              "label": "Toasted White Sesame Nikiri Sauce",
+              "priceModifier": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maki-rolls",
+      "name": "Maki Rolls",
+      "sortOrder": 3,
+      "description": "Classic and contemporary rolled sushi wrapped in toasted nori seaweed with seasoned sushi rice, featuring clean single-ingredient hosomaki, inverted uramaki rolls, and crisp hand-rolled cones (temaki). This staple section satisfies traditional sushi purists and casual roll enthusiasts alike with customizable rice types, piece counts, and dipping accompaniments.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍙",
+      "subSections": [
+        {
+          "id": "classic-maki",
+          "name": "Classic Maki",
+          "sortOrder": 1,
+          "description": "Traditional slender nori-wrapped rolls (hosomaki) focusing on pure, focused fillings such as fresh tuna, salmon, cucumber, avocado, or fermented soybean (natto)."
+        },
+        {
+          "id": "inside-out-rolls",
+          "name": "Inside-Out Rolls (Uramaki)",
+          "sortOrder": 2,
+          "description": "Popular inverted rolls featuring sushi rice on the exterior, coated with toasted sesame seeds or bright flying fish roe (tobiko) encasing balanced combinations of seafood and vegetables."
+        },
+        {
+          "id": "hand-rolls",
+          "name": "Hand Rolls (Temaki)",
+          "sortOrder": 3,
+          "description": "Individual crisp nori seaweed cones packed fresh to order with warm sushi rice, cool sashimi cuts, and crispy cucumber matchsticks, crafted for instant hand-held enjoyment."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "maki-piece-count",
+          "type": "single-select",
+          "label": "Piece Count / Serving Format",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "6-pieces",
+              "label": "6 Pieces (Standard Hosomaki / Light Roll)",
+              "priceModifier": 0
+            },
+            {
+              "value": "8-pieces",
+              "label": "8 Pieces (Full Uramaki Cut Roll)",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "1-cone-hand-roll",
+              "label": "1 Temaki Hand Roll (Crisp Nori Cone)",
+              "priceModifier": -1.5
+            }
+          ]
+        },
+        {
+          "id": "maki-rice-type",
+          "type": "single-select",
+          "label": "Sushi Rice Type",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "traditional-white",
+              "label": "Traditional Japanese White Sushi Rice",
+              "priceModifier": 0
+            },
+            {
+              "value": "organic-brown",
+              "label": "Organic Brown Sushi Rice (Genmai)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "soy-paper-wrap",
+              "label": "Substitute Nori with Delicate Soy Paper (Mamenori)",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "riceless-cucumber-wrap",
+              "label": "Riceless Wrapped in Thin Cucumber Sheet (Naruto Style)",
+              "priceModifier": 2.5
+            }
+          ]
+        },
+        {
+          "id": "maki-soy-sauce-preference",
+          "type": "single-select",
+          "label": "Soy Sauce & Seasoning Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-soy",
+              "label": "Standard Japanese Soy Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "low-sodium-soy",
+              "label": "Low-Sodium Brewed Soy Sauce",
+              "priceModifier": 0
+            },
+            {
+              "value": "gluten-free-tamari",
+              "label": "Gluten-Free Certified Tamari",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet-unagi-drizzle",
+              "label": "Add Sweet Unagi Eel Sauce Drizzle",
+              "priceModifier": 1.0
+            }
+          ]
+        },
+        {
+          "id": "maki-roll-modifiers",
+          "type": "multi-select",
+          "label": "Add Roll Fillings & Toppings",
+          "isRequired": false,
+          "maxSelections": 2,
+          "choices": [
+            {
+              "value": "add-avocado",
+              "label": "Add Fresh Hass Avocado",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "add-cream-cheese",
+              "label": "Add Rich Cream Cheese",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "add-crispy-tempura-crunch",
+              "label": "Add Crispy Tenkasu (Tempura Crunch)",
+              "priceModifier": 0.75
+            },
+            {
+              "value": "add-spicy-mayo-inside",
+              "label": "Add Spicy Japanese Kewpie Mayo Inside",
+              "priceModifier": 0.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "specialty-and-signature-rolls",
+      "name": "Specialty & Signature Rolls",
+      "sortOrder": 4,
+      "description": "Elevated, multi-layered sushi masterpieces crafted by our head chefs, combining premium raw seafood, succulent torch-seared delicacies, crunchy tempura elements, and luscious artisanal sauces. These vibrant showpiece rolls deliver complex flavor contrasts and dramatic visual presentations tailored for adventurous diners.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "✨",
+      "subSections": [
+        {
+          "id": "house-specials",
+          "name": "House Specials",
+          "sortOrder": 1,
+          "description": "Exclusive chef-curated signature creations blending premium seafood, torch-seared accents, black truffle oil, and complex house-made emulsions."
+        },
+        {
+          "id": "dragon-and-rainbow-rolls",
+          "name": "Dragon & Rainbow Rolls",
+          "sortOrder": 2,
+          "description": "Stunning decorative rolls draped with cascading layers of sliced avocado, glazed freshwater eel, fresh salmon, tuna, and yellowtail resembling vibrant scales."
+        },
+        {
+          "id": "tempura-rolls",
+          "name": "Tempura Rolls",
+          "sortOrder": 3,
+          "description": "Warm, crunchy, and hearty rolls featuring golden flash-fried soft-shell crab, crispy panko shrimp, or entire whole rolls flash-fried in light tempura batter."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "specialty-piece-count",
+          "type": "single-select",
+          "label": "Piece Count",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "8-pieces",
+              "label": "8 Pieces (Standard Specialty Roll)",
+              "priceModifier": 0
+            },
+            {
+              "value": "10-pieces",
+              "label": "10 Pieces (Jumbo Roll / Extra Slices)",
+              "priceModifier": 4.0
+            }
+          ]
+        },
+        {
+          "id": "specialty-spice-level",
+          "type": "single-select",
+          "label": "Heat & Spice Level",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "no-spice",
+              "label": "No Spice (Mild / Sweet Glaze)",
+              "priceModifier": 0
+            },
+            {
+              "value": "mild-spice",
+              "label": "Mild (Gentle Spicy Mayo Drizzle)",
+              "priceModifier": 0
+            },
+            {
+              "value": "medium-spice",
+              "label": "Medium (Togarashi Chili & Sriracha Kick)",
+              "priceModifier": 0
+            },
+            {
+              "value": "hot-spice",
+              "label": "Hot (Spicy Habanero-Infused Nikiri)",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "extra-hot-ghost-pepper",
+              "label": "Extra Hot (Ghost Pepper Togarashi & Fresh Jalapeño)",
+              "priceModifier": 1.0
+            }
+          ]
+        },
+        {
+          "id": "specialty-sauce-placement",
+          "type": "single-select",
+          "label": "Sauce Drizzle Placement",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "drizzled-on-top",
+              "label": "Artistically Drizzled on Top (Chef Standard)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sauces-on-side",
+              "label": "All Sauces Served on the Side",
+              "priceModifier": 0
+            },
+            {
+              "value": "light-sauce",
+              "label": "Light Sauce Drizzle Only",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "specialty-toppings-upgrade",
+          "type": "multi-select",
+          "label": "Luxury Topping Additions",
+          "isRequired": false,
+          "maxSelections": 2,
+          "choices": [
+            {
+              "value": "add-tobiko-roe",
+              "label": "Add Flying Fish Roe (Tobiko)",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "add-ikura-salmon-roe",
+              "label": "Add Marinated Salmon Caviar (Ikura)",
+              "priceModifier": 4.0
+            },
+            {
+              "value": "add-fresh-truffle-oil",
+              "label": "Drizzle White Truffle Oil & Microgreens",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "add-torched-wagyu-strip",
+              "label": "Crown with Torched A5 Wagyu Beef Slice",
+              "priceModifier": 6.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ramen-and-noodles",
+      "name": "Ramen & Noodles",
+      "sortOrder": 5,
+      "description": "Soul-warming bowls of artisanal Japanese noodle soups and chilled noodle specialties. Featuring rich, collagen-infused broths simmered for hours, springy alkaline noodles made from select wheat flours, thick chewy udon in golden dashi, and chilled buckwheat soba served with savory dipping tsuyu.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍜",
+      "subSections": [
+        {
+          "id": "ramen",
+          "name": "Ramen (Tonkotsu/Miso/Shoyu/Shio)",
+          "sortOrder": 1,
+          "description": "Iconic regional ramen broths—rich 16-hour simmered pork bone Tonkotsu, fermented Hokkaido Miso, aromatic Tokyo Shoyu soy broth, and clear sea salt Shio broth—served with hand-crafted noodles."
+        },
+        {
+          "id": "udon",
+          "name": "Udon",
+          "sortOrder": 2,
+          "description": "Plump, chewy Sanuki wheat noodles served piping hot in comforting kombu-bonito dashi broth with tempura flakes or chilled with dipping tsuyu."
+        },
+        {
+          "id": "soba",
+          "name": "Soba",
+          "sortOrder": 3,
+          "description": "Earthy, nutty Japanese buckwheat noodles served cold on a traditional bamboo zaru with chilled dipping sauce and wasabi, or immersed in soothing hot broth."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "ramen-broth-richness",
+          "type": "single-select",
+          "label": "Broth Richness & Garlic Oil",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "light-assari",
+              "label": "Light & Clean (Assari Style / Reduced Oil)",
+              "priceModifier": 0
+            },
+            {
+              "value": "standard-richness",
+              "label": "Classic Balanced (Chef Standard)",
+              "priceModifier": 0
+            },
+            {
+              "value": "rich-kotteri",
+              "label": "Extra Rich & Hearty (Kotteri with Rendered Pork Fat)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "black-garlic-oil",
+              "label": "Infused with Roasted Black Garlic Oil (Mayu)",
+              "priceModifier": 1.5
+            }
+          ]
+        },
+        {
+          "id": "noodle-firmness",
+          "type": "single-select",
+          "label": "Noodle Texture / Firmness",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "soft-yawa",
+              "label": "Soft (Yawa)",
+              "priceModifier": 0
+            },
+            {
+              "value": "standard-futsu",
+              "label": "Regular / Al Dente (Futsu)",
+              "priceModifier": 0
+            },
+            {
+              "value": "firm-katame",
+              "label": "Firm (Katame - Highly Recommended)",
+              "priceModifier": 0
+            },
+            {
+              "value": "extra-firm-barikata",
+              "label": "Extra Firm (Barikata)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "noodle-protein-choice",
+          "type": "single-select",
+          "label": "Protein Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "rolled-chashu-pork",
+              "label": "Slow-Braised Pork Belly Chashu (2 Thick Slices)",
+              "priceModifier": 0
+            },
+            {
+              "value": "tender-chicken-chashu",
+              "label": "Marinated Tender Chicken Breast Chashu",
+              "priceModifier": 0
+            },
+            {
+              "value": "braised-beef-shank",
+              "label": "Slow-Braised Beef Shank Slices",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "braised-tofu-shiitake",
+              "label": "Braised Silken Tofu & Shiitake Mushrooms (V)",
+              "priceModifier": 0
+            },
+            {
+              "value": "seafood-medley",
+              "label": "Tiger Shrimp, Scallop & Squid Medley",
+              "priceModifier": 4.0
+            }
+          ]
+        },
+        {
+          "id": "ramen-extra-toppings",
+          "type": "multi-select",
+          "label": "Extra Topping Add-Ons",
+          "isRequired": false,
+          "maxSelections": 4,
+          "choices": [
+            {
+              "value": "ajitsuke-tamago",
+              "label": "Ajitsuke Tamago (Seasoned Lava Soft-Boiled Egg)",
+              "priceModifier": 2.0
+            },
+            {
+              "value": "extra-chashu",
+              "label": "Extra Braised Chashu (2 Slices)",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "sweet-butter-corn",
+              "label": "Hokkaido Sweet Corn & Butter Pat",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "toasted-nori-sheets",
+              "label": "Toasted Nori Seaweed (3 Crisp Sheets)",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "seasoned-menma",
+              "label": "Seasoned Bamboo Shoots (Menma)",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "wood-ear-mushrooms",
+              "label": "Shredded Wood Ear Mushrooms (Kikurage)",
+              "priceModifier": 1.25
+            },
+            {
+              "value": "chili-rayu-oil",
+              "label": "House-Made Spicy Garlic Rayu Chili Crisp",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "extra-noodle-kaedama",
+              "label": "Kaedama (Extra Full Noodle Refill)",
+              "priceModifier": 3.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rice-bowls-donburi",
+      "name": "Rice Bowls (Donburi)",
+      "sortOrder": 6,
+      "description": "Satisfying, hearty Japanese comfort meals served over piping hot beds of steamed Japanese short-grain rice. Ranging from exquisite chirashi bowls layered with raw sashimi jewels to crispy panko cutlets simmered in sweet dashi egg glaze, caramelized teriyaki, and marinated Hawaiian-style poke bowls.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍚",
+      "subSections": [
+        {
+          "id": "chirashi",
+          "name": "Chirashi",
+          "sortOrder": 1,
+          "description": "Jeweled bowls of seasoned sushi rice artfully layered with an opulent assortment of fresh raw fish slices, tamago omelet, ikura caviar, and shredded nori."
+        },
+        {
+          "id": "katsu-don",
+          "name": "Katsu Don",
+          "sortOrder": 2,
+          "description": "Crispy golden panko-breaded pork or chicken cutlets simmered in sweet-savory dashi with sliced sweet onions and gently beaten farm egg over steaming rice."
+        },
+        {
+          "id": "teriyaki-bowls",
+          "name": "Teriyaki Bowls",
+          "sortOrder": 3,
+          "description": "Tender grilled chicken, beef, salmon, or tofu tossed in artisanal caramelized teriyaki glaze with wok-tossed seasonal vegetables over rice."
+        },
+        {
+          "id": "poke-bowls",
+          "name": "Poke Bowls",
+          "sortOrder": 4,
+          "description": "Fresh cubes of raw tuna or salmon marinated in sesame soy, accompanied by edamame, cucumber, ripe avocado, seaweed salad, and masago over rice or fresh salad greens."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "donburi-size",
+          "type": "single-select",
+          "label": "Bowl Portion Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "regular-bowl",
+              "label": "Regular Bowl (Standard Portion)",
+              "priceModifier": 0
+            },
+            {
+              "value": "large-bowl",
+              "label": "Large Bowl (+30% Rice & Double Protein)",
+              "priceModifier": 4.5
+            }
+          ]
+        },
+        {
+          "id": "donburi-base-grain",
+          "type": "single-select",
+          "label": "Base Grain / Green Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "steamed-white-rice",
+              "label": "Steamed Japanese Short-Grain White Rice",
+              "priceModifier": 0
+            },
+            {
+              "value": "seasoned-sushi-rice",
+              "label": "Vinegared Sushi Rice (Shari)",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "healthy-brown-rice",
+              "label": "Nutty Brown Rice (Genmai)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "half-rice-half-greens",
+              "label": "Half Steamed Rice & Half Mixed Salad Greens",
+              "priceModifier": 0.5
+            },
+            {
+              "value": "mixed-salad-greens",
+              "label": "100% Mixed Baby Greens Base (No Rice)",
+              "priceModifier": 1.0
+            }
+          ]
+        },
+        {
+          "id": "donburi-protein-choice",
+          "type": "single-select",
+          "label": "Primary Protein Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "panko-pork-katsu",
+              "label": "Crispy Golden Pork Tenderloin Katsu",
+              "priceModifier": 0
+            },
+            {
+              "value": "panko-chicken-katsu",
+              "label": "Crispy Panko Chicken Breast Katsu",
+              "priceModifier": 0
+            },
+            {
+              "value": "grilled-teriyaki-chicken",
+              "label": "Flame-Grilled Teriyaki Chicken Thigh",
+              "priceModifier": 0
+            },
+            {
+              "value": "grilled-atlantic-salmon",
+              "label": "Grilled Glazed Atlantic Salmon Fillet",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "fresh-sashimi-assortment",
+              "label": "Chef's Assortment of Fresh Raw Sashimi (Tuna, Salmon, Yellowtail)",
+              "priceModifier": 5.0
+            },
+            {
+              "value": "organic-glazed-tofu",
+              "label": "Braised Organic Tofu & Wild Mushrooms (VG)",
+              "priceModifier": -1.0
+            }
+          ]
+        },
+        {
+          "id": "donburi-sauce-additions",
+          "type": "single-select",
+          "label": "Sauce & Dressing Customization",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-sauce",
+              "label": "Standard House Sauce on Bowl",
+              "priceModifier": 0
+            },
+            {
+              "value": "sauce-on-the-side",
+              "label": "Sauce Served on the Side",
+              "priceModifier": 0
+            },
+            {
+              "value": "add-japanese-curry",
+              "label": "Add House Japanese Golden Curry Sauce Ladle",
+              "priceModifier": 2.5
+            },
+            {
+              "value": "add-spicy-mayo-drizzle",
+              "label": "Add Spicy Kewpie Mayo Drizzle",
+              "priceModifier": 0.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appetizers-and-small-plates",
+      "name": "Appetizers & Small Plates",
+      "sortOrder": 7,
+      "description": "Savory Japanese starters (zensai), crispy izakaya-style bites, and delicate grilled skewers designed to awaken the palate before the main course or accompany sake and cold beer. Encompassing refreshing edamame, golden pan-fried gyoza, lace-battered tempura, and binchotan charcoal-grilled yakitori skewers.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🥟",
+      "subSections": [
+        {
+          "id": "edamame-and-cold-starters",
+          "name": "Edamame & Cold Starters",
+          "sortOrder": 1,
+          "description": "Chilled and warm plant-based starters including steamed edamame pods, sesame seaweed salad (chuka wakame), sunomono pickled cucumbers, and cold silken tofu (hiyayakko)."
+        },
+        {
+          "id": "gyoza-and-tempura",
+          "name": "Gyoza & Tempura",
+          "sortOrder": 2,
+          "description": "Crispy pan-seared pork, chicken, and vegetable dumplings alongside airy, golden lace-battered colossal prawns and fresh seasonal garden vegetables."
+        },
+        {
+          "id": "grilled-skewers-yakitori",
+          "name": "Grilled Skewers (Yakitori)",
+          "sortOrder": 3,
+          "description": "Binchotan charcoal-grilled skewers of marinated chicken thigh and scallions (negima), tender pork belly, ground chicken meatballs (tsukune), and glazed shiitake mushrooms."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "appetizer-dipping-sauce",
+          "type": "single-select",
+          "label": "Dipping Sauce Selection",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "classic-gyoza-soy-vinegar",
+              "label": "Classic Gyoza Citrus Soy & Rayu Chili Dip",
+              "priceModifier": 0
+            },
+            {
+              "value": "warm-tentsuyu-tempura-broth",
+              "label": "Warm Tentsuyu Dashi Tempura Broth with Grated Daikon",
+              "priceModifier": 0
+            },
+            {
+              "value": "spicy-mayo",
+              "label": "Spicy Kewpie Chili Mayo",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet-teriyaki-tare",
+              "label": "House Sweet Teriyaki Tare Glaze",
+              "priceModifier": 0
+            },
+            {
+              "value": "citrus-yuzu-ponzu",
+              "label": "Zesty Citrus Yuzu Ponzu",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "edamame-seasoning",
+          "type": "single-select",
+          "label": "Edamame Pod Seasoning",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "coarse-sea-salt",
+              "label": "Coarse Okinawan Sea Salt (Traditional)",
+              "priceModifier": 0
+            },
+            {
+              "value": "spicy-garlic-chili",
+              "label": "Wok-Tossed Spicy Garlic & Rayu Chili Oil",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "white-truffle-salt",
+              "label": "Aromatic White Truffle Butter & Sea Salt",
+              "priceModifier": 2.0
+            }
+          ]
+        },
+        {
+          "id": "yakitori-seasoning-style",
+          "type": "single-select",
+          "label": "Yakitori Skewer Seasoning",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "tare-sweet-soy",
+              "label": "Tare (Caramelized Sweet Mirin-Soy Glaze)",
+              "priceModifier": 0
+            },
+            {
+              "value": "shio-sea-salt-lemon",
+              "label": "Shio (Flaky Sea Salt & Fresh Squeezed Lemon)",
+              "priceModifier": 0
+            },
+            {
+              "value": "spicy-togarashi",
+              "label": "Spicy Shichimi Togarashi Pepper Glaze",
+              "priceModifier": 0.5
+            }
+          ]
+        },
+        {
+          "id": "appetizer-portion-upgrade",
+          "type": "single-select",
+          "label": "Portion Size",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "standard-portion",
+              "label": "Standard Portion (Individual / Pair)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sharing-platter",
+              "label": "Large Sharing Portion (+50% Quantity)",
+              "priceModifier": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hot-kitchen",
+      "name": "Hot Kitchen",
+      "sortOrder": 8,
+      "description": "Hearty cooked entrées from our hot culinary line, highlighting authentic Japanese cooking traditions beyond sushi. From sizzling teppanyaki iron plates and caramelized teriyaki sautés to comprehensive, multi-compartment bento box feasts complete with staple sides.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍳",
+      "subSections": [
+        {
+          "id": "teriyaki",
+          "name": "Teriyaki",
+          "sortOrder": 1,
+          "description": "Sizzling skillet entrées glazed with our house-crafted reduction of Japanese dark soy, mirin, and sake, served over tender stir-fried cabbage and bean sprouts."
+        },
+        {
+          "id": "teppanyaki",
+          "name": "Teppanyaki",
+          "sortOrder": 2,
+          "description": "High-heat flat-top griddle dishes prepared with garlic butter, soy sauce, and sea salt, showcasing prime beef cuts, succulent scallops, and crisp garden vegetables."
+        },
+        {
+          "id": "bento-boxes",
+          "name": "Bento Boxes",
+          "sortOrder": 3,
+          "description": "Traditional compartmentalized meal sets featuring a featured entrée alongside steamed rice, crispy pork gyoza, 4 pieces of California roll, miso soup, and ginger-dressed salad."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "hot-kitchen-protein",
+          "type": "single-select",
+          "label": "Main Protein Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "grilled-chicken-breast",
+              "label": "Marinated Prime Chicken Breast",
+              "priceModifier": 0
+            },
+            {
+              "value": "scottish-salmon-fillet",
+              "label": "Wild Scottish Salmon Fillet",
+              "priceModifier": 4.0
+            },
+            {
+              "value": "prime-new-york-strip",
+              "label": "USDA Prime New York Strip Steak (8 oz)",
+              "priceModifier": 7.0
+            },
+            {
+              "value": "a5-japanese-wagyu",
+              "label": "Miyazaki A5 Japanese Wagyu Beef (5 oz Upgrade)",
+              "priceModifier": 28.0
+            },
+            {
+              "value": "jumbo-tiger-prawns",
+              "label": "Garlic Butter Jumbo Tiger Prawns (5 pcs)",
+              "priceModifier": 5.0
+            },
+            {
+              "value": "crispy-organic-tofu",
+              "label": "Crispy Organic Tofu & Shiitake Mushrooms (V)",
+              "priceModifier": -1.0
+            }
+          ]
+        },
+        {
+          "id": "hot-kitchen-side-selection",
+          "type": "single-select",
+          "label": "Included Starch / Side Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "steamed-white-rice",
+              "label": "Steamed Japanese Short-Grain White Rice",
+              "priceModifier": 0
+            },
+            {
+              "value": "japanese-garlic-fried-rice",
+              "label": "Teppan Japanese Garlic Butter Fried Rice",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "stir-fried-yakisoba-noodles",
+              "label": "Wok-Tossed Vegetable Yakisoba Noodles",
+              "priceModifier": 3.5
+            },
+            {
+              "value": "extra-steamed-vegetables",
+              "label": "Double Steamed Teppan Seasonal Vegetables (Low Carb)",
+              "priceModifier": 2.0
+            }
+          ]
+        },
+        {
+          "id": "soup-and-salad-service",
+          "type": "single-select",
+          "label": "Miso Soup & Salad Service",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "include-soup-and-salad",
+              "label": "Include Traditional Tofu Miso Soup & House Ginger Salad",
+              "priceModifier": 0
+            },
+            {
+              "value": "upgrade-clam-miso-soup",
+              "label": "Upgrade to Clam Miso Soup (Asari Shiru)",
+              "priceModifier": 3.0
+            },
+            {
+              "value": "soup-only",
+              "label": "Miso Soup Only (No Salad)",
+              "priceModifier": 0
+            },
+            {
+              "value": "salad-only",
+              "label": "Ginger Salad Only (No Soup)",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "sortOrder": 9,
+      "description": "Delectable Japanese desserts and sweet confections providing an elegant, refreshing, and balanced finale to the dining experience. Encompassing chewy ice-cream filled mochi rice dough, cloud-like cotton cheesecakes, and traditional warm wagashi sweets.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍡",
+      "subSections": [
+        {
+          "id": "mochi-ice-cream",
+          "name": "Mochi Ice Cream",
+          "sortOrder": 1,
+          "description": "Chewy, velvety pounded sweet rice dough encasing artisanal ice cream in traditional and contemporary Japanese flavors."
+        },
+        {
+          "id": "japanese-cheesecake",
+          "name": "Japanese Cheesecake",
+          "sortOrder": 2,
+          "description": "Pillow-soft, jiggly soufflé cotton baked cheesecakes celebrated for their airy texture, delicate vanilla notes, and subtle sweetness."
+        },
+        {
+          "id": "traditional-sweets",
+          "name": "Traditional Sweets",
+          "sortOrder": 3,
+          "description": "Beloved heritage desserts including crispy warm red bean-filled taiyaki waffles, honey dorayaki pancakes, and layered matcha green tea parfaits."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "dessert-flavor-selection",
+          "type": "single-select",
+          "label": "Primary Flavor Selection",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "ujimatcha-green-tea",
+              "label": "Ceremonial Uji Matcha Green Tea",
+              "priceModifier": 0
+            },
+            {
+              "value": "toasted-black-sesame",
+              "label": "Toasted Black Sesame (Kurogoma)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet-red-bean-azuki",
+              "label": "Hokkaido Sweet Red Bean (Azuki)",
+              "priceModifier": 0
+            },
+            {
+              "value": "japanese-yuzu-citrus",
+              "label": "Bright Japanese Yuzu Citrus Sorbet",
+              "priceModifier": 0
+            },
+            {
+              "value": "ripe-alphonso-mango",
+              "label": "Ripe Alphonso Mango",
+              "priceModifier": 0
+            },
+            {
+              "value": "madagascar-vanilla",
+              "label": "Pure Madagascar Vanilla Bean",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "dessert-serving-portion",
+          "type": "single-select",
+          "label": "Serving Quantity",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "2-pieces",
+              "label": "2 Pieces (Personal Dessert)",
+              "priceModifier": 0
+            },
+            {
+              "value": "4-pieces-mix-match",
+              "label": "4 Pieces (Mix & Match Pairings)",
+              "priceModifier": 4.0
+            },
+            {
+              "value": "full-dessert-platter",
+              "label": "Chef's Dessert Sampler Platter for Table Sharing",
+              "priceModifier": 8.5
+            }
+          ]
+        },
+        {
+          "id": "dessert-sauces-toppings",
+          "type": "multi-select",
+          "label": "Sweet Drizzles & Garnishes",
+          "isRequired": false,
+          "maxSelections": 2,
+          "choices": [
+            {
+              "value": "kuromitsu-black-syrup",
+              "label": "Kuromitsu (Okinawan Black Sugar Syrup) & Kinako Powder",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "fresh-whipped-cream-strawberry",
+              "label": "Fresh Chantilly Whipped Cream & Sliced Strawberries",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "matcha-white-chocolate-drizzle",
+              "label": "Matcha White Chocolate Glaze",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "edible-gold-leaf",
+              "label": "Edible 24K Gold Leaf Flakes",
+              "priceModifier": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sake-and-japanese-beverages",
+      "name": "Sake & Japanese Beverages",
+      "sortOrder": 10,
+      "description": "A premier alcoholic beverage program curated to complement sushi, sashimi, and grilled izakaya specialties. Showcasing artisanal hot and chilled premium sakes, crisp Japanese draft and craft beers, distinguished Japanese single-malt whiskies, and earthy shochu spirits. Subject to digital age verification.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍶",
+      "subSections": [
+        {
+          "id": "hot-sake",
+          "name": "Hot Sake",
+          "sortOrder": 1,
+          "description": "Comforting, earthy, and full-bodied sakes gently heated to Nurukan (~40°C) or Atsukan (~50°C) to accentuate robust rice umami, served in ceramic tokkuri carafes."
+        },
+        {
+          "id": "cold-sake",
+          "name": "Cold Sake",
+          "sortOrder": 2,
+          "description": "Crisp, floral, and aromatic premium chilled sakes including Junmai, Ginjo, and fragrant Junmai Daiginjo served in crystal wine glasses or cedar masu boxes with overflowing sake cups (mokkiri)."
+        },
+        {
+          "id": "japanese-beer",
+          "name": "Japanese Beer",
+          "sortOrder": 3,
+          "description": "Ultra-crisp, refreshing Japanese draft lagers (Asahi Super Dry, Sapporo Premium, Kirin Ichiban) and regional craft rice ales (Echigo, Hitachino Nest White Ale)."
+        },
+        {
+          "id": "japanese-whisky",
+          "name": "Japanese Whisky",
+          "sortOrder": 4,
+          "description": "World-renowned Japanese single malts and blended whiskies served neat, over hand-carved ice spheres, or mixed into effervescent, crisp highballs with chilled club soda and lemon peel."
+        },
+        {
+          "id": "shochu",
+          "name": "Shochu",
+          "sortOrder": 5,
+          "description": "Traditional single-distilled spirits crafted from barley (mugi), sweet potato (imo), or rice (kome), served straight, on the rocks, or diluted with hot water (oyuwari) or green tea."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "sake-serving-size",
+          "type": "single-select",
+          "label": "Serving Format & Size",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "single-glass",
+              "label": "Single Glass (4 oz / 120 ml)",
+              "priceModifier": 0
+            },
+            {
+              "value": "masu-overflow-cup",
+              "label": "Overflowing Cup in Cedar Masu Box (6 oz / 180 ml)",
+              "priceModifier": 4.0
+            },
+            {
+              "value": "tokkuri-carafe",
+              "label": "Tokkuri Ceramic Carafe (8 oz / 240 ml)",
+              "priceModifier": 7.0
+            },
+            {
+              "value": "full-bottle-720ml",
+              "label": "Full 720ml Bottle (For Table Sharing)",
+              "priceModifier": 38.0
+            },
+            {
+              "value": "draft-pint-16oz",
+              "label": "Chilled Draft Pint (16 oz - For Beers)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "sake-temperature",
+          "type": "single-select",
+          "label": "Serving Temperature",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "chilled-reishu",
+              "label": "Chilled (Reishu ~10°C / 50°F — Ideal for Ginjo & Daiginjo)",
+              "priceModifier": 0
+            },
+            {
+              "value": "room-temp-hiya",
+              "label": "Room Temperature (Hiya ~20°C / 68°F)",
+              "priceModifier": 0
+            },
+            {
+              "value": "warm-nurukan",
+              "label": "Warm (Nurukan ~40°C / 104°F — Gentle Body)",
+              "priceModifier": 0
+            },
+            {
+              "value": "hot-atsukan",
+              "label": "Piping Hot (Atsukan ~50°C / 122°F — Robust Earthiness)",
+              "priceModifier": 0
+            }
+          ]
+        },
+        {
+          "id": "whisky-service-style",
+          "type": "single-select",
+          "label": "Whisky & Shochu Service Style",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "neat",
+              "label": "Neat (Uncut at Room Temperature)",
+              "priceModifier": 0
+            },
+            {
+              "value": "hand-carved-ice-sphere",
+              "label": "On the Rocks (Over Hand-Carved Clear Ice Sphere)",
+              "priceModifier": 1.0
+            },
+            {
+              "value": "japanese-highball",
+              "label": "Japanese Highball (Fever-Tree Soda, Chilled Glass, Lemon Twist)",
+              "priceModifier": 1.5
+            },
+            {
+              "value": "mizuwari",
+              "label": "Mizuwari (Cut with Cold Spring Water & Clear Ice)",
+              "priceModifier": 0
+            },
+            {
+              "value": "green-tea-wari",
+              "label": "Ryokucha-wari (Mixed with Chilled House Green Tea)",
+              "priceModifier": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "non-alcoholic-beverages",
+      "name": "Non-Alcoholic Beverages",
+      "sortOrder": 11,
+      "description": "Refreshing, alcohol-free Japanese beverages thoughtfully chosen to cleanse the palate between rich sushi courses. Featuring freshly brewed hot and chilled loose-leaf green teas, playful Japanese Ramune marble sodas, lightly tart Calpico yogurt drinks, and crisp mineral waters.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍵",
+      "subSections": [
+        {
+          "id": "japanese-green-tea",
+          "name": "Japanese Green Tea",
+          "sortOrder": 1,
+          "description": "Authentic Japanese teas steeped to perfection—including nutty Genmaicha roasted rice green tea, vegetal Sencha, toasty amber Hojicha, and creamy whisked iced Matcha."
+        },
+        {
+          "id": "ramune-and-soft-drinks",
+          "name": "Ramune & Soft Drinks",
+          "sortOrder": 2,
+          "description": "Classic glass Codd-neck bottles sealed with glass marbles (Ramune) in nostalgic fruit flavors, Calpico Japanese yogurt drinks, and craft ginger sodas."
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "sortOrder": 3,
+          "description": "Chilled still spring water, iced cucumber-mint infused carafes, and effervescent sparkling mineral water bottles."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "tea-preparation-format",
+          "type": "single-select",
+          "label": "Tea Service & Temperature",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "hot-ceramic-pot",
+              "label": "Hot Steeping Pot (Free Refills with Hot Water)",
+              "priceModifier": 0
+            },
+            {
+              "value": "chilled-unsweetened-iced",
+              "label": "Chilled Unsweetened Iced Tea (16 oz Glass)",
+              "priceModifier": 0
+            },
+            {
+              "value": "iced-sweetened-matcha-latte",
+              "label": "Iced Sweetened Matcha Latte with Oat Milk",
+              "priceModifier": 2.5
+            }
+          ]
+        },
+        {
+          "id": "ramune-flavor-choice",
+          "type": "single-select",
+          "label": "Ramune & Soda Flavor",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "original-citrus",
+              "label": "Original Citrus Lemon-Lime",
+              "priceModifier": 0
+            },
+            {
+              "value": "sweet-strawberry",
+              "label": "Sweet Strawberry",
+              "priceModifier": 0
+            },
+            {
+              "value": "japanese-melon",
+              "label": "Japanese Cantaloupe Melon",
+              "priceModifier": 0
+            },
+            {
+              "value": "tropical-lychee",
+              "label": "Tropical White Lychee",
+              "priceModifier": 0
+            },
+            {
+              "value": "calpico-original",
+              "label": "Calpico Original Yogurt Soda",
+              "priceModifier": 0.5
+            }
+          ]
+        },
+        {
+          "id": "beverage-ice-level",
+          "type": "single-select",
+          "label": "Ice Level Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "regular-ice",
+              "label": "Regular Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "light-ice",
+              "label": "Light Ice",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-ice",
+              "label": "No Ice / Chilled Drink",
+              "priceModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "omakase-and-set-menus",
+      "name": "Omakase & Set Menus",
+      "sortOrder": 12,
+      "description": "The pinnacle of Japanese hospitality and culinary expression—multi-course 'Chef's Choice' omakase feasts and bundled course menus. Each tier orchestrates an exquisite progression from delicate seasonal appetizers through prized seasonal nigiri and warm kitchen courses to artisanal dessert, tailored to diners' dietary specifications.",
+      "isRequired": false,
+      "isDefaultVisible": true,
+      "icon": "🍱",
+      "timeBehavior": {
+        "isTimeRestricted": false,
+        "note": "Lunch sets available during midday service (11:30 - 15:00); Dinner courses and Omakase served through evening service."
+      },
+      "subSections": [
+        {
+          "id": "omakase-tiers",
+          "name": "Omakase Tiers (Standard/Premium/Grand)",
+          "sortOrder": 1,
+          "description": "Exclusive piece-by-piece chef's counter tasting experiences spotlighting the finest daily seafood imports flown direct from Tokyo's Toyosu fish market."
+        },
+        {
+          "id": "lunch-sets",
+          "name": "Lunch Sets",
+          "sortOrder": 2,
+          "description": "Streamlined midday combination sets pairing chef nigiri or roll selections with savory tempura, salad, and dashi miso soup for swift executive dining."
+        },
+        {
+          "id": "dinner-courses",
+          "name": "Dinner Courses",
+          "sortOrder": 3,
+          "description": "Structured multi-course dinner menus presenting an introductory seasonal starter, sashimi flight, entrée choice, signature sushi course, and confectionery finish."
+        }
+      ],
+      "itemOptions": [
+        {
+          "id": "omakase-tier-selection",
+          "type": "single-select",
+          "label": "Omakase Experience Tier",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "standard-omakase",
+              "label": "Standard Omakase (10 Courses: Seasonal Nigiri, Hand Roll & Miso Soup)",
+              "priceModifier": 0
+            },
+            {
+              "value": "premium-omakase",
+              "label": "Premium Omakase (14 Courses: Otoro, Uni, Hokkaido Scallop & A5 Wagyu)",
+              "priceModifier": 45.0
+            },
+            {
+              "value": "grand-omakase",
+              "label": "Grand Omakase (18 Courses: Royal Caviar, Foie Gras, Live Lobster & Rare Toyosu Catches)",
+              "priceModifier": 95.0
+            }
+          ]
+        },
+        {
+          "id": "omakase-dietary-restrictions",
+          "type": "single-select",
+          "label": "Dietary Accommodation Protocol",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "chef-selection-no-restrictions",
+              "label": "Chef's Standard Selection (No Restrictions)",
+              "priceModifier": 0
+            },
+            {
+              "value": "no-shellfish",
+              "label": "No Shellfish (Crustaceans & Mollusks Substituted with Finfish)",
+              "priceModifier": 0
+            },
+            {
+              "value": "cooked-seafood-only",
+              "label": "Cooked / Torched Only (No Raw Fish)",
+              "priceModifier": 0
+            },
+            {
+              "value": "gluten-free-omakase",
+              "label": "Gluten-Free Omakase (Brushed with Certified Tamari Only)",
+              "priceModifier": 5.0
+            }
+          ]
+        },
+        {
+          "id": "omakase-beverage-pairing",
+          "type": "single-select",
+          "label": "Sommelier Beverage Pairing",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "no-pairing",
+              "label": "No Beverage Pairing (Order Drinks A La Carte)",
+              "priceModifier": 0
+            },
+            {
+              "value": "sake-pairing-flight",
+              "label": "Curated Premium Sake Pairing Flight (4 Glasses)",
+              "priceModifier": 38.0
+            },
+            {
+              "value": "sake-and-japanese-whisky-pairing",
+              "label": "Grand Sake & Japanese Whisky Pairing Flight (6 Pours)",
+              "priceModifier": 65.0
+            },
+            {
+              "value": "artisan-tea-pairing",
+              "label": "Artisanal Hot & Cold Japanese Tea Pairing (4 Teas)",
+              "priceModifier": 18.0
+            }
+          ]
+        },
+        {
+          "id": "omakase-seating-preference",
+          "type": "single-select",
+          "label": "Seating Atmosphere Preference",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "sushi-counter",
+              "label": "Sushi Counter (Front of Master Chef — Piece by Piece Service)",
+              "priceModifier": 0
+            },
+            {
+              "value": "main-dining-table",
+              "label": "Main Dining Room Table (Plated Course Delivery)",
+              "priceModifier": 0
+            },
+            {
+              "value": "private-tatami-room",
+              "label": "Private Japanese Tatami Room (Reservation Required)",
+              "priceModifier": 15.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "systemFeatures": [
+    {
+      "id": "pieceCount",
+      "name": "Piece-Count Ordering & Configuration",
+      "isEnabled": true,
+      "description": "Enables piece-count ordering models for nigiri (2pc/4pc), sashimi (5pc/10pc/15pc), maki rolls (6pc/8pc), and tasting platters with automated unit price calculation and inventory tracking.",
+      "config": {
+        "supportedCounts": [
+          2,
+          4,
+          5,
+          6,
+          8,
+          10,
+          12,
+          15,
+          20
+        ],
+        "defaultNigiriCount": 2,
+        "defaultSashimiCount": 5,
+        "defaultMakiCount": 8,
+        "targetSectionIds": [
+          "nigiri",
+          "sashimi",
+          "maki-rolls",
+          "specialty-and-signature-rolls"
+        ]
+      }
+    },
+    {
+      "id": "ageVerification",
+      "name": "Age Verification Gate",
+      "isEnabled": true,
+      "description": "Enforces mandatory legal drinking age verification prompts before guests can add hot sake, cold craft sake, Japanese beers, Japanese whisky, or shochu to their order ticket.",
+      "config": {
+        "minimumAge": 21,
+        "requireConfirmationPrompt": true,
+        "restrictedSectionIds": [
+          "sake-and-japanese-beverages"
+        ]
+      }
+    },
+    {
+      "id": "allergenTags",
+      "name": "Allergen & Raw Fish Indicators",
+      "isEnabled": true,
+      "description": "Displays visual allergen badges, dietary indicators, and raw seafood consumption warnings across all menu cards, supporting real-time allergen filtering for guests.",
+      "config": {
+        "displayBadges": true,
+        "filterable": true,
+        "showRawSeafoodAdvisory": true,
+        "supportedTags": [
+          "raw-fish",
+          "contains-shellfish",
+          "contains-soy",
+          "contains-gluten",
+          "contains-sesame",
+          "contains-egg",
+          "contains-alcohol",
+          "gluten-free",
+          "vegetarian",
+          "vegan"
+        ]
+      }
+    },
+    {
+      "id": "inventoryBadges",
+      "name": "Real-Time Fresh Market Inventory Badges",
+      "isEnabled": true,
+      "description": "Live stock indicators displaying daily fresh Toyosu market catches, seasonal specials, limited portions, and sold-out badges synchronized with kitchen cutting boards.",
+      "config": {
+        "showLowStockAlert": true,
+        "lowStockThreshold": 5,
+        "autoMarkSoldOut": true,
+        "showDailyCatchBadge": true
+      }
+    },
+    {
+      "id": "setMenus",
+      "name": "Omakase & Set Menus Engine",
+      "isEnabled": true,
+      "description": "Configures multi-course omakase tasting tiers, bundled lunch combos, and multi-course dinner services with course-by-course pacing and dietary restriction tracking.",
+      "config": {
+        "enforceCourseProgression": true,
+        "allowDietaryNotes": true,
+        "supportBeveragePairing": true,
+        "targetSectionIds": [
+          "omakase-and-set-menus",
+          "hot-kitchen"
+        ]
+      }
+    },
+    {
+      "id": "spiceLevels",
+      "name": "Spice Level Customization",
+      "isEnabled": true,
+      "description": "Enables customers to calibrate heat and togarashi levels across specialty spicy rolls, ramen broths, donburi bowls, and dipping sauces.",
+      "config": {
+        "levels": [
+          "none",
+          "mild",
+          "medium",
+          "hot",
+          "extra-hot"
+        ],
+        "defaultLevel": "mild",
+        "applicableSectionIds": [
+          "specialty-and-signature-rolls",
+          "ramen-and-noodles",
+          "rice-bowls-donburi"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-22T14:00:00Z",
+    "updatedAt": "2026-09-22T14:00:00Z",
+    "author": "system"
+  }
+}
