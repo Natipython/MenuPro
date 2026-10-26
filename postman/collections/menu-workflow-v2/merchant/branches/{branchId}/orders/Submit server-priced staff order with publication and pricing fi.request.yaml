@@ -1,0 +1,50 @@
+$kind: http-request
+name: submitStaffOrder
+description: Submit server-priced staff order with publication and pricing fingerprint
+  Staff-assisted dine-in slice; no customer/payer token or table QR secret is returned.
+  Commands retain exact original responses. Acceptance and serving do not record payment.
+  A changed publication or reviewed pricing fingerprint requires confirmation. Real
+  identity and field acceptance remain pending. Independent fictional scenario; protected
+  operations require matching backend fixtures and ephemeral authenticated sessions.
+  Not a runnable restaurant transaction sequence.
+url: '{{baseUrl}}/merchant/branches/:branchId/orders'
+method: POST
+headers:
+- key: Accept
+  value: application/json
+- key: Content-Type
+  value: application/json
+- key: Idempotency-Key
+  value: f890be0e-de4a-5e7a-b580-17c68e9ec136
+- key: Origin
+  value: '{{origin}}'
+- key: X-CSRF-Token
+  value: '{{csrfToken}}'
+- key: Cookie
+  value: menu_staff_session={{staffSession}}
+pathVariables:
+- key: branchId
+  value: '{{branchId}}'
+  disabled: false
+  description: '(Required) '
+body:
+  type: json
+  content: "{\n  \"visitId\": \"00000000-0000-4000-8000-000000000501\",\n  \"menuPublicationId\"\
+    : \"00000000-0000-4000-8000-000000000401\",\n  \"items\": [\n    {\n      \"itemId\"\
+    : \"00000000-0000-4000-8000-000000000601\",\n      \"quantity\": 1,\n      \"\
+    choiceIds\": []\n    }\n  ],\n  \"pricingFingerprint\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"\
+    \n}"
+settings: {}
+examples: ./.resources/Submit server-priced staff order with publication and pricing
+  fi.resources/examples
+order: 1000
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: "pm.test(\"Command succeeds for its prepared fixture\", () => pm.expect(pm.response.code).to.be.within(200,\
+    \ 299));\npm.test(\"Private response is not cached\", () => pm.expect(pm.response.headers.get(\"\
+    Cache-Control\") || \"\").to.include(\"no-store\"));\npm.test(\"Money fields are\
+    \ exact decimal strings\", () => {\n  function check(v) { if (v && typeof v ===\
+    \ \"object\") Object.keys(v).forEach(k => {\n    if (/(Amount|Price|Total)$/.test(k)\
+    \ && !(k === \"verifiedReceivedAmount\" && v[k] === null)) pm.expect(v[k]).to.match(/^(0|[1-9][0-9]{0,9})\\\
+    .[0-9]{2}$/);\n    else check(v[k]); }); }\n  check(pm.response.json());\n});"

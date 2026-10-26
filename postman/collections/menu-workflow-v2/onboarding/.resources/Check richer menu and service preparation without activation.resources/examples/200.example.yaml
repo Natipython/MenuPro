@@ -1,0 +1,23 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/onboarding/workspace-validation'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"valid\": true,\n  \"mode\": \"PREPARATION_ONLY\",\n  \"summary\"\
+      : {\n    \"sectionCount\": 1,\n    \"itemCount\": 1,\n    \"availableItemCount\"\
+      : 1,\n    \"optionGroupCount\": 0,\n    \"plannedTableCount\": 1\n  },\n  \"\
+      blockers\": [\n    \"PHONE_VERIFICATION\",\n    \"BUSINESS_AUTHORIZATION\",\n\
+      \    \"MENU_PUBLICATION\",\n    \"SUBSCRIPTION_ACTIVATION\",\n    \"VERIFIED_STAFF_ACCESS\"\
+      ,\n    \"VERIFIED_RECEIVING_ACCOUNT\",\n    \"PRICE_POLICY_REVIEW\",\n    \"\
+      ORDERING_WORKFLOW\",\n    \"PAYMENT_WORKFLOW\",\n    \"FIELD_ACCEPTANCE\"\n\
+      \  ]\n}"

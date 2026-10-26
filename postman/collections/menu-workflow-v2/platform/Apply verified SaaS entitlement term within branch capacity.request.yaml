@@ -1,0 +1,45 @@
+$kind: http-request
+description: Generic activation supports a one-branch Mini term. A two-branch Mini
+  term must use the accepted-quote activation endpoint; this route cannot bypass owner
+  price consent. Independent fictional scenario; protected operations require matching
+  backend fixtures and ephemeral authenticated sessions. Not a runnable restaurant
+  transaction sequence.
+url: '{{baseUrl}}/platform/businesses/:businessId/plan-terms'
+method: POST
+headers:
+- key: Accept
+  value: application/json
+- key: Content-Type
+  value: application/json
+- key: Idempotency-Key
+  value: 1e09eab2-7bc7-5648-aeae-95e618ba058d
+- key: Origin
+  value: '{{origin}}'
+- key: X-CSRF-Token
+  value: '{{csrfToken}}'
+- key: Cookie
+  value: menu_platform_session={{platformSession}}
+pathVariables:
+- key: businessId
+  value: '{{businessId}}'
+  disabled: false
+  description: '(Required) '
+body:
+  type: json
+  content: "{\n  \"plan\": \"MINI\",\n  \"branchLimit\": 1,\n  \"orderingEnabled\"\
+    : true,\n  \"startsAt\": \"2026-10-12T17:00:00Z\",\n  \"endsAt\": \"2026-11-12T17:00:00Z\"\
+    ,\n  \"billingEvidenceReference\": \"FICTIONAL-SAAS-PAYMENT\"\n}"
+settings: {}
+examples: ./.resources/Apply verified SaaS entitlement term within branch capacity.resources/examples
+order: 1000
+name: applyPlanTerm
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: "pm.test(\"Command succeeds for its prepared fixture\", () => pm.expect(pm.response.code).to.be.within(200,\
+    \ 299));\npm.test(\"Private response is not cached\", () => pm.expect(pm.response.headers.get(\"\
+    Cache-Control\") || \"\").to.include(\"no-store\"));\npm.test(\"Money fields are\
+    \ exact decimal strings\", () => {\n  function check(v) { if (v && typeof v ===\
+    \ \"object\") Object.keys(v).forEach(k => {\n    if (/(Amount|Price|Total)$/.test(k)\
+    \ && !(k === \"verifiedReceivedAmount\" && v[k] === null)) pm.expect(v[k]).to.match(/^(0|[1-9][0-9]{0,9})\\\
+    .[0-9]{2}$/);\n    else check(v[k]); }); }\n  check(pm.response.json());\n});"

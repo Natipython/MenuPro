@@ -1,5 +1,9 @@
 # MenuApp Pro
 
+**Current project direction, 18 October 2026:** MenuMini/MenuPro is under a whole-repository reassessment. The first usable release is menu creation -> preview -> publication -> customer browsing. Start with [PRODUCT.md](PRODUCT.md), the [current project plan](docs/project-reassessment.md), and the [visual/asset/motion brief](docs/design-and-motion-brief.md). Both `app/` and `MenuMini_1/` contain work to evaluate and preserve. Real OTP/merchant activation and current visual/device acceptance remain pending.
+
+The original description and deployment notes below are retained as historical intent. They are not proof that the listed features, provider connections or deployment currently work; use the current plan and scoped validation reports for readiness.
+
 A multi-tenant SaaS platform for Restaurants, Cafes, and Bars. It features 24 pre-built templates, dynamic QR code generation, a Kitchen Display System (KDS), and a robust Admin Dashboard.
 
 ## Architecture

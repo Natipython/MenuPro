@@ -1,0 +1,25 @@
+$kind: http-request
+method: POST
+url: '{{baseUrl}}/merchant/orders/{{orderId}}/cash-receipts'
+order: 9000
+body:
+  type: json
+  content: |-
+    {
+      "amount": "140.00",
+      "note": "Local fixture cash receipt"
+    }
+headers:
+- key: Idempotency-Key
+  value: '{{commandRequestKey}}'
+- key: Cookie
+  value: 'menu_staff_session={{staffSession}}'
+- key: X-CSRF-Token
+  value: '{{csrfToken}}'
+- key: Content-Type
+  value: application/json
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: pm.test('Expected status 201', () => pm.expect(pm.response.code).to.eql(201));
+examples: './.resources/recordCash.resources/examples/'

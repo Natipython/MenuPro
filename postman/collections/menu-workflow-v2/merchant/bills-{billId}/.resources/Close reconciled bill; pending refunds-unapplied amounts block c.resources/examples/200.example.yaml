@@ -1,0 +1,21 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/bills/:billId/closures'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"id\": \"00000000-0000-4000-8000-000000000801\",\n  \"visitId\"\
+      : \"00000000-0000-4000-8000-000000000501\",\n  \"branchId\": \"00000000-0000-4000-8000-000000000101\"\
+      ,\n  \"version\": 6,\n  \"status\": \"CLOSED\",\n  \"currency\": \"ETB\",\n\
+      \  \"chargeAmount\": \"70.00\",\n  \"allocatedAmount\": \"70.00\",\n  \"outstandingAmount\"\
+      : \"0.00\",\n  \"unappliedAmount\": \"0.00\",\n  \"refundPendingAmount\": \"\
+      0.00\",\n  \"settlement\": \"PAID\"\n}"

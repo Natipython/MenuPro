@@ -1,0 +1,19 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/onboarding/validation'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"valid\": true,\n  \"nextStep\": \"VERIFY_REGISTRANT_PHONE\",\n\
+      \  \"businessTypeId\": \"cafe-and-restaurant\",\n  \"registrationPath\": \"\
+      OWNER\",\n  \"ownerIsManager\": false,\n  \"requiredVerifications\": [\n   \
+      \ \"REGISTRANT_PHONE\",\n    \"MANAGER_INVITATION_ACCEPTANCE\"\n  ]\n}"

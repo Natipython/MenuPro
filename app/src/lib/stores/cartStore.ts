@@ -7,8 +7,10 @@ export type CartItem = {
     name: string;
     basePrice: number;
     quantity: number;
-    selections: Record<string, any>; // The selected options
+    selections?: Record<string, any>; // The selected options
+    selectedOptions?: Record<string, any>;
     optionsTotal: number; // calculated cost of options
+    specialInstructions?: string;
 };
 
 function createCartStore() {

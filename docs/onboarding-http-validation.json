@@ -1,0 +1,30 @@
+{
+  "verified_at": "2026-10-12T18:43:27.568660+00:00",
+  "passed": 21,
+  "failed": 0,
+  "http_requests": 20,
+  "cases": [
+    "separate owner and manager with no email pass real HTTP validation",
+    "owner who manages the business needs no duplicate manager or email",
+    "manager-led registration explicitly requires owner verification and approval",
+    "same phone in local and international form cannot represent separate people",
+    "nonempty invalid optional email rejected",
+    "invalid phone format rejected",
+    "whitespace-only legal business name rejected",
+    "visual theme rejected as a business type",
+    "duplicate hidden manager cannot bypass same-person rule",
+    "same-person registration cannot assert a separate manager identity",
+    "unconfirmed registration authority rejected",
+    "client cannot add an authority field",
+    "cross-origin contact submission rejected",
+    "non-JSON contact submission rejected",
+    "malformed JSON rejected without echoing submitted details",
+    "oversized body rejected before JSON parsing",
+    "chunked oversized body is bounded without aborting the error response",
+    "non-object body rejected",
+    "all 24 business IDs and labels match the existing source registry and contract",
+    "/onboarding page has no-store response",
+    "/sign-in page has no-store response"
+  ],
+  "scope": "local HTTP validation and page privacy headers only; no verification messages, real login, business creation or persistence"
+}

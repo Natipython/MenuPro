@@ -1,0 +1,60 @@
+$kind: collection
+name: MenuMini workflow v2 design contract
+description: '73 operations: four functional public validation/menu operations, seventeen
+  guest/payer capability operations requiring an explicitly configured limited connection,
+  and 40 private merchant boundaries locked until verified identity exists; 12 operations
+  remain target contracts. Server adapters and database commands have isolated fictional
+  evidence, not real authenticated HTTP acceptance. OTP is deferred. Unverified preparation
+  and the fictional browser rehearsal never create a business, activate a plan or
+  publish a menu. MenuMini has a maximum of two active branches; branch two requires
+  quoted owner price consent and verified SaaS billing. Visit/bill settlement replaces
+  order-linked v1 settlement. Restaurant receipts and SaaS subscription billing are
+  separate. Protected and current public-menu responses are no-store. Server-derived
+  identity, totals, permissions and capabilities are never taken from client assertions.
+  Auth values are intentionally empty. Do not persist real session values or upload
+  them. Each request is an independent scenario with its own matching fixtures.'
+variables:
+- key: baseUrl
+  value: http://localhost:5174/api/v2
+- key: origin
+  value: http://localhost:5174
+- key: venueSlug
+  value: fictional-cafe
+- key: staffSession
+  value: ''
+- key: diningSession
+  value: ''
+- key: billAccess
+  value: ''
+- key: platformSession
+  value: ''
+- key: csrfToken
+  value: ''
+- key: branchId
+  value: 00000000-0000-4000-8000-000000000101
+- key: visitId
+  value: 00000000-0000-4000-8000-000000000501
+- key: tableId
+  value: 00000000-0000-4000-8000-000000000201
+- key: itemId
+  value: 00000000-0000-4000-8000-000000000601
+- key: orderId
+  value: 00000000-0000-4000-8000-000000000701
+- key: billId
+  value: 00000000-0000-4000-8000-000000000801
+- key: claimId
+  value: 00000000-0000-4000-8000-000000000851
+- key: receiptId
+  value: 00000000-0000-4000-8000-000000000861
+- key: refundId
+  value: 00000000-0000-4000-8000-000000000871
+- key: businessId
+  value: 00000000-0000-4000-8000-000000000001
+- key: requestId
+  value: 00000000-0000-4000-8000-000000000881
+- key: quoteId
+  value: 00000000-0000-4000-8000-000000000892
+- key: grantId
+  value: 00000000-0000-4000-8000-000000000899
+- key: requestKey
+  value: 00000000-0000-4000-8000-000000000990

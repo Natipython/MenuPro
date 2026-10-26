@@ -1,0 +1,19 @@
+$kind: http-example
+name: Fictional committed result 201
+request:
+  url: '{{baseUrl}}/merchant/branches/:branchId/staff-visits'
+  method: POST
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"id\": \"00000000-0000-4000-8000-000000000501\",\n  \"branchId\"\
+      : \"00000000-0000-4000-8000-000000000101\",\n  \"tableId\": \"00000000-0000-4000-8000-000000000201\"\
+      ,\n  \"version\": 1,\n  \"status\": \"OPEN\",\n  \"billId\": \"00000000-0000-4000-8000-000000000801\"\
+      \n}"

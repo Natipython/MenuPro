@@ -1,0 +1,84 @@
+{
+  "verified_at": "2026-10-15T13:53:11.635Z",
+  "passed": 42,
+  "failed": 0,
+  "cases": [
+    "unpaired guest cannot order",
+    "ordering session alone has no authorized bill",
+    "unsent order draft prevents rehearsal role change",
+    "order draft blocks conflicting bill authorization input",
+    "guest request waits for staff acceptance",
+    "Guest B does not see Guest A private note or request",
+    "both accepted orders create an unpaid combined bill",
+    "cashier lists Guest A device code",
+    "payer authorization review blocks a conflicting settlement action",
+    "issued bill access code is an opaque bounded fictional capability",
+    "copied bill code is rejected on Guest B",
+    "authorized shared bill includes both accepted charges",
+    "shared bill excludes diner notes and item instructions",
+    "authorized payer sees explicit fictional receiving destination",
+    "transfer report review prevents leaving the underlying guest session",
+    "transfer report requires explicit already-sent acknowledgment",
+    "report has a separate review before submission",
+    "saved transfer report leaves the full bill unpaid",
+    "pending own report prevents another report",
+    "guest pending report appears in cashier review",
+    "settlement review blocks conflicting payer authorization",
+    "cashier separates actual received funds, allocation and unapplied excess",
+    "guest bill reflects only ETB 40 allocated from ETB 110.50",
+    "guest can distinguish reported and actual verified received amounts",
+    "payer cannot see private staff verification note",
+    "desktop shared bill has no horizontal overflow",
+    "guest can revoke only its bill access",
+    "own-order tracking survives ending shared bill access",
+    "authorized Guest B sees shared balance without Guest A transfer reference",
+    "staff revocation removes the shared-bill display",
+    "staff bill revocation preserves own-order tracking",
+    "cashier bill authorization has no 390px horizontal overflow",
+    "cashier bill authorization has no 320px horizontal overflow",
+    "guest shared bill has no 320px horizontal overflow",
+    "own-order tracking precedes menu editing on narrow screens",
+    "guest shared bill has no 390px horizontal overflow",
+    "seating can end without pretending the financial obligation is settled",
+    "ended seating blocks new order submission",
+    "guest still tracks its served order after seating ends",
+    "valid payer access and outstanding funds survive seating end",
+    "cashier retains ended-seating bill with its outstanding and unapplied funds",
+    "connected payer walkthrough produces no browser console errors"
+  ],
+  "viewports": {
+    "desktop": {
+      "documentWidth": 1265,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    "cashierPhone": {
+      "documentWidth": 390,
+      "scrollWidth": 390,
+      "width": 390
+    },
+    "cashierNarrow": {
+      "documentWidth": 320,
+      "scrollWidth": 320,
+      "width": 320
+    },
+    "guestNarrow": {
+      "documentWidth": 320,
+      "menuTop": -364.453125,
+      "scrollWidth": 320,
+      "trackingTop": -806.234375,
+      "width": 320
+    },
+    "guestPhone": {
+      "documentWidth": 390,
+      "scrollWidth": 390,
+      "width": 390
+    }
+  },
+  "console_errors": 0,
+  "screenshots": [
+    "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-payer-shared-bill.png",
+    "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-payer-mobile.png"
+  ],
+  "scope": "actual browser UI with shared fictional in-memory service, guest and cashier views; capability HTTP, database concurrency and restart are tested separately. No real merchant OTP, funds, independent physical devices, production or full-reload command recovery acceptance."
+}

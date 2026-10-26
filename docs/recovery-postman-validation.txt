@@ -1,0 +1,60 @@
+No authorization data found. Please use the `postman login` command.
+Refer:https://learning.postman.com/docs/postman-cli/postman-cli-options/#postman-login
+
+Running your collection...
+postman
+
+Isolated fictional command recovery
+
+Root getGuestOrderRequest
+
+  GET http://127.0.0.1:39317/api/v2/guest/visits/01a140ad-4bc0-7e45-9dae-03f7a5c8e935/order-requests/b75c13b0-5c6d-4044-98bc-ad415b827826 [200 OK, 456 B, 32 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+  Pass  Recovery state matches this prepared attempt
+
+Root cancelGuestOrderRequest
+
+  POST http://127.0.0.1:39317/api/v2/guest/visits/01a140ad-4bc0-7e45-9dae-03f7a5c8e935/order-requests/b75c13b0-5c6d-4044-98bc-ad415b827826/cancellation [200 OK, 536 B, 18 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+  Pass  Recovery state matches this prepared attempt
+
+Root getPayerPaymentRequest
+
+  GET http://127.0.0.1:39317/api/v2/payer/bills/01a140ad-4bc7-7a24-b227-53ec0956f7f6/payment-requests/b75c13b0-5c6d-4044-98bc-ad415b827826 [200 OK, 455 B, 8 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+  Pass  Recovery state matches this prepared attempt
+
+Root cancelPayerPaymentRequest
+
+  POST http://127.0.0.1:39317/api/v2/payer/bills/01a140ad-4bc7-7a24-b227-53ec0956f7f6/payment-requests/b75c13b0-5c6d-4044-98bc-ad415b827826/cancellation [200 OK, 535 B, 19 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+  Pass  Recovery state matches this prepared attempt
+
+--------------------------------------------------------------------
+|                         |           executed |            failed |
+--------------------------+--------------------+--------------------
+|              iterations |                  1 |                 0 |
+--------------------------+--------------------+--------------------
+|                requests |                  4 |                 0 |
+--------------------------+--------------------+--------------------
+|            test-scripts |                  4 |                 0 |
+--------------------------+--------------------+--------------------
+|      prerequest-scripts |                  0 |                 0 |
+--------------------------+--------------------+--------------------
+|              assertions |                 16 |                 0 |
+--------------------------------------------------------------------
+| total run duration: 731 ms                                       |
+--------------------------------------------------------------------
+| total data received: 852 B (approx)                              |
+--------------------------------------------------------------------
+| average response time: 19 ms [min: 8 ms, max: 32 ms, s.d.: 8 ms] |
+--------------------------------------------------------------------
+

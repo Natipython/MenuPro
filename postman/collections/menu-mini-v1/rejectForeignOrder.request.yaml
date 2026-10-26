@@ -1,0 +1,12 @@
+$kind: http-request
+method: GET
+url: '{{baseUrl}}/orders/{{foreignOrderId}}'
+order: 16000
+headers:
+- key: Cookie
+  value: 'menu_dining_session={{diningSession}}'
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: pm.test('guest cannot read another customer order', () => pm.expect(pm.response.code).to.eql(404));
+examples: './.resources/rejectForeignOrder.resources/examples/'

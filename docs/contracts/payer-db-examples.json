@@ -1,0 +1,256 @@
+[
+  {
+    "schema": "PayerCandidates",
+    "value": {
+      "items": [
+        {
+          "grant": {
+            "id": "01a1409b-5eb8-7e74-8206-9b6db213a421",
+            "active": true,
+            "version": 1,
+            "expiresAt": "2026-10-15T21:28:06.58508+03:00"
+          },
+          "expiresAt": "2026-10-16T08:28:05.899635+03:00",
+          "deviceCode": "D82EB2A3",
+          "guestSessionId": "01a1409b-5c08-7b0b-beb1-3389d82eb2a3"
+        },
+        {
+          "grant": {
+            "id": "01a1409b-5d42-7935-8853-effb36a9d516",
+            "active": false,
+            "version": 2,
+            "expiresAt": "2026-10-15T21:28:06.211285+03:00"
+          },
+          "expiresAt": "2026-10-16T08:28:05.941548+03:00",
+          "deviceCode": "457BBFE8",
+          "guestSessionId": "01a1409b-5c34-7a5c-afbd-7343457bbfe8"
+        },
+        {
+          "grant": {
+            "id": "01a1409b-5db0-76ba-89a6-a367a4600c48",
+            "active": true,
+            "version": 1,
+            "expiresAt": "2026-10-15T21:28:06.320848+03:00"
+          },
+          "expiresAt": "2026-10-16T08:28:06.305153+03:00",
+          "deviceCode": "F82A3DA3",
+          "guestSessionId": "01a1409b-5da0-7dcd-8feb-1cc1f82a3da3"
+        },
+        {
+          "grant": {
+            "id": "01a1409b-5e31-7a89-839b-01fde289d6a2",
+            "active": false,
+            "version": 1,
+            "expiresAt": "2026-10-15T20:28:05.451758+03:00"
+          },
+          "expiresAt": "2026-10-16T08:28:06.437715+03:00",
+          "deviceCode": "15ED53A5",
+          "guestSessionId": "01a1409b-5e25-77ea-946b-b55615ed53a5"
+        },
+        {
+          "grant": {
+            "id": "01a1409b-5e58-73ab-b8c0-b8f5ddaf7e05",
+            "active": true,
+            "version": 1,
+            "expiresAt": "2026-10-15T21:28:06.488356+03:00"
+          },
+          "expiresAt": "2026-10-16T08:28:06.479486+03:00",
+          "deviceCode": "86F4C5D9",
+          "guestSessionId": "01a1409b-5e4f-745b-9952-55dc86f4c5d9"
+        },
+        {
+          "grant": {
+            "id": "01a1409b-5e63-731f-9b7e-d913df63e9b1",
+            "active": true,
+            "version": 1,
+            "expiresAt": "2026-10-15T21:28:06.499378+03:00"
+          },
+          "expiresAt": "2026-10-16T08:28:06.491554+03:00",
+          "deviceCode": "C2F97D2A",
+          "guestSessionId": "01a1409b-5e5b-768d-bbfd-10c7c2f97d2a"
+        },
+        {
+          "grant": {
+            "id": "01a1409b-5e71-7249-b919-d0f3b984bf39",
+            "active": true,
+            "version": 1,
+            "expiresAt": "2026-10-15T21:28:06.513315+03:00"
+          },
+          "expiresAt": "2026-10-16T08:28:06.50374+03:00",
+          "deviceCode": "18B4B795",
+          "guestSessionId": "01a1409b-5e67-7926-930e-553318b4b795"
+        },
+        {
+          "grant": {
+            "id": "01a1409b-636d-7163-969c-40913fd1f0e1",
+            "active": false,
+            "version": 2,
+            "expiresAt": "2026-10-15T21:28:07.789233+03:00"
+          },
+          "expiresAt": "2026-10-16T08:28:07.778445+03:00",
+          "deviceCode": "4E85B7A7",
+          "guestSessionId": "01a1409b-6362-72b2-84f8-8e994e85b7a7"
+        }
+      ],
+      "billId": "01a1409b-5bae-793e-a59c-9d0f9b79733f"
+    }
+  },
+  {
+    "schema": "BillGrant",
+    "value": {
+      "id": "01a1409b-5eb8-7e74-8206-9b6db213a421",
+      "active": true,
+      "billId": "01a1409b-5bae-793e-a59c-9d0f9b79733f",
+      "version": 1,
+      "expiresAt": "2026-10-15T21:28:06.58508+03:00",
+      "guestSessionId": "01a1409b-5c08-7b0b-beb1-3389d82eb2a3",
+      "accessToken": "FICTIONAL_PAYER_BBBBBBBBBBBBBBBBBBBBBBBBBB0"
+    }
+  },
+  {
+    "schema": "PayerBinding",
+    "value": {
+      "billId": "01a1409b-5bae-793e-a59c-9d0f9b79733f",
+      "expiresAt": "2026-10-15T21:28:06.12366+03:00"
+    }
+  },
+  {
+    "schema": "PayerDetail",
+    "value": {
+      "bill": {
+        "id": "01a1409b-5bae-793e-a59c-9d0f9b79733f",
+        "status": "OPEN",
+        "version": 5,
+        "visitId": "01a1409b-5bac-702b-8030-be2a6a8db2f8",
+        "branchId": "01a1409b-5009-7ad0-9681-c1001797abb6",
+        "currency": "ETB",
+        "settlement": "PARTIALLY_PAID",
+        "chargeAmount": "160.00",
+        "allocatedAmount": "40.00",
+        "unappliedAmount": "10.00",
+        "outstandingAmount": "120.00",
+        "refundPendingAmount": "0.00"
+      },
+      "claims": {
+        "items": [
+          {
+            "claim": {
+              "id": "01a1409b-5d1b-7dd9-9a4b-be77588e3603",
+              "billId": "01a1409b-5bae-793e-a59c-9d0f9b79733f",
+              "status": "APPROVED",
+              "version": 2,
+              "reportedAmount": "60.00"
+            },
+            "reviewedAt": "2026-10-15T20:28:06.24998+03:00",
+            "submittedAt": "2026-10-15T20:28:06.168319+03:00",
+            "accountLabel": "CBE · Fictional payer venue · …-PAY",
+            "providerReference": "FICTIONAL-PAYER-ONE",
+            "verifiedReceivedAmount": "50.00"
+          }
+        ],
+        "nextCursor": null
+      },
+      "orders": [
+        {
+          "id": "01a1409b-5c86-7785-bbc1-5c8db8aa174e",
+          "items": [
+            {
+              "id": "01a1409b-5c92-782e-92f1-57d364df8e69",
+              "nameEn": "Fictional tea",
+              "quantity": 1,
+              "lineTotal": "80.00",
+              "unitPrice": "80.00",
+              "selectedOptions": [
+                "Regular"
+              ]
+            }
+          ],
+          "status": "ACCEPTED",
+          "totalAmount": "80.00",
+          "creditedAmount": "0.00",
+          "netChargeAmount": "80.00"
+        },
+        {
+          "id": "01a1409b-5ca7-713a-ac53-974ea14f8fd5",
+          "items": [
+            {
+              "id": "01a1409b-5ca9-7867-9cb5-92e7b2ab5eef",
+              "nameEn": "Fictional tea",
+              "quantity": 1,
+              "lineTotal": "80.00",
+              "unitPrice": "80.00",
+              "selectedOptions": [
+                "Regular"
+              ]
+            }
+          ],
+          "status": "ACCEPTED",
+          "totalAmount": "80.00",
+          "creditedAmount": "0.00",
+          "netChargeAmount": "80.00"
+        }
+      ],
+      "accounts": [
+        {
+          "id": "00000000-0000-4000-8000-000000009801",
+          "provider": "CBE",
+          "holderName": "Fictional payer venue",
+          "accountIdentifier": "FICTIONAL-ACCOUNT-DO-NOT-PAY",
+          "destinationFingerprint": "924198cb67bc15579d9fe5abe6b977506bc70fd69ee0909d3f027970a76f7963"
+        }
+      ],
+      "openedAt": "2026-10-15T20:28:05.799142+03:00",
+      "expiresAt": "2026-10-15T21:28:06.12366+03:00",
+      "tableLabel": "Payer table",
+      "visitStatus": "OPEN"
+    }
+  },
+  {
+    "schema": "PayerClaim",
+    "value": {
+      "claim": {
+        "id": "01a1409b-5d1b-7dd9-9a4b-be77588e3603",
+        "billId": "01a1409b-5bae-793e-a59c-9d0f9b79733f",
+        "status": "SUBMITTED",
+        "version": 1,
+        "reportedAmount": "60.00"
+      },
+      "reviewedAt": null,
+      "submittedAt": "2026-10-15T20:28:06.168319+03:00",
+      "accountLabel": "CBE · Fictional payer venue · …-PAY",
+      "providerReference": "FICTIONAL-PAYER-ONE",
+      "verifiedReceivedAmount": null
+    }
+  },
+  {
+    "schema": "PayerClaimList",
+    "value": {
+      "items": [
+        {
+          "claim": {
+            "id": "01a1409b-5d1b-7dd9-9a4b-be77588e3603",
+            "billId": "01a1409b-5bae-793e-a59c-9d0f9b79733f",
+            "status": "APPROVED",
+            "version": 2,
+            "reportedAmount": "60.00"
+          },
+          "reviewedAt": "2026-10-15T20:28:06.24998+03:00",
+          "submittedAt": "2026-10-15T20:28:06.168319+03:00",
+          "accountLabel": "CBE · Fictional payer venue · …-PAY",
+          "providerReference": "FICTIONAL-PAYER-ONE",
+          "verifiedReceivedAmount": "50.00"
+        }
+      ],
+      "nextCursor": "2026-10-15T17:28:06.168319Z~01a1409b-5d1b-7dd9-9a4b-be77588e3603"
+    }
+  },
+  {
+    "schema": "PayerGrantState",
+    "value": {
+      "id": "01a1409b-5d42-7935-8853-effb36a9d516",
+      "active": false,
+      "version": 2,
+      "expiresAt": "2026-10-15T21:28:06.211285+03:00"
+    }
+  }
+]

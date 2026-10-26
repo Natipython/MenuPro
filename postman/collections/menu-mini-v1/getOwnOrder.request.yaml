@@ -1,0 +1,12 @@
+$kind: http-request
+method: GET
+url: '{{baseUrl}}/orders/{{orderId}}'
+order: 4000
+headers:
+- key: Cookie
+  value: 'menu_dining_session={{diningSession}}'
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: pm.test('Expected status 200', () => pm.expect(pm.response.code).to.eql(200));
+examples: './.resources/getOwnOrder.resources/examples/'

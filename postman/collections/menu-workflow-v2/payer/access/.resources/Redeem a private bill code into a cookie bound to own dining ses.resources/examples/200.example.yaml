@@ -1,0 +1,17 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/payer/access'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"billId\": \"00000000-0000-4000-8000-000000000801\",\n  \"expiresAt\"\
+      : \"2026-10-12T18:00:00Z\"\n}"

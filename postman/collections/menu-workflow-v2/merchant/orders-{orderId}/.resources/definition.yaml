@@ -1,0 +1,3 @@
+$kind: collection
+name: orders/{orderId}
+order: 4000

@@ -1,0 +1,22 @@
+$kind: http-example
+name: Fictional intended response
+request:
+  method: GET
+  url: '{{baseUrl}}/orders/{{foreignOrderId}}'
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+  - key: Content-Type
+    value: application/problem+json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "urn:menu-mini:not-found",
+        "title": "Not found",
+        "status": 404,
+        "detail": "guest cannot read another customer order",
+        "code": "NOT_FOUND",
+        "requestId": "fictional-request-id"
+      }

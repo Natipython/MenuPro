@@ -1,0 +1,94 @@
+:root {
+  --bg-dark: #090A0F;
+  --surface-dark: #12141F;
+  --surface-elevated: #1A1D2C;
+  --surface-hover: #222638;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(245, 158, 11, 0.5);
+
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-tertiary: #64748B;
+
+  --amber-400: #FBBF24;
+  --amber-500: #F59E0B;
+  --amber-600: #D97706;
+  --amber-glow: rgba(245, 158, 11, 0.25);
+
+  --color-success: #10B981;
+  --color-error: #EF4444;
+  --color-warning: #F59E0B;
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 120ms;
+  --duration-normal: 220ms;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Tactile Button Feedback */
+.btn-tactile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  border: none;
+  transition: transform var(--duration-fast) var(--ease-spring), filter var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+  will-change: transform;
+}
+
+.btn-tactile:hover {
+  filter: brightness(1.08);
+}
+
+.btn-tactile:active {
+  transform: scale(0.96);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--amber-500), var(--amber-600));
+  color: #000000;
+  box-shadow: 0 4px 14px var(--amber-glow);
+}
+
+.btn-secondary {
+  background: var(--surface-elevated);
+  color: #FFFFFF;
+  border: 1px solid var(--border);
+}
+
+.card {
+  background: var(--surface-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}

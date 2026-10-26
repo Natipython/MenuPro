@@ -1,0 +1,3 @@
+$kind: collection
+name: visits/{visitId}
+order: 3000

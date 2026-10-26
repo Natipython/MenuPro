@@ -104,6 +104,7 @@ model Branch {
   customerFeedbacks CustomerFeedback[]
   announcements     Announcement[]
   auditLogs         AuditLog[]
+  customPayments    CustomPaymentMethod[]
 }
 
 enum BranchType {
@@ -499,6 +500,8 @@ model OrderStatusLog {
 }
 
 model Payment {
+  customMethodId String?       @db.Uuid
+  customMethod   CustomPaymentMethod? @relation(fields: [customMethodId], references: [id])
   id             String        @id @default(uuid()) @db.Uuid
   orderId        String        @unique @db.Uuid
   order          Order         @relation(fields: [orderId], references: [id], onDelete: Cascade)
@@ -518,6 +521,7 @@ enum PaymentMethod {
   MOBILE_MONEY
   BANK_TRANSFER
   WALLET
+  CUSTOM_QR
 }
 
 // 📊 Accountability, Reporting & Audit
@@ -611,4 +615,22 @@ enum AnnouncementType {
   WARNING
   PROMO
   HOLIDAY
+}
+
+// 💰 Custom Payment Methods (Ethiopian Banks, Wallets, etc.)
+model CustomPaymentMethod {
+  id              String   @id @default(uuid()) @db.Uuid
+  businessId      String   @db.Uuid
+  business        Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  providerName    String   @db.VarChar(100) // e.g. "telebirr", "CBE Birr"
+  accountName     String   @db.VarChar(255)
+  accountNumber   String   @db.VarChar(100)
+  qrDataPayload   String?  @db.Text         // Raw decoded text from their physical QR
+  designSettings  Json?    @db.JsonB        // Colors, logo url, frame text
+  instructions    String?  @db.Text         // E.g. "Please include table number"
+  isActive        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  payments        Payment[]
 }

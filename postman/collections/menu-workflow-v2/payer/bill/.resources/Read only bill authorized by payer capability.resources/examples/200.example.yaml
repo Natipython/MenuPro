@@ -1,0 +1,41 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/payer/bill'
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"bill\": {\n    \"id\": \"00000000-0000-4000-8000-000000000801\"\
+      ,\n    \"visitId\": \"00000000-0000-4000-8000-000000000501\",\n    \"branchId\"\
+      : \"00000000-0000-4000-8000-000000000101\",\n    \"version\": 3,\n    \"status\"\
+      : \"FINALIZED\",\n    \"currency\": \"ETB\",\n    \"chargeAmount\": \"70.00\"\
+      ,\n    \"allocatedAmount\": \"0.00\",\n    \"outstandingAmount\": \"70.00\"\
+      ,\n    \"unappliedAmount\": \"0.00\",\n    \"refundPendingAmount\": \"0.00\"\
+      ,\n    \"settlement\": \"UNPAID\"\n  },\n  \"tableLabel\": \"Table 1\",\n  \"\
+      visitStatus\": \"OPEN\",\n  \"openedAt\": \"2026-10-12T17:00:00Z\",\n  \"expiresAt\"\
+      : \"2026-10-12T18:00:00Z\",\n  \"orders\": [\n    {\n      \"id\": \"00000000-0000-4000-8000-000000000701\"\
+      ,\n      \"status\": \"ACCEPTED\",\n      \"totalAmount\": \"70.00\",\n    \
+      \  \"creditedAmount\": \"0.00\",\n      \"netChargeAmount\": \"70.00\",\n  \
+      \    \"items\": [\n        {\n          \"id\": \"00000000-0000-4000-8000-000000000711\"\
+      ,\n          \"nameEn\": \"Macchiato\",\n          \"quantity\": 1,\n      \
+      \    \"unitPrice\": \"70.00\",\n          \"lineTotal\": \"70.00\",\n      \
+      \    \"selectedOptions\": []\n        }\n      ]\n    }\n  ],\n  \"accounts\"\
+      : [\n    {\n      \"id\": \"00000000-0000-4000-8000-000000000811\",\n      \"\
+      provider\": \"CBE\",\n      \"holderName\": \"Fictional Cafe\",\n      \"accountIdentifier\"\
+      : \"FICTIONAL-ACCOUNT-DO-NOT-PAY\",\n      \"destinationFingerprint\": \"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\"\
+      \n    }\n  ],\n  \"claims\": {\n    \"items\": [\n      {\n        \"claim\"\
+      : {\n          \"id\": \"00000000-0000-4000-8000-000000000851\",\n         \
+      \ \"billId\": \"00000000-0000-4000-8000-000000000801\",\n          \"version\"\
+      : 1,\n          \"status\": \"SUBMITTED\",\n          \"reportedAmount\": \"\
+      70.00\"\n        },\n        \"providerReference\": \"FICTIONAL-TXN-ONE\",\n\
+      \        \"accountLabel\": \"CBE · Fictional Cafe · …9601\",\n        \"submittedAt\"\
+      : \"2026-10-12T17:00:00Z\",\n        \"reviewedAt\": null,\n        \"verifiedReceivedAmount\"\
+      : null\n      }\n    ],\n    \"nextCursor\": null\n  }\n}"

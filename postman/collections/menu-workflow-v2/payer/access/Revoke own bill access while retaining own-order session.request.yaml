@@ -1,0 +1,41 @@
+$kind: http-request
+description: Revoke own bill access while retaining own-order session Same guest and
+  bill binding, expiry, revocation and CSRF are checked server-side. No caller UUID/header
+  is identity. Shared details exclude other diners notes and payment references. A
+  transfer report records no received or allocated funds. Destination changes and
+  duplicate pending/recorded references require cashier review. No bank transfer is
+  initiated. Independent fictional scenario; protected operations require matching
+  backend fixtures and ephemeral authenticated sessions. Not a runnable restaurant
+  transaction sequence.
+url: '{{baseUrl}}/payer/access/revocation'
+method: POST
+headers:
+- key: Accept
+  value: application/json
+- key: Content-Type
+  value: application/json
+- key: Idempotency-Key
+  value: 0c416efd-f3a3-5284-9581-4afb4138a822
+- key: Origin
+  value: '{{origin}}'
+- key: X-CSRF-Token
+  value: '{{csrfToken}}'
+- key: Cookie
+  value: __Host-menu_bill_access={{billAccess}}; __Host-menu_dining={{diningSession}}
+body:
+  type: json
+  content: '{}'
+settings: {}
+examples: ./.resources/Revoke own bill access while retaining own-order session.resources/examples
+order: 2000
+name: leavePayerAccess
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: "pm.test(\"Command succeeds for its prepared fixture\", () => pm.expect(pm.response.code).to.be.within(200,\
+    \ 299));\npm.test(\"Private response is not cached\", () => pm.expect(pm.response.headers.get(\"\
+    Cache-Control\") || \"\").to.include(\"no-store\"));\npm.test(\"Money fields are\
+    \ exact decimal strings\", () => {\n  function check(v) { if (v && typeof v ===\
+    \ \"object\") Object.keys(v).forEach(k => {\n    if (/(Amount|Price|Total)$/.test(k)\
+    \ && !(k === \"verifiedReceivedAmount\" && v[k] === null)) pm.expect(v[k]).to.match(/^(0|[1-9][0-9]{0,9})\\\
+    .[0-9]{2}$/);\n    else check(v[k]); }); }\n  check(pm.response.json());\n});"

@@ -1,0 +1,26 @@
+$kind: http-request
+method: POST
+url: '{{baseUrl}}/orders/{{orderId}}/payment-claims'
+order: 5000
+body:
+  type: json
+  content: |-
+    {
+      "paymentAccountId": "00000000-0000-4000-8000-000000000801",
+      "providerReference": "DEMO-TXN",
+      "reportedAmount": "140.00"
+    }
+headers:
+- key: Idempotency-Key
+  value: '{{commandRequestKey}}'
+- key: Cookie
+  value: 'menu_dining_session={{diningSession}}'
+- key: Content-Type
+  value: application/json
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: |-
+    pm.test('Expected status 201', () => pm.expect(pm.response.code).to.eql(201));
+    pm.test('Transfer claim stays pending', () => pm.expect(pm.response.json().status).to.eql('SUBMITTED'));
+examples: './.resources/reportTransfer.resources/examples/'

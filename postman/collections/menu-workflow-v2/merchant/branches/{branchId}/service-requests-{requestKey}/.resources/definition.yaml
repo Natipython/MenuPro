@@ -1,0 +1,3 @@
+$kind: collection
+name: service-requests/{requestKey}
+order: 14000

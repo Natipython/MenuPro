@@ -1,0 +1,47 @@
+$kind: http-request
+description: Join confirmed visit with private pairing token Cookie capability is
+  verified server-side on every request. UUIDs and client identity headers grant no
+  access. Mutations require exact Origin and bounded JSON; authenticated mutations
+  also require session-bound CSRF. Table access never grants a visit or payer access.
+  No private token appears in URLs or server logs. Session creation never silently
+  replaces an existing session. Independent fictional scenario; protected operations
+  require matching backend fixtures and ephemeral authenticated sessions. Not a runnable
+  restaurant transaction sequence.
+url: '{{baseUrl}}/guest/visits/:visitId/association'
+method: POST
+headers:
+- key: Accept
+  value: application/json
+- key: Content-Type
+  value: application/json
+- key: Idempotency-Key
+  value: e53cbb1f-7ca2-540c-af8b-e10b39b68855
+- key: Origin
+  value: '{{origin}}'
+- key: X-CSRF-Token
+  value: '{{csrfToken}}'
+- key: Cookie
+  value: __Host-menu_dining={{diningSession}}
+pathVariables:
+- key: visitId
+  value: '{{visitId}}'
+  disabled: false
+  description: '(Required) '
+body:
+  type: json
+  content: "{\n  \"pairingToken\": \"FICTIONAL_PRIVATE_VISIT_TOKEN_PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP\"\
+    \n}"
+settings: {}
+examples: ./.resources/Join confirmed visit with private pairing token.resources/examples
+order: 1000
+name: pairGuestVisit
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: "pm.test(\"Command succeeds for its prepared fixture\", () => pm.expect(pm.response.code).to.be.within(200,\
+    \ 299));\npm.test(\"Private response is not cached\", () => pm.expect(pm.response.headers.get(\"\
+    Cache-Control\") || \"\").to.include(\"no-store\"));\npm.test(\"Money fields are\
+    \ exact decimal strings\", () => {\n  function check(v) { if (v && typeof v ===\
+    \ \"object\") Object.keys(v).forEach(k => {\n    if (/(Amount|Price|Total)$/.test(k)\
+    \ && !(k === \"verifiedReceivedAmount\" && v[k] === null)) pm.expect(v[k]).to.match(/^(0|[1-9][0-9]{0,9})\\\
+    .[0-9]{2}$/);\n    else check(v[k]); }); }\n  check(pm.response.json());\n});"

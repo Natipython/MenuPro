@@ -1,0 +1,50 @@
+No authorization data found. Please use the `postman login` command.
+Refer:https://learning.postman.com/docs/postman-cli/postman-cli-options/#postman-login
+
+Running your collection...
+postman
+
+MenuMini workflow v2 design contract
+
+Root getPublishedMenu
+
+  GET http://127.0.0.1:5196/api/v2/public/venues/fictional-published-cafe/menu [200 OK, 1.18 KB, 25 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Money fields are exact decimal strings
+
+Folder onboarding
+Sub-folder validateBusinessRegistration
+
+  POST http://127.0.0.1:5196/api/v2/onboarding/validation [200 OK, 525 B, 39 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+  Pass  Format check is not authentication
+
+Sub-folder validateSetupDraft
+
+  POST http://127.0.0.1:5196/api/v2/onboarding/setup-validation [200 OK, 563 B, 16 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+  Pass  Draft preparation cannot activate access or publication
+
+---------------------------------------------------------------------
+|                         |           executed |             failed |
+--------------------------+--------------------+---------------------
+|              iterations |                  1 |                  0 |
+--------------------------+--------------------+---------------------
+|                requests |                  3 |                  0 |
+--------------------------+--------------------+---------------------
+|            test-scripts |                  3 |                  0 |
+--------------------------+--------------------+---------------------
+|      prerequest-scripts |                  0 |                  0 |
+--------------------------+--------------------+---------------------
+|              assertions |                 10 |                  0 |
+---------------------------------------------------------------------
+| total run duration: 866 ms                                        |
+---------------------------------------------------------------------
+| total data received: 1.39 KB (approx)                             |
+---------------------------------------------------------------------
+| average response time: 27 ms [min: 16 ms, max: 39 ms, s.d.: 9 ms] |
+---------------------------------------------------------------------

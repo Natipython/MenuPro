@@ -1,0 +1,46 @@
+$kind: http-request
+description: Record actual received amount once Manual settlement records evidence;
+  it never moves money. Receipt and allocation are separate. Exact original responses
+  survive retries. Real identity, receiving-account procedures and field acceptance
+  remain pending. Independent fictional scenario; protected operations require matching
+  backend fixtures and ephemeral authenticated sessions. Not a runnable restaurant
+  transaction sequence.
+url: '{{baseUrl}}/merchant/bills/:billId/receipts'
+method: POST
+headers:
+- key: Accept
+  value: application/json
+- key: Content-Type
+  value: application/json
+- key: Idempotency-Key
+  value: b63405f8-4567-5e07-b11a-a95111db47d3
+- key: Origin
+  value: '{{origin}}'
+- key: X-CSRF-Token
+  value: '{{csrfToken}}'
+- key: Cookie
+  value: menu_staff_session={{staffSession}}
+pathVariables:
+- key: billId
+  value: '{{billId}}'
+  disabled: false
+  description: '(Required) '
+body:
+  type: json
+  content: "{\n  \"method\": \"CASH\",\n  \"receivedAmount\": \"70.00\",\n  \"tenderedAmount\"\
+    : \"100.00\",\n  \"changeAmount\": \"30.00\",\n  \"verificationNote\": \"Fictional\
+    \ cash counted; change returned\",\n  \"fundsConfirmed\": true\n}"
+settings: {}
+examples: ./.resources/Record actual received amount once.resources/examples
+order: 8000
+name: recordReceipt
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: "pm.test(\"Command succeeds for its prepared fixture\", () => pm.expect(pm.response.code).to.be.within(200,\
+    \ 299));\npm.test(\"Private response is not cached\", () => pm.expect(pm.response.headers.get(\"\
+    Cache-Control\") || \"\").to.include(\"no-store\"));\npm.test(\"Money fields are\
+    \ exact decimal strings\", () => {\n  function check(v) { if (v && typeof v ===\
+    \ \"object\") Object.keys(v).forEach(k => {\n    if (/(Amount|Price|Total)$/.test(k)\
+    \ && !(k === \"verifiedReceivedAmount\" && v[k] === null)) pm.expect(v[k]).to.match(/^(0|[1-9][0-9]{0,9})\\\
+    .[0-9]{2}$/);\n    else check(v[k]); }); }\n  check(pm.response.json());\n});"

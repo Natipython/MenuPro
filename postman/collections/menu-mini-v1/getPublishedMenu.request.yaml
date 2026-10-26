@@ -1,0 +1,9 @@
+$kind: http-request
+method: GET
+url: '{{baseUrl}}/public/venues/{{venueSlug}}/menu'
+order: 1000
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: pm.test('Expected status 200', () => pm.expect(pm.response.code).to.eql(200));
+examples: './.resources/getPublishedMenu.resources/examples/'

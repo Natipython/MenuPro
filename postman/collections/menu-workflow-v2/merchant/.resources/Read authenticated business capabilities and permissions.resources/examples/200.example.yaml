@@ -1,0 +1,19 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/context'
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"userId\": \"00000000-0000-4000-8000-000000000011\",\n  \"businessId\"\
+      : \"00000000-0000-4000-8000-000000000001\",\n  \"plan\": \"MINI\",\n  \"branchLimit\"\
+      : 1,\n  \"permissions\": [\n    \"visits.manage\",\n    \"payments.record\"\n\
+      \  ]\n}"

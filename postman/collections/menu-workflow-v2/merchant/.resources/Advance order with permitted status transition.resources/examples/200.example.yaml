@@ -1,0 +1,23 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/orders/:orderId/transitions'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"id\": \"00000000-0000-4000-8000-000000000701\",\n  \"visitId\"\
+      : \"00000000-0000-4000-8000-000000000501\",\n  \"branchId\": \"00000000-0000-4000-8000-000000000101\"\
+      ,\n  \"source\": \"GUEST\",\n  \"status\": \"ACCEPTED\",\n  \"version\": 2,\n\
+      \  \"currency\": \"ETB\",\n  \"totalAmount\": \"70.00\",\n  \"items\": [\n \
+      \   {\n      \"id\": \"00000000-0000-4000-8000-000000000711\",\n      \"nameEn\"\
+      : \"Macchiato\",\n      \"quantity\": 1,\n      \"unitPrice\": \"70.00\",\n\
+      \      \"lineTotal\": \"70.00\",\n      \"selectedOptions\": []\n    }\n  ]\n\
+      }"

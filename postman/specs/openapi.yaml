@@ -1,0 +1,1381 @@
+openapi: 3.1.0
+info:
+  title: MenuMini v1 transaction contract
+  version: 0.1.0
+  description: 'Foundation contract, not implemented routes or a release claim. Selected
+    architecture: SvelteKit/TypeScript/PostgreSQL. Order fulfilment and payment settlement
+    are independent. Public menus only are cacheable; all session/order/payment/staff
+    responses are no-store. Authentication library routes and upload/refund/print/AI
+    APIs are separate later contracts.'
+servers:
+- url: http://localhost:5174/api/v1
+  description: Local intended implementation; current prototype does not implement
+    these routes
+tags:
+- name: Public dining
+  description: Published catalog and scoped guest operations
+- name: Merchant
+  description: Authenticated tenant operations
+paths:
+  /public/venues/{venueSlug}/menu:
+    get:
+      operationId: getPublishedMenu
+      summary: Load the current published public menu
+      description: Public projection only; return ETag and public cache headers. Unknown/unpublished
+        venue is 404. No customer, staff, receipt or session data.
+      tags:
+      - Public dining
+      security: []
+      parameters:
+      - name: venueSlug
+        in: path
+        required: true
+        schema:
+          type: string
+          pattern: ^[a-z0-9]+(-[a-z0-9]+)*$
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicMenu'
+              example: &id003
+                publicationId: 00000000-0000-4000-8000-000000000401
+                revision: 1
+                venueId: 00000000-0000-4000-8000-000000000101
+                venueName: Example Cafe
+                currency: ETB
+                content:
+                  themeId: mini-warm-habesha
+                  primaryColor: '#F59E0B'
+                  sections:
+                  - id: 00000000-0000-4000-8000-000000000501
+                    nameEn: Coffee
+                    items:
+                    - id: 00000000-0000-4000-8000-000000000601
+                      nameEn: Macchiato
+                      basePrice: '70.00'
+                      availableNow: true
+                      modifiers: []
+          headers:
+            X-Request-Id:
+              schema:
+                type: string
+            ETag:
+              schema:
+                type: string
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409'
+        '422':
+          $ref: '#/components/responses/422'
+        '429':
+          $ref: '#/components/responses/429'
+        '503':
+          $ref: '#/components/responses/503'
+        '304':
+          description: Publication ETag unchanged; empty body
+  /dining-sessions:
+    post:
+      operationId: createDiningSession
+      summary: Resolve a table token and establish a guest session
+      description: Check active venue/table and rate limits. Set an HttpOnly guest
+        cookie and no-store; the table token alone is not proof of physical presence.
+        Reuse a valid cookie for the same venue/table; never silently replace an in-flight
+        order retry context.
+      tags:
+      - Public dining
+      security: []
+      parameters: []
+      responses:
+        '201':
+          description: Committed resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiningSession'
+          headers:
+            X-Request-Id:
+              schema:
+                type: string
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409'
+        '422':
+          $ref: '#/components/responses/422'
+        '429':
+          $ref: '#/components/responses/429'
+        '503':
+          $ref: '#/components/responses/503'
+        '200':
+          description: Reuse the same valid venue/table dining session cookie on reload
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiningSession'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateDiningSession'
+  /orders:
+    post:
+      operationId: submitOrder
+      summary: Commit a server-priced order exactly once
+      description: 'Check guest ownership, current publication, availability and modifiers.
+        Ignore no client price: those fields are rejected. Commit sealed order, snapshots,
+        event and outbox together. Return only after commit; clear client draft only
+        then.'
+      tags:
+      - Public dining
+      security:
+      - diningSession: []
+      parameters:
+      - $ref: '#/components/parameters/IdempotencyKey'
+      responses:
+        '201':
+          description: Committed resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+              example: &id001
+                id: 00000000-0000-4000-8000-000000000701
+                version: 1
+                venueId: 00000000-0000-4000-8000-000000000101
+                tableLabel: '4'
+                status: SUBMITTED
+                paymentStatus: UNPAID
+                verificationPending: false
+                currency: ETB
+                subtotal: '140.00'
+                taxAmount: '0.00'
+                serviceAmount: '0.00'
+                discountAmount: '0.00'
+                totalAmount: '140.00'
+                outstandingAmount: '140.00'
+                items:
+                - id: 00000000-0000-4000-8000-000000000711
+                  nameEn: Macchiato
+                  quantity: 2
+                  unitPrice: '70.00'
+                  lineTotal: '140.00'
+                  selectedOptions: []
+                createdAt: '2026-10-12T03:00:00Z'
+          headers:
+            X-Request-Id:
+              schema:
+                type: string
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409'
+        '422':
+          $ref: '#/components/responses/422'
+        '429':
+          $ref: '#/components/responses/429'
+        '503':
+          $ref: '#/components/responses/503'
+        '200':
+          description: Replay of the same committed command; no duplicate resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateOrder'
+  /orders/{orderId}:
+    get:
+      operationId: getOwnOrder
+      summary: Read an order owned by this guest session
+      description: Filter by both guest session and venue. Respond no-store; support
+        conditional status polling without publishing private order data.
+      tags:
+      - Public dining
+      security:
+      - diningSession: []
+      parameters:
+      - name: orderId
+        in: path
+        required: true
+        schema: &id002
+          type: string
+          format: uuid
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+              example: *id001
+          headers:
+            X-Request-Id:
+              schema:
+                type: string
+            ETag:
+              schema:
+                type: string
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409'
+        '422':
+          $ref: '#/components/responses/422'
+        '429':
+          $ref: '#/components/responses/429'
+        '503':
+          $ref: '#/components/responses/503'
+        '304':
+          description: Owned order version unchanged; empty body, still private/no-store
+  /orders/{orderId}/payment-claims:
+    post:
+      operationId: reportTransfer
+      summary: Report a transfer for staff verification
+      description: Does not mark the order paid. Validate account belongs to venue,
+        guest owns order, receipt asset is private and scoped, and reference is bounded.
+        Preserve the provider reference without undocumented case conversion.
+      tags:
+      - Public dining
+      security:
+      - diningSession: []
+      parameters:
+      - name: orderId
+        in: path
+        required: true
+        schema: *id002
+      - $ref: '#/components/parameters/IdempotencyKey'
+      responses:
+        '201':
+          description: Committed resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentClaim'
+          headers:
+            X-Request-Id:
+              schema:
+                type: string
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409'
+        '422':
+          $ref: '#/components/responses/422'
+        '429':
+          $ref: '#/components/responses/429'
+        '503':
+          $ref: '#/components/responses/503'
+        '200':
+          description: Replay of the same committed command; no duplicate resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentClaim'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PaymentClaimInput'
+  /merchant/venues/{venueId}/orders:
+    get:
+      operationId: getMerchantOrders
+      summary: Read the real venue order feed
+      description: Authenticated membership and venue scope required. Cursor pagination;
+        no-store. Customer information is not public.
+      tags:
+      - Merchant
+      security:
+      - staffSession: []
+      parameters:
+      - name: venueId
+        in: path
+        required: true
+        schema: *id002
+      - name: cursor
+        in: query
+        schema:
+          type: string
+          maxLength: 500
+      - name: limit
+        in: query
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 100
+          default: 30
+      - name: status
+        in: query
+        schema:
+          $ref: '#/components/schemas/OrderStatus'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderPage'
+          headers:
+            X-Request-Id:
+              schema:
+                type: string
+            ETag:
+              schema:
+                type: string
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409'
+        '422':
+          $ref: '#/components/responses/422'
+        '429':
+          $ref: '#/components/responses/429'
+        '503':
+          $ref: '#/components/responses/503'
+  /merchant/orders/{orderId}:
+    patch:
+      operationId: advanceOrder
+      summary: Advance an order with optimistic concurrency
+      description: Owner/operator may accept an unpaid order. Check the allowed transition
+        and expected version; record event/outbox atomically. The command cannot set
+        paid state.
+      tags:
+      - Merchant
+      security:
+      - staffSession: []
+        csrfToken: []
+      parameters:
+      - name: orderId
+        in: path
+        required: true
+        schema: *id002
+      - $ref: '#/components/parameters/IfMatch'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+          headers:
+            X-Request-Id:
+              schema:
+                type: string
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409'
+        '422':
+          $ref: '#/components/responses/422'
+        '429':
+          $ref: '#/components/responses/429'
+        '503':
+          $ref: '#/components/responses/503'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderStateChange'
+  /merchant/payment-claims/{claimId}/reviews:
+    post:
+      operationId: reviewTransfer
+      summary: Approve or reject a manually checked transfer
+      description: Owner/operator only. APPROVE requires verifiedAmount equal to the
+        outstanding balance, actual credited-fund evidence, and a matching receipt/audit/outbox
+        commit. REJECT requires a reason and audit event. Never derive verification
+        from a customer screenshot or AI. Repeated identical command is safe; changed
+        body under same key conflicts.
+      tags:
+      - Merchant
+      security:
+      - staffSession: []
+        csrfToken: []
+      parameters:
+      - name: claimId
+        in: path
+        required: true
+        schema: *id002
+      - $ref: '#/components/parameters/IdempotencyKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentClaim'
+          headers:
+            X-Request-Id:
+              schema:
+                type: string
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409'
+        '422':
+          $ref: '#/components/responses/422'
+        '429':
+          $ref: '#/components/responses/429'
+        '503':
+          $ref: '#/components/responses/503'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReviewPayment'
+  /merchant/orders/{orderId}/cash-receipts:
+    post:
+      operationId: recordCash
+      summary: Record actual cash received
+      description: Owner/operator only; amount must match the outstanding balance
+        for v1. The command records a receipt, audit event and outbox atomically;
+        it does not instruct a bank transfer.
+      tags:
+      - Merchant
+      security:
+      - staffSession: []
+        csrfToken: []
+      parameters:
+      - name: orderId
+        in: path
+        required: true
+        schema: *id002
+      - $ref: '#/components/parameters/IdempotencyKey'
+      responses:
+        '201':
+          description: Committed resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentReceipt'
+          headers:
+            X-Request-Id:
+              schema:
+                type: string
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409'
+        '422':
+          $ref: '#/components/responses/422'
+        '429':
+          $ref: '#/components/responses/429'
+        '503':
+          $ref: '#/components/responses/503'
+        '200':
+          description: Replay of the same committed command; no duplicate resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentReceipt'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CashReceiptInput'
+  /merchant/venues/{venueId}/menu-draft:
+    get:
+      operationId: getMenuDraft
+      summary: Load the persistent editable menu draft
+      description: Owner only. No-store; return the version as ETag. This is not a
+        public menu publication.
+      tags:
+      - Merchant
+      security:
+      - staffSession: []
+      parameters:
+      - name: venueId
+        in: path
+        required: true
+        schema: *id002
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MenuDraft'
+          headers:
+            X-Request-Id:
+              schema:
+                type: string
+            ETag:
+              schema:
+                type: string
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409'
+        '422':
+          $ref: '#/components/responses/422'
+        '429':
+          $ref: '#/components/responses/429'
+        '503':
+          $ref: '#/components/responses/503'
+    put:
+      operationId: replaceMenuDraft
+      summary: Replace the draft with a validated catalog
+      description: Owner only. Validate supported features, exact monetary strings,
+        modifier bounds and IDs belonging to this venue. Archive historical referenced
+        items; do not delete order history. Change the draft version but do not change
+        a publication.
+      tags:
+      - Merchant
+      security:
+      - staffSession: []
+        csrfToken: []
+      parameters:
+      - name: venueId
+        in: path
+        required: true
+        schema: *id002
+      - $ref: '#/components/parameters/IfMatch'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MenuDraft'
+          headers:
+            X-Request-Id:
+              schema:
+                type: string
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409'
+        '422':
+          $ref: '#/components/responses/422'
+        '429':
+          $ref: '#/components/responses/429'
+        '503':
+          $ref: '#/components/responses/503'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MenuDraftInput'
+  /merchant/venues/{venueId}/menu-publications:
+    post:
+      operationId: publishMenu
+      summary: Publish an immutable menu revision
+      description: Owner only. Lock venue, check draftVersion, validate and sanitize
+        public snapshot, allocate next revision, persist snapshot and update public
+        routing in one transaction. Old orders retain their publication.
+      tags:
+      - Merchant
+      security:
+      - staffSession: []
+        csrfToken: []
+      parameters:
+      - name: venueId
+        in: path
+        required: true
+        schema: *id002
+      - $ref: '#/components/parameters/IdempotencyKey'
+      responses:
+        '201':
+          description: Committed resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicMenu'
+              example: *id003
+          headers:
+            X-Request-Id:
+              schema:
+                type: string
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409'
+        '422':
+          $ref: '#/components/responses/422'
+        '429':
+          $ref: '#/components/responses/429'
+        '503':
+          $ref: '#/components/responses/503'
+        '200':
+          description: Replay of the same committed command; no duplicate resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicMenu'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PublishMenu'
+  /payment-accounts:
+    get:
+      operationId: getReceivingAccounts
+      summary: List approved receiving accounts for this dining venue
+      description: Resolve guest session/venue first. Return only active accounts
+        with ownership verification; no-store. Does not initiate a transfer.
+      tags:
+      - Public dining
+      security:
+      - diningSession: []
+      responses:
+        '200':
+          description: Scoped receiving accounts
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReceivingAccountList'
+              example:
+              - id: 00000000-0000-4000-8000-000000000801
+                provider: CBE
+                holderName: Example Cafe
+                accountIdentifier: DEMO-ACCOUNT
+        '401':
+          $ref: '#/components/responses/401'
+        '404':
+          $ref: '#/components/responses/404'
+        '429':
+          $ref: '#/components/responses/429'
+        '503':
+          $ref: '#/components/responses/503'
+components:
+  schemas:
+    Money:
+      type: string
+      pattern: ^(0|[1-9][0-9]{0,9})\.[0-9]{2}$
+      examples:
+      - '140.00'
+    Problem:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          type: string
+          format: uri
+        title:
+          type: string
+          maxLength: 200
+        status:
+          type: integer
+          minimum: 400
+          maximum: 599
+        detail:
+          type: string
+          maxLength: 1000
+        code:
+          type: string
+          maxLength: 80
+        requestId:
+          type: string
+          maxLength: 80
+        errors:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              field:
+                type: string
+                maxLength: 200
+              code:
+                type: string
+                maxLength: 80
+            required:
+            - field
+            - code
+          minItems: 0
+          maxItems: 100
+      required:
+      - type
+      - title
+      - status
+      - detail
+      - code
+      - requestId
+    CreateDiningSession:
+      type: object
+      additionalProperties: false
+      properties:
+        tableToken:
+          type: string
+          minLength: 32
+          maxLength: 128
+          pattern: ^[A-Za-z0-9_-]+$
+      required:
+      - tableToken
+    DiningSession:
+      type: object
+      additionalProperties: false
+      properties:
+        id: *id002
+        venueId: *id002
+        tableId: *id002
+        tableLabel:
+          type: string
+          maxLength: 40
+        expiresAt:
+          type: string
+          format: date-time
+      required:
+      - id
+      - venueId
+      - tableId
+      - tableLabel
+      - expiresAt
+    OrderSelection:
+      type: object
+      additionalProperties: false
+      properties:
+        itemId: *id002
+        quantity:
+          type: integer
+          minimum: 1
+          maximum: 99
+        choiceIds:
+          type: array
+          items: *id002
+          minItems: 0
+          maxItems: 30
+        specialInstructions:
+          type: string
+          maxLength: 500
+      required:
+      - itemId
+      - quantity
+      - choiceIds
+    CreateOrder:
+      type: object
+      additionalProperties: false
+      properties:
+        menuPublicationId: *id002
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderSelection'
+          minItems: 1
+          maxItems: 100
+        customerNote:
+          type: string
+          maxLength: 1000
+      required:
+      - menuPublicationId
+      - items
+    OrderStatus:
+      type: string
+      enum:
+      - SUBMITTED
+      - ACCEPTED
+      - PREPARING
+      - READY
+      - COMPLETED
+      - CANCELLED
+    PaymentStatus:
+      type: string
+      enum:
+      - UNPAID
+      - PARTIALLY_PAID
+      - PAID
+      - REFUNDED
+      - NO_PAYMENT_DUE
+    OrderLine:
+      type: object
+      additionalProperties: false
+      properties:
+        id: *id002
+        nameEn:
+          type: string
+          maxLength: 160
+        nameAm:
+          type: string
+          maxLength: 160
+        quantity:
+          type: integer
+        unitPrice:
+          $ref: '#/components/schemas/Money'
+        lineTotal:
+          $ref: '#/components/schemas/Money'
+        selectedOptions:
+          type: array
+          items:
+            type: string
+            maxLength: 120
+          minItems: 0
+          maxItems: 30
+      required:
+      - id
+      - nameEn
+      - quantity
+      - unitPrice
+      - lineTotal
+      - selectedOptions
+    Order:
+      type: object
+      additionalProperties: false
+      properties:
+        id: *id002
+        version:
+          type: integer
+          minimum: 1
+        venueId: *id002
+        tableLabel:
+          type: string
+          maxLength: 40
+        status:
+          $ref: '#/components/schemas/OrderStatus'
+        paymentStatus:
+          $ref: '#/components/schemas/PaymentStatus'
+        verificationPending:
+          type: boolean
+        currency:
+          type: string
+          const: ETB
+        subtotal:
+          $ref: '#/components/schemas/Money'
+        taxAmount:
+          $ref: '#/components/schemas/Money'
+        serviceAmount:
+          $ref: '#/components/schemas/Money'
+        discountAmount:
+          $ref: '#/components/schemas/Money'
+        totalAmount:
+          $ref: '#/components/schemas/Money'
+        outstandingAmount:
+          $ref: '#/components/schemas/Money'
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderLine'
+          minItems: 1
+          maxItems: 100
+        createdAt:
+          type: string
+          format: date-time
+      required:
+      - id
+      - version
+      - venueId
+      - tableLabel
+      - status
+      - paymentStatus
+      - verificationPending
+      - currency
+      - subtotal
+      - taxAmount
+      - serviceAmount
+      - discountAmount
+      - totalAmount
+      - outstandingAmount
+      - items
+      - createdAt
+    PaymentClaimInput:
+      type: object
+      additionalProperties: false
+      properties:
+        paymentAccountId: *id002
+        providerReference:
+          type: string
+          minLength: 1
+          maxLength: 120
+        reportedAmount:
+          $ref: '#/components/schemas/Money'
+        receiptAssetId: *id002
+      required:
+      - paymentAccountId
+      - providerReference
+      - reportedAmount
+    PaymentClaim:
+      type: object
+      additionalProperties: false
+      properties:
+        id: *id002
+        orderId: *id002
+        status:
+          type: string
+          enum:
+          - SUBMITTED
+          - APPROVED
+          - REJECTED
+        providerReference:
+          type: string
+          maxLength: 120
+        reportedAmount:
+          $ref: '#/components/schemas/Money'
+      required:
+      - id
+      - orderId
+      - status
+      - providerReference
+      - reportedAmount
+    ReviewPayment:
+      type: object
+      additionalProperties: false
+      properties:
+        decision:
+          type: string
+          enum:
+          - APPROVE
+          - REJECT
+        verifiedAmount:
+          $ref: '#/components/schemas/Money'
+        note:
+          type: string
+          minLength: 1
+          maxLength: 1000
+      required:
+      - decision
+      - note
+      allOf:
+      - if:
+          properties:
+            decision:
+              const: APPROVE
+          required:
+          - decision
+        then:
+          required:
+          - verifiedAmount
+    CashReceiptInput:
+      type: object
+      additionalProperties: false
+      properties:
+        amount:
+          $ref: '#/components/schemas/Money'
+        note:
+          type: string
+          maxLength: 1000
+      required:
+      - amount
+    PaymentReceipt:
+      type: object
+      additionalProperties: false
+      properties:
+        id: *id002
+        orderId: *id002
+        amount:
+          $ref: '#/components/schemas/Money'
+        method:
+          type: string
+          enum:
+          - CASH
+          - BANK_TRANSFER
+        verificationSource:
+          type: string
+          enum:
+          - CASH_CONFIRMED
+          - BANK_STATEMENT
+        recordedAt:
+          type: string
+          format: date-time
+      required:
+      - id
+      - orderId
+      - amount
+      - method
+      - verificationSource
+      - recordedAt
+    ChoiceDraft:
+      type: object
+      additionalProperties: false
+      properties:
+        id: *id002
+        label:
+          type: string
+          maxLength: 120
+        priceDelta:
+          type: string
+          pattern: ^-?(0|[1-9][0-9]{0,9})\.[0-9]{2}$
+        isAvailable:
+          type: boolean
+      required:
+      - id
+      - label
+      - priceDelta
+      - isAvailable
+    ModifierDraft:
+      type: object
+      additionalProperties: false
+      properties:
+        id: *id002
+        label:
+          type: string
+          maxLength: 120
+        mode:
+          type: string
+          enum:
+          - SINGLE_SELECT
+          - MULTI_SELECT
+        minSelections:
+          type: integer
+          minimum: 0
+          maximum: 30
+        maxSelections:
+          type: integer
+          minimum: 1
+          maximum: 30
+        choices:
+          type: array
+          items:
+            $ref: '#/components/schemas/ChoiceDraft'
+          minItems: 1
+          maxItems: 30
+      required:
+      - id
+      - label
+      - mode
+      - minSelections
+      - maxSelections
+      - choices
+    ItemDraft:
+      type: object
+      additionalProperties: false
+      properties:
+        id: *id002
+        nameEn:
+          type: string
+          minLength: 1
+          maxLength: 160
+        nameAm:
+          type: string
+          maxLength: 160
+        descriptionEn:
+          type: string
+          maxLength: 2000
+        descriptionAm:
+          type: string
+          maxLength: 2000
+        basePrice:
+          $ref: '#/components/schemas/Money'
+        availableNow:
+          type: boolean
+        modifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/ModifierDraft'
+          minItems: 0
+          maxItems: 10
+      required:
+      - id
+      - nameEn
+      - basePrice
+      - availableNow
+      - modifiers
+    SectionDraft:
+      type: object
+      additionalProperties: false
+      properties:
+        id: *id002
+        nameEn:
+          type: string
+          minLength: 1
+          maxLength: 120
+        nameAm:
+          type: string
+          maxLength: 120
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemDraft'
+          minItems: 0
+          maxItems: 200
+      required:
+      - id
+      - nameEn
+      - items
+    MenuDraftInput:
+      type: object
+      additionalProperties: false
+      properties:
+        themeId:
+          type: string
+          enum:
+          - mini-minimal-slate
+          - mini-warm-habesha
+          - mini-bole-bistro
+          - mini-fresh-organic
+          - mini-street-burger
+          - mini-artisan-roastery
+        primaryColor:
+          type: string
+          pattern: ^#[0-9A-Fa-f]{6}$
+        sections:
+          type: array
+          items:
+            $ref: '#/components/schemas/SectionDraft'
+          minItems: 1
+          maxItems: 40
+      required:
+      - themeId
+      - primaryColor
+      - sections
+    MenuDraft:
+      type: object
+      additionalProperties: false
+      properties:
+        venueId: *id002
+        version:
+          type: integer
+          minimum: 1
+        content:
+          $ref: '#/components/schemas/MenuDraftInput'
+      required:
+      - venueId
+      - version
+      - content
+    PublishMenu:
+      type: object
+      additionalProperties: false
+      properties:
+        draftVersion:
+          type: integer
+          minimum: 1
+      required:
+      - draftVersion
+    PublicMenu:
+      type: object
+      additionalProperties: false
+      properties:
+        publicationId: *id002
+        revision:
+          type: integer
+          minimum: 1
+        venueId: *id002
+        venueName:
+          type: string
+          maxLength: 160
+        currency:
+          type: string
+          const: ETB
+        content:
+          $ref: '#/components/schemas/MenuDraftInput'
+      required:
+      - publicationId
+      - revision
+      - venueId
+      - venueName
+      - currency
+      - content
+    OrderPage:
+      type: object
+      additionalProperties: false
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Order'
+          minItems: 0
+          maxItems: 100
+        nextCursor:
+          type:
+          - string
+          - 'null'
+          maxLength: 500
+      required:
+      - items
+      - nextCursor
+    OrderStateChange:
+      type: object
+      additionalProperties: false
+      properties:
+        status:
+          $ref: '#/components/schemas/OrderStatus'
+      required:
+      - status
+    ReceivingAccount:
+      type: object
+      additionalProperties: false
+      required:
+      - id
+      - provider
+      - holderName
+      - accountIdentifier
+      properties:
+        id:
+          type: string
+          format: uuid
+        provider:
+          type: string
+          enum:
+          - TELEBIRR
+          - CBE
+          - AWASH
+        holderName:
+          type: string
+        accountIdentifier:
+          type: string
+    ReceivingAccountList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ReceivingAccount'
+      maxItems: 10
+  securitySchemes:
+    staffSession:
+      type: apiKey
+      in: cookie
+      name: menu_staff_session
+      description: Validated, revocable staff session; HttpOnly and Secure in production.
+    diningSession:
+      type: apiKey
+      in: cookie
+      name: menu_dining_session
+      description: Hashed guest capability, scoped to its dining session and venue.
+    csrfToken:
+      type: apiKey
+      in: header
+      name: X-CSRF-Token
+      description: Required for unsafe cookie-authenticated staff commands; also verify
+        Origin.
+  parameters:
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: true
+      schema: *id002
+      description: Stable UUID for the same command retry. A different body with this
+        key is a 409 conflict.
+    IfMatch:
+      name: If-Match
+      in: header
+      required: true
+      schema:
+        type: string
+        pattern: ^"[1-9][0-9]*"$
+      example: '"1"'
+      description: Expected resource version; reject stale commands without mutation.
+  responses:
+    '400':
+      description: Malformed request or missing command header
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    '401':
+      description: Missing, expired or revoked session
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    '403':
+      description: Authenticated operator lacks this permission
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    '404':
+      description: Resource absent or outside the principal scope
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    '409':
+      description: Idempotency, version, price, availability or payment conflict
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    '422':
+      description: All schema/business validation failures
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    '429':
+      description: Rate limit exceeded
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+      headers:
+        Retry-After:
+          schema:
+            type: integer
+            minimum: 1
+    '503':
+      description: Temporary server/database unavailability; safe command retry
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'

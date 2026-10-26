@@ -1,0 +1,22 @@
+{
+  "verified_at": "2026-10-15T13:44:29.955417+00:00",
+  "passed": 13,
+  "failed": 0,
+  "http_requests": 13,
+  "cases": [
+    "GET /api/v2/merchant/branches/00000000-0000-4000-8000-000000000101/bills rejects spoofed client identity without disclosing business data",
+    "GET /api/v2/merchant/bills/00000000-0000-4000-8000-000000000801/settlement rejects spoofed client identity without disclosing business data",
+    "POST /api/v2/merchant/bills/00000000-0000-4000-8000-000000000801/finalizations rejects spoofed client identity without disclosing business data",
+    "POST /api/v2/merchant/bills/00000000-0000-4000-8000-000000000801/closures rejects spoofed client identity without disclosing business data",
+    "POST /api/v2/merchant/bills/00000000-0000-4000-8000-000000000801/credits rejects spoofed client identity without disclosing business data",
+    "POST /api/v2/merchant/bills/00000000-0000-4000-8000-000000000801/receipts rejects spoofed client identity without disclosing business data",
+    "POST /api/v2/merchant/receipts/00000000-0000-4000-8000-000000000861/allocations rejects spoofed client identity without disclosing business data",
+    "POST /api/v2/merchant/receipts/00000000-0000-4000-8000-000000000861/refund-requests rejects spoofed client identity without disclosing business data",
+    "POST /api/v2/merchant/payment-claims/00000000-0000-4000-8000-000000000851/reviews rejects spoofed client identity without disclosing business data",
+    "POST /api/v2/merchant/refund-requests/00000000-0000-4000-8000-000000000871/reviews rejects spoofed client identity without disclosing business data",
+    "POST /api/v2/merchant/refund-requests/00000000-0000-4000-8000-000000000871/executions rejects spoofed client identity without disclosing business data",
+    "/cashier/00000000-0000-4000-8000-000000000101 serves locked access view",
+    "public rehearsal is explicitly fictional, creates no session and is not an operating business surface"
+  ],
+  "scope": "actual local HTTP closed access and rehearsal/page headers only; successful cashier actions verified separately in-process, not through authentication"
+}

@@ -1,0 +1,27 @@
+{
+  "verified_at": "2026-10-18T19:24:29.220Z",
+  "passed": 19,
+  "failed": 0,
+  "cases": [
+    "published prices remain exact decimal strings, including maximum and fractional values",
+    "sold-out and available dishes retain separate truthful states",
+    "option identities, exact deltas and choice availability survive presentation mapping",
+    "same-name categories filter by stable section ID",
+    "search trims spaces and ignores English letter case",
+    "search includes Amharic names and descriptions",
+    "category and query filters combine without leaking other sections",
+    "unmatched search returns an empty result",
+    "published bilingual category names survive and empty sections do not create dead filters",
+    "presentation and filtering do not mutate publication data",
+    "public browsing does not invent a table association or open status",
+    "original visual theme retained: mini-minimal-slate",
+    "original visual theme retained: mini-warm-habesha",
+    "original visual theme retained: mini-bole-bistro",
+    "original visual theme retained: mini-fresh-organic",
+    "original visual theme retained: mini-street-burger",
+    "original visual theme retained: mini-artisan-roastery",
+    "unknown theme uses an original theme while an empty publication never becomes a demo cafe",
+    "a new publication has a separate browsing context"
+  ],
+  "scope": "pure published-menu view mapping and filtering on fictional inputs; no order, identity, database or device acceptance"
+}

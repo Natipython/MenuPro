@@ -1,0 +1,44 @@
+No authorization data found. Please use the `postman login` command.
+Refer:https://learning.postman.com/docs/postman-cli/postman-cli-options/#postman-login
+
+Running your collection...
+postman
+
+MenuMini workflow v2 design contract
+
+Folder onboarding
+Sub-folder validateBusinessRegistration
+
+  POST http://127.0.0.1:5186/api/v2/onboarding/validation [200 OK, 525 B, 18 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+  Pass  Format check is not authentication
+
+Sub-folder validateSetupDraft
+
+  POST http://127.0.0.1:5186/api/v2/onboarding/setup-validation [200 OK, 563 B, 10 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+  Pass  Draft preparation cannot activate access or publication
+
+---------------------------------------------------------------------
+|                         |           executed |             failed |
+--------------------------+--------------------+---------------------
+|              iterations |                  1 |                  0 |
+--------------------------+--------------------+---------------------
+|                requests |                  2 |                  0 |
+--------------------------+--------------------+---------------------
+|            test-scripts |                  2 |                  0 |
+--------------------------+--------------------+---------------------
+|      prerequest-scripts |                  0 |                  0 |
+--------------------------+--------------------+---------------------
+|              assertions |                  8 |                  0 |
+---------------------------------------------------------------------
+| total run duration: 960 ms                                        |
+---------------------------------------------------------------------
+| total data received: 472 B (approx)                               |
+---------------------------------------------------------------------
+| average response time: 14 ms [min: 10 ms, max: 18 ms, s.d.: 3 ms] |
+---------------------------------------------------------------------

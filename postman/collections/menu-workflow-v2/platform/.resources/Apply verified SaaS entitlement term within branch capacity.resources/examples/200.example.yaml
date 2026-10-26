@@ -1,0 +1,19 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/platform/businesses/:businessId/plan-terms'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"id\": \"00000000-0000-4000-8000-000000000891\",\n  \"businessId\"\
+      : \"00000000-0000-4000-8000-000000000001\",\n  \"plan\": \"MINI\",\n  \"branchLimit\"\
+      : 1,\n  \"orderingEnabled\": true,\n  \"startsAt\": \"2026-10-12T17:00:00Z\"\
+      \n}"

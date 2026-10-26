@@ -1,0 +1,19 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/branches/:branchId/cashier-requests/:requestKey/cancellation'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"domain\": \"CASHIER\",\n  \"operation\": \"RECORD_RECEIPT\",\n\
+      \  \"requestKey\": \"00000000-0000-4000-8000-000000000990\",\n  \"resourceId\"\
+      : \"00000000-0000-4000-8000-000000000801\",\n  \"state\": \"CANCELLED\",\n \
+      \ \"resultId\": null,\n  \"recordedAt\": \"2026-10-12T17:00:00Z\"\n}"

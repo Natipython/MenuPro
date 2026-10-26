@@ -1,0 +1,4648 @@
+{
+  "reviewed_at": "2026-10-18T20:00:43.915826+00:00",
+  "timezone": "Africa/Addis_Ababa",
+  "root": "/run/media/n-a-t/Local Disk_HDD/menu-qrwebsite-payment",
+  "scope": "whole-root inventory plus targeted product/system/schema/UI/asset/motion/document review; no claim of complete manual line-by-line audit",
+  "user_priority": "menu creation, preview, publication and customer browsing first",
+  "inventory": {
+    "included_files": 645,
+    "by_top_level": {
+      ".github": {
+        "files": 1
+      },
+      "<root>": {
+        "files": 4
+      },
+      "MenuMini_1": {
+        "files": 172
+      },
+      "app": {
+        "files": 61
+      },
+      "docs": {
+        "files": 73
+      },
+      "postman": {
+        "files": 277
+      },
+      "scripts": {
+        "files": 30
+      },
+      "templates": {
+        "files": 27
+      }
+    },
+    "excluded_directories": [
+      ".git",
+      ".postman",
+      ".remember",
+      ".svelte-kit",
+      "__pycache__",
+      "build",
+      "dist",
+      "node_modules"
+    ],
+    "excluded_sensitive_filename_count": 2,
+    "dependency_generated_and_credential_contents": "not manually audited or reproduced",
+    "includes_lockfile_metadata": true,
+    "own_output_excluded": true
+  },
+  "files": [
+    {
+      "path": ".github/workflows/deploy.yml",
+      "bytes": 370,
+      "extension": ".yml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 270,
+      "extension": "<none>",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 375,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/migrations/0001_foundation.sql",
+      "bytes": 33371,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/migrations/0002_workflow.sql",
+      "bytes": 82135,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/migrations/0003_mini_two_branches.sql",
+      "bytes": 16142,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/migrations/0004_phone_identity_fields.sql",
+      "bytes": 850,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/migrations/0005_menu_publication.sql",
+      "bytes": 33210,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/migrations/0006_service_preparation.sql",
+      "bytes": 12274,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/migrations/0007_staff_service.sql",
+      "bytes": 17225,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/migrations/0008_cashier_settlement.sql",
+      "bytes": 16876,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/migrations/0009_guest_ordering.sql",
+      "bytes": 20454,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/migrations/0010_payer_claims.sql",
+      "bytes": 26799,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/migrations/0011_command_recovery.sql",
+      "bytes": 11174,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/tests/catalog.sql",
+      "bytes": 16522,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/tests/foundation.sql",
+      "bytes": 17051,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/tests/mini-two-branches.sql",
+      "bytes": 7428,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/tests/preparation-draft.json",
+      "bytes": 1305,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/database/tests/workflow.sql",
+      "bytes": 38676,
+      "extension": ".sql",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/package-lock.json",
+      "bytes": 58779,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/package.json",
+      "bytes": 961,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/scripts/check-cashier-settlement.mjs",
+      "bytes": 20254,
+      "extension": ".mjs",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/scripts/check-catalog-mapping.mjs",
+      "bytes": 1890,
+      "extension": ".mjs",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/scripts/check-command-recovery.mjs",
+      "bytes": 28307,
+      "extension": ".mjs",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/scripts/check-guest-ordering.mjs",
+      "bytes": 22186,
+      "extension": ".mjs",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/scripts/check-menu-cart.mjs",
+      "bytes": 11270,
+      "extension": ".mjs",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/scripts/check-menu-presentation.mjs",
+      "bytes": 4912,
+      "extension": ".mjs",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/scripts/check-merchant-workspace.mjs",
+      "bytes": 12898,
+      "extension": ".mjs",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/scripts/check-payer-claims.mjs",
+      "bytes": 26543,
+      "extension": ".mjs",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/scripts/check-public-menu-link.mjs",
+      "bytes": 2395,
+      "extension": ".mjs",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/scripts/check-staff-service.mjs",
+      "bytes": 17170,
+      "extension": ".mjs",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/scripts/recovery-preview.mjs",
+      "bytes": 6903,
+      "extension": ".mjs",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/scripts/setup-preview.mjs",
+      "bytes": 851,
+      "extension": ".mjs",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/app.css",
+      "bytes": 2139,
+      "extension": ".css",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/app.html",
+      "bytes": 1226,
+      "extension": ".html",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/audio/feedback.ts",
+      "bytes": 3629,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/cashier/CashierBoard.svelte",
+      "bytes": 25184,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/lib/cashier/client.ts",
+      "bytes": 2311,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/cashier/model.ts",
+      "bytes": 5984,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/cashier/rehearsal.ts",
+      "bytes": 15588,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/guest/GuestBoard.svelte",
+      "bytes": 23228,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/lib/guest/client.ts",
+      "bytes": 2097,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/guest/model.ts",
+      "bytes": 1724,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/menu/DishDetails.svelte",
+      "bytes": 4773,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/lib/menu/MenuCatalog.svelte",
+      "bytes": 14934,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/lib/menu/cart-draft.ts",
+      "bytes": 9767,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/menu/catalog-view.ts",
+      "bytes": 3591,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/onboarding/DraftImport.svelte",
+      "bytes": 2399,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/lib/onboarding/MenuPreview.svelte",
+      "bytes": 3882,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/lib/onboarding/SetupWizard.svelte",
+      "bytes": 26232,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/lib/onboarding/business-types.json",
+      "bytes": 2572,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/onboarding/catalog-mapping.ts",
+      "bytes": 1308,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/onboarding/registration.ts",
+      "bytes": 5268,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/onboarding/setup.ts",
+      "bytes": 10943,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/onboarding/starting-sections.json",
+      "bytes": 7343,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/payer/PayerAuthorization.svelte",
+      "bytes": 7471,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/lib/payer/PayerBoard.svelte",
+      "bytes": 15488,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/lib/payer/client.ts",
+      "bytes": 2760,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/payer/model.ts",
+      "bytes": 3319,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/payer/rehearsal.ts",
+      "bytes": 5661,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/recovery/RecoveryPanel.svelte",
+      "bytes": 6197,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/lib/recovery/client.ts",
+      "bytes": 15319,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/recovery/model.ts",
+      "bytes": 3081,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/cashier-http.ts",
+      "bytes": 3905,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/cashier-settlement.ts",
+      "bytes": 1167,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/catalog-access.ts",
+      "bytes": 661,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/catalog-http.ts",
+      "bytes": 4884,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/command-recovery.ts",
+      "bytes": 1095,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/gemini.ts",
+      "bytes": 4648,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/guest-access.ts",
+      "bytes": 7469,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/guest-http.ts",
+      "bytes": 6865,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/merchant-catalog.ts",
+      "bytes": 7303,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/payer-access.ts",
+      "bytes": 2143,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/payer-http.ts",
+      "bytes": 4914,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/public-catalog.ts",
+      "bytes": 5190,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/recovery-http.ts",
+      "bytes": 4583,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/service-http.ts",
+      "bytes": 3942,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/staff-service.ts",
+      "bytes": 2491,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/stateless-check.ts",
+      "bytes": 2582,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/service/ServiceBoard.svelte",
+      "bytes": 28177,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/lib/service/client.ts",
+      "bytes": 2770,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/service/model.ts",
+      "bytes": 7805,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/service/rehearsal.ts",
+      "bytes": 14226,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/services/indexedDbStore.ts",
+      "bytes": 2688,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/services/miniNotificationService.ts",
+      "bytes": 2719,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/services/miniStore.ts",
+      "bytes": 8846,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/types/miniTemplates.ts",
+      "bytes": 5932,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/lib/workspace/MerchantWorkspace.svelte",
+      "bytes": 30249,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/lib/workspace/model.ts",
+      "bytes": 13668,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/+layout.svelte",
+      "bytes": 1804,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/+page.svelte",
+      "bytes": 14748,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/[businessSlug]/[branchSlug]/+page.svelte",
+      "bytes": 31803,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/admin/+layout.svelte",
+      "bytes": 7233,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/admin/+page.svelte",
+      "bytes": 7770,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/admin/menu/+page.svelte",
+      "bytes": 23738,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/admin/orders/+page.svelte",
+      "bytes": 11263,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/admin/print-shop/+page.svelte",
+      "bytes": 8881,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/admin/qr-codes/+page.svelte",
+      "bytes": 13650,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/ai/+server.ts",
+      "bytes": 1106,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/dining-sessions/+server.ts",
+      "bytes": 265,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/guest/menu/+server.ts",
+      "bytes": 264,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/guest/orders/+server.ts",
+      "bytes": 415,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/guest/orders/[orderId]/+server.ts",
+      "bytes": 280,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/guest/session/+server.ts",
+      "bytes": 266,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/guest/session/revocation/+server.ts",
+      "bytes": 266,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/guest/visits/[visitId]/association/+server.ts",
+      "bytes": 275,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/guest/visits/[visitId]/order-requests/[requestKey]/+server.ts",
+      "bytes": 444,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/guest/visits/[visitId]/order-requests/[requestKey]/cancellation/+server.ts",
+      "bytes": 444,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/bill-access-grants/[grantId]/revocation/+server.ts",
+      "bytes": 327,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/bills/[billId]/+server.ts",
+      "bytes": 335,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/bills/[billId]/access-grants/+server.ts",
+      "bytes": 325,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/bills/[billId]/closures/+server.ts",
+      "bytes": 335,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/bills/[billId]/credits/+server.ts",
+      "bytes": 336,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/bills/[billId]/finalizations/+server.ts",
+      "bytes": 338,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/bills/[billId]/payers/+server.ts",
+      "bytes": 329,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/bills/[billId]/receipts/+server.ts",
+      "bytes": 339,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/bills/[billId]/settlement/+server.ts",
+      "bytes": 330,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/bills/+server.ts",
+      "bytes": 331,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/cashier-requests/[requestKey]/+server.ts",
+      "bytes": 358,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/cashier-requests/[requestKey]/cancellation/+server.ts",
+      "bytes": 358,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/menu-draft/+server.ts",
+      "bytes": 482,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/menu-publications/+server.ts",
+      "bytes": 311,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/orders/+server.ts",
+      "bytes": 503,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/profile-draft/+server.ts",
+      "bytes": 488,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/readiness/+server.ts",
+      "bytes": 317,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/service-draft/+server.ts",
+      "bytes": 488,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/service-menu/+server.ts",
+      "bytes": 333,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/service-requests/[requestKey]/+server.ts",
+      "bytes": 358,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/service-requests/[requestKey]/cancellation/+server.ts",
+      "bytes": 358,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/staff-visits/+server.ts",
+      "bytes": 345,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/tables/+server.ts",
+      "bytes": 498,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/branches/[branchId]/tables/[tableId]/+server.ts",
+      "bytes": 355,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/orders/[orderId]/+server.ts",
+      "bytes": 337,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/orders/[orderId]/transitions/+server.ts",
+      "bytes": 344,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/payment-claims/[claimId]/reviews/+server.ts",
+      "bytes": 338,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/receipts/[receiptId]/allocations/+server.ts",
+      "bytes": 344,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/receipts/[receiptId]/refund-requests/+server.ts",
+      "bytes": 342,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/refund-requests/[refundId]/executions/+server.ts",
+      "bytes": 341,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/refund-requests/[refundId]/reviews/+server.ts",
+      "bytes": 340,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/tables/[tableId]/guest-link/+server.ts",
+      "bytes": 331,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/visits/[visitId]/+server.ts",
+      "bytes": 337,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/visits/[visitId]/ending/+server.ts",
+      "bytes": 337,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/merchant/visits/[visitId]/invitations/+server.ts",
+      "bytes": 337,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/onboarding/setup-validation/+server.ts",
+      "bytes": 411,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/onboarding/validation/+server.ts",
+      "bytes": 403,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/onboarding/workspace-validation/+server.ts",
+      "bytes": 415,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/payer/access/+server.ts",
+      "bytes": 345,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/payer/access/revocation/+server.ts",
+      "bytes": 346,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/payer/bill/+server.ts",
+      "bytes": 346,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/payer/bill/payment-claims/+server.ts",
+      "bytes": 520,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/payer/bills/[billId]/payment-requests/[requestKey]/+server.ts",
+      "bytes": 443,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/payer/bills/[billId]/payment-requests/[requestKey]/cancellation/+server.ts",
+      "bytes": 443,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/api/v2/public/venues/[venueSlug]/menu/+server.ts",
+      "bytes": 947,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/cashier/[branchId]/+page.server.ts",
+      "bytes": 1182,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/cashier/[branchId]/+page.svelte",
+      "bytes": 1177,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/menu/[venueSlug]/+page.server.ts",
+      "bytes": 772,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/menu/[venueSlug]/+page.svelte",
+      "bytes": 4441,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/onboarding/+page.server.ts",
+      "bytes": 203,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/onboarding/+page.svelte",
+      "bytes": 19542,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/preparation/[branchId]/+page.server.ts",
+      "bytes": 1136,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/preparation/[branchId]/+page.svelte",
+      "bytes": 1101,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/service/[branchId]/+page.server.ts",
+      "bytes": 1183,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/service/[branchId]/+page.svelte",
+      "bytes": 1111,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/service/rehearsal/+page.server.ts",
+      "bytes": 216,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/service/rehearsal/+page.svelte",
+      "bytes": 3003,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/sign-in/+page.server.ts",
+      "bytes": 203,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/sign-in/+page.svelte",
+      "bytes": 1471,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/visit/+page.server.ts",
+      "bytes": 194,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/visit/+page.svelte",
+      "bytes": 96,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/workspace/+page.server.ts",
+      "bytes": 272,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/src/routes/workspace/+page.svelte",
+      "bytes": 4292,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "MenuMini_1/static/manifest.json",
+      "bytes": 476,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/static/service-worker.js",
+      "bytes": 2152,
+      "extension": ".js",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/tsconfig.json",
+      "bytes": 348,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/vite.config.ts",
+      "bytes": 285,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "PRODUCT.md",
+      "bytes": 4985,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1552,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/.gitignore",
+      "bytes": 210,
+      "extension": "<none>",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/.npmrc",
+      "bytes": 19,
+      "extension": "<none>",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/.vscode/extensions.json",
+      "bytes": 49,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/README.md",
+      "bytes": 944,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/package-lock.json",
+      "bytes": 37706,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/package.json",
+      "bytes": 607,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/prisma/schema.prisma",
+      "bytes": 23140,
+      "extension": ".prisma",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/app.css",
+      "bytes": 8589,
+      "extension": ".css",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/app.d.ts",
+      "bytes": 274,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/app.html",
+      "bytes": 1017,
+      "extension": ".html",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/assets/favicon.svg",
+      "bytes": 1569,
+      "extension": ".svg",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/auth/index.ts",
+      "bytes": 747,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/components/BranchSelector.svelte",
+      "bytes": 3285,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/lib/components/CartDrawer.svelte",
+      "bytes": 13576,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/lib/components/ItemDetailModal.svelte",
+      "bytes": 18984,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/lib/components/SearchAndFilter.svelte",
+      "bytes": 4633,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/lib/db.ts",
+      "bytes": 821,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/index.ts",
+      "bytes": 75,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/server/gemini.ts",
+      "bytes": 4776,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/server/media/index.ts",
+      "bytes": 740,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/server/qrcode/index.ts",
+      "bytes": 872,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/server/redis/index.ts",
+      "bytes": 400,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/services/miniNotificationService.ts",
+      "bytes": 3063,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/stores/cartStore.ts",
+      "bytes": 2225,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/stores/tierStore.ts",
+      "bytes": 1343,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/templates/TemplateEngine.ts",
+      "bytes": 1890,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/types/miniTemplates.ts",
+      "bytes": 6420,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/types/tier.ts",
+      "bytes": 2257,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/utils/feedback.ts",
+      "bytes": 4627,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/lib/utils/notifications.ts",
+      "bytes": 1666,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/routes/+layout.svelte",
+      "bytes": 3717,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/+page.svelte",
+      "bytes": 30974,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/[businessSlug]/[branchSlug]/+page.server.ts",
+      "bytes": 1542,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/routes/[businessSlug]/[branchSlug]/+page.svelte",
+      "bytes": 18585,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/[businessSlug]/[branchSlug]/checkout/+page.svelte",
+      "bytes": 23468,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/[businessSlug]/[branchSlug]/info/+page.server.ts",
+      "bytes": 1170,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/routes/[businessSlug]/[branchSlug]/info/+page.svelte",
+      "bytes": 9672,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/[businessSlug]/[branchSlug]/kds/+page.svelte",
+      "bytes": 22453,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/[businessSlug]/[branchSlug]/order/[orderId]/+page.svelte",
+      "bytes": 14108,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/admin/+layout.svelte",
+      "bytes": 10914,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/admin/+page.svelte",
+      "bytes": 13341,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/admin/branches/+page.svelte",
+      "bytes": 12701,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/admin/logs/+page.svelte",
+      "bytes": 9479,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/admin/menu/+page.server.ts",
+      "bytes": 281,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/routes/admin/menu/+page.svelte",
+      "bytes": 30103,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/admin/orders/+page.svelte",
+      "bytes": 19293,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/admin/payments/+page.svelte",
+      "bytes": 20145,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/admin/qr-codes/+page.svelte",
+      "bytes": 20267,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/admin/staff/+page.svelte",
+      "bytes": 15137,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/api/ai/+server.ts",
+      "bytes": 1139,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/routes/checkout/+page.svelte",
+      "bytes": 23468,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/src/routes/onboarding/+page.server.ts",
+      "bytes": 266,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/src/routes/onboarding/+page.svelte",
+      "bytes": 20134,
+      "extension": ".svelte",
+      "review": "metadata and automated motion source signals"
+    },
+    {
+      "path": "app/static/manifest.json",
+      "bytes": 425,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/static/offline.html",
+      "bytes": 836,
+      "extension": ".html",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/static/robots.txt",
+      "bytes": 63,
+      "extension": ".txt",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/static/service-worker.js",
+      "bytes": 764,
+      "extension": ".js",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/static/sw.js",
+      "bytes": 373,
+      "extension": ".js",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/tsconfig.json",
+      "bytes": 692,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/vercel.json",
+      "bytes": 182,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/vite.config.ts",
+      "bytes": 238,
+      "extension": ".ts",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/build-sequence.md",
+      "bytes": 8331,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/cache-routing-validation.json",
+      "bytes": 1350,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/cashier-browser-validation.json",
+      "bytes": 4157,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/cashier-http-validation.json",
+      "bytes": 2135,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/cashier-postman-validation.txt",
+      "bytes": 2794,
+      "extension": ".txt",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/cashier-settlement-design.md",
+      "bytes": 3176,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/cashier-settlement-validation.json",
+      "bytes": 4567,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/catalog-browser-validation.json",
+      "bytes": 1088,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/catalog-http-validation.json",
+      "bytes": 1424,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/catalog-link-validation.json",
+      "bytes": 276,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/catalog-mapping-validation.json",
+      "bytes": 246,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/catalog-postman-validation.txt",
+      "bytes": 2425,
+      "extension": ".txt",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/catalog-qr-validation.json",
+      "bytes": 291,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/command-recovery-browser-validation.json",
+      "bytes": 5015,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/command-recovery-design.md",
+      "bytes": 4763,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/command-recovery-http-validation.json",
+      "bytes": 1750,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/command-recovery-validation.json",
+      "bytes": 5940,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/contracts/README.md",
+      "bytes": 3863,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/contracts/cashier-db-examples.json",
+      "bytes": 4323,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/contracts/catalog-db-examples.json",
+      "bytes": 6011,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/contracts/guest-db-examples.json",
+      "bytes": 8719,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/contracts/payer-db-examples.json",
+      "bytes": 8170,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/contracts/recovery-db-examples.json",
+      "bytes": 1805,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/contracts/staff-service-db-examples.json",
+      "bytes": 8358,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/contracts/workflow-v2-db-examples.json",
+      "bytes": 1693,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/contracts/workspace-db-examples.json",
+      "bytes": 1370,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/contracts/workspace-preparation-example.json",
+      "bytes": 2611,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/customer-menu-integration-validation.json",
+      "bytes": 3164,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/customer-menu-integration.md",
+      "bytes": 5428,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/data-model.md",
+      "bytes": 6014,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/design-and-motion-brief.md",
+      "bytes": 14967,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/first-launch-brief.md",
+      "bytes": 8179,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/foundation-validation.json",
+      "bytes": 3368,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/guest-browser-validation.json",
+      "bytes": 3695,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/guest-http-validation.json",
+      "bytes": 1470,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/guest-ordering-design.md",
+      "bytes": 7003,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/guest-ordering-validation.json",
+      "bytes": 6130,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/guest-postman-validation.txt",
+      "bytes": 3587,
+      "extension": ".txt",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/market-assessment-2026-10-12.md",
+      "bytes": 29349,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/menu-cart-draft-validation.json",
+      "bytes": 3667,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/menu-presentation-validation.json",
+      "bytes": 1510,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/menu-publication-design.md",
+      "bytes": 5317,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/merchant-workspace-design.md",
+      "bytes": 2631,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/merchant-workspace-validation.json",
+      "bytes": 6228,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/onboarding-http-validation.json",
+      "bytes": 1489,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/onboarding-postman-validation.txt",
+      "bytes": 2200,
+      "extension": ".txt",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/onboarding-workflow.md",
+      "bytes": 17860,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/original-cart-connection.md",
+      "bytes": 7728,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/original-ui-integration-plan.md",
+      "bytes": 19406,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/payer-browser-validation.json",
+      "bytes": 3836,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/payer-claims-design.md",
+      "bytes": 5093,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/payer-claims-validation.json",
+      "bytes": 5485,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/payer-http-validation.json",
+      "bytes": 1457,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/payer-postman-validation.txt",
+      "bytes": 2873,
+      "extension": ".txt",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/project-reassessment.md",
+      "bytes": 22889,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/recovery-postman-validation.txt",
+      "bytes": 3093,
+      "extension": ".txt",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/setup-draft-http-validation.json",
+      "bytes": 2674,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/setup-preparation-browser-validation.json",
+      "bytes": 2044,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/staff-service-browser-validation.json",
+      "bytes": 3101,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/staff-service-design.md",
+      "bytes": 3245,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/staff-service-http-validation.json",
+      "bytes": 2340,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/staff-service-postman-validation.txt",
+      "bytes": 2958,
+      "extension": ".txt",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/staff-service-validation.json",
+      "bytes": 4804,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/system-design.md",
+      "bytes": 16240,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/system-orchestration.md",
+      "bytes": 36952,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/validation.md",
+      "bytes": 22435,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/workflow-contract-validation.json",
+      "bytes": 6146,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/workflow-db-validation.json",
+      "bytes": 12181,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/workflow-foundation.md",
+      "bytes": 21203,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/workflow-validation.json",
+      "bytes": 19242,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/workspace-browser-validation.json",
+      "bytes": 2235,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/workspace-http-validation.json",
+      "bytes": 1771,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "docs/workspace-postman-validation.txt",
+      "bytes": 2754,
+      "extension": ".txt",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/README.md",
+      "bytes": 1295,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/advanceOrder.resources/examples/success.example.yaml",
+      "bytes": 1100,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/createDiningSession.resources/examples/success.example.yaml",
+      "bytes": 524,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/definition.yaml",
+      "bytes": 942,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/getMenuDraft.resources/examples/success.example.yaml",
+      "bytes": 943,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/getMerchantOrders.resources/examples/success.example.yaml",
+      "bytes": 1287,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/getOwnOrder.resources/examples/success.example.yaml",
+      "bytes": 1090,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/getPublishedMenu.resources/examples/success.example.yaml",
+      "bytes": 1067,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/getReceivingAccounts.resources/examples/success.example.yaml",
+      "bytes": 467,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/publishMenu.resources/examples/success.example.yaml",
+      "bytes": 1086,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/recordCash.resources/examples/success.example.yaml",
+      "bytes": 567,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/rejectClientPrice.resources/examples/response.example.yaml",
+      "bytes": 539,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/rejectForeignOrder.resources/examples/response.example.yaml",
+      "bytes": 531,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/replaceMenuDraft.resources/examples/success.example.yaml",
+      "bytes": 943,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/replayOrder.resources/examples/response.example.yaml",
+      "bytes": 1079,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/reportTransfer.resources/examples/success.example.yaml",
+      "bytes": 519,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/reviewTransfer.resources/examples/success.example.yaml",
+      "bytes": 523,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/.resources/submitOrder.resources/examples/success.example.yaml",
+      "bytes": 1084,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/advanceOrder.request.yaml",
+      "bytes": 751,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/createDiningSession.request.yaml",
+      "bytes": 428,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/getMenuDraft.request.yaml",
+      "bytes": 377,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/getMerchantOrders.request.yaml",
+      "bytes": 377,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/getOwnOrder.request.yaml",
+      "bytes": 357,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/getPublishedMenu.request.yaml",
+      "bytes": 304,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/getReceivingAccounts.request.yaml",
+      "bytes": 365,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/publishMenu.request.yaml",
+      "bytes": 600,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/recordCash.request.yaml",
+      "bytes": 639,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/rejectClientPrice.request.yaml",
+      "bytes": 830,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/rejectForeignOrder.request.yaml",
+      "bytes": 393,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/replaceMenuDraft.request.yaml",
+      "bytes": 1013,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/replayOrder.request.yaml",
+      "bytes": 761,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/reportTransfer.request.yaml",
+      "bytes": 777,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/reviewTransfer.request.yaml",
+      "bytes": 722,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-mini-v1/submitOrder.request.yaml",
+      "bytes": 925,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/.resources/Check registration fields and report the next verification step.resources/examples/200.example.yaml",
+      "bytes": 625,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/.resources/Establish own guest session; table QR alone does not associate a.resources/examples/200.example.yaml",
+      "bytes": 670,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/.resources/Establish own guest session; table QR alone does not associate a.resources/examples/201.example.yaml",
+      "bytes": 675,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/.resources/Read published menu with live availability.resources/examples/200.example.yaml",
+      "bytes": 2064,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/.resources/definition.yaml",
+      "bytes": 2363,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/Establish own guest session; table QR alone does not associate a.request.yaml",
+      "bytes": 1849,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/Read published menu with live availability.request.yaml",
+      "bytes": 1190,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/.resources/Join confirmed visit with private pairing token.resources/examples/200.example.yaml",
+      "bytes": 481,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/.resources/Read published menu and reviewed pricing for this table session.resources/examples/200.example.yaml",
+      "bytes": 2501,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/Read published menu and reviewed pricing for this table session.request.yaml",
+      "bytes": 1700,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/orders/.resources/Page only this guest session orders.resources/examples/200.example.yaml",
+      "bytes": 1308,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/orders/.resources/Read only this guest session order.resources/examples/200.example.yaml",
+      "bytes": 1137,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/orders/.resources/Submit server-priced guest order.resources/examples/200.example.yaml",
+      "bytes": 1129,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/orders/.resources/Submit server-priced guest order.resources/examples/201.example.yaml",
+      "bytes": 1134,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/orders/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/orders/Page only this guest session orders.request.yaml",
+      "bytes": 1695,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/orders/Read only this guest session order.request.yaml",
+      "bytes": 1751,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/orders/Submit server-priced guest order.request.yaml",
+      "bytes": 2267,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/session/.resources/Explicitly leave and revoke own session; prior order access is l.resources/examples/200.example.yaml",
+      "bytes": 340,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/session/.resources/Read own anonymous session and current association.resources/examples/200.example.yaml",
+      "bytes": 710,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/session/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/session/Explicitly leave and revoke own session; prior order access is l.request.yaml",
+      "bytes": 1958,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/session/Read own anonymous session and current association.request.yaml",
+      "bytes": 1679,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/visits-{visitId}/.resources/Join confirmed visit with private pairing token.resources/examples/200.example.yaml",
+      "bytes": 481,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/visits-{visitId}/.resources/definition.yaml",
+      "bytes": 53,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/visits-{visitId}/Join confirmed visit with private pairing token.request.yaml",
+      "bytes": 2120,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/visits-{visitId}/order-requests-{requestKey}/.resources/Cancel only an unrecorded command before replacing it.resources/examples/200.example.yaml",
+      "bytes": 654,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/visits-{visitId}/order-requests-{requestKey}/.resources/Check original command outcome.resources/examples/200.example.yaml",
+      "bytes": 676,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/visits-{visitId}/order-requests-{requestKey}/.resources/definition.yaml",
+      "bytes": 64,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/visits-{visitId}/order-requests-{requestKey}/Cancel only an unrecorded command before replacing it.request.yaml",
+      "bytes": 2371,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/guest/visits-{visitId}/order-requests-{requestKey}/Check original command outcome.request.yaml",
+      "bytes": 2120,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/.resources/Advance order with permitted status transition.resources/examples/200.example.yaml",
+      "bytes": 938,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/.resources/End seating while retaining financial obligations.resources/examples/200.example.yaml",
+      "bytes": 621,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/.resources/Owner issues or rotates a table link; no visit or private data a.resources/examples/200.example.yaml",
+      "bytes": 570,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/.resources/Read authenticated business capabilities and permissions.resources/examples/200.example.yaml",
+      "bytes": 575,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/.resources/Request a price increase for a second branch while staying on Me.resources/examples/200.example.yaml",
+      "bytes": 453,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/.resources/Request a price increase for a second branch while staying on Me.resources/examples/201.example.yaml",
+      "bytes": 458,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/.resources/Request software plan change without activating it.resources/examples/200.example.yaml",
+      "bytes": 446,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/.resources/Request software plan change without activating it.resources/examples/201.example.yaml",
+      "bytes": 451,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/.resources/Staff revokes a scoped payer grant without changing bill amounts.resources/examples/200.example.yaml",
+      "bytes": 487,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/.resources/Verify funds, record receipt, explicitly allocate or reject.resources/examples/200.example.yaml",
+      "bytes": 542,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/Owner issues or rotates a table link; no visit or private data a.request.yaml",
+      "bytes": 1915,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/Read authenticated business capabilities and permissions.request.yaml",
+      "bytes": 1307,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/Request a price increase for a second branch while staying on Me.request.yaml",
+      "bytes": 1589,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/Request software plan change without activating it.request.yaml",
+      "bytes": 1605,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/Staff revokes a scoped payer grant without changing bill amounts.request.yaml",
+      "bytes": 2027,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/Verify funds, record receipt, explicitly allocate or reject.request.yaml",
+      "bytes": 2123,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/.resources/Close reconciled bill; pending refunds-unapplied amounts block c.resources/examples/200.example.yaml",
+      "bytes": 812,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/.resources/Freeze bill after submitted requests are resolved.resources/examples/200.example.yaml",
+      "bytes": 821,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/.resources/Issue scoped payer capability for linked guest.resources/examples/200.example.yaml",
+      "bytes": 690,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/.resources/Issue scoped payer capability for linked guest.resources/examples/201.example.yaml",
+      "bytes": 695,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/.resources/List joined active guest device codes for explicit payer authori.resources/examples/200.example.yaml",
+      "bytes": 798,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/.resources/Read bill and truthful balances.resources/examples/200.example.yaml",
+      "bytes": 806,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/.resources/Read private charges, receipts, claims and refund obligations.resources/examples/200.example.yaml",
+      "bytes": 1810,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/.resources/Record actual received amount once.resources/examples/200.example.yaml",
+      "bytes": 646,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/.resources/Record actual received amount once.resources/examples/201.example.yaml",
+      "bytes": 651,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/.resources/Record credit and linked allocation reversals.resources/examples/200.example.yaml",
+      "bytes": 815,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/.resources/definition.yaml",
+      "bytes": 51,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/Close reconciled bill; pending refunds-unapplied amounts block c.request.yaml",
+      "bytes": 1919,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/Freeze bill after submitted requests are resolved.request.yaml",
+      "bytes": 1889,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/Issue scoped payer capability for linked guest.request.yaml",
+      "bytes": 2053,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/List joined active guest device codes for explicit payer authori.request.yaml",
+      "bytes": 1757,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/Read bill and truthful balances.request.yaml",
+      "bytes": 1660,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/Read private charges, receipts, claims and refund obligations.request.yaml",
+      "bytes": 1654,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/Record actual received amount once.request.yaml",
+      "bytes": 2066,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/bills-{billId}/Record credit and linked allocation reversals.request.yaml",
+      "bytes": 2010,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/.resources/Create branch within current capacity.resources/examples/200.example.yaml",
+      "bytes": 484,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/.resources/Create branch within current capacity.resources/examples/201.example.yaml",
+      "bytes": 489,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/Create branch within current capacity.request.yaml",
+      "bytes": 1575,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/Assign scoped staff role.resources/examples/200.example.yaml",
+      "bytes": 504,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/Change availability without publishing draft prices.resources/examples/200.example.yaml",
+      "bytes": 457,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/List unresolved bills including ended visits, or closed history.resources/examples/200.example.yaml",
+      "bytes": 1205,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/Open seating and combined bill; privately return pairing capabil.resources/examples/200.example.yaml",
+      "bytes": 813,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/Open seating and combined bill; privately return pairing capabil.resources/examples/201.example.yaml",
+      "bytes": 818,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/Open staff-only visit and combined bill; no guest token is issue.resources/examples/200.example.yaml",
+      "bytes": 629,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/Open staff-only visit and combined bill; no guest token is issue.resources/examples/201.example.yaml",
+      "bytes": 634,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/Publish menu version.resources/examples/200.example.yaml",
+      "bytes": 2124,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/Publish menu version.resources/examples/201.example.yaml",
+      "bytes": 2129,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/Read aggregate service readiness without granting launch authori.resources/examples/200.example.yaml",
+      "bytes": 1152,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/Read committed menu and reviewed price policy for staff order en.resources/examples/200.example.yaml",
+      "bytes": 2531,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/Save validated menu draft.resources/examples/200.example.yaml",
+      "bytes": 974,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/Submit order on behalf of guest.resources/examples/200.example.yaml",
+      "bytes": 937,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/Submit order on behalf of guest.resources/examples/201.example.yaml",
+      "bytes": 942,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/Assign scoped staff role.request.yaml",
+      "bytes": 1702,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/Change availability without publishing draft prices.request.yaml",
+      "bytes": 1838,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/List unresolved bills including ended visits, or closed history.request.yaml",
+      "bytes": 1711,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/Open seating and combined bill; privately return pairing capabil.request.yaml",
+      "bytes": 1728,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/Open staff-only visit and combined bill; no guest token is issue.request.yaml",
+      "bytes": 2050,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/Publish menu version.request.yaml",
+      "bytes": 1911,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/Read aggregate service readiness without granting launch authori.request.yaml",
+      "bytes": 1700,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/Read committed menu and reviewed price policy for staff order en.request.yaml",
+      "bytes": 1762,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/cashier-requests-{requestKey}/.resources/Cancel only an unrecorded command before replacing it.resources/examples/200.example.yaml",
+      "bytes": 674,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/cashier-requests-{requestKey}/.resources/Check original command outcome.resources/examples/200.example.yaml",
+      "bytes": 777,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/cashier-requests-{requestKey}/.resources/definition.yaml",
+      "bytes": 67,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/cashier-requests-{requestKey}/Cancel only an unrecorded command before replacing it.request.yaml",
+      "bytes": 2483,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/cashier-requests-{requestKey}/Check original command outcome.request.yaml",
+      "bytes": 2317,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/menu-draft/.resources/Read authorized persistent menu draft.resources/examples/200.example.yaml",
+      "bytes": 974,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/menu-draft/.resources/Save validated menu draft.resources/examples/200.example.yaml",
+      "bytes": 974,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/menu-draft/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/menu-draft/Read authorized persistent menu draft.request.yaml",
+      "bytes": 1656,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/menu-draft/Save validated menu draft.request.yaml",
+      "bytes": 2437,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/orders/.resources/Page durable active work; preparation staff see accepted prepara.resources/examples/200.example.yaml",
+      "bytes": 1494,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/orders/.resources/Submit server-priced staff order with publication and pricing fi.resources/examples/200.example.yaml",
+      "bytes": 1232,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/orders/.resources/Submit server-priced staff order with publication and pricing fi.resources/examples/201.example.yaml",
+      "bytes": 1237,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/orders/.resources/definition.yaml",
+      "bytes": 31,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/orders/Page durable active work; preparation staff see accepted prepara.request.yaml",
+      "bytes": 1813,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/orders/Submit server-priced staff order with publication and pricing fi.request.yaml",
+      "bytes": 2388,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/profile-draft/.resources/Owner saves public branch details without publishing them.resources/examples/200.example.yaml",
+      "bytes": 1554,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/profile-draft/.resources/Read authorized public branch-profile draft.resources/examples/200.example.yaml",
+      "bytes": 1554,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/profile-draft/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/profile-draft/Owner saves public branch details without publishing them.request.yaml",
+      "bytes": 3072,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/profile-draft/Read authorized public branch-profile draft.request.yaml",
+      "bytes": 1675,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/service-draft/.resources/Read private service preparation.resources/examples/200.example.yaml",
+      "bytes": 764,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/service-draft/.resources/Save service preparation without activating ordering.resources/examples/200.example.yaml",
+      "bytes": 764,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/service-draft/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/service-draft/Read private service preparation.request.yaml",
+      "bytes": 1635,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/service-draft/Save service preparation without activating ordering.request.yaml",
+      "bytes": 2274,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/service-requests-{requestKey}/.resources/Cancel only an unrecorded command before replacing it.resources/examples/200.example.yaml",
+      "bytes": 672,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/service-requests-{requestKey}/.resources/Check original command outcome.resources/examples/200.example.yaml",
+      "bytes": 773,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/service-requests-{requestKey}/.resources/definition.yaml",
+      "bytes": 67,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/service-requests-{requestKey}/Cancel only an unrecorded command before replacing it.request.yaml",
+      "bytes": 2481,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/service-requests-{requestKey}/Check original command outcome.request.yaml",
+      "bytes": 2313,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/tables/.resources/Owner creates a table without issuing public QR access.resources/examples/200.example.yaml",
+      "bytes": 543,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/tables/.resources/Owner creates a table without issuing public QR access.resources/examples/201.example.yaml",
+      "bytes": 548,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/tables/.resources/Owner updates an idle table with version checks.resources/examples/200.example.yaml",
+      "bytes": 552,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/tables/.resources/Read tables and current staff-visible visits without QR secrets.resources/examples/200.example.yaml",
+      "bytes": 678,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/tables/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/tables/Owner creates a table without issuing public QR access.request.yaml",
+      "bytes": 1992,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/tables/Owner updates an idle table with version checks.request.yaml",
+      "bytes": 2126,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/branches/{branchId}/tables/Read tables and current staff-visible visits without QR secrets.request.yaml",
+      "bytes": 1749,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/mini-branch-quotes-{quoteId}/.resources/Owner accepts the exact price offer without asserting payment.resources/examples/200.example.yaml",
+      "bytes": 950,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/mini-branch-quotes-{quoteId}/.resources/Read private second-branch price offer and derived lifecycle sta.resources/examples/200.example.yaml",
+      "bytes": 937,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/mini-branch-quotes-{quoteId}/.resources/definition.yaml",
+      "bytes": 66,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/mini-branch-quotes-{quoteId}/Owner accepts the exact price offer without asserting payment.request.yaml",
+      "bytes": 1705,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/mini-branch-quotes-{quoteId}/Read private second-branch price offer and derived lifecycle sta.request.yaml",
+      "bytes": 1448,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/orders-{orderId}/.resources/Advance order with permitted status transition; original respons.resources/examples/200.example.yaml",
+      "bytes": 1254,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/orders-{orderId}/.resources/Read permitted order details and allowed service transitions.resources/examples/200.example.yaml",
+      "bytes": 1221,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/orders-{orderId}/.resources/definition.yaml",
+      "bytes": 53,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/orders-{orderId}/Advance order with permitted status transition; original respons.request.yaml",
+      "bytes": 2059,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/orders-{orderId}/Read permitted order details and allowed service transitions.request.yaml",
+      "bytes": 1731,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/receipts-{receiptId}/.resources/Allocate receipt to its original visit bill without double count.resources/examples/200.example.yaml",
+      "bytes": 546,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/receipts-{receiptId}/.resources/Allocate receipt to its original visit bill without double count.resources/examples/201.example.yaml",
+      "bytes": 551,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/receipts-{receiptId}/.resources/Allocate receipt without double counting funds.resources/examples/200.example.yaml",
+      "bytes": 546,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/receipts-{receiptId}/.resources/Allocate receipt without double counting funds.resources/examples/201.example.yaml",
+      "bytes": 551,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/receipts-{receiptId}/.resources/Reserve unapplied funds for refund review.resources/examples/200.example.yaml",
+      "bytes": 542,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/receipts-{receiptId}/.resources/Reserve unapplied funds for refund review.resources/examples/201.example.yaml",
+      "bytes": 547,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/receipts-{receiptId}/.resources/definition.yaml",
+      "bytes": 57,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/receipts-{receiptId}/Allocate receipt to its original visit bill without double count.request.yaml",
+      "bytes": 2036,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/receipts-{receiptId}/Reserve unapplied funds for refund review.request.yaml",
+      "bytes": 1940,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/refund-requests-{refundId}/.resources/Approve or reject refund obligation.resources/examples/200.example.yaml",
+      "bytes": 539,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/refund-requests-{refundId}/.resources/Record actual executed refund; does not initiate fund transfer.resources/examples/200.example.yaml",
+      "bytes": 542,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/refund-requests-{refundId}/.resources/definition.yaml",
+      "bytes": 64,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/refund-requests-{refundId}/Approve or reject refund obligation.request.yaml",
+      "bytes": 1951,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/refund-requests-{refundId}/Record actual executed refund; does not initiate fund transfer.request.yaml",
+      "bytes": 2026,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/visits-{visitId}/.resources/End seating while retaining financial obligations.resources/examples/200.example.yaml",
+      "bytes": 621,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/visits-{visitId}/.resources/Read scoped staff visit without guest association secrets.resources/examples/200.example.yaml",
+      "bytes": 612,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/visits-{visitId}/.resources/Staff issues or rotates a five-minute private visit invitation.resources/examples/200.example.yaml",
+      "bytes": 683,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/visits-{visitId}/.resources/definition.yaml",
+      "bytes": 53,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/visits-{visitId}/End seating while retaining financial obligations.request.yaml",
+      "bytes": 1968,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/visits-{visitId}/Read scoped staff visit without guest association secrets.request.yaml",
+      "bytes": 1722,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/merchant/visits-{visitId}/Staff issues or rotates a five-minute private visit invitation.request.yaml",
+      "bytes": 1906,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/onboarding/.resources/Check a first-branch and menu preparation draft without activati.resources/examples/200.example.yaml",
+      "bytes": 724,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/onboarding/.resources/Check registration fields and report the next verification step.resources/examples/200.example.yaml",
+      "bytes": 625,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/onboarding/.resources/Check richer menu and service preparation without activation.resources/examples/200.example.yaml",
+      "bytes": 931,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/onboarding/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/onboarding/Check a first-branch and menu preparation draft without activati.request.yaml",
+      "bytes": 3891,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/onboarding/Check registration fields and report the next verification step.request.yaml",
+      "bytes": 2576,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/onboarding/Check richer menu and service preparation without activation.request.yaml",
+      "bytes": 4232,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer-bill/.resources/Read only bill authorized by payer capability.resources/examples/200.example.yaml",
+      "bytes": 794,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer-bill/.resources/Submit evidence without asserting payment.resources/examples/200.example.yaml",
+      "bytes": 528,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer-bill/.resources/Submit evidence without asserting payment.resources/examples/201.example.yaml",
+      "bytes": 533,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer-bill/.resources/definition.yaml",
+      "bytes": 47,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/access/.resources/Redeem a private bill code into a cookie bound to own dining ses.resources/examples/200.example.yaml",
+      "bytes": 415,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/access/.resources/Revoke own bill access while retaining own-order session.resources/examples/200.example.yaml",
+      "bytes": 339,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/access/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/access/Redeem a private bill code into a cookie bound to own dining ses.request.yaml",
+      "bytes": 1999,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/access/Revoke own bill access while retaining own-order session.request.yaml",
+      "bytes": 1953,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/bill/.resources/Read only bill authorized by payer capability.resources/examples/200.example.yaml",
+      "bytes": 2619,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/bill/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/bill/Read only bill authorized by payer capability.request.yaml",
+      "bytes": 1680,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/bill/payment-claims/.resources/Page only this payer transfer reports without other payers refer.resources/examples/200.example.yaml",
+      "bytes": 924,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/bill/payment-claims/.resources/Submit evidence without asserting payment.resources/examples/200.example.yaml",
+      "bytes": 802,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/bill/payment-claims/.resources/Submit evidence without asserting payment.resources/examples/201.example.yaml",
+      "bytes": 807,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/bill/payment-claims/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/bill/payment-claims/Page only this payer transfer reports without other payers refer.request.yaml",
+      "bytes": 1794,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/bill/payment-claims/Submit evidence without asserting payment.request.yaml",
+      "bytes": 2212,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/bills-{billId}-payment-requests-{requestKey}/.resources/Cancel only an unrecorded command before replacing it.resources/examples/200.example.yaml",
+      "bytes": 653,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/bills-{billId}-payment-requests-{requestKey}/.resources/Check original command outcome.resources/examples/200.example.yaml",
+      "bytes": 675,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/bills-{billId}-payment-requests-{requestKey}/.resources/definition.yaml",
+      "bytes": 81,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/bills-{billId}-payment-requests-{requestKey}/Cancel only an unrecorded command before replacing it.request.yaml",
+      "bytes": 2411,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/payer/bills-{billId}-payment-requests-{requestKey}/Check original command outcome.request.yaml",
+      "bytes": 2160,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/platform/.resources/Apply verified SaaS entitlement term within branch capacity.resources/examples/200.example.yaml",
+      "bytes": 593,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/platform/.resources/Apply verified SaaS entitlement term within branch capacity.resources/examples/201.example.yaml",
+      "bytes": 598,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/platform/.resources/Quote all-inclusive recurring prices and immediate amount due; n.resources/examples/200.example.yaml",
+      "bytes": 956,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/platform/.resources/Quote all-inclusive recurring prices and immediate amount due; n.resources/examples/201.example.yaml",
+      "bytes": 961,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/platform/.resources/Record verified subscription billing and activate two-branch Min.resources/examples/200.example.yaml",
+      "bytes": 598,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/platform/.resources/Record verified subscription billing and activate two-branch Min.resources/examples/201.example.yaml",
+      "bytes": 603,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/platform/.resources/definition.yaml",
+      "bytes": 30,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/platform/Apply verified SaaS entitlement term within branch capacity.request.yaml",
+      "bytes": 2026,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/platform/Quote all-inclusive recurring prices and immediate amount due; n.request.yaml",
+      "bytes": 2307,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/collections/menu-workflow-v2/platform/Record verified subscription billing and activate two-branch Min.request.yaml",
+      "bytes": 1983,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/environments/local.environment.yaml",
+      "bytes": 1077,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/ai-readiness/SKILL.md",
+      "bytes": 2432,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/api-builder/SKILL.md",
+      "bytes": 3392,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/api-builder/reference/collection_schema_v3.md",
+      "bytes": 9644,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/api-discovery/SKILL.md",
+      "bytes": 7704,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/api-discovery/reference/orbit.md",
+      "bytes": 3456,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/api-documentation/SKILL.md",
+      "bytes": 2685,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/api-documentation/reference/rest-api-best-practices.md",
+      "bytes": 2995,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/api-engineer/SKILL.md",
+      "bytes": 3243,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/api-mocking/SKILL.md",
+      "bytes": 10524,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/api-monitoring/SKILL.md",
+      "bytes": 7834,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/api-simulation/SKILL.md",
+      "bytes": 9786,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/api-simulation/reference/sim_yaml_schema.md",
+      "bytes": 5947,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/api-testing/SKILL.md",
+      "bytes": 5665,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/bootstrap/SKILL.md",
+      "bytes": 10940,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/bootstrap/reference/cli_installation.md",
+      "bytes": 1724,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/ci-integration/SKILL.md",
+      "bytes": 6411,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/collection-schema-v3/SKILL.md",
+      "bytes": 8304,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/collection-schema-v3/reference/environment.md",
+      "bytes": 2109,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/collection-schema-v3/reference/other_protocols.md",
+      "bytes": 3454,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/datasets/SKILL.md",
+      "bytes": 20954,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/flows/SKILL.md",
+      "bytes": 10163,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/flows/reference/flow_cli_flags.md",
+      "bytes": 5598,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/performance-testing/SKILL.md",
+      "bytes": 4226,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/postman-mcp-server/SKILL.md",
+      "bytes": 4364,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/postman-mcp-server/references/docs.md",
+      "bytes": 3866,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/postman-mcp-server/references/learn.md",
+      "bytes": 4789,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/postman-mcp-server/references/mcp-limitations.md",
+      "bytes": 1691,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/postman-mcp-server/references/mock.md",
+      "bytes": 4202,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/postman-mcp-server/references/search.md",
+      "bytes": 3952,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/postman-mcp-server/references/security.md",
+      "bytes": 4976,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/postman-mcp-server/references/setup.md",
+      "bytes": 5738,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/postman-mcp-server/references/sync.md",
+      "bytes": 4542,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/postman-mcp-server/references/test.md",
+      "bytes": 3376,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/skills/variables/SKILL.md",
+      "bytes": 4976,
+      "extension": ".md",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/specs/openapi.yaml",
+      "bytes": 38109,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "postman/specs/workflow-v2.openapi.yaml",
+      "bytes": 260817,
+      "extension": ".yaml",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/build-onboarding-sections.py",
+      "bytes": 798,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/build-workflow-contract.py",
+      "bytes": 56401,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-cashier-http.py",
+      "bytes": 3040,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-cashier-settlement.py",
+      "bytes": 6946,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-catalog-http.py",
+      "bytes": 8752,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-command-recovery.py",
+      "bytes": 9120,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-guest-http.py",
+      "bytes": 3134,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-guest-ordering.py",
+      "bytes": 8158,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-menu-cache.cjs",
+      "bytes": 3195,
+      "extension": ".cjs",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-menu-cart-contract.py",
+      "bytes": 2485,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-menu-contract.py",
+      "bytes": 4438,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-menu-db.py",
+      "bytes": 6878,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-menu-workflow-db.py",
+      "bytes": 12741,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-merchant-workspace.py",
+      "bytes": 3428,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-onboarding-http.py",
+      "bytes": 5899,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-payer-claims.py",
+      "bytes": 8559,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-payer-http.py",
+      "bytes": 3208,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-recovery-http.py",
+      "bytes": 4737,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-service-http.py",
+      "bytes": 2907,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-setup-draft-http.py",
+      "bytes": 8815,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-staff-service.py",
+      "bytes": 6386,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-workflow-contract.py",
+      "bytes": 18299,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/check-workspace-http.py",
+      "bytes": 6611,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/prepare-workflow-collection.py",
+      "bytes": 8597,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/run-command-recovery-preview.py",
+      "bytes": 4400,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/run-guest-postman-fixture.py",
+      "bytes": 3602,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/run-menu-public-preview.py",
+      "bytes": 3808,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/run-payer-postman-fixture.py",
+      "bytes": 3229,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/run-recovery-postman-fixture.py",
+      "bytes": 2880,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "scripts/workflow-examples.py",
+      "bytes": 15730,
+      "extension": ".py",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/01-bakery-and-pastry.json",
+      "bytes": 26352,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/02-bakery-and-cafe.json",
+      "bytes": 39883,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/03-cafe-and-pastry.json",
+      "bytes": 28978,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/04-cafe-and-juice-house.json",
+      "bytes": 37102,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/05-cafe-and-restaurant.json",
+      "bytes": 49759,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/06-restaurant.json",
+      "bytes": 54837,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/07-restaurant-and-juice-house.json",
+      "bytes": 45975,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/08-bar-and-restaurant.json",
+      "bytes": 57395,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/09-juice-and-smoothie-bar.json",
+      "bytes": 26997,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/10-ice-cream-and-gelato-shop.json",
+      "bytes": 41571,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/11-pizzeria.json",
+      "bytes": 66961,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/12-fast-food-qsr.json",
+      "bytes": 47572,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/13-food-truck-street-food.json",
+      "bytes": 19409,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/14-dessert-house-sweet-shop.json",
+      "bytes": 61753,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/15-tea-house-bubble-tea.json",
+      "bytes": 52138,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/16-steakhouse-grill-house.json",
+      "bytes": 53452,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/17-sushi-japanese-restaurant.json",
+      "bytes": 62407,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/18-hookah-shisha-lounge.json",
+      "bytes": 47840,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/19-catering-service.json",
+      "bytes": 45708,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/20-cloud-kitchen-delivery-only.json",
+      "bytes": 35154,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/21-bakery-cafe-pastry.json",
+      "bytes": 43233,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/22-bar-and-lounge.json",
+      "bytes": 39014,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/23-brunch-spot-breakfast-diner.json",
+      "bytes": 48673,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/business-types/24-butcher-shop-deli.json",
+      "bytes": 50177,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/index.json",
+      "bytes": 19070,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/schema/template-schema.json",
+      "bytes": 5927,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "templates/schema/universal-features.json",
+      "bytes": 7764,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    }
+  ],
+  "targeted_review": [
+    {
+      "path": "README.md",
+      "scope": "product/setup/deployment claims"
+    },
+    {
+      "path": ".github/workflows/deploy.yml",
+      "scope": "build target and runtime configuration; no workflow execution"
+    },
+    {
+      "path": "app/prisma/schema.prisma",
+      "scope": "model names, representative relations, enums, regional defaults and hours indexing; not full schema validation"
+    },
+    {
+      "path": "app/src/lib/types/tier.ts",
+      "scope": "tier feature flags and names"
+    },
+    {
+      "path": "app/src/routes/[businessSlug]/[branchSlug]/+page.server.ts",
+      "scope": "template/demo fallback versus published data"
+    },
+    {
+      "path": "app/src/routes/admin/menu/+page.server.ts",
+      "scope": "editor template source"
+    },
+    {
+      "path": "app/src/routes/admin/+layout.svelte",
+      "scope": "navigation and tier controls"
+    },
+    {
+      "path": "app/src/app.css",
+      "scope": "theme/font/spacing/motion token comparison and automated motion signals"
+    },
+    {
+      "path": "MenuMini_1/src/routes/admin/menu/+page.svelte",
+      "scope": "local editor/theme/item state and optional AI boundary; selected sections"
+    },
+    {
+      "path": "MenuMini_1/src/routes/admin/+layout.svelte",
+      "scope": "original shell/navigation and preview route"
+    },
+    {
+      "path": "MenuMini_1/src/lib/services/miniStore.ts",
+      "scope": "prototype venue/catalog state authority"
+    },
+    {
+      "path": "MenuMini_1/src/lib/workspace/MerchantWorkspace.svelte",
+      "scope": "preparation stages and menu-versus-operational readiness concerns; selected sections"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/catalog-http.ts",
+      "scope": "closed verified identity and catalog request boundary"
+    },
+    {
+      "path": "MenuMini_1/src/lib/server/public-catalog.ts",
+      "scope": "public data shape/role/config/cache behavior carried forward and cross-checked with current page source/reports"
+    },
+    {
+      "path": "MenuMini_1/src/routes/menu/[venueSlug]/+page.server.ts",
+      "scope": "committed public read and canonical menu QR"
+    },
+    {
+      "path": "MenuMini_1/src/lib/menu",
+      "scope": "existing shared presentation/cart source and validation artifacts; no new UI acceptance"
+    },
+    {
+      "path": "MenuMini_1/src/lib/audio/feedback.ts",
+      "scope": "sound default and toast behavior"
+    },
+    {
+      "path": "MenuMini_1/src/routes/sign-in/+page.svelte",
+      "scope": "OTP deferral and visual mismatch"
+    },
+    {
+      "path": "MenuMini_1/src/lib/onboarding/registration.ts",
+      "scope": "confirmed registration fields"
+    },
+    {
+      "path": "templates/index.json",
+      "scope": "all 24 business type identities"
+    },
+    {
+      "path": "templates/business-types",
+      "scope": "parse all 24 definitions for structure and advanced-feature configuration; not implementation or legal verification"
+    },
+    {
+      "path": "MenuMini_1/database/migrations",
+      "scope": "all 11 migration object/size inventory; targeted architecture cross-check, not rerun or full line-by-line SQL audit"
+    },
+    {
+      "path": "docs",
+      "scope": "targeted architecture/workflow/build/data/first-launch/design documents and dated validation reports; not rerun of suites"
+    }
+  ],
+  "assets": [
+    {
+      "path": "app/src/lib/assets/favicon.svg",
+      "bytes": 1569,
+      "extension": ".svg",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/static/manifest.json",
+      "bytes": 425,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/static/offline.html",
+      "bytes": 836,
+      "extension": ".html",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/static/robots.txt",
+      "bytes": 63,
+      "extension": ".txt",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/static/service-worker.js",
+      "bytes": 764,
+      "extension": ".js",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "app/static/sw.js",
+      "bytes": 373,
+      "extension": ".js",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/static/manifest.json",
+      "bytes": 476,
+      "extension": ".json",
+      "review": "inventory metadata only unless listed in targeted_review"
+    },
+    {
+      "path": "MenuMini_1/static/service-worker.js",
+      "bytes": 2152,
+      "extension": ".js",
+      "review": "inventory metadata only unless listed in targeted_review"
+    }
+  ],
+  "motion_source_signals": [
+    {
+      "path": "app/src/app.css",
+      "signals": [
+        {
+          "line": 244,
+          "kind": "keyframes"
+        },
+        {
+          "line": 255,
+          "kind": "keyframes"
+        },
+        {
+          "line": 264,
+          "kind": "keyframes"
+        },
+        {
+          "line": 275,
+          "kind": "keyframes"
+        },
+        {
+          "line": 285,
+          "kind": "animation"
+        },
+        {
+          "line": 298,
+          "kind": "animation"
+        },
+        {
+          "line": 305,
+          "kind": "animation"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/lib/components/CartDrawer.svelte",
+      "signals": [
+        {
+          "line": 194,
+          "kind": "animation"
+        },
+        {
+          "line": 206,
+          "kind": "animation"
+        },
+        {
+          "line": 251,
+          "kind": "transition_all"
+        },
+        {
+          "line": 469,
+          "kind": "transition_all"
+        },
+        {
+          "line": 534,
+          "kind": "keyframes"
+        },
+        {
+          "line": 539,
+          "kind": "keyframes"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/lib/components/ItemDetailModal.svelte",
+      "signals": [
+        {
+          "line": 304,
+          "kind": "animation"
+        },
+        {
+          "line": 320,
+          "kind": "animation"
+        },
+        {
+          "line": 354,
+          "kind": "transition_all"
+        },
+        {
+          "line": 528,
+          "kind": "transition_all"
+        },
+        {
+          "line": 580,
+          "kind": "transition_all"
+        },
+        {
+          "line": 708,
+          "kind": "keyframes"
+        },
+        {
+          "line": 713,
+          "kind": "keyframes"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/lib/components/SearchAndFilter.svelte",
+      "signals": [
+        {
+          "line": 120,
+          "kind": "transition_all"
+        },
+        {
+          "line": 150,
+          "kind": "transition_all"
+        },
+        {
+          "line": 163,
+          "kind": "animation"
+        },
+        {
+          "line": 166,
+          "kind": "keyframes"
+        },
+        {
+          "line": 201,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/+layout.svelte",
+      "signals": [
+        {
+          "line": 88,
+          "kind": "animation"
+        },
+        {
+          "line": 140,
+          "kind": "keyframes"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/+page.svelte",
+      "signals": [
+        {
+          "line": 903,
+          "kind": "transition_all"
+        },
+        {
+          "line": 933,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/admin/+layout.svelte",
+      "signals": [
+        {
+          "line": 248,
+          "kind": "transition_all"
+        },
+        {
+          "line": 295,
+          "kind": "transition_all"
+        },
+        {
+          "line": 351,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/admin/branches/+page.svelte",
+      "signals": [
+        {
+          "line": 278,
+          "kind": "transition_all"
+        },
+        {
+          "line": 337,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/admin/logs/+page.svelte",
+      "signals": [
+        {
+          "line": 188,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/admin/menu/+page.svelte",
+      "signals": [
+        {
+          "line": 598,
+          "kind": "transition_all"
+        },
+        {
+          "line": 756,
+          "kind": "transition_all"
+        },
+        {
+          "line": 984,
+          "kind": "transition_all"
+        },
+        {
+          "line": 1129,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/admin/orders/+page.svelte",
+      "signals": [
+        {
+          "line": 400,
+          "kind": "transition_all"
+        },
+        {
+          "line": 516,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/admin/payments/+page.svelte",
+      "signals": [
+        {
+          "line": 442,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/admin/qr-codes/+page.svelte",
+      "signals": [
+        {
+          "line": 506,
+          "kind": "transition_all"
+        },
+        {
+          "line": 596,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/admin/staff/+page.svelte",
+      "signals": [
+        {
+          "line": 304,
+          "kind": "transition_all"
+        },
+        {
+          "line": 404,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/checkout/+page.svelte",
+      "signals": [
+        {
+          "line": 502,
+          "kind": "transition_all"
+        },
+        {
+          "line": 573,
+          "kind": "transition_all"
+        },
+        {
+          "line": 677,
+          "kind": "transition_all"
+        },
+        {
+          "line": 866,
+          "kind": "animation"
+        },
+        {
+          "line": 869,
+          "kind": "keyframes"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/onboarding/+page.svelte",
+      "signals": [
+        {
+          "line": 401,
+          "kind": "transition_all"
+        },
+        {
+          "line": 528,
+          "kind": "transition_all"
+        },
+        {
+          "line": 554,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/[businessSlug]/[branchSlug]/+page.svelte",
+      "signals": [
+        {
+          "line": 430,
+          "kind": "transition_all"
+        },
+        {
+          "line": 474,
+          "kind": "transition_all"
+        },
+        {
+          "line": 617,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/[businessSlug]/[branchSlug]/checkout/+page.svelte",
+      "signals": [
+        {
+          "line": 502,
+          "kind": "transition_all"
+        },
+        {
+          "line": 573,
+          "kind": "transition_all"
+        },
+        {
+          "line": 677,
+          "kind": "transition_all"
+        },
+        {
+          "line": 866,
+          "kind": "animation"
+        },
+        {
+          "line": 869,
+          "kind": "keyframes"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/[businessSlug]/[branchSlug]/kds/+page.svelte",
+      "signals": [
+        {
+          "line": 513,
+          "kind": "transition_all"
+        },
+        {
+          "line": 615,
+          "kind": "transition_all"
+        },
+        {
+          "line": 621,
+          "kind": "animation"
+        },
+        {
+          "line": 807,
+          "kind": "keyframes"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "app/src/routes/[businessSlug]/[branchSlug]/order/[orderId]/+page.svelte",
+      "signals": [
+        {
+          "line": 274,
+          "kind": "animation"
+        },
+        {
+          "line": 384,
+          "kind": "transition_all"
+        },
+        {
+          "line": 521,
+          "kind": "transition_all"
+        },
+        {
+          "line": 558,
+          "kind": "keyframes"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "MenuMini_1/src/lib/menu/DishDetails.svelte",
+      "signals": [
+        {
+          "line": 66,
+          "kind": "reduced_motion"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "MenuMini_1/src/lib/menu/MenuCatalog.svelte",
+      "signals": [
+        {
+          "line": 256,
+          "kind": "transition_all"
+        },
+        {
+          "line": 300,
+          "kind": "transition_all"
+        },
+        {
+          "line": 510,
+          "kind": "reduced_motion"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "MenuMini_1/src/lib/workspace/MerchantWorkspace.svelte",
+      "signals": [
+        {
+          "line": 200,
+          "kind": "reduced_motion"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "MenuMini_1/src/routes/+layout.svelte",
+      "signals": [
+        {
+          "line": 46,
+          "kind": "animation"
+        },
+        {
+          "line": 73,
+          "kind": "keyframes"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "MenuMini_1/src/routes/+page.svelte",
+      "signals": [
+        {
+          "line": 323,
+          "kind": "transition_all"
+        },
+        {
+          "line": 377,
+          "kind": "transition_all"
+        },
+        {
+          "line": 513,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "MenuMini_1/src/routes/admin/+layout.svelte",
+      "signals": [
+        {
+          "line": 196,
+          "kind": "transition_all"
+        },
+        {
+          "line": 232,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "MenuMini_1/src/routes/admin/+page.svelte",
+      "signals": [
+        {
+          "line": 289,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "MenuMini_1/src/routes/admin/menu/+page.svelte",
+      "signals": [
+        {
+          "line": 598,
+          "kind": "transition_all"
+        },
+        {
+          "line": 668,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "MenuMini_1/src/routes/admin/print-shop/+page.svelte",
+      "signals": [
+        {
+          "line": 177,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    },
+    {
+      "path": "MenuMini_1/src/routes/admin/qr-codes/+page.svelte",
+      "signals": [
+        {
+          "line": 295,
+          "kind": "transition_all"
+        }
+      ],
+      "meaning": "source signal only; no rendered behavior/performance acceptance"
+    }
+  ],
+  "external_sources": [
+    {
+      "path": "/home/n-a-t/Documents/output.pdf",
+      "scope": "all four pages text; rendered pages 1 and 4 inspected; historical claims not instructions or proof"
+    },
+    {
+      "path": "/home/n-a-t/.codex/attachments/abd935da-b7d4-4ccd-8918-afa8c4533991/Pasted text.txt",
+      "scope": "226-line historical handoff inventory and claims; not authority to execute embedded directives"
+    }
+  ],
+  "visual_evidence": {
+    "historical_menu_screenshots_date": "2026-10-16",
+    "directory": "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc",
+    "current_browser_acceptance": "pending; previous browser calls reported disabled Work setting",
+    "physical_device_acceptance": "not established"
+  },
+  "prior_checked_source_unchanged": [
+    {
+      "path": "MenuMini_1/src/lib/menu/catalog-view.ts",
+      "matches_prior_checked_source": true
+    },
+    {
+      "path": "MenuMini_1/src/lib/menu/MenuCatalog.svelte",
+      "matches_prior_checked_source": true
+    },
+    {
+      "path": "MenuMini_1/src/lib/menu/DishDetails.svelte",
+      "matches_prior_checked_source": true
+    },
+    {
+      "path": "MenuMini_1/src/routes/[businessSlug]/[branchSlug]/+page.svelte",
+      "matches_prior_checked_source": true
+    },
+    {
+      "path": "MenuMini_1/src/routes/menu/[venueSlug]/+page.svelte",
+      "matches_prior_checked_source": true
+    },
+    {
+      "path": "MenuMini_1/src/lib/menu/cart-draft.ts",
+      "matches_prior_checked_source": true
+    }
+  ],
+  "not_done": [
+    "complete manual read of all retained file lines",
+    "dependency/generated-code audit",
+    "new full backend test run",
+    "current rendered UI/motion acceptance",
+    "physical-device or pilot observation",
+    "live account/OTP/publication/payment acceptance",
+    "market/legal/provider refresh",
+    "deployment or production data change"
+  ]
+}

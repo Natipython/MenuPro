@@ -1,0 +1,17 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/branches/:branchId/items/:itemId/availability'
+  method: PUT
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"itemId\": \"00000000-0000-4000-8000-000000000601\",\n  \"revision\"\
+      : 2,\n  \"available\": false\n}"

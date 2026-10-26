@@ -1,0 +1,62 @@
+[
+  {
+    "schema": "RecoveryReceipt",
+    "value": {
+      "state": "COMMITTED",
+      "domain": "GUEST",
+      "resultId": "01a140ad-4d80-7905-b4ec-40fa83358f7a",
+      "operation": "SUBMIT",
+      "recordedAt": "2026-10-15T20:47:41.815978+03:00",
+      "requestKey": "17165039-2f36-4f7b-bdea-db0bb2475d68",
+      "resourceId": "01a140ad-4bc0-7e45-9dae-03f7a5c8e935"
+    }
+  },
+  {
+    "schema": "RecoveryReceipt",
+    "value": {
+      "state": "CANCELLED",
+      "domain": "GUEST",
+      "resultId": null,
+      "operation": "SUBMIT",
+      "recordedAt": "2026-10-15T20:47:41.796014+03:00",
+      "requestKey": "a88c089f-f05d-49b8-8b79-c9d68ee37871",
+      "resourceId": "01a140ad-4bc0-7e45-9dae-03f7a5c8e935"
+    }
+  },
+  {
+    "schema": "RecoveryReceipt",
+    "value": {
+      "state": "COMMITTED",
+      "domain": "CASHIER",
+      "resultId": "01a140ad-4e40-7ae5-9875-708c7aca15c2",
+      "operation": "RECORD_RECEIPT",
+      "recordedAt": "2026-10-15T20:47:42.009842+03:00",
+      "requestKey": "185f4f6a-9368-4bdb-b16b-48a2b3119d33",
+      "resourceId": "01a140ad-4bc7-7a24-b227-53ec0956f7f6"
+    }
+  },
+  {
+    "schema": "RecoveryReceipt",
+    "value": {
+      "state": "COMMITTED",
+      "domain": "PAYER",
+      "resultId": "01a140ad-4ef0-799b-9f86-c76bfbc61bec",
+      "operation": "CLAIM",
+      "recordedAt": "2026-10-15T20:47:42.1826+03:00",
+      "requestKey": "f354ef3b-f420-4eef-ace2-e67a3284f57d",
+      "resourceId": "01a140ad-4bc7-7a24-b227-53ec0956f7f6"
+    }
+  },
+  {
+    "schema": "RecoveryReceipt",
+    "value": {
+      "state": "NOT_RECORDED",
+      "domain": "GUEST",
+      "resultId": null,
+      "operation": "SUBMIT",
+      "recordedAt": null,
+      "requestKey": "ce4a39d4-2b1c-4a60-8740-8e95c88ba958",
+      "resourceId": "01a140ad-4bc0-7e45-9dae-03f7a5c8e935"
+    }
+  }
+]

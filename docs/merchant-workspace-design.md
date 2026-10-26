@@ -1,0 +1,13 @@
+# Merchant workspace and service preparation
+
+13 October 2026. Continue the complete operating model through menu editing → service setup → readiness review. Actual OTP remains deferred by the user.
+
+The preparation workspace accepts the existing contact-free setup export, carries its branch/menu forward in memory, and supports bilingual items, exact ETB prices and item options. A new portable workspace export preserves the richer menu and service preparation. No browser storage, account creation, staff invitation, payment account or entitlement is created. Editing a preparation file never changes a published menu.
+
+Service preparation records intended table labels, who will handle orders/preparation/payments, cash/manual-transfer preference and whether the price policy still needs review. These are plans, not staff grants or verified receiving accounts. Staff acceptance while unpaid and manual credited-funds verification remain fixed operating rules. Counter service is a preparation possibility; its actual transaction flow has not been implemented.
+
+Contracts first: add a stateless workspace validation operation and private service-draft/readiness operations. Workspace validation returns counts and remaining steps, without echoing the submitted content. Private commands use transaction-local business/actor context established exclusively by a trusted server identity adapter, expected versions, exact-body idempotency, database permissions and atomic audit/outbox records. The adapter currently returns no identity: HTTP merchant access remains closed. There is no header, cookie, URL parameter, environment identity switch or development sign-in bypass.
+
+Private service drafts are versioned separately from the public branch/menu. Saving one cannot change ordering_enabled, subscription terms, staff assignments, tables, prices, receiving accounts or public routing. Readiness derives aggregate facts from committed records and reports the missing work. It never authorizes launch; transaction HTTP, verified access and field acceptance remain separate gates.
+
+Verification will exercise actual database commands through the server adapter in a disposable fictional cluster, including cross-business/role rejection, version and retry conflicts, validation, public-menu isolation and transaction-local context cleanup. Real HTTP checks will cover the stateless validator and the closed private routes. Browser checks will cover preparation/edit/options/review/export/import and responsive layout. These checks cannot establish real authentication, a pilot, a reachable phone QR or production readiness.

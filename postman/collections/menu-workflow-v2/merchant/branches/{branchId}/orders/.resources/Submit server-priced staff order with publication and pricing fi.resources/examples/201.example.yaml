@@ -1,0 +1,26 @@
+$kind: http-example
+name: Fictional committed result 201
+request:
+  url: '{{baseUrl}}/merchant/branches/:branchId/orders'
+  method: POST
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"id\": \"00000000-0000-4000-8000-000000000701\",\n  \"visitId\"\
+      : \"00000000-0000-4000-8000-000000000501\",\n  \"branchId\": \"00000000-0000-4000-8000-000000000101\"\
+      ,\n  \"source\": \"STAFF\",\n  \"status\": \"SUBMITTED\",\n  \"version\": 1,\n\
+      \  \"currency\": \"ETB\",\n  \"totalAmount\": \"70.00\",\n  \"items\": [\n \
+      \   {\n      \"id\": \"00000000-0000-4000-8000-000000000711\",\n      \"nameEn\"\
+      : \"Macchiato\",\n      \"quantity\": 1,\n      \"unitPrice\": \"70.00\",\n\
+      \      \"lineTotal\": \"70.00\",\n      \"selectedOptions\": []\n    }\n  ],\n\
+      \  \"tableLabel\": \"Table 1\",\n  \"customerNote\": \"\",\n  \"createdAt\"\
+      : \"2026-10-12T17:00:00Z\",\n  \"subtotalAmount\": \"70.00\",\n  \"serviceAmount\"\
+      : \"0.00\",\n  \"taxAmount\": \"0.00\",\n  \"allowedTransitions\": [\n    \"\
+      ACCEPTED\",\n    \"CANCELLED\"\n  ]\n}"

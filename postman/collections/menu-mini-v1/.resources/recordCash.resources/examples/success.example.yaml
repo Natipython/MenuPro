@@ -1,0 +1,22 @@
+$kind: http-example
+name: Fictional intended response
+request:
+  method: POST
+  url: '{{baseUrl}}/merchant/orders/{{orderId}}/cash-receipts'
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+  - key: Content-Type
+    value: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "00000000-0000-4000-8000-000000000901",
+        "orderId": "00000000-0000-4000-8000-000000000701",
+        "amount": "140.00",
+        "method": "CASH",
+        "verificationSource": "CASH_CONFIRMED",
+        "recordedAt": "2026-10-12T03:00:00Z"
+      }

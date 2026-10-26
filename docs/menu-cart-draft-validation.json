@@ -1,0 +1,68 @@
+{
+  "verified_at": "2026-10-18T19:44:10.575Z",
+  "passed": 36,
+  "failed": 0,
+  "cases": [
+    "editing a cart does not mutate the original draft or grant seating authority",
+    "fractional ETB totals use exact arithmetic",
+    "identical options in a different selection order merge into the same line",
+    "different instructions and option combinations remain separate lines",
+    "quantity controls target the exact option-and-note line without changing another variant or the old draft",
+    "removing one dish variant keeps the other option-and-note variants",
+    "fractional quantities cannot enter the review",
+    "cart review shows selected option names and exact unit/line prices",
+    "Amharic dish names and full special instructions survive review mapping",
+    "missing required option is rejected before add",
+    "single-select option cannot contain two choices",
+    "sold-out option cannot be added",
+    "duplicate choice IDs cannot increase or conceal option charges",
+    "over-limit instructions are rejected using character count",
+    "merged quantity above 99 is rejected without silently splitting lines",
+    "a rejected add leaves the previous cart intact",
+    "review reuses existing exact service/tax rounding rather than inventing another calculator",
+    "a new publication requires explicit review even if selections remain valid",
+    "stale draft cannot mix items from a changed publication",
+    "changed prices cannot be submitted using the previous reviewed publication",
+    "explicit repricing preserves selections/notes and does not rewrite the previous draft",
+    "live unavailability blocks review even without a new publication ID",
+    "an unavailable line can be removed while preserving and reviewing the rest of the order",
+    "repricing never silently deletes or accepts an unavailable item",
+    "another branch cannot reuse this cart",
+    "an unbound browsing draft is not automatically sent to a seating",
+    "table session alone is not treated as an associated seating",
+    "a different branch session cannot bind this draft",
+    "a new guest session cannot silently reuse a previously bound draft",
+    "a new seating cannot silently inherit the previous seating draft",
+    "ended seating cannot prepare a replacement order",
+    "prepared command matches the existing guest validator and interrupted-command recovery contract",
+    "current seating, order note and original retry key are carried explicitly",
+    "command body excludes credentials, client totals, session identity assertions and payment state",
+    "later draft edits cannot rewrite the detached original command snapshot",
+    "an empty cart cannot become an order request"
+  ],
+  "scope": "pure frontend cart/review/command preparation using fictional offers and contexts; existing validators reused; no HTTP, storage, identity verification, live order or rendered UI acceptance",
+  "contract": {
+    "spec": "postman/specs/workflow-v2.openapi.yaml",
+    "operation": "POST /guest/orders",
+    "schema": "#/components/schemas/VisitOrder",
+    "valid_payloads": 1,
+    "forbidden_field_cases": 3,
+    "failed": 0
+  },
+  "typecheck": {
+    "verified_at": "2026-10-18T19:45:05.825460+00:00",
+    "exit_code": 0,
+    "errors": 0,
+    "existing_warnings": 18,
+    "warning_files": 5
+  },
+  "source": {
+    "path": "MenuMini_1/src/lib/menu/cart-draft.ts",
+    "sha256": "c034d3c4cccd32627df2051f598afe2facc18919760fe4f01e8ae57364f3846d"
+  },
+  "integration_status": {
+    "route_or_transport_connected": false,
+    "browser_acceptance": "pending: local browser use disabled in Work settings",
+    "no_new_runtime_activation": true
+  }
+}

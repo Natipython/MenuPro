@@ -1,71 +1,159 @@
 <script lang="ts">
-  // Mock analytics data
+  import { soundFX, addToast } from '$lib/utils/feedback';
+
   const stats = [
-    { label: 'Today\'s Revenue', value: '$1,245.00', trend: '+12%', isPositive: true },
-    { label: 'Total Orders', value: '84', trend: '+5%', isPositive: true },
-    { label: 'Avg Order Value', value: '$14.82', trend: '-2%', isPositive: false },
-    { label: 'Active Tables', value: '12 / 20', trend: '60% Capacity', isPositive: true }
+    { label: "Today's Revenue", value: '42,850 ETB', trend: '+18.4%', isPositive: true, sub: 'vs 36,200 ETB yesterday' },
+    { label: 'Total Orders', value: '128', trend: '+12%', isPositive: true, sub: '86 Dine-In • 42 Takeaway' },
+    { label: 'Avg Ticket Value', value: '334.75 ETB', trend: '+4.2%', isPositive: true, sub: 'Highest in Dinner shift' },
+    { label: 'Live Tables', value: '14 / 22', trend: '64% Seated', isPositive: true, sub: '8 Available tables' }
   ];
 
   const recentOrders = [
-    { id: '12345', time: '10 mins ago', table: '12', amount: '$45.00', status: 'COMPLETED' },
-    { id: '12346', time: '15 mins ago', table: 'Takeaway', amount: '$12.50', status: 'COMPLETED' },
-    { id: '12347', time: '1 hour ago', table: '4', amount: '$85.00', status: 'COMPLETED' }
+    { id: '#4821', time: '4 mins ago', table: 'Table 4', amount: '680.00 ETB', method: 'telebirr', txn: '7DF89432', status: 'PREPARING' },
+    { id: '#4820', time: '12 mins ago', table: 'Table 9', amount: '920.00 ETB', method: 'CBE Birr', txn: 'CBE-99120', status: 'PREPARING' },
+    { id: '#4819', time: '22 mins ago', table: 'Takeaway #3', amount: '410.00 ETB', method: 'Cash', txn: 'At Counter', status: 'READY' },
+    { id: '#4818', time: '38 mins ago', table: 'Table 2', amount: '1,450.00 ETB', method: 'telebirr', txn: '7DF88901', status: 'SERVED' },
+    { id: '#4817', time: '45 mins ago', table: 'Table 11', amount: '530.00 ETB', method: 'Awash', txn: 'AW-44129', status: 'SERVED' }
   ];
+
+  const topDishes = [
+    { name: 'Special Burger Delight', count: 48, revenue: '8,640 ETB', icon: '🍔' },
+    { name: 'Single-Origin Pour Over', count: 62, revenue: '4,960 ETB', icon: '☕' },
+    { name: 'Artisan Fettuccine', count: 31, revenue: '6,820 ETB', icon: '🍝' },
+    { name: 'Fresh Passion Lemonade', count: 54, revenue: '4,320 ETB', icon: '🍋' }
+  ];
+
+  const weeklyBars = [
+    { day: 'Mon', height: 45, val: '24k' },
+    { day: 'Tue', height: 60, val: '31k' },
+    { day: 'Wed', height: 50, val: '28k' },
+    { day: 'Thu', height: 75, val: '38k' },
+    { day: 'Fri', height: 95, val: '49k' },
+    { day: 'Sat', height: 100, val: '54k' },
+    { day: 'Sun', height: 85, val: '43k' }
+  ];
+
+  function downloadReport() {
+    soundFX.playSuccess();
+    addToast({
+      type: 'success',
+      title: 'Report Downloaded',
+      message: 'Daily revenue and transaction summary exported as CSV.'
+    });
+  }
 </script>
 
 <svelte:head>
-  <title>Admin Dashboard | MenuApp Pro</title>
+  <title>Admin Dashboard | Pulse & Analytics</title>
 </svelte:head>
 
-<div class="dashboard">
-  <header class="page-header">
-    <h1>Dashboard Overview</h1>
-    <div class="actions">
-      <button class="primary-btn">Download Report</button>
+<div class="dashboard-page">
+  <!-- Header -->
+  <header class="page-top-bar">
+    <div>
+      <div class="branch-pill-tag">
+        <span class="live-dot"></span>
+        <span>Bole Medhanealem • Live Service</span>
+      </div>
+      <h1 class="page-title">Management Dashboard</h1>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn-tactile btn-secondary btn-action" on:click={downloadReport}>
+        <span>📥 Export Daily CSV</span>
+      </button>
+      <a href="/demo-restaurant/main-branch/kds" target="_blank" class="btn-tactile btn-primary btn-action">
+        <span>🔥 Launch KDS Screen →</span>
+      </a>
     </div>
   </header>
 
-  <!-- Stats Grid -->
-  <div class="stats-grid">
+  <!-- Key Metrics Bento Row -->
+  <div class="stats-bento-grid">
     {#each stats as stat}
       <div class="stat-card">
-        <h3 class="stat-label">{stat.label}</h3>
-        <div class="stat-value">{stat.value}</div>
-        <div class="stat-trend" class:positive={stat.isPositive} class:negative={!stat.isPositive}>
-          {stat.trend} from yesterday
+        <div class="stat-card-head">
+          <span class="stat-label">{stat.label}</span>
+          <span class="stat-trend" class:positive={stat.isPositive}>
+            {stat.trend}
+          </span>
         </div>
+        <div class="stat-main-val font-mono">{stat.value}</div>
+        <span class="stat-sub">{stat.sub}</span>
       </div>
     {/each}
   </div>
 
-  <div class="dashboard-grid">
-    <!-- Chart Placeholder -->
-    <div class="card chart-card">
-      <h2>Revenue Trend</h2>
-      <div class="chart-placeholder">
-        <span>[ Chart rendering area ]</span>
-        <div class="mock-bars">
-          <div class="bar" style="height: 40%"></div>
-          <div class="bar" style="height: 60%"></div>
-          <div class="bar" style="height: 45%"></div>
-          <div class="bar" style="height: 80%"></div>
-          <div class="bar" style="height: 55%"></div>
-          <div class="bar" style="height: 90%"></div>
-          <div class="bar" style="height: 100%"></div>
+  <!-- Charts & Top Dishes Grid -->
+  <div class="analytics-charts-grid">
+    <!-- Revenue Weekly Chart -->
+    <div class="card chart-panel">
+      <div class="panel-header">
+        <div>
+          <h2 class="panel-title">Weekly Revenue Velocity</h2>
+          <p class="panel-subtitle">Total gross volume across Dine-In & Takeaway</p>
+        </div>
+        <span class="chart-summary-tag font-mono">267,000 ETB this week</span>
+      </div>
+
+      <div class="bar-chart-container">
+        <div class="bars-flex-row">
+          {#each weeklyBars as bar}
+            <div class="bar-col">
+              <div class="bar-tooltip font-mono">{bar.val}</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="height: {bar.height}%;"></div>
+              </div>
+              <span class="bar-day">{bar.day}</span>
+            </div>
+          {/each}
         </div>
       </div>
     </div>
 
-    <!-- Recent Orders -->
-    <div class="card recent-orders">
-      <h2>Recent Orders</h2>
-      <table class="data-table">
+    <!-- Top Selling Dishes -->
+    <div class="card top-dishes-panel">
+      <div class="panel-header">
+        <h2 class="panel-title">Top Moving Dishes</h2>
+        <span class="badge-mini">Today</span>
+      </div>
+
+      <div class="top-dishes-list">
+        {#each topDishes as dish, idx}
+          <div class="dish-rank-row">
+            <span class="rank-num">#{idx + 1}</span>
+            <div class="dish-rank-info">
+              <span class="dish-rank-name">{dish.icon} {dish.name}</span>
+              <span class="dish-rank-sales">{dish.count} orders today</span>
+            </div>
+            <span class="dish-rank-rev font-mono">{dish.revenue}</span>
+          </div>
+        {/each}
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Live Orders Table Card -->
+  <div class="card recent-orders-card">
+    <div class="panel-header">
+      <div>
+        <h2 class="panel-title">Recent Transactions & Kitchen Feed</h2>
+        <p class="panel-subtitle">Latest orders with telebirr & CBE transaction IDs</p>
+      </div>
+      <a href="/admin/orders" class="btn-tactile btn-secondary btn-sm-link">
+        View All Orders →
+      </a>
+    </div>
+
+    <div class="table-responsive-box">
+      <table class="admin-table">
         <thead>
           <tr>
-            <th>Order ID</th>
+            <th>Order</th>
+            <th>Location</th>
             <th>Time</th>
-            <th>Table/Type</th>
+            <th>Payment Method</th>
+            <th>TXN Ref</th>
             <th>Amount</th>
             <th>Status</th>
           </tr>
@@ -73,11 +161,21 @@
         <tbody>
           {#each recentOrders as order}
             <tr>
-              <td>#{order.id}</td>
-              <td>{order.time}</td>
-              <td>{order.table}</td>
-              <td><strong>{order.amount}</strong></td>
-              <td><span class="status-badge {order.status.toLowerCase()}">{order.status}</span></td>
+              <td class="font-mono font-bold text-amber">{order.id}</td>
+              <td class="font-bold">{order.table}</td>
+              <td class="text-muted">{order.time}</td>
+              <td>
+                <span class="method-tag {order.method.toLowerCase().includes('tele') ? 'tele' : order.method.toLowerCase().includes('cbe') ? 'cbe' : 'cash'}">
+                  {order.method}
+                </span>
+              </td>
+              <td class="font-mono text-muted">{order.txn}</td>
+              <td class="font-mono font-bold">{order.amount}</td>
+              <td>
+                <span class="status-pill status-{order.status.toLowerCase()}">
+                  {order.status}
+                </span>
+              </td>
             </tr>
           {/each}
         </tbody>
@@ -87,30 +185,332 @@
 </div>
 
 <style>
-  .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
-  .page-header h1 { margin: 0; font-size: 1.75rem; color: #111827; }
-  .primary-btn { background: #3b82f6; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 500; cursor: pointer; }
-  
-  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
-  .stat-card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-  .stat-label { color: #6b7280; font-size: 0.875rem; font-weight: 500; text-transform: uppercase; margin: 0 0 0.5rem 0; }
-  .stat-value { font-size: 1.75rem; font-weight: 700; color: #111827; margin-bottom: 0.5rem; }
-  .stat-trend { font-size: 0.875rem; font-weight: 500; }
-  .stat-trend.positive { color: #10b981; }
-  .stat-trend.negative { color: #ef4444; }
+  .dashboard-page {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
 
-  .dashboard-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; }
-  
-  .card { background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 1.5rem; }
-  .card h2 { margin: 0 0 1.5rem 0; font-size: 1.25rem; color: #111827; border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; }
-  
-  .chart-placeholder { height: 300px; background: #f9fafb; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #9ca3af; position: relative; }
-  .mock-bars { display: flex; align-items: flex-end; gap: 10px; height: 200px; width: 80%; margin-top: 1rem; }
-  .bar { flex: 1; background: #93c5fd; border-radius: 4px 4px 0 0; }
+  /* Page Bar */
+  .page-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 
-  .data-table { width: 100%; border-collapse: collapse; text-align: left; }
-  .data-table th { color: #6b7280; font-weight: 500; font-size: 0.875rem; padding-bottom: 0.75rem; border-bottom: 1px solid #e5e7eb; }
-  .data-table td { padding: 1rem 0; border-bottom: 1px solid #f3f4f6; color: #111827; }
-  .status-badge { font-size: 0.75rem; font-weight: bold; padding: 0.25rem 0.5rem; border-radius: 999px; }
-  .status-badge.completed { background: #d1fae5; color: #065f46; }
+  .branch-pill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.2rem 0.65rem;
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: var(--radius-full);
+    color: var(--color-success);
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background: var(--color-success);
+  }
+
+  .page-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: #FFFFFF;
+    margin: 0;
+  }
+
+  .header-actions {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .btn-action {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.88rem;
+  }
+
+  /* Bento Stats */
+  .stats-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .stat-card {
+    background: var(--surface-dark);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .stat-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .stat-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  .stat-trend {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.15rem 0.45rem;
+    border-radius: var(--radius-xs);
+  }
+
+  .stat-trend.positive {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--color-success);
+  }
+
+  .stat-main-val {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #FFFFFF;
+  }
+
+  .stat-sub {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+  }
+
+  /* Charts Grid */
+  .analytics-charts-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .card {
+    background: var(--surface-dark);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+  }
+
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .panel-title {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    margin: 0 0 0.2rem 0;
+  }
+
+  .panel-subtitle {
+    font-size: 0.82rem;
+    color: var(--text-tertiary);
+    margin: 0;
+  }
+
+  .chart-summary-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--amber-400);
+    padding: 0.25rem 0.65rem;
+    background: rgba(245, 158, 11, 0.1);
+    border-radius: var(--radius-sm);
+  }
+
+  /* Bar Chart */
+  .bar-chart-container {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 1.5rem;
+  }
+
+  .bars-flex-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-end;
+  }
+
+  .bar-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    position: relative;
+  }
+
+  .bar-tooltip {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.4rem;
+  }
+
+  .bar-track {
+    width: 100%;
+    max-width: 38px;
+    flex: 1;
+    background: var(--surface-elevated);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    width: 100%;
+    background: linear-gradient(180deg, var(--amber-400), var(--amber-600));
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    transition: height var(--duration-slow) var(--ease-spring);
+  }
+
+  .bar-col:hover .bar-fill {
+    background: linear-gradient(180deg, #FFFFFF, var(--amber-400));
+  }
+
+  .bar-day {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-top: 0.6rem;
+  }
+
+  /* Top Dishes */
+  .top-dishes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .dish-rank-row {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .dish-rank-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .rank-num {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--amber-400);
+    width: 24px;
+  }
+
+  .dish-rank-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dish-rank-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #FFFFFF;
+  }
+
+  .dish-rank-sales {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+  }
+
+  .dish-rank-rev {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #FFFFFF;
+  }
+
+  /* Table */
+  .table-responsive-box {
+    overflow-x: auto;
+  }
+
+  .admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    text-align: left;
+  }
+
+  .admin-table th {
+    padding: 0.75rem 1rem;
+    color: var(--text-tertiary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .admin-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+  }
+
+  .admin-table tr:hover td {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .text-amber { color: var(--amber-400); }
+  .text-muted { color: var(--text-secondary); }
+
+  .method-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-xs);
+  }
+
+  .method-tag.tele { background: rgba(0, 91, 187, 0.2); color: #60A5FA; }
+  .method-tag.cbe { background: rgba(107, 33, 168, 0.2); color: #C084FC; }
+  .method-tag.cash { background: rgba(245, 158, 11, 0.2); color: var(--amber-400); }
+
+  .status-pill {
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-full);
+  }
+
+  .status-preparing { background: rgba(59, 130, 246, 0.15); color: #60A5FA; }
+  .status-ready { background: rgba(245, 158, 11, 0.15); color: #FBBF24; }
+  .status-served { background: rgba(16, 185, 129, 0.15); color: #34D399; }
+
+  .btn-sm-link {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  @media (max-width: 1024px) {
+    .stats-bento-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .analytics-charts-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>

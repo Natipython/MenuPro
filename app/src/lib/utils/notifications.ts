@@ -47,7 +47,7 @@ export const notificationService = {
         icon: '/icon-192.png',
         badge: '/badge-72.png',
         vibrate: [200, 100, 200]
-      });
+      } as any);
 
       if (url) {
         notification.onclick = function() {

@@ -1,0 +1,64 @@
+{
+  "format": "menumini-setup-draft",
+  "version": 1,
+  "businessTypeId": "cafe-and-restaurant",
+  "branch": {
+    "publicName": "Fictional Addis Cafe",
+    "name": "Main branch",
+    "city": "Addis Ababa",
+    "area": "Bole",
+    "landmark": "Fictional landmark",
+    "serviceMode": "DINE_IN",
+    "currency": "ETB",
+    "timezone": "Africa/Addis_Ababa",
+    "hours": [
+      {
+        "day": 0,
+        "status": "UNSPECIFIED"
+      },
+      {
+        "day": 1,
+        "status": "UNSPECIFIED"
+      },
+      {
+        "day": 2,
+        "status": "UNSPECIFIED"
+      },
+      {
+        "day": 3,
+        "status": "UNSPECIFIED"
+      },
+      {
+        "day": 4,
+        "status": "UNSPECIFIED"
+      },
+      {
+        "day": 5,
+        "status": "UNSPECIFIED"
+      },
+      {
+        "day": 6,
+        "status": "UNSPECIFIED"
+      }
+    ]
+  },
+  "planPreference": "MINI",
+  "menu": {
+    "themeId": "mini-warm-habesha",
+    "sections": [
+      {
+        "id": "00000000-0000-4000-8000-000000000950",
+        "name": "Coffee",
+        "items": [
+          {
+            "id": "00000000-0000-4000-8000-000000000951",
+            "name": "Fictional coffee",
+            "nameAm": "ሙከራ ቡና",
+            "price": "60.50",
+            "available": true
+          }
+        ]
+      }
+    ]
+  }
+}

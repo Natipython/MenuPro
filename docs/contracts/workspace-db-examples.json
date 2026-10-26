@@ -1,0 +1,55 @@
+[
+  {
+    "schema": "ServiceDraft",
+    "value": {
+      "content": {
+        "pricing": "UNCONFIRMED",
+        "staffing": {
+          "orders": "OWNER",
+          "payments": "OWNER",
+          "preparation": "STAFF"
+        },
+        "tableLabels": [
+          "Table 1"
+        ],
+        "paymentMethods": [
+          "CASH",
+          "BANK_TRANSFER"
+        ]
+      },
+      "venueId": "01a1409a-df3a-72d4-8c2b-cd80d4beeebd",
+      "version": 1
+    }
+  },
+  {
+    "schema": "BranchReadiness",
+    "value": {
+      "mode": "PREPARATION_ONLY",
+      "facts": {
+        "branchActive": true,
+        "menuPublished": true,
+        "activeTableCount": 0,
+        "availableItemCount": 1,
+        "orderStaffAvailable": true,
+        "branchOrderingEnabled": false,
+        "paymentStaffAvailable": true,
+        "verifiedReceivingAccount": false,
+        "preparationStaffAvailable": true,
+        "subscriptionOrderingActive": false
+      },
+      "venueId": "01a1409a-df3a-72d4-8c2b-cd80d4beeebd",
+      "blockers": [
+        "DRAFT_CHANGES_UNPUBLISHED",
+        "SUBSCRIPTION_ACTIVATION",
+        "BRANCH_ORDERING_DISABLED",
+        "ACTIVE_TABLE_REQUIRED",
+        "VERIFIED_RECEIVING_ACCOUNT",
+        "PRICE_POLICY_REVIEW",
+        "ORDERING_WORKFLOW",
+        "PAYMENT_WORKFLOW",
+        "FIELD_ACCEPTANCE"
+      ],
+      "serviceDraftVersion": 1
+    }
+  }
+]

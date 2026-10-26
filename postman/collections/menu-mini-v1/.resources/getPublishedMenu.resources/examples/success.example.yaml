@@ -1,0 +1,40 @@
+$kind: http-example
+name: Fictional intended response
+request:
+  method: GET
+  url: '{{baseUrl}}/public/venues/{{venueSlug}}/menu'
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "publicationId": "00000000-0000-4000-8000-000000000401",
+        "revision": 1,
+        "venueId": "00000000-0000-4000-8000-000000000101",
+        "venueName": "Example Cafe",
+        "currency": "ETB",
+        "content": {
+          "themeId": "mini-warm-habesha",
+          "primaryColor": "#F59E0B",
+          "sections": [
+            {
+              "id": "00000000-0000-4000-8000-000000000501",
+              "nameEn": "Coffee",
+              "items": [
+                {
+                  "id": "00000000-0000-4000-8000-000000000601",
+                  "nameEn": "Macchiato",
+                  "basePrice": "70.00",
+                  "availableNow": true,
+                  "modifiers": []
+                }
+              ]
+            }
+          ]
+        }
+      }

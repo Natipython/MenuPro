@@ -1,0 +1,45 @@
+$kind: http-request
+description: Reserve unapplied funds for refund review Manual settlement records evidence;
+  it never moves money. Receipt and allocation are separate. Exact original responses
+  survive retries. Real identity, receiving-account procedures and field acceptance
+  remain pending. Independent fictional scenario; protected operations require matching
+  backend fixtures and ephemeral authenticated sessions. Not a runnable restaurant
+  transaction sequence.
+url: '{{baseUrl}}/merchant/receipts/:receiptId/refund-requests'
+method: POST
+headers:
+- key: Accept
+  value: application/json
+- key: Content-Type
+  value: application/json
+- key: Idempotency-Key
+  value: 62874544-0b36-5119-bcdc-21db459d2ebc
+- key: Origin
+  value: '{{origin}}'
+- key: X-CSRF-Token
+  value: '{{csrfToken}}'
+- key: Cookie
+  value: menu_staff_session={{staffSession}}
+pathVariables:
+- key: receiptId
+  value: '{{receiptId}}'
+  disabled: false
+  description: '(Required) '
+body:
+  type: json
+  content: "{\n  \"amount\": \"10.00\",\n  \"reason\": \"Fictional unapplied excess\"\
+    \n}"
+settings: {}
+examples: ./.resources/Reserve unapplied funds for refund review.resources/examples
+order: 2000
+name: requestRefund
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: "pm.test(\"Command succeeds for its prepared fixture\", () => pm.expect(pm.response.code).to.be.within(200,\
+    \ 299));\npm.test(\"Private response is not cached\", () => pm.expect(pm.response.headers.get(\"\
+    Cache-Control\") || \"\").to.include(\"no-store\"));\npm.test(\"Money fields are\
+    \ exact decimal strings\", () => {\n  function check(v) { if (v && typeof v ===\
+    \ \"object\") Object.keys(v).forEach(k => {\n    if (/(Amount|Price|Total)$/.test(k)\
+    \ && !(k === \"verifiedReceivedAmount\" && v[k] === null)) pm.expect(v[k]).to.match(/^(0|[1-9][0-9]{0,9})\\\
+    .[0-9]{2}$/);\n    else check(v[k]); }); }\n  check(pm.response.json());\n});"

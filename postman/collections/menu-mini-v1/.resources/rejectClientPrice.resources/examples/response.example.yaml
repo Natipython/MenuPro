@@ -1,0 +1,22 @@
+$kind: http-example
+name: Fictional intended response
+request:
+  method: POST
+  url: '{{baseUrl}}/orders'
+response:
+  statusCode: 422
+  statusText: Unprocessable Content
+  headers:
+  - key: Content-Type
+    value: application/problem+json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "urn:menu-mini:validation",
+        "title": "Invalid command",
+        "status": 422,
+        "detail": "client price cannot become authoritative",
+        "code": "VALIDATION_ERROR",
+        "requestId": "fictional-request-id"
+      }

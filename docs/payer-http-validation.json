@@ -1,0 +1,19 @@
+{
+  "verified_at": "2026-10-15T13:44:29.519698+00:00",
+  "passed": 10,
+  "failed": 0,
+  "http_requests": 10,
+  "cases": [
+    "GET /merchant/bills/00000000-0000-4000-8000-000000000801/payers rejects forged merchant identity before selecting, granting or revoking access",
+    "POST /merchant/bills/00000000-0000-4000-8000-000000000801/access-grants rejects forged merchant identity before selecting, granting or revoking access",
+    "POST /merchant/bill-access-grants/00000000-0000-4000-8000-000000000899/revocation rejects forged merchant identity before selecting, granting or revoking access",
+    "POST /payer/access cannot use UUID/header assertions in place of a dining capability",
+    "GET /payer/bill cannot use UUID/header assertions in place of a dining capability",
+    "POST /payer/bill/payment-claims cannot use UUID/header assertions in place of a dining capability",
+    "GET /payer/bill/payment-claims cannot use UUID/header assertions in place of a dining capability",
+    "POST /payer/access/revocation cannot use UUID/header assertions in place of a dining capability",
+    "a dining cookie alone cannot request shared bill data",
+    "unconfigured preview cannot resolve invented capabilities or use an ambient database"
+  ],
+  "scope": "actual local HTTP without guest/merchant configuration; closed merchant authorization and payer capability boundaries. Successful payer HTTP is tested in a separate isolated configured fixture."
+}

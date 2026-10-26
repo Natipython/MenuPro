@@ -1,0 +1,210 @@
+[
+  {
+    "value": {
+      "content": {
+        "themeId": "mini-warm-habesha",
+        "sections": [
+          {
+            "id": "00000000-0000-4000-8000-000000004101",
+            "items": [
+              {
+                "id": "00000000-0000-4000-8000-000000004102",
+                "nameAm": "\u12e8\u1219\u12a8\u122b \u1261\u1293",
+                "nameEn": "Fictional coffee",
+                "basePrice": "70.00",
+                "modifiers": [],
+                "availableNow": true
+              },
+              {
+                "id": "00000000-0000-4000-8000-000000004103",
+                "nameEn": "Fictional tea",
+                "basePrice": "80.00",
+                "modifiers": [
+                  {
+                    "id": "00000000-0000-4000-8000-000000004104",
+                    "mode": "SINGLE_SELECT",
+                    "label": "Size",
+                    "choices": [
+                      {
+                        "id": "00000000-0000-4000-8000-000000004105",
+                        "label": "Regular",
+                        "priceDelta": "0.00",
+                        "isAvailable": true
+                      },
+                      {
+                        "id": "00000000-0000-4000-8000-000000004106",
+                        "label": "Large",
+                        "priceDelta": "10.00",
+                        "isAvailable": true
+                      }
+                    ],
+                    "maxSelections": 1,
+                    "minSelections": 1
+                  }
+                ],
+                "availableNow": true
+              }
+            ],
+            "nameAm": "\u1261\u1293",
+            "nameEn": "Coffee"
+          }
+        ],
+        "primaryColor": "#F59E0B"
+      },
+      "venueId": "01a14099-ea75-76ff-b4a9-a0b764364466",
+      "version": 2
+    },
+    "schema": "MenuDraft"
+  },
+  {
+    "value": {
+      "content": {
+        "branch": {
+          "area": "Bole",
+          "city": "Addis Ababa",
+          "name": "Main branch",
+          "hours": [
+            {
+              "day": 0,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 1,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 2,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 3,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 4,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 5,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 6,
+              "status": "UNSPECIFIED"
+            }
+          ],
+          "currency": "ETB",
+          "landmark": "Fictional landmark",
+          "timezone": "Africa/Addis_Ababa",
+          "publicName": "Fictional New Name",
+          "serviceMode": "MENU_ONLY"
+        },
+        "businessTypeId": "cafe-and-restaurant"
+      },
+      "venueId": "01a14099-ea75-76ff-b4a9-a0b764364466",
+      "version": 2
+    },
+    "schema": "BranchProfile"
+  },
+  {
+    "value": {
+      "branch": {
+        "area": "Bole",
+        "city": "Addis Ababa",
+        "name": "Main branch",
+        "hours": [
+          {
+            "day": 0,
+            "status": "UNSPECIFIED"
+          },
+          {
+            "day": 1,
+            "status": "UNSPECIFIED"
+          },
+          {
+            "day": 2,
+            "status": "UNSPECIFIED"
+          },
+          {
+            "day": 3,
+            "status": "UNSPECIFIED"
+          },
+          {
+            "day": 4,
+            "status": "UNSPECIFIED"
+          },
+          {
+            "day": 5,
+            "status": "UNSPECIFIED"
+          },
+          {
+            "day": 6,
+            "status": "UNSPECIFIED"
+          }
+        ],
+        "currency": "ETB",
+        "landmark": "Fictional landmark",
+        "timezone": "Africa/Addis_Ababa",
+        "publicName": "Fictional New Name",
+        "serviceMode": "MENU_ONLY"
+      },
+      "content": {
+        "themeId": "mini-warm-habesha",
+        "sections": [
+          {
+            "id": "00000000-0000-4000-8000-000000004101",
+            "items": [
+              {
+                "id": "00000000-0000-4000-8000-000000004102",
+                "nameAm": "\u12e8\u1219\u12a8\u122b \u1261\u1293",
+                "nameEn": "Fictional coffee",
+                "basePrice": "70.00",
+                "modifiers": [],
+                "availableNow": false
+              },
+              {
+                "id": "00000000-0000-4000-8000-000000004103",
+                "nameEn": "Fictional tea",
+                "basePrice": "80.00",
+                "modifiers": [
+                  {
+                    "id": "00000000-0000-4000-8000-000000004104",
+                    "mode": "SINGLE_SELECT",
+                    "label": "Size",
+                    "choices": [
+                      {
+                        "id": "00000000-0000-4000-8000-000000004105",
+                        "label": "Regular",
+                        "priceDelta": "0.00",
+                        "isAvailable": true
+                      },
+                      {
+                        "id": "00000000-0000-4000-8000-000000004106",
+                        "label": "Large",
+                        "priceDelta": "10.00",
+                        "isAvailable": true
+                      }
+                    ],
+                    "maxSelections": 1,
+                    "minSelections": 1
+                  }
+                ],
+                "availableNow": true
+              }
+            ],
+            "nameAm": "\u1261\u1293",
+            "nameEn": "Coffee"
+          }
+        ],
+        "primaryColor": "#F59E0B"
+      },
+      "venueId": "01a14099-ea75-76ff-b4a9-a0b764364466",
+      "currency": "ETB",
+      "revision": 2,
+      "venueName": "Fictional New Name",
+      "publicationId": "01a14099-eab6-742e-ba5a-b9b30ac6121f",
+      "availabilityRevision": 2
+    },
+    "schema": "PublicMenu"
+  }
+]

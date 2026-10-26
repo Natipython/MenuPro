@@ -1,0 +1,52 @@
+{
+  "verified_at": "2026-10-13T13:18:56.378738+00:00",
+  "scope": "actual desktop browser UI and responsive viewport with fictional preparation; no physical phone or authenticated account",
+  "cases": [
+    "existing setup JSON imported into workspace",
+    "Amharic item name and description preserved",
+    "required single-selection size options edited",
+    "option adjustment normalized to exact 10.50 string",
+    "two planned tables retained",
+    "owner and staff responsibilities retained",
+    "cash and bank-transfer checkboxes retain selection after correction",
+    "review reports actual preparation counts and pending launch gates",
+    "publication remains disabled",
+    "actual browser download matches WorkspacePreparation schema",
+    "reload clears page memory",
+    "downloaded rich draft reimports with options and service preferences",
+    "original onboarding branch-plan-menu-review continues directly into workspace",
+    "narrow embedded onboarding workspace has no horizontal overflow",
+    "390-pixel workspace service layout has no horizontal overflow",
+    "final build preserves onboarding handoff and workspace review; editing stays in richer workspace navigation"
+  ],
+  "responsive": [
+    {
+      "surface": "standalone service preparation",
+      "viewport_width": 390,
+      "document_width": 375,
+      "horizontal_overflow": false
+    },
+    {
+      "surface": "embedded onboarding workspace",
+      "viewport_width": 1280,
+      "document_width": 1265,
+      "horizontal_overflow": false
+    },
+    {
+      "surface": "standalone reviewed workspace",
+      "viewport_width": 1280,
+      "document_width": 1265,
+      "horizontal_overflow": false
+    }
+  ],
+  "export_example": "docs/contracts/workspace-preparation-example.json",
+  "screenshots": [
+    "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-workspace-service-mobile.png",
+    "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-workspace-review.png"
+  ],
+  "actual_identity": false,
+  "actual_branch_or_staff_activation": false,
+  "publication_from_preparation": false,
+  "physical_device_test": false,
+  "temporary_viewport_override_reset": true
+}

@@ -1,0 +1,32 @@
+$kind: http-request
+method: POST
+url: '{{baseUrl}}/orders'
+order: 3000
+body:
+  type: json
+  content: |-
+    {
+      "menuPublicationId": "00000000-0000-4000-8000-000000000401",
+      "items": [
+        {
+          "itemId": "00000000-0000-4000-8000-000000000601",
+          "quantity": 2,
+          "choiceIds": []
+        }
+      ],
+      "customerNote": ""
+    }
+headers:
+- key: Idempotency-Key
+  value: '{{orderRequestKey}}'
+- key: Cookie
+  value: 'menu_dining_session={{diningSession}}'
+- key: Content-Type
+  value: application/json
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: |-
+    pm.test('Expected status 201', () => pm.expect(pm.response.code).to.eql(201));
+    pm.test('Server-priced order remains unpaid', () => { const o=pm.response.json(); pm.expect(o.totalAmount).to.eql('140.00'); pm.expect(o.paymentStatus).to.eql('UNPAID'); });
+examples: './.resources/submitOrder.resources/examples/'

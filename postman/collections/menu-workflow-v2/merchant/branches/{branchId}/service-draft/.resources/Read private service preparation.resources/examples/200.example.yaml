@@ -1,0 +1,21 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/branches/:branchId/service-draft'
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"venueId\": \"00000000-0000-4000-8000-000000000101\",\n  \"version\"\
+      : 1,\n  \"content\": {\n    \"tableLabels\": [\n      \"Table 1\"\n    ],\n\
+      \    \"staffing\": {\n      \"orders\": \"OWNER\",\n      \"preparation\": \"\
+      STAFF\",\n      \"payments\": \"OWNER\"\n    },\n    \"paymentMethods\": [\n\
+      \      \"CASH\",\n      \"BANK_TRANSFER\"\n    ],\n    \"pricing\": \"UNCONFIRMED\"\
+      \n  }\n}"

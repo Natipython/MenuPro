@@ -1,0 +1,32 @@
+$kind: http-request
+method: POST
+url: '{{baseUrl}}/orders'
+order: 15000
+body:
+  type: json
+  content: |-
+    {
+      "menuPublicationId": "00000000-0000-4000-8000-000000000401",
+      "items": [
+        {
+          "itemId": "00000000-0000-4000-8000-000000000601",
+          "quantity": 2,
+          "choiceIds": [],
+          "unitPrice": "0.01"
+        }
+      ],
+      "customerNote": "",
+      "paymentStatus": "PAID"
+    }
+headers:
+- key: Idempotency-Key
+  value: '{{orderRequestKey}}'
+- key: Cookie
+  value: 'menu_dining_session={{diningSession}}'
+- key: Content-Type
+  value: application/json
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: pm.test('client price cannot become authoritative', () => pm.expect(pm.response.code).to.eql(422));
+examples: './.resources/rejectClientPrice.resources/examples/'

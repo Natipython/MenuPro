@@ -1,0 +1,22 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/mini-branch-quotes/:quoteId/acceptance'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"id\": \"00000000-0000-4000-8000-000000000892\",\n  \"requestId\"\
+      : \"00000000-0000-4000-8000-000000000881\",\n  \"businessId\": \"00000000-0000-4000-8000-000000000001\"\
+      ,\n  \"plan\": \"MINI\",\n  \"branchLimit\": 2,\n  \"status\": \"ACCEPTED\"\
+      ,\n  \"currency\": \"ETB\",\n  \"currentRecurringAmount\": \"600.00\",\n  \"\
+      newRecurringAmount\": \"900.00\",\n  \"amountDueNow\": \"150.00\",\n  \"billingInterval\"\
+      : \"MONTH\",\n  \"termStartsAt\": \"2026-10-12T17:00:00Z\",\n  \"termEndsAt\"\
+      : \"2026-11-12T17:00:00Z\",\n  \"expiresAt\": \"2026-10-13T17:00:00Z\"\n}"

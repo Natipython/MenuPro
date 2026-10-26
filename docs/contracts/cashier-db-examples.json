@@ -1,0 +1,149 @@
+[
+  {
+    "schema": "CashierBillList",
+    "value": {
+      "items": [
+        {
+          "bill": {
+            "id": "01a1409a-be03-79d6-a33b-16c329da3e68",
+            "status": "OPEN",
+            "version": 4,
+            "visitId": "01a1409a-be02-7c2a-8ac3-4ec2996dc92f",
+            "branchId": "01a1409a-9adf-7fb0-9c80-8a65892bb1a7",
+            "currency": "ETB",
+            "settlement": "PAID",
+            "chargeAmount": "80.00",
+            "allocatedAmount": "80.00",
+            "unappliedAmount": "0.00",
+            "outstandingAmount": "0.00",
+            "refundPendingAmount": "0.00"
+          },
+          "openedAt": "2026-10-15T20:27:25.44138+03:00",
+          "tableLabel": "Claim review table",
+          "visitStatus": "ENDED"
+        }
+      ],
+      "branchId": "01a1409a-9adf-7fb0-9c80-8a65892bb1a7",
+      "nextCursor": "2026-10-15T17:27:25.441380Z~01a1409a-be03-79d6-a33b-16c329da3e68"
+    }
+  },
+  {
+    "schema": "CashierDetail",
+    "value": {
+      "claims": [],
+      "orders": [
+        {
+          "id": "01a1409a-be61-72f6-bad4-cfda69353e92",
+          "items": [
+            {
+              "id": "01a1409a-be63-737e-a4e6-129f7dad1a7e",
+              "nameEn": "Fictional tea",
+              "quantity": 2,
+              "lineTotal": "160.00",
+              "unitPrice": "80.00",
+              "selectedOptions": [
+                "Regular"
+              ]
+            }
+          ],
+          "status": "COMPLETED",
+          "totalAmount": "160.00",
+          "remainingChargeAmount": "160.00"
+        }
+      ],
+      "credits": [],
+      "refunds": [],
+      "summary": {
+        "bill": {
+          "id": "01a1409a-be58-7859-acc3-a2ff4c0230b5",
+          "status": "FINALIZED",
+          "version": 4,
+          "visitId": "01a1409a-be57-7a36-84aa-faac4cbc2e25",
+          "branchId": "01a1409a-9adf-7fb0-9c80-8a65892bb1a7",
+          "currency": "ETB",
+          "settlement": "UNPAID",
+          "chargeAmount": "160.00",
+          "allocatedAmount": "0.00",
+          "unappliedAmount": "160.00",
+          "outstandingAmount": "160.00",
+          "refundPendingAmount": "0.00"
+        },
+        "openedAt": "2026-10-15T20:27:25.526103+03:00",
+        "tableLabel": "Concurrent cash allocation",
+        "visitStatus": "ENDED"
+      },
+      "accounts": [
+        {
+          "id": "00000000-0000-4000-8000-000000000418",
+          "label": "CBE · Fictional account holder · …-418"
+        }
+      ],
+      "receipts": [
+        {
+          "receipt": {
+            "id": "01a1409a-be87-72d7-8ec4-8876b18e7c85",
+            "billId": "01a1409a-be58-7859-acc3-a2ff4c0230b5",
+            "method": "CASH",
+            "currency": "ETB",
+            "receivedAmount": "160.00",
+            "refundedAmount": "0.00",
+            "allocatedAmount": "0.00",
+            "unappliedAmount": "160.00"
+          },
+          "recordedAt": "2026-10-15T20:27:25.572941+03:00",
+          "accountLabel": null,
+          "reservedAmount": "0.00",
+          "verificationNote": "Fictional cash counted and change returned",
+          "providerReference": null
+        }
+      ],
+      "permissions": {
+        "adjust": false,
+        "manage": true,
+        "refund": false
+      }
+    }
+  },
+  {
+    "schema": "Receipt",
+    "value": {
+      "id": "01a1409a-bd12-736e-b70c-e02884e42154",
+      "billId": "01a1409a-ba71-7bd6-a4d6-5cd5af89f823",
+      "method": "CASH",
+      "currency": "ETB",
+      "receivedAmount": "80.00",
+      "refundedAmount": "0.00",
+      "allocatedAmount": "0.00",
+      "unappliedAmount": "80.00"
+    }
+  },
+  {
+    "schema": "Allocation",
+    "value": {
+      "id": "01a1409a-bd24-7874-b10d-b2c1c6512dc6",
+      "amount": "80.00",
+      "billId": "01a1409a-ba71-7bd6-a4d6-5cd5af89f823",
+      "receiptId": "01a1409a-bd12-736e-b70c-e02884e42154"
+    }
+  },
+  {
+    "schema": "RefundRequest",
+    "value": {
+      "id": "01a1409a-bd98-735f-ad70-cd8aee7b6fe4",
+      "amount": "10.00",
+      "status": "EXECUTED",
+      "version": 3,
+      "receiptId": "01a1409a-bd88-7d40-a692-e3fefd98b239"
+    }
+  },
+  {
+    "schema": "BillPaymentClaim",
+    "value": {
+      "id": "00000000-0000-4000-8000-000000000421",
+      "billId": "01a1409a-be03-79d6-a33b-16c329da3e68",
+      "status": "APPROVED",
+      "version": 2,
+      "reportedAmount": "80.00"
+    }
+  }
+]

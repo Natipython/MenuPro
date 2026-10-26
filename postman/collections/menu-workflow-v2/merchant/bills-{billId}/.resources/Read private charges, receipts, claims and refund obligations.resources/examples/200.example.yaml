@@ -1,0 +1,32 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/bills/:billId/settlement'
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"summary\": {\n    \"bill\": {\n      \"id\": \"00000000-0000-4000-8000-000000000801\"\
+      ,\n      \"visitId\": \"00000000-0000-4000-8000-000000000501\",\n      \"branchId\"\
+      : \"00000000-0000-4000-8000-000000000101\",\n      \"version\": 3,\n      \"\
+      status\": \"FINALIZED\",\n      \"currency\": \"ETB\",\n      \"chargeAmount\"\
+      : \"70.00\",\n      \"allocatedAmount\": \"0.00\",\n      \"outstandingAmount\"\
+      : \"70.00\",\n      \"unappliedAmount\": \"0.00\",\n      \"refundPendingAmount\"\
+      : \"0.00\",\n      \"settlement\": \"UNPAID\"\n    },\n    \"tableLabel\": \"\
+      Table 1\",\n    \"visitStatus\": \"ENDED\",\n    \"openedAt\": \"2026-10-12T17:00:00Z\"\
+      \n  },\n  \"credits\": [],\n  \"orders\": [\n    {\n      \"id\": \"00000000-0000-4000-8000-000000000701\"\
+      ,\n      \"status\": \"SUBMITTED\",\n      \"totalAmount\": \"70.00\",\n   \
+      \   \"remainingChargeAmount\": \"70.00\",\n      \"items\": [\n        {\n \
+      \         \"id\": \"00000000-0000-4000-8000-000000000711\",\n          \"nameEn\"\
+      : \"Macchiato\",\n          \"quantity\": 1,\n          \"unitPrice\": \"70.00\"\
+      ,\n          \"lineTotal\": \"70.00\",\n          \"selectedOptions\": []\n\
+      \        }\n      ]\n    }\n  ],\n  \"receipts\": [],\n  \"claims\": [],\n \
+      \ \"refunds\": [],\n  \"accounts\": [],\n  \"permissions\": {\n    \"manage\"\
+      : true,\n    \"adjust\": false,\n    \"refund\": false\n  }\n}"

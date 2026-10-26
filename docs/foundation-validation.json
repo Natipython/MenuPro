@@ -1,0 +1,92 @@
+{
+  "checked_at": "2026-10-12T06:38:49.745223+03:00",
+  "stage": "foundation only; existing UI/API integration remains pending",
+  "database": {
+    "database": "isolated native PostgreSQL 18+",
+    "passed": 37,
+    "failed": 0,
+    "cases": [
+      "two coffees commit exact totals",
+      "new order is unpaid",
+      "duplicate order identity rejected",
+      "order total must equal its actual lines",
+      "same request key cannot create a different order ID",
+      "cross-merchant section link rejected",
+      "negative catalog price rejected",
+      "MenuMini single venue limit",
+      "sealed order price cannot change",
+      "cannot append a free line after sealing",
+      "incomplete order cannot commit",
+      "invalid status jump rejected",
+      "status change without event/outbox cannot commit",
+      "staff can accept an unpaid order",
+      "order version advances with status",
+      "customer claim never marks paid",
+      "unapproved claim cannot become a receipt",
+      "approval without ledger cannot commit",
+      "recorded verification changes balance to paid",
+      "bank reference cannot pay another order",
+      "same physical bank transfer cannot be reused by a different merchant",
+      "overpayment allocation rejected",
+      "refund cannot exceed recorded receipts",
+      "ledger cannot be rewritten",
+      "published menu is immutable",
+      "receiving account identity cannot rewrite payment history",
+      "receipt without audit and outbox cannot commit",
+      "missing tenant context denies reads",
+      "runtime sees only merchant A orders",
+      "balance view preserves tenant isolation",
+      "public directory has only routing metadata",
+      "order runtime cannot read staff session hashes",
+      "runtime cross-merchant write denied",
+      "transaction-local context clears after commit",
+      "complete foundation has 23 relational tables",
+      "concurrent receipts cannot exceed the order total",
+      "two outbox workers claim different locked rows"
+    ],
+    "scope": "database integrity and two real concurrent-connection cases; no API/browser/release claim"
+  },
+  "contract": {
+    "passed": 9,
+    "failed": 0,
+    "operations": 13,
+    "schemas": 27,
+    "saved_examples": 16,
+    "cases": [
+      "all internal references resolve",
+      "27 component schemas are valid JSON Schema",
+      "operation paths and in-spec response examples agree",
+      "16 saved response examples match their schemas",
+      "client paid status rejected",
+      "client item price rejected",
+      "zero quantity rejected",
+      "approval requires an explicit verified amount",
+      "money is a decimal string, not a floating-point JSON number"
+    ],
+    "scope": "local schema and example validation; no live endpoint tests"
+  },
+  "postman_spec_syntax": {
+    "violations": []
+  },
+  "postman_collection_structure": {
+    "diagnostics": [],
+    "errorCount": 0,
+    "warningCount": 0,
+    "filesScanned": 16,
+    "elapsedMs": 120
+  },
+  "postman_environment_structure": {
+    "diagnostics": [],
+    "errorCount": 0,
+    "warningCount": 0,
+    "filesScanned": 1,
+    "elapsedMs": 57
+  },
+  "not_verified": [
+    "live endpoint behavior",
+    "authentication implementation",
+    "browser-to-server flow",
+    "real merchant/bank verification",
+    "production deployment or backup restoration"
+  ]
+}

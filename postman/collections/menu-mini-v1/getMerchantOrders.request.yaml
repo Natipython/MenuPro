@@ -1,0 +1,12 @@
+$kind: http-request
+method: GET
+url: '{{baseUrl}}/merchant/venues/{{venueId}}/orders'
+order: 6000
+headers:
+- key: Cookie
+  value: 'menu_staff_session={{staffSession}}'
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: pm.test('Expected status 200', () => pm.expect(pm.response.code).to.eql(200));
+examples: './.resources/getMerchantOrders.resources/examples/'

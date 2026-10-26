@@ -1,0 +1,19 @@
+$kind: http-example
+name: Fictional committed result 201
+request:
+  url: '{{baseUrl}}/platform/mini-branch-quotes/:quoteId/activation'
+  method: POST
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"id\": \"00000000-0000-4000-8000-000000000891\",\n  \"businessId\"\
+      : \"00000000-0000-4000-8000-000000000001\",\n  \"plan\": \"MINI\",\n  \"branchLimit\"\
+      : 2,\n  \"orderingEnabled\": true,\n  \"startsAt\": \"2026-10-12T17:00:00Z\"\
+      \n}"

@@ -1,0 +1,27 @@
+{
+  "verified_at": "2026-10-13T11:40:11.295726+00:00",
+  "customer_url": "http://127.0.0.1:5196/menu/fictional-published-cafe",
+  "verified": [
+    "independent customer tab renders the actual mapped PostgreSQL publication",
+    "exact 60.50 ETB price and Amharic name visible",
+    "public branch/name/location only; no owner or manager contacts",
+    "QR/share controls and stable branch menu link visible",
+    "seven unspecified days read Hours not provided",
+    "no cart/order or payment controls",
+    "phone and desktop layouts have no horizontal overflow",
+    "temporary viewport restored"
+  ],
+  "mobile": {
+    "width": 390,
+    "height": 844,
+    "horizontal_overflow": false
+  },
+  "desktop": {
+    "width": 1280,
+    "height": 900,
+    "content_width": 1265,
+    "horizontal_overflow": false
+  },
+  "screenshot": "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-published-menu-mobile.png",
+  "scope": "desktop browser with responsive viewport and fictional data; no physical phone or authenticated merchant/customer acceptance"
+}

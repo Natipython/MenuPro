@@ -1,0 +1,18 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/payer/bill/payment-claims'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"id\": \"00000000-0000-4000-8000-000000000851\",\n  \"billId\"\
+      : \"00000000-0000-4000-8000-000000000801\",\n  \"version\": 1,\n  \"status\"\
+      : \"SUBMITTED\",\n  \"reportedAmount\": \"70.00\"\n}"

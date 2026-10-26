@@ -1,0 +1,21 @@
+$kind: http-example
+name: Fictional committed result 201
+request:
+  url: '{{baseUrl}}/payer/bill/payment-claims'
+  method: POST
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"claim\": {\n    \"id\": \"00000000-0000-4000-8000-000000000851\"\
+      ,\n    \"billId\": \"00000000-0000-4000-8000-000000000801\",\n    \"version\"\
+      : 1,\n    \"status\": \"SUBMITTED\",\n    \"reportedAmount\": \"70.00\"\n  },\n\
+      \  \"providerReference\": \"FICTIONAL-TXN-ONE\",\n  \"accountLabel\": \"CBE\
+      \ · Fictional Cafe · …9601\",\n  \"submittedAt\": \"2026-10-12T17:00:00Z\",\n\
+      \  \"reviewedAt\": null,\n  \"verifiedReceivedAmount\": null\n}"

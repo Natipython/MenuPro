@@ -1,0 +1,122 @@
+[
+  {
+    "id": "bakery-and-pastry",
+    "name": "Bakery & Pastry",
+    "category": "bakery"
+  },
+  {
+    "id": "bakery-and-cafe",
+    "name": "Bakery & Cafe",
+    "category": "hybrid"
+  },
+  {
+    "id": "cafe-and-pastry",
+    "name": "Cafe & Pastry",
+    "category": "cafe"
+  },
+  {
+    "id": "cafe-and-juice-house",
+    "name": "Cafe & Juice House",
+    "category": "hybrid"
+  },
+  {
+    "id": "cafe-and-restaurant",
+    "name": "Cafe & Restaurant",
+    "category": "hybrid"
+  },
+  {
+    "id": "restaurant",
+    "name": "Restaurant (Full Service)",
+    "category": "restaurant"
+  },
+  {
+    "id": "restaurant-and-juice-house",
+    "name": "Restaurant & Juice House",
+    "category": "hybrid"
+  },
+  {
+    "id": "bar-and-restaurant",
+    "name": "Bar & Restaurant",
+    "category": "hybrid"
+  },
+  {
+    "id": "juice-and-smoothie-bar",
+    "name": "Juice & Smoothie Bar (Standalone)",
+    "category": "juice"
+  },
+  {
+    "id": "ice-cream-and-gelato-shop",
+    "name": "Ice Cream & Gelato Shop",
+    "category": "hybrid"
+  },
+  {
+    "id": "pizzeria",
+    "name": "Pizza Shop / Pizzeria",
+    "category": "restaurant"
+  },
+  {
+    "id": "fast-food-qsr",
+    "name": "Fast Food / Quick Service Restaurant (QSR)",
+    "category": "restaurant"
+  },
+  {
+    "id": "food-truck-street-food",
+    "name": "Food Truck / Street Food",
+    "category": "restaurant"
+  },
+  {
+    "id": "dessert-house-sweet-shop",
+    "name": "Dessert House / Sweet Shop",
+    "category": "hybrid"
+  },
+  {
+    "id": "tea-house-bubble-tea",
+    "name": "Tea House / Bubble Tea Shop",
+    "category": "cafe"
+  },
+  {
+    "id": "steakhouse-grill-house",
+    "name": "Steakhouse / Grill House",
+    "category": "restaurant"
+  },
+  {
+    "id": "sushi-japanese-restaurant",
+    "name": "Sushi / Japanese Restaurant",
+    "category": "restaurant"
+  },
+  {
+    "id": "hookah-shisha-lounge",
+    "name": "Hookah / Shisha Lounge",
+    "category": "bar"
+  },
+  {
+    "id": "catering-service",
+    "name": "Catering Service",
+    "category": "hybrid"
+  },
+  {
+    "id": "cloud-kitchen-delivery-only",
+    "name": "Cloud Kitchen / Delivery-Only",
+    "category": "restaurant"
+  },
+  {
+    "id": "bakery-cafe-pastry",
+    "name": "Bakery & Cafe & Pastry (Triple Combo)",
+    "category": "hybrid"
+  },
+  {
+    "id": "bar-and-lounge",
+    "name": "Bar & Lounge",
+    "category": "bar"
+  },
+  {
+    "id": "brunch-spot-breakfast-diner",
+    "name": "Brunch Spot / Breakfast Diner",
+    "category": "restaurant"
+  },
+  {
+    "id": "butcher-shop-deli",
+    "name": "Butcher Shop / Deli",
+    "category": "hybrid"
+  }
+]

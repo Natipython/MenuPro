@@ -1,0 +1,36 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/branches/:branchId/menu-publications'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"publicationId\": \"00000000-0000-4000-8000-000000000401\",\n\
+      \  \"revision\": 1,\n  \"venueId\": \"00000000-0000-4000-8000-000000000101\"\
+      ,\n  \"venueName\": \"Example Cafe\",\n  \"currency\": \"ETB\",\n  \"content\"\
+      : {\n    \"themeId\": \"mini-warm-habesha\",\n    \"primaryColor\": \"#F59E0B\"\
+      ,\n    \"sections\": [\n      {\n        \"id\": \"00000000-0000-4000-8000-000000000501\"\
+      ,\n        \"nameEn\": \"Coffee\",\n        \"items\": [\n          {\n    \
+      \        \"id\": \"00000000-0000-4000-8000-000000000601\",\n            \"nameEn\"\
+      : \"Macchiato\",\n            \"basePrice\": \"70.00\",\n            \"availableNow\"\
+      : true,\n            \"modifiers\": []\n          }\n        ]\n      }\n  \
+      \  ]\n  },\n  \"availabilityRevision\": 1,\n  \"branch\": {\n    \"publicName\"\
+      : \"Fictional Addis Cafe\",\n    \"name\": \"Main branch\",\n    \"city\": \"\
+      Addis Ababa\",\n    \"area\": \"Bole\",\n    \"landmark\": \"Fictional landmark\"\
+      ,\n    \"serviceMode\": \"DINE_IN\",\n    \"currency\": \"ETB\",\n    \"timezone\"\
+      : \"Africa/Addis_Ababa\",\n    \"hours\": [\n      {\n        \"day\": 0,\n\
+      \        \"status\": \"UNSPECIFIED\"\n      },\n      {\n        \"day\": 1,\n\
+      \        \"status\": \"UNSPECIFIED\"\n      },\n      {\n        \"day\": 2,\n\
+      \        \"status\": \"UNSPECIFIED\"\n      },\n      {\n        \"day\": 3,\n\
+      \        \"status\": \"UNSPECIFIED\"\n      },\n      {\n        \"day\": 4,\n\
+      \        \"status\": \"UNSPECIFIED\"\n      },\n      {\n        \"day\": 5,\n\
+      \        \"status\": \"UNSPECIFIED\"\n      },\n      {\n        \"day\": 6,\n\
+      \        \"status\": \"UNSPECIFIED\"\n      }\n    ]\n  }\n}"

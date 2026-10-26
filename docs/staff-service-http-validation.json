@@ -1,0 +1,24 @@
+{
+  "verified_at": "2026-10-15T13:44:30.064667+00:00",
+  "passed": 15,
+  "failed": 0,
+  "http_requests": 15,
+  "cases": [
+    "GET /api/v2/merchant/branches/00000000-0000-4000-8000-000000000101/tables rejects spoofed client identity without disclosing business data",
+    "POST /api/v2/merchant/branches/00000000-0000-4000-8000-000000000101/tables rejects spoofed client identity without disclosing business data",
+    "PUT /api/v2/merchant/branches/00000000-0000-4000-8000-000000000101/tables/00000000-0000-4000-8000-000000000201 rejects spoofed client identity without disclosing business data",
+    "POST /api/v2/merchant/branches/00000000-0000-4000-8000-000000000101/staff-visits rejects spoofed client identity without disclosing business data",
+    "GET /api/v2/merchant/visits/00000000-0000-4000-8000-000000000501 rejects spoofed client identity without disclosing business data",
+    "POST /api/v2/merchant/visits/00000000-0000-4000-8000-000000000501/ending rejects spoofed client identity without disclosing business data",
+    "GET /api/v2/merchant/branches/00000000-0000-4000-8000-000000000101/service-menu rejects spoofed client identity without disclosing business data",
+    "GET /api/v2/merchant/branches/00000000-0000-4000-8000-000000000101/orders rejects spoofed client identity without disclosing business data",
+    "POST /api/v2/merchant/branches/00000000-0000-4000-8000-000000000101/orders rejects spoofed client identity without disclosing business data",
+    "GET /api/v2/merchant/orders/00000000-0000-4000-8000-000000000701 rejects spoofed client identity without disclosing business data",
+    "POST /api/v2/merchant/orders/00000000-0000-4000-8000-000000000701/transitions rejects spoofed client identity without disclosing business data",
+    "GET /api/v2/merchant/bills/00000000-0000-4000-8000-000000000801 rejects spoofed client identity without disclosing business data",
+    "/service/00000000-0000-4000-8000-000000000101 serves locked access view",
+    "/preparation/00000000-0000-4000-8000-000000000101 serves locked access view",
+    "public rehearsal is explicitly fictional, creates no session and is not an operating business surface"
+  ],
+  "scope": "actual local HTTP closed access and rehearsal/page headers only; successful staff actions verified separately in-process, not through authentication"
+}

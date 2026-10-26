@@ -1,0 +1,21 @@
+$kind: http-example
+name: Fictional intended response
+request:
+  method: POST
+  url: '{{baseUrl}}/dining-sessions'
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+  - key: Content-Type
+    value: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "00000000-0000-4000-8000-000000000301",
+        "venueId": "00000000-0000-4000-8000-000000000101",
+        "tableId": "00000000-0000-4000-8000-000000000201",
+        "tableLabel": "4",
+        "expiresAt": "2026-10-13T03:00:00Z"
+      }

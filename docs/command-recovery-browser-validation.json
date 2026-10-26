@@ -1,0 +1,90 @@
+{
+  "verified_at": "2026-10-15T17:59:49.777Z",
+  "passed": 40,
+  "failed": 0,
+  "cases": [
+    "Normal table and invitation forms establish actual cookie-resolved dining authority",
+    "Lost successful response retains a saved order journal",
+    "Uncertain original order blocks replacement",
+    "Response loss after commit leaves exactly one accepted database order",
+    "Real IndexedDB reload restores exact original key and decrypts the saved order",
+    "Reload does not automatically replay or invent an outcome",
+    "Authorized server check identifies the original committed order",
+    "Private reviewed order note survives actual server persistence and reload",
+    "Acknowledging a committed result clears the local order journal",
+    "Actual reload retains an undelivered original request and reports NOT_RECORDED",
+    "NOT_RECORDED does not imply safe replacement",
+    "Persistent before-delivery interruption has not added an order",
+    "Explicit unchanged retry clears the journal only after server success",
+    "Retry restores the exact saved item instruction",
+    "Second tab shares the same ordinary cookie-resolved dining identity",
+    "BroadcastChannel and shared IndexedDB expose the same original attempt in the second tab",
+    "Second tab cannot replace the first tab pending request",
+    "Second tab retains its separate unsent draft controls",
+    "390px recovery controls and full UUID do not overflow horizontally",
+    "320px recovery controls and full UUID do not overflow horizontally",
+    "Second tab acknowledges confirmed cancellation and removes the shared journal",
+    "Resolving another tab attempt preserves this tab separate unsent draft",
+    "Original tab rechecks server cancellation when peer removes the journal",
+    "Original tab stays blocked until its own cancellation acknowledgement",
+    "Original tab acknowledgement clears only its matching sent draft",
+    "Two-tab cancellation persists a server tombstone without creating a third order",
+    "Separate payer grant opens the accepted shared bill with zero verified allocations",
+    "Lost payer response retains the encrypted reviewed amount and original reference",
+    "Uncertain transfer report does not mark the bill paid",
+    "Full reload decrypts the original payer report without replaying it",
+    "Payer recovery explicitly prevents interpreting retry as another bank transfer",
+    "Lost payer response and reload persist exactly one pending database claim",
+    "Payer original-key check identifies its own persisted claim",
+    "Confirmed report remains unpaid until independently received funds are allocated",
+    "Existing pending report blocks a second report",
+    "Desktop guest and shared-bill layout has no horizontal overflow",
+    "390px restored payer report and exact reference fit without horizontal overflow",
+    "All browser recovery attempts end with acknowledged outcomes",
+    "Amharic item instruction survives encrypted recovery and server persistence",
+    "Browser reports no captured JavaScript console errors during final acceptance"
+  ],
+  "viewports": {
+    "desktop": {
+      "documentWidth": 1265,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    "phone": {
+      "documentWidth": 390,
+      "scrollWidth": 390,
+      "width": 390
+    },
+    "narrow": {
+      "documentWidth": 320,
+      "scrollWidth": 320,
+      "width": 320
+    },
+    "payerPhone": {
+      "documentWidth": 390,
+      "scrollWidth": 390,
+      "width": 390
+    }
+  },
+  "console_errors": 0,
+  "screenshots": [
+    "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-order-recovery.png",
+    "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-recovery-mobile.png",
+    "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-recovery-payer-confirmed.png"
+  ],
+  "scope": "Actual in-app browser with real IndexedDB, AES-GCM/HMAC and guest/payer cookie HTTP against a disposable PostgreSQL fixture; dropped delivery/streamed responses, full reload, unchanged retry and two same-session tabs. Staff acceptance and payer issuance happen privately in-process using fictional principals. No real merchant login, physical device, bank or production acceptance.",
+  "method": "Assertions performed through documented browser controls and read-only DOM inspection; labels consolidated from the successful calls. Captured console logs are separate from intentionally interrupted network responses.",
+  "database_confirmation": {
+    "verified_at": "2026-10-15T18:02:52.109020+00:00",
+    "orders": 2,
+    "claims": 1,
+    "receipts": 0,
+    "allocations": 0,
+    "first_order_requests": 1,
+    "unchanged_retry_requests": 1,
+    "cancelled_order_requests": 0,
+    "cancelled_order_tombstones": 1,
+    "original_claim_requests": 1,
+    "source": "Read-only SQL against the same disposable browser fixture; original request UUIDs came from visible recovery panels."
+  }
+}

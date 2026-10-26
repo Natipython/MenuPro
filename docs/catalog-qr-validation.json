@@ -1,0 +1,9 @@
+{
+  "verified_at": "2026-10-13T11:38:07.597Z",
+  "passed": 1,
+  "failed": 0,
+  "decoded_url": "http://127.0.0.1:5196/menu/fictional-published-cafe",
+  "width": 240,
+  "height": 240,
+  "scope": "independent ZXing decode of the actual QR PNG served in customer HTML; no physical phone scan"
+}

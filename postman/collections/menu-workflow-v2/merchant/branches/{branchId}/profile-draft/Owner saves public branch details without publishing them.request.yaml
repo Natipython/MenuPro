@@ -1,0 +1,57 @@
+$kind: http-request
+description: Owner saves public branch details without publishing them Requires trusted
+  identity, business/branch permissions and exact versions. HTTP editing is locked
+  until the identity adapter exists; caller headers/UUIDs are not accepted as identity.
+  Database commands have exact-body idempotency and atomic audit/outbox records. Independent
+  fictional scenario; protected operations require matching backend fixtures and ephemeral
+  authenticated sessions. Not a runnable restaurant transaction sequence.
+url: '{{baseUrl}}/merchant/branches/:branchId/profile-draft'
+method: PUT
+headers:
+- key: Accept
+  value: application/json
+- key: Content-Type
+  value: application/json
+- key: Idempotency-Key
+  value: b64b7239-4880-5af0-ad5d-c67e348bedfa
+- key: Origin
+  value: '{{origin}}'
+- key: X-CSRF-Token
+  value: '{{csrfToken}}'
+- key: Cookie
+  value: menu_staff_session={{staffSession}}
+pathVariables:
+- key: branchId
+  value: '{{branchId}}'
+  disabled: false
+  description: '(Required) '
+body:
+  type: json
+  content: "{\n  \"expectedVersion\": 0,\n  \"content\": {\n    \"businessTypeId\"\
+    : \"cafe-and-restaurant\",\n    \"branch\": {\n      \"publicName\": \"Fictional\
+    \ Addis Cafe\",\n      \"name\": \"Main branch\",\n      \"city\": \"Addis Ababa\"\
+    ,\n      \"area\": \"Bole\",\n      \"landmark\": \"Fictional landmark\",\n  \
+    \    \"serviceMode\": \"DINE_IN\",\n      \"currency\": \"ETB\",\n      \"timezone\"\
+    : \"Africa/Addis_Ababa\",\n      \"hours\": [\n        {\n          \"day\": 0,\n\
+    \          \"status\": \"UNSPECIFIED\"\n        },\n        {\n          \"day\"\
+    : 1,\n          \"status\": \"UNSPECIFIED\"\n        },\n        {\n         \
+    \ \"day\": 2,\n          \"status\": \"UNSPECIFIED\"\n        },\n        {\n\
+    \          \"day\": 3,\n          \"status\": \"UNSPECIFIED\"\n        },\n  \
+    \      {\n          \"day\": 4,\n          \"status\": \"UNSPECIFIED\"\n     \
+    \   },\n        {\n          \"day\": 5,\n          \"status\": \"UNSPECIFIED\"\
+    \n        },\n        {\n          \"day\": 6,\n          \"status\": \"UNSPECIFIED\"\
+    \n        }\n      ]\n    }\n  }\n}"
+settings: {}
+examples: ./.resources/Owner saves public branch details without publishing them.resources/examples
+order: 2000
+name: saveBranchProfile
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: "pm.test(\"Command succeeds for its prepared fixture\", () => pm.expect(pm.response.code).to.be.within(200,\
+    \ 299));\npm.test(\"Private response is not cached\", () => pm.expect(pm.response.headers.get(\"\
+    Cache-Control\") || \"\").to.include(\"no-store\"));\npm.test(\"Money fields are\
+    \ exact decimal strings\", () => {\n  function check(v) { if (v && typeof v ===\
+    \ \"object\") Object.keys(v).forEach(k => {\n    if (/(Amount|Price|Total)$/.test(k)\
+    \ && !(k === \"verifiedReceivedAmount\" && v[k] === null)) pm.expect(v[k]).to.match(/^(0|[1-9][0-9]{0,9})\\\
+    .[0-9]{2}$/);\n    else check(v[k]); }); }\n  check(pm.response.json());\n});"

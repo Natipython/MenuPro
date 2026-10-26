@@ -1,0 +1,26 @@
+$kind: http-request
+method: POST
+url: '{{baseUrl}}/merchant/payment-claims/{{claimId}}/reviews'
+order: 8000
+body:
+  type: json
+  content: |-
+    {
+      "decision": "APPROVE",
+      "verifiedAmount": "140.00",
+      "note": "Local test fixture only: operator checked actual merchant records."
+    }
+headers:
+- key: Idempotency-Key
+  value: '{{commandRequestKey}}'
+- key: Cookie
+  value: 'menu_staff_session={{staffSession}}'
+- key: X-CSRF-Token
+  value: '{{csrfToken}}'
+- key: Content-Type
+  value: application/json
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: pm.test('Expected status 200', () => pm.expect(pm.response.code).to.eql(200));
+examples: './.resources/reviewTransfer.resources/examples/'

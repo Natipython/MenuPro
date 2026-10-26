@@ -1,0 +1,27 @@
+$kind: http-request
+description: Read published menu with live availability Independent fictional scenario;
+  protected operations require matching backend fixtures and ephemeral authenticated
+  sessions. Not a runnable restaurant transaction sequence.
+url: '{{baseUrl}}/public/venues/:venueSlug/menu'
+method: GET
+headers:
+- key: Accept
+  value: application/json
+pathVariables:
+- key: venueSlug
+  value: '{{venueSlug}}'
+  disabled: false
+  description: '(Required) '
+settings: {}
+examples: ./.resources/Read published menu with live availability.resources/examples
+order: 1000
+name: getPublishedMenu
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: "pm.test(\"Command succeeds for its prepared fixture\", () => pm.expect(pm.response.code).to.be.within(200,\
+    \ 299));\npm.test(\"Money fields are exact decimal strings\", () => {\n  function\
+    \ check(v) { if (v && typeof v === \"object\") Object.keys(v).forEach(k => {\n\
+    \    if (/(Amount|Price|Total)$/.test(k) && !(k === \"verifiedReceivedAmount\"\
+    \ && v[k] === null)) pm.expect(v[k]).to.match(/^(0|[1-9][0-9]{0,9})\\.[0-9]{2}$/);\n\
+    \    else check(v[k]); }); }\n  check(pm.response.json());\n});"

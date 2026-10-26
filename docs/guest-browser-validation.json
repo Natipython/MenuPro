@@ -1,0 +1,73 @@
+{
+  "verified_at": "2026-10-15T11:05:55.847Z",
+  "passed": 43,
+  "failed": 0,
+  "cases": [
+    "unpaired guest cannot compose an order",
+    "unpaired guest has no order history",
+    "table-code issuance is explicitly fictional and separate from visit invitation",
+    "staff invitation includes scoped visit and separate private code",
+    "malformed invitation has a visible recoverable error",
+    "required modifier missing prevents guest draft line",
+    "unsent guest draft prevents rehearsal role change",
+    "menu reload requires an explicit keep-or-discard decision",
+    "keeping a draft preserves its private note",
+    "submitted guest request visibly awaits acceptance",
+    "guest tracking provides no staff transition action",
+    "guest B cannot see guest A request or private note",
+    "guest B tracking never includes guest A private note",
+    "unaccepted guest requests produce no accepted cashier charge",
+    "accepted guest requests enter the same preparation queue",
+    "guest A tracks preparation status changed by staff",
+    "guest A cannot see guest B tea order",
+    "guest B sees its own ready-to-serve state",
+    "ended seating disables further guest ordering",
+    "ended seating keeps own served-order history",
+    "accepted guest A and B orders sum to one unpaid 110.50 bill after seating ends",
+    "recorded receipt remains unapplied until allocation",
+    "combined guest bill closes only after accepted charges are fully allocated",
+    "new seating does not replace an old guest association or reveal the new party",
+    "leaving a session has an explicit consequence review and cancel action",
+    "revoked rehearsal session no longer displays previous orders",
+    "new session at same table has no earlier party order history",
+    "superseded invitation cannot join a fresh session",
+    "fresh rotated invitation joins only the current seating",
+    "rehearsal browser title follows the selected workflow role",
+    "unavailable menu item cannot be selected",
+    "successive guest order rounds retain independent service statuses",
+    "desktop guest view has no horizontal overflow",
+    "390px guest view has no horizontal overflow",
+    "320px guest tracker has no horizontal overflow",
+    "manual refresh confirms current guest status",
+    "final guest rehearsal has no browser console errors",
+    "actual guest entry page has no seeded session or order history",
+    "unpaired guest can browse menu items while order entry stays disabled",
+    "phone layout puts current order tracking before another order composer",
+    "final phone layout has no horizontal overflow after tracking priority change",
+    "final 320px layout has no horizontal overflow",
+    "final updated guest tracker has no browser console errors"
+  ],
+  "viewports": {
+    "desktop": {
+      "documentWidth": 1265,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    "phone": {
+      "documentWidth": 390,
+      "scrollWidth": 390,
+      "width": 390
+    },
+    "narrow": {
+      "documentWidth": 320,
+      "scrollWidth": 320,
+      "width": 320
+    }
+  },
+  "console_errors": 0,
+  "screenshots": [
+    "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-guest-tracking-desktop.png",
+    "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-guest-tracking-mobile.png"
+  ],
+  "scope": "actual browser UI with shared fictional memory-only floor, preparation, cashier, manager and independent guest views; server/DB and guest cookie HTTP acceptance are verified separately. No real merchant OTP, production identity, physical-device, bank or offline/reload recovery acceptance."
+}

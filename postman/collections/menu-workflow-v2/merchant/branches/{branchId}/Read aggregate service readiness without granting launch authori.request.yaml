@@ -1,0 +1,33 @@
+$kind: http-request
+name: getBranchReadiness
+description: Read aggregate service readiness without granting launch authority Prepared
+  staffing, tables and payment methods do not create grants, tables, receiving accounts
+  or plan entitlement. No ordering activation occurs. Readiness is PREPARATION_ONLY
+  until connected transaction and field acceptance gates are complete. Independent
+  fictional scenario; protected operations require matching backend fixtures and ephemeral
+  authenticated sessions. Not a runnable restaurant transaction sequence.
+url: '{{baseUrl}}/merchant/branches/:branchId/readiness'
+method: GET
+headers:
+- key: Accept
+  value: application/json
+- key: Cookie
+  value: menu_staff_session={{staffSession}}
+pathVariables:
+- key: branchId
+  value: '{{branchId}}'
+  disabled: false
+  description: '(Required) '
+settings: {}
+examples: ./.resources/Read aggregate service readiness without granting launch authori.resources/examples
+order: 6000
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: "pm.test(\"Command succeeds for its prepared fixture\", () => pm.expect(pm.response.code).to.be.within(200,\
+    \ 299));\npm.test(\"Private response is not cached\", () => pm.expect(pm.response.headers.get(\"\
+    Cache-Control\") || \"\").to.include(\"no-store\"));\npm.test(\"Money fields are\
+    \ exact decimal strings\", () => {\n  function check(v) { if (v && typeof v ===\
+    \ \"object\") Object.keys(v).forEach(k => {\n    if (/(Amount|Price|Total)$/.test(k)\
+    \ && !(k === \"verifiedReceivedAmount\" && v[k] === null)) pm.expect(v[k]).to.match(/^(0|[1-9][0-9]{0,9})\\\
+    .[0-9]{2}$/);\n    else check(v[k]); }); }\n  check(pm.response.json());\n});"

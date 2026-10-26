@@ -1,0 +1,20 @@
+$kind: http-example
+name: Fictional committed result 201
+request:
+  url: '{{baseUrl}}/merchant/bills/:billId/access-grants'
+  method: POST
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"id\": \"00000000-0000-4000-8000-000000000899\",\n  \"version\"\
+      : 1,\n  \"billId\": \"00000000-0000-4000-8000-000000000801\",\n  \"guestSessionId\"\
+      : \"00000000-0000-4000-8000-000000000301\",\n  \"expiresAt\": \"2026-10-12T18:00:00Z\"\
+      ,\n  \"active\": true,\n  \"accessToken\": \"FICTIONAL_PAYER_BBBBBBBBBBBBBBBBBBBBBBBBBB0\"\
+      \n}"

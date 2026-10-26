@@ -1,0 +1,280 @@
+[
+  {
+    "schema": "GuestContext",
+    "value": {
+      "session": {
+        "id": "01a1409b-0895-7c77-8459-8a1d4e5a6c2c",
+        "tableId": "01a1409b-0857-75ab-a7f0-d078137f1fff",
+        "venueId": "01a1409a-fb96-7051-aeff-950ed04906fd",
+        "expiresAt": "2026-10-16T08:27:44.535315+03:00",
+        "tableLabel": "Guest test table"
+      },
+      "association": {
+        "tableId": "01a1409b-0857-75ab-a7f0-d078137f1fff",
+        "visitId": "01a1409b-0868-7353-a3eb-64f7299f8205",
+        "visitStatus": "ENDED",
+        "canSubmitOrders": false
+      },
+      "csrfToken": "FICTIONAL_CSRF_CCCCCCCCCCCCCCCCCCCCCCCCCCC0"
+    }
+  },
+  {
+    "schema": "TableGuestLink",
+    "value": {
+      "active": true,
+      "tableId": "01a1409b-0857-75ab-a7f0-d078137f1fff",
+      "version": 3,
+      "branchId": "01a1409a-fb96-7051-aeff-950ed04906fd",
+      "tableToken": "FICTIONAL_TABLE_TTTTTTTTTTTTTTTTTTTTTTTTTT0"
+    }
+  },
+  {
+    "schema": "VisitInvitation",
+    "value": {
+      "active": true,
+      "tableId": "01a1409b-0857-75ab-a7f0-d078137f1fff",
+      "version": 2,
+      "visitId": "01a1409b-0ab4-7827-b2ba-4fa4ea7677a4",
+      "branchId": "01a1409a-fb96-7051-aeff-950ed04906fd",
+      "expiresAt": "2026-10-15T20:32:45.084545+03:00",
+      "pairingToken": "FICTIONAL_VISIT_PPPPPPPPPPPPPPPPPPPPPPPPPP0"
+    }
+  },
+  {
+    "schema": "GuestOrder",
+    "value": {
+      "id": "01a1409b-0914-7a58-9566-48105152ecdc",
+      "items": [
+        {
+          "id": "01a1409b-091a-733c-9117-dce92bd8660d",
+          "nameEn": "Fictional tea",
+          "quantity": 1,
+          "lineTotal": "80.00",
+          "unitPrice": "80.00",
+          "selectedOptions": [
+            "Regular"
+          ],
+          "specialInstructions": ""
+        }
+      ],
+      "source": "GUEST",
+      "status": "SUBMITTED",
+      "version": 1,
+      "visitId": "01a1409b-0868-7353-a3eb-64f7299f8205",
+      "branchId": "01a1409a-fb96-7051-aeff-950ed04906fd",
+      "currency": "ETB",
+      "createdAt": "2026-10-15T20:27:44.657566+03:00",
+      "taxAmount": "0.00",
+      "tableLabel": "Guest test table",
+      "totalAmount": "80.00",
+      "customerNote": "Fictional private guest A note",
+      "serviceAmount": "0.00",
+      "subtotalAmount": "80.00"
+    }
+  },
+  {
+    "schema": "GuestOrderList",
+    "value": {
+      "items": [
+        {
+          "id": "01a1409b-0914-7a58-9566-48105152ecdc",
+          "items": [
+            {
+              "id": "01a1409b-091a-733c-9117-dce92bd8660d",
+              "nameEn": "Fictional tea",
+              "quantity": 1,
+              "lineTotal": "80.00",
+              "unitPrice": "80.00",
+              "selectedOptions": [
+                "Regular"
+              ],
+              "specialInstructions": ""
+            }
+          ],
+          "source": "GUEST",
+          "status": "COMPLETED",
+          "version": 3,
+          "visitId": "01a1409b-0868-7353-a3eb-64f7299f8205",
+          "branchId": "01a1409a-fb96-7051-aeff-950ed04906fd",
+          "currency": "ETB",
+          "createdAt": "2026-10-15T20:27:44.657566+03:00",
+          "taxAmount": "0.00",
+          "tableLabel": "Guest test table",
+          "totalAmount": "80.00",
+          "customerNote": "Fictional private guest A note",
+          "serviceAmount": "0.00",
+          "subtotalAmount": "80.00"
+        },
+        {
+          "id": "01a1409b-0954-78ed-b144-e2d918695c46",
+          "items": [
+            {
+              "id": "01a1409b-0956-792b-98dd-514511916227",
+              "nameEn": "Fictional tea",
+              "quantity": 1,
+              "lineTotal": "80.00",
+              "unitPrice": "80.00",
+              "selectedOptions": [
+                "Regular"
+              ],
+              "specialInstructions": ""
+            }
+          ],
+          "source": "GUEST",
+          "status": "COMPLETED",
+          "version": 3,
+          "visitId": "01a1409b-0868-7353-a3eb-64f7299f8205",
+          "branchId": "01a1409a-fb96-7051-aeff-950ed04906fd",
+          "currency": "ETB",
+          "createdAt": "2026-10-15T20:27:44.720868+03:00",
+          "taxAmount": "0.00",
+          "tableLabel": "Guest test table",
+          "totalAmount": "80.00",
+          "customerNote": "Fictional private guest A note",
+          "serviceAmount": "0.00",
+          "subtotalAmount": "80.00"
+        },
+        {
+          "id": "01a1409b-09bb-74ff-9559-03dcfae1d3c7",
+          "items": [
+            {
+              "id": "01a1409b-09bd-78b4-b8c5-60b185040c2e",
+              "nameEn": "Fictional tea",
+              "quantity": 1,
+              "lineTotal": "80.00",
+              "unitPrice": "80.00",
+              "selectedOptions": [
+                "Regular"
+              ],
+              "specialInstructions": ""
+            }
+          ],
+          "source": "GUEST",
+          "status": "COMPLETED",
+          "version": 3,
+          "visitId": "01a1409b-0868-7353-a3eb-64f7299f8205",
+          "branchId": "01a1409a-fb96-7051-aeff-950ed04906fd",
+          "currency": "ETB",
+          "createdAt": "2026-10-15T20:27:44.82529+03:00",
+          "taxAmount": "0.00",
+          "tableLabel": "Guest test table",
+          "totalAmount": "80.00",
+          "customerNote": "Fictional private guest A note",
+          "serviceAmount": "0.00",
+          "subtotalAmount": "80.00"
+        }
+      ],
+      "nextCursor": null
+    }
+  },
+  {
+    "schema": "ServiceOffer",
+    "value": {
+      "menu": {
+        "branch": {
+          "area": "Bole",
+          "city": "Addis Ababa",
+          "name": "Main branch",
+          "hours": [
+            {
+              "day": 0,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 1,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 2,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 3,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 4,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 5,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 6,
+              "status": "UNSPECIFIED"
+            }
+          ],
+          "currency": "ETB",
+          "landmark": "Fictional landmark",
+          "timezone": "Africa/Addis_Ababa",
+          "publicName": "Fictional New Name",
+          "serviceMode": "MENU_ONLY"
+        },
+        "content": {
+          "themeId": "mini-warm-habesha",
+          "sections": [
+            {
+              "id": "00000000-0000-4000-8000-000000004101",
+              "items": [
+                {
+                  "id": "00000000-0000-4000-8000-000000004102",
+                  "nameAm": "የሙከራ ቡና",
+                  "nameEn": "Fictional coffee",
+                  "basePrice": "70.00",
+                  "modifiers": [],
+                  "availableNow": false
+                },
+                {
+                  "id": "00000000-0000-4000-8000-000000004103",
+                  "nameEn": "Fictional tea",
+                  "basePrice": "80.00",
+                  "modifiers": [
+                    {
+                      "id": "00000000-0000-4000-8000-000000004104",
+                      "mode": "SINGLE_SELECT",
+                      "label": "Size",
+                      "choices": [
+                        {
+                          "id": "00000000-0000-4000-8000-000000004105",
+                          "label": "Regular",
+                          "priceDelta": "0.00",
+                          "isAvailable": true
+                        },
+                        {
+                          "id": "00000000-0000-4000-8000-000000004106",
+                          "label": "Large",
+                          "priceDelta": "10.00",
+                          "isAvailable": true
+                        }
+                      ],
+                      "maxSelections": 1,
+                      "minSelections": 1
+                    }
+                  ],
+                  "availableNow": true
+                }
+              ],
+              "nameAm": "ቡና",
+              "nameEn": "Coffee"
+            }
+          ],
+          "primaryColor": "#F59E0B"
+        },
+        "venueId": "01a1409a-fb96-7051-aeff-950ed04906fd",
+        "currency": "ETB",
+        "revision": 2,
+        "venueName": "Fictional New Name",
+        "publicationId": "01a1409a-fbd4-7586-9201-0b8ff77eaedb",
+        "availabilityRevision": 2
+      },
+      "pricing": {
+        "taxMode": "NONE",
+        "taxRateBps": 0,
+        "taxOnService": false,
+        "serviceRateBps": 0
+      },
+      "pricingFingerprint": "e548f7a3fc8aa3850afec02e1799775af2d1c06e13be7357914aeed155150f59"
+    }
+  }
+]

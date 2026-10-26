@@ -1,0 +1,64 @@
+{
+  "verified_at": "2026-10-15T06:25:34.239689+00:00",
+  "passed": 31,
+  "failed": 0,
+  "cases": [
+    "connected floor and cashier views share the same fictional visit and order records",
+    "unsent order draft blocks changing rehearsal roles",
+    "ended seating remains visible in the unresolved cashier worklist",
+    "cashier reads exact ETB 141.00 accepted charge with zero received funds",
+    "finalization review discloses blocked future order rounds and leaves bill unpaid",
+    "cash form calculates 100.00 tender minus 20.00 returned change as 80.00 received",
+    "cash receipt cannot be recorded without actual-funds acknowledgement",
+    "cash receipt remains unapplied and bill stays ETB 141.00 outstanding",
+    "explicit ETB 80.00 allocation leaves ETB 61.00 outstanding and PARTIALLY_PAID",
+    "verified transfer form identifies masked receiver and requires independent-funds confirmation",
+    "ETB 61.00 received transfer remains unapplied until explicitly allocated",
+    "combined cash and transfer allocations cover ETB 141.00 with zero outstanding/unapplied funds",
+    "closed bill leaves unresolved worklist and appears in separate closed history",
+    "cashier view offers no manager credit or refund approval/execution controls",
+    "manager credit review identifies the selected order and remaining charge",
+    "manager ETB 10.00 credit reopens closed bill and exposes ETB 10.00 unapplied funds",
+    "refund request review identifies source receipt, original received amount and available funds",
+    "refund request reserves ETB 10.00 without recording a return",
+    "cashier can see refund obligation but has no approval or execution action",
+    "manager approval review identifies refund amount and says approve explicitly",
+    "manager approval leaves ETB 10.00 reserved with no returned amount",
+    "actual-execution review requires a return reference and already-returned confirmation",
+    "recorded execution clears unapplied/reserved funds and retains execution reference",
+    "corrected ETB 131.00 bill closes after ETB 10.00 actual-return record",
+    "open settlement review blocks role changes, bill selection and unrelated actions",
+    "desktop worklist, bill detail and histories have no horizontal overflow at 1280px",
+    "phone-width worklist, bill detail and histories have no horizontal overflow at 390px",
+    "phone-width transfer review form has no horizontal overflow at 390px",
+    "final connected rehearsal has no captured browser console errors",
+    "actual private cashier page stays locked after final build with no operating controls",
+    "final-build smoke walkthrough preserves ETB 141.00 charges, ETB 80.00 allocated and ETB 61.00 outstanding"
+  ],
+  "page": "http://127.0.0.1:5196/service/rehearsal",
+  "viewports": [
+    {
+      "width": 1280,
+      "height": 900,
+      "document_scroll_width": 1265
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "document_scroll_width": 375
+    }
+  ],
+  "screenshots": [
+    "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-cashier-settlement-desktop.png",
+    "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-cashier-settlement-mobile.png",
+    "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-cashier-rehearsal.png"
+  ],
+  "scope": "actual browser rehearsal UI with fictional memory-only records; real server/DB behavior verified separately",
+  "limits": [
+    "No authenticated HTTP success, actual cash/bank/refund operation, physical phone, pilot or production acceptance.",
+    "Transfer claim approval has private adapter/DB evidence; guest claim submission and receipt upload remain deferred, and no claim was submitted by this browser.",
+    "Client pending-key recovery across reload remains an activation gate. Network-loss UI recovery and multi-device synchronization are not established by this walkthrough."
+  ],
+  "viewport_override_left_active": false,
+  "final_review_state": "fictional ended seating with partially allocated bill; ETB 61.00 outstanding; normal viewport restored"
+}

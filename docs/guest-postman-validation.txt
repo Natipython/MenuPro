@@ -1,0 +1,85 @@
+No authorization data found. Please use the `postman login` command.
+Refer:https://learning.postman.com/docs/postman-cli/postman-cli-options/#postman-login
+
+Running your collection...
+postman
+
+Isolated fictional guest workflow
+
+Root createDiningSession
+
+  POST http://127.0.0.1:38851/api/v2/dining-sessions [201 Created, 744 B, 22 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Money fields are exact decimal strings
+  Pass  Anonymous cookie is HttpOnly and Strict
+
+Root pairGuestVisit
+
+  POST http://127.0.0.1:38851/api/v2/guest/visits/01a1409b-0ab4-7827-b2ba-4fa4ea7677a4/association [200 OK, 431 B, 10 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+
+Root getGuestContext
+
+  GET http://127.0.0.1:38851/api/v2/guest/session [200 OK, 706 B, 9 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+
+Root getGuestOffer
+
+  GET http://127.0.0.1:38851/api/v2/guest/menu [200 OK, 1.83 KB, 12 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+
+Root submitGuestOrder
+
+  POST http://127.0.0.1:38851/api/v2/guest/orders [201 Created, 931 B, 10 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+  Pass  Guest order awaits acceptance and has no staff controls
+
+Root listGuestOrders
+
+  GET http://127.0.0.1:38851/api/v2/guest/orders?limit=50 [200 OK, 903 B, 9 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+
+Root getGuestOrder
+
+  GET http://127.0.0.1:38851/api/v2/guest/orders/01a1409b-296e-7691-b32a-7cef6f8b8a4b [200 OK, 873 B, 10 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+
+Root revokeGuestSession
+
+  POST http://127.0.0.1:38851/api/v2/guest/session/revocation [200 OK, 396 B, 14 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+
+--------------------------------------------------------------------
+|                         |           executed |            failed |
+--------------------------+--------------------+--------------------
+|              iterations |                  1 |                 0 |
+--------------------------+--------------------+--------------------
+|                requests |                  8 |                 0 |
+--------------------------+--------------------+--------------------
+|            test-scripts |                  8 |                 0 |
+--------------------------+--------------------+--------------------
+|      prerequest-scripts |                  0 |                 0 |
+--------------------------+--------------------+--------------------
+|              assertions |                 25 |                 0 |
+--------------------------------------------------------------------
+| total run duration: 796 ms                                       |
+--------------------------------------------------------------------
+| total data received: 4.29 KB (approx)                            |
+--------------------------------------------------------------------
+| average response time: 12 ms [min: 9 ms, max: 22 ms, s.d.: 4 ms] |
+--------------------------------------------------------------------
+

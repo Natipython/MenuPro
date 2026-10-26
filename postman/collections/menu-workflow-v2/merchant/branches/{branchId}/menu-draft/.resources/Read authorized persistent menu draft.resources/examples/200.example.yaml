@@ -1,0 +1,23 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/branches/:branchId/menu-draft'
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"venueId\": \"00000000-0000-4000-8000-000000000101\",\n  \"version\"\
+      : 2,\n  \"content\": {\n    \"themeId\": \"mini-warm-habesha\",\n    \"primaryColor\"\
+      : \"#F59E0B\",\n    \"sections\": [\n      {\n        \"id\": \"00000000-0000-4000-8000-000000000501\"\
+      ,\n        \"nameEn\": \"Coffee\",\n        \"items\": [\n          {\n    \
+      \        \"id\": \"00000000-0000-4000-8000-000000000601\",\n            \"nameEn\"\
+      : \"Macchiato\",\n            \"basePrice\": \"70.00\",\n            \"availableNow\"\
+      : true,\n            \"modifiers\": []\n          }\n        ]\n      }\n  \
+      \  ]\n  }\n}"

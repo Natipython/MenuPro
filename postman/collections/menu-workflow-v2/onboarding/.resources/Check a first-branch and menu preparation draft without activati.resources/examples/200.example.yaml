@@ -1,0 +1,20 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/onboarding/setup-validation'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"valid\": true,\n  \"mode\": \"DRAFT_ONLY\",\n  \"nextStep\":\
+      \ \"VERIFY_BEFORE_LAUNCH\",\n  \"summary\": {\n    \"sectionCount\": 1,\n  \
+      \  \"itemCount\": 1,\n    \"availableItemCount\": 1\n  },\n  \"blockers\": [\n\
+      \    \"PHONE_VERIFICATION\",\n    \"BUSINESS_AUTHORIZATION\",\n    \"MENU_PUBLICATION\"\
+      ,\n    \"SUBSCRIPTION_ACTIVATION\",\n    \"ORDERING_SETUP\"\n  ]\n}"

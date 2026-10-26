@@ -1,0 +1,17 @@
+$kind: http-example
+name: Fictional committed result 201
+request:
+  url: '{{baseUrl}}/merchant/plan-change-requests'
+  method: POST
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"id\": \"00000000-0000-4000-8000-000000000881\",\n  \"requestedPlan\"\
+      : \"MINI\",\n  \"status\": \"REQUESTED\"\n}"

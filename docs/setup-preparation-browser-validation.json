@@ -1,0 +1,45 @@
+{
+  "verified_at": "2026-10-12T19:00:31.682588+00:00",
+  "cases": [
+    "Owner-is-manager registration can continue into preparation with verification pending",
+    "First-branch customer phone stays blank instead of copying the owner phone",
+    "Overnight hours require explicit next-day confirmation and preserve entered times on errors",
+    "MenuMini preference describes one initial branch and the maximum two with quoted add-on",
+    "Chosen Cafe & Restaurant type supplies empty sections; the six visual themes are a separate visible choice",
+    "Menu editor adds items and custom sections, including optional Amharic names",
+    "Invalid decimal input returns to the field even when it is in another section",
+    "Exact decimal normalization shows 60.50 and 80.00 without floating-point rounding",
+    "Preview hides empty sections and displays unavailable items clearly",
+    "Readiness stays pending and publication remains disabled",
+    "Actual exported JSON excludes the private fictional owner name and phone and has no public phone",
+    "Reload clears transient registration and preparation data",
+    "Import of the downloaded file restores branch, overnight hours, plan preference, prices and availability",
+    "Invalid import containing owner data leaves the current preparation unchanged",
+    "Normal viewport is restored after responsive testing"
+  ],
+  "mobile_branch": {
+    "width": 390,
+    "height": 844,
+    "content_width": 373,
+    "horizontal_overflow": false
+  },
+  "mobile_menu_editor": {
+    "width": 390,
+    "height": 844,
+    "content_width": 373,
+    "horizontal_overflow": false
+  },
+  "mobile_review": {
+    "width": 390,
+    "height": 844,
+    "content_width": 373,
+    "horizontal_overflow": false
+  },
+  "desktop_review": {
+    "width": 1280,
+    "height": 900,
+    "content_width": 1263,
+    "horizontal_overflow": false
+  },
+  "scope": "actual Codex in-app browser with fictional data; exported file inspected locally; no real device, identity, billing, database writes or public publication"
+}

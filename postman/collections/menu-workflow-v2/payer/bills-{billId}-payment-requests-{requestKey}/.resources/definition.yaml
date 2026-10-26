@@ -1,0 +1,3 @@
+$kind: collection
+name: bills/{billId}/payment-requests/{requestKey}
+order: 3000

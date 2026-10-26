@@ -1,0 +1,17 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/guest/visits/:visitId/association'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"visitId\": \"00000000-0000-4000-8000-000000000501\",\n  \"tableId\"\
+      : \"00000000-0000-4000-8000-000000000201\",\n  \"canSubmitOrders\": true\n}"

@@ -1,0 +1,30 @@
+$kind: collection
+name: MenuMini v1 foundation contract
+description: Intended API contract and fictional saved examples. Endpoints are not
+  yet implemented. Use local test fixtures and ephemeral session values; do not upload
+  credentials or infer live success from these examples.
+variables:
+- key: baseUrl
+  value: http://localhost:5174/api/v1
+- key: venueSlug
+  value: venue-a
+- key: venueId
+  value: 00000000-0000-4000-8000-000000000101
+- key: orderId
+  value: 00000000-0000-4000-8000-000000000701
+- key: claimId
+  value: 00000000-0000-4000-8000-000000000851
+- key: foreignOrderId
+  value: 00000000-0000-4000-8000-000000000704
+- key: tableToken
+  value: REPLACE_WITH_A_TOKEN_FROM_THE_LOCAL_TEST_FIXTURE
+- key: orderRequestKey
+  value: 00000000-0000-4000-8000-000000000991
+- key: commandRequestKey
+  value: 00000000-0000-4000-8000-000000000992
+- key: staffSession
+  value: ''
+- key: diningSession
+  value: ''
+- key: csrfToken
+  value: ''

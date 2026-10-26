@@ -1,0 +1,18 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/receipts/:receiptId/refund-requests'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"id\": \"00000000-0000-4000-8000-000000000871\",\n  \"receiptId\"\
+      : \"00000000-0000-4000-8000-000000000861\",\n  \"version\": 1,\n  \"amount\"\
+      : \"10.00\",\n  \"status\": \"REQUESTED\"\n}"

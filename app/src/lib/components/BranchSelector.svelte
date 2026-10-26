@@ -1,7 +1,13 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
   
-  export let branches = [];
+  interface BranchItem {
+    slug: string;
+    name: string;
+    address?: string;
+  }
+
+  export let branches: BranchItem[] = [];
   export let currentBranchSlug = '';
   
   let isOpen = false;
@@ -26,7 +32,7 @@
   </button>
 
   {#if isOpen}
-    <div class="dropdown-backdrop" on:click={() => isOpen = false}></div>
+    <button type="button" class="dropdown-backdrop" on:click={() => isOpen = false} aria-label="Close branch selector"></button>
     <div class="dropdown-menu">
       {#each branches as branch}
         <button 

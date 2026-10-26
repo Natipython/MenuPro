@@ -1,0 +1,9 @@
+localResources:
+  collections:
+    - ../postman/collections/menu-mini-v1
+    - ../postman/collections/menu-workflow-v2
+  specs:
+    - ../postman/specs/openapi.yaml
+    - ../postman/specs/workflow-v2.openapi.yaml
+workspace:
+  id: ''

@@ -1,0 +1,45 @@
+$kind: http-request
+description: Implemented stateless validation only. Same Origin required; no cookies,
+  identity, SMS, persistence or invitations. Body limit 16 KB. Does not echo private
+  contacts. Ethiopian local phone inputs are normalized for format checking; phone
+  possession and legal-business authority remain unverified. Owner/manager contacts
+  are private. Naming someone never creates membership. Retry is safe without an idempotency
+  key because no state changes. Independent fictional scenario; protected operations
+  require matching backend fixtures and ephemeral authenticated sessions. Not a runnable
+  restaurant transaction sequence.
+url: '{{baseUrl}}/onboarding/validation'
+method: POST
+headers:
+- key: Accept
+  value: application/json
+- key: Content-Type
+  value: application/json
+- key: Origin
+  value: '{{origin}}'
+body:
+  type: json
+  content: "{\n  \"businessName\": \"Fictional Cafe PLC\",\n  \"businessTypeId\":\
+    \ \"cafe-and-restaurant\",\n  \"owner\": {\n    \"name\": \"Fictional Owner\"\
+    ,\n    \"phone\": \"+251900000011\"\n  },\n  \"ownerIsManager\": false,\n  \"\
+    manager\": {\n    \"name\": \"Fictional Manager\",\n    \"phone\": \"+251900000012\"\
+    \n  },\n  \"registrantRole\": \"OWNER\",\n  \"authorityConfirmed\": true\n}"
+settings: {}
+examples: ./.resources/Check registration fields and report the next verification
+  step.resources/examples
+order: 1000
+name: validateBusinessRegistration
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: "pm.test(\"Command succeeds for its prepared fixture\", () => pm.expect(pm.response.code).to.be.within(200,\
+    \ 299));\npm.test(\"Private response is not cached\", () => pm.expect(pm.response.headers.get(\"\
+    Cache-Control\") || \"\").to.include(\"no-store\"));\npm.test(\"Money fields are\
+    \ exact decimal strings\", () => {\n  function check(v) { if (v && typeof v ===\
+    \ \"object\") Object.keys(v).forEach(k => {\n    if (/(Amount|Price|Total)$/.test(k)\
+    \ && !(k === \"verifiedReceivedAmount\" && v[k] === null)) pm.expect(v[k]).to.match(/^(0|[1-9][0-9]{0,9})\\\
+    .[0-9]{2}$/);\n    else check(v[k]); }); }\n  check(pm.response.json());\n});\n\
+    pm.test(\"Format check is not authentication\", () => {\n  const b=pm.response.json();\
+    \ pm.expect(b.nextStep).to.equal(\"VERIFY_REGISTRANT_PHONE\");\n  pm.expect(b.valid).to.equal(true);\
+    \ pm.expect(b).not.to.have.property(\"owner\"); pm.expect(b).not.to.have.property(\"\
+    session\");\n  pm.expect(pm.response.headers.has(\"Set-Cookie\")).to.equal(false);\n\
+    });"

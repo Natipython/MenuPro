@@ -1,0 +1,64 @@
+No authorization data found. Please use the `postman login` command.
+Refer:https://learning.postman.com/docs/postman-cli/postman-cli-options/#postman-login
+
+Running your collection...
+postman
+
+MenuMini workflow v2 design contract
+
+Root getPublishedMenu
+
+  GET http://127.0.0.1:5196/api/v2/public/venues/fictional-published-cafe/menu [200 OK, 1.65 KB, 123 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Money fields are exact decimal strings
+
+Folder onboarding
+Sub-folder validateBusinessRegistration
+
+  POST http://127.0.0.1:5196/api/v2/onboarding/validation [200 OK, 525 B, 32 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+  Pass  Format check is not authentication
+
+Sub-folder validateSetupDraft
+
+  POST http://127.0.0.1:5196/api/v2/onboarding/setup-validation [200 OK, 563 B, 19 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+  Pass  Draft preparation cannot activate access or publication
+
+Sub-folder validateWorkspacePreparation
+
+  POST http://127.0.0.1:5196/api/v2/onboarding/workspace-validation [200 OK, 694 B, 17 ms]
+  Pass  Command succeeds for its prepared fixture
+  Pass  Private response is not cached
+  Pass  Money fields are exact decimal strings
+  Pass  Workspace review cannot grant service or publication
+
+-----------------------------------------------------------------------
+|                         |            executed |              failed |
+--------------------------+---------------------+----------------------
+|              iterations |                   1 |                   0 |
+--------------------------+---------------------+----------------------
+|                requests |                   4 |                   0 |
+--------------------------+---------------------+----------------------
+|            test-scripts |                   4 |                   0 |
+--------------------------+---------------------+----------------------
+|      prerequest-scripts |                   0 |                   0 |
+--------------------------+---------------------+----------------------
+|              assertions |                  14 |                   0 |
+-----------------------------------------------------------------------
+| total run duration: 1616 ms                                         |
+-----------------------------------------------------------------------
+| total data received: 2.24 KB (approx)                               |
+-----------------------------------------------------------------------
+| average response time: 48 ms [min: 17 ms, max: 123 ms, s.d.: 43 ms] |
+-----------------------------------------------------------------------
+
+A new version of Postman CLI is available (v1.74.0). Refer https://go.pstmn.io/cli-release-notes for changelogs.
+To update your Postman CLI, run:
+
+postman update
+

@@ -1,0 +1,25 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/branches/:branchId/readiness'
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"venueId\": \"00000000-0000-4000-8000-000000000101\",\n  \"mode\"\
+      : \"PREPARATION_ONLY\",\n  \"serviceDraftVersion\": 1,\n  \"facts\": {\n   \
+      \ \"branchActive\": true,\n    \"menuPublished\": true,\n    \"availableItemCount\"\
+      : 1,\n    \"subscriptionOrderingActive\": true,\n    \"branchOrderingEnabled\"\
+      : false,\n    \"activeTableCount\": 0,\n    \"orderStaffAvailable\": true,\n\
+      \    \"preparationStaffAvailable\": true,\n    \"paymentStaffAvailable\": true,\n\
+      \    \"verifiedReceivingAccount\": false\n  },\n  \"blockers\": [\n    \"BRANCH_ORDERING_DISABLED\"\
+      ,\n    \"ACTIVE_TABLE_REQUIRED\",\n    \"VERIFIED_RECEIVING_ACCOUNT\",\n   \
+      \ \"PRICE_POLICY_REVIEW\",\n    \"ORDERING_WORKFLOW\",\n    \"PAYMENT_WORKFLOW\"\
+      ,\n    \"FIELD_ACCEPTANCE\"\n  ]\n}"

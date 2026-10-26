@@ -1,0 +1,4 @@
+workflows:
+  syncSpecToCollection:
+    - spec: ../postman/specs/workflow-v2.openapi.yaml
+      collection: ../postman/collections/menu-workflow-v2

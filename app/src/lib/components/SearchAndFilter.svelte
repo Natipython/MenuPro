@@ -5,8 +5,8 @@
   export let allergenTags = ['Nut-Free', 'Dairy-Free', 'Shellfish-Free'];
 
   let searchQuery = '';
-  let selectedDietary = [];
-  let selectedAllergens = [];
+  let selectedDietary: string[] = [];
+  let selectedAllergens: string[] = [];
   
   let showFilters = false;
   const dispatch = createEventDispatcher();

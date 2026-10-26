@@ -1,0 +1,274 @@
+[
+  {
+    "schema": "DiningTables",
+    "value": {
+      "items": [
+        {
+          "id": "01a1409a-7391-7821-a740-460ca7d8a971",
+          "label": "Renamed Staff Table",
+          "visit": {
+            "id": "01a1409a-7569-799d-88d8-6a730f8659c8",
+            "billId": "01a1409a-756a-7690-9843-51caf1ed66b2",
+            "status": "OPEN",
+            "tableId": "01a1409a-7391-7821-a740-460ca7d8a971",
+            "version": 1,
+            "branchId": "01a1409a-49b1-742a-bcd6-2a1418ff8be8"
+          },
+          "active": true,
+          "version": 2,
+          "branchId": "01a1409a-49b1-742a-bcd6-2a1418ff8be8"
+        }
+      ],
+      "branchId": "01a1409a-49b1-742a-bcd6-2a1418ff8be8"
+    }
+  },
+  {
+    "schema": "ServiceOffer",
+    "value": {
+      "menu": {
+        "branch": {
+          "area": "Bole",
+          "city": "Addis Ababa",
+          "name": "Main branch",
+          "hours": [
+            {
+              "day": 0,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 1,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 2,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 3,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 4,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 5,
+              "status": "UNSPECIFIED"
+            },
+            {
+              "day": 6,
+              "status": "UNSPECIFIED"
+            }
+          ],
+          "currency": "ETB",
+          "landmark": "Fictional landmark",
+          "timezone": "Africa/Addis_Ababa",
+          "publicName": "Fictional New Name",
+          "serviceMode": "MENU_ONLY"
+        },
+        "content": {
+          "themeId": "mini-warm-habesha",
+          "sections": [
+            {
+              "id": "00000000-0000-4000-8000-000000004101",
+              "items": [
+                {
+                  "id": "00000000-0000-4000-8000-000000004102",
+                  "nameAm": "የሙከራ ቡና",
+                  "nameEn": "Fictional coffee",
+                  "basePrice": "70.00",
+                  "modifiers": [],
+                  "availableNow": false
+                },
+                {
+                  "id": "00000000-0000-4000-8000-000000004103",
+                  "nameEn": "Fictional tea",
+                  "basePrice": "80.00",
+                  "modifiers": [
+                    {
+                      "id": "00000000-0000-4000-8000-000000004104",
+                      "mode": "SINGLE_SELECT",
+                      "label": "Size",
+                      "choices": [
+                        {
+                          "id": "00000000-0000-4000-8000-000000004105",
+                          "label": "Regular",
+                          "priceDelta": "0.00",
+                          "isAvailable": true
+                        },
+                        {
+                          "id": "00000000-0000-4000-8000-000000004106",
+                          "label": "Large",
+                          "priceDelta": "10.00",
+                          "isAvailable": true
+                        }
+                      ],
+                      "maxSelections": 1,
+                      "minSelections": 1
+                    }
+                  ],
+                  "availableNow": true
+                }
+              ],
+              "nameAm": "ቡና",
+              "nameEn": "Coffee"
+            }
+          ],
+          "primaryColor": "#F59E0B"
+        },
+        "venueId": "01a1409a-49b1-742a-bcd6-2a1418ff8be8",
+        "currency": "ETB",
+        "revision": 2,
+        "venueName": "Fictional New Name",
+        "publicationId": "01a1409a-4a15-7d2b-b717-6e89679675ed",
+        "availabilityRevision": 2
+      },
+      "pricing": {
+        "taxMode": "ADDED",
+        "taxRateBps": 1500,
+        "taxOnService": true,
+        "serviceRateBps": 1000
+      },
+      "pricingFingerprint": "a2448f45f691a672b4c41519a346f5ee7e50f33997d62f1bb38210e319bd6504"
+    }
+  },
+  {
+    "schema": "Visit",
+    "value": {
+      "id": "01a1409a-742d-7d9b-adc4-06f57405be25",
+      "billId": "01a1409a-742f-7507-a20e-35828c5781e2",
+      "status": "OPEN",
+      "tableId": "01a1409a-7391-7821-a740-460ca7d8a971",
+      "version": 1,
+      "branchId": "01a1409a-49b1-742a-bcd6-2a1418ff8be8"
+    }
+  },
+  {
+    "schema": "OperationalOrder",
+    "value": {
+      "id": "01a1409a-7462-7785-8e05-a50408bdddad",
+      "items": [
+        {
+          "id": "01a1409a-746b-770c-99f7-5008d87e1aba",
+          "nameEn": "Fictional tea",
+          "quantity": 2,
+          "lineTotal": "160.00",
+          "unitPrice": "80.00",
+          "selectedOptions": [
+            "Regular"
+          ],
+          "specialInstructions": "Fictional service note"
+        }
+      ],
+      "source": "STAFF",
+      "status": "ACCEPTED",
+      "version": 2,
+      "visitId": "01a1409a-742d-7d9b-adc4-06f57405be25",
+      "branchId": "01a1409a-49b1-742a-bcd6-2a1418ff8be8",
+      "currency": "ETB",
+      "createdAt": "2026-10-15T20:27:06.588415+03:00",
+      "taxAmount": "26.40",
+      "tableLabel": "Renamed Staff Table",
+      "totalAmount": "202.40",
+      "customerNote": "Fictional round one",
+      "serviceAmount": "16.00",
+      "subtotalAmount": "160.00",
+      "allowedTransitions": [
+        "PREPARING",
+        "COMPLETED"
+      ]
+    }
+  },
+  {
+    "schema": "ServiceQueue",
+    "value": {
+      "items": [
+        {
+          "id": "01a1409a-757b-74a7-b7bf-8068649c2457",
+          "items": [
+            {
+              "id": "01a1409a-757c-7d0f-860d-6ce5c68d2525",
+              "nameEn": "Fictional tea",
+              "quantity": 2,
+              "lineTotal": "160.00",
+              "unitPrice": "80.00",
+              "selectedOptions": [
+                "Regular"
+              ],
+              "specialInstructions": "Fictional service note"
+            }
+          ],
+          "source": "STAFF",
+          "status": "SUBMITTED",
+          "version": 1,
+          "visitId": "01a1409a-7569-799d-88d8-6a730f8659c8",
+          "branchId": "01a1409a-49b1-742a-bcd6-2a1418ff8be8",
+          "currency": "ETB",
+          "createdAt": "2026-10-15T20:27:06.87123+03:00",
+          "taxAmount": "26.40",
+          "tableLabel": "Renamed Staff Table",
+          "totalAmount": "202.40",
+          "customerNote": "Pagination 0",
+          "serviceAmount": "16.00",
+          "subtotalAmount": "160.00",
+          "allowedTransitions": [
+            "ACCEPTED",
+            "CANCELLED"
+          ]
+        },
+        {
+          "id": "01a1409a-7585-76b5-917d-233282cfc5d9",
+          "items": [
+            {
+              "id": "01a1409a-758a-730d-b8fd-3393a83e5ccd",
+              "nameEn": "Fictional tea",
+              "quantity": 2,
+              "lineTotal": "160.00",
+              "unitPrice": "80.00",
+              "selectedOptions": [
+                "Regular"
+              ],
+              "specialInstructions": "Fictional service note"
+            }
+          ],
+          "source": "STAFF",
+          "status": "SUBMITTED",
+          "version": 1,
+          "visitId": "01a1409a-7569-799d-88d8-6a730f8659c8",
+          "branchId": "01a1409a-49b1-742a-bcd6-2a1418ff8be8",
+          "currency": "ETB",
+          "createdAt": "2026-10-15T20:27:06.881795+03:00",
+          "taxAmount": "26.40",
+          "tableLabel": "Renamed Staff Table",
+          "totalAmount": "202.40",
+          "customerNote": "Pagination 1",
+          "serviceAmount": "16.00",
+          "subtotalAmount": "160.00",
+          "allowedTransitions": [
+            "ACCEPTED",
+            "CANCELLED"
+          ]
+        }
+      ],
+      "branchId": "01a1409a-49b1-742a-bcd6-2a1418ff8be8",
+      "nextCursor": "2026-10-15T17:27:06.881795Z~01a1409a-7585-76b5-917d-233282cfc5d9"
+    }
+  },
+  {
+    "schema": "Bill",
+    "value": {
+      "id": "01a1409a-742f-7507-a20e-35828c5781e2",
+      "status": "OPEN",
+      "version": 2,
+      "visitId": "01a1409a-742d-7d9b-adc4-06f57405be25",
+      "branchId": "01a1409a-49b1-742a-bcd6-2a1418ff8be8",
+      "currency": "ETB",
+      "settlement": "UNPAID",
+      "chargeAmount": "202.40",
+      "allocatedAmount": "0.00",
+      "unappliedAmount": "0.00",
+      "outstandingAmount": "202.40",
+      "refundPendingAmount": "0.00"
+    }
+  }
+]

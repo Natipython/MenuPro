@@ -1,0 +1,21 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/bills/:billId/payers'
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"billId\": \"00000000-0000-4000-8000-000000000801\",\n  \"items\"\
+      : [\n    {\n      \"guestSessionId\": \"00000000-0000-4000-8000-000000000301\"\
+      ,\n      \"deviceCode\": \"00000301\",\n      \"expiresAt\": \"2026-10-12T18:00:00Z\"\
+      ,\n      \"grant\": {\n        \"id\": \"00000000-0000-4000-8000-000000000899\"\
+      ,\n        \"version\": 1,\n        \"expiresAt\": \"2026-10-12T18:00:00Z\"\
+      ,\n        \"active\": true\n      }\n    }\n  ]\n}"

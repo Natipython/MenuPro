@@ -1,0 +1,3 @@
+$kind: collection
+name: bills/{billId}
+order: 6000

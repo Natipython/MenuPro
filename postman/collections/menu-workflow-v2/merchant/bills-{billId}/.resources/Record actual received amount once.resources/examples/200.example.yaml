@@ -1,0 +1,19 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/bills/:billId/receipts'
+  method: POST
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"id\": \"00000000-0000-4000-8000-000000000861\",\n  \"billId\"\
+      : \"00000000-0000-4000-8000-000000000801\",\n  \"method\": \"CASH\",\n  \"currency\"\
+      : \"ETB\",\n  \"receivedAmount\": \"70.00\",\n  \"allocatedAmount\": \"0.00\"\
+      ,\n  \"refundedAmount\": \"0.00\",\n  \"unappliedAmount\": \"70.00\"\n}"

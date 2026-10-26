@@ -1,0 +1,46 @@
+$kind: http-example
+name: Fictional intended response
+request:
+  method: GET
+  url: '{{baseUrl}}/merchant/venues/{{venueId}}/orders'
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "items": [
+          {
+            "id": "00000000-0000-4000-8000-000000000701",
+            "version": 1,
+            "venueId": "00000000-0000-4000-8000-000000000101",
+            "tableLabel": "4",
+            "status": "SUBMITTED",
+            "paymentStatus": "UNPAID",
+            "verificationPending": false,
+            "currency": "ETB",
+            "subtotal": "140.00",
+            "taxAmount": "0.00",
+            "serviceAmount": "0.00",
+            "discountAmount": "0.00",
+            "totalAmount": "140.00",
+            "outstandingAmount": "140.00",
+            "items": [
+              {
+                "id": "00000000-0000-4000-8000-000000000711",
+                "nameEn": "Macchiato",
+                "quantity": 2,
+                "unitPrice": "70.00",
+                "lineTotal": "140.00",
+                "selectedOptions": []
+              }
+            ],
+            "createdAt": "2026-10-12T03:00:00Z"
+          }
+        ],
+        "nextCursor": null
+      }

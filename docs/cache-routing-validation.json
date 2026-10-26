@@ -1,0 +1,23 @@
+{
+  "verified_at": "2026-10-15T18:03:27.094Z",
+  "passed": 15,
+  "failed": 0,
+  "cases": [
+    "worker upgrade removes its old private-page cache and preserves unrelated caches",
+    "worker never handles private/session-capable HTML or API: /onboarding",
+    "worker never handles private/session-capable HTML or API: /sign-in",
+    "worker never handles private/session-capable HTML or API: /admin",
+    "worker never handles private/session-capable HTML or API: /api/v2/merchant/context",
+    "worker never handles private/session-capable HTML or API: /visit",
+    "worker never handles private/session-capable HTML or API: /service/rehearsal",
+    "worker never handles private/session-capable HTML or API: /api/v2/guest/session",
+    "worker never handles private/session-capable HTML or API: /api/v2/guest/orders",
+    "worker never handles private/session-capable HTML or API: /fictional-cafe/main?table=1",
+    "worker never handles private/session-capable HTML or API: /",
+    "worker ignores external or query-bearing asset request",
+    "worker ignores external or query-bearing asset request",
+    "public immutable asset can be cached",
+    "no-store asset response is never written into Cache API"
+  ],
+  "scope": "actual worker routing and cache-ownership logic in Node with Cache API doubles; not browser offline/device acceptance"
+}

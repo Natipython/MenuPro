@@ -1,0 +1,26 @@
+{
+  "verified_at": "2026-10-18T19:23:55.569866+00:00",
+  "passed": 17,
+  "failed": 0,
+  "http_requests": 16,
+  "cases": [
+    "public HTTP returns the committed PostgreSQL menu without private data",
+    "unpublished branch cannot expose its draft",
+    "unknown public menu returns a safe structured error",
+    "untrusted slug cannot become SQL",
+    "query tenant assertion cannot change public projection",
+    "identity remains required for GET /menu-draft",
+    "identity remains required for PUT /menu-draft",
+    "identity remains required for GET /profile-draft",
+    "identity remains required for PUT /profile-draft",
+    "identity remains required for POST /menu-publications",
+    "spoofed editing requests leave the public menu unchanged",
+    "customer HTML is served from the committed menu with no-store headers",
+    "customer HTML contains its branch-specific menu link, local QR image and sold-out label",
+    "a saved draft price stays absent from customer HTTP",
+    "trusted fixture publication appears through a fresh customer HTTP request",
+    "PostgreSQL restart preserves the customer publication and reader reconnects",
+    "legacy unvalidated fixture is not automatically exposed through HTTP"
+  ],
+  "scope": "real local PostgreSQL-to-HTTP customer flow and closed identity gates; fixture publications use trusted SQL contexts, not browser/auth bypass; no real device or production release"
+}

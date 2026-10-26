@@ -1,0 +1,394 @@
+{
+  "verified_at": "2026-10-15T18:04:22.063946+00:00",
+  "stage": "Encrypted interrupted-command recovery with original-result checks, unchanged retries and serialized cancellation; actual guest/payer browser proof recorded separately; real OTP/merchant identity deferred",
+  "database": {
+    "database": "private PostgreSQL 18+",
+    "migrations": [
+      "0001",
+      "0002",
+      "0003",
+      "0004",
+      "0005",
+      "0006",
+      "0007",
+      "0008",
+      "0009",
+      "0010",
+      "0011"
+    ],
+    "verified_at": "2026-10-15T17:26:53.361414+00:00",
+    "passed": 194,
+    "failed": 0,
+    "concurrent_connection_cases": 7,
+    "projection_examples": 4,
+    "catalog_projection_examples": 3,
+    "scope": "database workflow/permission integrity and restart only; no HTTP, bank, device or release claim",
+    "result_file": "docs/workflow-db-validation.json",
+    "evidence_status": "Private PostgreSQL workflow regression across eleven migrations; seven overlapping-connection cases and restart; see report timestamp"
+  },
+  "contract": {
+    "verified_at": "2026-10-15T17:28:25.329189+00:00",
+    "passed": 95,
+    "failed": 0,
+    "operations": 73,
+    "schemas": 114,
+    "postman_requests": 73,
+    "saved_examples": 91,
+    "database_projection_examples": 39,
+    "scope": "local schema, saved-example and database-projection validation only; no live HTTP requests",
+    "result_file": "docs/workflow-contract-validation.json"
+  },
+  "onboarding_http": {
+    "result_file": "docs/onboarding-http-validation.json",
+    "passed": 21,
+    "failed": 0,
+    "http_requests": 20
+  },
+  "cache_routing": {
+    "verified_at": "2026-10-15T18:03:27.094Z",
+    "passed": 15,
+    "failed": 0,
+    "scope": "actual worker routing and cache-ownership logic in Node with Cache API doubles; not browser offline/device acceptance",
+    "result_file": "docs/cache-routing-validation.json"
+  },
+  "postman_local": {
+    "cli_version": "1.73.0",
+    "spec_syntax_issues": 0,
+    "collection_requests": 73,
+    "collection_errors": 0,
+    "collection_warnings": 0,
+    "http_requests_executed": 4,
+    "assertions_passed": 14,
+    "assertions_failed": 0,
+    "workspace_push": false,
+    "report_events": false,
+    "governance_lint": "not run; requires login",
+    "result_file": "docs/cashier-postman-validation.txt",
+    "scope": "Local syntax/collection lint and maintained request fixtures only; separate guest/payer/recovery cookie HTTP reports. No merchant identity bypass, cloud reporting or workspace push.",
+    "prior_functional_public_report": "docs/cashier-postman-validation.txt",
+    "guest_report": "docs/guest-postman-validation.txt",
+    "guest_http_requests_executed": 8,
+    "guest_assertions_passed": 25,
+    "guest_assertions_failed": 0,
+    "payer_report": "docs/payer-postman-validation.txt",
+    "payer_http_requests_executed": 5,
+    "payer_assertions_passed": 17,
+    "payer_assertions_failed": 0,
+    "recovery_report": "docs/recovery-postman-validation.txt",
+    "recovery_http_requests_executed": 4,
+    "recovery_assertions_passed": 16,
+    "recovery_assertions_failed": 0
+  },
+  "browser": {
+    "verified_at": "2026-10-15T17:59:49.777Z",
+    "passed": 40,
+    "failed": 0,
+    "viewports": {
+      "desktop": {
+        "documentWidth": 1265,
+        "scrollWidth": 1265,
+        "width": 1280
+      },
+      "phone": {
+        "documentWidth": 390,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "narrow": {
+        "documentWidth": 320,
+        "scrollWidth": 320,
+        "width": 320
+      },
+      "payerPhone": {
+        "documentWidth": 390,
+        "scrollWidth": 390,
+        "width": 390
+      }
+    },
+    "console_errors": 0,
+    "screenshots": [
+      "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-order-recovery.png",
+      "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-recovery-mobile.png",
+      "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-recovery-payer-confirmed.png"
+    ],
+    "scope": "Actual in-app browser with real IndexedDB, AES-GCM/HMAC and guest/payer cookie HTTP against a disposable PostgreSQL fixture; dropped delivery/streamed responses, full reload, unchanged retry and two same-session tabs. Staff acceptance and payer issuance happen privately in-process using fictional principals. No real merchant login, physical device, bank or production acceptance.",
+    "method": "Assertions performed through documented browser controls and read-only DOM inspection; labels consolidated from the successful calls. Captured console logs are separate from intentionally interrupted network responses.",
+    "database_confirmation": {
+      "verified_at": "2026-10-15T18:02:52.109020+00:00",
+      "orders": 2,
+      "claims": 1,
+      "receipts": 0,
+      "allocations": 0,
+      "first_order_requests": 1,
+      "unchanged_retry_requests": 1,
+      "cancelled_order_requests": 0,
+      "cancelled_order_tombstones": 1,
+      "original_claim_requests": 1,
+      "source": "Read-only SQL against the same disposable browser fixture; original request UUIDs came from visible recovery panels."
+    },
+    "result_file": "docs/command-recovery-browser-validation.json"
+  },
+  "application": {
+    "svelte_check_errors": 0,
+    "svelte_check_warnings": 20,
+    "new_page_diagnostics": 0,
+    "isolated_build": "passed with encrypted recovery, keyed body integrity and peer outcome confirmation; no .env loaded; no deployment adapter selected",
+    "independent_dependency_lock": true
+  },
+  "original_baseline_from_prior_stage": {
+    "v1_database_passed": 37,
+    "v1_contract_passed": 9
+  },
+  "source_hygiene": {
+    "new_source_files_trailing_whitespace": 0,
+    "preexisting_prototype_edits": "preserved; original app/ diff has existing whitespace findings and is outside this change",
+    "staff_service_source_files_checked": 17,
+    "staff_service_trailing_whitespace": 0,
+    "cashier_source_files_checked": 12,
+    "cashier_trailing_whitespace": 0,
+    "guest_source_files_checked": 29,
+    "guest_trailing_whitespace": 0,
+    "payer_source_files_checked": 23,
+    "payer_trailing_whitespace": 0,
+    "command_recovery_source_files_checked": 24,
+    "command_recovery_trailing_whitespace": 0
+  },
+  "scope_limits": [
+    "All migrations, publications and account fixtures run only in private disposable PostgreSQL clusters; no existing or production database changed.",
+    "Populated v1 order/payment conversion remains unimplemented. Histories conflicting with new conservative duplicate indexes need supervised reconciliation before migration; no silent migration conversion is provided.",
+    "73 operations: four functional public validation/menu handlers, 17 guest/payer/recovery capability handlers requiring explicit limited configuration, 40 closed merchant boundaries and 12 remaining target HTTP operations.",
+    "OTP is deferred. Real merchant sessions, owner approval, staff invitations, persisted onboarding and authenticated business operations remain pending.",
+    "Unverified preparation remains page-memory/export only; connected service/cashier/guest/payer rehearsal changes browser memory only and resets on reload.",
+    "Guest HTTP resolves opaque dining cookies using a separate limited database role. Shared bill access also requires a still-active same-session payer grant and separate HttpOnly bill cookie. Ordering alone grants no shared bill authority.",
+    "Production table QR delivery, private staff invitation/payer handoff, HTTPS/key lifecycle, proxy/log redaction, physical device and pilot acceptance remain gates. The preview strips ambient guest/merchant configuration.",
+    "Private merchant commands have in-process server/DB evidence; real authenticated merchant HTTP remains unverified. Guest/payer/recovery success is tested separately using 39 real local HTTP requests including 17 maintained Postman requests. Actual guest/payer browser IndexedDB recovery has separate disposable-fixture evidence.",
+    "Cashier and shared bill detail have explicit technical history bounds and no silent truncation; pagination/export beyond those bounds remains future work.",
+    "Separate payer grants, combined bill projection and own transfer reports are implemented locally; private receipt uploads and receiving-account onboarding remain unimplemented HTTP workflows.",
+    "The local public-menu QR uses loopback. Production requires an explicit HTTPS origin, verified hosting and actual device acceptance.",
+    "Second-branch billing UI, renewals, reconciliation and cancellation/decline remain pending; prices remain undecided and MenuMini stays capped at two branches.",
+    "Conservative reference comparison preserves original text and prevents case-variant duplicates, including concurrent branch reports. Provider-specific reference normalization, real cash/bank/refund procedures, fiscal treatment, shift exports, workers, backup restoration and pilot acceptance remain pending.",
+    "A transfer report never marks funds received. Only independently recorded actual funds and explicit allocation affect settlement. No command initiates a real transfer. Service readiness and ending seating never authorize launch or financial closure.",
+    "Supported guest, payer, staff-service and cashier mutations persist an encrypted per-session pending body before delivery; original-key status and branch-serialized cancellation resolve interrupted attempts. Storage loss, unavailable original authority, unsent drafts, credential operations and unsupported command wrappers still require separate recovery/supervision. Staff/cashier authenticated browser recovery remains unverified while OTP is deferred."
+  ],
+  "external_actions": {
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "bank_operations": false,
+    "sms_or_email": false,
+    "outreach": false
+  },
+  "setup_draft_http": {
+    "result_file": "docs/setup-draft-http-validation.json",
+    "passed": 45,
+    "failed": 0,
+    "http_requests": 44
+  },
+  "catalog_http": {
+    "result_file": "docs/catalog-http-validation.json",
+    "passed": 20,
+    "failed": 0,
+    "http_requests": 18,
+    "scope": "real local PostgreSQL-to-HTTP customer flow and closed identity gates; fixture publications use trusted SQL contexts, not browser/auth bypass; no real device or production release"
+  },
+  "catalog_mapping": {
+    "result_file": "docs/catalog-mapping-validation.json",
+    "passed": 9,
+    "failed": 0,
+    "scope": "actual shared preparation mapper; exact prices and translation preserved; private contacts, entitlement and unsupported options excluded; input unchanged"
+  },
+  "catalog_links": {
+    "result_file": "docs/catalog-link-validation.json",
+    "passed": 6,
+    "failed": 0,
+    "scope": "actual server menu-link builder; production requires explicit HTTPS origin, ignores caller Host and rejects loopback HTTP, credentials and path prefixes; no network or deployment test"
+  },
+  "catalog_qr": {
+    "result_file": "docs/catalog-qr-validation.json",
+    "passed": 1,
+    "failed": 0,
+    "scope": "independent ZXing decode of the actual QR PNG served in customer HTML; no physical phone scan"
+  },
+  "merchant_workspace": {
+    "passed": 90,
+    "failed": 0,
+    "database_projection_examples": 2,
+    "verified_at": "2026-10-15T17:27:38.282048+00:00",
+    "restart_verified": true,
+    "scope": "real private server command/response adapters and PostgreSQL, trusted fictional principals supplied in-process; not authenticated HTTP or real users",
+    "result_file": "docs/merchant-workspace-validation.json"
+  },
+  "workspace_http": {
+    "result_file": "docs/workspace-http-validation.json",
+    "passed": 31,
+    "failed": 0,
+    "http_requests": 31,
+    "scope": "actual local HTTP; preparation is stateless and eight private boundaries remain closed; no authenticated success or real-device claim",
+    "verified_at": "2026-10-14T19:07:08.428104+00:00"
+  },
+  "staff_service": {
+    "passed": 75,
+    "failed": 0,
+    "database_projection_examples": 6,
+    "verified_at": "2026-10-15T17:27:11.406195+00:00",
+    "migrations": 11,
+    "concurrent_connection_cases": 2,
+    "restart_verified": true,
+    "scope": "actual server adapters and PostgreSQL with trusted fictional in-process principals; no authenticated HTTP, guest association, bank, phone or release claim",
+    "result_file": "docs/staff-service-validation.json"
+  },
+  "staff_service_http": {
+    "verified_at": "2026-10-15T13:44:30.064667+00:00",
+    "passed": 15,
+    "failed": 0,
+    "http_requests": 15,
+    "scope": "actual local HTTP closed access and rehearsal/page headers only; successful staff actions verified separately in-process, not through authentication",
+    "result_file": "docs/staff-service-http-validation.json"
+  },
+  "next_build_dependency": "Receiving-account preparation and supervised verification/reconciliation, keeping real OTP/merchant identity deferred; production capability/key delivery, authenticated merchant browser acceptance and a real pilot remain gates.",
+  "cashier_settlement": {
+    "passed": 65,
+    "failed": 0,
+    "database_projection_examples": 6,
+    "verified_at": "2026-10-15T17:27:30.528673+00:00",
+    "migrations": 11,
+    "concurrent_connection_cases": 2,
+    "restart_verified": true,
+    "scope": "actual cashier adapters and PostgreSQL with trusted fictional principals; no authenticated HTTP, real bank or physical device acceptance",
+    "result_file": "docs/cashier-settlement-validation.json"
+  },
+  "cashier_http": {
+    "result_file": "docs/cashier-http-validation.json",
+    "verified_at": "2026-10-15T13:44:29.955417+00:00",
+    "passed": 13,
+    "failed": 0,
+    "http_requests": 13,
+    "scope": "actual local HTTP closed access and rehearsal/page headers only; successful cashier actions verified separately in-process, not through authentication"
+  },
+  "guest_ordering": {
+    "passed": 81,
+    "failed": 0,
+    "verified_at": "2026-10-15T17:28:00.618888+00:00",
+    "migrations": 11,
+    "restart_verified": true,
+    "concurrent_connection_cases": 3,
+    "http_requests": 12,
+    "postman": {
+      "requests": 8,
+      "passed": true,
+      "report": "docs/guest-postman-validation.txt",
+      "workspace_push": false,
+      "report_events": false
+    },
+    "scope": "actual guest request/cookie adapters and limited PostgreSQL entry with fictional capabilities; twelve direct real local HTTP requests plus eight maintained Postman requests, three overlapping database cases and restart; no live merchant OTP, external service or physical device acceptance",
+    "result_file": "docs/guest-ordering-validation.json"
+  },
+  "guest_http": {
+    "result_file": "docs/guest-http-validation.json",
+    "verified_at": "2026-10-15T13:44:29.783359+00:00",
+    "passed": 11,
+    "failed": 0,
+    "http_requests": 11,
+    "scope": "actual local HTTP without guest configuration; closed merchant issuance and no fake guest principal. Successful guest HTTP uses a separate isolated configured fixture."
+  },
+  "payer_claims": {
+    "passed": 71,
+    "failed": 0,
+    "http_requests": 5,
+    "postman": {
+      "requests": 5,
+      "passed": true,
+      "report": "docs/payer-postman-validation.txt",
+      "workspace_push": false,
+      "report_events": false
+    },
+    "database_projection_examples": 7,
+    "verified_at": "2026-10-15T17:28:22.441685+00:00",
+    "migrations": 11,
+    "restart_verified": true,
+    "concurrent_connection_cases": 3,
+    "scope": "actual payer adapters and PostgreSQL with fictional capabilities, five direct local HTTP requests plus five maintained Postman requests, three overlapping cases and restart; no live merchant OTP, bank transfer or physical-device acceptance",
+    "result_file": "docs/payer-claims-validation.json"
+  },
+  "payer_http": {
+    "result_file": "docs/payer-http-validation.json",
+    "verified_at": "2026-10-15T13:44:29.519698+00:00",
+    "passed": 10,
+    "failed": 0,
+    "http_requests": 10,
+    "scope": "actual local HTTP without guest/merchant configuration; closed merchant authorization and payer capability boundaries. Successful payer HTTP is tested in a separate isolated configured fixture."
+  },
+  "command_recovery": {
+    "passed": 69,
+    "failed": 0,
+    "http_requests": 5,
+    "postman": {
+      "requests": 4,
+      "passed": true,
+      "report": "docs/recovery-postman-validation.txt",
+      "workspace_push": false,
+      "report_events": false
+    },
+    "database_projection_examples": 5,
+    "verified_at": "2026-10-15T17:48:00.417187+00:00",
+    "migrations": 11,
+    "restart_verified": true,
+    "concurrent_connection_cases": 4,
+    "scope": "actual recovery adapters, cookie HTTP, maintained Postman, real PostgreSQL races/restart and browser core with explicit memory storage double; actual IndexedDB reload evidence is recorded separately. No merchant auth bypass, live funds or device acceptance",
+    "result_file": "docs/command-recovery-validation.json"
+  },
+  "command_recovery_http": {
+    "verified_at": "2026-10-15T17:48:35.284753+00:00",
+    "passed": 27,
+    "failed": 0,
+    "http_requests": 27,
+    "scope": "actual unconfigured loopback HTTP: closed merchant identity, capability presence, origin/CSRF, body bounds and original-key matching; successful recovery uses a separate limited PostgreSQL fixture",
+    "result_file": "docs/command-recovery-http-validation.json"
+  },
+  "prior_payer_rehearsal_browser": {
+    "verified_at": "2026-10-15T13:53:11.635Z",
+    "passed": 42,
+    "failed": 0,
+    "scope": "actual browser UI with shared fictional in-memory service, guest and cashier views; capability HTTP, database concurrency and restart are tested separately. No real merchant OTP, funds, independent physical devices, production or full-reload command recovery acceptance.",
+    "viewports": {
+      "desktop": {
+        "documentWidth": 1265,
+        "scrollWidth": 1265,
+        "width": 1280
+      },
+      "cashierPhone": {
+        "documentWidth": 390,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "cashierNarrow": {
+        "documentWidth": 320,
+        "scrollWidth": 320,
+        "width": 320
+      },
+      "guestNarrow": {
+        "documentWidth": 320,
+        "menuTop": -364.453125,
+        "scrollWidth": 320,
+        "trackingTop": -806.234375,
+        "width": 320
+      },
+      "guestPhone": {
+        "documentWidth": 390,
+        "scrollWidth": 390,
+        "width": 390
+      }
+    },
+    "console_errors": 0,
+    "result_file": "docs/payer-browser-validation.json",
+    "prior_cashier_evidence": "docs/cashier-browser-validation.json",
+    "prior_staff_service_evidence": "docs/staff-service-browser-validation.json",
+    "prior_publication_evidence": "docs/catalog-browser-validation.json",
+    "prior_preparation_evidence": "docs/workspace-browser-validation.json",
+    "screenshots": [
+      "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-payer-shared-bill.png",
+      "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc/menumini-payer-mobile.png"
+    ],
+    "prior_guest_evidence": "docs/guest-browser-validation.json"
+  }
+}

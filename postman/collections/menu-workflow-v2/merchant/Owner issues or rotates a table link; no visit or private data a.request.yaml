@@ -1,0 +1,45 @@
+$kind: http-request
+name: issueTableGuestLink
+description: Owner issues or rotates a table link; no visit or private data access
+  Requires current version, permission and explicitly configured server capability
+  key. SQL stores hashes only. Exact retries reconstruct the same token; rotated/expired
+  issuances report active false. Independent fictional scenario; protected operations
+  require matching backend fixtures and ephemeral authenticated sessions. Not a runnable
+  restaurant transaction sequence.
+url: '{{baseUrl}}/merchant/tables/:tableId/guest-link'
+method: POST
+headers:
+- key: Accept
+  value: application/json
+- key: Content-Type
+  value: application/json
+- key: Idempotency-Key
+  value: 4ea49a37-173a-5338-9b5b-82fa5fc47049
+- key: Origin
+  value: '{{origin}}'
+- key: X-CSRF-Token
+  value: '{{csrfToken}}'
+- key: Cookie
+  value: menu_staff_session={{staffSession}}
+pathVariables:
+- key: tableId
+  value: '{{tableId}}'
+  disabled: false
+  description: '(Required) '
+body:
+  type: json
+  content: "{\n  \"expectedVersion\": 3\n}"
+settings: {}
+examples: ./.resources/Owner issues or rotates a table link; no visit or private data
+  a.resources/examples
+order: 5000
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: "pm.test(\"Command succeeds for its prepared fixture\", () => pm.expect(pm.response.code).to.be.within(200,\
+    \ 299));\npm.test(\"Private response is not cached\", () => pm.expect(pm.response.headers.get(\"\
+    Cache-Control\") || \"\").to.include(\"no-store\"));\npm.test(\"Money fields are\
+    \ exact decimal strings\", () => {\n  function check(v) { if (v && typeof v ===\
+    \ \"object\") Object.keys(v).forEach(k => {\n    if (/(Amount|Price|Total)$/.test(k)\
+    \ && !(k === \"verifiedReceivedAmount\" && v[k] === null)) pm.expect(v[k]).to.match(/^(0|[1-9][0-9]{0,9})\\\
+    .[0-9]{2}$/);\n    else check(v[k]); }); }\n  check(pm.response.json());\n});"

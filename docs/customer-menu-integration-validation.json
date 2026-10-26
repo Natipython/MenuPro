@@ -1,0 +1,87 @@
+{
+  "verified_at": "2026-10-18T19:28:12.143899+00:00",
+  "milestone": "original customer-menu presentation connected to published catalog",
+  "status": "source and server checks passed; current browser acceptance pending",
+  "source_files": [
+    {
+      "path": "MenuMini_1/src/lib/menu/catalog-view.ts",
+      "sha256": "139b5108c2eaf87e0c7a62bb193c261c0166824653199174f50fde9ab67089eb"
+    },
+    {
+      "path": "MenuMini_1/src/lib/menu/MenuCatalog.svelte",
+      "sha256": "44b09ea037ca3f99ad9c5f8353a94cb8ca28089e56448d754a06c379f8297428"
+    },
+    {
+      "path": "MenuMini_1/src/lib/menu/DishDetails.svelte",
+      "sha256": "6f05dc409b74837746ec6fa52f9ab97402a5713cb4de04c66f01be5555657d0e"
+    },
+    {
+      "path": "MenuMini_1/src/routes/[businessSlug]/[branchSlug]/+page.svelte",
+      "sha256": "876f4ac5457586f136bc8e6fd122982bc9ae70303f46dbbe00299b68a44a8434"
+    },
+    {
+      "path": "MenuMini_1/src/routes/menu/[venueSlug]/+page.svelte",
+      "sha256": "e837c4fbc0d000f35a02f976b3d2eb0c6d12137937c4f047c5d3e5047e2523f6"
+    }
+  ],
+  "checks": {
+    "svelte_check": {
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 18,
+      "warning_files": 5,
+      "new_shared_component_warnings": 0
+    },
+    "isolated_build": {
+      "exit_code": 0,
+      "adapter": "not configured; compilation is not a deployment"
+    },
+    "presentation": {
+      "report": "menu-presentation-validation.json",
+      "passed": 19,
+      "failed": 0
+    },
+    "catalog_http": {
+      "report": "catalog-http-validation.json",
+      "passed": 17,
+      "failed": 0,
+      "http_requests": 16
+    },
+    "html_smoke": {
+      "published": {
+        "status": 200,
+        "dish_cards": 2,
+        "labelled_search": 1
+      },
+      "missing": {
+        "status": 200,
+        "dish_cards": 0,
+        "demo_fallback": false
+      },
+      "original_prototype": {
+        "status": 200,
+        "dish_cards": 10,
+        "labelled_search": 1
+      }
+    }
+  },
+  "browser": {
+    "status": "pending",
+    "reason": "local browser use disabled in Work settings at verification time; user intends to enable it",
+    "historical_baselines_date": "2026-10-16",
+    "historical_baseline_directory": "/home/n-a-t/.codex/visualizations/2026/10/12/01a12dca-bc05-7da1-8dc2-b518eeb09bdc",
+    "pending": [
+      "desktop original-versus-published comparison",
+      "390px and 320px overflow/readability",
+      "English and Amharic live search, clear and empty reset",
+      "category selected state and filtering",
+      "native item details, options, Escape, focus trap and return",
+      "prototype customization and cart controls retained without checkout submission",
+      "hours and QR sharing controls",
+      "missing menu and no demo fallback"
+    ]
+  },
+  "preview_url": "http://127.0.0.1:5196/menu/fictional-published-cafe",
+  "scope": "fictional local data; no API/schema/identity/entitlement change; no real OTP, authenticated merchant acceptance, order/payment, production deployment or physical-device acceptance",
+  "next": "complete visual/interactive acceptance, then connect the original cart/review drawer to committed server order outcomes"
+}

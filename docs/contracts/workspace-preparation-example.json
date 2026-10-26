@@ -1,0 +1,107 @@
+{
+  "format": "menumini-workspace-draft",
+  "version": 1,
+  "planPreference": "MINI",
+  "profile": {
+    "businessTypeId": "cafe-and-restaurant",
+    "branch": {
+      "publicName": "Fictional Addis Cafe",
+      "name": "Main branch",
+      "city": "Addis Ababa",
+      "area": "Bole",
+      "landmark": "Fictional landmark",
+      "serviceMode": "DINE_IN",
+      "currency": "ETB",
+      "timezone": "Africa/Addis_Ababa",
+      "hours": [
+        {
+          "day": 0,
+          "status": "UNSPECIFIED"
+        },
+        {
+          "day": 1,
+          "status": "UNSPECIFIED"
+        },
+        {
+          "day": 2,
+          "status": "UNSPECIFIED"
+        },
+        {
+          "day": 3,
+          "status": "UNSPECIFIED"
+        },
+        {
+          "day": 4,
+          "status": "UNSPECIFIED"
+        },
+        {
+          "day": 5,
+          "status": "UNSPECIFIED"
+        },
+        {
+          "day": 6,
+          "status": "UNSPECIFIED"
+        }
+      ]
+    }
+  },
+  "menu": {
+    "themeId": "mini-warm-habesha",
+    "primaryColor": "#F59E0B",
+    "sections": [
+      {
+        "id": "00000000-0000-4000-8000-000000000950",
+        "nameEn": "Coffee",
+        "items": [
+          {
+            "id": "00000000-0000-4000-8000-000000000951",
+            "nameEn": "Fictional coffee",
+            "nameAm": "ሙከራ ቡና",
+            "basePrice": "60.50",
+            "availableNow": true,
+            "modifiers": [
+              {
+                "id": "b9107bbd-bff7-49f4-875c-a9fda5db6a15",
+                "label": "Size",
+                "mode": "SINGLE_SELECT",
+                "minSelections": 1,
+                "maxSelections": 1,
+                "choices": [
+                  {
+                    "id": "09c5faff-d947-4188-a179-e94a77c64d44",
+                    "label": "Regular",
+                    "priceDelta": "0.00",
+                    "isAvailable": true
+                  },
+                  {
+                    "id": "b6ca5efd-345c-4123-af1e-7efbf6314339",
+                    "label": "Large",
+                    "priceDelta": "10.50",
+                    "isAvailable": true
+                  }
+                ]
+              }
+            ],
+            "descriptionAm": "በአዲስ አበባ የተዘጋጀ የሙከራ ቡና"
+          }
+        ]
+      }
+    ]
+  },
+  "service": {
+    "tableLabels": [
+      "Table 1",
+      "Table 2"
+    ],
+    "staffing": {
+      "orders": "OWNER",
+      "preparation": "STAFF",
+      "payments": "OWNER"
+    },
+    "paymentMethods": [
+      "CASH",
+      "BANK_TRANSFER"
+    ],
+    "pricing": "UNCONFIRMED"
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "value": {
+      "id": "01a14099-e879-7eb4-8012-e78ca393e687",
+      "status": "CLOSED",
+      "version": 8,
+      "visitId": "01a14099-e878-731b-9465-0e45801a0e29",
+      "branchId": "01a14099-e855-7046-852a-c2ee9cba595f",
+      "currency": "ETB",
+      "settlement": "PAID",
+      "chargeAmount": "140.00",
+      "allocatedAmount": "140.00",
+      "unappliedAmount": "0.00",
+      "outstandingAmount": "0.00",
+      "refundPendingAmount": "0.00"
+    },
+    "schema": "Bill"
+  },
+  {
+    "value": {
+      "id": "01a14099-e8dc-77f8-9212-9cfbfa4968d5",
+      "billId": "01a14099-e879-7eb4-8012-e78ca393e687",
+      "method": "BANK_TRANSFER",
+      "currency": "ETB",
+      "receivedAmount": "210.00",
+      "refundedAmount": "70.00",
+      "allocatedAmount": "140.00",
+      "unappliedAmount": "0.00"
+    },
+    "schema": "Receipt"
+  },
+  {
+    "value": {
+      "id": "01a14099-e8ff-7115-a984-a74ada395925",
+      "status": "OPEN",
+      "version": 9,
+      "visitId": "01a14099-e8fd-76bf-b467-99503a5b6167",
+      "branchId": "01a14099-e855-7046-852a-c2ee9cba595f",
+      "currency": "ETB",
+      "settlement": "NO_PAYMENT_DUE",
+      "chargeAmount": "0.00",
+      "allocatedAmount": "0.00",
+      "unappliedAmount": "81.00",
+      "outstandingAmount": "0.00",
+      "refundPendingAmount": "0.00"
+    },
+    "schema": "Bill"
+  },
+  {
+    "value": {
+      "id": "01a14099-e93a-7a12-8a2c-8ad0e5b1f869",
+      "billId": "01a14099-e8ff-7115-a984-a74ada395925",
+      "method": "BANK_TRANSFER",
+      "currency": "ETB",
+      "receivedAmount": "50.00",
+      "refundedAmount": "0.00",
+      "allocatedAmount": "0.00",
+      "unappliedAmount": "50.00"
+    },
+    "schema": "Receipt"
+  }
+]

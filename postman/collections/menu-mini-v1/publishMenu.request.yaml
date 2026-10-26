@@ -1,0 +1,24 @@
+$kind: http-request
+method: POST
+url: '{{baseUrl}}/merchant/venues/{{venueId}}/menu-publications'
+order: 12000
+body:
+  type: json
+  content: |-
+    {
+      "draftVersion": 1
+    }
+headers:
+- key: Idempotency-Key
+  value: '{{commandRequestKey}}'
+- key: Cookie
+  value: 'menu_staff_session={{staffSession}}'
+- key: X-CSRF-Token
+  value: '{{csrfToken}}'
+- key: Content-Type
+  value: application/json
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: pm.test('Expected status 201', () => pm.expect(pm.response.code).to.eql(201));
+examples: './.resources/publishMenu.resources/examples/'

@@ -1,0 +1,18 @@
+$kind: http-example
+name: Fictional committed result 201
+request:
+  url: '{{baseUrl}}/merchant/branches'
+  method: POST
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"id\": \"00000000-0000-4000-8000-000000000101\",\n  \"name\":\
+      \ \"Fictional Cafe\",\n  \"publicSlug\": \"fictional-cafe\",\n  \"orderingEnabled\"\
+      : false\n}"

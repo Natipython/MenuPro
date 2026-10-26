@@ -1,0 +1,49 @@
+$kind: http-request
+name: quoteMiniSecondBranch
+description: Amounts are fictional in examples, not approved pricing. Current and
+  new totals use the same interval and include applicable fees/taxes. New recurring
+  total must exceed current. Immediate amount may differ due to proration. Quote terms
+  and expiry are immutable; an expired offer requires a new request. No automatic
+  charges or external fund transfer. Independent fictional scenario; protected operations
+  require matching backend fixtures and ephemeral authenticated sessions. Not a runnable
+  restaurant transaction sequence.
+url: '{{baseUrl}}/platform/mini-second-branch-requests/:requestId/quotes'
+method: POST
+headers:
+- key: Accept
+  value: application/json
+- key: Content-Type
+  value: application/json
+- key: Idempotency-Key
+  value: fedd2f93-aeca-5b0d-bc30-ad873a26461c
+- key: Origin
+  value: '{{origin}}'
+- key: X-CSRF-Token
+  value: '{{csrfToken}}'
+- key: Cookie
+  value: menu_platform_session={{platformSession}}
+pathVariables:
+- key: requestId
+  value: '{{requestId}}'
+  disabled: false
+  description: '(Required) '
+body:
+  type: json
+  content: "{\n  \"currentRecurringAmount\": \"600.00\",\n  \"newRecurringAmount\"\
+    : \"900.00\",\n  \"amountDueNow\": \"150.00\",\n  \"billingInterval\": \"MONTH\"\
+    ,\n  \"termStartsAt\": \"2026-10-12T17:00:00Z\",\n  \"termEndsAt\": \"2026-11-12T17:00:00Z\"\
+    ,\n  \"expiresAt\": \"2026-10-13T17:00:00Z\"\n}"
+settings: {}
+examples: ./.resources/Quote all-inclusive recurring prices and immediate amount due;
+  n.resources/examples
+order: 2000
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: "pm.test(\"Command succeeds for its prepared fixture\", () => pm.expect(pm.response.code).to.be.within(200,\
+    \ 299));\npm.test(\"Private response is not cached\", () => pm.expect(pm.response.headers.get(\"\
+    Cache-Control\") || \"\").to.include(\"no-store\"));\npm.test(\"Money fields are\
+    \ exact decimal strings\", () => {\n  function check(v) { if (v && typeof v ===\
+    \ \"object\") Object.keys(v).forEach(k => {\n    if (/(Amount|Price|Total)$/.test(k)\
+    \ && !(k === \"verifiedReceivedAmount\" && v[k] === null)) pm.expect(v[k]).to.match(/^(0|[1-9][0-9]{0,9})\\\
+    .[0-9]{2}$/);\n    else check(v[k]); }); }\n  check(pm.response.json());\n});"

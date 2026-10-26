@@ -1,0 +1,30 @@
+$kind: http-request
+method: POST
+url: '{{baseUrl}}/orders'
+order: 14000
+body:
+  type: json
+  content: |-
+    {
+      "menuPublicationId": "00000000-0000-4000-8000-000000000401",
+      "items": [
+        {
+          "itemId": "00000000-0000-4000-8000-000000000601",
+          "quantity": 2,
+          "choiceIds": []
+        }
+      ],
+      "customerNote": ""
+    }
+headers:
+- key: Idempotency-Key
+  value: '{{orderRequestKey}}'
+- key: Cookie
+  value: 'menu_dining_session={{diningSession}}'
+- key: Content-Type
+  value: application/json
+scripts:
+- type: afterResponse
+  language: text/javascript
+  code: pm.test('same command returns the original order', () => pm.expect(pm.response.code).to.eql(200));
+examples: './.resources/replayOrder.resources/examples/'

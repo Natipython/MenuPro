@@ -1,0 +1,30 @@
+$kind: http-example
+name: Fictional committed result 200
+request:
+  url: '{{baseUrl}}/merchant/branches/:branchId/profile-draft'
+  method: PUT
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+  - key: Content-Type
+    value: application/json
+  - key: Cache-Control
+    value: no-store
+  body:
+    type: json
+    content: "{\n  \"venueId\": \"00000000-0000-4000-8000-000000000101\",\n  \"version\"\
+      : 1,\n  \"content\": {\n    \"businessTypeId\": \"cafe-and-restaurant\",\n \
+      \   \"branch\": {\n      \"publicName\": \"Fictional Addis Cafe\",\n      \"\
+      name\": \"Main branch\",\n      \"city\": \"Addis Ababa\",\n      \"area\":\
+      \ \"Bole\",\n      \"landmark\": \"Fictional landmark\",\n      \"serviceMode\"\
+      : \"DINE_IN\",\n      \"currency\": \"ETB\",\n      \"timezone\": \"Africa/Addis_Ababa\"\
+      ,\n      \"hours\": [\n        {\n          \"day\": 0,\n          \"status\"\
+      : \"UNSPECIFIED\"\n        },\n        {\n          \"day\": 1,\n          \"\
+      status\": \"UNSPECIFIED\"\n        },\n        {\n          \"day\": 2,\n  \
+      \        \"status\": \"UNSPECIFIED\"\n        },\n        {\n          \"day\"\
+      : 3,\n          \"status\": \"UNSPECIFIED\"\n        },\n        {\n       \
+      \   \"day\": 4,\n          \"status\": \"UNSPECIFIED\"\n        },\n       \
+      \ {\n          \"day\": 5,\n          \"status\": \"UNSPECIFIED\"\n        },\n\
+      \        {\n          \"day\": 6,\n          \"status\": \"UNSPECIFIED\"\n \
+      \       }\n      ]\n    }\n  }\n}"
